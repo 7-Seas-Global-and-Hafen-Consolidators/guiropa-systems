@@ -5,9 +5,7 @@ import { LanguageProvider } from "./i18n/LanguageContext.jsx";
 import "./styles/global.css";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <LanguageProvider>
-      <App />
-    </LanguageProvider>
-  </StrictMode>
+<BrowserRouter basename="/guiropa-systems">
+  <App />
+</BrowserRouter>
 );
