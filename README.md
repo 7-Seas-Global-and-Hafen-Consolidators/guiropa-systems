@@ -1,9 +1,5 @@
 <div align="center">
 
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=13&duration=3000&pause=1000&color=C9A84C&center=true&vCenter=true&width=600&lines=PRESENÇA+ONDE+OS+OUTROS+HESITAM.;COMÉRCIO+EXTERIOR+%7C+LOGÍSTICA+MULTIMODAL;20%2B+PAÍSES+EM+OPERAÇÃO+ATIVA." alt="Typing SVG"/>
-
 <br/><br/>
 
 ```
@@ -154,12 +150,6 @@ da coleta em Franca (SP) ao desembaraço em Foz do Iguaçu, da Ásia às Améric
 <br/>
 
 ---
-
-<br/>
-
-<div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=400&size=11&duration=4000&pause=1500&color=555555&center=true&vCenter=true&width=500&lines=Comex+·+NVOCC+·+Logística+Multimodal+·+Trading+·+20%2B+Países" alt="Tags"/>
 
 <br/><br/>
 
