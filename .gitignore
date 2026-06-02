@@ -3,6 +3,7 @@ client/node_modules/
 server/node_modules/
 client/dist/
 .env
+.env.local
 .env.*
 !.env.example
 *.log
@@ -10,3 +11,5 @@ client/dist/
 Thumbs.db
 .vscode/
 .idea/
+*.key
+*.pem
