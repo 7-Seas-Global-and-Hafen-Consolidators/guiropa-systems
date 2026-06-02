@@ -1,0 +1,17 @@
+{
+  "name": "guiropa-systems",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "echo Run dev:server and dev:client in two terminals",
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client",
+    "install:all": "npm install --prefix client && npm install --prefix server",
+    "build:deploy": "npm run install:all && npm run build",
+    "start": "npm run start --prefix server",
+    "start:prod": "npm run start --prefix server"
+  }
+}
