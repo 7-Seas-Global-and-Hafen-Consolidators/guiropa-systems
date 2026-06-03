@@ -125,11 +125,24 @@ Se o repositório no GitHub mudar de nome, atualize também:
 
 | Sintoma | Solução |
 |---------|---------|
+| **Deploy 404 — "Ensure GitHub Pages has been enabled"** | Veja [Erro 404 no deploy](#erro-404-no-deploy) abaixo |
 | Página em branco ou CSS quebrado | Confirme que `base` em `vite.config.js` é `/guiropa-systems/` (igual ao nome do repo) |
 | Link direto `/sobre` dá 404 | Rode `npm run build` de novo; o build deve gerar `dist/404.html` |
 | Deploy falhou em Actions | Abra o job vermelho e leia o log; em geral é dependência ou erro de build |
 | Pasta `client/dist` no Git | Não commite — já está no `.gitignore` |
 | OneDrive reinicia o servidor | Use `npm run dev:server` (sem `--watch`); watch: `npm run dev:watch --prefix server` |
+
+### Erro 404 no deploy
+
+Se o job **build** passa e o **deploy** falha com `Failed to create deployment (status: 404)`:
+
+1. **Repositório** → **Settings** → **Pages** → **Source** = **GitHub Actions** → Save  
+2. Se o repositório é de **organização**, o **dono da org** precisa liberar Pages:  
+   **Organization Settings** → **Pages** (ou **Member privileges** → **Pages**) → permitir publicação de sites  
+3. Aguarde 1–2 minutos após salvar e rode de novo: **Actions** → **Deploy to GitHub Pages** → **Run workflow**  
+4. Se aparecer **Review deployments**, clique em **Approve and deploy**
+
+Sem a permissão da organização, o deploy sempre retorna 404 mesmo com o workflow correto.
 
 ---
 
