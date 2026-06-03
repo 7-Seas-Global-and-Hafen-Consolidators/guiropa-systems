@@ -1,5 +1,7 @@
 /** Conteúdo institucional — Guia Instrucional Sites 7 Seas & Guiropa */
 
+import { assetUrl } from "../utils/assetUrl.js";
+
 export const LANG_OPTIONS = [
   { code: "pt", label: "PT" },
   { code: "en", label: "EN" },
@@ -22,7 +24,7 @@ const sharedBrands = {
     taglineEs: "Agente de carga internacional · NVOCC.",
     instagram: "https://www.instagram.com/7.seasglobal/",
     instagramHandle: "@7.seasglobal",
-    logo: "/logos/7-seas-global.png",
+    logo: assetUrl("logos/7-seas-global.png"),
     origin: "Liechtenstein",
     years: "15+",
   },
@@ -31,18 +33,18 @@ const sharedBrands = {
 const sharedContact = {
   email: "contact@guiropa.world",
   whatsapp: {
-    number: "48732099369",
-    display: "+48 732 099 369",
+    number: "48832099369",
+    display: "+48 832 099 369",
   },
   phones: [
-    { display: "+55 51 3027-4785", tel: "+555130274785" },
-    { display: "+55 45 2021-0022", tel: "+554520210022" },
+    { display: "+55 51 3027 4785", tel: "+555130274785", region: "brazil" },
+    { display: "+55 45 2021 0022", tel: "+554520210022", region: "brazil" },
   ],
   hr: {
     sevenSeas: "hr@7seasglobal.eu",
     guiropa: "hr@guiropa.world",
   },
-  manualHref: "/docs/manual-comex-guiropa-7seas.pdf",
+  manualHref: assetUrl("docs/manual-comex-guiropa-7seas.pdf"),
 };
 
 function brands(lang) {
@@ -73,21 +75,66 @@ const pt = {
     langSwitch: "Idioma do site",
   },
   nav: [
-    { href: "/#about", label: "Sobre" },
-    { href: "/#services", label: "Serviços" },
-    { href: "/#network-global", label: "Rede global" },
-    { href: "/#why-us", label: "Diferenciais" },
+    { href: "/sobre", label: "Sobre" },
+    { href: "/servicos", label: "Serviços" },
+    { href: "/rede-global", label: "Rede global" },
     { href: "/orcamento", label: "Orçamento", cta: true },
-    { href: "/#contact", label: "Contato" },
+    { href: "/contato", label: "Contato" },
   ],
   navFooter: [
-    { href: "/#about", label: "Sobre" },
-    { href: "/#services", label: "Serviços" },
-    { href: "/#contact", label: "Contato" },
+    { href: "/sobre", label: "Sobre" },
+    { href: "/servicos", label: "Serviços" },
+    { href: "/rede-global", label: "Rede global" },
+    { href: "/contato", label: "Contato" },
     { href: "/simuladores", label: "Simuladores" },
-    { href: "/#payment", label: "Pagamento" },
     { href: "/trabalhe-conosco", label: "Trabalhe conosco" },
   ],
+  explore: {
+    eyebrow: "Institucional",
+    headline: "Conheça a operação",
+    lead: "Cada tema em sua própria página — leitura fluida, sem excesso de scroll.",
+    openPage: "Explorar",
+    cards: {
+      about: {
+        title: "Sobre nós",
+        description: "Missão, visão, divisões GUIROPA e 7 SEAS — e por que nos escolher.",
+      },
+      services: {
+        title: "Serviços",
+        description: "Portfólio completo e corredor multimodal Ásia · Europa · América do Sul.",
+      },
+      network: {
+        title: "Rede global",
+        description: "Presença em 20+ países, hubs litorâneos e parceiros estratégicos.",
+      },
+      contact: {
+        title: "Contato",
+        description: "Canais comerciais, RH, WhatsApp e formas de pagamento.",
+      },
+    },
+  },
+  pages: {
+    about: {
+      eyebrow: "Sobre nós",
+      title: "Presença onde os outros hesitam.",
+      lead: "Duas marcas, uma operação — do interior brasileiro aos corredores globais.",
+    },
+    services: {
+      eyebrow: "Serviços",
+      title: "Portfólio central",
+      lead: "Do embarque à entrega — para PMEs e grandes corporações.",
+    },
+    network: {
+      eyebrow: "Rede global",
+      title: "Mais de 20 países",
+      lead: "Postos operacionais e parcerias consolidadas — da Ásia à Europa e às Américas.",
+    },
+    contact: {
+      eyebrow: "Contato",
+      title: "Fale com a operação",
+      lead: "Canais diretos para comercial, recrutamento e suporte à sua carga.",
+    },
+  },
   hub: {
     eyebrow: "Recursos",
     headline: "Próximo passo da sua operação",
@@ -384,6 +431,7 @@ const pt = {
     emailLabel: "E-mail",
     whatsappLabel: "WhatsApp",
     phoneLabel: "Telefone",
+    phoneRegionBrazil: "Brasil",
     hrLabel: "Currículos",
     careersLabel: "Recursos Humanos",
     hrLead: "Envie seu currículo para o e-mail da operação desejada.",
@@ -426,21 +474,66 @@ const en = {
     langSwitch: "Site language",
   },
   nav: [
-    { href: "/#about", label: "About" },
-    { href: "/#services", label: "Services" },
-    { href: "/#network-global", label: "Global network" },
-    { href: "/#why-us", label: "Why us" },
+    { href: "/sobre", label: "About" },
+    { href: "/servicos", label: "Services" },
+    { href: "/rede-global", label: "Global network" },
     { href: "/orcamento", label: "Quote", cta: true },
-    { href: "/#contact", label: "Contact" },
+    { href: "/contato", label: "Contact" },
   ],
   navFooter: [
-    { href: "/#about", label: "About" },
-    { href: "/#services", label: "Services" },
-    { href: "/#contact", label: "Contact" },
+    { href: "/sobre", label: "About" },
+    { href: "/servicos", label: "Services" },
+    { href: "/rede-global", label: "Global network" },
+    { href: "/contato", label: "Contact" },
     { href: "/simuladores", label: "Calculators" },
-    { href: "/#payment", label: "Payment" },
     { href: "/trabalhe-conosco", label: "Careers" },
   ],
+  explore: {
+    eyebrow: "Institutional",
+    headline: "Discover the operation",
+    lead: "Each topic on its own page — smooth reading, no endless scrolling.",
+    openPage: "Explore",
+    cards: {
+      about: {
+        title: "About us",
+        description: "Mission, vision, GUIROPA & 7 SEAS divisions — and why choose us.",
+      },
+      services: {
+        title: "Services",
+        description: "Full portfolio and Asia · Europe · South America multimodal corridor.",
+      },
+      network: {
+        title: "Global network",
+        description: "Presence in 20+ countries, coastal hubs and strategic partners.",
+      },
+      contact: {
+        title: "Contact",
+        description: "Commercial channels, HR, WhatsApp and payment options.",
+      },
+    },
+  },
+  pages: {
+    about: {
+      eyebrow: "About us",
+      title: "Presence where others hesitate.",
+      lead: "Two brands, one operation — from Brazil's interior to global corridors.",
+    },
+    services: {
+      eyebrow: "Services",
+      title: "Core portfolio",
+      lead: "From shipment to delivery — for SMEs and large corporations.",
+    },
+    network: {
+      eyebrow: "Global network",
+      title: "20+ countries",
+      lead: "Operational posts and consolidated partnerships — from Asia to Europe and the Americas.",
+    },
+    contact: {
+      eyebrow: "Contact",
+      title: "Talk to the operation",
+      lead: "Direct channels for sales, recruitment and cargo support.",
+    },
+  },
   hub: {
     eyebrow: "Resources",
     headline: "Your next operational step",
@@ -701,6 +794,7 @@ const en = {
     emailLabel: "Email",
     whatsappLabel: "WhatsApp",
     phoneLabel: "Phone",
+    phoneRegionBrazil: "Brazil",
     hrLabel: "CVs",
     careersLabel: "Human Resources",
     hrLead: "Send your CV to the mailbox for the operation you are applying to.",
@@ -742,21 +836,66 @@ const es = {
     langSwitch: "Idioma del sitio",
   },
   nav: [
-    { href: "/#about", label: "Nosotros" },
-    { href: "/#services", label: "Servicios" },
-    { href: "/#network-global", label: "Red global" },
-    { href: "/#why-us", label: "Diferenciales" },
+    { href: "/sobre", label: "Nosotros" },
+    { href: "/servicos", label: "Servicios" },
+    { href: "/rede-global", label: "Red global" },
     { href: "/orcamento", label: "Presupuesto", cta: true },
-    { href: "/#contact", label: "Contacto" },
+    { href: "/contato", label: "Contacto" },
   ],
   navFooter: [
-    { href: "/#about", label: "Nosotros" },
-    { href: "/#services", label: "Servicios" },
-    { href: "/#contact", label: "Contacto" },
+    { href: "/sobre", label: "Nosotros" },
+    { href: "/servicos", label: "Servicios" },
+    { href: "/rede-global", label: "Red global" },
+    { href: "/contato", label: "Contacto" },
     { href: "/simuladores", label: "Simuladores" },
-    { href: "/#payment", label: "Pago" },
     { href: "/trabalhe-conosco", label: "Trabaja con nosotros" },
   ],
+  explore: {
+    eyebrow: "Institucional",
+    headline: "Conozca la operación",
+    lead: "Cada tema en su propia página — lectura fluida, sin scroll excesivo.",
+    openPage: "Explorar",
+    cards: {
+      about: {
+        title: "Nosotros",
+        description: "Misión, visión, divisiones GUIROPA y 7 SEAS — y por qué elegirnos.",
+      },
+      services: {
+        title: "Servicios",
+        description: "Portafolio completo y corredor multimodal Asia · Europa · América del Sur.",
+      },
+      network: {
+        title: "Red global",
+        description: "Presencia en 20+ países, hubs costeros y socios estratégicos.",
+      },
+      contact: {
+        title: "Contacto",
+        description: "Canales comerciales, RR. HH., WhatsApp y formas de pago.",
+      },
+    },
+  },
+  pages: {
+    about: {
+      eyebrow: "Nosotros",
+      title: "Presencia donde otros dudan.",
+      lead: "Dos marcas, una operación — del interior brasileño a los corredores globales.",
+    },
+    services: {
+      eyebrow: "Servicios",
+      title: "Portafolio central",
+      lead: "Del embarque a la entrega — para PYMES y grandes corporaciones.",
+    },
+    network: {
+      eyebrow: "Red global",
+      title: "Más de 20 países",
+      lead: "Puestos operativos y alianzas consolidadas — de Asia a Europa y las Américas.",
+    },
+    contact: {
+      eyebrow: "Contacto",
+      title: "Hable con la operación",
+      lead: "Canales directos para comercial, reclutamiento y soporte de carga.",
+    },
+  },
   hub: {
     eyebrow: "Recursos",
     headline: "Próximo paso de su operación",
@@ -1009,6 +1148,7 @@ const es = {
     emailLabel: "Correo",
     whatsappLabel: "WhatsApp",
     phoneLabel: "Teléfono",
+    phoneRegionBrazil: "Brasil",
     hrLabel: "Currículos",
     careersLabel: "Recursos Humanos",
     hrLead: "Envíe su currículum al correo de la operación deseada.",

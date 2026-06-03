@@ -5,12 +5,13 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev": "echo Run dev:server and dev:client in two terminals",
+    "dev": "echo Abra dois terminais: npm run dev:client  e  npm run dev:server",
     "dev:client": "npm run dev --prefix client",
     "dev:server": "npm run dev --prefix server",
     "build": "npm run build --prefix client",
+    "preview": "npm run preview --prefix client",
     "install:all": "npm install --prefix client && npm install --prefix server",
-    "build:deploy": "npm run install:all && npm run build",
+    "build:deploy": "npm ci --prefix client && npm run build --prefix client",
     "start": "npm run start --prefix server",
     "start:prod": "npm run start --prefix server"
   }

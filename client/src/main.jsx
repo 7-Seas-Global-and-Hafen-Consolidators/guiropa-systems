@@ -5,9 +5,11 @@ import App from "./App.jsx";
 import { LanguageProvider } from "./i18n/LanguageContext.jsx";
 import "./styles/global.css";
 
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/guiropa-systems">
+    <BrowserRouter basename={routerBasename || undefined}>
       <LanguageProvider>
         <App />
       </LanguageProvider>

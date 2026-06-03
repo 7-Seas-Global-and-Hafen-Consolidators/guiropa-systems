@@ -47,23 +47,28 @@ export function CommercialChannels({ layout = "chips", className = "" }) {
           href={whatsappHref}
           icon={<WhatsAppIcon />}
           label={c.whatsappLabel}
-          hint={c.channelHintWhatsapp}
+          hint={t.whatsapp.display}
           ariaLabel={`${c.whatsappLabel}: ${t.whatsapp.display}`}
           external
           className="discreet-channel--wa"
         />
       </li>
-      {t.phones.map((ph, i) => (
+      {t.phones.map((ph) => {
+        const regionLabel =
+          ph.region === "brazil" ? c.phoneRegionBrazil : c.phoneLabel;
+
+        return (
         <li key={ph.tel}>
           <DiscreetChannel
             href={`tel:${ph.tel}`}
             icon={<PhoneIcon />}
-            label={`${c.phoneLabel}${t.phones.length > 1 ? ` ${i + 1}` : ""}`}
-            hint={c.channelHintPhone}
-            ariaLabel={`${c.phoneLabel}: ${ph.display}`}
+            label={regionLabel}
+            hint={ph.display}
+            ariaLabel={`${regionLabel}: ${ph.display}`}
           />
         </li>
-      ))}
+        );
+      })}
     </ul>
   );
 }

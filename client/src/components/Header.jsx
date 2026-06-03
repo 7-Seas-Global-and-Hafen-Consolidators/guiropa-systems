@@ -16,6 +16,11 @@ export default function Header() {
   }, [location.pathname]);
 
   useEffect(() => {
+    document.body.classList.toggle("nav-open", menuOpen);
+    return () => document.body.classList.remove("nav-open");
+  }, [menuOpen]);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -25,6 +30,15 @@ export default function Header() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
+    <>
+    <button
+      type="button"
+      className={`nav-backdrop${menuOpen ? " is-visible" : ""}`}
+      aria-label={t.a11y.closeMenu}
+      aria-hidden={!menuOpen}
+      tabIndex={menuOpen ? 0 : -1}
+      onClick={closeMenu}
+    />
     <header className={`site-header${scrolled ? " scrolled" : ""}`}>
       <Link to="/" className="logo-link" aria-label={t.a11y.home}>
         <GuiropaLogo variant="header" />
@@ -58,5 +72,6 @@ export default function Header() {
         </button>
       </div>
     </header>
+    </>
   );
 }

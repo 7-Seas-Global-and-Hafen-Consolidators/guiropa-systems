@@ -3,12 +3,12 @@
 <br/><br/>
 
 ```
-                                             ██████╗ ██╗   ██╗██╗██████╗  ██████╗ ██████╗  █████╗
-                                            ██╔════╝ ██║   ██║██║██╔══██╗██╔═══██╗██╔══██╗██╔══██╗
-                                            ██║  ███╗██║   ██║██║██████╔╝██║   ██║██████╔╝███████║
-                                            ██║   ██║██║   ██║██║██╔══██╗██║   ██║██╔═══╝ ██╔══██║
-                                            ╚██████╔╝╚██████╔╝██║██║  ██║╚██████╔╝██║     ██║  ██║
-                                             ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝  ╚═╝
+                            ██████╗ ██╗   ██╗██╗██████╗  ██████╗ ██████╗  █████╗
+                            ██╔════╝ ██║   ██║██║██╔══██╗██╔═══██╗██╔══██╗██╔══██╗
+                            ██║  ███╗██║   ██║██║██████╔╝██║   ██║██████╔╝███████║
+                            ██║   ██║██║   ██║██║██╔══██╗██║   ██║██╔═══╝ ██╔══██║
+                            ╚██████╔╝╚██████╔╝██║██║  ██║╚██████╔╝██║     ██║  ██║
+                            ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝  ╚═╝
 ```
 
 ### `SYSTEMS` **&** `7 SEAS GLOBAL`
@@ -104,6 +104,17 @@ da coleta em Franca (SP) ao desembaraço em Foz do Iguaçu, da Ásia às Améric
 </div>
 
 <br/>
+
+---
+
+## ◈ &nbsp; Site e hospedagem
+
+| | |
+|---|---|
+| **Repositório** | https://github.com/7-Seas-Global-and-Hafen-Consolidators/guiropa-systems |
+| **Site ao vivo** | https://7-Seas-Global-and-Hafen-Consolidators.github.io/guiropa-systems/ |
+| **Guia de deploy** | [HOSPEDAGEM.md](./HOSPEDAGEM.md) |
+| **Dev local** | `npm run install:all` → `npm run dev:client` |
 
 ---
 

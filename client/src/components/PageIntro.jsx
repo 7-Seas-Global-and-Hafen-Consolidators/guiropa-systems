@@ -48,7 +48,7 @@ export default function PageIntro({ content }) {
             >
               {content.contactCta}
             </a>
-            <Link to="/#contact" className="btn-secondary">
+            <Link to="/contato" className="btn-secondary">
               {p.viewContact}
             </Link>
           </Reveal>
