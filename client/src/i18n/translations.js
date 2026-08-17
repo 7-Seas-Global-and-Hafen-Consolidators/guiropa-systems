@@ -1,1174 +1,534 @@
-/** Conteúdo institucional — Guia Instrucional Sites 7 Seas & Guiropa */
-
-import { assetUrl } from "../utils/assetUrl.js";
-
 export const LANG_OPTIONS = [
   { code: "pt", label: "PT" },
   { code: "en", label: "EN" },
   { code: "es", label: "ES" },
 ];
 
-const sharedBrands = {
-  guiropa: {
-    name: "GUIROPA SYSTEMS",
-    taglinePt: "Tecnologia, logística avançada e corredores multimodais.",
-    taglineEn: "Technology, advanced logistics and multimodal corridors.",
-    taglineEs: "Tecnología, logística avanzada y corredores multimodales.",
-    instagram: "https://www.instagram.com/guiropasystemss/",
-    instagramHandle: "@guiropasystemss",
-  },
-  sevenSeas: {
-    name: "7 SEAS GLOBAL",
-    taglinePt: "Agente de carga internacional · NVOCC.",
-    taglineEn: "International freight forwarder · NVOCC.",
-    taglineEs: "Agente de carga internacional · NVOCC.",
-    instagram: "https://www.instagram.com/7.seasglobal/",
-    instagramHandle: "@7.seasglobal",
-    logo: assetUrl("logos/7-seas-global.png"),
-    origin: "Liechtenstein",
-    years: "15+",
+const shared = {
+  brands: {
+    guiropa: {
+      name: "GUIROPA RADIO",
+      instagram: "https://www.instagram.com/guiropasystemss/",
+      instagramHandle: "@guiropasystemss",
+    },
   },
 };
-
-const sharedContact = {
-  email: "contact@guiropa.world",
-  whatsapp: {
-    number: "48832099369",
-    display: "+48 832 099 369",
-  },
-  phones: [
-    { display: "+55 51 3027 4785", tel: "+555130274785", region: "brazil" },
-    { display: "+55 45 2021 0022", tel: "+554520210022", region: "brazil" },
-  ],
-  hr: {
-    sevenSeas: "hr@7seasglobal.eu",
-    guiropa: "hr@guiropa.world",
-  },
-  manualHref: assetUrl("docs/manual-comex-guiropa-7seas.pdf"),
-};
-
-function brands(lang) {
-  const g = sharedBrands.guiropa;
-  const s = sharedBrands.sevenSeas;
-  const tag = (o) => (lang === "en" ? o.taglineEn : lang === "es" ? o.taglineEs : o.taglinePt);
-  return {
-    guiropa: { ...g, tagline: tag(g) },
-    sevenSeas: { ...s, tagline: tag(s) },
-  };
-}
 
 const pt = {
-  brands: brands("pt"),
+  ...shared,
+
   meta: {
-    title: "GUIROPA SYSTEMS & 7 SEAS GLOBAL",
+    title: "GUIROPA RADIO",
     description:
-      "Logística internacional, NVOCC, corredores multimodais e trading. Presença em mais de 20 países. Operação ativa onde os outros hesitam.",
+      "GUIROPA RADIO — música de 1950 a 1990. Quatro décadas e um ponto final.",
   },
+
   a11y: {
-    home: "GUIROPA SYSTEMS — início",
+    home: "GUIROPA RADIO — início",
     navPrimary: "Navegação principal",
-    navSocial: "Redes sociais",
-    footerNav: "Links do rodapé",
+    footerNav: "Navegação do rodapé",
     openMenu: "Abrir menu",
     closeMenu: "Fechar menu",
-    sevenSeasLogo: "7 SEAS GLOBAL",
     langSwitch: "Idioma do site",
   },
+
   nav: [
-    { href: "/sobre", label: "Sobre" },
-    { href: "/servicos", label: "Serviços" },
-    { href: "/rede-global", label: "Rede global" },
-    { href: "/orcamento", label: "Orçamento", cta: true },
-    { href: "/contato", label: "Contato" },
+    { href: "/", label: "Início" },
+    { href: "/ouvir", label: "Ouvir", cta: true },
+    { href: "/programacao", label: "Programação" },
+    { href: "/loja", label: "Loja" },
   ],
-  navFooter: [
-    { href: "/sobre", label: "Sobre" },
-    { href: "/servicos", label: "Serviços" },
-    { href: "/rede-global", label: "Rede global" },
-    { href: "/contato", label: "Contato" },
-    { href: "/simuladores", label: "Simuladores" },
-    { href: "/trabalhe-conosco", label: "Trabalhe conosco" },
-  ],
-  explore: {
-    eyebrow: "Institucional",
-    headline: "Conheça a operação",
-    lead: "Cada tema em sua própria página — leitura fluida, sem excesso de scroll.",
-    openPage: "Explorar",
-    cards: {
-      about: {
-        title: "Sobre nós",
-        description: "Missão, visão, divisões GUIROPA e 7 SEAS — e por que nos escolher.",
-      },
-      services: {
-        title: "Serviços",
-        description: "Portfólio completo e corredor multimodal Ásia · Europa · América do Sul.",
-      },
-      network: {
-        title: "Rede global",
-        description: "Presença em 20+ países, hubs litorâneos e parceiros estratégicos.",
-      },
-      contact: {
-        title: "Contato",
-        description: "Canais comerciais, RH, WhatsApp e formas de pagamento.",
-      },
-    },
-  },
-  pages: {
-    about: {
-      eyebrow: "Sobre nós",
-      title: "Presença onde os outros hesitam.",
-      lead: "Duas marcas, uma operação — do interior brasileiro aos corredores globais.",
-    },
-    services: {
-      eyebrow: "Serviços",
-      title: "Portfólio central",
-      lead: "Do embarque à entrega — para PMEs e grandes corporações.",
-    },
-    network: {
-      eyebrow: "Rede global",
-      title: "Mais de 20 países",
-      lead: "Postos operacionais e parcerias consolidadas — da Ásia à Europa e às Américas.",
-    },
-    contact: {
-      eyebrow: "Contato",
-      title: "Fale com a operação",
-      lead: "Canais diretos para comercial, recrutamento e suporte à sua carga.",
-    },
-  },
-  hub: {
-    eyebrow: "Recursos",
-    headline: "Próximo passo da sua operação",
-    lead: "Conheça cada ambiente antes de operar — simuladores, orçamento e carreiras.",
-    openPage: "Conhecer",
-    cards: {
-      tools: {
-        title: "Simuladores de carga",
-        description: "Peso volumétrico aéreo e CBM marítimo antes de cotar.",
-      },
-      quote: {
-        title: "Solicitar orçamento",
-        description: "Formulário estruturado para triagem comercial imediata.",
-      },
-      careers: {
-        title: "Trabalhe conosco",
-        description: "Banco de talentos internacional em Comex e logística.",
-      },
-    },
-  },
-  page: {
-    backHome: "Voltar ao início",
-    comingSoon: "Em breve",
-    viewContact: "Ver contatos",
-  },
-  pageIntros: {
-    tools: {
-      eyebrow: "Ferramentas",
-      title: "Simuladores de carga",
-      lead: "Estime cubagem e peso volumétrico com precisão antes de solicitar sua cotação.",
-      body:
-        "Ferramentas pensadas para decisões comerciais: menos surpresa no frete aéreo e no LCL marítimo, mais clareza na negociação.",
-      highlights: [
-        "Peso volumétrico aéreo — fórmula IATA (C × L × A) / 6000",
-        "CBM para frete marítimo consolidado (LCL)",
-        "Resultados instantâneos para apoiar sua cotação",
-      ],
-      functionalLabel: "Área funcional",
-      functionalTitle: "Calculadoras interativas",
-      functionalNote:
-        "Os simuladores serão ativados nesta página em breve. Enquanto isso, nossa equipe apoia sua operação por WhatsApp ou e-mail.",
-      contactCta: "Falar com a equipe",
-    },
-    quote: {
-      eyebrow: "Orçamento",
-      title: "Solicitar orçamento",
-      lead: "Uma cotação estruturada começa com dados claros sobre origem, destino, modal e volume.",
-      body:
-        "Atendemos PMEs e grandes corporações com triagem comercial ágil. Descreva sua operação e retornamos com proposta alinhada ao seu fluxo.",
-      highlights: [
-        "Origem, destino e modal (marítimo, aéreo, multimodal)",
-        "Peso, volume ou tipo de carga",
-        "Prazo e condições comerciais desejadas",
-      ],
-      functionalLabel: "Área funcional",
-      functionalTitle: "Formulário de cotação",
-      functionalNote:
-        "O formulário online será disponibilizado aqui em breve. Para orçamento imediato, utilize nossos canais diretos.",
-      contactCta: "Solicitar via WhatsApp",
-    },
-    careers: {
-      eyebrow: "Talentos",
-      title: "Trabalhe conosco",
-      lead: "Integre o banco de talentos internacional em comércio exterior, logística e operações multimodais.",
-      body:
-        "Buscamos profissionais que operem com precisão em rotas complexas — do interior brasileiro aos corredores globais.",
-      highlights: [
-        "Comex, logística internacional e trading",
-        "Operações em mais de 20 países",
-        "Cultura de entrega em rotas de alta complexidade",
-      ],
-      functionalLabel: "Área funcional",
-      functionalTitle: "Envio de currículo",
-      functionalNote:
-        "O portal de candidaturas será ativado em breve. Envie seu PDF para os e-mails de RH das marcas GUIROPA e 7 SEAS.",
-      contactCta: "Falar com RH",
-    },
-  },
+
   hero: {
-    brandTagline: "Movimento global controlado.",
-    ctaPrimary: "Solicitar orçamento",
-  },
-  about: {
-    eyebrow: "Sobre nós",
-    headline: "Presença onde os outros hesitam.",
-    mission: {
-      label: "Missão",
-      text: "Simplificar o comércio internacional, conectando fornecedores, compradores e corredores com soluções práticas, eficientes e flexíveis.",
-    },
-    vision: {
-      label: "Visão",
-      text: "Ser o parceiro líder global em logística e trading, interligando mercados emergentes e estabelecidos por inovação e transporte multimodal.",
-    },
-    divisionsTitle: "Nossas divisões",
-    divisions: [
-      {
-        brand: "sevenSeas",
-        title: "7 SEAS GLOBAL",
-        text: "Agente de carga internacional, NVOCC e transportadora. Comex, trading e documentação House BL. Liechtenstein · 15+ anos de mercado.",
-      },
-      {
-        brand: "guiropa",
-        title: "GUIROPA SYSTEMS",
-        text: "Tecnologia, logística avançada e corredores multimodais — interior, fronteiras e integração ferroviária, rodoviária e marítima.",
-      },
-    ],
-  },
-  presence: {
-    eyebrow: "Nossa rede global",
-    headline: "Mais de 20 países",
-    lead: "Postos operacionais e parcerias consolidadas — da Ásia à Europa e às Américas.",
-    conversion:
-      "Coleta em Franca (SP), desembaraço em Foz do Iguaçu ou entrega no extremo norte — com uma única estrutura.",
-    regions: [
-      {
-        id: "north",
-        title: "Extremo Norte",
-        badge: "Operação",
-        cities: ["Roraima", "Amapá", "Acre", "Rio Branco", "Boa Vista"],
-      },
-      {
-        id: "interior",
-        title: "Interior estratégico",
-        badge: "GUIROPA",
-        cities: ["Cuiabá", "Franca", "Oeste do Paraná", "Campinas", "Ribeirão Preto"],
-      },
-      {
-        id: "border",
-        title: "Tríplice fronteira",
-        badge: "Aduana",
-        cities: ["Foz do Iguaçu", "Ciudad del Este", "Porto Alegre"],
-      },
-      {
-        id: "hubs",
-        title: "Hubs litorâneos",
-        badge: "7 SEAS",
-        cities: ["Santos", "Paranaguá", "Navegantes", "Vitória", "Belém"],
-      },
-      {
-        id: "corridor",
-        title: "Corredor transcontinental",
-        badge: "GUIROPA",
-        cities: ["Xangai / Shenzhen", "Almaty", "Baku", "Istambul", "Rotterdam", "Hamburgo"],
-      },
-      {
-        id: "americas",
-        title: "Américas & MERCOSUL",
-        badge: "Aliança",
-        cities: ["São Paulo", "Buenos Aires", "Montevidéu", "Manaus", "Belo Horizonte"],
-      },
-    ],
-  },
-  corridor: {
-    eyebrow: "Corredor multimodal",
-    headline: "Ásia · Europa · América do Sul",
+    brandTagline: "A música que atravessou gerações.",
+    headline: "A música que atravessou gerações.",
     lead:
-      "Integração de fluxos comerciais por rotas ferroviárias, rodoviárias e marítimas — uma única gestão do embarque à entrega.",
+      "Dos anos 50 até 1990. Rock, soul, pop, blues, disco, funk, metal, new wave e tudo aquilo que fez uma época ter som próprio.",
+    ctaPrimary: "Ouvir agora",
+  },
+
+  decades: {
+    eyebrow: "A linha do tempo",
+    headline: "Quarenta anos. Milhares de histórias.",
+    lead:
+      "A GUIROPA atravessa as décadas sem transformar memória em museu. Aqui, ela continua tocando.",
+    items: [
+      {
+        code: "50",
+        year: "1950s",
+        title: "A faísca",
+        description:
+          "Rock 'n' roll, rhythm & blues, doo-wop, jazz e o início de uma revolução.",
+      },
+      {
+        code: "60",
+        year: "1960s",
+        title: "Tudo mudou",
+        description:
+          "Beat, soul, psicodelia, Motown, British Invasion e uma geração encontrando sua própria voz.",
+      },
+      {
+        code: "70",
+        year: "1970s",
+        title: "Sem limites",
+        description:
+          "Hard rock, progressive, disco, funk, punk, glam e música ocupando todos os espaços.",
+      },
+      {
+        code: "80",
+        year: "1980s",
+        title: "Volume máximo",
+        description:
+          "New wave, synthpop, heavy metal, arena rock, pop e uma década impossível de ignorar.",
+      },
+      {
+        code: "90",
+        year: "1990",
+        title: "Ponto final",
+        description:
+          "A última parada da GUIROPA. Chegou 1990. Daqui não passa.",
+      },
+    ],
+  },
+
+  hub: {
+    eyebrow: "GUIROPA RADIO",
+    headline: "Escolha onde entrar.",
+    lead:
+      "Ouça a rádio, acompanhe a programação ou entre na coleção GUIROPA.",
     cards: [
       {
-        title: "Rotas integradas",
-        text: "Conexão visual e operacional entre Ásia, Ásia Central, Cáucaso, Europa e América do Sul.",
+        href: "/ouvir",
+        title: "Ouvir agora",
+        description:
+          "O coração da GUIROPA. Player, faixa atual e a transmissão.",
       },
       {
-        title: "Multimodal unificado",
-        text: "Marítimo, ferroviário e rodoviário sob documentação e controle centralizados.",
+        href: "/programacao",
+        title: "Programação",
+        description:
+          "Décadas, programas e blocos construídos em torno da música.",
       },
       {
-        title: "Sem gargalos",
-        text: "Inteligência em cada nó — do porto ao interior e à fronteira.",
+        href: "/loja",
+        title: "GUIROPA Store",
+        description:
+          "A identidade da rádio fora das caixas de som.",
       },
     ],
   },
-  services: {
-    eyebrow: "Serviços",
-    headline: "Portfólio central",
-    lead: "Do embarque à entrega — para PMEs e grandes corporações.",
-    items: [
-      "Agenciamento de carga internacional",
-      "Serviços NVOCC (House BL e consolidação autônoma)",
-      "Frete marítimo global",
-      "Frete aéreo para lead time reduzido",
-      "Transporte rodoviário nacional e Mercosul",
-      "Soluções logísticas do Mercosul",
-      "Transporte multimodal integrado",
-      "Comércio internacional e sourcing",
-      "Apoio a negócios transfronteiriços e aduana",
+
+  listen: {
+    eyebrow: "No ar",
+    title: "Ouça a GUIROPA.",
+    lead:
+      "1950 → 1990. A transmissão terá aqui seu player definitivo.",
+    playerTitle: "O player está chegando.",
+    playerNote:
+      "A estrutura da rádio está sendo preparada. Esta área receberá o stream oficial, faixa atual e histórico.",
+    play: "Reproduzir GUIROPA RADIO",
+    waiting: "Transmissão em preparação",
+  },
+
+  schedule: {
+    eyebrow: "Programação",
+    title: "Cada década tem sua hora.",
+    lead:
+      "A programação da GUIROPA será construída sobre cinco pontos da linha do tempo.",
+    decades: [
+      {
+        year: "1950s",
+        title: "The Beginning",
+        description: "As raízes da revolução.",
+      },
+      {
+        year: "1960s",
+        title: "The Explosion",
+        description: "Quando tudo começou a mudar.",
+      },
+      {
+        year: "1970s",
+        title: "No Rules",
+        description: "A década em que cabia tudo.",
+      },
+      {
+        year: "1980s",
+        title: "Turn It Up",
+        description: "Som grande. Identidade maior ainda.",
+      },
+      {
+        year: "1990",
+        title: "The Last Stop",
+        description: "Aqui termina a linha do tempo.",
+      },
     ],
   },
-  whyUs: {
-    eyebrow: "Credibilidade",
-    headline: "Por que nos escolher",
-    lead: "Diferenciais B2B — entregas de alta complexidade, sem depender de reviews genéricos.",
-    items: [
-      "Credibilidade em operações de alta complexidade",
-      "Rede internacional real em mais de 20 países",
-      "Expertise multimodal: ferro, rodovia e marítimo",
-      "Suporte em trading e inteligência comercial",
-      "Soluções flexíveis de pagamento",
-      "Atendimento personalizado por lote e projeto",
-      "Experiência cross-border e desburocratização aduaneira",
-    ],
+
+  store: {
+    eyebrow: "GUIROPA Store",
+    title: "Vista o som.",
+    lead:
+      "A identidade GUIROPA aplicada a coleções inspiradas nas décadas que a rádio toca.",
+    collection: "Collection 1950 — 1990",
+    note:
+      "Produtos, edições e coleções entram aqui na próxima etapa.",
   },
-  clients: {
-    eyebrow: "Confiança",
-    headline: "Clientes",
-    lead: "Empresas que operam conosco em rotas complexas — do interior brasileiro aos corredores internacionais.",
-    logoFallback: "Cliente",
-    note: "",
-  },
-  partners: {
-    eyebrow: "Alianças",
-    headline: "Parceiros e associações",
-    lead: "Certificações internacionais e alianças estratégicas que reforçam nossa rede global.",
-    placeholders: ["Rede NVOCC", "Alianças portuárias", "Operadores multimodais", "Trading partners", "Associações Comex"],
-    note: "Logotipos de parceiros e afiliações podem ser atualizados conforme materiais oficiais da marca.",
-  },
-  comex: {
-    eyebrow: "Comex em operação",
-    headline: "Do planejamento à entrega",
-    lead: "Fluxo transparente que GUIROPA e 7 SEAS executam em conjunto.",
-    steps: [
-      { step: "01", title: "Planejar", text: "Rota, Incoterm, modal e fluxo de caixa definidos antes do movimento." },
-      { step: "02", title: "Embarcar", text: "Frete marítimo ou aéreo via 7 SEAS GLOBAL." },
-      { step: "03", title: "Desembaraçar", text: "Aduana e compliance no centro da operação." },
-      { step: "04", title: "Controlar", text: "GUIROPA no trecho interior — ferro, rodovia e fronteira." },
-      { step: "05", title: "Entregar", text: "Last-mile sob doutrina operacional única." },
-    ],
-  },
-  tools: {
-    eyebrow: "Ferramentas",
-    headline: "Simuladores de carga",
-    lead: "Estime cubagem e peso volumétrico antes de solicitar cotação.",
-    air: {
-      title: "Peso volumétrico — aéreo",
-      length: "Comprimento (cm)",
-      width: "Largura (cm)",
-      height: "Altura (cm)",
-      qty: "Volumes",
-      result: "Peso volumétrico",
-      formula: "Fórmula IATA: (C × L × A) / 6000 × volumes",
-      unit: "kg",
-    },
-    sea: {
-      title: "CBM — frete marítimo (LCL)",
-      length: "Comprimento (m)",
-      width: "Largura (m)",
-      height: "Altura (m)",
-      qty: "Volumes",
-      result: "Volume total (CBM)",
-      formula: "CBM = comprimento × largura × altura × volumes",
-      unit: "m³",
-    },
-    calculate: "Calcular",
-  },
-  payment: {
-    eyebrow: "Flexibilidade financeira",
-    headline: "Soluções de pagamento",
-    lead: "Arranjos comerciais adaptados ao perfil, volume e elegibilidade de cada operação.",
-    methods: [
-      { name: "Cartão de crédito", detail: "Transações rápidas e despesas operacionais menores" },
-      { name: "PIX", detail: "Agilidade no mercado brasileiro, com opções corporativas" },
-      { name: "Boleto bancário", detail: "Faturamento estruturado para empresas nacionais" },
-      { name: "Transferências internacionais", detail: "SWIFT, Carta de Crédito (LC) e Open Account" },
-    ],
-  },
-  quote: {
-    eyebrow: "Orçamento",
-    headline: "Solicitar orçamento",
-    lead: "Descreva origem, destino, modal e volume da carga. Retornamos em breve.",
-    name: "Nome",
-    email: "E-mail",
-    phone: "Telefone / WhatsApp",
-    message: "Sua operação",
-    messagePlaceholder: "Ex.: origem, destino, modal (marítimo/aéreo), peso ou volume, prazo…",
-    submit: "Enviar",
-    sending: "Enviando…",
-    success: "Recebido. Entraremos em contato em breve.",
-    errorDefault: "Erro ao enviar. Tente o WhatsApp.",
-  },
-  careers: {
-    eyebrow: "Talentos",
-    headline: "Trabalhe conosco",
-    lead: "Integre o banco de talentos internacional em comércio exterior e logística.",
-    instructions:
-      "Envie seu currículo em PDF para o e-mail da marca de seu interesse. Assunto sugerido: Nome — Área — Comex/Logística.",
-    sevenSeasLabel: "Recrutamento 7 SEAS GLOBAL",
-    guiropaLabel: "Recrutamento GUIROPA SYSTEMS",
-  },
-  contact: {
-    eyebrow: "Contato",
-    headline: "Entre em contato",
-    lead: "Canais globais de atendimento e recrutamento.",
-    channelsTitle: "Atendimento comercial",
-    emailLabel: "E-mail",
-    whatsappLabel: "WhatsApp",
-    phoneLabel: "Telefone",
-    phoneRegionBrazil: "Brasil",
-    hrLabel: "Currículos",
-    careersLabel: "Recursos Humanos",
-    hrLead: "Envie seu currículo para o e-mail da operação desejada.",
-    careersNote: true,
-    channelHintEmail: "Enviar e-mail",
-    channelHintWhatsapp: "Abrir conversa",
-    channelHintPhone: "Ligar agora",
-  },
+
   footer: {
-    quote: "Estabelecemos presença onde os outros hesitam.",
-    navTitle: "Navegação",
-    contactTitle: "Contato",
-    hrTitle: "Recrutamento",
-    socialTitle: "Redes",
-    manualLabel: "Manual Comex (PDF)",
-    backToTop: "Voltar ao topo",
-    legal: "Comex · NVOCC · Logística multimodal · Trading internacional",
-    copySuffix: "Presença global. Operação ativa.",
-    whatsappMessage: "Olá! Gostaria de falar sobre uma operação com a GUIROPA / 7 SEAS.",
+    statement:
+      "GET UP. TURN IT UP. GUIROPA.",
+    home: "Início",
+    listen: "Ouvir",
+    schedule: "Programação",
+    store: "Loja",
   },
-  ...sharedContact,
 };
 
 const en = {
-  ...pt,
-  brands: brands("en"),
+  ...shared,
+
   meta: {
-    title: "GUIROPA SYSTEMS & 7 SEAS GLOBAL",
+    title: "GUIROPA RADIO",
     description:
-      "International logistics, NVOCC, multimodal corridors and trading. Presence in 20+ countries. Active operations where others hesitate.",
+      "GUIROPA RADIO — music from 1950 to 1990.",
   },
+
   a11y: {
-    home: "GUIROPA SYSTEMS — home",
+    home: "GUIROPA RADIO — home",
     navPrimary: "Main navigation",
-    navSocial: "Social media",
-    footerNav: "Footer links",
+    footerNav: "Footer navigation",
     openMenu: "Open menu",
     closeMenu: "Close menu",
-    sevenSeasLogo: "7 SEAS GLOBAL",
     langSwitch: "Site language",
   },
+
   nav: [
-    { href: "/sobre", label: "About" },
-    { href: "/servicos", label: "Services" },
-    { href: "/rede-global", label: "Global network" },
-    { href: "/orcamento", label: "Quote", cta: true },
-    { href: "/contato", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/ouvir", label: "Listen", cta: true },
+    { href: "/programacao", label: "Schedule" },
+    { href: "/loja", label: "Store" },
   ],
-  navFooter: [
-    { href: "/sobre", label: "About" },
-    { href: "/servicos", label: "Services" },
-    { href: "/rede-global", label: "Global network" },
-    { href: "/contato", label: "Contact" },
-    { href: "/simuladores", label: "Calculators" },
-    { href: "/trabalhe-conosco", label: "Careers" },
-  ],
-  explore: {
-    eyebrow: "Institutional",
-    headline: "Discover the operation",
-    lead: "Each topic on its own page — smooth reading, no endless scrolling.",
-    openPage: "Explore",
-    cards: {
-      about: {
-        title: "About us",
-        description: "Mission, vision, GUIROPA & 7 SEAS divisions — and why choose us.",
-      },
-      services: {
-        title: "Services",
-        description: "Full portfolio and Asia · Europe · South America multimodal corridor.",
-      },
-      network: {
-        title: "Global network",
-        description: "Presence in 20+ countries, coastal hubs and strategic partners.",
-      },
-      contact: {
-        title: "Contact",
-        description: "Commercial channels, HR, WhatsApp and payment options.",
-      },
-    },
-  },
-  pages: {
-    about: {
-      eyebrow: "About us",
-      title: "Presence where others hesitate.",
-      lead: "Two brands, one operation — from Brazil's interior to global corridors.",
-    },
-    services: {
-      eyebrow: "Services",
-      title: "Core portfolio",
-      lead: "From shipment to delivery — for SMEs and large corporations.",
-    },
-    network: {
-      eyebrow: "Global network",
-      title: "20+ countries",
-      lead: "Operational posts and consolidated partnerships — from Asia to Europe and the Americas.",
-    },
-    contact: {
-      eyebrow: "Contact",
-      title: "Talk to the operation",
-      lead: "Direct channels for sales, recruitment and cargo support.",
-    },
-  },
-  hub: {
-    eyebrow: "Resources",
-    headline: "Your next operational step",
-    lead: "Discover each dedicated space before you operate — calculators, quotes and careers.",
-    openPage: "Discover",
-    cards: {
-      tools: {
-        title: "Cargo calculators",
-        description: "Air volumetric weight and ocean CBM before quoting.",
-      },
-      quote: {
-        title: "Request a quote",
-        description: "Structured form for immediate commercial triage.",
-      },
-      careers: {
-        title: "Careers",
-        description: "International talent pool in foreign trade and logistics.",
-      },
-    },
-  },
-  page: {
-    backHome: "Back to home",
-    comingSoon: "Coming soon",
-    viewContact: "View contacts",
-  },
-  pageIntros: {
-    tools: {
-      eyebrow: "Tools",
-      title: "Cargo calculators",
-      lead: "Estimate cubic weight and volume accurately before requesting your quote.",
-      body: "Built for commercial decisions: fewer surprises on air freight and ocean LCL, clearer negotiations.",
-      highlights: [
-        "Air volumetric weight — IATA formula (L × W × H) / 6000",
-        "CBM for consolidated ocean freight (LCL)",
-        "Instant results to support your quote",
-      ],
-      functionalLabel: "Functional area",
-      functionalTitle: "Interactive calculators",
-      functionalNote: "Calculators will go live on this page soon. Until then, our team supports you via WhatsApp or email.",
-      contactCta: "Talk to our team",
-    },
-    quote: {
-      eyebrow: "Quote",
-      title: "Request a quote",
-      lead: "A structured quote starts with clear origin, destination, mode and volume data.",
-      body: "We serve SMEs and global corporations with agile commercial triage. Describe your operation and we respond with a tailored proposal.",
-      highlights: [
-        "Origin, destination and mode (ocean, air, multimodal)",
-        "Weight, volume or cargo type",
-        "Timeline and desired commercial terms",
-      ],
-      functionalLabel: "Functional area",
-      functionalTitle: "Quote request form",
-      functionalNote: "The online form will be available here soon. For an immediate quote, use our direct channels.",
-      contactCta: "Request via WhatsApp",
-    },
-    careers: {
-      eyebrow: "Talent",
-      title: "Careers",
-      lead: "Join our international talent pool in foreign trade, logistics and multimodal operations.",
-      body: "We look for professionals who deliver with precision on complex routes — from Brazil's interior to global corridors.",
-      highlights: [
-        "Foreign trade, international logistics and trading",
-        "Operations in 20+ countries",
-        "Culture of delivery on high-complexity routes",
-      ],
-      functionalLabel: "Functional area",
-      functionalTitle: "CV submission",
-      functionalNote: "The application portal will launch soon. Send your PDF to GUIROPA and 7 SEAS HR emails.",
-      contactCta: "Contact HR",
-    },
-  },
+
   hero: {
-    brandTagline: "Controlled global movement.",
-    ctaPrimary: "Request a quote",
-  },
-  about: {
-    eyebrow: "About us",
-    headline: "Presence where others hesitate.",
-    mission: {
-      label: "Mission",
-      text: "Simplify international trade by connecting suppliers, buyers and corridors with practical, efficient, flexible solutions.",
-    },
-    vision: {
-      label: "Vision",
-      text: "Become the leading global partner in logistics and trading, linking emerging and established markets through innovation and multimodal transport.",
-    },
-    divisionsTitle: "Our divisions",
-    divisions: [
-      {
-        brand: "sevenSeas",
-        title: "7 SEAS GLOBAL",
-        text: "International freight forwarder, NVOCC and carrier. Foreign trade, trading and House BL. Liechtenstein · 15+ years.",
-      },
-      {
-        brand: "guiropa",
-        title: "GUIROPA SYSTEMS",
-        text: "Technology, advanced logistics and multimodal corridors — inland, borders and integrated rail, road and ocean.",
-      },
-    ],
-  },
-  presence: {
-    eyebrow: "Global network",
-    headline: "20+ countries",
-    lead: "Consolidated operational posts and partnerships — from Asia to Europe and the Americas.",
-    conversion:
-      "Pickup in Franca (SP), customs in Foz do Iguaçu, or delivery in the far north — under one structure.",
-    regions: [
-      { id: "north", title: "Far North", badge: "Operations", cities: ["Roraima", "Amapá", "Acre", "Rio Branco", "Boa Vista"] },
-      { id: "interior", title: "Strategic interior", badge: "GUIROPA", cities: ["Cuiabá", "Franca", "Western Paraná", "Campinas", "Ribeirão Preto"] },
-      { id: "border", title: "Triple border", badge: "Customs", cities: ["Foz do Iguaçu", "Ciudad del Este", "Porto Alegre"] },
-      { id: "hubs", title: "Coastal hubs", badge: "7 SEAS", cities: ["Santos", "Paranaguá", "Navegantes", "Vitória", "Belém"] },
-      { id: "corridor", title: "Transcontinental corridor", badge: "GUIROPA", cities: ["Shanghai / Shenzhen", "Almaty", "Baku", "Istanbul", "Rotterdam", "Hamburg"] },
-      { id: "americas", title: "Americas & MERCOSUR", badge: "Alliance", cities: ["São Paulo", "Buenos Aires", "Montevideo", "Manaus", "Belo Horizonte"] },
-    ],
-  },
-  services: {
-    eyebrow: "Services",
-    headline: "Core portfolio",
-    lead: "From shipment to delivery — for SMEs and global corporations.",
-    items: [
-      "International freight forwarding",
-      "NVOCC services (House BL and autonomous consolidation)",
-      "Global ocean freight",
-      "Air freight for reduced lead times",
-      "National road transport and Mercosur",
-      "Mercosur logistics solutions",
-      "Integrated multimodal transport",
-      "International trade and sourcing",
-      "Cross-border business and customs support",
-    ],
-  },
-  whyUs: {
-    eyebrow: "Credibility",
-    headline: "Why choose us",
-    lead: "B2B differentiators — high-complexity deliveries without generic online reviews.",
-    items: [
-      "Credibility on high-complexity operations",
-      "Real international network in 20+ countries",
-      "Multimodal expertise: rail, road and ocean",
-      "Trading support and commercial intelligence",
-      "Flexible payment solutions",
-      "Personalized service per shipment and project",
-      "Cross-border and customs experience",
-    ],
-  },
-  clients: {
-    eyebrow: "Trust",
-    headline: "Clients",
-    lead: "Companies that operate with us on complex routes — from Brazil's interior to international corridors.",
-    logoFallback: "Client",
-    note: "",
-  },
-  partners: {
-    eyebrow: "Alliances",
-    headline: "Partners and associations",
-    lead: "International certifications and strategic alliances that strengthen our global network.",
-    placeholders: ["NVOCC network", "Port alliances", "Multimodal operators", "Trading partners", "Foreign trade associations"],
-    note: "Partner and affiliation logos can be updated with official brand materials.",
-  },
-  corridor: {
-    eyebrow: "Multimodal corridor",
-    headline: "Asia · Europe · South America",
+    brandTagline: "The music that crossed generations.",
+    headline: "The music that crossed generations.",
     lead:
-      "Integration of commercial flows via rail, road and ocean routes — single management from shipment to delivery.",
+      "From the 1950s to 1990. Rock, soul, pop, blues, disco, funk, metal, new wave and everything that gave each era its own sound.",
+    ctaPrimary: "Listen now",
+  },
+
+  decades: {
+    eyebrow: "The timeline",
+    headline: "Forty years. Thousands of stories.",
+    lead:
+      "GUIROPA crosses the decades without turning memory into a museum. Here, it keeps playing.",
+    items: [
+      {
+        code: "50",
+        year: "1950s",
+        title: "The spark",
+        description:
+          "Rock 'n' roll, rhythm & blues, doo-wop, jazz and the beginning of a revolution.",
+      },
+      {
+        code: "60",
+        year: "1960s",
+        title: "Everything changed",
+        description:
+          "Beat, soul, psychedelia, Motown and the British Invasion.",
+      },
+      {
+        code: "70",
+        year: "1970s",
+        title: "No limits",
+        description:
+          "Hard rock, progressive, disco, funk, punk and glam.",
+      },
+      {
+        code: "80",
+        year: "1980s",
+        title: "Maximum volume",
+        description:
+          "New wave, synthpop, heavy metal, arena rock and pop.",
+      },
+      {
+        code: "90",
+        year: "1990",
+        title: "The end",
+        description:
+          "GUIROPA's final stop. 1990. Nothing beyond.",
+      },
+    ],
+  },
+
+  hub: {
+    eyebrow: "GUIROPA RADIO",
+    headline: "Choose where to enter.",
+    lead:
+      "Listen to the radio, explore the schedule or enter the GUIROPA collection.",
     cards: [
       {
-        title: "Integrated routes",
-        text: "Visual and operational connection between Asia, Central Asia, the Caucasus, Europe and South America.",
+        href: "/ouvir",
+        title: "Listen now",
+        description:
+          "The heart of GUIROPA. Player, current track and broadcast.",
       },
       {
-        title: "Unified multimodal",
-        text: "Ocean, rail and road under centralized documentation and control.",
+        href: "/programacao",
+        title: "Schedule",
+        description:
+          "Decades, shows and programming built around music.",
       },
       {
-        title: "No bottlenecks",
-        text: "Intelligence at every node — from port to inland and border.",
+        href: "/loja",
+        title: "GUIROPA Store",
+        description:
+          "The identity of the station beyond the speakers.",
       },
     ],
   },
-  comex: {
-    eyebrow: "Foreign trade in action",
-    headline: "From planning to delivery",
-    lead: "A transparent flow executed jointly by GUIROPA and 7 SEAS.",
-    steps: [
-      { step: "01", title: "Plan", text: "Route, Incoterm, mode and cash flow defined before movement." },
-      { step: "02", title: "Ship", text: "Ocean or air freight via 7 SEAS GLOBAL." },
-      { step: "03", title: "Clear customs", text: "Customs and compliance at the center of the operation." },
-      { step: "04", title: "Control", text: "GUIROPA on the inland leg — rail, road and border." },
-      { step: "05", title: "Deliver", text: "Last-mile under a single operational doctrine." },
+
+  listen: {
+    eyebrow: "On air",
+    title: "Listen to GUIROPA.",
+    lead:
+      "1950 → 1990. The official player will live here.",
+    playerTitle: "The player is coming.",
+    playerNote:
+      "This area will receive the official stream, current track and listening history.",
+    play: "Play GUIROPA RADIO",
+    waiting: "Broadcast in preparation",
+  },
+
+  schedule: {
+    eyebrow: "Schedule",
+    title: "Every decade gets its moment.",
+    lead:
+      "GUIROPA programming is built around five points in the timeline.",
+    decades: [
+      {
+        year: "1950s",
+        title: "The Beginning",
+        description: "The roots of the revolution.",
+      },
+      {
+        year: "1960s",
+        title: "The Explosion",
+        description: "When everything began to change.",
+      },
+      {
+        year: "1970s",
+        title: "No Rules",
+        description: "The decade where everything fit.",
+      },
+      {
+        year: "1980s",
+        title: "Turn It Up",
+        description: "Big sound. Even bigger identity.",
+      },
+      {
+        year: "1990",
+        title: "The Last Stop",
+        description: "The timeline ends here.",
+      },
     ],
   },
-  tools: {
-    eyebrow: "Tools",
-    headline: "Cargo calculators",
-    lead: "Estimate cubic weight and volume before requesting a quote.",
-    air: {
-      title: "Volumetric weight — air",
-      length: "Length (cm)",
-      width: "Width (cm)",
-      height: "Height (cm)",
-      qty: "Packages",
-      result: "Volumetric weight",
-      formula: "IATA formula: (L × W × H) / 6000 × packages",
-      unit: "kg",
-    },
-    sea: {
-      title: "CBM — ocean freight (LCL)",
-      length: "Length (m)",
-      width: "Width (m)",
-      height: "Height (m)",
-      qty: "Packages",
-      result: "Total volume (CBM)",
-      formula: "CBM = length × width × height × packages",
-      unit: "m³",
-    },
-    calculate: "Calculate",
+
+  store: {
+    eyebrow: "GUIROPA Store",
+    title: "Wear the sound.",
+    lead:
+      "GUIROPA identity applied to collections inspired by the eras we play.",
+    collection: "Collection 1950 — 1990",
+    note:
+      "Products, editions and collections arrive in the next stage.",
   },
-  payment: {
-    eyebrow: "Financial flexibility",
-    headline: "Payment solutions",
-    lead: "Commercial arrangements adapted to each operation's profile, volume and eligibility.",
-    methods: [
-      { name: "Credit card", detail: "Fast transactions and smaller operational expenses" },
-      { name: "PIX", detail: "Speed in the Brazilian market, with corporate options" },
-      { name: "Bank slip (boleto)", detail: "Structured billing for domestic companies" },
-      { name: "International transfers", detail: "SWIFT, Letter of Credit (LC) and Open Account" },
-    ],
-  },
-  careers: {
-    eyebrow: "Talent",
-    headline: "Careers",
-    lead: "Join our international talent pool in foreign trade and logistics.",
-    instructions:
-      "Send your CV in PDF to the email of the brand you are interested in. Suggested subject: Name — Area — Foreign trade/Logistics.",
-    sevenSeasLabel: "7 SEAS GLOBAL recruitment",
-    guiropaLabel: "GUIROPA SYSTEMS recruitment",
-  },
-  quote: {
-    eyebrow: "Quote",
-    headline: "Request a quote",
-    lead: "Describe origin, destination, mode and cargo volume. We will respond shortly.",
-    name: "Name",
-    email: "Email",
-    phone: "Phone / WhatsApp",
-    message: "Your shipment",
-    messagePlaceholder: "E.g. origin, destination, mode (ocean/air), weight or volume, timeline…",
-    submit: "Send",
-    sending: "Sending…",
-    success: "Received. We will contact you soon.",
-    errorDefault: "Send failed. Try WhatsApp.",
-  },
-  contact: {
-    eyebrow: "Contact",
-    headline: "Get in touch",
-    lead: "Global service channels and recruitment.",
-    channelsTitle: "Commercial enquiries",
-    emailLabel: "Email",
-    whatsappLabel: "WhatsApp",
-    phoneLabel: "Phone",
-    phoneRegionBrazil: "Brazil",
-    hrLabel: "CVs",
-    careersLabel: "Human Resources",
-    hrLead: "Send your CV to the mailbox for the operation you are applying to.",
-    careersNote: true,
-    channelHintEmail: "Send email",
-    channelHintWhatsapp: "Open chat",
-    channelHintPhone: "Call now",
-  },
+
   footer: {
-    quote: "We establish presence where others hesitate.",
-    navTitle: "Navigation",
-    contactTitle: "Contact",
-    hrTitle: "Recruitment",
-    socialTitle: "Social",
-    manualLabel: "Comex manual (PDF)",
-    backToTop: "Back to top",
-    legal: "Foreign trade · NVOCC · Multimodal logistics · International trading",
-    copySuffix: "Global presence. Active operations.",
-    whatsappMessage: "Hello! I would like to discuss an operation with GUIROPA / 7 SEAS.",
+    statement:
+      "GET UP. TURN IT UP. GUIROPA.",
+    home: "Home",
+    listen: "Listen",
+    schedule: "Schedule",
+    store: "Store",
   },
 };
 
 const es = {
-  ...en,
-  brands: brands("es"),
+  ...shared,
+
   meta: {
-    title: "GUIROPA SYSTEMS & 7 SEAS GLOBAL",
+    title: "GUIROPA RADIO",
     description:
-      "Logística internacional, NVOCC, corredores multimodales y trading. Presencia en más de 20 países. Operación activa donde otros dudan.",
+      "GUIROPA RADIO — música de 1950 a 1990.",
   },
+
   a11y: {
-    home: "GUIROPA SYSTEMS — inicio",
+    home: "GUIROPA RADIO — inicio",
     navPrimary: "Navegación principal",
-    navSocial: "Redes sociales",
-    footerNav: "Enlaces del pie de página",
+    footerNav: "Navegación del pie",
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
-    sevenSeasLogo: "7 SEAS GLOBAL",
     langSwitch: "Idioma del sitio",
   },
+
   nav: [
-    { href: "/sobre", label: "Nosotros" },
-    { href: "/servicos", label: "Servicios" },
-    { href: "/rede-global", label: "Red global" },
-    { href: "/orcamento", label: "Presupuesto", cta: true },
-    { href: "/contato", label: "Contacto" },
+    { href: "/", label: "Inicio" },
+    { href: "/ouvir", label: "Escuchar", cta: true },
+    { href: "/programacao", label: "Programación" },
+    { href: "/loja", label: "Tienda" },
   ],
-  navFooter: [
-    { href: "/sobre", label: "Nosotros" },
-    { href: "/servicos", label: "Servicios" },
-    { href: "/rede-global", label: "Red global" },
-    { href: "/contato", label: "Contacto" },
-    { href: "/simuladores", label: "Simuladores" },
-    { href: "/trabalhe-conosco", label: "Trabaja con nosotros" },
-  ],
-  explore: {
-    eyebrow: "Institucional",
-    headline: "Conozca la operación",
-    lead: "Cada tema en su propia página — lectura fluida, sin scroll excesivo.",
-    openPage: "Explorar",
-    cards: {
-      about: {
-        title: "Nosotros",
-        description: "Misión, visión, divisiones GUIROPA y 7 SEAS — y por qué elegirnos.",
-      },
-      services: {
-        title: "Servicios",
-        description: "Portafolio completo y corredor multimodal Asia · Europa · América del Sur.",
-      },
-      network: {
-        title: "Red global",
-        description: "Presencia en 20+ países, hubs costeros y socios estratégicos.",
-      },
-      contact: {
-        title: "Contacto",
-        description: "Canales comerciales, RR. HH., WhatsApp y formas de pago.",
-      },
-    },
-  },
-  pages: {
-    about: {
-      eyebrow: "Nosotros",
-      title: "Presencia donde otros dudan.",
-      lead: "Dos marcas, una operación — del interior brasileño a los corredores globales.",
-    },
-    services: {
-      eyebrow: "Servicios",
-      title: "Portafolio central",
-      lead: "Del embarque a la entrega — para PYMES y grandes corporaciones.",
-    },
-    network: {
-      eyebrow: "Red global",
-      title: "Más de 20 países",
-      lead: "Puestos operativos y alianzas consolidadas — de Asia a Europa y las Américas.",
-    },
-    contact: {
-      eyebrow: "Contacto",
-      title: "Hable con la operación",
-      lead: "Canales directos para comercial, reclutamiento y soporte de carga.",
-    },
-  },
-  hub: {
-    eyebrow: "Recursos",
-    headline: "Próximo paso de su operación",
-    lead: "Conozca cada espacio dedicado antes de operar — simuladores, presupuesto y carreras.",
-    openPage: "Conocer",
-    cards: {
-      tools: {
-        title: "Simuladores de carga",
-        description: "Peso volumétrico aéreo y CBM marítimo antes de cotizar.",
-      },
-      quote: {
-        title: "Solicitar presupuesto",
-        description: "Formulario estructurado para triaje comercial inmediato.",
-      },
-      careers: {
-        title: "Trabaja con nosotros",
-        description: "Banco de talentos internacional en Comex y logística.",
-      },
-    },
-  },
-  page: {
-    backHome: "Volver al inicio",
-    comingSoon: "Próximamente",
-    viewContact: "Ver contactos",
-  },
-  pageIntros: {
-    tools: {
-      eyebrow: "Herramientas",
-      title: "Simuladores de carga",
-      lead: "Estime cubaje y peso volumétrico con precisión antes de solicitar su cotización.",
-      body: "Pensadas para decisiones comerciales: menos sorpresas en flete aéreo y LCL marítimo, más claridad en la negociación.",
-      highlights: [
-        "Peso volumétrico aéreo — fórmula IATA (L × A × H) / 6000",
-        "CBM para flete marítimo consolidado (LCL)",
-        "Resultados instantáneos para apoyar su cotización",
-      ],
-      functionalLabel: "Área funcional",
-      functionalTitle: "Calculadoras interactivas",
-      functionalNote: "Los simuladores se activarán aquí pronto. Mientras tanto, nuestro equipo le apoya por WhatsApp o correo.",
-      contactCta: "Hablar con el equipo",
-    },
-    quote: {
-      eyebrow: "Presupuesto",
-      title: "Solicitar presupuesto",
-      lead: "Una cotización estructurada comienza con datos claros de origen, destino, modal y volumen.",
-      body: "Atendemos PYMES y grandes corporaciones con triaje comercial ágil. Describa su operación y respondemos con una propuesta alineada.",
-      highlights: [
-        "Origen, destino y modal (marítimo, aéreo, multimodal)",
-        "Peso, volumen o tipo de carga",
-        "Plazo y condiciones comerciales deseadas",
-      ],
-      functionalLabel: "Área funcional",
-      functionalTitle: "Formulario de cotización",
-      functionalNote: "El formulario en línea estará disponible aquí pronto. Para cotización inmediata, use nuestros canales directos.",
-      contactCta: "Solicitar por WhatsApp",
-    },
-    careers: {
-      eyebrow: "Talentos",
-      title: "Trabaja con nosotros",
-      lead: "Integre el banco de talentos internacional en comercio exterior, logística y operaciones multimodales.",
-      body: "Buscamos profesionales que operen con precisión en rutas complejas — del interior de Brasil a los corredores globales.",
-      highlights: [
-        "Comex, logística internacional y trading",
-        "Operaciones en más de 20 países",
-        "Cultura de entrega en rutas de alta complejidad",
-      ],
-      functionalLabel: "Área funcional",
-      functionalTitle: "Envío de currículum",
-      functionalNote: "El portal de candidaturas se activará pronto. Envíe su PDF a los correos de RRHH de GUIROPA y 7 SEAS.",
-      contactCta: "Hablar con RRHH",
-    },
-  },
+
   hero: {
-    brandTagline: "Movimiento global controlado.",
-    ctaPrimary: "Solicitar presupuesto",
-  },
-  about: {
-    eyebrow: "Sobre nosotros",
-    headline: "Presencia donde otros dudan.",
-    mission: {
-      label: "Misión",
-      text: "Simplificar el comercio internacional con soluciones prácticas, eficientes y flexibles.",
-    },
-    vision: {
-      label: "Visión",
-      text: "Ser el socio líder global en logística y trading, interconectando mercados emergentes y establecidos.",
-    },
-    divisionsTitle: "Nuestras divisiones",
-    divisions: [
-      { brand: "sevenSeas", title: "7 SEAS GLOBAL", text: "Agente de carga, NVOCC y transportista. Comex, trading y House BL. Liechtenstein · 15+ años." },
-      { brand: "guiropa", title: "GUIROPA SYSTEMS", text: "Tecnología, logística avanzada y corredores multimodales estratégicos." },
-    ],
-  },
-  presence: {
-    eyebrow: "Red global",
-    headline: "Más de 20 países",
-    lead: "Puestos operativos y alianzas consolidadas — de Asia a Europa y las Américas.",
-    conversion:
-      "Recogida en Franca (SP), despacho en Foz do Iguaçu o entrega en el extremo norte — con una sola estructura.",
-    regions: [
-      { id: "north", title: "Extremo Norte", badge: "Operación", cities: ["Roraima", "Amapá", "Acre", "Rio Branco", "Boa Vista"] },
-      { id: "interior", title: "Interior estratégico", badge: "GUIROPA", cities: ["Cuiabá", "Franca", "Oeste de Paraná", "Campinas", "Ribeirão Preto"] },
-      { id: "border", title: "Triple frontera", badge: "Aduana", cities: ["Foz do Iguaçu", "Ciudad del Este", "Porto Alegre"] },
-      { id: "hubs", title: "Hubs costeros", badge: "7 SEAS", cities: ["Santos", "Paranaguá", "Navegantes", "Vitória", "Belém"] },
-      { id: "corridor", title: "Corredor transcontinental", badge: "GUIROPA", cities: ["Shanghái / Shenzhen", "Almaty", "Bakú", "Estambul", "Rotterdam", "Hamburgo"] },
-      { id: "americas", title: "Américas y MERCOSUR", badge: "Alianza", cities: ["São Paulo", "Buenos Aires", "Montevideo", "Manaus", "Belo Horizonte"] },
-    ],
-  },
-  services: {
-    eyebrow: "Servicios",
-    headline: "Portafolio central",
-    lead: "Del embarque a la entrega — para PYMES y grandes corporaciones.",
-    items: [
-      "Agenciamiento de carga internacional",
-      "Servicios NVOCC (House BL y consolidación autónoma)",
-      "Flete marítimo global",
-      "Flete aéreo",
-      "Transporte rodoviario y Mercosur",
-      "Soluciones logísticas del Mercosur",
-      "Transporte multimodal integrado",
-      "Comercio internacional y sourcing",
-      "Apoyo transfronterizo y aduana",
-    ],
-  },
-  whyUs: {
-    eyebrow: "Credibilidad",
-    headline: "Por qué elegirnos",
-    lead: "Diferenciales B2B — entregas de alta complejidad, sin depender de reseñas genéricas.",
-    items: [
-      "Credibilidad en operaciones de alta complejidad",
-      "Red internacional real en más de 20 países",
-      "Experiencia multimodal: ferrocarril, carretera y marítimo",
-      "Soporte en trading e inteligencia comercial",
-      "Soluciones flexibles de pago",
-      "Atención personalizada por lote y proyecto",
-      "Experiencia transfronteriza y simplificación aduanera",
-    ],
-  },
-  clients: {
-    eyebrow: "Confianza",
-    headline: "Clientes",
-    lead: "Empresas que operan con nosotros en rutas complejas — del interior de Brasil a los corredores internacionales.",
-    logoFallback: "Cliente",
-    note: "",
-  },
-  partners: {
-    eyebrow: "Alianzas",
-    headline: "Socios y asociaciones",
-    lead: "Certificaciones internacionales y alianzas estratégicas que refuerzan nuestra red global.",
-    placeholders: ["Red NVOCC", "Alianzas portuarias", "Operadores multimodales", "Socios de trading", "Asociaciones Comex"],
-    note: "Los logotipos de socios y afiliaciones pueden actualizarse con materiales oficiales de la marca.",
-  },
-  corridor: {
-    eyebrow: "Corredor multimodal",
-    headline: "Asia · Europa · América del Sur",
+    brandTagline:
+      "La música que atravesó generaciones.",
+    headline:
+      "La música que atravesó generaciones.",
     lead:
-      "Integración de flujos comerciales por rutas ferroviarias, rodoviarias y marítimas — una sola gestión del embarque a la entrega.",
+      "De los años 50 hasta 1990. Rock, soul, pop, blues, disco, funk, metal, new wave y todo lo que dio sonido propio a cada época.",
+    ctaPrimary: "Escuchar ahora",
+  },
+
+  decades: {
+    eyebrow: "La línea del tiempo",
+    headline:
+      "Cuarenta años. Miles de historias.",
+    lead:
+      "GUIROPA atraviesa las décadas sin convertir la memoria en museo. Aquí sigue sonando.",
+    items: [
+      {
+        code: "50",
+        year: "1950s",
+        title: "La chispa",
+        description:
+          "Rock 'n' roll, rhythm & blues, doo-wop y jazz.",
+      },
+      {
+        code: "60",
+        year: "1960s",
+        title: "Todo cambió",
+        description:
+          "Beat, soul, psicodelia, Motown y British Invasion.",
+      },
+      {
+        code: "70",
+        year: "1970s",
+        title: "Sin límites",
+        description:
+          "Hard rock, progressive, disco, funk, punk y glam.",
+      },
+      {
+        code: "80",
+        year: "1980s",
+        title: "Volumen máximo",
+        description:
+          "New wave, synthpop, heavy metal, arena rock y pop.",
+      },
+      {
+        code: "90",
+        year: "1990",
+        title: "Punto final",
+        description:
+          "La última parada de GUIROPA. Hasta aquí.",
+      },
+    ],
+  },
+
+  hub: {
+    eyebrow: "GUIROPA RADIO",
+    headline: "Elige dónde entrar.",
+    lead:
+      "Escucha la radio, descubre la programación o entra en la colección GUIROPA.",
     cards: [
       {
-        title: "Rutas integradas",
-        text: "Conexión visual y operacional entre Asia, Asia Central, Cáucaso, Europa y América del Sur.",
+        href: "/ouvir",
+        title: "Escuchar ahora",
+        description:
+          "El corazón de GUIROPA. Player, canción actual y transmisión.",
       },
       {
-        title: "Multimodal unificado",
-        text: "Marítimo, ferroviario y rodoviario bajo documentación y control centralizados.",
+        href: "/programacao",
+        title: "Programación",
+        description:
+          "Décadas y programas construidos alrededor de la música.",
       },
       {
-        title: "Sin cuellos de botella",
-        text: "Inteligencia en cada nodo — del puerto al interior y a la frontera.",
+        href: "/loja",
+        title: "GUIROPA Store",
+        description:
+          "La identidad de la radio fuera de los altavoces.",
       },
     ],
   },
-  comex: {
-    eyebrow: "Comex en operación",
-    headline: "De la planificación a la entrega",
-    lead: "Flujo transparente que GUIROPA y 7 SEAS ejecutan en conjunto.",
-    steps: [
-      { step: "01", title: "Planificar", text: "Ruta, Incoterm, modal y flujo de caja definidos antes del movimiento." },
-      { step: "02", title: "Embarcar", text: "Flete marítimo o aéreo vía 7 SEAS GLOBAL." },
-      { step: "03", title: "Despachar", text: "Aduana y cumplimiento en el centro de la operación." },
-      { step: "04", title: "Controlar", text: "GUIROPA en el tramo interior — ferrocarril, carretera y frontera." },
-      { step: "05", title: "Entregar", text: "Last-mile bajo una única doctrina operacional." },
+
+  listen: {
+    eyebrow: "Al aire",
+    title: "Escucha GUIROPA.",
+    lead:
+      "1950 → 1990. Aquí estará el player oficial.",
+    playerTitle: "El player está llegando.",
+    playerNote:
+      "Esta área recibirá el stream oficial, canción actual e historial.",
+    play: "Reproducir GUIROPA RADIO",
+    waiting: "Transmisión en preparación",
+  },
+
+  schedule: {
+    eyebrow: "Programación",
+    title: "Cada década tiene su momento.",
+    lead:
+      "La programación GUIROPA se construye alrededor de cinco puntos de la línea del tiempo.",
+    decades: [
+      {
+        year: "1950s",
+        title: "The Beginning",
+        description: "Las raíces de la revolución.",
+      },
+      {
+        year: "1960s",
+        title: "The Explosion",
+        description: "Cuando todo comenzó a cambiar.",
+      },
+      {
+        year: "1970s",
+        title: "No Rules",
+        description: "La década donde cabía todo.",
+      },
+      {
+        year: "1980s",
+        title: "Turn It Up",
+        description: "Sonido grande. Identidad mayor.",
+      },
+      {
+        year: "1990",
+        title: "The Last Stop",
+        description: "La línea termina aquí.",
+      },
     ],
   },
-  tools: {
-    eyebrow: "Herramientas",
-    headline: "Simuladores de carga",
-    lead: "Estime cubaje y peso volumétrico antes de solicitar cotización.",
-    air: {
-      title: "Peso volumétrico — aéreo",
-      length: "Longitud (cm)",
-      width: "Ancho (cm)",
-      height: "Altura (cm)",
-      qty: "Bultos",
-      result: "Peso volumétrico",
-      formula: "Fórmula IATA: (L × A × H) / 6000 × bultos",
-      unit: "kg",
-    },
-    sea: {
-      title: "CBM — flete marítimo (LCL)",
-      length: "Longitud (m)",
-      width: "Ancho (m)",
-      height: "Altura (m)",
-      qty: "Bultos",
-      result: "Volumen total (CBM)",
-      formula: "CBM = longitud × ancho × altura × bultos",
-      unit: "m³",
-    },
-    calculate: "Calcular",
+
+  store: {
+    eyebrow: "GUIROPA Store",
+    title: "Viste el sonido.",
+    lead:
+      "La identidad GUIROPA aplicada a colecciones inspiradas en nuestras décadas.",
+    collection: "Collection 1950 — 1990",
+    note:
+      "Productos, ediciones y colecciones llegan en la próxima etapa.",
   },
-  payment: {
-    eyebrow: "Flexibilidad financiera",
-    headline: "Soluciones de pago",
-    lead: "Acuerdos comerciales adaptados al perfil, volumen y elegibilidad de cada operación.",
-    methods: [
-      { name: "Tarjeta de crédito", detail: "Transacciones rápidas y gastos operativos menores" },
-      { name: "PIX", detail: "Agilidad en el mercado brasileño, con opciones corporativas" },
-      { name: "Boleto bancario", detail: "Facturación estructurada para empresas nacionales" },
-      { name: "Transferencias internacionales", detail: "SWIFT, Carta de Crédito (LC) y Open Account" },
-    ],
-  },
-  careers: {
-    eyebrow: "Talentos",
-    headline: "Trabaja con nosotros",
-    lead: "Integre el banco de talentos internacional en comercio exterior y logística.",
-    instructions:
-      "Envíe su currículum en PDF al correo de la marca de su interés. Asunto sugerido: Nombre — Área — Comex/Logística.",
-    sevenSeasLabel: "Reclutamiento 7 SEAS GLOBAL",
-    guiropaLabel: "Reclutamiento GUIROPA SYSTEMS",
-  },
-  quote: {
-    eyebrow: "Presupuesto",
-    headline: "Solicitar presupuesto",
-    lead: "Indique origen, destino, modal y volumen. Respondemos pronto.",
-    name: "Nombre",
-    email: "Correo",
-    phone: "Teléfono / WhatsApp",
-    message: "Su operación",
-    messagePlaceholder: "Ej.: origen, destino, modal (marítimo/aéreo), peso o volumen, plazo…",
-    submit: "Enviar",
-    sending: "Enviando…",
-    success: "Recibido. Contactaremos pronto.",
-    errorDefault: "Error al enviar. Use WhatsApp.",
-  },
-  contact: {
-    eyebrow: "Contacto",
-    headline: "Contáctenos",
-    lead: "Canales globales y reclutamiento.",
-    channelsTitle: "Atención comercial",
-    emailLabel: "Correo",
-    whatsappLabel: "WhatsApp",
-    phoneLabel: "Teléfono",
-    phoneRegionBrazil: "Brasil",
-    hrLabel: "Currículos",
-    careersLabel: "Recursos Humanos",
-    hrLead: "Envíe su currículum al correo de la operación deseada.",
-    careersNote: true,
-    channelHintEmail: "Enviar correo",
-    channelHintWhatsapp: "Abrir chat",
-    channelHintPhone: "Llamar",
-  },
+
   footer: {
-    quote: "Establecemos presencia donde otros dudan.",
-    navTitle: "Navegación",
-    contactTitle: "Contacto",
-    hrTitle: "Reclutamiento",
-    socialTitle: "Redes",
-    manualLabel: "Manual Comex (PDF)",
-    backToTop: "Volver arriba",
-    legal: "Comex · NVOCC · Logística multimodal · Trading internacional",
-    copySuffix: "Presencia global. Operación activa.",
-    whatsappMessage: "¡Hola! Me gustaría hablar sobre una operación con GUIROPA / 7 SEAS.",
+    statement:
+      "GET UP. TURN IT UP. GUIROPA.",
+    home: "Inicio",
+    listen: "Escuchar",
+    schedule: "Programación",
+    store: "Tienda",
   },
 };
 
-export const translations = { pt, en, es };
+export const translations = {
+  pt,
+  en,
+  es,
+};
