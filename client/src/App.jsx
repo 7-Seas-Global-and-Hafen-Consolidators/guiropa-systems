@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import ListenPage from "./pages/ListenPage.jsx";
-import SchedulePage from "./pages/SchedulePage.jsx";
-import StorePage from "./pages/StorePage.jsx";
+import ListenPage from "./ListenPage.jsx";
+import SchedulePage from "./SchedulePage.jsx";
+import StorePage from "./StorePage.jsx";
 
 export default function App() {
   return (
