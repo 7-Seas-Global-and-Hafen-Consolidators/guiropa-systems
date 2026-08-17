@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import LanguageSwitcher from "./LanguageSwitcher.jsx";
 import GuiropaLogo from "./GuiropaLogo.jsx";
-import NavLinkItem from "./NavLinkItem.jsx";
 
 export default function Header() {
   const { t } = useLanguage();
@@ -17,61 +16,94 @@ export default function Header() {
 
   useEffect(() => {
     document.body.classList.toggle("nav-open", menuOpen);
-    return () => document.body.classList.remove("nav-open");
+
+    return () => {
+      document.body.classList.remove("nav-open");
+    };
   }, [menuOpen]);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 36);
+    };
 
-  const closeMenu = () => setMenuOpen(false);
+    onScroll();
+
+    window.addEventListener("scroll", onScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
 
   return (
     <>
-    <button
-      type="button"
-      className={`nav-backdrop${menuOpen ? " is-visible" : ""}`}
-      aria-label={t.a11y.closeMenu}
-      aria-hidden={!menuOpen}
-      tabIndex={menuOpen ? 0 : -1}
-      onClick={closeMenu}
-    />
-    <header className={`site-header${scrolled ? " scrolled" : ""}`}>
-      <Link to="/" className="logo-link" aria-label={t.a11y.home}>
-        <GuiropaLogo variant="header" />
-      </Link>
+      <button
+        type="button"
+        className={`nav-backdrop${menuOpen ? " is-visible" : ""}`}
+        aria-label={t.a11y.closeMenu}
+        aria-hidden={!menuOpen}
+        tabIndex={menuOpen ? 0 : -1}
+        onClick={() => setMenuOpen(false)}
+      />
 
-      <nav className={`main-nav${menuOpen ? " open" : ""}`} aria-label={t.a11y.navPrimary}>
-        {t.nav.map(({ href, label, cta }) => (
-          <NavLinkItem
-            key={href}
-            href={href}
-            className={cta ? "nav-cta" : undefined}
-            onClick={closeMenu}
-          >
-            {label}
-          </NavLinkItem>
-        ))}
-      </nav>
-
-      <div className="header-actions">
-        <LanguageSwitcher />
-        <button
-          type="button"
-          className="menu-toggle"
-          aria-label={menuOpen ? t.a11y.closeMenu : t.a11y.openMenu}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((o) => !o)}
+      <header
+        className={`site-header guiropa-radio-header${
+          scrolled ? " scrolled" : ""
+        }`}
+      >
+        <Link
+          to="/"
+          className="logo-link guiropa-radio-header__logo"
+          aria-label={t.a11y.home}
         >
-          <span />
-          <span />
-          <span />
-        </button>
-      </div>
-    </header>
+          <GuiropaLogo variant="header" />
+        </Link>
+
+        <nav
+          className={`main-nav${menuOpen ? " open" : ""}`}
+          aria-label={t.a11y.navPrimary}
+        >
+          {t.nav.map(({ href, label, cta }) => (
+            <NavLink
+              key={href}
+              to={href}
+              className={({ isActive }) =>
+                [
+                  "guiropa-nav-link",
+                  isActive ? "is-active" : "",
+                  cta ? "nav-cta" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")
+              }
+              onClick={() => setMenuOpen(false)}
+            >
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="header-actions">
+          <LanguageSwitcher />
+
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-label={
+              menuOpen ? t.a11y.closeMenu : t.a11y.openMenu
+            }
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
+      </header>
     </>
   );
 }
