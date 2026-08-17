@@ -4062,3 +4062,672 @@ li {
     display: none;
   }
 }
+/* =========================================================
+   GUIROPA RADIO — 1950 → 1990
+   New visual layer
+   ========================================================= */
+
+:root {
+  --gr-black: #050505;
+  --gr-black-soft: #101010;
+  --gr-panel: #151310;
+  --gr-cream: #eee2c7;
+  --gr-cream-soft: #c9bda5;
+  --gr-gold: #b89254;
+  --gr-gold-light: #ddc18a;
+  --gr-red: #8f2018;
+  --gr-border: rgba(184, 146, 84, 0.26);
+  --gr-max: 1280px;
+}
+
+body {
+  background: var(--gr-black);
+  color: var(--gr-cream);
+}
+
+.guiropa-radio-shell {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(143, 32, 24, 0.11),
+      transparent 30rem
+    ),
+    var(--gr-black);
+}
+
+.guiropa-radio-header {
+  background: rgba(5, 5, 5, 0.83);
+  border-bottom: 1px solid transparent;
+}
+
+.guiropa-radio-header.scrolled {
+  background: rgba(5, 5, 5, 0.96);
+  border-bottom-color: var(--gr-border);
+}
+
+.guiropa-radio-header__logo
+  .guiropa-logo--header {
+  height: 56px;
+  width: auto;
+}
+
+.main-nav {
+  gap: clamp(1.1rem, 2.5vw, 2.2rem);
+}
+
+.guiropa-nav-link {
+  position: relative;
+  color: var(--gr-cream-soft) !important;
+  font-family: var(--font-body);
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.14em !important;
+}
+
+.guiropa-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -0.5rem;
+  height: 1px;
+  background: var(--gr-gold);
+  transition: right 0.25s ease;
+}
+
+.guiropa-nav-link:hover,
+.guiropa-nav-link.is-active {
+  color: var(--gr-gold-light) !important;
+  text-shadow: none !important;
+}
+
+.guiropa-nav-link:hover::after,
+.guiropa-nav-link.is-active::after {
+  right: 0;
+}
+
+.guiropa-nav-link.nav-cta {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--gr-gold);
+}
+
+.guiropa-nav-link.nav-cta::after {
+  display: none;
+}
+
+/* HERO */
+
+.guiropa-radio-hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding:
+    calc(var(--header-h) + 4rem)
+    var(--page-gutter)
+    5rem;
+  background:
+    radial-gradient(
+      ellipse 60% 48% at 50% 32%,
+      rgba(143, 32, 24, 0.17),
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 70% 55% at 50% 75%,
+      rgba(184, 146, 84, 0.05),
+      transparent 70%
+    ),
+    #050505;
+}
+
+.guiropa-radio-hero__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(184, 146, 84, 0.025) 50%,
+      transparent 100%
+    );
+}
+
+.guiropa-radio-hero__inner {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1050px);
+  text-align: center;
+}
+
+.guiropa-radio-era {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.36em;
+  color: var(--gr-gold-light);
+}
+
+.guiropa-radio-hero__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.guiropa-radio-hero__logo
+  .guiropa-logo--hero {
+  width: min(820px, 92vw);
+  max-height: 52vh;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 24px 35px rgba(0,0,0,.68));
+}
+
+.guiropa-radio-hero__copy {
+  width: min(720px, 100%);
+  margin: 2rem auto 0;
+}
+
+.guiropa-radio-hero__copy h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 4.4rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--gr-cream);
+}
+
+.guiropa-radio-hero__copy p {
+  max-width: 640px;
+  margin: 1.35rem auto 0;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.8;
+  color: var(--gr-cream-soft);
+}
+
+.guiropa-radio-origin {
+  margin-top: 1.6rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: var(--gr-gold);
+}
+
+.guiropa-radio-listen {
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.35rem;
+  border: 1px solid var(--gr-gold);
+  color: var(--gr-cream);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.guiropa-radio-listen:hover {
+  background: var(--gr-gold);
+  color: #080706;
+  transform: translateY(-2px);
+}
+
+.guiropa-radio-listen__play {
+  font-size: 0.8rem;
+}
+
+.guiropa-radio-hero__bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  display: flex;
+  width: min(92%, 760px);
+  justify-content: space-between;
+  color: rgba(238, 226, 199, 0.38);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+/* HEADINGS */
+
+.guiropa-section-heading {
+  width: min(720px, 100%);
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.guiropa-section-kicker {
+  display: block;
+  margin-bottom: 0.9rem;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gr-gold);
+}
+
+.guiropa-section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4.5vw, 3.75rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--gr-cream);
+}
+
+.guiropa-section-heading p {
+  margin: 1.15rem auto 0;
+  max-width: 620px;
+  color: var(--gr-cream-soft);
+}
+
+/* DECADES */
+
+.guiropa-decades {
+  padding: 7rem 0;
+  background: #0b0a09;
+}
+
+.guiropa-decades-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--gr-border);
+  border-bottom: 1px solid var(--gr-border);
+}
+
+.guiropa-decade {
+  position: relative;
+  min-height: 315px;
+  padding: 2rem 1.4rem;
+  border-right: 1px solid var(--gr-border);
+  overflow: hidden;
+}
+
+.guiropa-decade:last-child {
+  border-right: none;
+}
+
+.guiropa-decade::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 4px;
+  opacity: 0.8;
+}
+
+.guiropa-decade--50::after {
+  background: #9b2f22;
+}
+
+.guiropa-decade--60::after {
+  background: #4a7d79;
+}
+
+.guiropa-decade--70::after {
+  background: #b36d2d;
+}
+
+.guiropa-decade--80::after {
+  background:
+    linear-gradient(
+      90deg,
+      #e32772,
+      #21a7b2
+    );
+}
+
+.guiropa-decade--90::after {
+  background: #345985;
+}
+
+.guiropa-decade__number {
+  display: block;
+  margin-bottom: 4rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3.8vw, 4rem);
+  line-height: 1;
+  color: var(--gr-gold-light);
+}
+
+.guiropa-decade h3 {
+  margin-bottom: 0.8rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gr-cream);
+}
+
+.guiropa-decade p {
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--gr-cream-soft);
+}
+
+/* DESTINATIONS */
+
+.guiropa-destinations {
+  padding: 7rem 0;
+  background: var(--gr-black);
+}
+
+.guiropa-destinations-grid {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  border-top: 1px solid var(--gr-border);
+}
+
+.guiropa-destination {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gr-border);
+  transition: padding 0.25s ease;
+}
+
+.guiropa-destination:hover {
+  padding-left: 0.8rem;
+}
+
+.guiropa-destination__index {
+  color: var(--gr-gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+}
+
+.guiropa-destination h3 {
+  margin: 0 0 0.35rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.5vw, 2.4rem);
+  font-weight: 400;
+  color: var(--gr-cream);
+}
+
+.guiropa-destination p {
+  color: var(--gr-cream-soft);
+}
+
+.guiropa-destination__arrow {
+  font-size: 1.5rem;
+  color: var(--gr-gold);
+}
+
+/* INTERNAL RADIO PAGES */
+
+.radio-page {
+  min-height: 100vh;
+  background: var(--gr-black);
+}
+
+.radio-page-hero {
+  padding:
+    calc(var(--header-h) + 6rem)
+    0
+    5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--gr-border);
+}
+
+.radio-page-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 6vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--gr-cream);
+}
+
+.radio-page-hero p {
+  max-width: 650px;
+  margin: 1.3rem auto 0;
+  color: var(--gr-cream-soft);
+}
+
+.radio-page-content {
+  padding: 5rem 0 7rem;
+}
+
+.radio-coming,
+.store-preview {
+  width: min(720px, 100%);
+  margin: auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  border: 1px solid var(--gr-border);
+  text-align: center;
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(143, 32, 24, .12),
+      transparent 70%
+    );
+}
+
+.radio-coming__status,
+.store-preview > span {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: var(--gr-gold);
+}
+
+.radio-coming h2,
+.store-preview h2 {
+  margin-top: 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 400;
+  color: var(--gr-cream);
+}
+
+.radio-coming p,
+.store-preview p {
+  margin-top: 1rem;
+  color: var(--gr-cream-soft);
+}
+
+.radio-player-preview {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  text-align: left;
+  border-top: 1px solid var(--gr-border);
+  border-bottom: 1px solid var(--gr-border);
+}
+
+.radio-player-preview__play {
+  width: 54px;
+  height: 54px;
+  border: 1px solid var(--gr-gold);
+  border-radius: 50%;
+  color: var(--gr-gold);
+  background: transparent;
+}
+
+.radio-player-preview span {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  color: var(--gr-gold);
+}
+
+.radio-player-preview strong {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--gr-cream);
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.schedule-era {
+  min-height: 260px;
+  padding: 2rem 1.3rem;
+  border-left: 1px solid var(--gr-border);
+}
+
+.schedule-era:last-child {
+  border-right: 1px solid var(--gr-border);
+}
+
+.schedule-era > span {
+  color: var(--gr-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+}
+
+.schedule-era h2 {
+  margin: 3rem 0 0.7rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  color: var(--gr-cream);
+}
+
+.schedule-era p {
+  color: var(--gr-cream-soft);
+}
+
+/* FOOTER */
+
+.guiropa-radio-footer {
+  border-top: 1px solid var(--gr-border);
+  background: #070706;
+}
+
+.guiropa-radio-footer__inner {
+  padding: 4rem 0 2rem;
+}
+
+.guiropa-radio-footer__brand {
+  max-width: 520px;
+}
+
+.guiropa-radio-footer__brand
+  .guiropa-logo--footer {
+  width: min(240px, 70vw);
+  max-height: none;
+}
+
+.guiropa-radio-footer__brand p {
+  margin-top: 1rem;
+  color: var(--gr-gold);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.guiropa-radio-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--gr-border);
+  border-bottom: 1px solid var(--gr-border);
+}
+
+.guiropa-radio-footer__nav a {
+  color: var(--gr-cream-soft);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.guiropa-radio-footer__nav a:hover {
+  color: var(--gr-gold-light);
+}
+
+.guiropa-radio-footer__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  color: rgba(238,226,199,.44);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .guiropa-decades-grid,
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guiropa-decade {
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--gr-border);
+  }
+
+  .guiropa-decade__number {
+    margin-bottom: 1.5rem;
+  }
+
+  .schedule-era {
+    min-height: auto;
+    border-right: 1px solid var(--gr-border);
+    border-bottom: 1px solid var(--gr-border);
+  }
+
+  .schedule-era h2 {
+    margin-top: 1rem;
+  }
+
+  .guiropa-destination {
+    grid-template-columns: 42px 1fr auto;
+  }
+
+  .main-nav {
+    background: rgba(5,5,5,.98);
+    border-left-color: var(--gr-border);
+  }
+}
+
+@media (max-width: 600px) {
+  .guiropa-radio-hero {
+    min-height: auto;
+    padding-top:
+      calc(var(--header-h) + 3rem);
+  }
+
+  .guiropa-radio-hero__logo
+    .guiropa-logo--hero {
+    width: 96vw;
+  }
+
+  .guiropa-radio-hero__bottom {
+    display: none;
+  }
+
+  .guiropa-decades,
+  .guiropa-destinations {
+    padding: 5rem 0;
+  }
+
+  .guiropa-destination {
+    grid-template-columns: 32px 1fr;
+  }
+
+  .guiropa-destination__arrow {
+    display: none;
+  }
+
+  .guiropa-radio-footer__meta {
+    flex-direction: column;
+  }
+}
