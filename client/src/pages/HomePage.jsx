@@ -4,7 +4,7 @@ import ActionHub from "../components/ActionHub.jsx";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="guiropa-radio-home">
       <Hero />
       <ExploreHub />
       <ActionHub />
