@@ -20,18 +20,30 @@ export default function Footer() {
         >
           <Link to="/">{t.footer.home}</Link>
           <Link to="/ouvir">{t.footer.listen}</Link>
-          <Link to="/programacao">
-            {t.footer.schedule}
-          </Link>
+          <Link to="/programacao">{t.footer.schedule}</Link>
           <Link to="/loja">{t.footer.store}</Link>
+          <Link to="/contato">{t.footer.contact}</Link>
+          <Link to="/anuncie">{t.footer.advertise}</Link>
+          <a
+            href="https://www.asaas.com/c/n17o931m5w6ze64t"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t.footer.support}
+          </a>
         </nav>
 
         <div className="guiropa-radio-footer__meta">
           <span>1950 — 1990</span>
 
           <span>
-            © {new Date().getFullYear()} GUIROPA RADIO
+            © {new Date().getFullYear()} GUIROPA RADIO ·{" "}
+            {t.footer.rights}
           </span>
+        </div>
+
+        <div className="guiropa-radio-footer__operator">
+          7 SEAS GLOBAL
         </div>
       </div>
     </footer>
