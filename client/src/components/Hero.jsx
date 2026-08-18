@@ -94,11 +94,10 @@ export default function Hero() {
       </div>
 
       <style>{`
-        /*
-         * NOVO EMBLEMA:
-         * elimina completamente os fundos/halos herdados
-         * do logo retangular anterior.
-         */
+        /* =====================================================
+           GUIROPA RADIO — HERO EMBLEM FINAL
+           O contêiner acompanha EXATAMENTE a imagem vertical.
+           ===================================================== */
 
         .guiropa-radio-hero--emblem
         .guiropa-radio-hero__glow {
@@ -110,31 +109,43 @@ export default function Hero() {
           display: none !important;
         }
 
+        /*
+         * CRÍTICO:
+         * não existe mais largura fixa grande no wrapper.
+         * Ele passa a ter exatamente a largura da imagem.
+         */
+
         .guiropa-radio-hero--emblem
         .guiropa-radio-hero__emblem {
           position: relative;
           z-index: 4;
 
-          width: min(430px, 52vw);
+          display: flex;
+
+          width: fit-content !important;
+          max-width: none !important;
+          height: auto !important;
 
           margin: 0 auto;
 
-          display: flex;
+          padding: 0 !important;
+
           align-items: center;
           justify-content: center;
 
           background: transparent !important;
 
           border: 0 !important;
+          border-radius: 0 !important;
 
           box-shadow: none !important;
 
-          overflow: visible;
+          overflow: visible !important;
         }
 
         /*
-         * Mata qualquer pseudo-elemento antigo
-         * que esteja criando aquela placa clara vazia.
+         * Mata QUALQUER decoração antiga
+         * que ainda tente gerar painel atrás.
          */
 
         .guiropa-radio-hero--emblem
@@ -142,37 +153,66 @@ export default function Hero() {
         .guiropa-radio-hero--emblem
         .guiropa-radio-hero__emblem::after {
           content: none !important;
+
           display: none !important;
-          background: none !important;
+
+          width: 0 !important;
+          height: 0 !important;
+
+          background: transparent !important;
+
+          border: 0 !important;
+
           box-shadow: none !important;
+
+          opacity: 0 !important;
         }
 
         /*
-         * A própria imagem agora é a protagonista.
-         * Sem moldura CSS, sem fundo adicional,
-         * sem "quadro branco".
+         * Agora QUEM DEFINE A LARGURA é a própria imagem.
+         *
+         * Sem max-height.
+         * Sem wrapper mais largo.
+         * Sem espaço claro lateral.
          */
 
         .guiropa-radio-hero--emblem
         .guiropa-radio-hero__emblem-image {
-          display: block;
+          display: block !important;
 
-          width: 100%;
-          height: auto;
+          width: clamp(
+            230px,
+            25vw,
+            330px
+          ) !important;
 
-          max-height: 48vh;
+          max-width: 330px !important;
+
+          height: auto !important;
+
+          max-height: none !important;
+
+          margin: 0 !important;
+
+          padding: 0 !important;
 
           object-fit: contain;
 
           background: transparent !important;
 
           border: 0 !important;
-
           border-radius: 0 !important;
 
+          opacity: 1 !important;
+
           box-shadow:
-            0 17px 30px
-            rgba(66, 43, 23, 0.14);
+            0 16px 30px
+            rgba(
+              63,
+              41,
+              23,
+              0.16
+            );
 
           filter:
             brightness(1.04)
@@ -196,45 +236,45 @@ export default function Hero() {
             saturate(1.05);
 
           box-shadow:
-            0 20px 34px
-            rgba(66, 43, 23, 0.16);
+            0 19px 34px
+            rgba(
+              63,
+              41,
+              23,
+              0.18
+            );
         }
 
         /*
-         * Aproxima texto e marca.
-         * Menos espaço morto no topo.
-         */
-
-        .guiropa-radio-hero--emblem
-        .guiropa-radio-era {
-          margin-bottom: 1rem;
-        }
-
-        .guiropa-radio-hero--emblem
-        .guiropa-radio-hero__copy {
-          margin-top: 1.15rem;
-        }
-
-        /*
-         * Garante que nenhum pseudo-elemento antigo
-         * do hero faça aquela grande mancha arredondada.
+         * Remove também qualquer pseudo-elemento
+         * herdado do hero antigo.
          */
 
         .guiropa-radio-hero--emblem::before,
         .guiropa-radio-hero--emblem::after {
           opacity: 0 !important;
+
+          background: none !important;
+
           pointer-events: none !important;
         }
 
         /*
-         * Mantém apenas o fundo quente geral.
+         * Fundo único e contínuo.
+         * Não existe mais nenhuma placa por trás do emblema.
          */
 
         .guiropa-radio-hero--emblem {
           background:
             radial-gradient(
-              ellipse 55% 42% at 50% 18%,
-              rgba(179, 52, 40, 0.055),
+              ellipse 46% 34%
+              at 50% 18%,
+              rgba(
+                179,
+                52,
+                40,
+                0.05
+              ),
               transparent 72%
             ),
             linear-gradient(
@@ -245,32 +285,47 @@ export default function Hero() {
             ) !important;
         }
 
+        /*
+         * Compacta um pouco o conjunto.
+         */
+
+        .guiropa-radio-hero--emblem
+        .guiropa-radio-era {
+          margin-bottom: 1rem;
+        }
+
+        .guiropa-radio-hero--emblem
+        .guiropa-radio-hero__copy {
+          margin-top: 1rem;
+        }
+
         @media (max-width: 900px) {
           .guiropa-radio-hero--emblem
-          .guiropa-radio-hero__emblem {
-            width: min(390px, 60vw);
-          }
-
-          .guiropa-radio-hero--emblem
           .guiropa-radio-hero__emblem-image {
-            max-height: 46vh;
+            width: clamp(
+              220px,
+              34vw,
+              300px
+            ) !important;
+
+            max-width: 300px !important;
           }
         }
 
         @media (max-width: 600px) {
           .guiropa-radio-hero--emblem
-          .guiropa-radio-hero__emblem {
-            width: min(330px, 72vw);
-          }
-
-          .guiropa-radio-hero--emblem
           .guiropa-radio-hero__emblem-image {
-            max-height: none;
+            width: min(
+              260px,
+              68vw
+            ) !important;
+
+            max-width: 260px !important;
           }
 
           .guiropa-radio-hero--emblem
           .guiropa-radio-hero__copy {
-            margin-top: 0.9rem;
+            margin-top: 0.8rem;
           }
         }
       `}</style>
