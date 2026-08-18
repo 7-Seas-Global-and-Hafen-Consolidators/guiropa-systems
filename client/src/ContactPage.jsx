@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useLanguage } from "./i18n/LanguageContext.jsx";
 import { GUIROPA_EMBLEM_SRC } from "./data/brandAssets.js";
 
@@ -63,7 +64,7 @@ const COPY = {
         label: "SPOTIFY",
         title: "GUIROPA no Spotify.",
         description:
-          "A playlist oficial 1950 — 1990 ficará disponível aqui.",
+          "A playlist oficial 1950 — 1990 está disponível aqui.",
         action: "ABRIR SPOTIFY",
       },
     ],
@@ -89,7 +90,9 @@ const COPY = {
     nextTitle: "O que vem depois?",
     nextLead:
       "Tem outra música na cabeça? Mande para a GUIROPA.",
-    storyEyebrow: "TEM MÚSICA QUE VOCÊ ESCUTA. E TEM MÚSICA QUE ACONTECE COM VOCÊ.",
+
+    storyEyebrow:
+      "TEM MÚSICA QUE VOCÊ ESCUTA. E TEM MÚSICA QUE ACONTECE COM VOCÊ.",
     storyTitle: "Qual é a sua?",
     storyLead:
       "Uma pessoa. Uma cidade. Uma noite. Uma perda. Um amor. Uma época inteira.",
@@ -99,94 +102,41 @@ const COPY = {
     artist: "ARTISTA",
     song: "MÚSICA",
     decade: "DÉCADA",
-    beforeAfter: "O QUE DEVERIA TOCAR ANTES OU DEPOIS DELA?",
+    beforeAfter:
+      "O QUE DEVERIA TOCAR ANTES OU DEPOIS DELA?",
     beforeAfterPlaceholder:
       "Pode ser uma combinação perfeitamente sensata. Ou completamente irresponsável.",
-    storyReason: "POR QUE ESSA MÚSICA FICOU COM VOCÊ?",
+    storyReason:
+      "POR QUE ESSA MÚSICA FICOU COM VOCÊ?",
     storyPlaceholder:
       "Conte do seu jeito. Não precisa escrever bonito. Precisa ser verdadeiro.",
     chooseDecade: "Escolha a década",
     sendSuggestion: "MANDAR PARA A GUIROPA →",
     sendStory: "CONTAR PARA A GUIROPA →",
-    termsText: "Li e aceito os Termos de Envio e a Política de Privacidade.",
+
+    termsPrefix: "Li e aceito os ",
+    termsLink: "Termos de Envio",
+    termsAnd: " e a ",
+    privacyLink: "Política de Privacidade",
+    termsSuffix: ".",
+
     publishText:
       "Autorizo a GUIROPA RADIO a mencionar esta história ou sugestão em seu conteúdo e programação.",
+
     formNote:
       "Enviado diretamente pelo Formspree. Seu e-mail é usado apenas para responder a esta mensagem.",
+
+    legalEyebrow: "ENVIO E PRIVACIDADE",
+    legalTitle: "Claro. Curto. Direto.",
+    termsTitle: "Termos de Envio",
+    termsBody:
+      "Ao enviar, você confirma que as informações fornecidas são de sua responsabilidade. O envio não garante inclusão na programação.",
+    privacyTitle: "Política de Privacidade",
+    privacyBody:
+      "Os dados enviados são usados para receber, analisar e responder à mensagem. Seu e-mail não é publicado.",
+
     operator:
       "Operação: 7 Seas Global.",
-
-    participationEyebrow: "NOW IT'S YOUR TURN",
-    participationTitle: "Open the drawer. Step in.",
-    participationLead:
-      "Suggest a song for the schedule or tell us the story a song left in your life.",
-
-    nextEyebrow: "DON'T TRY TO GUESS WHAT COMES NEXT",
-    nextTitle: "What comes next?",
-    nextLead:
-      "Got another song in your head? Send it to GUIROPA.",
-    storyEyebrow: "SOME SONGS YOU HEAR. SOME SONGS HAPPEN TO YOU.",
-    storyTitle: "What's yours?",
-    storyLead:
-      "A person. A city. A night. A loss. A love. An entire era.",
-
-    name: "NAME",
-    email: "E-MAIL",
-    artist: "ARTIST",
-    song: "SONG",
-    decade: "DECADE",
-    beforeAfter: "WHAT SHOULD PLAY BEFORE OR AFTER IT?",
-    beforeAfterPlaceholder:
-      "It can be perfectly sensible. Or completely irresponsible.",
-    storyReason: "WHY DID THIS SONG STAY WITH YOU?",
-    storyPlaceholder:
-      "Tell it your way. It doesn't need to sound polished. It needs to be true.",
-    chooseDecade: "Choose the decade",
-    sendSuggestion: "SEND TO GUIROPA →",
-    sendStory: "TELL GUIROPA →",
-    termsText: "I accept the Submission Terms and Privacy Policy.",
-    publishText:
-      "I authorize GUIROPA RADIO to mention this story or suggestion in its content and programming.",
-    formNote:
-      "Sent directly through Formspree. Your e-mail is used only to reply to this message.",
-    operator:
-      "Operation: 7 Seas Global.",
-
-    participationEyebrow: "AHORA ES TU TURNO",
-    participationTitle: "Abre el cajón. Entra.",
-    participationLead:
-      "Sugiere una canción para la programación o cuenta la historia que una canción dejó en tu vida.",
-
-    nextEyebrow: "NO INTENTES ADIVINAR LA PRÓXIMA",
-    nextTitle: "¿Qué viene después?",
-    nextLead:
-      "¿Tienes otra canción en la cabeza? Envíala a GUIROPA.",
-    storyEyebrow: "HAY MÚSICA QUE ESCUCHAS. Y HAY MÚSICA QUE TE PASA.",
-    storyTitle: "¿Cuál es la tuya?",
-    storyLead:
-      "Una persona. Una ciudad. Una noche. Una pérdida. Un amor. Una época entera.",
-
-    name: "NOMBRE",
-    email: "CORREO",
-    artist: "ARTISTA",
-    song: "CANCIÓN",
-    decade: "DÉCADA",
-    beforeAfter: "¿QUÉ DEBERÍA SONAR ANTES O DESPUÉS?",
-    beforeAfterPlaceholder:
-      "Puede ser perfectamente sensato. O completamente irresponsable.",
-    storyReason: "¿POR QUÉ ESTA CANCIÓN SE QUEDÓ CONTIGO?",
-    storyPlaceholder:
-      "Cuéntalo a tu manera. No tiene que sonar bonito. Tiene que ser verdadero.",
-    chooseDecade: "Elige la década",
-    sendSuggestion: "ENVIAR A GUIROPA →",
-    sendStory: "CONTAR A GUIROPA →",
-    termsText: "Acepto los Términos de Envío y la Política de Privacidad.",
-    publishText:
-      "Autorizo a GUIROPA RADIO a mencionar esta historia o sugerencia en su contenido y programación.",
-    formNote:
-      "Enviado directamente por Formspree. Tu correo se usa solo para responder a este mensaje.",
-    operator:
-      "Operación: 7 Seas Global.",
 
     footerEyebrow: "GUIROPA RADIO · 1950 — 1990",
     footerTitle: "GET UP. TURN IT UP. GUIROPA.",
@@ -233,7 +183,7 @@ const COPY = {
         label: "SPOTIFY",
         title: "GUIROPA on Spotify.",
         description:
-          "The official 1950 — 1990 playlist will be available here.",
+          "The official 1950 — 1990 playlist is available here.",
         action: "OPEN SPOTIFY",
       },
     ],
@@ -249,6 +199,64 @@ const COPY = {
     whatsappNecessary: "SUPPORT",
     emailBusiness: "BUSINESS",
     spotifyOfficial: "OFFICIAL PLAYLIST",
+
+    participationEyebrow: "NOW IT'S YOUR TURN",
+    participationTitle: "Open the drawer. Step in.",
+    participationLead:
+      "Suggest a song for the schedule or tell us the story a song left in your life.",
+
+    nextEyebrow:
+      "DON'T TRY TO GUESS WHAT COMES NEXT",
+    nextTitle: "What comes next?",
+    nextLead:
+      "Got another song in your head? Send it to GUIROPA.",
+
+    storyEyebrow:
+      "SOME SONGS YOU HEAR. SOME SONGS HAPPEN TO YOU.",
+    storyTitle: "What's yours?",
+    storyLead:
+      "A person. A city. A night. A loss. A love. An entire era.",
+
+    name: "NAME",
+    email: "E-MAIL",
+    artist: "ARTIST",
+    song: "SONG",
+    decade: "DECADE",
+    beforeAfter:
+      "WHAT SHOULD PLAY BEFORE OR AFTER IT?",
+    beforeAfterPlaceholder:
+      "It can be perfectly sensible. Or completely irresponsible.",
+    storyReason:
+      "WHY DID THIS SONG STAY WITH YOU?",
+    storyPlaceholder:
+      "Tell it your way. It doesn't need to sound polished. It needs to be true.",
+    chooseDecade: "Choose the decade",
+    sendSuggestion: "SEND TO GUIROPA →",
+    sendStory: "TELL GUIROPA →",
+
+    termsPrefix: "I accept the ",
+    termsLink: "Submission Terms",
+    termsAnd: " and the ",
+    privacyLink: "Privacy Policy",
+    termsSuffix: ".",
+
+    publishText:
+      "I authorize GUIROPA RADIO to mention this story or suggestion in its content and programming.",
+
+    formNote:
+      "Sent directly through Formspree. Your e-mail is used only to reply to this message.",
+
+    legalEyebrow: "SUBMISSIONS AND PRIVACY",
+    legalTitle: "Clear. Short. Direct.",
+    termsTitle: "Submission Terms",
+    termsBody:
+      "By submitting, you confirm that the information provided is your responsibility. Submission does not guarantee inclusion in programming.",
+    privacyTitle: "Privacy Policy",
+    privacyBody:
+      "Submitted data is used to receive, review and reply to your message. Your e-mail is not published.",
+
+    operator:
+      "Operation: 7 Seas Global.",
 
     footerEyebrow: "GUIROPA RADIO · 1950 — 1990",
     footerTitle: "GET UP. TURN IT UP. GUIROPA.",
@@ -295,7 +303,7 @@ const COPY = {
         label: "SPOTIFY",
         title: "GUIROPA en Spotify.",
         description:
-          "La playlist oficial 1950 — 1990 estará disponible aquí.",
+          "La playlist oficial 1950 — 1990 está disponible aquí.",
         action: "ABRIR SPOTIFY",
       },
     ],
@@ -311,6 +319,64 @@ const COPY = {
     whatsappNecessary: "ATENCIÓN",
     emailBusiness: "NEGOCIOS",
     spotifyOfficial: "PLAYLIST OFICIAL",
+
+    participationEyebrow: "AHORA ES TU TURNO",
+    participationTitle: "Abre el cajón. Entra.",
+    participationLead:
+      "Sugiere una canción para la programación o cuenta la historia que una canción dejó en tu vida.",
+
+    nextEyebrow:
+      "NO INTENTES ADIVINAR LA PRÓXIMA",
+    nextTitle: "¿Qué viene después?",
+    nextLead:
+      "¿Tienes otra canción en la cabeza? Envíala a GUIROPA.",
+
+    storyEyebrow:
+      "HAY MÚSICA QUE ESCUCHAS. Y HAY MÚSICA QUE TE PASA.",
+    storyTitle: "¿Cuál es la tuya?",
+    storyLead:
+      "Una persona. Una ciudad. Una noche. Una pérdida. Un amor. Una época entera.",
+
+    name: "NOMBRE",
+    email: "CORREO",
+    artist: "ARTISTA",
+    song: "CANCIÓN",
+    decade: "DÉCADA",
+    beforeAfter:
+      "¿QUÉ DEBERÍA SONAR ANTES O DESPUÉS?",
+    beforeAfterPlaceholder:
+      "Puede ser perfectamente sensato. O completamente irresponsable.",
+    storyReason:
+      "¿POR QUÉ ESTA CANCIÓN SE QUEDÓ CONTIGO?",
+    storyPlaceholder:
+      "Cuéntalo a tu manera. No tiene que sonar bonito. Tiene que ser verdadero.",
+    chooseDecade: "Elige la década",
+    sendSuggestion: "ENVIAR A GUIROPA →",
+    sendStory: "CONTAR A GUIROPA →",
+
+    termsPrefix: "Acepto los ",
+    termsLink: "Términos de Envío",
+    termsAnd: " y la ",
+    privacyLink: "Política de Privacidad",
+    termsSuffix: ".",
+
+    publishText:
+      "Autorizo a GUIROPA RADIO a mencionar esta historia o sugerencia en su contenido y programación.",
+
+    formNote:
+      "Enviado directamente por Formspree. Tu correo se usa solo para responder a este mensaje.",
+
+    legalEyebrow: "ENVÍOS Y PRIVACIDAD",
+    legalTitle: "Claro. Corto. Directo.",
+    termsTitle: "Términos de Envío",
+    termsBody:
+      "Al enviar, confirmas que la información proporcionada es de tu responsabilidad. El envío no garantiza inclusión en la programación.",
+    privacyTitle: "Política de Privacidad",
+    privacyBody:
+      "Los datos enviados se usan para recibir, revisar y responder tu mensaje. Tu correo no se publica.",
+
+    operator:
+      "Operación: 7 Seas Global.",
 
     footerEyebrow: "GUIROPA RADIO · 1950 — 1990",
     footerTitle: "GET UP. TURN IT UP. GUIROPA.",
@@ -333,6 +399,37 @@ export default function ContactPage() {
   const copy =
     COPY[lang] ||
     COPY.pt;
+
+  const participationRef = useRef(null);
+
+  useEffect(() => {
+    const node = participationRef.current;
+
+    if (!node || typeof IntersectionObserver === "undefined") {
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        document.body.classList.toggle(
+          "guiropa-contact-forms-visible",
+          entry.isIntersecting
+        );
+      },
+      {
+        threshold: 0.08,
+      }
+    );
+
+    observer.observe(node);
+
+    return () => {
+      observer.disconnect();
+      document.body.classList.remove(
+        "guiropa-contact-forms-visible"
+      );
+    };
+  }, []);
 
   return (
     <main className="guiropa-contact-page">
@@ -1061,6 +1158,27 @@ export default function ContactPage() {
             var(--gc-red);
         }
 
+        .guiropa-contact-check a {
+          color:
+            var(--gc-gold-dark);
+
+          font-weight: 800;
+
+          text-decoration:
+            underline;
+
+          text-decoration-thickness:
+            1px;
+
+          text-underline-offset:
+            2px;
+        }
+
+        .guiropa-contact-check a:hover {
+          color:
+            var(--gc-red);
+        }
+
         .guiropa-contact-submit {
           width: 100%;
 
@@ -1127,6 +1245,149 @@ export default function ContactPage() {
           letter-spacing: 0.08em;
 
           text-align: right;
+        }
+
+        /* TERMS + PRIVACY */
+
+        .guiropa-contact-legal {
+          padding:
+            clamp(4rem, 7vw, 6rem)
+            0;
+
+          border-top:
+            1px solid
+            var(--gc-line);
+
+          background:
+            rgba(
+              255,
+              250,
+              240,
+              0.24
+            );
+        }
+
+        .guiropa-contact-legal__head {
+          display: grid;
+
+          grid-template-columns:
+            minmax(0, 1fr)
+            minmax(280px, 430px);
+
+          gap:
+            clamp(3rem, 7vw, 6rem);
+
+          align-items: end;
+
+          margin-bottom:
+            clamp(2.5rem, 5vw, 4rem);
+        }
+
+        .guiropa-contact-legal__head h2 {
+          margin: 0.8rem 0 0;
+
+          font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+          font-size:
+            clamp(
+              2.5rem,
+              5vw,
+              4.6rem
+            );
+
+          font-weight: 400;
+
+          line-height: 0.98;
+
+          letter-spacing: -0.045em;
+        }
+
+        .guiropa-contact-legal__grid {
+          display: grid;
+
+          grid-template-columns:
+            repeat(
+              2,
+              minmax(0, 1fr)
+            );
+
+          border-top:
+            1px solid
+            var(--gc-line);
+
+          border-left:
+            1px solid
+            var(--gc-line);
+        }
+
+        .guiropa-contact-legal__item {
+          scroll-margin-top: 110px;
+
+          padding:
+            clamp(
+              1.8rem,
+              3vw,
+              2.5rem
+            );
+
+          border-right:
+            1px solid
+            var(--gc-line);
+
+          border-bottom:
+            1px solid
+            var(--gc-line);
+        }
+
+        .guiropa-contact-legal__item h3 {
+          margin: 0;
+
+          font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+          font-size:
+            clamp(
+              1.8rem,
+              3vw,
+              2.8rem
+            );
+
+          font-weight: 400;
+
+          line-height: 1;
+        }
+
+        .guiropa-contact-legal__item p {
+          margin: 1rem 0 0;
+
+          color:
+            var(--gc-soft);
+
+          font-size: 0.82rem;
+
+          line-height: 1.7;
+        }
+
+        body.guiropa-contact-forms-visible
+        .guiropa-persistent-player {
+          opacity: 0 !important;
+
+          pointer-events: none !important;
+
+          transform:
+            translate(
+              -50%,
+              calc(100% + 40px)
+            ) !important;
+
+          transition:
+            opacity 0.24s ease,
+            transform 0.24s ease !important;
         }
 
         /* BUSINESS STRIP */
@@ -1318,8 +1579,14 @@ export default function ContactPage() {
           }
 
           .guiropa-contact-participation__head,
-          .guiropa-contact-forms {
+          .guiropa-contact-forms,
+          .guiropa-contact-legal__head,
+          .guiropa-contact-legal__grid {
             grid-template-columns: 1fr;
+          }
+
+          .guiropa-contact-legal__item {
+            border-right: 0;
           }
 
           .guiropa-contact-status {
@@ -1504,7 +1771,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="guiropa-contact-participation">
+      <section
+        ref={participationRef}
+        className="guiropa-contact-participation"
+      >
         <div className="guiropa-contact-shell">
           <div className="guiropa-contact-participation__head">
             <div>
@@ -1649,7 +1919,15 @@ export default function ContactPage() {
                 />
 
                 <span>
-                  {copy.termsText}
+                  {copy.termsPrefix}
+                  <a href="#guiropa-submission-terms">
+                    {copy.termsLink}
+                  </a>
+                  {copy.termsAnd}
+                  <a href="#guiropa-privacy-policy">
+                    {copy.privacyLink}
+                  </a>
+                  {copy.termsSuffix}
                 </span>
               </label>
 
@@ -1786,7 +2064,15 @@ export default function ContactPage() {
                 />
 
                 <span>
-                  {copy.termsText}
+                  {copy.termsPrefix}
+                  <a href="#guiropa-submission-terms">
+                    {copy.termsLink}
+                  </a>
+                  {copy.termsAnd}
+                  <a href="#guiropa-privacy-policy">
+                    {copy.privacyLink}
+                  </a>
+                  {copy.termsSuffix}
                 </span>
               </label>
 
@@ -1817,6 +2103,54 @@ export default function ContactPage() {
                 {copy.operator}
               </div>
             </form>
+          </div>
+        </div>
+      </section>
+
+      <section className="guiropa-contact-legal">
+        <div className="guiropa-contact-shell">
+          <div className="guiropa-contact-legal__head">
+            <div>
+              <span className="guiropa-contact-eyebrow">
+                {copy.legalEyebrow}
+              </span>
+
+              <h2>
+                {copy.legalTitle}
+              </h2>
+            </div>
+          </div>
+
+          <div className="guiropa-contact-legal__grid">
+            <article
+              id="guiropa-submission-terms"
+              className="guiropa-contact-legal__item"
+            >
+              <h3>
+                {copy.termsTitle}
+              </h3>
+
+              <p>
+                {copy.termsBody}
+              </p>
+            </article>
+
+            <article
+              id="guiropa-privacy-policy"
+              className="guiropa-contact-legal__item"
+            >
+              <h3>
+                {copy.privacyTitle}
+              </h3>
+
+              <p>
+                {copy.privacyBody}
+              </p>
+            </article>
+          </div>
+
+          <div className="guiropa-contact-operator">
+            {copy.operator}
           </div>
         </div>
       </section>
