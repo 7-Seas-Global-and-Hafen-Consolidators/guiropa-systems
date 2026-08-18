@@ -8,14 +8,33 @@ import {
   useState,
 } from "react";
 
-import {
-  GUIROPA_DEFAULT_VOLUME,
-  GUIROPA_METADATA_INTERVAL,
-  GUIROPA_METADATA_URL,
-  GUIROPA_STATION,
-  GUIROPA_STORAGE,
-  GUIROPA_STREAM_URL,
-} from "./radioConfig.js";
+/* =========================================================
+   GUIROPA RADIO — GLOBAL PLAYER ENGINE
+   Self-contained configuration
+   ========================================================= */
+
+const GUIROPA_STREAM_URL =
+  import.meta.env.VITE_GUIROPA_STREAM_URL || "";
+
+const GUIROPA_METADATA_URL =
+  import.meta.env.VITE_GUIROPA_METADATA_URL || "";
+
+const GUIROPA_METADATA_INTERVAL = 15000;
+const GUIROPA_DEFAULT_VOLUME = 0.82;
+
+const GUIROPA_STORAGE = {
+  volume: "guiropa-radio-volume",
+  muted: "guiropa-radio-muted",
+  favorite: "guiropa-radio-favorite",
+  recent: "guiropa-radio-recent",
+};
+
+const GUIROPA_STATION = {
+  name: "GUIROPA RADIO",
+  era: "1950 — 1990",
+  format: "Soft Rock · Rock Ballads · Classic Hits",
+  slogan: "GET UP. TURN IT UP. GUIROPA.",
+};
 
 const RadioPlayerContext = createContext(null);
 
@@ -31,7 +50,9 @@ function safeRead(key, fallback = null) {
   try {
     const value = localStorage.getItem(key);
 
-    return value === null ? fallback : value;
+    return value === null
+      ? fallback
+      : value;
   } catch {
     return fallback;
   }
@@ -43,9 +64,12 @@ function safeWrite(key, value) {
   }
 
   try {
-    localStorage.setItem(key, String(value));
+    localStorage.setItem(
+      key,
+      String(value)
+    );
   } catch {
-    // localStorage indisponível
+    // Storage indisponível.
   }
 }
 
@@ -106,7 +130,10 @@ function normalizeMetadata(data) {
     };
   }
 
-  if (!source || typeof source !== "object") {
+  if (
+    !source ||
+    typeof source !== "object"
+  ) {
     return {
       title: "",
       artist: "",
@@ -254,7 +281,7 @@ export function RadioPlayerProvider({
             JSON.stringify(next)
           );
         } catch {
-          // ignora
+          // Ignora falha de storage.
         }
 
         return next;
@@ -343,7 +370,6 @@ export function RadioPlayerProvider({
     const audio = new Audio();
 
     audio.preload = "none";
-    audio.crossOrigin = "anonymous";
     audio.volume = volume;
     audio.muted = isMuted;
 
@@ -453,11 +479,7 @@ export function RadioPlayerProvider({
         );
       }
     };
-  }, [
-    isMuted,
-    scheduleReconnect,
-    volume,
-  ]);
+  }, [scheduleReconnect]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -633,8 +655,8 @@ export function RadioPlayerProvider({
       play,
     ]);
 
-  const setVolume = useCallback(
-    (value) => {
+  const setVolume =
+    useCallback((value) => {
       const next = clamp(
         Number(value),
         0,
@@ -646,9 +668,7 @@ export function RadioPlayerProvider({
       if (next > 0) {
         setIsMuted(false);
       }
-    },
-    []
-  );
+    }, []);
 
   const toggleMute =
     useCallback(() => {
@@ -673,7 +693,7 @@ export function RadioPlayerProvider({
           GUIROPA_STORAGE.recent
         );
       } catch {
-        // ignora
+        // Ignora.
       }
     }, []);
 
