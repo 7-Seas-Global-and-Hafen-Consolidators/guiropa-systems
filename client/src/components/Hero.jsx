@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import GuiropaLogo from "./GuiropaLogo.jsx";
+
 import { useLanguage } from "../i18n/LanguageContext.jsx";
+import { GUIROPA_EMBLEM_SRC } from "../data/brandAssets.js";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -18,6 +19,7 @@ export default function Hero() {
     requestAnimationFrame(() => {
       el.style.transition =
         "opacity .9s ease, transform .9s cubic-bezier(.22,1,.36,1)";
+
       el.style.opacity = "1";
       el.style.transform = "translateY(0)";
     });
@@ -38,8 +40,17 @@ export default function Hero() {
           1950 — 1990
         </span>
 
-        <div className="guiropa-radio-hero__logo">
-          <GuiropaLogo variant="hero" />
+        <div className="guiropa-radio-hero__emblem">
+          <img
+            src={GUIROPA_EMBLEM_SRC}
+            alt="GUIROPA RADIO"
+            className="guiropa-radio-hero__emblem-image"
+            width="720"
+            height="1080"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
         </div>
 
         <div className="guiropa-radio-hero__copy">
@@ -47,7 +58,9 @@ export default function Hero() {
             {t.hero.headline}
           </h1>
 
-          <p>{t.hero.lead}</p>
+          <p>
+            {t.hero.lead}
+          </p>
 
           <div className="guiropa-radio-origin">
             GET UP. TURN IT UP. GUIROPA.
@@ -64,7 +77,9 @@ export default function Hero() {
               ▶
             </span>
 
-            <span>{t.hero.ctaPrimary}</span>
+            <span>
+              {t.hero.ctaPrimary}
+            </span>
           </Link>
         </div>
       </div>
@@ -79,6 +94,169 @@ export default function Hero() {
         <span>1980</span>
         <span>1990</span>
       </div>
+
+      <style>{`
+        .guiropa-radio-hero__emblem {
+          position: relative;
+          z-index: 4;
+
+          width: min(
+            560px,
+            68vw
+          );
+
+          margin:
+            0 auto;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .guiropa-radio-hero__emblem::before {
+          content: "";
+
+          position: absolute;
+
+          z-index: -1;
+
+          left: 50%;
+          top: 52%;
+
+          width: 88%;
+          height: 76%;
+
+          transform:
+            translate(
+              -50%,
+              -50%
+            );
+
+          background:
+            radial-gradient(
+              ellipse at center,
+              rgba(
+                203,
+                159,
+                83,
+                0.18
+              ) 0%,
+              rgba(
+                203,
+                159,
+                83,
+                0.08
+              ) 42%,
+              transparent 72%
+            );
+
+          filter:
+            blur(24px);
+
+          pointer-events:
+            none;
+        }
+
+        .guiropa-radio-hero__emblem-image {
+          display: block;
+
+          width: 100%;
+          height: auto;
+
+          max-height: 60vh;
+
+          object-fit: contain;
+
+          border-radius:
+            17% / 9%;
+
+          box-shadow:
+            0 18px 38px
+            rgba(
+              58,
+              38,
+              24,
+              0.18
+            );
+
+          filter:
+            brightness(1.06)
+            contrast(1.03)
+            saturate(1.05);
+
+          transition:
+            transform .35s ease,
+            filter .35s ease,
+            box-shadow .35s ease;
+        }
+
+        .guiropa-radio-hero__emblem:hover
+        .guiropa-radio-hero__emblem-image {
+          transform:
+            translateY(-3px);
+
+          filter:
+            brightness(1.09)
+            contrast(1.03)
+            saturate(1.06);
+
+          box-shadow:
+            0 22px 44px
+            rgba(
+              58,
+              38,
+              24,
+              0.20
+            );
+        }
+
+        .guiropa-radio-hero__copy {
+          margin-top:
+            1.35rem;
+        }
+
+        @media (
+          max-width: 900px
+        ) {
+          .guiropa-radio-hero__emblem {
+            width:
+              min(
+                500px,
+                76vw
+              );
+          }
+
+          .guiropa-radio-hero__emblem-image {
+            max-height:
+              56vh;
+          }
+        }
+
+        @media (
+          max-width: 600px
+        ) {
+          .guiropa-radio-hero__emblem {
+            width:
+              min(
+                390px,
+                88vw
+              );
+          }
+
+          .guiropa-radio-hero__emblem-image {
+            max-height:
+              none;
+
+            border-radius:
+              16% / 8%;
+          }
+
+          .guiropa-radio-hero__copy {
+            margin-top:
+              1rem;
+          }
+        }
+      `}</style>
     </section>
   );
 }
