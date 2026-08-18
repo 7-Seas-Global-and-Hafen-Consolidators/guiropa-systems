@@ -18,23 +18,39 @@ export default function Footer() {
           className="guiropa-radio-footer__nav"
           aria-label={t.a11y.footerNav}
         >
-          <Link to="/">{t.footer.home}</Link>
-          <Link to="/ouvir">{t.footer.listen}</Link>
-          <Link to="/programacao">{t.footer.schedule}</Link>
-          <Link to="/loja">{t.footer.store}</Link>
-          <Link to="/contato">{t.footer.contact}</Link>
-          <Link to="/anuncie">{t.footer.advertise}</Link>
-          <a
-            href="https://www.asaas.com/c/n17o931m5w6ze64t"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/">
+            {t.footer.home}
+          </Link>
+
+          <Link to="/ouvir">
+            {t.footer.listen}
+          </Link>
+
+          <Link to="/programacao">
+            {t.footer.schedule}
+          </Link>
+
+          <Link to="/loja">
+            {t.footer.store}
+          </Link>
+
+          <Link to="/contato">
+            {t.footer.contact}
+          </Link>
+
+          <Link to="/anuncie">
+            {t.footer.advertise}
+          </Link>
+
+          <Link to="/apoie">
             {t.footer.support}
-          </a>
+          </Link>
         </nav>
 
         <div className="guiropa-radio-footer__meta">
-          <span>1950 — 1990</span>
+          <span>
+            1950 — 1990
+          </span>
 
           <span>
             © {new Date().getFullYear()} GUIROPA RADIO ·{" "}
