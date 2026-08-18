@@ -7,7 +7,8 @@ const TELEGRAM_URL =
 const WHATSAPP_URL =
   "https://wa.me/48732099369?text=Olá%21%20Quero%20anunciar%20na%20GUIROPA%20RADIO.";
 
-const EMAIL_URL = "mailto:ethanscrovam@protonmail.ch?subject=Publicidade%20GUIROPA%20RADIO";
+const EMAIL_URL =
+  "mailto:guiropasystems@gmail.com?subject=Publicidade%20GUIROPA%20RADIO";
 
 const COPY = {
   pt: {
