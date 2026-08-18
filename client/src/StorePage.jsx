@@ -1,1173 +1,261 @@
 import { useLanguage } from "./i18n/LanguageContext.jsx";
 import { GUIROPA_EMBLEM_SRC } from "./data/brandAssets.js";
 
-const STORE_COPY = {
+const ASAAS_URL = "https://www.asaas.com/c/n17o931m5w6ze64t";
+const PAYPAL_URL = "https://www.paypal.com/ncp/payment/Y4KB4YKHPKS88";
+
+const SUPPORT_COPY = {
   pt: {
-    eyebrow: "GUIROPA RADIO · STORE",
-    title: "Loja",
-    lead:
-      "1950 — 1990. A identidade da GUIROPA fora das caixas de som.",
-
-    introEyebrow: "GUIROPA COLLECTION",
-    introTitle: "Leve a estação com você.",
-    introLead:
-      "Peças inspiradas na música, nos carros, no design e na cultura visual que atravessaram quatro décadas.",
-
-    cta: "VER COLEÇÃO",
-    unavailable: "EM PREPARAÇÃO",
-
-    collections: [
-      {
-        number: "01",
-        title: "GUIROPA Essentials",
-        description:
-          "Peças essenciais com a identidade oficial da estação.",
-        tag: "CORE COLLECTION",
-      },
-      {
-        number: "02",
-        title: "Road & Radio",
-        description:
-          "Automóveis, estrada, noite e o espírito clássico da GUIROPA.",
-        tag: "AUTOMOTIVE",
-      },
-      {
-        number: "03",
-        title: "1950 — 1990",
-        description:
-          "Coleções editoriais inspiradas em cada década da estação.",
-        tag: "DECADES",
-      },
-    ],
-
-    products: [
-      {
-        code: "GR-001",
-        title: "GUIROPA RADIO T-Shirt",
-        type: "APPAREL",
-      },
-      {
-        code: "GR-002",
-        title: "GUIROPA Radio Mug",
-        type: "OBJECT",
-      },
-      {
-        code: "GR-003",
-        title: "GUIROPA Road Poster",
-        type: "PRINT",
-      },
-      {
-        code: "GR-004",
-        title: "GUIROPA Classic Cap",
-        type: "APPAREL",
-      },
-      {
-        code: "GR-005",
-        title: "GUIROPA Radio Bottle",
-        type: "OBJECT",
-      },
-      {
-        code: "GR-006",
-        title: "GUIROPA Decades Print",
-        type: "PRINT",
-      },
-    ],
-
-    finalEyebrow: "1950 — 1990",
-    finalTitle: "Uma estação. Quatro décadas. Uma identidade.",
-    finalLead:
-      "A loja da GUIROPA nasce da mesma linguagem da rádio: clássica, direta e feita para durar.",
-    operator:
-      "Operação comercial e pagamentos: 7 Seas Global.",
+    eyebrow: "GUIROPA RADIO · APOIE",
+    title: "Apoie.",
+    lead: "Ajude a manter a GUIROPA no ar, ampliar a programação, o acervo e os próximos projetos.",
+    introEyebrow: "VOCÊ ESCOLHE O VALOR",
+    introTitle: "Mantenha a estação tocando.",
+    introLead: "Não há valor fixo. Escolha quanto deseja contribuir e use o meio de pagamento que preferir.",
+    optionsEyebrow: "APOIO DIRETO",
+    optionsTitle: "Escolha como contribuir.",
+    asaasNumber: "01",
+    asaasTag: "BRASIL",
+    asaasTitle: "Asaas",
+    asaasText: "Pix, boleto e cartão em checkout seguro.",
+    asaasAction: "APOIAR VIA ASAAS",
+    paypalNumber: "02",
+    paypalTag: "BRASIL · INTERNACIONAL",
+    paypalTitle: "PayPal",
+    paypalText: "PayPal e cartões de débito ou crédito.",
+    paypalAction: "APOIAR VIA PAYPAL",
+    noteEyebrow: "SEM VALOR FIXO",
+    noteTitle: "Você decide quanto.",
+    noteText: "A contribuição é voluntária e o valor é escolhido por você.",
+    finalEyebrow: "GUIROPA RADIO · 1950 — 1990",
+    finalTitle: "GET UP. TURN IT UP. GUIROPA.",
+    finalLead: "Cada contribuição ajuda a manter a estação no ar e os próximos projetos em movimento.",
+    operator: "Operação e pagamentos: 7 Seas Global.",
   },
-
   en: {
-    eyebrow: "GUIROPA RADIO · STORE",
-    title: "Store",
-    lead:
-      "1950 — 1990. The identity of GUIROPA beyond the speakers.",
-
-    introEyebrow: "GUIROPA COLLECTION",
-    introTitle: "Take the station with you.",
-    introLead:
-      "Pieces inspired by the music, cars, design and visual culture that crossed four decades.",
-
-    cta: "VIEW COLLECTION",
-    unavailable: "COMING SOON",
-
-    collections: [
-      {
-        number: "01",
-        title: "GUIROPA Essentials",
-        description:
-          "Essential pieces built around the official station identity.",
-        tag: "CORE COLLECTION",
-      },
-      {
-        number: "02",
-        title: "Road & Radio",
-        description:
-          "Automobiles, roads, night and the classic spirit of GUIROPA.",
-        tag: "AUTOMOTIVE",
-      },
-      {
-        number: "03",
-        title: "1950 — 1990",
-        description:
-          "Editorial collections inspired by each decade of the station.",
-        tag: "DECADES",
-      },
-    ],
-
-    products: [
-      {
-        code: "GR-001",
-        title: "GUIROPA RADIO T-Shirt",
-        type: "APPAREL",
-      },
-      {
-        code: "GR-002",
-        title: "GUIROPA Radio Mug",
-        type: "OBJECT",
-      },
-      {
-        code: "GR-003",
-        title: "GUIROPA Road Poster",
-        type: "PRINT",
-      },
-      {
-        code: "GR-004",
-        title: "GUIROPA Classic Cap",
-        type: "APPAREL",
-      },
-      {
-        code: "GR-005",
-        title: "GUIROPA Radio Bottle",
-        type: "OBJECT",
-      },
-      {
-        code: "GR-006",
-        title: "GUIROPA Decades Print",
-        type: "PRINT",
-      },
-    ],
-
-    finalEyebrow: "1950 — 1990",
-    finalTitle: "One station. Four decades. One identity.",
-    finalLead:
-      "The GUIROPA store is born from the same language as the radio: classic, direct and built to last.",
-    operator:
-      "Commercial operation and payments: 7 Seas Global.",
+    eyebrow: "GUIROPA RADIO · SUPPORT",
+    title: "Support.",
+    lead: "Help keep GUIROPA on air, expand programming, the archive and the next projects.",
+    introEyebrow: "YOU CHOOSE THE AMOUNT",
+    introTitle: "Keep the station playing.",
+    introLead: "There is no fixed amount. Choose how much you want to contribute and use the payment method you prefer.",
+    optionsEyebrow: "DIRECT SUPPORT",
+    optionsTitle: "Choose how to contribute.",
+    asaasNumber: "01",
+    asaasTag: "BRAZIL",
+    asaasTitle: "Asaas",
+    asaasText: "Pix, bank slip and card through a secure checkout.",
+    asaasAction: "SUPPORT VIA ASAAS",
+    paypalNumber: "02",
+    paypalTag: "BRAZIL · INTERNATIONAL",
+    paypalTitle: "PayPal",
+    paypalText: "PayPal and debit or credit cards.",
+    paypalAction: "SUPPORT VIA PAYPAL",
+    noteEyebrow: "NO FIXED AMOUNT",
+    noteTitle: "You decide how much.",
+    noteText: "The contribution is voluntary and the amount is chosen by you.",
+    finalEyebrow: "GUIROPA RADIO · 1950 — 1990",
+    finalTitle: "GET UP. TURN IT UP. GUIROPA.",
+    finalLead: "Every contribution helps keep the station on air and the next projects moving.",
+    operator: "Operation and payments: 7 Seas Global.",
   },
-
   es: {
-    eyebrow: "GUIROPA RADIO · TIENDA",
-    title: "Tienda",
-    lead:
-      "1950 — 1990. La identidad de GUIROPA fuera de los altavoces.",
-
-    introEyebrow: "GUIROPA COLLECTION",
-    introTitle: "Lleva la estación contigo.",
-    introLead:
-      "Piezas inspiradas en la música, los coches, el diseño y la cultura visual que atravesaron cuatro décadas.",
-
-    cta: "VER COLECCIÓN",
-    unavailable: "PRÓXIMAMENTE",
-
-    collections: [
-      {
-        number: "01",
-        title: "GUIROPA Essentials",
-        description:
-          "Piezas esenciales construidas alrededor de la identidad oficial de la estación.",
-        tag: "CORE COLLECTION",
-      },
-      {
-        number: "02",
-        title: "Road & Radio",
-        description:
-          "Automóviles, carretera, noche y el espíritu clásico de GUIROPA.",
-        tag: "AUTOMOTIVE",
-      },
-      {
-        number: "03",
-        title: "1950 — 1990",
-        description:
-          "Colecciones editoriales inspiradas en cada década de la estación.",
-        tag: "DECADES",
-      },
-    ],
-
-    products: [
-      {
-        code: "GR-001",
-        title: "GUIROPA RADIO T-Shirt",
-        type: "APPAREL",
-      },
-      {
-        code: "GR-002",
-        title: "GUIROPA Radio Mug",
-        type: "OBJECT",
-      },
-      {
-        code: "GR-003",
-        title: "GUIROPA Road Poster",
-        type: "PRINT",
-      },
-      {
-        code: "GR-004",
-        title: "GUIROPA Classic Cap",
-        type: "APPAREL",
-      },
-      {
-        code: "GR-005",
-        title: "GUIROPA Radio Bottle",
-        type: "OBJECT",
-      },
-      {
-        code: "GR-006",
-        title: "GUIROPA Decades Print",
-        type: "PRINT",
-      },
-    ],
-
-    finalEyebrow: "1950 — 1990",
-    finalTitle: "Una estación. Cuatro décadas. Una identidad.",
-    finalLead:
-      "La tienda GUIROPA nace del mismo lenguaje que la radio: clásico, directo y hecho para durar.",
-    operator:
-      "Operación comercial y pagos: 7 Seas Global.",
+    eyebrow: "GUIROPA RADIO · APOYA",
+    title: "Apoya.",
+    lead: "Ayuda a mantener GUIROPA al aire, ampliar la programación, el archivo y los próximos proyectos.",
+    introEyebrow: "TÚ ELIGES EL VALOR",
+    introTitle: "Mantén la estación sonando.",
+    introLead: "No hay un valor fijo. Elige cuánto quieres aportar y usa el medio de pago que prefieras.",
+    optionsEyebrow: "APOYO DIRECTO",
+    optionsTitle: "Elige cómo contribuir.",
+    asaasNumber: "01",
+    asaasTag: "BRASIL",
+    asaasTitle: "Asaas",
+    asaasText: "Pix, boleto y tarjeta en un checkout seguro.",
+    asaasAction: "APOYAR VIA ASAAS",
+    paypalNumber: "02",
+    paypalTag: "BRASIL · INTERNACIONAL",
+    paypalTitle: "PayPal",
+    paypalText: "PayPal y tarjetas de débito o crédito.",
+    paypalAction: "APOYAR VIA PAYPAL",
+    noteEyebrow: "SIN VALOR FIJO",
+    noteTitle: "Tú decides cuánto.",
+    noteText: "La contribución es voluntaria y el valor lo eliges tú.",
+    finalEyebrow: "GUIROPA RADIO · 1950 — 1990",
+    finalTitle: "GET UP. TURN IT UP. GUIROPA.",
+    finalLead: "Cada contribución ayuda a mantener la estación al aire y los próximos proyectos en movimiento.",
+    operator: "Operación y pagos: 7 Seas Global.",
   },
 };
 
-export default function StorePage() {
+export default function SupportPage() {
   const { lang } = useLanguage();
-
-  const copy =
-    STORE_COPY[lang] ||
-    STORE_COPY.pt;
+  const copy = SUPPORT_COPY[lang] || SUPPORT_COPY.pt;
 
   return (
-    <main className="guiropa-store-page">
+    <main className="guiropa-support-page">
       <style>{`
-        .guiropa-store-page {
-          --store-paper: #f5ead6;
-          --store-paper-deep: #ead0a8;
-
-          --store-ink: #211b16;
-          --store-soft: #6e5f4d;
-
-          --store-red: #b83224;
-
-          --store-gold: #c99a45;
-          --store-gold-light: #e0bb70;
-          --store-gold-dark: #75501f;
-
-          --store-black: #0d0c0b;
-          --store-black-two: #17130f;
-
-          --store-line:
-            rgba(
-              76,
-              56,
-              39,
-              0.18
-            );
-
-          min-height: 100vh;
-
-          background:
-            radial-gradient(
-              ellipse at 50% 0%,
-              rgba(
-                255,
-                255,
-                255,
-                0.62
-              ),
-              transparent 36%
-            ),
-            linear-gradient(
-              180deg,
-              #f8efdf 0%,
-              var(--store-paper) 58%,
-              var(--store-paper-deep) 100%
-            );
-
-          color:
-            var(--store-ink);
+        .guiropa-support-page {
+          --paper:#f5ead6;
+          --paper-deep:#ead0a8;
+          --ink:#211b16;
+          --soft:#6e5f4d;
+          --red:#b83224;
+          --gold:#c99a45;
+          --gold-light:#e0bb70;
+          --gold-dark:#75501f;
+          --line:rgba(76,56,39,.18);
+          min-height:100vh;
+          color:var(--ink);
+          background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.62),transparent 36%),linear-gradient(180deg,#f8efdf 0%,var(--paper) 58%,var(--paper-deep) 100%);
         }
-
-        .guiropa-store-page *,
-        .guiropa-store-page *::before,
-        .guiropa-store-page *::after {
-          box-sizing: border-box;
+        .guiropa-support-page *,
+        .guiropa-support-page *::before,
+        .guiropa-support-page *::after { box-sizing:border-box; }
+        .guiropa-support-shell { width:min(1180px,calc(100% - 40px)); margin:0 auto; }
+        .guiropa-support-eyebrow { display:block; color:var(--red); font-size:.67rem; font-weight:900; letter-spacing:.23em; text-transform:uppercase; }
+        .guiropa-support-hero { padding:clamp(4.5rem,8vw,7rem) 0 clamp(4rem,7vw,6rem); }
+        .guiropa-support-hero__grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(190px,270px); gap:clamp(3rem,7vw,6rem); align-items:end; }
+        .guiropa-support-hero h1 { margin:.8rem 0 0; font-size:clamp(4.2rem,9vw,8.8rem); font-weight:800; line-height:.86; letter-spacing:-.065em; }
+        .guiropa-support-hero__lead { max-width:730px; margin:2rem 0 0; color:var(--soft); font-size:clamp(1rem,1.7vw,1.26rem); line-height:1.65; }
+        .guiropa-support-emblem { display:flex; justify-content:flex-end; }
+        .guiropa-support-emblem img,
+        .guiropa-support-final img { display:block; width:min(100%,220px); height:auto; overflow:hidden; border:1px solid rgba(201,154,69,.30); border-radius:28px; background:#0d0c0b; box-shadow:0 18px 36px rgba(53,35,22,.18); }
+        .guiropa-support-intro { padding:clamp(4rem,7vw,6.5rem) 0; background:linear-gradient(180deg,#181410 0%,#0f0d0b 100%); color:#f1dfbd; }
+        .guiropa-support-intro__grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,430px); gap:clamp(3rem,7vw,6rem); align-items:end; }
+        .guiropa-support-intro .guiropa-support-eyebrow,
+        .guiropa-support-final .guiropa-support-eyebrow { color:var(--gold-light); }
+        .guiropa-support-intro h2,
+        .guiropa-support-final h2,
+        .guiropa-support-options__head h2,
+        .guiropa-support-option h3,
+        .guiropa-support-note h3 { font-family:Georgia,"Times New Roman",serif; font-weight:400; letter-spacing:-.045em; }
+        .guiropa-support-intro h2 { margin:.8rem 0 0; max-width:720px; font-size:clamp(2.8rem,5.7vw,5.2rem); line-height:.98; }
+        .guiropa-support-intro p { margin:0; color:#a99575; font-size:1rem; line-height:1.75; }
+        .guiropa-support-options { padding:clamp(4.8rem,8vw,7rem) 0 clamp(5rem,9vw,8rem); }
+        .guiropa-support-options__head { display:flex; justify-content:space-between; gap:2rem; align-items:end; padding-bottom:1.5rem; border-bottom:1px solid var(--line); }
+        .guiropa-support-options__head h2 { margin:0; font-size:clamp(2.7rem,5vw,4.8rem); line-height:1; }
+        .guiropa-support-options__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); border-bottom:1px solid var(--line); }
+        .guiropa-support-option { min-height:360px; display:flex; flex-direction:column; padding:clamp(1.8rem,3vw,2.6rem); border-right:1px solid var(--line); background:rgba(255,250,240,.20); transition:transform .28s ease,background .28s ease; }
+        .guiropa-support-option:last-child { border-right:0; }
+        .guiropa-support-option:hover { transform:translateY(-4px); background:rgba(255,248,232,.38); }
+        .guiropa-support-option__number { color:var(--gold-dark); font-size:.64rem; font-weight:900; letter-spacing:.15em; }
+        .guiropa-support-option__tag { margin-top:2rem; color:var(--red); font-size:.58rem; font-weight:900; letter-spacing:.14em; text-transform:uppercase; }
+        .guiropa-support-option h3 { margin:.9rem 0 0; font-size:clamp(2.5rem,4.5vw,4rem); line-height:1; }
+        .guiropa-support-option p { max-width:470px; margin:1rem 0 0; color:var(--soft); font-size:.9rem; line-height:1.65; }
+        .guiropa-support-option__action { min-height:50px; display:inline-flex; align-items:center; justify-content:space-between; gap:1.2rem; margin-top:auto; padding:0 16px; border:1px solid var(--ink); background:var(--ink); color:#fff8ed; font-size:.63rem; font-weight:900; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; transition:background .2s ease,border-color .2s ease; }
+        .guiropa-support-option__action:hover { border-color:var(--red); background:var(--red); }
+        .guiropa-support-option__action strong { color:var(--gold-light); font-size:.95rem; }
+        .guiropa-support-note { display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,420px); gap:clamp(3rem,7vw,6rem); align-items:center; padding:clamp(3rem,5vw,4rem) 0; border-bottom:1px solid var(--line); }
+        .guiropa-support-note h3 { margin:.8rem 0 0; font-size:clamp(2rem,3.7vw,3.5rem); line-height:1; }
+        .guiropa-support-note p { margin:0; color:var(--soft); font-size:.92rem; line-height:1.7; }
+        .guiropa-support-operator { margin-top:1rem; color:rgba(110,95,77,.58); font-size:.56rem; font-weight:700; letter-spacing:.08em; text-align:right; }
+        .guiropa-support-final { padding:clamp(5rem,8vw,7rem) 0; background:linear-gradient(180deg,#17130f,#0e0c0a); color:#f0dfbd; }
+        .guiropa-support-final__grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(200px,290px); gap:clamp(3rem,7vw,6rem); align-items:center; }
+        .guiropa-support-final h2 { margin:.8rem 0 0; max-width:780px; font-size:clamp(2.8rem,5.8vw,5.4rem); line-height:.98; }
+        .guiropa-support-final p { max-width:680px; margin:1.3rem 0 0; color:#a99575; font-size:1rem; line-height:1.7; }
+        .guiropa-support-final img { margin-left:auto; box-shadow:0 20px 44px rgba(0,0,0,.32); }
+        .guiropa-support-final__operator { margin-top:1.4rem; color:rgba(224,187,112,.48); font-size:.52rem; font-weight:700; letter-spacing:.08em; }
+        @media(max-width:900px){
+          .guiropa-support-hero__grid,
+          .guiropa-support-intro__grid,
+          .guiropa-support-note,
+          .guiropa-support-final__grid{grid-template-columns:1fr;}
+          .guiropa-support-emblem{justify-content:flex-start;}
+          .guiropa-support-final img{margin-left:0;}
+          .guiropa-support-options__grid{grid-template-columns:1fr;}
+          .guiropa-support-option{border-right:0;border-bottom:1px solid var(--line);}
+          .guiropa-support-option:last-child{border-bottom:0;}
+          .guiropa-support-operator{text-align:left;}
         }
-
-        .guiropa-store-shell {
-          width:
-            min(
-              1180px,
-              calc(100% - 40px)
-            );
-
-          margin: 0 auto;
-        }
-
-        /* HERO */
-
-        .guiropa-store-hero {
-          padding:
-            clamp(4.5rem, 8vw, 7rem)
-            0
-            clamp(4rem, 7vw, 6rem);
-        }
-
-        .guiropa-store-hero__grid {
-          display: grid;
-
-          grid-template-columns:
-            minmax(0, 1fr)
-            minmax(190px, 270px);
-
-          gap:
-            clamp(3rem, 7vw, 6rem);
-
-          align-items: end;
-        }
-
-        .guiropa-store-eyebrow {
-          display: block;
-
-          color:
-            var(--store-red);
-
-          font-size: 0.67rem;
-          font-weight: 900;
-
-          letter-spacing: 0.23em;
-
-          text-transform: uppercase;
-        }
-
-        .guiropa-store-hero h1 {
-          margin: 0.8rem 0 0;
-
-          font-size:
-            clamp(
-              4.2rem,
-              9vw,
-              8.8rem
-            );
-
-          font-weight: 800;
-
-          line-height: 0.86;
-
-          letter-spacing: -0.065em;
-        }
-
-        .guiropa-store-hero__lead {
-          max-width: 730px;
-
-          margin: 2rem 0 0;
-
-          color:
-            var(--store-soft);
-
-          font-size:
-            clamp(
-              1rem,
-              1.7vw,
-              1.26rem
-            );
-
-          line-height: 1.65;
-        }
-
-        .guiropa-store-emblem {
-          display: flex;
-
-          justify-content: flex-end;
-        }
-
-        .guiropa-store-emblem img {
-          display: block;
-
-          width:
-            min(
-              100%,
-              220px
-            );
-
-          height: auto;
-
-          overflow: hidden;
-
-          border:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.30
-            );
-
-          border-radius:
-            28px;
-
-          background:
-            #0d0c0b;
-
-          filter:
-            brightness(1.05)
-            contrast(1.02)
-            saturate(1.04);
-
-          box-shadow:
-            0 18px 36px
-            rgba(
-              53,
-              35,
-              22,
-              0.18
-            );
-        }
-
-        /* INTRO DARK */
-
-        .guiropa-store-intro {
-          padding:
-            clamp(4rem, 7vw, 6.5rem)
-            0;
-
-          background:
-            linear-gradient(
-              180deg,
-              #181410 0%,
-              #0f0d0b 100%
-            );
-
-          color: #f1dfbd;
-        }
-
-        .guiropa-store-intro__grid {
-          display: grid;
-
-          grid-template-columns:
-            minmax(0, 1fr)
-            minmax(260px, 430px);
-
-          gap:
-            clamp(3rem, 7vw, 6rem);
-
-          align-items: end;
-        }
-
-        .guiropa-store-intro h2 {
-          margin: 0.8rem 0 0;
-
-          max-width: 720px;
-
-          font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
-
-          font-size:
-            clamp(
-              2.8rem,
-              5.7vw,
-              5.2rem
-            );
-
-          font-weight: 400;
-
-          line-height: 0.98;
-
-          letter-spacing: -0.045em;
-        }
-
-        .guiropa-store-intro p {
-          margin: 0;
-
-          color: #a99575;
-
-          font-size: 1rem;
-
-          line-height: 1.75;
-        }
-
-        .guiropa-store-intro
-        .guiropa-store-eyebrow {
-          color:
-            var(--store-gold-light);
-        }
-
-        /* COLLECTIONS */
-
-        .guiropa-store-collections {
-          padding:
-            clamp(4.8rem, 8vw, 7rem)
-            0;
-        }
-
-        .guiropa-store-collections__grid {
-          display: grid;
-
-          grid-template-columns:
-            repeat(
-              3,
-              minmax(0, 1fr)
-            );
-
-          border-top:
-            1px solid
-            var(--store-line);
-
-          border-bottom:
-            1px solid
-            var(--store-line);
-        }
-
-        .guiropa-store-collection {
-          min-height: 330px;
-
-          display: flex;
-
-          flex-direction: column;
-
-          padding:
-            clamp(
-              1.8rem,
-              3vw,
-              2.5rem
-            );
-
-          border-right:
-            1px solid
-            var(--store-line);
-
-          background:
-            rgba(
-              255,
-              250,
-              240,
-              0.20
-            );
-
-          transition:
-            transform 0.28s ease,
-            background 0.28s ease;
-        }
-
-        .guiropa-store-collection:last-child {
-          border-right: 0;
-        }
-
-        .guiropa-store-collection:hover {
-          transform: translateY(-4px);
-
-          background:
-            rgba(
-              255,
-              248,
-              232,
-              0.38
-            );
-        }
-
-        .guiropa-store-collection__number {
-          color:
-            var(--store-gold-dark);
-
-          font-size: 0.64rem;
-          font-weight: 900;
-
-          letter-spacing: 0.15em;
-        }
-
-        .guiropa-store-collection__tag {
-          margin-top: auto;
-
-          color:
-            var(--store-red);
-
-          font-size: 0.58rem;
-          font-weight: 900;
-
-          letter-spacing: 0.14em;
-
-          text-transform: uppercase;
-        }
-
-        .guiropa-store-collection h3 {
-          margin: 0.9rem 0 0;
-
-          font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
-
-          font-size:
-            clamp(
-              2rem,
-              3.3vw,
-              3.1rem
-            );
-
-          font-weight: 400;
-
-          line-height: 1;
-
-          letter-spacing: -0.04em;
-        }
-
-        .guiropa-store-collection p {
-          margin: 1rem 0 0;
-
-          color:
-            var(--store-soft);
-
-          font-size: 0.9rem;
-
-          line-height: 1.65;
-        }
-
-        /* PRODUCTS */
-
-        .guiropa-store-products {
-          padding:
-            0
-            0
-            clamp(5rem, 9vw, 8rem);
-        }
-
-        .guiropa-store-products__head {
-          display: flex;
-
-          justify-content: space-between;
-
-          gap: 2rem;
-
-          align-items: end;
-
-          padding-bottom: 1.5rem;
-
-          border-bottom:
-            1px solid
-            var(--store-line);
-        }
-
-        .guiropa-store-products__head h2 {
-          margin: 0;
-
-          font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
-
-          font-size:
-            clamp(
-              2.7rem,
-              5vw,
-              4.8rem
-            );
-
-          font-weight: 400;
-
-          line-height: 1;
-
-          letter-spacing: -0.04em;
-        }
-
-        .guiropa-store-products__grid {
-          display: grid;
-
-          grid-template-columns:
-            repeat(
-              3,
-              minmax(0, 1fr)
-            );
-
-          border-bottom:
-            1px solid
-            var(--store-line);
-        }
-
-        .guiropa-store-product {
-          min-height: 250px;
-
-          display: flex;
-
-          flex-direction: column;
-
-          padding:
-            clamp(
-              1.6rem,
-              2.7vw,
-              2.2rem
-            );
-
-          border-right:
-            1px solid
-            var(--store-line);
-
-          border-bottom:
-            1px solid
-            var(--store-line);
-        }
-
-        .guiropa-store-product:nth-child(3n) {
-          border-right: 0;
-        }
-
-        .guiropa-store-product:nth-last-child(-n+3) {
-          border-bottom: 0;
-        }
-
-        .guiropa-store-product__code {
-          color:
-            var(--store-gold-dark);
-
-          font-size: 0.6rem;
-          font-weight: 900;
-
-          letter-spacing: 0.14em;
-        }
-
-        .guiropa-store-product__type {
-          margin-top: 0.8rem;
-
-          color:
-            var(--store-red);
-
-          font-size: 0.57rem;
-          font-weight: 900;
-
-          letter-spacing: 0.14em;
-
-          text-transform: uppercase;
-        }
-
-        .guiropa-store-product h3 {
-          margin: auto 0 0;
-
-          font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
-
-          font-size:
-            clamp(
-              1.6rem,
-              2.8vw,
-              2.5rem
-            );
-
-          font-weight: 400;
-
-          line-height: 1;
-
-          letter-spacing: -0.035em;
-        }
-
-        .guiropa-store-product__footer {
-          display: flex;
-
-          justify-content: space-between;
-
-          align-items: center;
-
-          gap: 1rem;
-
-          margin-top: 1.2rem;
-
-          padding-top: 1rem;
-
-          border-top:
-            1px solid
-            var(--store-line);
-        }
-
-        .guiropa-store-product__footer span {
-          color:
-            var(--store-soft);
-
-          font-size: 0.63rem;
-          font-weight: 800;
-
-          letter-spacing: 0.11em;
-
-          text-transform: uppercase;
-        }
-
-        .guiropa-store-product__footer strong {
-          color:
-            var(--store-gold-dark);
-
-          font-size: 0.8rem;
-        }
-
-        .guiropa-store-operator {
-          margin-top: 1rem;
-
-          color:
-            rgba(
-              110,
-              95,
-              77,
-              0.58
-            );
-
-          font-size: 0.56rem;
-          font-weight: 700;
-
-          letter-spacing: 0.08em;
-
-          text-align: right;
-        }
-
-        /* FINAL */
-
-        .guiropa-store-final {
-          padding:
-            clamp(5rem, 8vw, 7rem)
-            0;
-
-          background:
-            linear-gradient(
-              180deg,
-              #17130f,
-              #0e0c0a
-            );
-
-          color:
-            #f0dfbd;
-        }
-
-        .guiropa-store-final__grid {
-          display: grid;
-
-          grid-template-columns:
-            minmax(0, 1fr)
-            minmax(200px, 290px);
-
-          gap:
-            clamp(3rem, 7vw, 6rem);
-
-          align-items: center;
-        }
-
-        .guiropa-store-final h2 {
-          margin: 0.8rem 0 0;
-
-          max-width: 780px;
-
-          font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
-
-          font-size:
-            clamp(
-              2.8rem,
-              5.8vw,
-              5.4rem
-            );
-
-          font-weight: 400;
-
-          line-height: 0.98;
-
-          letter-spacing: -0.045em;
-        }
-
-        .guiropa-store-final p {
-          max-width: 680px;
-
-          margin: 1.3rem 0 0;
-
-          color: #a99575;
-
-          font-size: 1rem;
-
-          line-height: 1.7;
-        }
-
-        .guiropa-store-final img {
-          display: block;
-
-          width:
-            min(
-              100%,
-              220px
-            );
-
-          margin-left: auto;
-
-          height: auto;
-
-          overflow: hidden;
-
-          border:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.28
-            );
-
-          border-radius:
-            28px;
-
-          background:
-            #0d0c0b;
-
-          box-shadow:
-            0 20px 44px
-            rgba(
-              0,
-              0,
-              0,
-              0.32
-            );
-        }
-
-        .guiropa-store-final
-        .guiropa-store-eyebrow {
-          color:
-            var(--store-gold-light);
-        }
-
-        /* RESPONSIVE */
-
-        @media (max-width: 900px) {
-          .guiropa-store-hero__grid,
-          .guiropa-store-intro__grid,
-          .guiropa-store-final__grid {
-            grid-template-columns: 1fr;
-          }
-
-          .guiropa-store-emblem,
-          .guiropa-store-final img {
-            justify-content: flex-start;
-            margin-left: 0;
-          }
-
-          .guiropa-store-collections__grid,
-          .guiropa-store-products__grid {
-            grid-template-columns: 1fr;
-          }
-
-          .guiropa-store-collection,
-          .guiropa-store-product {
-            border-right: 0;
-
-            border-bottom:
-              1px solid
-              var(--store-line);
-          }
-
-          .guiropa-store-collection:last-child,
-          .guiropa-store-product:last-child {
-            border-bottom: 0;
-          }
-
-          .guiropa-store-product:nth-last-child(-n+3) {
-            border-bottom:
-              1px solid
-              var(--store-line);
-          }
-
-          .guiropa-store-product:last-child {
-            border-bottom: 0;
-          }
-        }
-
-        @media (max-width: 600px) {
-          .guiropa-store-shell {
-            width:
-              min(
-                100% - 24px,
-                650px
-              );
-          }
-
-          .guiropa-store-hero {
-            padding-top: 4rem;
-          }
-
-          .guiropa-store-hero h1 {
-            font-size:
-              clamp(
-                3.8rem,
-                18vw,
-                6.5rem
-              );
-          }
-
-          .guiropa-store-products__head {
-            display: block;
-          }
+        @media(max-width:600px){
+          .guiropa-support-shell{width:min(100% - 24px,650px);}
+          .guiropa-support-hero{padding-top:4rem;}
+          .guiropa-support-hero h1{font-size:clamp(3.8rem,18vw,6.5rem);}
+          .guiropa-support-options__head{display:block;}
         }
       `}</style>
 
-      <section className="guiropa-store-hero">
-        <div className="guiropa-store-shell">
-          <div className="guiropa-store-hero__grid">
+      <section className="guiropa-support-hero">
+        <div className="guiropa-support-shell">
+          <div className="guiropa-support-hero__grid">
             <div>
-              <span className="guiropa-store-eyebrow">
-                {copy.eyebrow}
-              </span>
-
-              <h1>
-                {copy.title}
-              </h1>
-
-              <p className="guiropa-store-hero__lead">
-                {copy.lead}
-              </p>
+              <span className="guiropa-support-eyebrow">{copy.eyebrow}</span>
+              <h1>{copy.title}</h1>
+              <p className="guiropa-support-hero__lead">{copy.lead}</p>
             </div>
-
-            <div
-              className="guiropa-store-emblem"
-              aria-hidden="true"
-            >
-              <img
-                src={GUIROPA_EMBLEM_SRC}
-                alt=""
-                loading="eager"
-                decoding="async"
-              />
+            <div className="guiropa-support-emblem" aria-hidden="true">
+              <img src={GUIROPA_EMBLEM_SRC} alt="" loading="eager" decoding="async" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="guiropa-store-intro">
-        <div className="guiropa-store-shell">
-          <div className="guiropa-store-intro__grid">
+      <section className="guiropa-support-intro">
+        <div className="guiropa-support-shell">
+          <div className="guiropa-support-intro__grid">
             <div>
-              <span className="guiropa-store-eyebrow">
-                {copy.introEyebrow}
-              </span>
-
-              <h2>
-                {copy.introTitle}
-              </h2>
+              <span className="guiropa-support-eyebrow">{copy.introEyebrow}</span>
+              <h2>{copy.introTitle}</h2>
             </div>
-
-            <p>
-              {copy.introLead}
-            </p>
+            <p>{copy.introLead}</p>
           </div>
         </div>
       </section>
 
-      <section className="guiropa-store-collections">
-        <div className="guiropa-store-shell">
-          <div className="guiropa-store-collections__grid">
-            {copy.collections.map((collection) => (
-              <article
-                className="guiropa-store-collection"
-                key={collection.number}
-              >
-                <span className="guiropa-store-collection__number">
-                  {collection.number}
-                </span>
-
-                <span className="guiropa-store-collection__tag">
-                  {collection.tag}
-                </span>
-
-                <h3>
-                  {collection.title}
-                </h3>
-
-                <p>
-                  {collection.description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="guiropa-store-products">
-        <div className="guiropa-store-shell">
-          <div className="guiropa-store-products__head">
-            <h2>
-              GUIROPA STORE
-            </h2>
-
-            <span className="guiropa-store-eyebrow">
-              1950 — 1990
-            </span>
+      <section className="guiropa-support-options">
+        <div className="guiropa-support-shell">
+          <div className="guiropa-support-options__head">
+            <h2>{copy.optionsTitle}</h2>
+            <span className="guiropa-support-eyebrow">{copy.optionsEyebrow}</span>
           </div>
 
-          <div className="guiropa-store-products__grid">
-            {copy.products.map((product) => (
-              <article
-                className="guiropa-store-product"
-                key={product.code}
-              >
-                <span className="guiropa-store-product__code">
-                  {product.code}
-                </span>
+          <div className="guiropa-support-options__grid">
+            <article className="guiropa-support-option">
+              <span className="guiropa-support-option__number">{copy.asaasNumber}</span>
+              <span className="guiropa-support-option__tag">{copy.asaasTag}</span>
+              <h3>{copy.asaasTitle}</h3>
+              <p>{copy.asaasText}</p>
+              <a className="guiropa-support-option__action" href={ASAAS_URL} target="_blank" rel="noopener noreferrer">
+                <span>{copy.asaasAction}</span>
+                <strong aria-hidden="true">↗</strong>
+              </a>
+            </article>
 
-                <span className="guiropa-store-product__type">
-                  {product.type}
-                </span>
-
-                <h3>
-                  {product.title}
-                </h3>
-
-                <div className="guiropa-store-product__footer">
-                  <span>
-                    {copy.unavailable}
-                  </span>
-
-                  <strong>
-                    →
-                  </strong>
-                </div>
-              </article>
-            ))}
+            <article className="guiropa-support-option">
+              <span className="guiropa-support-option__number">{copy.paypalNumber}</span>
+              <span className="guiropa-support-option__tag">{copy.paypalTag}</span>
+              <h3>{copy.paypalTitle}</h3>
+              <p>{copy.paypalText}</p>
+              <a className="guiropa-support-option__action" href={PAYPAL_URL} target="_blank" rel="noopener noreferrer">
+                <span>{copy.paypalAction}</span>
+                <strong aria-hidden="true">↗</strong>
+              </a>
+            </article>
           </div>
 
-          <div className="guiropa-store-operator">
-            {copy.operator}
-          </div>
-        </div>
-      </section>
-
-      <section className="guiropa-store-final">
-        <div className="guiropa-store-shell">
-          <div className="guiropa-store-final__grid">
+          <div className="guiropa-support-note">
             <div>
-              <span className="guiropa-store-eyebrow">
-                {copy.finalEyebrow}
-              </span>
-
-              <h2>
-                {copy.finalTitle}
-              </h2>
-
-              <p>
-                {copy.finalLead}
-              </p>
+              <span className="guiropa-support-eyebrow">{copy.noteEyebrow}</span>
+              <h3>{copy.noteTitle}</h3>
             </div>
+            <p>{copy.noteText}</p>
+          </div>
 
-            <img
-              src={GUIROPA_EMBLEM_SRC}
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-            />
+          <div className="guiropa-support-operator">{copy.operator}</div>
+        </div>
+      </section>
+
+      <section className="guiropa-support-final">
+        <div className="guiropa-support-shell">
+          <div className="guiropa-support-final__grid">
+            <div>
+              <span className="guiropa-support-eyebrow">{copy.finalEyebrow}</span>
+              <h2>{copy.finalTitle}</h2>
+              <p>{copy.finalLead}</p>
+              <div className="guiropa-support-final__operator">{copy.operator}</div>
+            </div>
+            <img src={GUIROPA_EMBLEM_SRC} alt="" aria-hidden="true" loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
