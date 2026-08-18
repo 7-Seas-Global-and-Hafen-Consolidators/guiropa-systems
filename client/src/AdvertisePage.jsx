@@ -7,7 +7,7 @@ const TELEGRAM_URL =
 const WHATSAPP_URL =
   "https://wa.me/48732099369?text=Olá%21%20Quero%20anunciar%20na%20GUIROPA%20RADIO.";
 
-const EMAIL_URL = "ethanscrovam@protonmail.ch";
+const EMAIL_URL = "mailto:ethanscrovam@protonmail.ch?subject=Publicidade%20GUIROPA%20RADIO";
 
 const COPY = {
   pt: {
@@ -114,6 +114,7 @@ const COPY = {
     whatsapp: "WhatsApp",
     email: "E-mail",
     unavailable: "Em preparação",
+    operator: "Operação comercial: 7 Seas Global.",
   },
 
   en: {
@@ -220,6 +221,7 @@ const COPY = {
     whatsapp: "WhatsApp",
     email: "E-mail",
     unavailable: "Coming soon",
+    operator: "Commercial operation: 7 Seas Global.",
   },
 
   es: {
@@ -326,6 +328,7 @@ const COPY = {
     whatsapp: "WhatsApp",
     email: "Correo",
     unavailable: "Próximamente",
+    operator: "Operación comercial: 7 Seas Global.",
   },
 };
 
@@ -487,15 +490,32 @@ export default function AdvertisePage() {
 
           height: auto;
 
+          overflow: hidden;
+
+          border:
+            1px solid
+            rgba(
+              201,
+              154,
+              69,
+              0.30
+            );
+
+          border-radius:
+            28px;
+
+          background:
+            #0d0c0b;
+
           box-shadow:
             0
             18px
-            36px
+            40px
             rgba(
               53,
               35,
-              22,
-              0.18
+              21,
+              0.20
             );
         }
 
@@ -1182,6 +1202,31 @@ export default function AdvertisePage() {
           pointer-events: none;
         }
 
+        .guiropa-advertise-operator {
+          margin-top:
+            1.1rem;
+
+          color:
+            rgba(
+              229,
+              198,
+              129,
+              0.52
+            );
+
+          font-size:
+            0.55rem;
+
+          font-weight:
+            700;
+
+          letter-spacing:
+            0.08em;
+
+          text-transform:
+            uppercase;
+        }
+
         @media (max-width: 900px) {
           .guiropa-advertise-hero__grid,
           .guiropa-advertise-period__grid {
@@ -1484,6 +1529,10 @@ export default function AdvertisePage() {
                 {copy.email} · {copy.unavailable}
               </span>
             )}
+          </div>
+
+          <div className="guiropa-advertise-operator">
+            {copy.operator}
           </div>
         </div>
       </section>
