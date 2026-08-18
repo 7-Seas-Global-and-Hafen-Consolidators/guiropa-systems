@@ -5649,3 +5649,116 @@ body {
     gap: 0.45rem !important;
   }
 }
+/* =========================================================
+   GUIROPA RADIO — HEADER LOGO FINAL OVERRIDE
+   Corrige exclusivamente o lockup do cabeçalho.
+   Remove o recorte circular/quadrado herdado do site antigo
+   e preserva a proporção horizontal original da marca.
+   NÃO altera hero, player, footer ou conteúdo das páginas.
+   ========================================================= */
+
+.guiropa-radio-header
+.guiropa-radio-header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  overflow: visible;
+}
+
+.guiropa-radio-header
+.guiropa-radio-header__logo
+.guiropa-logo--header {
+  display: block !important;
+
+  width: auto !important;
+  height: 58px !important;
+  max-width: 150px !important;
+  max-height: 58px !important;
+
+  object-fit: contain !important;
+  object-position: left center !important;
+
+  border-radius: 0 !important;
+
+  clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+
+  background: transparent !important;
+
+  filter:
+    brightness(1.08)
+    contrast(1.04)
+    saturate(1.06)
+    drop-shadow(0 3px 7px rgba(0, 0, 0, 0.22)) !important;
+
+  opacity: 1 !important;
+}
+
+/* O header reduz levemente ao entrar em estado scrolled,
+   mas mantém a imagem inteira e sem recorte. */
+.guiropa-radio-header.scrolled
+.guiropa-radio-header__logo
+.guiropa-logo--header {
+  width: auto !important;
+  height: 52px !important;
+  max-width: 140px !important;
+  max-height: 52px !important;
+
+  object-fit: contain !important;
+  border-radius: 0 !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .guiropa-radio-header
+  .guiropa-radio-header__logo
+  .guiropa-logo--header {
+    width: auto !important;
+    height: 52px !important;
+    max-width: 135px !important;
+    max-height: 52px !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+  }
+
+  .guiropa-radio-header.scrolled
+  .guiropa-radio-header__logo
+  .guiropa-logo--header {
+    height: 48px !important;
+    max-width: 125px !important;
+    max-height: 48px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .guiropa-radio-header
+  .guiropa-radio-header__logo
+  .guiropa-logo--header {
+    width: auto !important;
+    height: 46px !important;
+    max-width: 118px !important;
+    max-height: 46px !important;
+
+    object-fit: contain !important;
+    object-position: left center !important;
+
+    border-radius: 0 !important;
+
+    filter:
+      brightness(1.08)
+      contrast(1.03)
+      saturate(1.05)
+      drop-shadow(0 2px 5px rgba(0, 0, 0, 0.18)) !important;
+  }
+
+  .guiropa-radio-header.scrolled
+  .guiropa-radio-header__logo
+  .guiropa-logo--header {
+    height: 42px !important;
+    max-width: 110px !important;
+    max-height: 42px !important;
+  }
+}
