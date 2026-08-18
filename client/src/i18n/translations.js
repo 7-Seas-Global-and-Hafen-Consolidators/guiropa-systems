@@ -185,6 +185,10 @@ const pt = {
     listen: "Ouvir",
     schedule: "Programação",
     store: "Loja",
+    contact: "Contato",
+    advertise: "Anuncie",
+    support: "Apoie",
+    rights: "Todos os direitos reservados.",
   },
 };
 
@@ -361,6 +365,10 @@ const en = {
     listen: "Listen",
     schedule: "Schedule",
     store: "Store",
+    contact: "Contact",
+    advertise: "Advertise",
+    support: "Support",
+    rights: "All rights reserved.",
   },
 };
 
@@ -540,6 +548,10 @@ const es = {
     listen: "Escuchar",
     schedule: "Programación",
     store: "Tienda",
+    contact: "Contacto",
+    advertise: "Anúnciate",
+    support: "Apoya",
+    rights: "Todos los derechos reservados.",
   },
 };
 
