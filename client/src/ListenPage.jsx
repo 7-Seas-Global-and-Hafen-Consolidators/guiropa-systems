@@ -5,8 +5,8 @@ import {
   useState,
 } from "react";
 
-import { useLanguage } from "../i18n/LanguageContext.jsx";
-import { GUIROPA_LOGO_SRC } from "../data/brandAssets.js";
+import { useLanguage } from "./i18n/LanguageContext.jsx";
+import { GUIROPA_LOGO_SRC } from "./data/brandAssets.js";
 
 const STREAM_URL =
   import.meta.env.VITE_GUIROPA_STREAM_URL || "";
