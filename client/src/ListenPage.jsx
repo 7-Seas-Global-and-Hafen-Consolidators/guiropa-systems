@@ -17,6 +17,152 @@ const METADATA_URL =
 const STORAGE_VOLUME = "guiropa-radio-volume";
 const STORAGE_FAVORITE = "guiropa-radio-favorite";
 
+const LISTEN_COPY = {
+  pt: {
+    kicker: "GUIROPA RADIO · NO AR",
+    lead:
+      "A música que atravessou gerações. 1950 → 1990. Soft rock, rock ballads, classic hits e grandes vozes.",
+
+    nowPlaying: "TOCANDO AGORA",
+
+    ready: "PRONTA",
+    live: "AO VIVO",
+    connecting: "CONECTANDO",
+    reconnecting: "RECONECTANDO",
+    unavailable: "TRANSMISSÃO INDISPONÍVEL",
+    waiting: "STREAM EM PREPARAÇÃO",
+
+    stationFallback:
+      "1950 — 1990 · Soft Rock · Rock Ballads · Classic Hits",
+
+    favoriteAdd: "Adicionar aos favoritos",
+    favoriteRemove: "Remover dos favoritos",
+
+    play: "Ouvir GUIROPA RADIO",
+    pause: "Pausar GUIROPA RADIO",
+
+    mute: "Silenciar",
+    unmute: "Ativar som",
+    volume: "Volume",
+
+    engineReady:
+      "Motor do player pronto. Falta apenas informar o endpoint oficial do stream.",
+
+    streamReady:
+      "Transmissão preparada para conexão ao stream oficial.",
+
+    historyEyebrow: "HISTÓRICO",
+    historyTitle: "Tocadas recentemente.",
+
+    historyEmpty:
+      "O histórico aparecerá aqui automaticamente quando o endpoint de metadata estiver conectado.",
+
+    decadesLabel: "Linha do tempo GUIROPA",
+
+    decade50: "A faísca",
+    decade60: "Tudo mudou",
+    decade70: "Anos dourados",
+    decade80: "Hits eternos",
+    decade90: "A última parada",
+  },
+
+  en: {
+    kicker: "GUIROPA RADIO · ON AIR",
+    lead:
+      "The music that crossed generations. 1950 → 1990. Soft rock, rock ballads, classic hits and great voices.",
+
+    nowPlaying: "NOW PLAYING",
+
+    ready: "READY",
+    live: "LIVE",
+    connecting: "CONNECTING",
+    reconnecting: "RECONNECTING",
+    unavailable: "BROADCAST UNAVAILABLE",
+    waiting: "STREAM IN PREPARATION",
+
+    stationFallback:
+      "1950 — 1990 · Soft Rock · Rock Ballads · Classic Hits",
+
+    favoriteAdd: "Add to favourites",
+    favoriteRemove: "Remove from favourites",
+
+    play: "Listen to GUIROPA RADIO",
+    pause: "Pause GUIROPA RADIO",
+
+    mute: "Mute",
+    unmute: "Unmute",
+    volume: "Volume",
+
+    engineReady:
+      "The player engine is ready. Only the official stream endpoint remains to be configured.",
+
+    streamReady:
+      "Broadcast prepared for connection to the official stream.",
+
+    historyEyebrow: "HISTORY",
+    historyTitle: "Recently played.",
+
+    historyEmpty:
+      "Listening history will appear here automatically when the metadata endpoint is connected.",
+
+    decadesLabel: "GUIROPA timeline",
+
+    decade50: "The Spark",
+    decade60: "Everything Changed",
+    decade70: "Golden Years",
+    decade80: "Timeless Hits",
+    decade90: "The Final Stop",
+  },
+
+  es: {
+    kicker: "GUIROPA RADIO · AL AIRE",
+    lead:
+      "La música que atravesó generaciones. 1950 → 1990. Soft rock, rock ballads, classic hits y grandes voces.",
+
+    nowPlaying: "SONANDO AHORA",
+
+    ready: "LISTA",
+    live: "EN VIVO",
+    connecting: "CONECTANDO",
+    reconnecting: "RECONECTANDO",
+    unavailable: "TRANSMISIÓN NO DISPONIBLE",
+    waiting: "STREAM EN PREPARACIÓN",
+
+    stationFallback:
+      "1950 — 1990 · Soft Rock · Rock Ballads · Classic Hits",
+
+    favoriteAdd: "Añadir a favoritos",
+    favoriteRemove: "Eliminar de favoritos",
+
+    play: "Escuchar GUIROPA RADIO",
+    pause: "Pausar GUIROPA RADIO",
+
+    mute: "Silenciar",
+    unmute: "Activar sonido",
+    volume: "Volumen",
+
+    engineReady:
+      "El motor del player está listo. Solo falta configurar el endpoint oficial del stream.",
+
+    streamReady:
+      "Transmisión preparada para conectarse al stream oficial.",
+
+    historyEyebrow: "HISTORIAL",
+    historyTitle: "Reproducidas recientemente.",
+
+    historyEmpty:
+      "El historial aparecerá aquí automáticamente cuando el endpoint de metadata esté conectado.",
+
+    decadesLabel: "Línea del tiempo GUIROPA",
+
+    decade50: "La chispa",
+    decade60: "Todo cambió",
+    decade70: "Años dorados",
+    decade80: "Éxitos eternos",
+    decade90: "La última parada",
+  },
+};
+
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
@@ -30,28 +176,78 @@ function normalizeMetadata(data) {
     };
   }
 
-  const title =
-    data.title ||
+  const source =
+    data.now_playing ||
+    data.nowPlaying ||
+    data.current ||
+    data.current_track ||
+    data.currentTrack ||
     data.song ||
     data.track ||
-    data.currentSong ||
-    data.current_track ||
-    data.nowPlaying ||
+    data;
+
+  if (typeof source === "string") {
+    const pieces = source
+      .split(" - ")
+      .map((part) => part.trim());
+
+    if (pieces.length >= 2) {
+      return {
+        artist: pieces.shift(),
+        title: pieces.join(" - "),
+        artwork: "",
+      };
+    }
+
+    return {
+      title: source.trim(),
+      artist: "",
+      artwork: "",
+    };
+  }
+
+  if (!source || typeof source !== "object") {
+    return {
+      title: "",
+      artist: "",
+      artwork: "",
+    };
+  }
+
+  const nestedSong =
+    source.song &&
+    typeof source.song === "object"
+      ? source.song
+      : {};
+
+  const title =
+    source.title ||
+    source.name ||
+    source.track ||
+    source.song_title ||
+    source.songTitle ||
+    nestedSong.title ||
+    nestedSong.name ||
     "";
 
   const artist =
-    data.artist ||
-    data.performer ||
-    data.currentArtist ||
-    data.current_artist ||
+    source.artist ||
+    source.performer ||
+    source.author ||
+    source.song_artist ||
+    source.songArtist ||
+    nestedSong.artist ||
     "";
 
   const artwork =
-    data.artwork ||
-    data.cover ||
-    data.image ||
-    data.albumArt ||
-    data.album_art ||
+    source.artwork ||
+    source.art ||
+    source.cover ||
+    source.image ||
+    source.album_art ||
+    source.albumArt ||
+    nestedSong.artwork ||
+    nestedSong.art ||
     "";
 
   return {
@@ -62,7 +258,11 @@ function normalizeMetadata(data) {
 }
 
 export default function ListenPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+
+  const copy =
+    LISTEN_COPY[lang] ||
+    LISTEN_COPY.pt;
 
   const audioRef = useRef(null);
   const reconnectTimerRef = useRef(null);
@@ -72,7 +272,9 @@ export default function ListenPage() {
   const [isMuted, setIsMuted] = useState(false);
 
   const [volume, setVolume] = useState(() => {
-    if (typeof window === "undefined") return 0.82;
+    if (typeof window === "undefined") {
+      return 0.82;
+    }
 
     const saved = Number(
       localStorage.getItem(STORAGE_VOLUME)
@@ -86,11 +288,15 @@ export default function ListenPage() {
   });
 
   const [status, setStatus] = useState(
-    STREAM_URL ? "ready" : "waiting"
+    STREAM_URL
+      ? "ready"
+      : "waiting"
   );
 
   const [favorite, setFavorite] = useState(() => {
-    if (typeof window === "undefined") return false;
+    if (typeof window === "undefined") {
+      return false;
+    }
 
     return (
       localStorage.getItem(STORAGE_FAVORITE) ===
@@ -104,74 +310,98 @@ export default function ListenPage() {
     artwork: "",
   });
 
-  const [recentTracks, setRecentTracks] = useState([]);
+  const [recentTracks, setRecentTracks] =
+    useState([]);
 
   const displayTitle =
-    nowPlaying.title || "GUIROPA RADIO";
+    nowPlaying.title ||
+    "GUIROPA RADIO";
 
   const displayArtist =
     nowPlaying.artist ||
-    "1950 — 1990 · Soft Rock · Rock Ballads · Classic Hits";
+    copy.stationFallback;
 
   const statusText = useMemo(() => {
     switch (status) {
       case "playing":
-        return "LIVE";
+        return copy.live;
+
       case "loading":
-        return "CONECTANDO";
+        return copy.connecting;
+
       case "reconnecting":
-        return "RECONECTANDO";
+        return copy.reconnecting;
+
       case "error":
-        return "TRANSMISSÃO INDISPONÍVEL";
+        return copy.unavailable;
+
       case "waiting":
-        return "STREAM EM PREPARAÇÃO";
+        return copy.waiting;
+
       default:
-        return "PRONTA";
+        return copy.ready;
     }
-  }, [status]);
+  }, [status, copy]);
 
   useEffect(() => {
     const audio = audioRef.current;
 
-    if (!audio) return;
+    if (!audio) {
+      return;
+    }
 
     audio.volume = volume;
     audio.muted = isMuted;
   }, [volume, isMuted]);
 
   useEffect(() => {
-    localStorage.setItem(
-      STORAGE_VOLUME,
-      String(volume)
-    );
+    try {
+      localStorage.setItem(
+        STORAGE_VOLUME,
+        String(volume)
+      );
+    } catch {
+      // Ignora.
+    }
   }, [volume]);
 
   useEffect(() => {
-    localStorage.setItem(
-      STORAGE_FAVORITE,
-      String(favorite)
-    );
+    try {
+      localStorage.setItem(
+        STORAGE_FAVORITE,
+        String(favorite)
+      );
+    } catch {
+      // Ignora.
+    }
   }, [favorite]);
 
   useEffect(() => {
     return () => {
       if (reconnectTimerRef.current) {
-        clearTimeout(reconnectTimerRef.current);
+        clearTimeout(
+          reconnectTimerRef.current
+        );
       }
     };
   }, []);
 
   useEffect(() => {
-    if (!METADATA_URL) return;
+    if (!METADATA_URL) {
+      return undefined;
+    }
 
     let cancelled = false;
 
     async function loadMetadata() {
       try {
+        const separator =
+          METADATA_URL.includes("?")
+            ? "&"
+            : "?";
+
         const response = await fetch(
-          `${METADATA_URL}${
-            METADATA_URL.includes("?") ? "&" : "?"
-          }_=${Date.now()}`,
+          `${METADATA_URL}${separator}_=${Date.now()}`,
           {
             cache: "no-store",
           }
@@ -185,9 +415,12 @@ export default function ListenPage() {
 
         const data = await response.json();
 
-        if (cancelled) return;
+        if (cancelled) {
+          return;
+        }
 
-        const next = normalizeMetadata(data);
+        const next =
+          normalizeMetadata(data);
 
         setNowPlaying((previous) => {
           const changed =
@@ -203,26 +436,41 @@ export default function ListenPage() {
           ) {
             setRecentTracks((items) => {
               const entry = {
-                id: `${previous.artist}-${previous.title}-${Date.now()}`,
+                id:
+                  `${previous.artist}-${previous.title}-${Date.now()}`,
                 title: previous.title,
                 artist: previous.artist,
                 artwork: previous.artwork,
               };
 
+              const filtered =
+                items.filter(
+                  (item) =>
+                    !(
+                      item.title === entry.title &&
+                      item.artist === entry.artist
+                    )
+                );
+
               return [
                 entry,
-                ...items,
+                ...filtered,
               ].slice(0, 5);
             });
           }
 
           return {
             title:
-              next.title || previous.title,
+              next.title ||
+              previous.title,
+
             artist:
-              next.artist || previous.artist,
+              next.artist ||
+              previous.artist,
+
             artwork:
-              next.artwork || previous.artwork,
+              next.artwork ||
+              previous.artwork,
           };
         });
       } catch (error) {
@@ -282,12 +530,18 @@ export default function ListenPage() {
   function pauseStream() {
     const audio = audioRef.current;
 
-    if (!audio) return;
+    if (!audio) {
+      return;
+    }
 
     audio.pause();
 
     setIsPlaying(false);
-    setStatus("ready");
+    setStatus(
+      STREAM_URL
+        ? "ready"
+        : "waiting"
+    );
   }
 
   function togglePlayback() {
@@ -314,7 +568,9 @@ export default function ListenPage() {
 
         const audio = audioRef.current;
 
-        if (!audio) return;
+        if (!audio) {
+          return;
+        }
 
         try {
           audio.src = STREAM_URL;
@@ -347,7 +603,9 @@ export default function ListenPage() {
   }
 
   function toggleMute() {
-    setIsMuted((current) => !current);
+    setIsMuted(
+      (current) => !current
+    );
   }
 
   return (
@@ -357,14 +615,12 @@ export default function ListenPage() {
           --listen-ink: #201d19;
           --listen-soft: #6e6253;
           --listen-paper: #f4ead8;
-          --listen-paper-2: #ead9bb;
           --listen-red: #a92f25;
           --listen-gold: #b18a43;
-          --listen-panel: #151515;
-          --listen-panel-soft: #24211e;
           --listen-line: rgba(58, 46, 36, .18);
 
           min-height: 100vh;
+
           background:
             radial-gradient(
               circle at 50% 0%,
@@ -388,49 +644,78 @@ export default function ListenPage() {
         }
 
         .guiropa-listen-shell {
-          width: min(1180px, calc(100% - 40px));
+          width: min(
+            1180px,
+            calc(100% - 40px)
+          );
+
           margin: 0 auto;
           padding: 72px 0 110px;
         }
 
         .guiropa-listen-intro {
           display: grid;
+
           grid-template-columns:
             minmax(0, 1fr)
             minmax(260px, 390px);
+
           gap: 48px;
           align-items: end;
+
           padding-bottom: 40px;
+
           border-bottom:
-            1px solid var(--listen-line);
+            1px solid
+            var(--listen-line);
         }
 
         .guiropa-listen-kicker {
           display: block;
+
           margin-bottom: 18px;
+
           color: var(--listen-red);
+
           font-size: 12px;
           font-weight: 800;
+
           letter-spacing: .22em;
           text-transform: uppercase;
         }
 
         .guiropa-listen-intro h1 {
           margin: 0;
+
           max-width: 780px;
+
           font-size:
-            clamp(44px, 7vw, 92px);
+            clamp(
+              44px,
+              7vw,
+              92px
+            );
+
           line-height: .92;
           letter-spacing: -.05em;
+
           color: var(--listen-ink);
         }
 
         .guiropa-listen-intro p {
           max-width: 690px;
+
           margin: 28px 0 0;
+
           color: var(--listen-soft);
+
           font-size:
-            clamp(17px, 2vw, 21px);
+            clamp(
+              17px,
+              2vw,
+              21px
+            );
+
           line-height: 1.6;
         }
 
@@ -441,16 +726,25 @@ export default function ListenPage() {
 
         .guiropa-listen-brand img {
           display: block;
-          width: min(100%, 300px);
+
+          width: min(
+            100%,
+            300px
+          );
+
           height: auto;
           object-fit: contain;
         }
 
         .guiropa-radio-console {
           margin-top: 46px;
+
           overflow: hidden;
+
           border:
-            1px solid rgba(73, 56, 39, .26);
+            1px solid
+            rgba(73, 56, 39, .26);
+
           border-radius: 30px;
 
           background:
@@ -468,6 +762,7 @@ export default function ListenPage() {
 
         .guiropa-console-top {
           display: grid;
+
           grid-template-columns:
             minmax(260px, 390px)
             minmax(0, 1fr);
@@ -475,9 +770,12 @@ export default function ListenPage() {
 
         .guiropa-cover {
           min-height: 390px;
+
           position: relative;
+
           display: grid;
           place-items: center;
+
           overflow: hidden;
 
           background:
@@ -490,8 +788,10 @@ export default function ListenPage() {
 
         .guiropa-cover::after {
           content: "";
+
           position: absolute;
           inset: 0;
+
           background:
             radial-gradient(
               circle at 50% 28%,
@@ -503,42 +803,57 @@ export default function ListenPage() {
               transparent,
               rgba(0,0,0,.24)
             );
+
           pointer-events: none;
         }
 
         .guiropa-cover img {
           width: 100%;
           height: 100%;
+
           min-height: 390px;
+
           object-fit: cover;
         }
 
         .guiropa-cover-fallback {
           position: relative;
           z-index: 1;
+
           text-align: center;
+
           color: #17120d;
         }
 
         .guiropa-cover-fallback strong {
           display: block;
+
           font-size: 42px;
           letter-spacing: -.05em;
         }
 
         .guiropa-cover-fallback span {
           display: block;
+
           margin-top: 8px;
+
           font-size: 12px;
           font-weight: 800;
+
           letter-spacing: .24em;
           text-transform: uppercase;
         }
 
         .guiropa-console-display {
           min-width: 0;
+
           padding:
-            clamp(34px, 5vw, 68px);
+            clamp(
+              34px,
+              5vw,
+              68px
+            );
+
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -550,16 +865,19 @@ export default function ListenPage() {
           display: flex;
           align-items: center;
           justify-content: space-between;
+
           gap: 20px;
         }
 
         .guiropa-live-status {
           display: inline-flex;
           align-items: center;
+
           gap: 10px;
 
           font-size: 11px;
           font-weight: 900;
+
           letter-spacing: .18em;
           text-transform: uppercase;
         }
@@ -567,7 +885,9 @@ export default function ListenPage() {
         .guiropa-live-dot {
           width: 9px;
           height: 9px;
+
           border-radius: 50%;
+
           background: var(--listen-red);
 
           box-shadow:
@@ -578,9 +898,13 @@ export default function ListenPage() {
         .guiropa-favorite {
           border: 0;
           background: transparent;
+
           color: #d7c7b3;
+
           font-size: 28px;
+
           cursor: pointer;
+
           transition:
             transform .2s ease,
             color .2s ease;
@@ -596,46 +920,73 @@ export default function ListenPage() {
 
         .guiropa-now-playing-label {
           margin-top: 64px;
+
           color: #a99782;
+
           font-size: 11px;
           font-weight: 800;
+
           letter-spacing: .22em;
           text-transform: uppercase;
         }
 
         .guiropa-track-title {
-          margin:
-            12px 0 0;
+          margin: 12px 0 0;
+
           max-width: 720px;
 
           font-size:
-            clamp(34px, 5vw, 66px);
+            clamp(
+              34px,
+              5vw,
+              66px
+            );
+
           line-height: .98;
           letter-spacing: -.045em;
+
           overflow-wrap: anywhere;
         }
 
         .guiropa-track-artist {
           margin: 18px 0 0;
+
           max-width: 670px;
+
           color: #c5b7a5;
+
           font-size:
-            clamp(15px, 1.7vw, 20px);
+            clamp(
+              15px,
+              1.7vw,
+              20px
+            );
+
           line-height: 1.5;
         }
 
         .guiropa-console-controls {
           display: grid;
+
           grid-template-columns:
-            auto minmax(0, 1fr) auto;
+            auto
+            minmax(0, 1fr)
+            auto;
+
           gap: 26px;
           align-items: center;
 
           padding:
-            25px clamp(26px, 4vw, 52px);
+            25px
+            clamp(
+              26px,
+              4vw,
+              52px
+            );
 
           border-top:
-            1px solid rgba(255,255,255,.08);
+            1px solid
+            rgba(255,255,255,.08);
 
           background:
             rgba(0,0,0,.24);
@@ -644,11 +995,14 @@ export default function ListenPage() {
         .guiropa-play-button {
           width: 74px;
           height: 74px;
+
           display: grid;
           place-items: center;
 
           border:
-            1px solid rgba(255,255,255,.16);
+            1px solid
+            rgba(255,255,255,.16);
+
           border-radius: 50%;
 
           background:
@@ -659,7 +1013,9 @@ export default function ListenPage() {
             );
 
           color: #fff7e8;
+
           font-size: 28px;
+
           cursor: pointer;
 
           box-shadow:
@@ -687,15 +1043,20 @@ export default function ListenPage() {
 
         .guiropa-console-message strong {
           display: block;
+
           color: #f4eadd;
+
           font-size: 14px;
           letter-spacing: .05em;
         }
 
         .guiropa-console-message span {
           display: block;
+
           margin-top: 5px;
+
           color: #9f9180;
+
           font-size: 12px;
           line-height: 1.45;
         }
@@ -703,24 +1064,31 @@ export default function ListenPage() {
         .guiropa-volume {
           display: flex;
           align-items: center;
+
           gap: 12px;
         }
 
         .guiropa-volume button {
           width: 40px;
           height: 40px;
+
           border: 0;
           border-radius: 50%;
+
           background:
             rgba(255,255,255,.07);
+
           color: #eadfce;
+
           cursor: pointer;
         }
 
         .guiropa-volume input {
           width: 120px;
+
           accent-color:
             var(--listen-gold);
+
           cursor: pointer;
         }
 
@@ -732,42 +1100,62 @@ export default function ListenPage() {
           display: flex;
           justify-content: space-between;
           align-items: end;
+
           gap: 30px;
+
           padding-bottom: 20px;
+
           border-bottom:
-            1px solid var(--listen-line);
+            1px solid
+            var(--listen-line);
         }
 
         .guiropa-recent-head span {
           color: var(--listen-red);
+
           font-size: 11px;
           font-weight: 900;
+
           letter-spacing: .20em;
           text-transform: uppercase;
         }
 
         .guiropa-recent-head h2 {
           margin: 8px 0 0;
+
           font-size:
-            clamp(30px, 4vw, 50px);
+            clamp(
+              30px,
+              4vw,
+              50px
+            );
+
           letter-spacing: -.04em;
         }
 
         .guiropa-recent-grid {
           display: grid;
+
           grid-template-columns:
-            repeat(5, minmax(0, 1fr));
+            repeat(
+              5,
+              minmax(0, 1fr)
+            );
+
           border-bottom:
-            1px solid var(--listen-line);
+            1px solid
+            var(--listen-line);
         }
 
         .guiropa-recent-item {
           min-width: 0;
+
           padding:
             25px 20px 28px;
 
           border-right:
-            1px solid var(--listen-line);
+            1px solid
+            var(--listen-line);
         }
 
         .guiropa-recent-item:last-child {
@@ -776,48 +1164,66 @@ export default function ListenPage() {
 
         .guiropa-recent-index {
           color: var(--listen-gold);
+
           font-size: 11px;
           font-weight: 900;
+
           letter-spacing: .16em;
         }
 
         .guiropa-recent-item h3 {
           margin: 18px 0 0;
+
           font-size: 18px;
           line-height: 1.25;
+
           overflow-wrap: anywhere;
         }
 
         .guiropa-recent-item p {
           margin: 8px 0 0;
+
           color: var(--listen-soft);
+
           font-size: 13px;
           line-height: 1.45;
         }
 
         .guiropa-recent-empty {
           grid-column: 1 / -1;
+
           padding: 36px 0;
+
           color: var(--listen-soft);
+
           font-size: 15px;
         }
 
         .guiropa-signal-strip {
           display: grid;
+
           grid-template-columns:
             repeat(5, 1fr);
+
           margin-top: 56px;
+
           border-top:
-            1px solid var(--listen-line);
+            1px solid
+            var(--listen-line);
+
           border-bottom:
-            1px solid var(--listen-line);
+            1px solid
+            var(--listen-line);
         }
 
         .guiropa-signal-strip div {
           padding: 22px 18px;
+
           text-align: center;
+
           border-right:
-            1px solid var(--listen-line);
+            1px solid
+            var(--listen-line);
         }
 
         .guiropa-signal-strip div:last-child {
@@ -831,10 +1237,14 @@ export default function ListenPage() {
 
         .guiropa-signal-strip span {
           display: block;
+
           margin-top: 5px;
+
           color: var(--listen-soft);
+
           font-size: 10px;
           font-weight: 800;
+
           letter-spacing: .16em;
           text-transform: uppercase;
         }
@@ -861,7 +1271,12 @@ export default function ListenPage() {
 
         @media (max-width: 900px) {
           .guiropa-listen-shell {
-            width: min(100% - 24px, 720px);
+            width:
+              min(
+                100% - 24px,
+                720px
+              );
+
             padding-top: 44px;
           }
 
@@ -895,7 +1310,8 @@ export default function ListenPage() {
 
           .guiropa-console-controls {
             grid-template-columns:
-              auto minmax(0, 1fr);
+              auto
+              minmax(0, 1fr);
           }
 
           .guiropa-volume {
@@ -912,8 +1328,10 @@ export default function ListenPage() {
 
           .guiropa-recent-item {
             border-right: 0;
+
             border-bottom:
-              1px solid var(--listen-line);
+              1px solid
+              var(--listen-line);
           }
 
           .guiropa-recent-item:last-child {
@@ -922,7 +1340,11 @@ export default function ListenPage() {
 
           .guiropa-signal-strip {
             grid-template-columns:
-              repeat(5, minmax(70px, 1fr));
+              repeat(
+                5,
+                minmax(70px, 1fr)
+              );
+
             overflow-x: auto;
           }
         }
@@ -985,19 +1407,15 @@ export default function ListenPage() {
         <section className="guiropa-listen-intro">
           <div>
             <span className="guiropa-listen-kicker">
-              GUIROPA RADIO · ON AIR
+              {copy.kicker}
             </span>
 
             <h1>
-              {t.listen?.title ||
-                "Ouça a GUIROPA."}
+              {t.listen.title}
             </h1>
 
             <p>
-              A música que atravessou gerações.
-              1950 → 1990. Soft rock,
-              rock ballads, classic hits e
-              grandes vozes.
+              {copy.lead}
             </p>
           </div>
 
@@ -1011,7 +1429,7 @@ export default function ListenPage() {
 
         <section
           className="guiropa-radio-console"
-          aria-label="GUIROPA RADIO player"
+          aria-label="GUIROPA RADIO"
         >
           <div className="guiropa-console-top">
             <div className="guiropa-cover">
@@ -1027,7 +1445,10 @@ export default function ListenPage() {
               ) : (
                 <div className="guiropa-cover-fallback">
                   <strong>G</strong>
-                  <span>GUIROPA RADIO</span>
+
+                  <span>
+                    GUIROPA RADIO
+                  </span>
                 </div>
               )}
             </div>
@@ -1036,7 +1457,10 @@ export default function ListenPage() {
               <div className="guiropa-live-row">
                 <div className="guiropa-live-status">
                   <span className="guiropa-live-dot" />
-                  <span>{statusText}</span>
+
+                  <span>
+                    {statusText}
+                  </span>
                 </div>
 
                 <button
@@ -1048,8 +1472,8 @@ export default function ListenPage() {
                   }`}
                   aria-label={
                     favorite
-                      ? "Remover dos favoritos"
-                      : "Adicionar aos favoritos"
+                      ? copy.favoriteRemove
+                      : copy.favoriteAdd
                   }
                   aria-pressed={favorite}
                   onClick={() =>
@@ -1058,13 +1482,15 @@ export default function ListenPage() {
                     )
                   }
                 >
-                  {favorite ? "♥" : "♡"}
+                  {favorite
+                    ? "♥"
+                    : "♡"}
                 </button>
               </div>
 
               <div>
                 <div className="guiropa-now-playing-label">
-                  NOW PLAYING
+                  {copy.nowPlaying}
                 </div>
 
                 <h2 className="guiropa-track-title">
@@ -1089,8 +1515,8 @@ export default function ListenPage() {
               }
               aria-label={
                 isPlaying
-                  ? "Pausar GUIROPA RADIO"
-                  : "Ouvir GUIROPA RADIO"
+                  ? copy.pause
+                  : copy.play
               }
             >
               {isLoading
@@ -1107,8 +1533,8 @@ export default function ListenPage() {
 
               <span>
                 {STREAM_URL
-                  ? "Transmissão preparada para conexão ao stream oficial."
-                  : "Motor do player pronto. Falta apenas informar o endpoint oficial do stream."}
+                  ? copy.streamReady
+                  : copy.engineReady}
               </span>
             </div>
 
@@ -1118,8 +1544,8 @@ export default function ListenPage() {
                 onClick={toggleMute}
                 aria-label={
                   isMuted
-                    ? "Ativar som"
-                    : "Silenciar"
+                    ? copy.unmute
+                    : copy.mute
                 }
               >
                 {isMuted ||
@@ -1135,7 +1561,7 @@ export default function ListenPage() {
                 step="0.01"
                 value={volume}
                 onChange={handleVolume}
-                aria-label="Volume"
+                aria-label={copy.volume}
               />
             </div>
           </div>
@@ -1144,8 +1570,13 @@ export default function ListenPage() {
         <section className="guiropa-recent">
           <div className="guiropa-recent-head">
             <div>
-              <span>HISTORY</span>
-              <h2>Recently played.</h2>
+              <span>
+                {copy.historyEyebrow}
+              </span>
+
+              <h2>
+                {copy.historyTitle}
+              </h2>
             </div>
           </div>
 
@@ -1158,7 +1589,9 @@ export default function ListenPage() {
                     className="guiropa-recent-item"
                   >
                     <span className="guiropa-recent-index">
-                      0{index + 1}
+                      {String(
+                        index + 1
+                      ).padStart(2, "0")}
                     </span>
 
                     <h3>
@@ -1174,10 +1607,7 @@ export default function ListenPage() {
               )
             ) : (
               <div className="guiropa-recent-empty">
-                O histórico aparecerá aqui
-                automaticamente quando o
-                endpoint de metadata estiver
-                conectado.
+                {copy.historyEmpty}
               </div>
             )}
           </div>
@@ -1185,31 +1615,41 @@ export default function ListenPage() {
 
         <section
           className="guiropa-signal-strip"
-          aria-label="GUIROPA timeline"
+          aria-label={copy.decadesLabel}
         >
           <div>
             <strong>1950</strong>
-            <span>The Spark</span>
+            <span>
+              {copy.decade50}
+            </span>
           </div>
 
           <div>
             <strong>1960</strong>
-            <span>Everything Changed</span>
+            <span>
+              {copy.decade60}
+            </span>
           </div>
 
           <div>
             <strong>1970</strong>
-            <span>Golden Years</span>
+            <span>
+              {copy.decade70}
+            </span>
           </div>
 
           <div>
             <strong>1980</strong>
-            <span>Timeless Hits</span>
+            <span>
+              {copy.decade80}
+            </span>
           </div>
 
           <div>
             <strong>1990</strong>
-            <span>The Final Stop</span>
+            <span>
+              {copy.decade90}
+            </span>
           </div>
         </section>
       </div>
