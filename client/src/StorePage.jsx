@@ -77,6 +77,8 @@ const STORE_COPY = {
     finalTitle: "Uma estação. Quatro décadas. Uma identidade.",
     finalLead:
       "A loja da GUIROPA nasce da mesma linguagem da rádio: clássica, direta e feita para durar.",
+    operator:
+      "Operação comercial e pagamentos: 7 Seas Global.",
   },
 
   en: {
@@ -154,6 +156,8 @@ const STORE_COPY = {
     finalTitle: "One station. Four decades. One identity.",
     finalLead:
       "The GUIROPA store is born from the same language as the radio: classic, direct and built to last.",
+    operator:
+      "Commercial operation and payments: 7 Seas Global.",
   },
 
   es: {
@@ -231,6 +235,8 @@ const STORE_COPY = {
     finalTitle: "Una estación. Cuatro décadas. Una identidad.",
     finalLead:
       "La tienda GUIROPA nace del mismo lenguaje que la radio: clásico, directo y hecho para durar.",
+    operator:
+      "Operación comercial y pagos: 7 Seas Global.",
   },
 };
 
@@ -395,6 +401,23 @@ export default function StorePage() {
             );
 
           height: auto;
+
+          overflow: hidden;
+
+          border:
+            1px solid
+            rgba(
+              201,
+              154,
+              69,
+              0.30
+            );
+
+          border-radius:
+            28px;
+
+          background:
+            #0d0c0b;
 
           filter:
             brightness(1.05)
@@ -786,6 +809,25 @@ export default function StorePage() {
           font-size: 0.8rem;
         }
 
+        .guiropa-store-operator {
+          margin-top: 1rem;
+
+          color:
+            rgba(
+              110,
+              95,
+              77,
+              0.58
+            );
+
+          font-size: 0.56rem;
+          font-weight: 700;
+
+          letter-spacing: 0.08em;
+
+          text-align: right;
+        }
+
         /* FINAL */
 
         .guiropa-store-final {
@@ -865,6 +907,23 @@ export default function StorePage() {
           margin-left: auto;
 
           height: auto;
+
+          overflow: hidden;
+
+          border:
+            1px solid
+            rgba(
+              201,
+              154,
+              69,
+              0.28
+            );
+
+          border-radius:
+            28px;
+
+          background:
+            #0d0c0b;
 
           box-shadow:
             0 20px 44px
@@ -1077,6 +1136,10 @@ export default function StorePage() {
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="guiropa-store-operator">
+            {copy.operator}
           </div>
         </div>
       </section>
