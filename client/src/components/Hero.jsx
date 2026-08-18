@@ -14,11 +14,11 @@ export default function Hero() {
     if (!el) return;
 
     el.style.opacity = "0";
-    el.style.transform = "translateY(18px)";
+    el.style.transform = "translateY(14px)";
 
     requestAnimationFrame(() => {
       el.style.transition =
-        "opacity .9s ease, transform .9s cubic-bezier(.22,1,.36,1)";
+        "opacity .85s ease, transform .85s cubic-bezier(.22,1,.36,1)";
 
       el.style.opacity = "1";
       el.style.transform = "translateY(0)";
@@ -27,11 +27,9 @@ export default function Hero() {
 
   return (
     <section
-      className="hero guiropa-radio-hero"
+      className="hero guiropa-radio-hero guiropa-radio-hero--emblem"
       aria-labelledby="hero-title"
     >
-      <div className="guiropa-radio-hero__glow" />
-
       <div
         className="guiropa-radio-hero__inner"
         ref={lockupRef}
@@ -96,164 +94,183 @@ export default function Hero() {
       </div>
 
       <style>{`
+        /*
+         * NOVO EMBLEMA:
+         * elimina completamente os fundos/halos herdados
+         * do logo retangular anterior.
+         */
+
+        .guiropa-radio-hero--emblem
+        .guiropa-radio-hero__glow {
+          display: none !important;
+        }
+
+        .guiropa-radio-hero--emblem
+        .guiropa-radio-hero__logo {
+          display: none !important;
+        }
+
+        .guiropa-radio-hero--emblem
         .guiropa-radio-hero__emblem {
           position: relative;
           z-index: 4;
 
-          width: min(
-            560px,
-            68vw
-          );
+          width: min(430px, 52vw);
 
-          margin:
-            0 auto;
+          margin: 0 auto;
 
           display: flex;
-          justify-content: center;
           align-items: center;
+          justify-content: center;
+
+          background: transparent !important;
+
+          border: 0 !important;
+
+          box-shadow: none !important;
+
+          overflow: visible;
         }
 
-        .guiropa-radio-hero__emblem::before {
-          content: "";
+        /*
+         * Mata qualquer pseudo-elemento antigo
+         * que esteja criando aquela placa clara vazia.
+         */
 
-          position: absolute;
-
-          z-index: -1;
-
-          left: 50%;
-          top: 52%;
-
-          width: 88%;
-          height: 76%;
-
-          transform:
-            translate(
-              -50%,
-              -50%
-            );
-
-          background:
-            radial-gradient(
-              ellipse at center,
-              rgba(
-                203,
-                159,
-                83,
-                0.18
-              ) 0%,
-              rgba(
-                203,
-                159,
-                83,
-                0.08
-              ) 42%,
-              transparent 72%
-            );
-
-          filter:
-            blur(24px);
-
-          pointer-events:
-            none;
+        .guiropa-radio-hero--emblem
+        .guiropa-radio-hero__emblem::before,
+        .guiropa-radio-hero--emblem
+        .guiropa-radio-hero__emblem::after {
+          content: none !important;
+          display: none !important;
+          background: none !important;
+          box-shadow: none !important;
         }
 
+        /*
+         * A própria imagem agora é a protagonista.
+         * Sem moldura CSS, sem fundo adicional,
+         * sem "quadro branco".
+         */
+
+        .guiropa-radio-hero--emblem
         .guiropa-radio-hero__emblem-image {
           display: block;
 
           width: 100%;
           height: auto;
 
-          max-height: 60vh;
+          max-height: 48vh;
 
           object-fit: contain;
 
-          border-radius:
-            17% / 9%;
+          background: transparent !important;
+
+          border: 0 !important;
+
+          border-radius: 0 !important;
 
           box-shadow:
-            0 18px 38px
-            rgba(
-              58,
-              38,
-              24,
-              0.18
-            );
+            0 17px 30px
+            rgba(66, 43, 23, 0.14);
 
           filter:
-            brightness(1.06)
-            contrast(1.03)
-            saturate(1.05);
+            brightness(1.04)
+            contrast(1.02)
+            saturate(1.04);
 
           transition:
-            transform .35s ease,
-            filter .35s ease,
-            box-shadow .35s ease;
+            transform .3s ease,
+            filter .3s ease,
+            box-shadow .3s ease;
         }
 
+        .guiropa-radio-hero--emblem
         .guiropa-radio-hero__emblem:hover
         .guiropa-radio-hero__emblem-image {
-          transform:
-            translateY(-3px);
+          transform: translateY(-2px);
 
           filter:
-            brightness(1.09)
-            contrast(1.03)
-            saturate(1.06);
+            brightness(1.07)
+            contrast(1.02)
+            saturate(1.05);
 
           box-shadow:
-            0 22px 44px
-            rgba(
-              58,
-              38,
-              24,
-              0.20
-            );
+            0 20px 34px
+            rgba(66, 43, 23, 0.16);
         }
 
+        /*
+         * Aproxima texto e marca.
+         * Menos espaço morto no topo.
+         */
+
+        .guiropa-radio-hero--emblem
+        .guiropa-radio-era {
+          margin-bottom: 1rem;
+        }
+
+        .guiropa-radio-hero--emblem
         .guiropa-radio-hero__copy {
-          margin-top:
-            1.35rem;
+          margin-top: 1.15rem;
         }
 
-        @media (
-          max-width: 900px
-        ) {
+        /*
+         * Garante que nenhum pseudo-elemento antigo
+         * do hero faça aquela grande mancha arredondada.
+         */
+
+        .guiropa-radio-hero--emblem::before,
+        .guiropa-radio-hero--emblem::after {
+          opacity: 0 !important;
+          pointer-events: none !important;
+        }
+
+        /*
+         * Mantém apenas o fundo quente geral.
+         */
+
+        .guiropa-radio-hero--emblem {
+          background:
+            radial-gradient(
+              ellipse 55% 42% at 50% 18%,
+              rgba(179, 52, 40, 0.055),
+              transparent 72%
+            ),
+            linear-gradient(
+              180deg,
+              #f8eedc 0%,
+              #f2e1c3 55%,
+              #e7cda4 100%
+            ) !important;
+        }
+
+        @media (max-width: 900px) {
+          .guiropa-radio-hero--emblem
           .guiropa-radio-hero__emblem {
-            width:
-              min(
-                500px,
-                76vw
-              );
+            width: min(390px, 60vw);
           }
 
+          .guiropa-radio-hero--emblem
           .guiropa-radio-hero__emblem-image {
-            max-height:
-              56vh;
+            max-height: 46vh;
           }
         }
 
-        @media (
-          max-width: 600px
-        ) {
+        @media (max-width: 600px) {
+          .guiropa-radio-hero--emblem
           .guiropa-radio-hero__emblem {
-            width:
-              min(
-                390px,
-                88vw
-              );
+            width: min(330px, 72vw);
           }
 
+          .guiropa-radio-hero--emblem
           .guiropa-radio-hero__emblem-image {
-            max-height:
-              none;
-
-            border-radius:
-              16% / 8%;
+            max-height: none;
           }
 
+          .guiropa-radio-hero--emblem
           .guiropa-radio-hero__copy {
-            margin-top:
-              1rem;
+            margin-top: 0.9rem;
           }
         }
       `}</style>
