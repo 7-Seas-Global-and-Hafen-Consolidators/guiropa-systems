@@ -43,7 +43,7 @@ const pt = {
     brandTagline: "A música que atravessou gerações.",
     headline: "A música que atravessou gerações.",
     lead:
-      "Dos anos 50 até 1990. Rock, soul, pop, blues, disco, funk, metal, new wave e tudo aquilo que fez uma época ter som próprio.",
+      "Dos anos 50 até 1990. Rock 'n' roll, soft rock, soul, pop, blues, disco, funk, new wave, baladas e tudo aquilo que fez uma época ter som próprio.",
     ctaPrimary: "Ouvir agora",
   },
 
@@ -58,35 +58,35 @@ const pt = {
         year: "1950s",
         title: "A faísca",
         description:
-          "Rock 'n' roll, rhythm & blues, doo-wop, jazz e o início de uma revolução.",
+          "Rock 'n' roll, rhythm & blues, doo-wop, harmonias vocais e as canções que deram início a tudo.",
       },
       {
         code: "60",
         year: "1960s",
         title: "Tudo mudou",
         description:
-          "Beat, soul, psicodelia, Motown, British Invasion e uma geração encontrando sua própria voz.",
+          "Pop, soul, Motown, folk rock, rock melódico e o lado mais suave da British Invasion.",
       },
       {
         code: "70",
         year: "1970s",
-        title: "Sem limites",
+        title: "Anos dourados",
         description:
-          "Hard rock, progressive, disco, funk, punk, glam e música ocupando todos os espaços.",
+          "Soft rock, baladas clássicas, soul, disco, pop melódico e harmonias inesquecíveis.",
       },
       {
         code: "80",
         year: "1980s",
-        title: "Volume máximo",
+        title: "Hits eternos",
         description:
-          "New wave, synthpop, heavy metal, arena rock, pop e uma década impossível de ignorar.",
+          "Soft rock, power ballads, adult contemporary, synthpop, arena rock e as grandes vozes da década.",
       },
       {
         code: "90",
         year: "1990",
-        title: "Ponto final",
+        title: "A última parada",
         description:
-          "A última parada da GUIROPA. Chegou 1990. Daqui não passa.",
+          "Rock ballads, soft rock e canções eternas. A GUIROPA chega a 1990 — e para exatamente aqui.",
       },
     ],
   },
@@ -148,18 +148,21 @@ const pt = {
       },
       {
         year: "1970s",
-        title: "No Rules",
-        description: "A década em que cabia tudo.",
+        title: "Golden Years",
+        description:
+          "Soft rock, baladas clássicas e melodias que atravessaram gerações.",
       },
       {
         year: "1980s",
-        title: "Turn It Up",
-        description: "Som grande. Identidade maior ainda.",
+        title: "Timeless Hits",
+        description:
+          "Power ballads, arena rock, adult contemporary e grandes vozes.",
       },
       {
         year: "1990",
         title: "The Last Stop",
-        description: "Aqui termina a linha do tempo.",
+        description:
+          "A última parada da linha do tempo GUIROPA.",
       },
     ],
   },
@@ -213,7 +216,7 @@ const en = {
     brandTagline: "The music that crossed generations.",
     headline: "The music that crossed generations.",
     lead:
-      "From the 1950s to 1990. Rock, soul, pop, blues, disco, funk, metal, new wave and everything that gave each era its own sound.",
+      "From the 1950s to 1990. Rock 'n' roll, soft rock, soul, pop, blues, disco, funk, new wave, ballads and everything that gave each era its own sound.",
     ctaPrimary: "Listen now",
   },
 
@@ -228,35 +231,35 @@ const en = {
         year: "1950s",
         title: "The spark",
         description:
-          "Rock 'n' roll, rhythm & blues, doo-wop, jazz and the beginning of a revolution.",
+          "Rock 'n' roll, rhythm & blues, doo-wop, vocal harmonies and the songs that started it all.",
       },
       {
         code: "60",
         year: "1960s",
         title: "Everything changed",
         description:
-          "Beat, soul, psychedelia, Motown and the British Invasion.",
+          "Pop, soul, Motown, folk rock, melodic rock and the softer side of the British Invasion.",
       },
       {
         code: "70",
         year: "1970s",
-        title: "No limits",
+        title: "Golden years",
         description:
-          "Hard rock, progressive, disco, funk, punk and glam.",
+          "Soft rock, classic ballads, soul, disco, melodic pop and unforgettable harmonies.",
       },
       {
         code: "80",
         year: "1980s",
-        title: "Maximum volume",
+        title: "Timeless hits",
         description:
-          "New wave, synthpop, heavy metal, arena rock and pop.",
+          "Soft rock, power ballads, adult contemporary, synthpop, arena rock and the great voices of the decade.",
       },
       {
         code: "90",
         year: "1990",
-        title: "The end",
+        title: "The final stop",
         description:
-          "GUIROPA's final stop. 1990. Nothing beyond.",
+          "Rock ballads, soft rock and timeless songs. GUIROPA reaches 1990 — and stops right there.",
       },
     ],
   },
@@ -309,27 +312,32 @@ const en = {
       {
         year: "1950s",
         title: "The Beginning",
-        description: "The roots of the revolution.",
+        description:
+          "The songs and voices that started the journey.",
       },
       {
         year: "1960s",
         title: "The Explosion",
-        description: "When everything began to change.",
+        description:
+          "Pop, soul and melodic sounds changing everything.",
       },
       {
         year: "1970s",
-        title: "No Rules",
-        description: "The decade where everything fit.",
+        title: "Golden Years",
+        description:
+          "Soft rock, classic ballads and melodies built to last.",
       },
       {
         year: "1980s",
-        title: "Turn It Up",
-        description: "Big sound. Even bigger identity.",
+        title: "Timeless Hits",
+        description:
+          "Power ballads, arena rock, adult contemporary and great voices.",
       },
       {
         year: "1990",
         title: "The Last Stop",
-        description: "The timeline ends here.",
+        description:
+          "GUIROPA's timeline makes its final stop here.",
       },
     ],
   },
@@ -385,7 +393,7 @@ const es = {
     headline:
       "La música que atravesó generaciones.",
     lead:
-      "De los años 50 hasta 1990. Rock, soul, pop, blues, disco, funk, metal, new wave y todo lo que dio sonido propio a cada época.",
+      "De los años 50 hasta 1990. Rock 'n' roll, soft rock, soul, pop, blues, disco, funk, new wave, baladas y todo lo que dio sonido propio a cada época.",
     ctaPrimary: "Escuchar ahora",
   },
 
@@ -401,35 +409,35 @@ const es = {
         year: "1950s",
         title: "La chispa",
         description:
-          "Rock 'n' roll, rhythm & blues, doo-wop y jazz.",
+          "Rock 'n' roll, rhythm & blues, doo-wop, armonías vocales y las canciones que lo iniciaron todo.",
       },
       {
         code: "60",
         year: "1960s",
         title: "Todo cambió",
         description:
-          "Beat, soul, psicodelia, Motown y British Invasion.",
+          "Pop, soul, Motown, folk rock, rock melódico y el lado más suave de la British Invasion.",
       },
       {
         code: "70",
         year: "1970s",
-        title: "Sin límites",
+        title: "Años dorados",
         description:
-          "Hard rock, progressive, disco, funk, punk y glam.",
+          "Soft rock, baladas clásicas, soul, disco, pop melódico y armonías inolvidables.",
       },
       {
         code: "80",
         year: "1980s",
-        title: "Volumen máximo",
+        title: "Éxitos eternos",
         description:
-          "New wave, synthpop, heavy metal, arena rock y pop.",
+          "Soft rock, power ballads, adult contemporary, synthpop, arena rock y las grandes voces de la década.",
       },
       {
         code: "90",
         year: "1990",
-        title: "Punto final",
+        title: "La última parada",
         description:
-          "La última parada de GUIROPA. Hasta aquí.",
+          "Rock ballads, soft rock y canciones eternas. GUIROPA llega a 1990 — y se detiene exactamente aquí.",
       },
     ],
   },
@@ -482,27 +490,32 @@ const es = {
       {
         year: "1950s",
         title: "The Beginning",
-        description: "Las raíces de la revolución.",
+        description:
+          "Las canciones y voces que iniciaron el viaje.",
       },
       {
         year: "1960s",
         title: "The Explosion",
-        description: "Cuando todo comenzó a cambiar.",
+        description:
+          "Pop, soul y sonidos melódicos cambiándolo todo.",
       },
       {
         year: "1970s",
-        title: "No Rules",
-        description: "La década donde cabía todo.",
+        title: "Golden Years",
+        description:
+          "Soft rock, baladas clásicas y melodías para siempre.",
       },
       {
         year: "1980s",
-        title: "Turn It Up",
-        description: "Sonido grande. Identidad mayor.",
+        title: "Timeless Hits",
+        description:
+          "Power ballads, arena rock, adult contemporary y grandes voces.",
       },
       {
         year: "1990",
         title: "The Last Stop",
-        description: "La línea termina aquí.",
+        description:
+          "La línea del tiempo GUIROPA hace aquí su última parada.",
       },
     ],
   },
