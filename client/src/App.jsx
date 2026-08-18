@@ -9,6 +9,7 @@ import SchedulePage from "./SchedulePage.jsx";
 import StorePage from "./StorePage.jsx";
 import ContactPage from "./ContactPage.jsx";
 import AdvertisePage from "./AdvertisePage.jsx";
+import SupportPage from "./SupportPage.jsx";
 
 export default function App() {
   return (
@@ -30,6 +31,9 @@ export default function App() {
 
         <Route path="anuncie" element={<AdvertisePage />} />
         <Route path="advertise" element={<AdvertisePage />} />
+
+        <Route path="apoie" element={<SupportPage />} />
+        <Route path="support" element={<SupportPage />} />
       </Route>
     </Routes>
   );
