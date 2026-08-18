@@ -5501,3 +5501,145 @@ body {
     padding-left: 0.35rem;
   }
 }
+
+/* =========================================================
+   GUIROPA RADIO — FINAL POLISH: HERO LOGO + COMPACT FOOTER
+   Clareia a marca central sem lavar o preto e compacta o
+   rodapé preservando a identidade broadcast já aprovada.
+   ========================================================= */
+
+.guiropa-radio-home
+.guiropa-radio-hero__logo
+.guiropa-logo--hero {
+  position: relative;
+  z-index: 4;
+
+  filter:
+    brightness(1.16)
+    contrast(1.04)
+    saturate(1.10)
+    drop-shadow(0 18px 26px rgba(68, 43, 22, 0.18))
+    drop-shadow(0 2px 1px rgba(255, 244, 214, 0.24)) !important;
+
+  opacity: 1 !important;
+
+  transition:
+    filter 0.32s ease,
+    transform 0.32s ease;
+}
+
+.guiropa-radio-home
+.guiropa-radio-hero__logo::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  width: min(760px, 84vw);
+  height: 72%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 236, 196, 0.34) 0%,
+      rgba(220, 179, 105, 0.15) 38%,
+      transparent 72%
+    );
+
+  filter: blur(18px);
+}
+
+.guiropa-radio-home
+.guiropa-radio-hero__logo
+.guiropa-logo--hero:hover {
+  transform: translateY(-2px);
+
+  filter:
+    brightness(1.20)
+    contrast(1.04)
+    saturate(1.12)
+    drop-shadow(0 20px 30px rgba(68, 43, 22, 0.20))
+    drop-shadow(0 2px 1px rgba(255, 244, 214, 0.28)) !important;
+}
+
+.guiropa-radio-footer__inner {
+  padding: 2.7rem 0 1.35rem !important;
+}
+
+.guiropa-radio-footer__brand {
+  max-width: 440px !important;
+}
+
+.guiropa-radio-footer__brand
+.guiropa-logo--footer {
+  width: min(205px, 62vw) !important;
+  max-height: none !important;
+
+  filter:
+    brightness(1.10)
+    contrast(1.03)
+    saturate(1.06)
+    drop-shadow(0 8px 16px rgba(0, 0, 0, 0.24));
+
+  opacity: 1 !important;
+}
+
+.guiropa-radio-footer__brand p {
+  margin-top: 0.65rem !important;
+}
+
+.guiropa-radio-footer__nav {
+  gap: 1.25rem !important;
+  margin-top: 1.85rem !important;
+  padding: 1rem 0 !important;
+}
+
+.guiropa-radio-footer__meta {
+  margin-top: 0.9rem !important;
+  padding-bottom: 0 !important;
+}
+
+.guiropa-radio-footer__inner > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 600px) {
+  .guiropa-radio-home
+  .guiropa-radio-hero__logo
+  .guiropa-logo--hero {
+    filter:
+      brightness(1.13)
+      contrast(1.03)
+      saturate(1.08)
+      drop-shadow(0 12px 20px rgba(68, 43, 22, 0.16)) !important;
+  }
+
+  .guiropa-radio-home
+  .guiropa-radio-hero__logo::before {
+    width: 94vw;
+    height: 68%;
+    opacity: 0.82;
+  }
+
+  .guiropa-radio-footer__inner {
+    padding: 2.15rem 0 1.2rem !important;
+  }
+
+  .guiropa-radio-footer__brand
+  .guiropa-logo--footer {
+    width: min(185px, 66vw) !important;
+  }
+
+  .guiropa-radio-footer__nav {
+    gap: 0.9rem 1.15rem !important;
+    margin-top: 1.4rem !important;
+    padding: 0.85rem 0 !important;
+  }
+
+  .guiropa-radio-footer__meta {
+    margin-top: 0.75rem !important;
+    gap: 0.45rem !important;
+  }
+}
