@@ -37,6 +37,7 @@ const pt = {
     { href: "/ouvir", label: "Ouvir", cta: true },
     { href: "/programacao", label: "Programação" },
     { href: "/loja", label: "Loja" },
+    { href: "/contato", label: "Contato" },
   ],
 
   hero: {
@@ -210,6 +211,7 @@ const en = {
     { href: "/ouvir", label: "Listen", cta: true },
     { href: "/programacao", label: "Schedule" },
     { href: "/loja", label: "Store" },
+    { href: "/contato", label: "Contact" },
   ],
 
   hero: {
@@ -385,6 +387,7 @@ const es = {
     { href: "/ouvir", label: "Escuchar", cta: true },
     { href: "/programacao", label: "Programación" },
     { href: "/loja", label: "Tienda" },
+    { href: "/contato", label: "Contacto" },
   ],
 
   hero: {
