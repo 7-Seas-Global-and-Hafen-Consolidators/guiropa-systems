@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+} from "react-router-dom";
+
 import { useRadioPlayer } from "../audio/RadioPlayerContext.jsx";
 
 export default function PersistentPlayer() {
+  const location = useLocation();
+
   const {
     streamConfigured,
     statusText,
@@ -16,21 +22,42 @@ export default function PersistentPlayer() {
     toggleMute,
   } = useRadioPlayer();
 
+  /*
+   * A página OUVIR já possui o player completo.
+   * Portanto o mini-player global não deve aparecer ali.
+   */
+  const normalizedPath =
+    location.pathname
+      .replace(/\/+$/, "")
+      .toLowerCase();
+
+  const isListenPage =
+    normalizedPath === "/ouvir" ||
+    normalizedPath === "/listen";
+
+  if (isListenPage) {
+    return null;
+  }
+
   return (
     <>
       <style>{`
         .guiropa-persistent-player {
           position: fixed;
+
           z-index: 9999;
+
           left: 50%;
           bottom: 18px;
 
-          width: min(
-            960px,
-            calc(100% - 30px)
-          );
+          width:
+            min(
+              960px,
+              calc(100% - 30px)
+            );
 
-          transform: translateX(-50%);
+          transform:
+            translateX(-50%);
 
           display: grid;
 
@@ -41,27 +68,49 @@ export default function PersistentPlayer() {
             auto;
 
           align-items: center;
+
           gap: 18px;
 
-          padding: 13px 17px;
+          padding:
+            13px 17px;
 
           border:
             1px solid
-            rgba(212, 175, 55, 0.34);
+            rgba(
+              180,
+              138,
+              67,
+              0.34
+            );
 
-          border-radius: 18px;
+          border-radius:
+            18px;
 
           background:
-            rgba(18, 16, 14, 0.96);
+            rgba(
+              20,
+              17,
+              14,
+              0.97
+            );
 
-          color: #f4eadc;
+          color:
+            #f4eadc;
 
           box-shadow:
             0 22px 70px
-            rgba(32, 24, 16, 0.30);
+            rgba(
+              32,
+              24,
+              16,
+              0.30
+            );
 
-          backdrop-filter: blur(18px);
-          -webkit-backdrop-filter: blur(18px);
+          backdrop-filter:
+            blur(16px);
+
+          -webkit-backdrop-filter:
+            blur(16px);
         }
 
         .guiropa-persistent-player__play {
@@ -69,30 +118,58 @@ export default function PersistentPlayer() {
           height: 48px;
 
           display: grid;
+
           place-items: center;
 
           border:
             1px solid
-            rgba(255, 255, 255, 0.14);
+            rgba(
+              255,
+              255,
+              255,
+              0.13
+            );
 
-          border-radius: 50%;
+          border-radius:
+            50%;
 
           background:
             linear-gradient(
               145deg,
-              #b58a45,
-              #725025
+              #9b753a,
+              #67491f
             );
 
-          color: #fff7e8;
+          color:
+            #fff5e3;
 
-          font-size: 17px;
-          cursor: pointer;
+          font-size:
+            17px;
+
+          cursor:
+            pointer;
+
+          transition:
+            transform 0.2s ease,
+            filter 0.2s ease;
+        }
+
+        .guiropa-persistent-player__play:hover {
+          transform:
+            translateY(-1px);
+
+          filter:
+            brightness(1.08);
         }
 
         .guiropa-persistent-player__play:disabled {
           opacity: 0.45;
-          cursor: not-allowed;
+
+          cursor:
+            not-allowed;
+
+          transform:
+            none;
         }
 
         .guiropa-persistent-player__copy {
@@ -101,31 +178,47 @@ export default function PersistentPlayer() {
 
         .guiropa-persistent-player__status {
           display: flex;
+
           align-items: center;
+
           gap: 7px;
 
           margin-bottom: 3px;
 
-          color: #c9a45d;
+          color:
+            #d0aa60;
 
           font-size: 9px;
+
           font-weight: 900;
 
-          letter-spacing: 0.16em;
-          text-transform: uppercase;
+          letter-spacing:
+            0.16em;
+
+          text-transform:
+            uppercase;
         }
 
         .guiropa-persistent-player__dot {
           width: 6px;
           height: 6px;
 
-          border-radius: 50%;
+          flex: 0 0 auto;
 
-          background: #bc3428;
+          border-radius:
+            50%;
+
+          background:
+            #b83224;
 
           box-shadow:
             0 0 0 4px
-            rgba(188, 52, 40, 0.12);
+            rgba(
+              184,
+              50,
+              36,
+              0.12
+            );
         }
 
         .guiropa-persistent-player__title {
@@ -133,13 +226,18 @@ export default function PersistentPlayer() {
 
           overflow: hidden;
 
-          color: #f7efe3;
+          color:
+            #f7efe3;
 
           font-size: 13px;
+
           font-weight: 800;
 
-          text-overflow: ellipsis;
-          white-space: nowrap;
+          text-overflow:
+            ellipsis;
+
+          white-space:
+            nowrap;
         }
 
         .guiropa-persistent-player__artist {
@@ -149,17 +247,23 @@ export default function PersistentPlayer() {
 
           overflow: hidden;
 
-          color: #9f9282;
+          color:
+            #9f9282;
 
           font-size: 10px;
 
-          text-overflow: ellipsis;
-          white-space: nowrap;
+          text-overflow:
+            ellipsis;
+
+          white-space:
+            nowrap;
         }
 
         .guiropa-persistent-player__volume {
           display: flex;
+
           align-items: center;
+
           gap: 9px;
         }
 
@@ -167,62 +271,120 @@ export default function PersistentPlayer() {
           width: 34px;
           height: 34px;
 
+          display: grid;
+
+          place-items: center;
+
           border: 0;
-          border-radius: 50%;
+
+          border-radius:
+            50%;
 
           background:
-            rgba(255, 255, 255, 0.07);
+            rgba(
+              255,
+              255,
+              255,
+              0.07
+            );
 
-          color: #eee2d1;
+          color:
+            #eee2d1;
 
-          cursor: pointer;
+          cursor:
+            pointer;
         }
 
         .guiropa-persistent-player__volume input {
           width: 92px;
 
-          accent-color: #b58a45;
-          cursor: pointer;
+          accent-color:
+            #b58a45;
+
+          cursor:
+            pointer;
         }
 
         .guiropa-persistent-player__open {
-          display: inline-flex;
+          display:
+            inline-flex;
 
-          align-items: center;
-          justify-content: center;
+          align-items:
+            center;
 
-          min-height: 38px;
+          justify-content:
+            center;
 
-          padding: 0 13px;
+          min-height:
+            38px;
+
+          padding:
+            0 13px;
 
           border:
             1px solid
-            rgba(212, 175, 55, 0.27);
+            rgba(
+              180,
+              138,
+              67,
+              0.32
+            );
 
-          color: #d9c29b;
+          color:
+            #d9c29b;
 
-          font-size: 9px;
-          font-weight: 900;
+          font-size:
+            9px;
 
-          letter-spacing: 0.12em;
+          font-weight:
+            900;
 
-          text-decoration: none;
-          text-transform: uppercase;
+          letter-spacing:
+            0.12em;
+
+          text-decoration:
+            none;
+
+          text-transform:
+            uppercase;
+
+          transition:
+            border-color 0.2s ease,
+            color 0.2s ease,
+            background 0.2s ease;
         }
 
         .guiropa-persistent-player__open:hover {
           border-color:
-            rgba(212, 175, 55, 0.55);
+            rgba(
+              210,
+              176,
+              108,
+              0.62
+            );
 
-          color: #f4dfb5;
+          color:
+            #f4dfb5;
+
+          background:
+            rgba(
+              180,
+              138,
+              67,
+              0.05
+            );
         }
 
-        @media (max-width: 720px) {
+        @media (
+          max-width: 720px
+        ) {
           .guiropa-persistent-player {
             bottom: 9px;
 
             width:
-              calc(100% - 18px);
+              calc(
+                100% - 18px
+              );
 
             grid-template-columns:
               auto
@@ -231,18 +393,23 @@ export default function PersistentPlayer() {
 
             gap: 11px;
 
-            padding: 10px 12px;
+            padding:
+              10px 12px;
 
-            border-radius: 15px;
+            border-radius:
+              15px;
           }
 
           .guiropa-persistent-player__volume {
-            display: none;
+            display:
+              none;
           }
 
           .guiropa-persistent-player__open {
             width: 36px;
-            min-height: 36px;
+
+            min-height:
+              36px;
 
             padding: 0;
 
@@ -269,7 +436,9 @@ export default function PersistentPlayer() {
         <button
           type="button"
           className="guiropa-persistent-player__play"
-          onClick={togglePlayback}
+          onClick={
+            togglePlayback
+          }
           disabled={
             !streamConfigured ||
             isLoading
@@ -307,14 +476,17 @@ export default function PersistentPlayer() {
           <button
             type="button"
             className="guiropa-persistent-player__mute"
-            onClick={toggleMute}
+            onClick={
+              toggleMute
+            }
             aria-label={
               isMuted
                 ? "Ativar som"
                 : "Silenciar"
             }
           >
-            {isMuted || volume === 0
+            {isMuted ||
+            volume === 0
               ? "×"
               : "◖"}
           </button>
@@ -324,11 +496,14 @@ export default function PersistentPlayer() {
             min="0"
             max="1"
             step="0.01"
-            value={volume}
-            onChange={(event) =>
-              setVolume(
-                event.target.value
-              )
+            value={
+              volume
+            }
+            onChange={
+              (event) =>
+                setVolume(
+                  event.target.value
+                )
             }
             aria-label="Volume"
           />
