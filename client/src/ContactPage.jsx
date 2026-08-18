@@ -15,9 +15,11 @@ const TELEGRAM_URL =
 const WHATSAPP_URL =
   "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20falar%20com%20a%20GUIROPA.";
 
-const EMAIL_URL = "";
+const EMAIL_URL =
+  "mailto:guiropasystems@gmail.com?subject=Contato%20GUIROPA%20RADIO";
 
-const SPOTIFY_URL = "";
+const SPOTIFY_URL =
+  "https://open.spotify.com/playlist/5qJ9iLyWFxGs9zVCSAOMLD";
 
 const COPY = {
   pt: {
@@ -77,6 +79,114 @@ const COPY = {
     whatsappNecessary: "ATENDIMENTO",
     emailBusiness: "NEGÓCIOS",
     spotifyOfficial: "PLAYLIST OFICIAL",
+
+    participationEyebrow: "AGORA É SUA VEZ",
+    participationTitle: "A gaveta abre. Você entra.",
+    participationLead:
+      "Sugira uma música para a programação ou conte a história que uma canção deixou na sua vida.",
+
+    nextEyebrow: "NÃO TENTE ADIVINHAR A PRÓXIMA",
+    nextTitle: "O que vem depois?",
+    nextLead:
+      "Tem outra música na cabeça? Mande para a GUIROPA.",
+    storyEyebrow: "TEM MÚSICA QUE VOCÊ ESCUTA. E TEM MÚSICA QUE ACONTECE COM VOCÊ.",
+    storyTitle: "Qual é a sua?",
+    storyLead:
+      "Uma pessoa. Uma cidade. Uma noite. Uma perda. Um amor. Uma época inteira.",
+
+    name: "NOME",
+    email: "E-MAIL",
+    artist: "ARTISTA",
+    song: "MÚSICA",
+    decade: "DÉCADA",
+    beforeAfter: "O QUE DEVERIA TOCAR ANTES OU DEPOIS DELA?",
+    beforeAfterPlaceholder:
+      "Pode ser uma combinação perfeitamente sensata. Ou completamente irresponsável.",
+    storyReason: "POR QUE ESSA MÚSICA FICOU COM VOCÊ?",
+    storyPlaceholder:
+      "Conte do seu jeito. Não precisa escrever bonito. Precisa ser verdadeiro.",
+    chooseDecade: "Escolha a década",
+    sendSuggestion: "MANDAR PARA A GUIROPA →",
+    sendStory: "CONTAR PARA A GUIROPA →",
+    termsText: "Li e aceito os Termos de Envio e a Política de Privacidade.",
+    publishText:
+      "Autorizo a GUIROPA RADIO a mencionar esta história ou sugestão em seu conteúdo e programação.",
+    formNote:
+      "Enviado diretamente pelo Formspree. Seu e-mail é usado apenas para responder a esta mensagem.",
+    operator:
+      "Operação: 7 Seas Global.",
+
+    participationEyebrow: "NOW IT'S YOUR TURN",
+    participationTitle: "Open the drawer. Step in.",
+    participationLead:
+      "Suggest a song for the schedule or tell us the story a song left in your life.",
+
+    nextEyebrow: "DON'T TRY TO GUESS WHAT COMES NEXT",
+    nextTitle: "What comes next?",
+    nextLead:
+      "Got another song in your head? Send it to GUIROPA.",
+    storyEyebrow: "SOME SONGS YOU HEAR. SOME SONGS HAPPEN TO YOU.",
+    storyTitle: "What's yours?",
+    storyLead:
+      "A person. A city. A night. A loss. A love. An entire era.",
+
+    name: "NAME",
+    email: "E-MAIL",
+    artist: "ARTIST",
+    song: "SONG",
+    decade: "DECADE",
+    beforeAfter: "WHAT SHOULD PLAY BEFORE OR AFTER IT?",
+    beforeAfterPlaceholder:
+      "It can be perfectly sensible. Or completely irresponsible.",
+    storyReason: "WHY DID THIS SONG STAY WITH YOU?",
+    storyPlaceholder:
+      "Tell it your way. It doesn't need to sound polished. It needs to be true.",
+    chooseDecade: "Choose the decade",
+    sendSuggestion: "SEND TO GUIROPA →",
+    sendStory: "TELL GUIROPA →",
+    termsText: "I accept the Submission Terms and Privacy Policy.",
+    publishText:
+      "I authorize GUIROPA RADIO to mention this story or suggestion in its content and programming.",
+    formNote:
+      "Sent directly through Formspree. Your e-mail is used only to reply to this message.",
+    operator:
+      "Operation: 7 Seas Global.",
+
+    participationEyebrow: "AHORA ES TU TURNO",
+    participationTitle: "Abre el cajón. Entra.",
+    participationLead:
+      "Sugiere una canción para la programación o cuenta la historia que una canción dejó en tu vida.",
+
+    nextEyebrow: "NO INTENTES ADIVINAR LA PRÓXIMA",
+    nextTitle: "¿Qué viene después?",
+    nextLead:
+      "¿Tienes otra canción en la cabeza? Envíala a GUIROPA.",
+    storyEyebrow: "HAY MÚSICA QUE ESCUCHAS. Y HAY MÚSICA QUE TE PASA.",
+    storyTitle: "¿Cuál es la tuya?",
+    storyLead:
+      "Una persona. Una ciudad. Una noche. Una pérdida. Un amor. Una época entera.",
+
+    name: "NOMBRE",
+    email: "CORREO",
+    artist: "ARTISTA",
+    song: "CANCIÓN",
+    decade: "DÉCADA",
+    beforeAfter: "¿QUÉ DEBERÍA SONAR ANTES O DESPUÉS?",
+    beforeAfterPlaceholder:
+      "Puede ser perfectamente sensato. O completamente irresponsable.",
+    storyReason: "¿POR QUÉ ESTA CANCIÓN SE QUEDÓ CONTIGO?",
+    storyPlaceholder:
+      "Cuéntalo a tu manera. No tiene que sonar bonito. Tiene que ser verdadero.",
+    chooseDecade: "Elige la década",
+    sendSuggestion: "ENVIAR A GUIROPA →",
+    sendStory: "CONTAR A GUIROPA →",
+    termsText: "Acepto los Términos de Envío y la Política de Privacidad.",
+    publishText:
+      "Autorizo a GUIROPA RADIO a mencionar esta historia o sugerencia en su contenido y programación.",
+    formNote:
+      "Enviado directamente por Formspree. Tu correo se usa solo para responder a este mensaje.",
+    operator:
+      "Operación: 7 Seas Global.",
 
     footerEyebrow: "GUIROPA RADIO · 1950 — 1990",
     footerTitle: "GET UP. TURN IT UP. GUIROPA.",
@@ -206,6 +316,9 @@ const COPY = {
     footerTitle: "GET UP. TURN IT UP. GUIROPA.",
   },
 };
+
+const FORMSPREE_URL =
+  "https://formspree.io/f/xdenpydo";
 
 const LINKS = {
   telegram: TELEGRAM_URL,
@@ -375,6 +488,23 @@ export default function ContactPage() {
             );
 
           height: auto;
+
+          overflow: hidden;
+
+          border:
+            1px solid
+            rgba(
+              201,
+              154,
+              69,
+              0.30
+            );
+
+          border-radius:
+            28px;
+
+          background:
+            #0d0c0b;
 
           box-shadow:
             0 18px 36px
@@ -683,6 +813,322 @@ export default function ContactPage() {
           letter-spacing: 0.14em;
         }
 
+        /* PARTICIPATION FORMS */
+
+        .guiropa-contact-participation {
+          padding:
+            clamp(4.8rem, 8vw, 7rem)
+            0;
+
+          border-top:
+            1px solid
+            var(--gc-line);
+
+          background:
+            rgba(
+              255,
+              252,
+              245,
+              0.34
+            );
+        }
+
+        .guiropa-contact-participation__head {
+          display: grid;
+
+          grid-template-columns:
+            minmax(0, 1fr)
+            minmax(280px, 430px);
+
+          gap:
+            clamp(3rem, 7vw, 6rem);
+
+          align-items: end;
+
+          margin-bottom:
+            clamp(2.5rem, 5vw, 4rem);
+        }
+
+        .guiropa-contact-participation__head h2 {
+          margin: 0.8rem 0 0;
+
+          max-width: 820px;
+
+          font-size:
+            clamp(
+              2.8rem,
+              5.5vw,
+              5.2rem
+            );
+
+          font-weight: 800;
+
+          line-height: 0.96;
+
+          letter-spacing: -0.05em;
+        }
+
+        .guiropa-contact-participation__head p {
+          margin: 0;
+
+          color:
+            var(--gc-soft);
+
+          font-size: 0.96rem;
+
+          line-height: 1.7;
+        }
+
+        .guiropa-contact-forms {
+          display: grid;
+
+          grid-template-columns:
+            repeat(
+              2,
+              minmax(0, 1fr)
+            );
+
+          gap: 20px;
+        }
+
+        .guiropa-contact-form {
+          padding:
+            clamp(
+              1.6rem,
+              3vw,
+              2.4rem
+            );
+
+          border:
+            1px solid
+            var(--gc-line);
+
+          background:
+            rgba(
+              255,
+              252,
+              245,
+              0.70
+            );
+        }
+
+        .guiropa-contact-form h3 {
+          margin:
+            0.7rem
+            0
+            0;
+
+          font-size:
+            clamp(
+              2rem,
+              3.8vw,
+              3.4rem
+            );
+
+          font-weight: 800;
+
+          line-height: 0.98;
+
+          letter-spacing: -0.045em;
+        }
+
+        .guiropa-contact-form__lead {
+          margin:
+            0.8rem
+            0
+            1.6rem;
+
+          color:
+            var(--gc-soft);
+
+          font-size: 0.86rem;
+
+          line-height: 1.6;
+        }
+
+        .guiropa-contact-form__grid {
+          display: grid;
+
+          grid-template-columns:
+            repeat(
+              2,
+              minmax(0, 1fr)
+            );
+
+          gap: 14px;
+        }
+
+        .guiropa-contact-field {
+          display: grid;
+
+          gap: 7px;
+        }
+
+        .guiropa-contact-field--full {
+          grid-column:
+            1 / -1;
+        }
+
+        .guiropa-contact-field label {
+          color:
+            var(--gc-ink);
+
+          font-size: 0.58rem;
+          font-weight: 900;
+
+          letter-spacing: 0.11em;
+
+          text-transform: uppercase;
+        }
+
+        .guiropa-contact-field input,
+        .guiropa-contact-field select,
+        .guiropa-contact-field textarea {
+          width: 100%;
+
+          border:
+            1px solid
+            rgba(
+              76,
+              56,
+              39,
+              0.28
+            );
+
+          border-radius: 0;
+
+          background:
+            rgba(
+              255,
+              255,
+              255,
+              0.54
+            );
+
+          color:
+            var(--gc-ink);
+
+          font: inherit;
+
+          outline: none;
+        }
+
+        .guiropa-contact-field input,
+        .guiropa-contact-field select {
+          min-height: 46px;
+
+          padding:
+            0 12px;
+        }
+
+        .guiropa-contact-field textarea {
+          min-height: 118px;
+
+          padding: 12px;
+
+          resize: vertical;
+        }
+
+        .guiropa-contact-field input:focus,
+        .guiropa-contact-field select:focus,
+        .guiropa-contact-field textarea:focus {
+          border-color:
+            var(--gc-gold);
+        }
+
+        .guiropa-contact-check {
+          display: flex;
+
+          gap: 9px;
+
+          align-items:
+            flex-start;
+
+          margin-top: 12px;
+
+          color:
+            var(--gc-soft);
+
+          font-size: 0.68rem;
+
+          line-height: 1.45;
+        }
+
+        .guiropa-contact-check input {
+          margin-top: 2px;
+
+          accent-color:
+            var(--gc-red);
+        }
+
+        .guiropa-contact-submit {
+          width: 100%;
+
+          min-height: 50px;
+
+          margin-top: 16px;
+
+          border: 0;
+
+          background:
+            var(--gc-ink);
+
+          color:
+            #fff8ed;
+
+          font-size: 0.64rem;
+          font-weight: 900;
+
+          letter-spacing: 0.05em;
+
+          cursor: pointer;
+
+          text-transform: uppercase;
+        }
+
+        .guiropa-contact-submit:hover {
+          background:
+            var(--gc-red);
+        }
+
+        .guiropa-contact-form__note {
+          margin:
+            1rem
+            0
+            0;
+
+          color:
+            rgba(
+              110,
+              95,
+              77,
+              0.72
+            );
+
+          font-size: 0.58rem;
+
+          line-height: 1.5;
+        }
+
+        .guiropa-contact-operator {
+          margin-top: 0.7rem;
+
+          color:
+            rgba(
+              110,
+              95,
+              77,
+              0.50
+            );
+
+          font-size: 0.52rem;
+          font-weight: 700;
+
+          letter-spacing: 0.08em;
+
+          text-align: right;
+        }
+
         /* BUSINESS STRIP */
 
         .guiropa-contact-business {
@@ -871,6 +1317,11 @@ export default function ContactPage() {
             grid-template-columns: 1fr;
           }
 
+          .guiropa-contact-participation__head,
+          .guiropa-contact-forms {
+            grid-template-columns: 1fr;
+          }
+
           .guiropa-contact-status {
             grid-template-columns:
               repeat(
@@ -903,6 +1354,14 @@ export default function ContactPage() {
 
           .guiropa-contact-status {
             grid-template-columns: 1fr;
+          }
+
+          .guiropa-contact-form__grid {
+            grid-template-columns: 1fr;
+          }
+
+          .guiropa-contact-field--full {
+            grid-column: auto;
           }
 
           .guiropa-contact-status div,
@@ -1041,6 +1500,323 @@ export default function ContactPage() {
                 );
               }
             )}
+          </div>
+        </div>
+      </section>
+
+      <section className="guiropa-contact-participation">
+        <div className="guiropa-contact-shell">
+          <div className="guiropa-contact-participation__head">
+            <div>
+              <span className="guiropa-contact-eyebrow">
+                {copy.participationEyebrow}
+              </span>
+
+              <h2>
+                {copy.participationTitle}
+              </h2>
+            </div>
+
+            <p>
+              {copy.participationLead}
+            </p>
+          </div>
+
+          <div className="guiropa-contact-forms">
+            <form
+              className="guiropa-contact-form"
+              action={FORMSPREE_URL}
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="form_type"
+                value="GUIROPA — O que vem depois?"
+              />
+
+              <input
+                type="hidden"
+                name="brand"
+                value="GUIROPA RADIO"
+              />
+
+              <span className="guiropa-contact-eyebrow">
+                {copy.nextEyebrow}
+              </span>
+
+              <h3>
+                {copy.nextTitle}
+              </h3>
+
+              <p className="guiropa-contact-form__lead">
+                {copy.nextLead}
+              </p>
+
+              <div className="guiropa-contact-form__grid">
+                <div className="guiropa-contact-field">
+                  <label htmlFor="next-name">
+                    {copy.name}
+                  </label>
+
+                  <input
+                    id="next-name"
+                    name="name"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div className="guiropa-contact-field">
+                  <label htmlFor="next-email">
+                    {copy.email}
+                  </label>
+
+                  <input
+                    id="next-email"
+                    name="email"
+                    type="email"
+                    required
+                  />
+                </div>
+
+                <div className="guiropa-contact-field">
+                  <label htmlFor="next-artist">
+                    {copy.artist}
+                  </label>
+
+                  <input
+                    id="next-artist"
+                    name="artist"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div className="guiropa-contact-field">
+                  <label htmlFor="next-song">
+                    {copy.song}
+                  </label>
+
+                  <input
+                    id="next-song"
+                    name="song"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div className="guiropa-contact-field guiropa-contact-field--full">
+                  <label htmlFor="next-decade">
+                    {copy.decade}
+                  </label>
+
+                  <select
+                    id="next-decade"
+                    name="decade"
+                    defaultValue=""
+                    required
+                  >
+                    <option value="" disabled>
+                      {copy.chooseDecade}
+                    </option>
+                    <option value="1950s">1950s</option>
+                    <option value="1960s">1960s</option>
+                    <option value="1970s">1970s</option>
+                    <option value="1980s">1980s</option>
+                    <option value="1990">1990</option>
+                  </select>
+                </div>
+
+                <div className="guiropa-contact-field guiropa-contact-field--full">
+                  <label htmlFor="next-before-after">
+                    {copy.beforeAfter}
+                  </label>
+
+                  <textarea
+                    id="next-before-after"
+                    name="before_after"
+                    placeholder={copy.beforeAfterPlaceholder}
+                  />
+                </div>
+              </div>
+
+              <label className="guiropa-contact-check">
+                <input
+                  type="checkbox"
+                  name="terms_accepted"
+                  value="yes"
+                  required
+                />
+
+                <span>
+                  {copy.termsText}
+                </span>
+              </label>
+
+              <label className="guiropa-contact-check">
+                <input
+                  type="checkbox"
+                  name="publication_authorized"
+                  value="yes"
+                />
+
+                <span>
+                  {copy.publishText}
+                </span>
+              </label>
+
+              <button
+                className="guiropa-contact-submit"
+                type="submit"
+              >
+                {copy.sendSuggestion}
+              </button>
+
+              <p className="guiropa-contact-form__note">
+                {copy.formNote}
+              </p>
+
+              <div className="guiropa-contact-operator">
+                {copy.operator}
+              </div>
+            </form>
+
+            <form
+              className="guiropa-contact-form"
+              action={FORMSPREE_URL}
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="form_type"
+                value="GUIROPA — Qual é a sua?"
+              />
+
+              <input
+                type="hidden"
+                name="brand"
+                value="GUIROPA RADIO"
+              />
+
+              <span className="guiropa-contact-eyebrow">
+                {copy.storyEyebrow}
+              </span>
+
+              <h3>
+                {copy.storyTitle}
+              </h3>
+
+              <p className="guiropa-contact-form__lead">
+                {copy.storyLead}
+              </p>
+
+              <div className="guiropa-contact-form__grid">
+                <div className="guiropa-contact-field">
+                  <label htmlFor="story-name">
+                    {copy.name}
+                  </label>
+
+                  <input
+                    id="story-name"
+                    name="name"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div className="guiropa-contact-field">
+                  <label htmlFor="story-email">
+                    {copy.email}
+                  </label>
+
+                  <input
+                    id="story-email"
+                    name="email"
+                    type="email"
+                    required
+                  />
+                </div>
+
+                <div className="guiropa-contact-field">
+                  <label htmlFor="story-artist">
+                    {copy.artist}
+                  </label>
+
+                  <input
+                    id="story-artist"
+                    name="artist"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div className="guiropa-contact-field">
+                  <label htmlFor="story-song">
+                    {copy.song}
+                  </label>
+
+                  <input
+                    id="story-song"
+                    name="song"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div className="guiropa-contact-field guiropa-contact-field--full">
+                  <label htmlFor="story-reason">
+                    {copy.storyReason}
+                  </label>
+
+                  <textarea
+                    id="story-reason"
+                    name="story"
+                    placeholder={copy.storyPlaceholder}
+                    required
+                  />
+                </div>
+              </div>
+
+              <label className="guiropa-contact-check">
+                <input
+                  type="checkbox"
+                  name="terms_accepted"
+                  value="yes"
+                  required
+                />
+
+                <span>
+                  {copy.termsText}
+                </span>
+              </label>
+
+              <label className="guiropa-contact-check">
+                <input
+                  type="checkbox"
+                  name="publication_authorized"
+                  value="yes"
+                />
+
+                <span>
+                  {copy.publishText}
+                </span>
+              </label>
+
+              <button
+                className="guiropa-contact-submit"
+                type="submit"
+              >
+                {copy.sendStory}
+              </button>
+
+              <p className="guiropa-contact-form__note">
+                {copy.formNote}
+              </p>
+
+              <div className="guiropa-contact-operator">
+                {copy.operator}
+              </div>
+            </form>
           </div>
         </div>
       </section>
