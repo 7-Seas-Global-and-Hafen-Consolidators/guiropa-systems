@@ -8,6 +8,7 @@ import ListenPage from "./ListenPage.jsx";
 import SchedulePage from "./SchedulePage.jsx";
 import StorePage from "./StorePage.jsx";
 import ContactPage from "./ContactPage.jsx";
+import AdvertisePage from "./AdvertisePage.jsx";
 
 export default function App() {
   return (
@@ -26,6 +27,9 @@ export default function App() {
 
         <Route path="contato" element={<ContactPage />} />
         <Route path="contact" element={<ContactPage />} />
+
+        <Route path="anuncie" element={<AdvertisePage />} />
+        <Route path="advertise" element={<AdvertisePage />} />
       </Route>
     </Routes>
   );
