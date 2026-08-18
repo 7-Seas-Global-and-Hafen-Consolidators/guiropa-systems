@@ -5649,116 +5649,84 @@ body {
     gap: 0.45rem !important;
   }
 }
+
 /* =========================================================
-   GUIROPA RADIO — HEADER LOGO FINAL OVERRIDE
-   Corrige exclusivamente o lockup do cabeçalho.
-   Remove o recorte circular/quadrado herdado do site antigo
-   e preserva a proporção horizontal original da marca.
-   NÃO altera hero, player, footer ou conteúdo das páginas.
+   GUIROPA RADIO — PERSISTENT PLAYER FINAL OVERRIDE
+   Mantém o player flutuante, mas evita atravessar:
+   - formulários do Contato
+   - blocos finais/rodapés das páginas editoriais
+   O comportamento padrão do player permanece intacto.
    ========================================================= */
 
-.guiropa-radio-header
-.guiropa-radio-header__logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex: 0 0 auto;
-  overflow: visible;
+.guiropa-persistent-player {
+  transition:
+    opacity 0.24s ease,
+    transform 0.24s ease,
+    visibility 0.24s ease !important;
 }
 
-.guiropa-radio-header
-.guiropa-radio-header__logo
-.guiropa-logo--header {
-  display: block !important;
+/* ContactPage já adiciona esta classe no body quando
+   a área de formulários entra no viewport. */
+body.guiropa-contact-forms-visible
+.guiropa-persistent-player {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 
-  width: auto !important;
-  height: 58px !important;
-  max-width: 150px !important;
-  max-height: 58px !important;
-
-  object-fit: contain !important;
-  object-position: left center !important;
-
-  border-radius: 0 !important;
-
-  clip-path: none !important;
-  mask: none !important;
-  -webkit-mask: none !important;
-
-  background: transparent !important;
-
-  filter:
-    brightness(1.08)
-    contrast(1.04)
-    saturate(1.06)
-    drop-shadow(0 3px 7px rgba(0, 0, 0, 0.22)) !important;
-
-  opacity: 1 !important;
+  transform:
+    translate(
+      -50%,
+      calc(100% + 48px)
+    ) !important;
 }
 
-/* O header reduz levemente ao entrar em estado scrolled,
-   mas mantém a imagem inteira e sem recorte. */
-.guiropa-radio-header.scrolled
-.guiropa-radio-header__logo
-.guiropa-logo--header {
-  width: auto !important;
-  height: 52px !important;
-  max-width: 140px !important;
-  max-height: 52px !important;
-
-  object-fit: contain !important;
-  border-radius: 0 !important;
+/* Evita que o player fique brigando visualmente com
+   o encerramento editorial e o rodapé global. */
+.guiropa-radio-footer ~ .guiropa-persistent-player,
+.guiropa-persistent-player.is-footer-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
-/* Tablet */
+/* Em telas baixas, reduz um pouco a presença do player
+   sem alterar estrutura ou controles. */
+@media (max-height: 760px) and (min-width: 901px) {
+  .guiropa-persistent-player {
+    transform:
+      translateX(-50%)
+      scale(0.94) !important;
+
+    transform-origin:
+      center bottom !important;
+  }
+
+  body.guiropa-contact-forms-visible
+  .guiropa-persistent-player {
+    transform:
+      translate(
+        -50%,
+        calc(100% + 48px)
+      )
+      scale(0.94) !important;
+  }
+}
+
+/* Mobile: preserva o player, mas sem deixá-lo dominar
+   a leitura das páginas. */
 @media (max-width: 900px) {
-  .guiropa-radio-header
-  .guiropa-radio-header__logo
-  .guiropa-logo--header {
-    width: auto !important;
-    height: 52px !important;
-    max-width: 135px !important;
-    max-height: 52px !important;
-    object-fit: contain !important;
-    border-radius: 0 !important;
+  .guiropa-persistent-player {
+    max-width:
+      min(
+        calc(100vw - 20px),
+        760px
+      ) !important;
   }
 
-  .guiropa-radio-header.scrolled
-  .guiropa-radio-header__logo
-  .guiropa-logo--header {
-    height: 48px !important;
-    max-width: 125px !important;
-    max-height: 48px !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .guiropa-radio-header
-  .guiropa-radio-header__logo
-  .guiropa-logo--header {
-    width: auto !important;
-    height: 46px !important;
-    max-width: 118px !important;
-    max-height: 46px !important;
-
-    object-fit: contain !important;
-    object-position: left center !important;
-
-    border-radius: 0 !important;
-
-    filter:
-      brightness(1.08)
-      contrast(1.03)
-      saturate(1.05)
-      drop-shadow(0 2px 5px rgba(0, 0, 0, 0.18)) !important;
-  }
-
-  .guiropa-radio-header.scrolled
-  .guiropa-radio-header__logo
-  .guiropa-logo--header {
-    height: 42px !important;
-    max-width: 110px !important;
-    max-height: 42px !important;
+  body.guiropa-contact-forms-visible
+  .guiropa-persistent-player {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 }
