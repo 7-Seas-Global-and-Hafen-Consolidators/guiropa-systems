@@ -1,5 +1,6 @@
 import { useLanguage } from "./i18n/LanguageContext.jsx";
 import { GUIROPA_EMBLEM_SRC } from "./data/brandAssets.js";
+import { assetUrl } from "./utils/assetUrl.js";
 
 const TELEGRAM_URL =
   "https://t.me/m/t6seeX61ZTlk";
@@ -10,11 +11,22 @@ const WHATSAPP_URL =
 const EMAIL_URL =
   "mailto:guiropasystems@gmail.com?subject=Publicidade%20GUIROPA%20RADIO";
 
+const ADVERTISING_ART =
+  assetUrl("assets/guiropa-radio-anuncie-vintage-15-dias.png");
+
 const COPY = {
   pt: {
     eyebrow: "GUIROPA RADIO · PUBLICIDADE",
     title: "Anuncie.",
     lead: "Sua marca na GUIROPA Radio.",
+
+    promoEyebrow: "GUIROPA RADIO · 15 DIAS POR NOSSA CONTA",
+    promoTitle: "Seu negócio também pode estar aqui.",
+    promoLead:
+      "Artistas, bandas, bares, restaurantes, lojas, academias, escolas de música, casas de shows e negócios locais: experimente anunciar na GUIROPA por 15 dias.",
+    promoBadge: "15 DIAS",
+    promoBadgeText: "POR NOSSA CONTA",
+    promoCta: "QUERO EXPERIMENTAR",
 
     numbersEyebrow: "GUIROPA EM NÚMEROS",
     numbersTitle: "Espaço para aparecer.",
@@ -74,9 +86,10 @@ const COPY = {
       },
     ],
 
-    periodEyebrow: "PERÍODO",
+    periodEyebrow: "DEPOIS DA DEGUSTAÇÃO",
     periodTitle: "7 · 15 · 30 dias",
-    periodLead: "Outros períodos sob consulta.",
+    periodLead:
+      "Após os 15 dias iniciais por nossa conta, escolha o período da sua campanha. Outros períodos sob consulta.",
 
     materialReady: "Material pronto",
     materialReadyText: "Envie sua peça.",
@@ -122,6 +135,14 @@ const COPY = {
     eyebrow: "GUIROPA RADIO · ADVERTISING",
     title: "Advertise.",
     lead: "Your brand on GUIROPA Radio.",
+
+    promoEyebrow: "GUIROPA RADIO · 15 DAYS ON US",
+    promoTitle: "Your business could be here too.",
+    promoLead:
+      "Artists, bands, bars, restaurants, shops, gyms, music schools, venues and local businesses: try advertising on GUIROPA for 15 days.",
+    promoBadge: "15 DAYS",
+    promoBadgeText: "ON US",
+    promoCta: "I WANT TO TRY",
 
     numbersEyebrow: "GUIROPA IN NUMBERS",
     numbersTitle: "Space to be seen.",
@@ -181,9 +202,10 @@ const COPY = {
       },
     ],
 
-    periodEyebrow: "PERIOD",
+    periodEyebrow: "AFTER THE TRIAL",
     periodTitle: "7 · 15 · 30 days",
-    periodLead: "Other periods upon request.",
+    periodLead:
+      "After the first 15 days on us, choose your campaign period. Other periods upon request.",
 
     materialReady: "Material ready",
     materialReadyText: "Send your artwork.",
@@ -229,6 +251,14 @@ const COPY = {
     eyebrow: "GUIROPA RADIO · PUBLICIDAD",
     title: "Anúnciate.",
     lead: "Tu marca en GUIROPA Radio.",
+
+    promoEyebrow: "GUIROPA RADIO · 15 DÍAS POR NUESTRA CUENTA",
+    promoTitle: "Tu negocio también puede estar aquí.",
+    promoLead:
+      "Artistas, bandas, bares, restaurantes, tiendas, gimnasios, escuelas de música, salas de conciertos y negocios locales: prueba anunciarte en GUIROPA durante 15 días.",
+    promoBadge: "15 DÍAS",
+    promoBadgeText: "POR NUESTRA CUENTA",
+    promoCta: "QUIERO PROBAR",
 
     numbersEyebrow: "GUIROPA EN NÚMEROS",
     numbersTitle: "Espacio para aparecer.",
@@ -288,9 +318,10 @@ const COPY = {
       },
     ],
 
-    periodEyebrow: "PERÍODO",
+    periodEyebrow: "DESPUÉS DE LA PRUEBA",
     periodTitle: "7 · 15 · 30 días",
-    periodLead: "Otros períodos bajo consulta.",
+    periodLead:
+      "Después de los primeros 15 días por nuestra cuenta, elige el período de tu campaña. Otros períodos bajo consulta.",
 
     materialReady: "Material listo",
     materialReadyText: "Envía tu pieza.",
@@ -518,6 +549,118 @@ export default function AdvertisePage() {
               21,
               0.20
             );
+        }
+
+
+        /* 15 DAYS PROMO */
+
+        .guiropa-advertise-promo {
+          padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(5rem, 8vw, 7rem);
+        }
+
+        .guiropa-advertise-promo__frame {
+          overflow: hidden;
+          border: 1px solid rgba(92, 64, 38, 0.30);
+          border-radius: 24px;
+          background: linear-gradient(180deg, #efe0c7 0%, #e8d1aa 100%);
+          box-shadow: 0 28px 70px rgba(67, 45, 28, 0.18);
+        }
+
+        .guiropa-advertise-promo__image-wrap {
+          position: relative;
+          margin: 0;
+          background: #d9c09a;
+        }
+
+        .guiropa-advertise-promo__image {
+          display: block;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16 / 10;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .guiropa-advertise-promo__content {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          gap: clamp(1.5rem, 4vw, 3rem);
+          align-items: end;
+          padding: clamp(1.6rem, 4vw, 3rem);
+          border-top: 1px solid rgba(92, 64, 38, 0.18);
+        }
+
+        .guiropa-advertise-promo__copy h2 {
+          margin: 0.7rem 0 0;
+          max-width: 760px;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: clamp(2.6rem, 5.5vw, 5.3rem);
+          font-weight: 400;
+          line-height: 0.95;
+          letter-spacing: -0.05em;
+        }
+
+        .guiropa-advertise-promo__copy p {
+          max-width: 760px;
+          margin: 1.2rem 0 0;
+          color: var(--ga-soft);
+          font-size: clamp(0.98rem, 1.6vw, 1.12rem);
+          line-height: 1.65;
+        }
+
+        .guiropa-advertise-promo__offer {
+          min-width: 240px;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .guiropa-advertise-promo__badge {
+          display: grid;
+          place-items: center;
+          min-height: 128px;
+          padding: 1.2rem 1.4rem;
+          border: 1px solid rgba(201, 154, 69, 0.50);
+          border-radius: 18px;
+          background: linear-gradient(180deg, #181410, #0d0c0a);
+          color: #f0d9aa;
+          text-align: center;
+        }
+
+        .guiropa-advertise-promo__badge strong {
+          display: block;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: clamp(2.5rem, 4.8vw, 4rem);
+          font-weight: 400;
+          line-height: 0.9;
+          letter-spacing: -0.05em;
+        }
+
+        .guiropa-advertise-promo__badge span {
+          display: block;
+          margin-top: 0.65rem;
+          color: var(--ga-gold-light);
+          font-size: 0.62rem;
+          font-weight: 900;
+          letter-spacing: 0.17em;
+          text-transform: uppercase;
+        }
+
+        .guiropa-advertise-promo__cta {
+          min-height: 50px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 18px;
+          border: 1px solid var(--ga-red);
+          border-radius: 999px;
+          background: var(--ga-red);
+          color: #fff7ec;
+          font-size: 0.68rem;
+          font-weight: 900;
+          letter-spacing: 0.12em;
+          text-decoration: none;
+          text-transform: uppercase;
         }
 
         /* NUMBERS */
@@ -1230,8 +1373,13 @@ export default function AdvertisePage() {
 
         @media (max-width: 900px) {
           .guiropa-advertise-hero__grid,
-          .guiropa-advertise-period__grid {
+          .guiropa-advertise-period__grid,
+          .guiropa-advertise-promo__content {
             grid-template-columns: 1fr;
+          }
+
+          .guiropa-advertise-promo__offer {
+            min-width: 0;
           }
 
           .guiropa-advertise-emblem {
@@ -1270,6 +1418,14 @@ export default function AdvertisePage() {
           .guiropa-advertise-extra,
           .guiropa-advertise-materials {
             grid-template-columns: 1fr;
+          }
+
+          .guiropa-advertise-promo__image {
+            aspect-ratio: 4 / 5;
+          }
+
+          .guiropa-advertise-promo__content {
+            padding: 1.4rem;
           }
 
           .guiropa-advertise-metric,
@@ -1321,6 +1477,47 @@ export default function AdvertisePage() {
                 loading="eager"
                 decoding="async"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="guiropa-advertise-promo">
+        <div className="guiropa-advertise-shell">
+          <div className="guiropa-advertise-promo__frame">
+            <figure className="guiropa-advertise-promo__image-wrap">
+              <img
+                className="guiropa-advertise-promo__image"
+                src={ADVERTISING_ART}
+                alt={copy.promoTitle}
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
+
+            <div className="guiropa-advertise-promo__content">
+              <div className="guiropa-advertise-promo__copy">
+                <span className="guiropa-advertise-eyebrow">
+                  {copy.promoEyebrow}
+                </span>
+
+                <h2>{copy.promoTitle}</h2>
+                <p>{copy.promoLead}</p>
+              </div>
+
+              <div className="guiropa-advertise-promo__offer">
+                <div className="guiropa-advertise-promo__badge">
+                  <strong>{copy.promoBadge}</strong>
+                  <span>{copy.promoBadgeText}</span>
+                </div>
+
+                <a
+                  href="#guiropa-advertise-contact"
+                  className="guiropa-advertise-promo__cta"
+                >
+                  {copy.promoCta}
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1485,7 +1682,10 @@ export default function AdvertisePage() {
         </div>
       </section>
 
-      <section className="guiropa-advertise-contact">
+      <section
+        id="guiropa-advertise-contact"
+        className="guiropa-advertise-contact"
+      >
         <div className="guiropa-advertise-shell">
           <span className="guiropa-advertise-eyebrow">
             {copy.contactEyebrow}
