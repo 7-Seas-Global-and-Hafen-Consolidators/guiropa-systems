@@ -872,11 +872,11 @@ export default function PersistentPlayer() {
           </div>
 
           <strong className="guiropa-artdeco-player__title">
-            {displayTitle}
+            {displayArtist || displayTitle || "GUIROPA RADIO"}
           </strong>
 
           <span className="guiropa-artdeco-player__artist">
-            {displayArtist}
+            LIVE
           </span>
         </div>
 
