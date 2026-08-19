@@ -8,14 +8,12 @@ import {
   useState,
 } from "react";
 
-import { assetUrl } from "../utils/assetUrl.js";
-
 /* =========================================================
    GUIROPA RADIO — GLOBAL RANDOM LIVE PLAYER
    ---------------------------------------------------------
-   Uses the local catalog in client/public/audio/radio/.
-   Original uploaded filenames are preserved.
-   Playback is random and automatically advances on "ended".
+   Local catalog: client/public/audio/radio/
+   Random playback with automatic advance.
+   Original filenames are preserved.
    ========================================================= */
 
 const GUIROPA_DEFAULT_VOLUME = 0.82;
@@ -154,7 +152,7 @@ function sameTrack(a, b) {
 }
 
 function trackUrl(file) {
-  return assetUrl(`audio/radio/${encodeURIComponent(file)}`);
+  return `/audio/radio/${encodeURIComponent(file)}`;
 }
 
 function pickRandomIndex(currentIndex = -1) {
@@ -175,6 +173,13 @@ export function RadioPlayerProvider({ children }) {
   const audioRef = useRef(null);
   const currentIndexRef = useRef(-1);
   const wantsPlaybackRef = useRef(false);
+  const nowPlayingRef = useRef({
+    title: "",
+    artist: "",
+    artwork: "",
+    file: "",
+  });
+  const advanceRef = useRef(null);
 
   const [status, setStatus] = useState("ready");
   const [isPlaying, setIsPlaying] = useState(false);
@@ -198,14 +203,12 @@ export function RadioPlayerProvider({ children }) {
     () => safeRead(GUIROPA_STORAGE.favorite, "false") === "true"
   );
 
-  const [nowPlaying, setNowPlaying] = useState({
-    title: "",
-    artist: "",
-    artwork: "",
-    file: "",
-  });
+  const [nowPlaying, setNowPlayingState] = useState(
+    nowPlayingRef.current
+  );
 
-  const [recentTracks, setRecentTracks] = useState(readRecentTracks);
+  const [recentTracks, setRecentTracks] =
+    useState(readRecentTracks);
 
   const addToHistory = useCallback((track) => {
     if (!track?.file) return;
@@ -239,6 +242,11 @@ export function RadioPlayerProvider({ children }) {
     });
   }, []);
 
+  const setNowPlaying = useCallback((track) => {
+    nowPlayingRef.current = track;
+    setNowPlayingState(track);
+  }, []);
+
   const loadTrackByIndex = useCallback(
     (index, { rememberPrevious = true } = {}) => {
       const audio = audioRef.current;
@@ -246,27 +254,27 @@ export function RadioPlayerProvider({ children }) {
 
       if (!audio || !track) return null;
 
-      if (rememberPrevious && nowPlaying.file) {
-        addToHistory(nowPlaying);
+      const previous = nowPlayingRef.current;
+
+      if (rememberPrevious && previous?.file) {
+        addToHistory(previous);
       }
 
       currentIndexRef.current = index;
 
-      const nextNowPlaying = {
+      setNowPlaying({
         title: "LIVE",
         artist: track.artist,
         artwork: "",
         file: track.file,
-      };
-
-      setNowPlaying(nextNowPlaying);
+      });
 
       audio.src = trackUrl(track.file);
       audio.load();
 
       return track;
     },
-    [addToHistory, nowPlaying]
+    [addToHistory, setNowPlaying]
   );
 
   const playRandomTrack = useCallback(
@@ -278,18 +286,20 @@ export function RadioPlayerProvider({ children }) {
         return;
       }
 
-      const nextIndex = pickRandomIndex(currentIndexRef.current);
+      const nextIndex =
+        pickRandomIndex(currentIndexRef.current);
 
       loadTrackByIndex(nextIndex, { rememberPrevious });
 
       try {
+        wantsPlaybackRef.current = true;
         setIsLoading(true);
         setStatus("loading");
-        wantsPlaybackRef.current = true;
 
         await audio.play();
       } catch (error) {
         console.warn("GUIROPA local audio play failed:", error);
+
         setIsPlaying(false);
         setIsLoading(false);
         setStatus("error");
@@ -298,12 +308,17 @@ export function RadioPlayerProvider({ children }) {
     [loadTrackByIndex]
   );
 
+  advanceRef.current = playRandomTrack;
+
   useEffect(() => {
     const audio = new Audio();
 
     audio.preload = "metadata";
-    audio.volume = volume;
-    audio.muted = isMuted;
+    audio.volume = Number(
+      safeRead(GUIROPA_STORAGE.volume, GUIROPA_DEFAULT_VOLUME)
+    );
+    audio.muted =
+      safeRead(GUIROPA_STORAGE.muted, "false") === "true";
 
     audioRef.current = audio;
 
@@ -331,7 +346,7 @@ export function RadioPlayerProvider({ children }) {
 
     function handleEnded() {
       if (wantsPlaybackRef.current) {
-        playRandomTrack();
+        advanceRef.current?.();
       }
     }
 
@@ -344,9 +359,9 @@ export function RadioPlayerProvider({ children }) {
 
         window.setTimeout(() => {
           if (wantsPlaybackRef.current) {
-            playRandomTrack();
+            advanceRef.current?.();
           }
-        }, 800);
+        }, 600);
       } else {
         setStatus("error");
       }
@@ -372,7 +387,7 @@ export function RadioPlayerProvider({ children }) {
 
       audioRef.current = null;
     };
-  }, [playRandomTrack]);
+  }, []);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -412,12 +427,16 @@ export function RadioPlayerProvider({ children }) {
 
       if (currentIndexRef.current < 0 || !audio.src) {
         const firstIndex = pickRandomIndex(-1);
-        loadTrackByIndex(firstIndex, { rememberPrevious: false });
+
+        loadTrackByIndex(firstIndex, {
+          rememberPrevious: false,
+        });
       }
 
       await audio.play();
     } catch (error) {
       console.warn("GUIROPA local audio play failed:", error);
+
       setIsPlaying(false);
       setIsLoading(false);
       setStatus("error");
@@ -449,7 +468,9 @@ export function RadioPlayerProvider({ children }) {
   const nextTrack = useCallback(async () => {
     const audio = audioRef.current;
 
-    if (!audio || GUIROPA_LIVE_CATALOG.length === 0) return;
+    if (!audio || GUIROPA_LIVE_CATALOG.length === 0) {
+      return;
+    }
 
     const shouldResume =
       wantsPlaybackRef.current || isPlaying;
@@ -465,9 +486,11 @@ export function RadioPlayerProvider({ children }) {
       try {
         setIsLoading(true);
         setStatus("loading");
+
         await audio.play();
       } catch (error) {
         console.warn("GUIROPA next track failed:", error);
+
         setIsLoading(false);
         setStatus("error");
       }
