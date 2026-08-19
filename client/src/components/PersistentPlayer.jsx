@@ -22,6 +22,7 @@ export default function PersistentPlayer() {
     volume,
     isMuted,
     togglePlayback,
+    nextTrack,
     setVolume,
     toggleMute,
   } = useRadioPlayer();
@@ -502,6 +503,7 @@ export default function PersistentPlayer() {
           grid-template-columns:
             auto
             auto
+            auto
             auto;
 
           align-items: center;
@@ -575,6 +577,71 @@ export default function PersistentPlayer() {
         }
 
         .guiropa-artdeco-player__play:disabled {
+          opacity: 0.42;
+
+          cursor:
+            not-allowed;
+
+          transform: none;
+        }
+
+        .guiropa-artdeco-player__next {
+          width: 34px;
+          height: 34px;
+
+          display: grid;
+          place-items: center;
+
+          border:
+            1px solid
+            rgba(
+              201,
+              154,
+              69,
+              0.34
+            );
+
+          border-radius: 50%;
+
+          background:
+            #1d1711;
+
+          color:
+            #d5af69;
+
+          font-size: 11px;
+          font-weight: 900;
+          letter-spacing: -0.10em;
+
+          cursor: pointer;
+
+          transition:
+            transform 0.2s ease,
+            color 0.2s ease,
+            border-color 0.2s ease,
+            background 0.2s ease;
+        }
+
+        .guiropa-artdeco-player__next:hover {
+          transform:
+            translateY(-1px);
+
+          color:
+            #f0cf8c;
+
+          border-color:
+            rgba(
+              224,
+              187,
+              112,
+              0.76
+            );
+
+          background:
+            #241a12;
+        }
+
+        .guiropa-artdeco-player__next:disabled {
           opacity: 0.42;
 
           cursor:
@@ -792,6 +859,7 @@ export default function PersistentPlayer() {
           .guiropa-artdeco-player__controls {
             grid-template-columns:
               auto
+              auto
               auto;
 
             gap: 8px;
@@ -807,6 +875,12 @@ export default function PersistentPlayer() {
           .guiropa-artdeco-player__play {
             width: 42px;
             height: 42px;
+          }
+
+          .guiropa-artdeco-player__next {
+            width: 34px;
+            height: 34px;
+            font-size: 10px;
           }
 
           .guiropa-artdeco-player__open {
@@ -919,6 +993,20 @@ export default function PersistentPlayer() {
               : isPlaying
                 ? "Ⅱ"
                 : "▶"}
+          </button>
+
+          <button
+            type="button"
+            className="guiropa-artdeco-player__next"
+            onClick={nextTrack}
+            disabled={
+              !streamConfigured ||
+              isLoading
+            }
+            aria-label="Próxima faixa"
+            title="Próxima faixa"
+          >
+            ▶▶
           </button>
 
           <div className="guiropa-artdeco-player__volume">
