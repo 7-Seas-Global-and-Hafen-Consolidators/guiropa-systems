@@ -70,11 +70,11 @@ export default function PersistentPlayer() {
 
           width:
             min(
-              1080px,
+              995px,
               calc(100% - 30px)
             );
 
-          min-height: 94px;
+          min-height: 86px;
 
           transform:
             translateX(-50%);
@@ -82,7 +82,7 @@ export default function PersistentPlayer() {
           display: grid;
 
           grid-template-columns:
-            164px
+            150px
             minmax(210px, 1.25fr)
             minmax(250px, 1fr)
             auto;
@@ -231,7 +231,7 @@ export default function PersistentPlayer() {
           justify-content: center;
 
           padding:
-            16px 20px;
+            14px 17px;
         }
 
         .guiropa-artdeco-player__status {
@@ -348,7 +348,7 @@ export default function PersistentPlayer() {
           align-items: center;
 
           padding:
-            15px 20px;
+            13px 17px;
 
           border-left:
             1px solid
@@ -375,8 +375,8 @@ export default function PersistentPlayer() {
           width: 100%;
 
           padding:
-            14px 14px
-            13px;
+            12px 12px
+            11px;
 
           border:
             1px solid
@@ -508,15 +508,15 @@ export default function PersistentPlayer() {
 
           align-items: center;
 
-          gap: 13px;
+          gap: 11px;
 
           padding:
-            14px 18px;
+            12px 15px;
         }
 
         .guiropa-artdeco-player__play {
-          width: 50px;
-          height: 50px;
+          width: 46px;
+          height: 46px;
 
           display: grid;
 
@@ -779,9 +779,9 @@ export default function PersistentPlayer() {
         @media (max-width: 900px) {
           .guiropa-artdeco-player {
             grid-template-columns:
-              130px
-              minmax(180px, 1fr)
-              minmax(210px, 0.9fr)
+              120px
+              minmax(170px, 1fr)
+              minmax(195px, 0.9fr)
               auto;
           }
 
