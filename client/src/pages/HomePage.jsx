@@ -5,8 +5,12 @@ import ExploreHub from "../components/ExploreHub.jsx";
 import ActionHub from "../components/ActionHub.jsx";
 
 import { useLanguage } from "../i18n/LanguageContext.jsx";
+import { assetUrl } from "../utils/assetUrl.js";
 
 import marvinPortrait from "../assets/marvin.gaye.webp";
+
+const ADVERTISING_ART =
+  assetUrl("assets/guiropa-radio-anuncie-vintage-15-dias.png");
 
 const ARCHIVE_COPY = {
   pt: {
@@ -33,6 +37,33 @@ const ARCHIVE_COPY = {
 
     collection:
       "GUIROPA RADIO · THE ARCHIVES",
+
+    adEyebrow:
+      "PUBLICIDAD · GUIROPA RADIO",
+    adTitle:
+      "Tu negocio también puede estar aquí.",
+    adLead:
+      "15 días por nuestra cuenta. Prueba GUIROPA y coloca tu marca junto a la música, las historias y las personas que todavía prestan atención.",
+    adAction:
+      "ANÚNCIATE EN GUIROPA",
+
+    adEyebrow:
+      "ADVERTISING · GUIROPA RADIO",
+    adTitle:
+      "Your business could be here too.",
+    adLead:
+      "15 days on us. Try GUIROPA and put your brand alongside music, stories and people who still pay attention.",
+    adAction:
+      "ADVERTISE ON GUIROPA",
+
+    adEyebrow:
+      "PUBLICIDADE · GUIROPA RADIO",
+    adTitle:
+      "Seu negócio também pode estar aqui.",
+    adLead:
+      "15 dias por nossa conta. Experimente a GUIROPA e coloque sua marca no meio da música, das histórias e de quem ainda presta atenção.",
+    adAction:
+      "ANUNCIE NA GUIROPA",
   },
 
   en: {
@@ -569,13 +600,231 @@ export default function HomePage() {
             1rem;
         }
 
+
+        /* HOME ADVERTISING FEATURE */
+
+        .guiropa-home-ad {
+          --ghad-paper: #efe0c7;
+          --ghad-deep: #e4cca5;
+          --ghad-ink: #201913;
+          --ghad-soft: #756451;
+          --ghad-red: #b83224;
+          --ghad-gold: #c99a45;
+          --ghad-dark: #0d0b09;
+
+          padding: clamp(4rem, 7vw, 6.5rem) 0;
+
+          border-top: 1px solid rgba(78, 57, 38, 0.18);
+          border-bottom: 1px solid rgba(78, 57, 38, 0.18);
+
+          background:
+            linear-gradient(
+              180deg,
+              #f4e7d0 0%,
+              var(--ghad-paper) 100%
+            );
+        }
+
+        .guiropa-home-ad__shell {
+          width: min(1180px, calc(100% - 40px));
+          margin: 0 auto;
+        }
+
+        .guiropa-home-ad__frame {
+          overflow: hidden;
+
+          border:
+            1px solid
+            rgba(85, 59, 35, 0.28);
+
+          border-radius: 22px;
+
+          background:
+            linear-gradient(
+              180deg,
+              var(--ghad-paper),
+              var(--ghad-deep)
+            );
+
+          box-shadow:
+            0 26px 70px
+            rgba(65, 43, 26, 0.16);
+        }
+
+        .guiropa-home-ad__image {
+          display: block;
+          width: 100%;
+          height: auto;
+          max-height: 760px;
+          object-fit: contain;
+          background: #e7d3b2;
+        }
+
+        .guiropa-home-ad__content {
+          display: grid;
+
+          grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+
+          gap:
+            clamp(1.5rem, 5vw, 4rem);
+
+          align-items: end;
+
+          padding:
+            clamp(1.5rem, 4vw, 2.8rem);
+
+          border-top:
+            1px solid
+            rgba(85, 59, 35, 0.18);
+        }
+
+        .guiropa-home-ad__eyebrow {
+          display: block;
+
+          color:
+            var(--ghad-red);
+
+          font-size: 0.62rem;
+          font-weight: 900;
+
+          letter-spacing:
+            0.2em;
+
+          text-transform:
+            uppercase;
+        }
+
+        .guiropa-home-ad__title {
+          margin:
+            0.7rem
+            0
+            0;
+
+          font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+          font-size:
+            clamp(
+              2.5rem,
+              5.2vw,
+              5rem
+            );
+
+          font-weight:
+            400;
+
+          line-height:
+            0.96;
+
+          letter-spacing:
+            -0.05em;
+        }
+
+        .guiropa-home-ad__lead {
+          max-width:
+            760px;
+
+          margin:
+            1.1rem
+            0
+            0;
+
+          color:
+            var(--ghad-soft);
+
+          font-size:
+            clamp(
+              0.96rem,
+              1.5vw,
+              1.1rem
+            );
+
+          line-height:
+            1.7;
+        }
+
+        .guiropa-home-ad__action {
+          min-height:
+            52px;
+
+          display:
+            inline-flex;
+
+          align-items:
+            center;
+
+          justify-content:
+            center;
+
+          gap:
+            1.2rem;
+
+          padding:
+            0
+            20px;
+
+          border:
+            1px solid
+            var(--ghad-dark);
+
+          background:
+            var(--ghad-dark);
+
+          color:
+            #fff5e5;
+
+          font-size:
+            0.63rem;
+
+          font-weight:
+            900;
+
+          letter-spacing:
+            0.1em;
+
+          text-decoration:
+            none;
+
+          text-transform:
+            uppercase;
+
+          white-space:
+            nowrap;
+        }
+
+        .guiropa-home-ad__action span:last-child {
+          color:
+            var(--ghad-gold);
+
+          font-size:
+            1rem;
+        }
+
+        .guiropa-home-ad__action:hover {
+          border-color:
+            var(--ghad-red);
+
+          background:
+            var(--ghad-red);
+        }
+
         @media (
           max-width:
           900px
         ) {
-          .guiropa-home-archive__grid {
+          .guiropa-home-archive__grid,
+          .guiropa-home-ad__content {
             grid-template-columns:
               1fr;
+          }
+
+          .guiropa-home-ad__action {
+            justify-self:
+              start;
           }
 
           .guiropa-home-archive__image {
@@ -593,12 +842,28 @@ export default function HomePage() {
           max-width:
           600px
         ) {
-          .guiropa-home-archive__shell {
+          .guiropa-home-archive__shell,
+          .guiropa-home-ad__shell {
             width:
               min(
                 100% - 24px,
                 650px
               );
+          }
+
+          .guiropa-home-ad__frame {
+            border-radius:
+              14px;
+          }
+
+          .guiropa-home-ad__content {
+            padding:
+              1.25rem;
+          }
+
+          .guiropa-home-ad__action {
+            width:
+              100%;
           }
 
           .guiropa-home-archive__image {
@@ -638,6 +903,44 @@ export default function HomePage() {
       <Hero />
 
       <ExploreHub />
+
+      <section className="guiropa-home-ad">
+        <div className="guiropa-home-ad__shell">
+          <div className="guiropa-home-ad__frame">
+            <img
+              className="guiropa-home-ad__image"
+              src={ADVERTISING_ART}
+              alt={copy.adTitle}
+              loading="lazy"
+              decoding="async"
+            />
+
+            <div className="guiropa-home-ad__content">
+              <div>
+                <span className="guiropa-home-ad__eyebrow">
+                  {copy.adEyebrow}
+                </span>
+
+                <h2 className="guiropa-home-ad__title">
+                  {copy.adTitle}
+                </h2>
+
+                <p className="guiropa-home-ad__lead">
+                  {copy.adLead}
+                </p>
+              </div>
+
+              <Link
+                className="guiropa-home-ad__action"
+                to="/anuncie"
+              >
+                <span>{copy.adAction}</span>
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="guiropa-home-archive">
         <div className="guiropa-home-archive__shell">
