@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 
 import HomePage from "./pages/HomePage.jsx";
+import MarvinGayePage from "./pages/MarvinGayePage.jsx";
 
 import ListenPage from "./ListenPage.jsx";
 import SchedulePage from "./SchedulePage.jsx";
@@ -16,6 +17,8 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
+
+        <Route path="marvin-gaye" element={<MarvinGayePage />} />
 
         <Route path="ouvir" element={<ListenPage />} />
         <Route path="listen" element={<ListenPage />} />
