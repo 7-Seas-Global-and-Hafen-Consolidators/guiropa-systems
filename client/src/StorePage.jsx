@@ -1,1055 +1,185 @@
-import {
-  Link,
-  useLocation,
-} from "react-router-dom";
+import { useLanguage } from "./i18n/LanguageContext.jsx";
+import { GUIROPA_EMBLEM_SRC } from "./data/brandAssets.js";
 
-import { useRadioPlayer } from "../audio/RadioPlayerContext.jsx";
-import { assetUrl } from "../utils/assetUrl.js";
+const PRODUCTS = [
+  { code: "GR-P001", type: "Camiseta", title: "Woodstock 69 Poster", price: "R$ 78,89", image: "https://www.passportradio.online/images/store/woodstock-69.png", buy: "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20comprar%20Woodstock%2069%20Poster%20por%20R%24%2078%2C89%20pela%20GUIROPA%20RADIO.%20Pode%20me%20passar%20disponibilidade%20e%20o%20link%20de%20pagamento%3F" },
+  { code: "GR-P002", type: "Camiseta", title: "The Cure — Boys Don't Cry", price: "R$ 78,89", image: "https://www.passportradio.online/images/store/the-cure-boys-dont-cry.png", buy: "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20comprar%20The%20Cure%20%E2%80%94%20Boys%20Don%27t%20Cry%20por%20R%24%2078%2C89%20pela%20GUIROPA%20RADIO.%20Pode%20me%20passar%20disponibilidade%20e%20o%20link%20de%20pagamento%3F" },
+  { code: "GR-P003", type: "Camiseta", title: "Def Leppard — Hysteria", price: "R$ 78,89", image: "https://www.passportradio.online/images/store/def-leppard-hysteria.png", buy: "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20comprar%20Def%20Leppard%20%E2%80%94%20Hysteria%20por%20R%24%2078%2C89%20pela%20GUIROPA%20RADIO.%20Pode%20me%20passar%20disponibilidade%20e%20o%20link%20de%20pagamento%3F" },
+  { code: "GR-P004", type: "Tênis · Cano alto", title: "ABBA", price: "R$ 249,90", image: "https://www.passportradio.online/images/store/tenis/Screenshot%202026-08-10%20at%2022-04-45%20ABBA%20shoes%20%E2%80%93%20Bornrocker%20Brand.png", buy: "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20comprar%20ABBA%20por%20R%24%20249%2C90%20pela%20GUIROPA%20RADIO.%20Pode%20me%20passar%20disponibilidade%20e%20o%20link%20de%20pagamento%3F" },
+  { code: "GR-P005", type: "Tênis · Cano alto", title: "Van Halen", price: "R$ 249,90", image: "https://www.passportradio.online/images/store/tenis/Screenshot%202026-08-10%20at%2022-05-48%20Van%20Halen%20shoes%20%E2%80%93%20Bornrocker%20Brand.png", buy: "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20comprar%20Van%20Halen%20por%20R%24%20249%2C90%20pela%20GUIROPA%20RADIO.%20Pode%20me%20passar%20disponibilidade%20e%20o%20link%20de%20pagamento%3F" },
+  { code: "GR-P006", type: "Tênis · Cano baixo", title: "Stevie Nicks", price: "R$ 199,90", image: "https://www.passportradio.online/images/store/tenis/Screenshot%202026-08-10%20at%2022-06-25%20Stevie%20Nicks%20shoes%20%E2%80%93%20Bornrocker%20Brand.png", buy: "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20comprar%20Stevie%20Nicks%20por%20R%24%20199%2C90%20pela%20GUIROPA%20RADIO.%20Pode%20me%20passar%20disponibilidade%20e%20o%20link%20de%20pagamento%3F" },
+  { code: "GR-P007", type: "Tênis · Cano alto", title: "David Bowie", price: "R$ 249,90", image: "https://www.passportradio.online/images/store/tenis/Screenshot%202026-08-10%20at%2022-07-09%20DAVID%20BOWIE%20limited%20editiob%20shoes%20%E2%80%93%20Bornrocker%20Brand.png", buy: "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20comprar%20David%20Bowie%20por%20R%24%20249%2C90%20pela%20GUIROPA%20RADIO.%20Pode%20me%20passar%20disponibilidade%20e%20o%20link%20de%20pagamento%3F" },
+  { code: "GR-P008", type: "Tênis · Cano alto", title: "Bon Jovi", price: "R$ 249,90", image: "https://www.passportradio.online/images/store/tenis/Screenshot%202026-08-10%20at%2022-07-33%20BON%20JOVI%20shoes%20%E2%80%93%20Bornrocker%20Brand.png", buy: "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20comprar%20Bon%20Jovi%20por%20R%24%20249%2C90%20pela%20GUIROPA%20RADIO.%20Pode%20me%20passar%20disponibilidade%20e%20o%20link%20de%20pagamento%3F" },
+  { code: "GR-P009", type: "Tênis · Cano alto", title: "Elvis Presley", price: "R$ 249,90", image: "https://www.passportradio.online/images/store/tenis/Screenshot%202026-08-10%20at%2022-10-18%20ELVIS%20PRESLEY%20shoes%20%E2%80%93%20Bornrocker%20Brand.png", buy: "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20comprar%20Elvis%20Presley%20por%20R%24%20249%2C90%20pela%20GUIROPA%20RADIO.%20Pode%20me%20passar%20disponibilidade%20e%20o%20link%20de%20pagamento%3F" },
+  { code: "GR-P010", type: "Tênis · Cano alto", title: "U2", price: "R$ 249,90", image: "https://www.passportradio.online/images/store/tenis/Screenshot%202026-08-10%20at%2022-09-33%20U2%20shoes%20%E2%80%93%20Bornrocker%20Brand.png", buy: "https://wa.me/48732099369?text=Ol%C3%A1%21%20Quero%20comprar%20U2%20por%20R%24%20249%2C90%20pela%20GUIROPA%20RADIO.%20Pode%20me%20passar%20disponibilidade%20e%20o%20link%20de%20pagamento%3F" }
+];
 
-const PLAYER_ART =
-  assetUrl("assets/guiropa-radio-player-artdeco.jpg");
-
-export default function PersistentPlayer() {
-  const location = useLocation();
-
-  const {
-    streamConfigured,
-    statusText,
-    isPlaying,
-    isLoading,
-    displayTitle,
-    displayArtist,
-    volume,
-    isMuted,
-    togglePlayback,
-    nextTrack,
-    setVolume,
-    toggleMute,
-  } = useRadioPlayer();
-
-  const normalizedPath =
-    location.pathname
-      .replace(/\/+$/, "")
-      .toLowerCase();
-
-  const isListenPage =
-    normalizedPath === "/ouvir" ||
-    normalizedPath === "/listen";
-
-  if (isListenPage) {
-    return null;
+const COPY = {
+  pt: {
+    eyebrow: "GUIROPA RADIO · LOJA",
+    title: "Loja.",
+    lead: "1950 — 1990. Música, estrada, estilo e objetos que atravessam décadas.",
+    introEyebrow: "GUIROPA STORE",
+    introTitle: "Entrou. Viu. Gostou. Comprou.",
+    introLead: "Uma seleção inicial trazida da operação Passport Radio para colocar a loja GUIROPA para funcionar agora.",
+    productsTitle: "Seleção disponível.",
+    buy: "COMPRAR",
+    installments: "Pagamento facilitado · condições no atendimento",
+    operator: "Operação comercial e pagamentos: 7 Seas Global.",
+    finalEyebrow: "GET UP. TURN IT UP. GUIROPA.",
+    finalTitle: "A rádio sai das caixas de som.",
+    finalLead: "Peças escolhidas para conversar com o universo musical e visual da GUIROPA."
+  },
+  en: {
+    eyebrow: "GUIROPA RADIO · STORE",
+    title: "Store.",
+    lead: "1950 — 1990. Music, road, style and objects crossing decades.",
+    introEyebrow: "GUIROPA STORE",
+    introTitle: "See it. Like it. Get it.",
+    introLead: "An initial selection brought from the Passport Radio operation to put the GUIROPA store live now.",
+    productsTitle: "Available selection.",
+    buy: "BUY",
+    installments: "Flexible payment · conditions via direct service",
+    operator: "Commercial operation and payments: 7 Seas Global.",
+    finalEyebrow: "GET UP. TURN IT UP. GUIROPA.",
+    finalTitle: "The radio moves beyond the speakers.",
+    finalLead: "Pieces selected to match GUIROPA's musical and visual universe."
+  },
+  es: {
+    eyebrow: "GUIROPA RADIO · TIENDA",
+    title: "Tienda.",
+    lead: "1950 — 1990. Música, carretera, estilo y objetos que atraviesan décadas.",
+    introEyebrow: "GUIROPA STORE",
+    introTitle: "Entró. Vio. Gustó. Compró.",
+    introLead: "Una selección inicial traída de la operación Passport Radio para poner la tienda GUIROPA en marcha ahora.",
+    productsTitle: "Selección disponible.",
+    buy: "COMPRAR",
+    installments: "Pago facilitado · condiciones por atención directa",
+    operator: "Operación comercial y pagos: 7 Seas Global.",
+    finalEyebrow: "GET UP. TURN IT UP. GUIROPA.",
+    finalTitle: "La radio sale de los altavoces.",
+    finalLead: "Piezas elegidas para conversar con el universo musical y visual de GUIROPA."
   }
+};
+
+export default function StorePage() {
+  const { lang } = useLanguage();
+  const copy = COPY[lang] || COPY.pt;
 
   return (
-    <>
+    <main className="guiropa-store-page">
       <style>{`
-        /* =====================================================
-           GUIROPA RADIO — ART DECO PERSISTENT PLAYER
-           Preto + ouro envelhecido + âmbar.
-           Sem alterar o motor de áudio.
-           ===================================================== */
-
-        .guiropa-artdeco-player {
-          --gr-black: #0d0c0b;
-          --gr-black-2: #161310;
-          --gr-black-3: #211a14;
-
-          --gr-gold: #c99a45;
-          --gr-gold-light: #e0bb70;
-          --gr-gold-dark: #76501f;
-
-          --gr-amber: #d68a23;
-          --gr-red: #bd3828;
-
-          position: fixed;
-
-          z-index: 9999;
-
-          left: 50%;
-          bottom: 18px;
-
-          width:
-            min(
-              1020px,
-              calc(100% - 30px)
-            );
-
-          min-height: 84px;
-
-          transform:
-            translateX(-50%);
-
-          display: grid;
-
-          grid-template-columns:
-            146px
-            minmax(210px, 1.25fr)
-            minmax(250px, 1fr)
-            auto;
-
-          align-items: stretch;
-
-          overflow: hidden;
-
-          border:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.68
-            );
-
-          border-radius: 14px;
-
-          background:
-            linear-gradient(
-              180deg,
-              #171411 0%,
-              #0c0b0a 55%,
-              #15110e 100%
-            );
-
-          color: #f2e3c6;
-
-          box-shadow:
-            0 24px 72px
-            rgba(
-              39,
-              26,
-              15,
-              0.34
-            ),
-            inset
-            0 1px 0
-            rgba(
-              240,
-              197,
-              113,
-              0.13
-            );
-
-          isolation: isolate;
-        }
-
-        .guiropa-artdeco-player::before {
-          content: "";
-
-          position: absolute;
-
-          inset: 5px;
-
-          z-index: -1;
-
-          pointer-events: none;
-
-          border:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.20
-            );
-
-          border-radius: 10px;
-        }
-
-        /* =========================
-           PLACA ART DÉCO
-           ========================= */
-
-        .guiropa-artdeco-player__art {
-          position: relative;
-
-          min-width: 0;
-
-          overflow: hidden;
-
-          border-right:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.28
-            );
-
-          background:
-            #0e0d0c;
-        }
-
-        .guiropa-artdeco-player__art img {
-          display: block;
-
-          width: 100%;
-          height: 100%;
-
-          object-fit: cover;
-
-          object-position:
-            13% center;
-
-          filter:
-            brightness(0.98)
-            contrast(1.06)
-            saturate(1.04);
-        }
-
-        .guiropa-artdeco-player__art::after {
-          content: "";
-
-          position: absolute;
-
-          inset: 0;
-
-          pointer-events: none;
-
-          background:
-            linear-gradient(
-              90deg,
-              transparent 58%,
-              rgba(
-                13,
-                12,
-                11,
-                0.72
-              ) 100%
-            );
-        }
-
-        /* =========================
-           INFORMAÇÃO
-           ========================= */
-
-        .guiropa-artdeco-player__info {
-          min-width: 0;
-
-          display: flex;
-          flex-direction: column;
-
-          justify-content: center;
-
-          padding:
-            13px 17px;
-        }
-
-        .guiropa-artdeco-player__status {
-          display: flex;
-
-          align-items: center;
-
-          gap: 8px;
-
-          margin-bottom: 7px;
-
-          color:
-            var(--gr-gold-light);
-
-          font-size: 8px;
-
-          font-weight: 900;
-
-          letter-spacing:
-            0.18em;
-
-          text-transform:
-            uppercase;
-        }
-
-        .guiropa-artdeco-player__dot {
-          width: 7px;
-          height: 7px;
-
-          flex: 0 0 auto;
-
-          border-radius: 50%;
-
-          background:
-            var(--gr-red);
-
-          box-shadow:
-            0 0 0 4px
-            rgba(
-              189,
-              56,
-              40,
-              0.11
-            ),
-            0 0 12px
-            rgba(
-              189,
-              56,
-              40,
-              0.42
-            );
-        }
-
-        .guiropa-artdeco-player__title {
-          display: block;
-
-          overflow: hidden;
-
-          color:
-            #f2dfbb;
-
-          font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
-
-          font-size:
-            clamp(
-              1.05rem,
-              2vw,
-              1.42rem
-            );
-
-          font-weight: 400;
-
-          letter-spacing:
-            -0.02em;
-
-          text-overflow:
-            ellipsis;
-
-          white-space:
-            nowrap;
-        }
-
-        .guiropa-artdeco-player__artist {
-          display: block;
-
-          margin-top: 4px;
-
-          overflow: hidden;
-
-          color:
-            #a89170;
-
-          font-size: 9px;
-
-          text-overflow:
-            ellipsis;
-
-          white-space:
-            nowrap;
-        }
-
-        /* =========================
-           ESCALA 1950 — 1990
-           ========================= */
-
-        .guiropa-artdeco-player__dial {
-          position: relative;
-
-          display: flex;
-
-          align-items: center;
-
-          padding:
-            12px 16px;
-
-          border-left:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.16
-            );
-
-          border-right:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.16
-            );
-        }
-
-        .guiropa-artdeco-player__dial-box {
-          position: relative;
-
-          width: 100%;
-
-          padding:
-            11px 12px
-            10px;
-
-          border:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.38
-            );
-
-          border-radius: 8px;
-
-          background:
-            linear-gradient(
-              180deg,
-              #17120d,
-              #2a190c
-            );
-
-          box-shadow:
-            inset
-            0 0 18px
-            rgba(
-              214,
-              138,
-              35,
-              0.12
-            );
-        }
-
-        .guiropa-artdeco-player__years {
-          display: grid;
-
-          grid-template-columns:
-            repeat(5, 1fr);
-
-          gap: 3px;
-
-          color:
-            #d9b36b;
-
-          font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
-
-          font-size: 10px;
-
-          text-align: center;
-        }
-
-        .guiropa-artdeco-player__scale {
-          position: relative;
-
-          height: 17px;
-
-          margin-top: 8px;
-
-          border-top:
-            1px solid
-            rgba(
-              214,
-              138,
-              35,
-              0.70
-            );
-
-          background:
-            repeating-linear-gradient(
-              90deg,
-              transparent 0,
-              transparent 8px,
-              rgba(
-                214,
-                138,
-                35,
-                0.72
-              ) 9px,
-              rgba(
-                214,
-                138,
-                35,
-                0.72
-              ) 10px
-            );
-        }
-
-        .guiropa-artdeco-player__needle {
-          position: absolute;
-
-          left: 50%;
-          top: 3px;
-
-          width: 2px;
-          height: 28px;
-
-          transform:
-            translateX(-50%);
-
-          background:
-            linear-gradient(
-              180deg,
-              #ffcf73,
-              #c4611e
-            );
-
-          box-shadow:
-            0 0 9px
-            rgba(
-              255,
-              165,
-              56,
-              0.68
-            );
-        }
-
-        /* =========================
-           CONTROLES
-           ========================= */
-
-        .guiropa-artdeco-player__controls {
-          display: grid;
-
-          grid-template-columns:
-            auto
-            auto
-            auto
-            auto;
-
-          align-items: center;
-
-          gap: 11px;
-
-          padding:
-            11px 14px;
-        }
-
-        .guiropa-artdeco-player__play {
-          width: 46px;
-          height: 46px;
-
-          display: grid;
-
-          place-items: center;
-
-          border:
-            1px solid
-            #a9782e;
-
-          border-radius: 50%;
-
-          background:
-            radial-gradient(
-              circle at 35% 30%,
-              #e4bb70 0%,
-              #b27e31 36%,
-              #65431d 76%,
-              #2a1b0e 100%
-            );
-
-          color:
-            #160f09;
-
-          font-size: 16px;
-
-          font-weight: 900;
-
-          cursor: pointer;
-
-          box-shadow:
-            inset
-            0 1px 0
-            rgba(
-              255,
-              238,
-              196,
-              0.42
-            ),
-            0 5px 12px
-            rgba(
-              0,
-              0,
-              0,
-              0.30
-            );
-
-          transition:
-            transform 0.2s ease,
-            filter 0.2s ease;
-        }
-
-        .guiropa-artdeco-player__play:hover {
-          transform:
-            translateY(-1px);
-
-          filter:
-            brightness(1.08);
-        }
-
-        .guiropa-artdeco-player__play:disabled {
-          opacity: 0.42;
-
-          cursor:
-            not-allowed;
-
-          transform: none;
-        }
-
-        .guiropa-artdeco-player__next {
-          width: 34px;
-          height: 34px;
-
-          display: grid;
-          place-items: center;
-
-          border:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.34
-            );
-
-          border-radius: 50%;
-
-          background:
-            #1d1711;
-
-          color:
-            #d5af69;
-
-          font-size: 11px;
-          font-weight: 900;
-          letter-spacing: -0.10em;
-
-          cursor: pointer;
-
-          transition:
-            transform 0.2s ease,
-            color 0.2s ease,
-            border-color 0.2s ease,
-            background 0.2s ease;
-        }
-
-        .guiropa-artdeco-player__next:hover {
-          transform:
-            translateY(-1px);
-
-          color:
-            #f0cf8c;
-
-          border-color:
-            rgba(
-              224,
-              187,
-              112,
-              0.76
-            );
-
-          background:
-            #241a12;
-        }
-
-        .guiropa-artdeco-player__next:disabled {
-          opacity: 0.42;
-
-          cursor:
-            not-allowed;
-
-          transform: none;
-        }
-
-        .guiropa-artdeco-player__volume {
-          display: flex;
-
-          align-items: center;
-
-          gap: 8px;
-        }
-
-        .guiropa-artdeco-player__mute {
-          width: 32px;
-          height: 32px;
-
-          display: grid;
-
-          place-items: center;
-
-          border:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.28
-            );
-
-          border-radius: 50%;
-
-          background:
-            #1d1711;
-
-          color:
-            #d5af69;
-
-          cursor: pointer;
-        }
-
-        .guiropa-artdeco-player__volume input {
-          width: 78px;
-
-          accent-color:
-            var(--gr-gold);
-
-          cursor: pointer;
-        }
-
-        .guiropa-artdeco-player__open {
-          min-height: 40px;
-
-          display: inline-flex;
-
-          align-items: center;
-
-          justify-content: center;
-
-          padding:
-            0 13px;
-
-          border:
-            1px solid
-            rgba(
-              201,
-              154,
-              69,
-              0.55
-            );
-
-          color:
-            #e1bd76;
-
-          background:
-            linear-gradient(
-              180deg,
-              rgba(
-                201,
-                154,
-                69,
-                0.08
-              ),
-              transparent
-            );
-
-          font-size: 8px;
-
-          font-weight: 900;
-
-          letter-spacing:
-            0.13em;
-
-          text-decoration: none;
-
-          text-transform:
-            uppercase;
-
-          white-space: nowrap;
-
-          transition:
-            color 0.2s ease,
-            background 0.2s ease,
-            border-color 0.2s ease;
-        }
-
-        .guiropa-artdeco-player__open:hover {
-          color:
-            #f6ddb0;
-
-          border-color:
-            rgba(
-              224,
-              187,
-              112,
-              0.82
-            );
-
-          background:
-            rgba(
-              201,
-              154,
-              69,
-              0.11
-            );
-        }
-
-        /* =========================
-           TABLET
-           ========================= */
-
-        @media (max-width: 900px) {
-          .guiropa-artdeco-player {
-            grid-template-columns:
-              130px
-              minmax(180px, 1fr)
-              minmax(210px, 0.9fr)
-              auto;
-          }
-
-          .guiropa-artdeco-player__info {
-            padding:
-              13px 15px;
-          }
-
-          .guiropa-artdeco-player__dial {
-            padding:
-              12px 14px;
-          }
-
-          .guiropa-artdeco-player__controls {
-            padding:
-              12px 13px;
-          }
-
-          .guiropa-artdeco-player__volume input {
-            width: 60px;
-          }
-        }
-
-        /* =========================
-           MOBILE
-           ========================= */
-
-        @media (max-width: 720px) {
-          .guiropa-artdeco-player {
-            bottom: 9px;
-
-            width:
-              calc(
-                100% - 18px
-              );
-
-            min-height: 72px;
-
-            grid-template-columns:
-              76px
-              minmax(0, 1fr)
-              auto;
-
-            border-radius: 11px;
-          }
-
-          .guiropa-artdeco-player__art {
-            min-height: 72px;
-          }
-
-          .guiropa-artdeco-player__info {
-            padding:
-              10px 11px;
-          }
-
-          .guiropa-artdeco-player__status {
-            margin-bottom: 3px;
-
-            font-size: 6px;
-          }
-
-          .guiropa-artdeco-player__title {
-            font-size:
-              0.92rem;
-          }
-
-          .guiropa-artdeco-player__artist {
-            font-size: 7px;
-          }
-
-          .guiropa-artdeco-player__dial {
-            display: none;
-          }
-
-          .guiropa-artdeco-player__controls {
-            grid-template-columns:
-              auto
-              auto
-              auto;
-
-            gap: 8px;
-
-            padding:
-              9px 10px;
-          }
-
-          .guiropa-artdeco-player__volume {
-            display: none;
-          }
-
-          .guiropa-artdeco-player__play {
-            width: 42px;
-            height: 42px;
-          }
-
-          .guiropa-artdeco-player__next {
-            width: 34px;
-            height: 34px;
-            font-size: 10px;
-          }
-
-          .guiropa-artdeco-player__open {
-            width: 34px;
-
-            min-height: 34px;
-
-            padding: 0;
-
-            font-size: 0;
-          }
-
-          .guiropa-artdeco-player__open::after {
-            content: "↗";
-
-            font-size: 14px;
-          }
-        }
-
-        @media (max-width: 430px) {
-          .guiropa-artdeco-player {
-            grid-template-columns:
-              62px
-              minmax(0, 1fr)
-              auto;
-          }
-
-          .guiropa-artdeco-player__art img {
-            object-position:
-              10% center;
-          }
-
-          .guiropa-artdeco-player__play {
-            width: 38px;
-            height: 38px;
-
-            font-size: 13px;
-          }
-        }
+        .guiropa-store-page{--paper:#f5ead6;--deep:#ead0a8;--ink:#211b16;--soft:#6e5f4d;--red:#b83224;--gold:#c99a45;--black:#0d0c0b;--line:rgba(76,56,39,.18);min-height:100vh;color:var(--ink);background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.62),transparent 36%),linear-gradient(180deg,#f8efdf 0%,var(--paper) 58%,var(--deep) 100%)}
+        .guiropa-store-page *{box-sizing:border-box}
+        .guiropa-store-shell{width:min(1180px,calc(100% - 40px));margin:0 auto}
+        .guiropa-store-eyebrow{display:block;color:var(--red);font-size:.66rem;font-weight:900;letter-spacing:.22em;text-transform:uppercase}
+        .guiropa-store-hero{padding:clamp(4.5rem,8vw,7rem) 0 clamp(4rem,7vw,6rem)}
+        .guiropa-store-hero__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,270px);gap:clamp(3rem,7vw,6rem);align-items:end}
+        .guiropa-store-hero h1{margin:.8rem 0 0;font-size:clamp(4.2rem,9vw,8.8rem);font-weight:800;line-height:.86;letter-spacing:-.065em}
+        .guiropa-store-hero p{max-width:760px;margin:2rem 0 0;color:var(--soft);font-size:clamp(1rem,1.7vw,1.26rem);line-height:1.65}
+        .guiropa-store-emblem{display:flex;justify-content:flex-end}
+        .guiropa-store-emblem img,.guiropa-store-final img{display:block;width:min(100%,220px);height:auto;border:1px solid rgba(201,154,69,.3);border-radius:28px;background:#0d0c0b;box-shadow:0 18px 36px rgba(53,35,22,.18)}
+        .guiropa-store-intro{padding:clamp(4rem,7vw,6.5rem) 0;background:linear-gradient(180deg,#181410,#0f0d0b);color:#f1dfbd}
+        .guiropa-store-intro__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,430px);gap:clamp(3rem,7vw,6rem);align-items:end}
+        .guiropa-store-intro .guiropa-store-eyebrow,.guiropa-store-final .guiropa-store-eyebrow{color:#e0bb70}
+        .guiropa-store-intro h2,.guiropa-store-products h2,.guiropa-store-final h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.045em}
+        .guiropa-store-intro h2{margin:.8rem 0 0;font-size:clamp(2.8rem,5.7vw,5.2rem);line-height:.98}
+        .guiropa-store-intro p{margin:0;color:#a99575;line-height:1.75}
+        .guiropa-store-products{padding:clamp(4.8rem,8vw,7rem) 0}
+        .guiropa-store-products__head{display:flex;justify-content:space-between;align-items:end;gap:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line)}
+        .guiropa-store-products__head h2{margin:0;font-size:clamp(2.7rem,5vw,4.8rem);line-height:1}
+        .guiropa-store-products__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-left:1px solid var(--line)}
+        .guiropa-store-product{display:flex;min-width:0;flex-direction:column;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,250,240,.22)}
+        .guiropa-store-product__media{aspect-ratio:1/1;overflow:hidden;background:#e8d7ba}
+        .guiropa-store-product__media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+        .guiropa-store-product:hover .guiropa-store-product__media img{transform:scale(1.025)}
+        .guiropa-store-product__body{display:flex;flex:1;flex-direction:column;padding:1.5rem}
+        .guiropa-store-product__code{font-size:.58rem;font-weight:900;letter-spacing:.15em;color:var(--gold)}
+        .guiropa-store-product__type{margin-top:1.4rem;color:var(--red);font-size:.58rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+        .guiropa-store-product h3{margin:.55rem 0 0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.55rem,2.6vw,2.2rem);font-weight:400;line-height:1.03}
+        .guiropa-store-product__price{margin-top:1.2rem;font-size:1.35rem;font-weight:900}
+        .guiropa-store-product__installments{margin:.35rem 0 1.4rem;color:var(--soft);font-size:.72rem;line-height:1.45}
+        .guiropa-store-product__buy{min-height:46px;display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding:0 14px;background:var(--ink);color:#fff8ed;text-decoration:none;font-size:.62rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+        .guiropa-store-product__buy strong{color:#e0bb70;font-size:1rem}
+        .guiropa-store-product__buy:hover{background:var(--red)}
+        .guiropa-store-operator{padding-top:1.2rem;color:rgba(110,95,77,.65);font-size:.58rem;font-weight:700;letter-spacing:.08em;text-align:right}
+        .guiropa-store-final{padding:clamp(5rem,8vw,7rem) 0;background:linear-gradient(180deg,#17130f,#0e0c0a);color:#f0dfbd}
+        .guiropa-store-final__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,290px);gap:clamp(3rem,7vw,6rem);align-items:center}
+        .guiropa-store-final h2{margin:.8rem 0 0;max-width:780px;font-size:clamp(2.8rem,5.8vw,5.4rem);line-height:.98}
+        .guiropa-store-final p{max-width:680px;margin:1.3rem 0 0;color:#a99575;line-height:1.7}
+        .guiropa-store-final img{margin-left:auto}
+        @media(max-width:900px){.guiropa-store-hero__grid,.guiropa-store-intro__grid,.guiropa-store-final__grid{grid-template-columns:1fr}.guiropa-store-emblem{justify-content:flex-start}.guiropa-store-final img{margin-left:0}.guiropa-store-products__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+        @media(max-width:600px){.guiropa-store-shell{width:min(100% - 24px,650px)}.guiropa-store-hero h1{font-size:clamp(3.8rem,18vw,6.5rem)}.guiropa-store-products__head{display:block}.guiropa-store-products__grid{grid-template-columns:1fr}}
       `}</style>
 
-      <aside
-        className="guiropa-artdeco-player"
-        aria-label="GUIROPA RADIO player global"
-      >
-        <div
-          className="guiropa-artdeco-player__art"
-          aria-hidden="true"
-        >
-          <img
-            src={PLAYER_ART}
-            alt=""
-            loading="eager"
-            decoding="async"
-          />
-        </div>
-
-        <div className="guiropa-artdeco-player__info">
-          <div className="guiropa-artdeco-player__status">
-            <span className="guiropa-artdeco-player__dot" />
-
-            {statusText}
-          </div>
-
-          <strong className="guiropa-artdeco-player__title">
-            {displayArtist || displayTitle || "GUIROPA RADIO"}
-          </strong>
-
-          <span className="guiropa-artdeco-player__artist">
-            LIVE
-          </span>
-        </div>
-
-        <div
-          className="guiropa-artdeco-player__dial"
-          aria-hidden="true"
-        >
-          <div className="guiropa-artdeco-player__dial-box">
-            <div className="guiropa-artdeco-player__years">
-              <span>1950</span>
-              <span>1960</span>
-              <span>1970</span>
-              <span>1980</span>
-              <span>1990</span>
+      <section className="guiropa-store-hero">
+        <div className="guiropa-store-shell">
+          <div className="guiropa-store-hero__grid">
+            <div>
+              <span className="guiropa-store-eyebrow">{copy.eyebrow}</span>
+              <h1>{copy.title}</h1>
+              <p>{copy.lead}</p>
             </div>
-
-            <div className="guiropa-artdeco-player__scale">
-              <span className="guiropa-artdeco-player__needle" />
+            <div className="guiropa-store-emblem" aria-hidden="true">
+              <img src={GUIROPA_EMBLEM_SRC} alt="" loading="eager" decoding="async" />
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="guiropa-artdeco-player__controls">
-          <button
-            type="button"
-            className="guiropa-artdeco-player__play"
-            onClick={togglePlayback}
-            disabled={
-              !streamConfigured ||
-              isLoading
-            }
-            aria-label={
-              isPlaying
-                ? "Pausar GUIROPA RADIO"
-                : "Ouvir GUIROPA RADIO"
-            }
-          >
-            {isLoading
-              ? "…"
-              : isPlaying
-                ? "Ⅱ"
-                : "▶"}
-          </button>
-
-          <button
-            type="button"
-            className="guiropa-artdeco-player__next"
-            onClick={nextTrack}
-            disabled={
-              !streamConfigured ||
-              isLoading
-            }
-            aria-label="Próxima faixa"
-            title="Próxima faixa"
-          >
-            ▶▶
-          </button>
-
-          <div className="guiropa-artdeco-player__volume">
-            <button
-              type="button"
-              className="guiropa-artdeco-player__mute"
-              onClick={toggleMute}
-              aria-label={
-                isMuted
-                  ? "Ativar som"
-                  : "Silenciar"
-              }
-            >
-              {isMuted ||
-              volume === 0
-                ? "×"
-                : "◖"}
-            </button>
-
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={volume}
-              onChange={
-                (event) =>
-                  setVolume(
-                    event.target.value
-                  )
-              }
-              aria-label="Volume"
-            />
+      <section className="guiropa-store-intro">
+        <div className="guiropa-store-shell">
+          <div className="guiropa-store-intro__grid">
+            <div>
+              <span className="guiropa-store-eyebrow">{copy.introEyebrow}</span>
+              <h2>{copy.introTitle}</h2>
+            </div>
+            <p>{copy.introLead}</p>
           </div>
-
-          <Link
-            to="/ouvir"
-            className="guiropa-artdeco-player__open"
-          >
-            Abrir player
-          </Link>
         </div>
-      </aside>
-    </>
+      </section>
+
+      <section className="guiropa-store-products">
+        <div className="guiropa-store-shell">
+          <div className="guiropa-store-products__head">
+            <h2>{copy.productsTitle}</h2>
+            <span className="guiropa-store-eyebrow">PASSPORT → GUIROPA</span>
+          </div>
+          <div className="guiropa-store-products__grid">
+            {PRODUCTS.map((product) => (
+              <article className="guiropa-store-product" key={product.code}>
+                <div className="guiropa-store-product__media">
+                  <img src={product.image} alt={product.title} loading="lazy" decoding="async" />
+                </div>
+                <div className="guiropa-store-product__body">
+                  <span className="guiropa-store-product__code">{product.code}</span>
+                  <span className="guiropa-store-product__type">{product.type}</span>
+                  <h3>{product.title}</h3>
+                  <div className="guiropa-store-product__price">{product.price}</div>
+                  <div className="guiropa-store-product__installments">{copy.installments}</div>
+                  <a className="guiropa-store-product__buy" href={product.buy} target="_blank" rel="noopener noreferrer">
+                    <span>{copy.buy}</span><strong aria-hidden="true">↗</strong>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="guiropa-store-operator">{copy.operator}</div>
+        </div>
+      </section>
+
+      <section className="guiropa-store-final">
+        <div className="guiropa-store-shell">
+          <div className="guiropa-store-final__grid">
+            <div>
+              <span className="guiropa-store-eyebrow">{copy.finalEyebrow}</span>
+              <h2>{copy.finalTitle}</h2>
+              <p>{copy.finalLead}</p>
+            </div>
+            <img src={GUIROPA_EMBLEM_SRC} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
