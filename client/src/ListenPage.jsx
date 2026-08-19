@@ -1,21 +1,6 @@
-import {
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
-
 import { useLanguage } from "./i18n/LanguageContext.jsx";
 import { assetUrl } from "./utils/assetUrl.js";
-
-const STREAM_URL =
-  import.meta.env.VITE_GUIROPA_STREAM_URL || "";
-
-const METADATA_URL =
-  import.meta.env.VITE_GUIROPA_METADATA_URL || "";
-
-const STORAGE_VOLUME = "guiropa-radio-volume";
-const STORAGE_FAVORITE = "guiropa-radio-favorite";
+import { useRadioPlayer } from "./audio/RadioPlayerContext.jsx";
 
 const PLAYER_ART =
   assetUrl("assets/guiropa-radio-player-artdeco.jpg");
@@ -23,46 +8,28 @@ const PLAYER_ART =
 const LISTEN_COPY = {
   pt: {
     kicker: "GUIROPA RADIO · NO AR",
-
     lead:
       "A música que atravessou gerações. 1950 → 1990. Soft rock, rock ballads, classic hits e grandes vozes.",
-
     nowPlaying: "TOCANDO AGORA",
-
     ready: "PRONTA",
     live: "AO VIVO",
-    connecting: "CONECTANDO",
-    reconnecting: "RECONECTANDO",
-    unavailable: "TRANSMISSÃO INDISPONÍVEL",
-    waiting: "STREAM EM PREPARAÇÃO",
-
-    stationFallback:
-      "1950 — 1990 · Soft Rock · Rock Ballads · Classic Hits",
-
+    connecting: "CARREGANDO",
+    unavailable: "ÁUDIO INDISPONÍVEL",
     favoriteAdd: "Adicionar aos favoritos",
     favoriteRemove: "Remover dos favoritos",
-
     play: "Ouvir GUIROPA RADIO",
     pause: "Pausar GUIROPA RADIO",
-
+    next: "Próxima faixa",
     mute: "Silenciar",
     unmute: "Ativar som",
     volume: "Volume",
-
-    engineReady:
-      "Motor do player pronto. Falta apenas informar o endpoint oficial do stream.",
-
-    streamReady:
-      "Transmissão preparada para conexão ao stream oficial.",
-
+    playerReady:
+      "Arquivo ao vivo conectado. A próxima faixa é sorteada automaticamente.",
     historyEyebrow: "HISTÓRICO",
     historyTitle: "Tocadas recentemente.",
-
     historyEmpty:
-      "O histórico aparecerá aqui automaticamente quando o endpoint de metadata estiver conectado.",
-
+      "As faixas tocadas recentemente aparecerão aqui durante a sessão.",
     decadesLabel: "Linha do tempo GUIROPA",
-
     decade50: "A faísca",
     decade60: "Tudo mudou",
     decade70: "Anos dourados",
@@ -72,46 +39,28 @@ const LISTEN_COPY = {
 
   en: {
     kicker: "GUIROPA RADIO · ON AIR",
-
     lead:
       "The music that crossed generations. 1950 → 1990. Soft rock, rock ballads, classic hits and great voices.",
-
     nowPlaying: "NOW PLAYING",
-
     ready: "READY",
     live: "LIVE",
-    connecting: "CONNECTING",
-    reconnecting: "RECONNECTING",
-    unavailable: "BROADCAST UNAVAILABLE",
-    waiting: "STREAM IN PREPARATION",
-
-    stationFallback:
-      "1950 — 1990 · Soft Rock · Rock Ballads · Classic Hits",
-
+    connecting: "LOADING",
+    unavailable: "AUDIO UNAVAILABLE",
     favoriteAdd: "Add to favourites",
     favoriteRemove: "Remove from favourites",
-
     play: "Listen to GUIROPA RADIO",
     pause: "Pause GUIROPA RADIO",
-
+    next: "Next track",
     mute: "Mute",
     unmute: "Unmute",
     volume: "Volume",
-
-    engineReady:
-      "The player engine is ready. Only the official stream endpoint remains to be configured.",
-
-    streamReady:
-      "Broadcast prepared for connection to the official stream.",
-
+    playerReady:
+      "Live archive connected. The next track is selected automatically.",
     historyEyebrow: "HISTORY",
     historyTitle: "Recently played.",
-
     historyEmpty:
-      "Listening history will appear here automatically when the metadata endpoint is connected.",
-
+      "Recently played tracks will appear here during the session.",
     decadesLabel: "GUIROPA timeline",
-
     decade50: "The Spark",
     decade60: "Everything Changed",
     decade70: "Golden Years",
@@ -121,46 +70,28 @@ const LISTEN_COPY = {
 
   es: {
     kicker: "GUIROPA RADIO · AL AIRE",
-
     lead:
       "La música que atravesó generaciones. 1950 → 1990. Soft rock, rock ballads, classic hits y grandes voces.",
-
     nowPlaying: "SONANDO AHORA",
-
     ready: "LISTA",
     live: "EN VIVO",
-    connecting: "CONECTANDO",
-    reconnecting: "RECONECTANDO",
-    unavailable: "TRANSMISIÓN NO DISPONIBLE",
-    waiting: "STREAM EN PREPARACIÓN",
-
-    stationFallback:
-      "1950 — 1990 · Soft Rock · Rock Ballads · Classic Hits",
-
+    connecting: "CARGANDO",
+    unavailable: "AUDIO NO DISPONIBLE",
     favoriteAdd: "Añadir a favoritos",
     favoriteRemove: "Eliminar de favoritos",
-
     play: "Escuchar GUIROPA RADIO",
     pause: "Pausar GUIROPA RADIO",
-
+    next: "Siguiente pista",
     mute: "Silenciar",
     unmute: "Activar sonido",
     volume: "Volumen",
-
-    engineReady:
-      "El motor del player está listo. Solo falta configurar el endpoint oficial del stream.",
-
-    streamReady:
-      "Transmisión preparada para conectarse al stream oficial.",
-
+    playerReady:
+      "Archivo en vivo conectado. La siguiente pista se selecciona automáticamente.",
     historyEyebrow: "HISTORIAL",
     historyTitle: "Reproducidas recientemente.",
-
     historyEmpty:
-      "El historial aparecerá aquí automáticamente cuando el endpoint de metadata esté conectado.",
-
+      "Las pistas reproducidas recientemente aparecerán aquí durante la sesión.",
     decadesLabel: "Línea del tiempo GUIROPA",
-
     decade50: "La chispa",
     decade60: "Todo cambió",
     decade70: "Años dorados",
@@ -168,126 +99,6 @@ const LISTEN_COPY = {
     decade90: "La última parada",
   },
 };
-
-function clamp(value, min, max) {
-  return Math.min(
-    Math.max(value, min),
-    max
-  );
-}
-
-function normalizeMetadata(data) {
-  if (
-    !data ||
-    typeof data !== "object"
-  ) {
-    return {
-      title: "",
-      artist: "",
-      artwork: "",
-    };
-  }
-
-  const source =
-    data.now_playing ||
-    data.nowPlaying ||
-    data.current ||
-    data.current_track ||
-    data.currentTrack ||
-    data.song ||
-    data.track ||
-    data;
-
-  if (typeof source === "string") {
-    const pieces =
-      source
-        .split(" - ")
-        .map((part) =>
-          part.trim()
-        );
-
-    if (pieces.length >= 2) {
-      return {
-        artist:
-          pieces.shift(),
-        title:
-          pieces.join(" - "),
-        artwork: "",
-      };
-    }
-
-    return {
-      title:
-        source.trim(),
-      artist: "",
-      artwork: "",
-    };
-  }
-
-  if (
-    !source ||
-    typeof source !== "object"
-  ) {
-    return {
-      title: "",
-      artist: "",
-      artwork: "",
-    };
-  }
-
-  const nestedSong =
-    source.song &&
-    typeof source.song === "object"
-      ? source.song
-      : {};
-
-  const title =
-    source.title ||
-    source.name ||
-    source.track ||
-    source.song_title ||
-    source.songTitle ||
-    nestedSong.title ||
-    nestedSong.name ||
-    "";
-
-  const artist =
-    source.artist ||
-    source.performer ||
-    source.author ||
-    source.song_artist ||
-    source.songArtist ||
-    nestedSong.artist ||
-    "";
-
-  const artwork =
-    source.artwork ||
-    source.art ||
-    source.cover ||
-    source.image ||
-    source.album_art ||
-    source.albumArt ||
-    nestedSong.artwork ||
-    nestedSong.art ||
-    "";
-
-  return {
-    title:
-      String(
-        title || ""
-      ).trim(),
-
-    artist:
-      String(
-        artist || ""
-      ).trim(),
-
-    artwork:
-      String(
-        artwork || ""
-      ).trim(),
-  };
-}
 
 export default function ListenPage() {
   const {
@@ -299,486 +110,40 @@ export default function ListenPage() {
     LISTEN_COPY[lang] ||
     LISTEN_COPY.pt;
 
-  const audioRef =
-    useRef(null);
-
-  const reconnectTimerRef =
-    useRef(null);
-
-  const [
-    isPlaying,
-    setIsPlaying,
-  ] = useState(false);
-
-  const [
-    isLoading,
-    setIsLoading,
-  ] = useState(false);
-
-  const [
-    isMuted,
-    setIsMuted,
-  ] = useState(false);
-
-  const [
-    volume,
-    setVolume,
-  ] = useState(() => {
-    if (
-      typeof window === "undefined"
-    ) {
-      return 0.82;
-    }
-
-    const saved =
-      Number(
-        localStorage.getItem(
-          STORAGE_VOLUME
-        )
-      );
-
-    if (
-      Number.isFinite(saved)
-    ) {
-      return clamp(
-        saved,
-        0,
-        1
-      );
-    }
-
-    return 0.82;
-  });
-
-  const [
+  const {
     status,
-    setStatus,
-  ] = useState(
-    STREAM_URL
-      ? "ready"
-      : "waiting"
-  );
-
-  const [
-    favorite,
-    setFavorite,
-  ] = useState(() => {
-    if (
-      typeof window === "undefined"
-    ) {
-      return false;
-    }
-
-    return (
-      localStorage.getItem(
-        STORAGE_FAVORITE
-      ) === "true"
-    );
-  });
-
-  const [
-    nowPlaying,
-    setNowPlaying,
-  ] = useState({
-    title: "",
-    artist: "",
-    artwork: "",
-  });
-
-  const [
-    recentTracks,
-    setRecentTracks,
-  ] = useState([]);
-
-  const displayTitle =
-    nowPlaying.title ||
-    "GUIROPA RADIO";
-
-  const displayArtist =
-    nowPlaying.artist ||
-    copy.stationFallback;
-
-  const statusText =
-    useMemo(() => {
-      switch (status) {
-        case "playing":
-          return copy.live;
-
-        case "loading":
-          return copy.connecting;
-
-        case "reconnecting":
-          return copy.reconnecting;
-
-        case "error":
-          return copy.unavailable;
-
-        case "waiting":
-          return copy.waiting;
-
-        default:
-          return copy.ready;
-      }
-    }, [
-      status,
-      copy,
-    ]);
-
-  useEffect(() => {
-    const audio =
-      audioRef.current;
-
-    if (!audio) {
-      return;
-    }
-
-    audio.volume =
-      volume;
-
-    audio.muted =
-      isMuted;
-  }, [
+    isPlaying,
+    isLoading,
     volume,
     isMuted,
-  ]);
+    favorite,
+    nowPlaying,
+    displayTitle,
+    displayArtist,
+    recentTracks,
+    togglePlayback,
+    nextTrack,
+    setVolume,
+    toggleMute,
+    toggleFavorite,
+    catalogSize,
+  } = useRadioPlayer();
 
-  useEffect(() => {
-    try {
-      localStorage.setItem(
-        STORAGE_VOLUME,
-        String(volume)
-      );
-    } catch {
-      // Ignora.
+  const statusText = (() => {
+    switch (status) {
+      case "playing":
+        return copy.live;
+      case "loading":
+        return copy.connecting;
+      case "error":
+        return copy.unavailable;
+      default:
+        return copy.ready;
     }
-  }, [volume]);
+  })();
 
-  useEffect(() => {
-    try {
-      localStorage.setItem(
-        STORAGE_FAVORITE,
-        String(favorite)
-      );
-    } catch {
-      // Ignora.
-    }
-  }, [favorite]);
-
-  useEffect(() => {
-    return () => {
-      if (
-        reconnectTimerRef.current
-      ) {
-        clearTimeout(
-          reconnectTimerRef.current
-        );
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!METADATA_URL) {
-      return undefined;
-    }
-
-    let cancelled =
-      false;
-
-    async function loadMetadata() {
-      try {
-        const separator =
-          METADATA_URL.includes("?")
-            ? "&"
-            : "?";
-
-        const response =
-          await fetch(
-            `${METADATA_URL}${separator}_=${Date.now()}`,
-            {
-              cache:
-                "no-store",
-            }
-          );
-
-        if (!response.ok) {
-          throw new Error(
-            `Metadata HTTP ${response.status}`
-          );
-        }
-
-        const data =
-          await response.json();
-
-        if (cancelled) {
-          return;
-        }
-
-        const next =
-          normalizeMetadata(
-            data
-          );
-
-        setNowPlaying(
-          (previous) => {
-            const changed =
-              next.title &&
-              (
-                next.title !==
-                  previous.title ||
-                next.artist !==
-                  previous.artist
-              );
-
-            if (
-              changed &&
-              previous.title
-            ) {
-              setRecentTracks(
-                (items) => {
-                  const entry = {
-                    id:
-                      `${previous.artist}-${previous.title}-${Date.now()}`,
-
-                    title:
-                      previous.title,
-
-                    artist:
-                      previous.artist,
-
-                    artwork:
-                      previous.artwork,
-                  };
-
-                  const filtered =
-                    items.filter(
-                      (item) =>
-                        !(
-                          item.title ===
-                            entry.title &&
-                          item.artist ===
-                            entry.artist
-                        )
-                    );
-
-                  return [
-                    entry,
-                    ...filtered,
-                  ].slice(
-                    0,
-                    5
-                  );
-                }
-              );
-            }
-
-            return {
-              title:
-                next.title ||
-                previous.title,
-
-              artist:
-                next.artist ||
-                previous.artist,
-
-              artwork:
-                next.artwork ||
-                previous.artwork,
-            };
-          }
-        );
-      } catch (error) {
-        console.warn(
-          "GUIROPA metadata unavailable:",
-          error
-        );
-      }
-    }
-
-    loadMetadata();
-
-    const interval =
-      setInterval(
-        loadMetadata,
-        15000
-      );
-
-    return () => {
-      cancelled =
-        true;
-
-      clearInterval(
-        interval
-      );
-    };
-  }, []);
-
-  async function playStream() {
-    const audio =
-      audioRef.current;
-
-    if (
-      !audio ||
-      !STREAM_URL
-    ) {
-      setStatus(
-        "waiting"
-      );
-
-      return;
-    }
-
-    try {
-      setIsLoading(
-        true
-      );
-
-      setStatus(
-        "loading"
-      );
-
-      if (!audio.src) {
-        audio.src =
-          STREAM_URL;
-      }
-
-      await audio.play();
-
-      setIsPlaying(
-        true
-      );
-
-      setStatus(
-        "playing"
-      );
-    } catch (error) {
-      console.warn(
-        "GUIROPA stream play failed:",
-        error
-      );
-
-      setIsPlaying(
-        false
-      );
-
-      setStatus(
-        "error"
-      );
-    } finally {
-      setIsLoading(
-        false
-      );
-    }
-  }
-
-  function pauseStream() {
-    const audio =
-      audioRef.current;
-
-    if (!audio) {
-      return;
-    }
-
-    audio.pause();
-
-    setIsPlaying(
-      false
-    );
-
-    setStatus(
-      STREAM_URL
-        ? "ready"
-        : "waiting"
-    );
-  }
-
-  function togglePlayback() {
-    if (isPlaying) {
-      pauseStream();
-    } else {
-      playStream();
-    }
-  }
-
-  function scheduleReconnect() {
-    if (
-      !STREAM_URL ||
-      reconnectTimerRef.current
-    ) {
-      return;
-    }
-
-    setStatus(
-      "reconnecting"
-    );
-
-    reconnectTimerRef.current =
-      setTimeout(
-        async () => {
-          reconnectTimerRef.current =
-            null;
-
-          const audio =
-            audioRef.current;
-
-          if (!audio) {
-            return;
-          }
-
-          try {
-            audio.src =
-              STREAM_URL;
-
-            if (isPlaying) {
-              await audio.play();
-
-              setStatus(
-                "playing"
-              );
-            } else {
-              setStatus(
-                "ready"
-              );
-            }
-          } catch {
-            setStatus(
-              "error"
-            );
-          }
-        },
-        3000
-      );
-  }
-
-  function handleVolume(
-    event
-  ) {
-    const nextVolume =
-      clamp(
-        Number(
-          event.target.value
-        ),
-        0,
-        1
-      );
-
-    setVolume(
-      nextVolume
-    );
-
-    if (
-      nextVolume > 0
-    ) {
-      setIsMuted(
-        false
-      );
-    }
-  }
-
-  function toggleMute() {
-    setIsMuted(
-      (current) =>
-        !current
-    );
+  function handleVolume(event) {
+    setVolume(event.target.value);
   }
 
   return (
@@ -1767,6 +1132,122 @@ export default function ListenPage() {
             );
         }
 
+        .guiropa-transport {
+          display:
+            flex;
+
+          align-items:
+            center;
+
+          gap:
+            12px;
+        }
+
+        .guiropa-next-button {
+          width:
+            48px;
+
+          height:
+            48px;
+
+          display:
+            grid;
+
+          place-items:
+            center;
+
+          border:
+            1px solid
+            rgba(
+              201,
+              154,
+              69,
+              0.42
+            );
+
+          border-radius:
+            50%;
+
+          color:
+            #e3bd72;
+
+          background:
+            #17120e;
+
+          font-size:
+            13px;
+
+          font-weight:
+            900;
+
+          letter-spacing:
+            -0.10em;
+
+          cursor:
+            pointer;
+
+          box-shadow:
+            inset
+            0
+            1px
+            0
+            rgba(
+              255,
+              255,
+              255,
+              0.04
+            ),
+            0
+            6px
+            16px
+            rgba(
+              0,
+              0,
+              0,
+              0.24
+            );
+
+          transition:
+            transform
+            0.18s
+            ease,
+            border-color
+            0.18s
+            ease,
+            color
+            0.18s
+            ease;
+        }
+
+        .guiropa-next-button:hover {
+          transform:
+            translateY(
+              -2px
+            );
+
+          border-color:
+            rgba(
+              225,
+              189,
+              118,
+              0.72
+            );
+
+          color:
+            #f3d28e;
+        }
+
+        .guiropa-next-button:disabled {
+          cursor:
+            not-allowed;
+
+          opacity:
+            0.42;
+
+          transform:
+            none;
+        }
+
         .guiropa-play-button {
           width:
             70px;
@@ -2456,6 +1937,22 @@ export default function ListenPage() {
               20px;
           }
 
+          .guiropa-transport {
+            gap:
+              10px;
+          }
+
+          .guiropa-next-button {
+            width:
+              44px;
+
+            height:
+              44px;
+
+            font-size:
+              12px;
+          }
+
           .guiropa-play-button {
             width:
               60px;
@@ -2469,64 +1966,6 @@ export default function ListenPage() {
         }
       `}</style>
 
-      <audio
-        ref={audioRef}
-        preload="none"
-        playsInline
-        onPlaying={() => {
-          setIsPlaying(
-            true
-          );
-
-          setIsLoading(
-            false
-          );
-
-          setStatus(
-            "playing"
-          );
-        }}
-        onPause={() => {
-          setIsPlaying(
-            false
-          );
-
-          if (
-            status !== "error"
-          ) {
-            setStatus(
-              STREAM_URL
-                ? "ready"
-                : "waiting"
-            );
-          }
-        }}
-        onWaiting={() => {
-          if (isPlaying) {
-            setStatus(
-              "loading"
-            );
-          }
-        }}
-        onStalled={
-          scheduleReconnect
-        }
-        onError={() => {
-          setIsPlaying(
-            false
-          );
-
-          setIsLoading(
-            false
-          );
-
-          setStatus(
-            "error"
-          );
-
-          scheduleReconnect();
-        }}
-      />
 
       <div className="guiropa-listen-shell">
         <section className="guiropa-listen-intro">
@@ -2599,12 +2038,7 @@ export default function ListenPage() {
                   aria-pressed={
                     favorite
                   }
-                  onClick={() =>
-                    setFavorite(
-                      (current) =>
-                        !current
-                    )
-                  }
+                  onClick={toggleFavorite}
                 >
                   {favorite
                     ? "♥"
@@ -2669,28 +2103,36 @@ export default function ListenPage() {
           </div>
 
           <div className="guiropa-receiver-controls">
-            <button
-              type="button"
-              className="guiropa-play-button"
-              onClick={
-                togglePlayback
-              }
-              disabled={
-                !STREAM_URL ||
-                isLoading
-              }
-              aria-label={
-                isPlaying
-                  ? copy.pause
-                  : copy.play
-              }
-            >
-              {isLoading
-                ? "…"
-                : isPlaying
-                  ? "Ⅱ"
-                  : "▶"}
-            </button>
+            <div className="guiropa-transport">
+              <button
+                type="button"
+                className="guiropa-play-button"
+                onClick={togglePlayback}
+                disabled={catalogSize === 0 || isLoading}
+                aria-label={
+                  isPlaying
+                    ? copy.pause
+                    : copy.play
+                }
+              >
+                {isLoading
+                  ? "…"
+                  : isPlaying
+                    ? "Ⅱ"
+                    : "▶"}
+              </button>
+
+              <button
+                type="button"
+                className="guiropa-next-button"
+                onClick={nextTrack}
+                disabled={catalogSize === 0 || isLoading}
+                aria-label={copy.next}
+                title={copy.next}
+              >
+                ▶▶
+              </button>
+            </div>
 
             <div className="guiropa-console-message">
               <strong>
@@ -2698,9 +2140,7 @@ export default function ListenPage() {
               </strong>
 
               <span>
-                {STREAM_URL
-                  ? copy.streamReady
-                  : copy.engineReady}
+                {copy.playerReady}
               </span>
             </div>
 
