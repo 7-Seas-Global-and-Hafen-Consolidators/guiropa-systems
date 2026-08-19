@@ -381,6 +381,10 @@ export default function SchedulePage() {
           box-shadow:
             0 17px 34px
             rgba(58, 38, 24, 0.16);
+
+          border-radius: 28px;
+
+          overflow: hidden;
         }
 
         .guiropa-schedule-content {
