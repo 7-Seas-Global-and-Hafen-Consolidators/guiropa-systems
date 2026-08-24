@@ -57,3 +57,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+# GUIROPA deploy refresh: force rebuild after schedule engine update.
