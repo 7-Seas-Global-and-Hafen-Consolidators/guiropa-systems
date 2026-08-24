@@ -4,6 +4,7 @@ import Layout from "./components/Layout.jsx";
 
 import HomePage from "./pages/HomePage.jsx";
 import MarvinGayePage from "./pages/MarvinGayePage.jsx";
+import Guiropa80sTunnelPage from "./pages/Guiropa80sTunnelPage.jsx";
 
 import ListenPage from "./ListenPage.jsx";
 import SchedulePage from "./SchedulePage.jsx";
@@ -15,6 +16,8 @@ import SupportPage from "./SupportPage.jsx";
 export default function App() {
   return (
     <Routes>
+      <Route path="1986" element={<Guiropa80sTunnelPage />} />
+
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
 
