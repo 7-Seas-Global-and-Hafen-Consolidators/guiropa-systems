@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import { LanguageProvider } from "./i18n/LanguageContext.jsx";
 import { RadioPlayerProvider } from "./audio/RadioPlayerContext.jsx";
-import PersistentPlayer from "./components/PersistentPlayer.jsx";
+import TunnelPersistentPlayer from "./components/TunnelPersistentPlayer.jsx";
 
 import "./styles/global.css";
 
@@ -22,7 +22,7 @@ createRoot(
       <LanguageProvider>
         <RadioPlayerProvider>
           <App />
-          <PersistentPlayer />
+          <TunnelPersistentPlayer />
         </RadioPlayerProvider>
       </LanguageProvider>
     </BrowserRouter>
