@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-08-26T18:26:11.064Z",
+  "updatedAt": "2026-08-26T20:26:43.063Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
   "aiCalls": 0,
-  "itemCount": 580,
-  "newItems": 10,
+  "itemCount": 588,
+  "newItems": 8,
   "translatedPt": 0,
-  "translationPending": 580,
-  "connectedPoints": 23,
+  "translationPending": 588,
+  "connectedPoints": 25,
   "sources": [
     {
       "region": "USA",
@@ -18,7 +18,7 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 26,
-      "added": 1
+      "added": 0
     },
     {
       "region": "Europe / UK",
@@ -30,7 +30,7 @@
       "region": "USA",
       "ok": true,
       "seen": 35,
-      "added": 1
+      "added": 0
     },
     {
       "region": "USA",
@@ -42,13 +42,13 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 10,
-      "added": 1
+      "added": 0
     },
     {
       "region": "USA",
       "ok": true,
       "seen": 29,
-      "added": 2
+      "added": 0
     },
     {
       "region": "USA",
@@ -60,7 +60,7 @@
       "region": "USA",
       "ok": true,
       "seen": 15,
-      "added": 2
+      "added": 5
     },
     {
       "region": "Europe / UK",
@@ -123,7 +123,7 @@
       "region": "Europe / France",
       "ok": true,
       "seen": 50,
-      "added": 1
+      "added": 0
     },
     {
       "region": "Europe / France",
@@ -164,12 +164,12 @@
       "region": "Latin America / Brazil",
       "ok": true,
       "seen": 10,
-      "added": 0
+      "added": 1
     },
     {
       "region": "Latin America / Brazil",
       "ok": false,
-      "error": "fetch failed"
+      "error": "HTTP 404"
     },
     {
       "region": "Global / UK",
@@ -179,16 +179,114 @@
     },
     {
       "region": "Global",
-      "ok": false,
-      "error": "fetch failed"
+      "ok": true,
+      "seen": 10,
+      "added": 0
     },
     {
       "region": "Global",
-      "ok": false,
-      "error": "fetch failed"
+      "ok": true,
+      "seen": 9,
+      "added": 0
     }
   ],
   "items": [
+    {
+      "id": "65c18a7d40b02feb4c13eda6f7382c312cf4714ecead36b4d7b8ef97c1e1b9c7",
+      "region": "USA",
+      "title": "Shudder to Think Prime's First EP in Nearly Three Decades, Release New Video",
+      "excerpt": "",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": null,
+      "discoveredAt": "2026-08-26T20:26:19.669Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "6aa7a5b9d62ee2a29ff023e1e806a4627c9d076f82b014a0973d3244a223f220",
+      "region": "USA",
+      "title": "Dolly Parton’s Left Behind Project Roadmap “For Decades to Come”",
+      "excerpt": "Her team has offered a glimpse at the bevy of projects Parton left behind Dolly Parton’s Left Behind Project Roadmap “For Decades to Come” Alex Young",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T20:04:56.000Z",
+      "discoveredAt": "2026-08-26T20:26:19.783Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "05eba7edd341a63a4074398b26a53b8ab122fc6aa2ccdfec3db2368e4716d19d",
+      "region": "USA",
+      "title": "Supergroup The Power of 3 Announce Debut, Unleash Two Singles: Stream",
+      "excerpt": "The trio is made up of Orianthi, Cindy Blackman Santana, and Rhonda Smith. Supergroup The Power of 3 Announce Debut, Unleash Two Singles: Stream Langdon Hickman",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T19:59:17.000Z",
+      "discoveredAt": "2026-08-26T20:26:19.783Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "a35ec70a416c4764a83a729c60454a7fe29dbd7a4190073b3850d8f6619aef7e",
+      "region": "USA",
+      "title": "Gone With the Wind Comes to 4K Ultra HD for First Time Ever",
+      "excerpt": "Revisit the film for the 123rd time starting November 3rd. Gone With the Wind Comes to 4K Ultra HD for First Time Ever Chris Coplan",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T19:52:55.000Z",
+      "discoveredAt": "2026-08-26T20:26:19.783Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "f08a1255d7d907f0ed30b3fdbc3e21ef69ef7f5e680807074fad99092aa13101",
+      "region": "Latin America / Brazil",
+      "title": "Com shows históricos, C6 no Rock se destaca como melhor festival de rock brasileiro em anos",
+      "excerpt": "Nos dias 22 e 23 de agosto, aconteceu em São Paulo o C6 no Rock, festival dedicado ao rock brasileiro dos anos 1980 que apresentou alguns dos shows mais interessantes dos últimos anos. Se o evento tivesse apenas reunido artistas consagrados da época, seria mais do mesmo, mas ele foi além: promoveu reuniões e espetáculos […] O post Com shows históricos, C6 no Rock se destaca como melhor festival de rock brasileiro em anos apareceu primeiro em Hits Perdidos .",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T19:46:24.000Z",
+      "discoveredAt": "2026-08-26T20:26:31.519Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "84c30c271ba56efebc1a645e397e9e2ff7d015908129d0dfc0ada5b3a0855c88",
+      "region": "USA",
+      "title": "Grand Theft Auto VI to Feature Physical Appearance Changes, Relationship Choices, Character Switching",
+      "excerpt": "Rockstar Games officially revealed gameplay details following a series of leaks. Grand Theft Auto VI to Feature Physical Appearance Changes, Relationship Choices, Character Switching Eddie Fu",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T19:36:14.000Z",
+      "discoveredAt": "2026-08-26T20:26:19.783Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "3da4f63007eea31e2579e44ac208a0520502e72a27006a4c009115c3742ca9b5",
+      "region": "USA",
+      "title": "Dolly Parton Left Behind a Secret Song Locked Away Until 2045",
+      "excerpt": "Parton later joked that locking away a song she considered \"really good\" drove her crazy and made her want to dig it back up. Dolly Parton Left Behind a Secret Song Locked Away Until 2045 Alex Krinsky",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T18:49:46.000Z",
+      "discoveredAt": "2026-08-26T20:26:19.783Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "4e3c2833dfc96234feb29ff6576e002836d621cca00496e536d7bb4e25a3fc20",
+      "region": "USA",
+      "title": "Axl Rose Mourns Cat Whiskey, See Photos of His 3 Cats",
+      "excerpt": "Axl Rose is mourning the death of his cat Whiskey Maranello Rose, who died Aug. 25 at the age of 16, according to a post on the rocker's social media. Continue reading&hellip;",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T18:28:27.000Z",
+      "discoveredAt": "2026-08-26T20:26:19.264Z",
+      "originalLanguage": "auto"
+    },
     {
       "id": "07a5be997dcfdcebcae31cba2d1848136671adfa4014343fc7ba6d2371158acd",
       "region": "USA",
