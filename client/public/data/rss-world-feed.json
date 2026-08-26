@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-08-26T13:58:43.860Z",
+  "updatedAt": "2026-08-26T14:00:05.556Z",
   "bridge": "GUIROPA RSS WORLD BRIDGE",
   "aiCalls": 0,
   "itemCount": 529,
-  "newItems": 391,
+  "newItems": 0,
   "sources": [
     {
       "id": "npr-music",
@@ -11,7 +11,7 @@
       "region": "USA",
       "ok": true,
       "seen": 10,
-      "added": 1
+      "added": 0
     },
     {
       "id": "guardian-music",
@@ -19,7 +19,7 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 26,
-      "added": 1
+      "added": 0
     },
     {
       "id": "music-news",
@@ -35,7 +35,7 @@
       "region": "USA",
       "ok": true,
       "seen": 35,
-      "added": 1
+      "added": 0
     },
     {
       "id": "loudwire",
@@ -51,7 +51,7 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 10,
-      "added": 10
+      "added": 0
     },
     {
       "id": "pitchfork",
@@ -59,7 +59,7 @@
       "region": "USA",
       "ok": true,
       "seen": 29,
-      "added": 29
+      "added": 0
     },
     {
       "id": "allmusic",
@@ -67,7 +67,7 @@
       "region": "USA",
       "ok": true,
       "seen": 10,
-      "added": 10
+      "added": 0
     },
     {
       "id": "consequence",
@@ -75,7 +75,7 @@
       "region": "USA",
       "ok": true,
       "seen": 15,
-      "added": 15
+      "added": 0
     },
     {
       "id": "xs-noize",
@@ -83,7 +83,7 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 20,
-      "added": 20
+      "added": 0
     },
     {
       "id": "nialler9",
@@ -91,7 +91,7 @@
       "region": "Europe / Ireland",
       "ok": true,
       "seen": 20,
-      "added": 20
+      "added": 0
     },
     {
       "id": "aipate",
@@ -99,7 +99,7 @@
       "region": "Africa / Kenya",
       "ok": true,
       "seen": 50,
-      "added": 50
+      "added": 0
     },
     {
       "id": "the-music-au",
@@ -144,7 +144,7 @@
       "region": "Canada / Québec",
       "ok": true,
       "seen": 10,
-      "added": 10
+      "added": 0
     },
     {
       "id": "lefigaro-music",
@@ -152,7 +152,7 @@
       "region": "Europe / France",
       "ok": true,
       "seen": 20,
-      "added": 20
+      "added": 0
     },
     {
       "id": "lacroix-music",
@@ -160,7 +160,7 @@
       "region": "Europe / France",
       "ok": true,
       "seen": 50,
-      "added": 50
+      "added": 0
     },
     {
       "id": "aficia",
@@ -168,7 +168,7 @@
       "region": "Europe / France",
       "ok": true,
       "seen": 50,
-      "added": 50
+      "added": 0
     },
     {
       "id": "amarok",
@@ -176,7 +176,7 @@
       "region": "Europe / France",
       "ok": true,
       "seen": 10,
-      "added": 10
+      "added": 0
     },
     {
       "id": "rtbf-music",
@@ -184,7 +184,7 @@
       "region": "Europe / Belgium",
       "ok": true,
       "seen": 20,
-      "added": 20
+      "added": 0
     },
     {
       "id": "rts-music",
@@ -192,7 +192,7 @@
       "region": "Europe / Switzerland",
       "ok": true,
       "seen": 25,
-      "added": 25
+      "added": 0
     },
     {
       "id": "dosol",
@@ -200,7 +200,7 @@
       "region": "Latin America / Brazil",
       "ok": true,
       "seen": 10,
-      "added": 10
+      "added": 0
     },
     {
       "id": "rockonboard",
@@ -213,9 +213,8 @@
       "id": "hits-perdidos",
       "name": "Hits Perdidos",
       "region": "Latin America / Brazil",
-      "ok": true,
-      "seen": 10,
-      "added": 10
+      "ok": false,
+      "error": "HTTP 403"
     },
     {
       "id": "blognroll",
@@ -230,7 +229,7 @@
       "region": "Global / UK",
       "ok": true,
       "seen": 10,
-      "added": 10
+      "added": 0
     },
     {
       "id": "nagamag",
@@ -238,7 +237,7 @@
       "region": "Global",
       "ok": true,
       "seen": 10,
-      "added": 10
+      "added": 0
     },
     {
       "id": "where-music-meets",
@@ -246,7 +245,7 @@
       "region": "Global",
       "ok": true,
       "seen": 9,
-      "added": 9
+      "added": 0
     }
   ],
   "items": [
