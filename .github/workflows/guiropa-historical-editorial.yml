@@ -1,0 +1,81 @@
+name: GUIROPA Historical Editorial
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Generate and publish one historical story"
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: '17 13 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: guiropa-historical-editorial
+  cancel-in-progress: false
+
+jobs:
+  historical-editorial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_PERSONAL_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+      GUIROPA_EDITORIAL_MODEL: ${{ vars.GUIROPA_EDITORIAL_MODEL }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install GitHub Copilot CLI
+        run: npm install -g @github/copilot@latest
+
+      - name: Resolve safe mode
+        id: mode
+        shell: bash
+        run: |
+          APPLY="false"
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            APPLY="true"
+          elif [ "${{ github.event.inputs.apply }}" = "true" ]; then
+            APPLY="true"
+          fi
+          echo "apply=$APPLY" >> "$GITHUB_OUTPUT"
+          echo "GUIROPA Historical Editorial · apply=$APPLY" >> "$GITHUB_STEP_SUMMARY"
+          echo "Hard safety: maximum one AI invocation per workflow run; daily/monthly hard stops are checked before invocation." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Run historical editorial dry check
+        if: steps.mode.outputs.apply != 'true'
+        run: python tools/guiropa_historical_editorial.py
+
+      - name: Generate at most one historical story
+        if: steps.mode.outputs.apply == 'true'
+        run: python tools/guiropa_historical_editorial.py --apply
+
+      - name: Commit generated historical story
+        if: steps.mode.outputs.apply == 'true'
+        shell: bash
+        run: |
+          git config user.name "GUIROPA Historical Editorial"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/guiropa-historical-editorial-state.json client/public/editorial/history/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No historical story generated; nothing to publish." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git commit -m "GUIROPA Historical Editorial: publish daily archive story"
+          git pull --rebase origin main
+          git push origin HEAD:main
