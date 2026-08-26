@@ -4,6 +4,7 @@ import Footer from "./Footer.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import GuiropaCommercialLayer from "./GuiropaCommercialLayer.jsx";
 import GuiropaCommercialFooterDeck from "./GuiropaCommercialFooterDeck.jsx";
+import GuiropaCommercialFloat from "./GuiropaCommercialFloat.jsx";
 
 export default function Layout() {
   return (
@@ -18,6 +19,7 @@ export default function Layout() {
 
       <GuiropaCommercialFooterDeck />
       <Footer />
+      <GuiropaCommercialFloat />
     </>
   );
 }
