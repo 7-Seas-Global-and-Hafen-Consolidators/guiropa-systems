@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "7,37 * * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/rss-world-bridge.yml"
+      - "client/scripts/rss-world-bridge.mjs"
 
 permissions:
   contents: write
