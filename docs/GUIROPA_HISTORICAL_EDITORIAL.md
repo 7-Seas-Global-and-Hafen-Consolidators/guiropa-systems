@@ -42,14 +42,32 @@ Historical Editorial must remain independent from:
 
 Adding or repairing editorial functionality must never require refactoring those systems.
 
+## Quota-safe engine
+
+The engine lives at `tools/guiropa_historical_editorial.py` and the scheduled workflow at `.github/workflows/guiropa-historical-editorial.yml`.
+
+Safety rules are evaluated before any AI process is launched:
+
+1. Daily hard stop is checked.
+2. Monthly hard stop is checked.
+3. The queue must contain an unpublished 1950–1989 candidate.
+4. At least two research sources must be fetched successfully.
+5. Only then may the generator run.
+
+The engine deliberately permits **at most one Copilot invocation per workflow run**. There is no automatic AI retry and no fallback chain that could silently multiply quota usage.
+
+The scheduled workflow runs once per day. Manual runs default to dry-check mode unless `apply=true` is explicitly selected.
+
+A generated story is written as a static page under `client/public/editorial/history/`, while `client/public/editorial/history/index.json` becomes the lightweight feed. Publication state is recorded in `data/guiropa-historical-editorial-state.json` before the next scheduled run can select another story.
+
 ## Safe implementation sequence
 
-1. Establish historical policy and story schema.
-2. Build a small curated research queue.
-3. Build an editorial archive/feed UI.
-4. Only then add scheduled automation, with quota/cost checks and hard stops before any generation call.
-5. Start at one story per day and observe actual provider consumption before considering any increase.
+1. Establish historical policy and story schema. **Done.**
+2. Build a small curated research queue. **Done.**
+3. Build the quota-safe generator and static archive output. **Done in PR; not yet on main.**
+4. Connect the archive/feed to the GUIROPA visual interface without touching audio. **Next phase.**
+5. Observe actual provider consumption before considering any increase above one scheduled generation attempt per day.
 
 ## Initial story seeds
 
-The repository seed file lives at `client/src/data/historicalEditorial.js`. Seeds are planning prompts only; they are not automatically published and do not contain copied source text.
+The planning seed file lives at `client/src/data/historicalEditorial.js`. The runnable research queue lives at `data/guiropa-historical-editorial.json`. Queue entries are planning prompts with research URLs; source text itself is never committed as copied article content.
