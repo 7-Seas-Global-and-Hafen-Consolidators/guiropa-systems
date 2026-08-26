@@ -5,7 +5,7 @@ import Layout from "./components/Layout.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import MarvinGayePage from "./pages/MarvinGayePage.jsx";
 import Guiropa80sTunnelPage from "./pages/Guiropa80sTunnelPage.jsx";
-import WorldWirePage from "./pages/WorldWirePage.jsx";
+import WorldWireContinuousPage from "./pages/WorldWireContinuousPage.jsx";
 
 import ListenPage from "./ListenPage.jsx";
 import SchedulePage from "./SchedulePage.jsx";
@@ -23,8 +23,8 @@ export default function App() {
         <Route index element={<HomePage />} />
 
         <Route path="marvin-gaye" element={<MarvinGayePage />} />
-        <Route path="world-wire" element={<WorldWirePage />} />
-        <Route path="mundo" element={<WorldWirePage />} />
+        <Route path="world-wire" element={<WorldWireContinuousPage />} />
+        <Route path="mundo" element={<WorldWireContinuousPage />} />
 
         <Route path="ouvir" element={<ListenPage />} />
         <Route path="listen" element={<ListenPage />} />
