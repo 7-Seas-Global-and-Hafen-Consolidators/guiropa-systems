@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import { LanguageProvider } from "./i18n/LanguageContext.jsx";
 import { RadioPlayerProvider } from "./audio/RadioPlayerContext.jsx";
+import "./audio/installAudioInterlock.js";
 import TunnelPersistentPlayer from "./components/TunnelPersistentPlayer.jsx";
 
 import "./styles/global.css";
