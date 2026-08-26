@@ -12,9 +12,6 @@ const MAX_PUBLIC_ITEMS = 5000;
 const MAX_LEDGER_ITEMS = 25000;
 const REQUEST_TIMEOUT_MS = 15000;
 
-// RSS is a discovery signal. GUIROPA stores metadata/excerpts and always
-// links readers back to the publisher; it never mirrors full articles.
-// A failed source never stops the bridge: every feed is isolated.
 const SOURCES = [
   { id: "npr-music", name: "NPR Music", region: "USA", url: "https://feeds.npr.org/1039/rss.xml" },
   { id: "guardian-music", name: "The Guardian · Music", region: "Europe / UK", url: "https://www.theguardian.com/music/rss" },
@@ -73,12 +70,24 @@ function parseFeed(xml, source) {
   }).filter(Boolean);
 }
 
+function publicItem(item) {
+  return {
+    id: item.id,
+    region: item.region || "WORLD",
+    title: item.title,
+    excerpt: item.excerpt || "",
+    publishedAt: item.publishedAt || null,
+    discoveredAt: item.discoveredAt || null,
+    originalLanguage: item.originalLanguage || "auto",
+  };
+}
+
 async function readJson(file, fallback) { try { return JSON.parse(await fs.readFile(file, "utf8")); } catch { return fallback; } }
 async function fetchSource(source) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   try {
-    const response = await fetch(source.url, { headers: { "user-agent": "GUIROPA-Radio-RSS-World-Bridge/2.0 (+https://guiropa.world/)" }, signal: controller.signal });
+    const response = await fetch(source.url, { headers: { "user-agent": "GUIROPA-Radio-RSS-World-Bridge/3.0 (+https://guiropa.world/)" }, signal: controller.signal });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return parseFeed(await response.text(), source);
   } finally { clearTimeout(timer); }
@@ -96,12 +105,26 @@ for (const source of SOURCES) {
     const items = await fetchSource(source);
     let added = 0;
     for (const item of items) { if (known.has(item.id)) continue; known.add(item.id); incoming.push(item); added += 1; }
-    sourceStatus.push({ id: source.id, name: source.name, region: source.region, ok: true, seen: items.length, added });
-  } catch (error) { sourceStatus.push({ id: source.id, name: source.name, region: source.region, ok: false, error: String(error?.message || error) }); }
+    sourceStatus.push({ region: source.region, ok: true, seen: items.length, added });
+  } catch (error) {
+    sourceStatus.push({ region: source.region, ok: false, error: String(error?.message || error) });
+  }
 }
 
-const combined = [...incoming, ...(feed.items || [])].sort((a, b) => Date.parse(b.publishedAt || b.discoveredAt || 0) - Date.parse(a.publishedAt || a.discoveredAt || 0)).slice(0, MAX_PUBLIC_ITEMS);
-const output = { updatedAt: new Date().toISOString(), bridge: "GUIROPA RSS WORLD BRIDGE", aiCalls: 0, itemCount: combined.length, newItems: incoming.length, sources: sourceStatus, items: combined };
+const combinedRaw = [...incoming, ...(feed.items || [])]
+  .sort((a, b) => Date.parse(b.publishedAt || b.discoveredAt || 0) - Date.parse(a.publishedAt || a.discoveredAt || 0))
+  .slice(0, MAX_PUBLIC_ITEMS);
+const combined = combinedRaw.map(publicItem);
+const output = {
+  updatedAt: new Date().toISOString(),
+  bridge: "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
+  aiCalls: 0,
+  itemCount: combined.length,
+  newItems: incoming.length,
+  connectedPoints: sourceStatus.filter((source) => source.ok && Number(source.seen || 0) > 0).length,
+  sources: sourceStatus,
+  items: combined,
+};
 await fs.writeFile(FEED_FILE, `${JSON.stringify(output, null, 2)}\n`);
 await fs.writeFile(LEDGER_FILE, `${JSON.stringify({ updatedAt: output.updatedAt, ids: [...known].slice(-MAX_LEDGER_ITEMS) }, null, 2)}\n`);
 console.log(`[GUIROPA RSS WORLD BRIDGE] ${incoming.length} new items · ${combined.length} public items · ${SOURCES.length} configured sources · 0 AI calls`);
