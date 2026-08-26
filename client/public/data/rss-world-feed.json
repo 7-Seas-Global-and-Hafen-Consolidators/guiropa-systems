@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-08-26T17:10:41.453Z",
+  "updatedAt": "2026-08-26T18:26:11.064Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
   "aiCalls": 0,
-  "itemCount": 570,
-  "newItems": 7,
+  "itemCount": 580,
+  "newItems": 10,
   "translatedPt": 0,
-  "translationPending": 570,
-  "connectedPoints": 25,
+  "translationPending": 580,
+  "connectedPoints": 23,
   "sources": [
     {
       "region": "USA",
@@ -18,7 +18,7 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 26,
-      "added": 0
+      "added": 1
     },
     {
       "region": "Europe / UK",
@@ -30,7 +30,7 @@
       "region": "USA",
       "ok": true,
       "seen": 35,
-      "added": 0
+      "added": 1
     },
     {
       "region": "USA",
@@ -42,25 +42,25 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 10,
-      "added": 0
-    },
-    {
-      "region": "USA",
-      "ok": true,
-      "seen": 29,
       "added": 1
     },
     {
       "region": "USA",
       "ok": true,
+      "seen": 29,
+      "added": 2
+    },
+    {
+      "region": "USA",
+      "ok": true,
       "seen": 10,
-      "added": 0
+      "added": 1
     },
     {
       "region": "USA",
       "ok": true,
       "seen": 15,
-      "added": 4
+      "added": 2
     },
     {
       "region": "Europe / UK",
@@ -123,7 +123,7 @@
       "region": "Europe / France",
       "ok": true,
       "seen": 50,
-      "added": 0
+      "added": 1
     },
     {
       "region": "Europe / France",
@@ -169,28 +169,134 @@
     {
       "region": "Latin America / Brazil",
       "ok": false,
-      "error": "HTTP 404"
+      "error": "fetch failed"
     },
     {
       "region": "Global / UK",
       "ok": true,
       "seen": 10,
-      "added": 1
-    },
-    {
-      "region": "Global",
-      "ok": true,
-      "seen": 10,
       "added": 0
     },
     {
       "region": "Global",
-      "ok": true,
-      "seen": 9,
-      "added": 0
+      "ok": false,
+      "error": "fetch failed"
+    },
+    {
+      "region": "Global",
+      "ok": false,
+      "error": "fetch failed"
     }
   ],
   "items": [
+    {
+      "id": "07a5be997dcfdcebcae31cba2d1848136671adfa4014343fc7ba6d2371158acd",
+      "region": "USA",
+      "title": "Inside Cliff Burton's Record Collection: 10 Albums That Influenced a Metal Legend (Part II)",
+      "excerpt": "",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": null,
+      "discoveredAt": "2026-08-26T18:25:36.528Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "2fbeac4bd4ad6957ed0ff685b737495dc2ecba31ed735da529c81c4b4a450eb3",
+      "region": "USA",
+      "title": "Teen Guitar Phenom Gets 'America's Got Talent' Golden Buzzer",
+      "excerpt": "Teen guitar titan Nene Royal won the night's biggest prize, advancing to the 'America's Got Talent' live shows with a golden buzzer performance of Soundgarden's 'Black Hole Sun.' Continue reading&hellip;",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T18:18:56.000Z",
+      "discoveredAt": "2026-08-26T18:25:35.801Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "c91bdb99f400ffdc10cb2233cb9911eac5e15b6f7107d24fb873b03cec910a58",
+      "region": "USA",
+      "title": "Drone Metal Orthodox Priest Guitarist Responds to Fascism, Homophobia Accusations",
+      "excerpt": "Father Dionysios Tabakis had recently come under fire for religious blog posts that employed homophobic language, as well as ties to a Greek neo-Nazi organization",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T18:15:34.000Z",
+      "discoveredAt": "2026-08-26T18:25:36.302Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "03f24e971b25896b98e312523dd17fdf75c636cfbe0830de9d03295a8aa2940c",
+      "region": "USA",
+      "title": "Hear Peter Frampton Join Foreigner on Newly Unearthed 1979 Track",
+      "excerpt": "The song is the first taste of an expanded edition of the band's 1979 album. Continue reading&hellip;",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T18:04:37.000Z",
+      "discoveredAt": "2026-08-26T18:25:35.628Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "b19aace24665c326d72988f38f456e75461631c8f896d5bacdeb719f3f5add5a",
+      "region": "Europe / UK",
+      "title": "Royal Blood tell us about their Reading 2026 secret set: “We’re going to make it as relentless as possible”",
+      "excerpt": "Surprise! The Brighton rock duo are now heading to Reading, and they promise that it's going to be \"pretty brutal\" The post Royal Blood tell us about their Reading 2026 secret set: “We’re going to make it as relentless as possible” appeared first on NME .",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T18:00:25.000Z",
+      "discoveredAt": "2026-08-26T18:25:36.085Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "8b80113d84a6982c817e9a2a4031bbb87659a61fb78ddd719a1956325a45a3f4",
+      "region": "Europe / France",
+      "title": "« Le Fabuleux Piano » de Sonia Devillers : la musique en dernier recours",
+      "excerpt": "Sonia Devillers mène l’enquête à la recherche d’un piano confisqué par les nazis en 1943, jamais réapparu. La journaliste raconte dans son nouveau livre le destin d’une famille d’éditeurs de musique, à travers les archives et les grands événements du XXe siècle.",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T17:51:04.000Z",
+      "discoveredAt": "2026-08-26T18:25:40.332Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "c941bf48398a82653586808b164535ce73dc57dd7eed53649e7c104ac77f8b49",
+      "region": "USA",
+      "title": "William Basinski Returns With Solo Piano Album",
+      "excerpt": "Listen to an excerpt of the composer’s first solo LP in six years, Passing the Cup of Sorrows",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T17:38:47.000Z",
+      "discoveredAt": "2026-08-26T18:25:36.302Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "0396e0c26e87a173876bbfce13bdf8f8244d72c32d23696f84f5581d9ead1b1c",
+      "region": "USA",
+      "title": "Phoebe Bridgers Covers Nirvana’s “Lithium” on BBC 1 Live Lounge",
+      "excerpt": "Bridgers also performed her own \"Bobby\" and \"Lost Boys.\" Phoebe Bridgers Covers Nirvana’s “Lithium” on BBC 1 Live Lounge Eddie Fu",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T17:30:19.000Z",
+      "discoveredAt": "2026-08-26T18:25:36.785Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "e031288ccdb7d75556139f93c6b235a2f15235afe756c3a8c4a79aef914b6c88",
+      "region": "USA",
+      "title": "Erykah Badu and The Alchemist Detail New Album Before the World Blows",
+      "excerpt": "The collaborative project features Thundercat, Earl Sweatshirt, Steve Lacy, Kamasi Washington, and Westside Gunn. Erykah Badu and The Alchemist Detail New Album Before the World Blows Eddie Fu",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T17:24:58.000Z",
+      "discoveredAt": "2026-08-26T18:25:36.785Z",
+      "originalLanguage": "auto"
+    },
     {
       "id": "46c2ff5f875e37551b4aaf7f426e1185bfb19f0ac0ae95e06410f3afc42c5d43",
       "region": "USA",
@@ -213,6 +319,18 @@
       "translationStatus": "pending",
       "publishedAt": "2026-08-26T17:00:22.000Z",
       "discoveredAt": "2026-08-26T17:10:33.988Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "bd62ea7c5d66c29de1d3c321956e111cc59f1919963c4ddfe102cd2cea30536f",
+      "region": "Europe / UK",
+      "title": "Affairs? Drugs? You could ask Dolly Parton about anything and get a laugh. Just stay away from politics …",
+      "excerpt": "One autumn day in 2023 I bathed in the luminous glow of this utterly authentic star – and while she did have one weak spot, her life and music will speak for themselves • Celebrity tributes pour in for Dolly Parton: ‘a gift to the world’ • Backwoods Barbie and the ‘God almighty’ PMS Blues: Dolly Parton’s 10 best deep cuts • Alexis Petridis on Dolly Parton’s peerless career The great privilege of my kind of journalism is to get the chance to meet extraordinary people – some famous, many not – and very occasionally that person is beyond extraordinary. Dolly Parton, you may not be surprised to learn, was one of them. I’ve only come across it a handful of times. It has nothing to do with extreme",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T17:00:17.000Z",
+      "discoveredAt": "2026-08-26T18:25:34.675Z",
       "originalLanguage": "auto"
     },
     {
