@@ -1,0 +1,48 @@
+name: GUIROPA RSS World Bridge
+
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: guiropa-rss-world-bridge
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Collect RSS world signals
+        working-directory: client
+        run: node scripts/rss-world-bridge.mjs
+
+      - name: Commit only when the bridge changed
+        run: |
+          if git diff --quiet -- client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json; then
+            echo "No RSS changes. Nothing to publish."
+            exit 0
+          fi
+
+          git config user.name "guiropa-radio-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json
+          git commit -m "UPDATE GUIROPA RSS WORLD BRIDGE"
+          git pull --rebase origin main
+          git push origin HEAD:main
