@@ -1,16 +1,21 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { assetUrl } from "../utils/assetUrl.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
+import { translateNewsItems } from "../utils/autoTranslate.js";
 
-function stamp(value) {
+function stamp(value, lang) {
   if (!value) return "—";
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return "—";
-  return new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }).format(date);
+  const locale = lang === "es" ? "es-ES" : lang === "en" ? "en-GB" : "pt-BR";
+  return new Intl.DateTimeFormat(locale, { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }).format(date);
 }
 
 export default function HomeNewsTunnel() {
+  const { lang } = useLanguage();
   const [data, setData] = useState({ items: [], updatedAt: null, itemCount: 0 });
+  const [translated, setTranslated] = useState({});
 
   useEffect(() => {
     fetch(assetUrl("data/rss-world-feed.json"), { cache: "no-store" })
@@ -21,6 +26,18 @@ export default function HomeNewsTunnel() {
 
   const items = useMemo(() => (data.items || []).slice(0, 10), [data.items]);
 
+  useEffect(() => {
+    let alive = true;
+    translateNewsItems(items, lang).then((result) => { if (alive) setTranslated(result); });
+    return () => { alive = false; };
+  }, [items, lang]);
+
+  const labels = lang === "en"
+    ? { count: "stories in flow", updated: "Updated", enter: "ENTER NEWS TUNNEL" }
+    : lang === "es"
+      ? { count: "noticias en flujo", updated: "Actualizado", enter: "ENTRAR AL NEWS TUNNEL" }
+      : { count: "matérias no fluxo", updated: "Atualizado", enter: "ENTRAR NO NEWS TUNNEL" };
+
   return (
     <section className="guiropa-home-news" aria-label="GUIROPA Radio News Tunnel">
       <style>{`
@@ -30,12 +47,12 @@ export default function HomeNewsTunnel() {
       <div className="guiropa-home-news__shell">
         <div className="guiropa-home-news__head">
           <div><div className="guiropa-home-news__eyebrow">GUIROPA RADIO · PASSPORT RADIO NETWORK · LIVE</div><h2>News Tunnel™</h2></div>
-          <div className="guiropa-home-news__meta"><div>{data.itemCount || items.length} matérias no fluxo</div><div>Atualizado {stamp(data.updatedAt)}</div></div>
+          <div className="guiropa-home-news__meta"><div>{data.itemCount || items.length} {labels.count}</div><div>{labels.updated} {stamp(data.updatedAt, lang)}</div></div>
         </div>
         <div className="guiropa-home-news__grid">
-          {items.map((item) => <Link className="guiropa-home-news__card" to={`/world-wire/${item.id}`} key={item.id}><div className="guiropa-home-news__brand">GUIROPA RADIO · PASSPORT RADIO NETWORK</div><h3>{item.title}</h3><div className="guiropa-home-news__foot"><span>{item.region || "WORLD"}</span><span>{stamp(item.publishedAt || item.discoveredAt)}</span></div></Link>)}
+          {items.map((item) => { const text = translated[item.id] || item; return <Link className="guiropa-home-news__card" to={`/world-wire/${item.id}`} key={item.id}><div className="guiropa-home-news__brand">GUIROPA RADIO · PASSPORT RADIO NETWORK</div><h3>{text.title}</h3><div className="guiropa-home-news__foot"><span>{item.region || "WORLD"}</span><span>{stamp(item.publishedAt || item.discoveredAt, lang)}</span></div></Link>; })}
         </div>
-        <Link className="guiropa-home-news__cta" to="/world-wire">ENTRAR NO NEWS TUNNEL →</Link>
+        <Link className="guiropa-home-news__cta" to="/world-wire">{labels.enter} →</Link>
       </div>
     </section>
   );
