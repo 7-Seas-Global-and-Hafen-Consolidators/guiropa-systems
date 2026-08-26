@@ -1,17 +1,22 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { assetUrl } from "../utils/assetUrl.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
+import { translateNewsItem } from "../utils/autoTranslate.js";
 
-function stamp(value) {
+function stamp(value, lang) {
   if (!value) return "—";
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return "—";
-  return new Intl.DateTimeFormat("pt-BR", { dateStyle: "medium", timeStyle: "short" }).format(date);
+  const locale = lang === "es" ? "es-ES" : lang === "en" ? "en-GB" : "pt-BR";
+  return new Intl.DateTimeFormat(locale, { dateStyle: "medium", timeStyle: "short" }).format(date);
 }
 
 export default function NewsTunnelStoryPage() {
   const { id } = useParams();
+  const { lang } = useLanguage();
   const [data, setData] = useState({ items: [] });
+  const [translated, setTranslated] = useState(null);
 
   useEffect(() => {
     fetch(`${assetUrl("data/rss-world-feed.json")}?t=${Date.now()}`, { cache: "no-store" })
@@ -22,13 +27,27 @@ export default function NewsTunnelStoryPage() {
 
   const item = useMemo(() => (data.items || []).find((entry) => entry.id === id), [data.items, id]);
 
+  useEffect(() => {
+    let alive = true;
+    setTranslated(null);
+    if (item) translateNewsItem(item, lang).then((value) => { if (alive) setTranslated(value); });
+    return () => { alive = false; };
+  }, [item, lang]);
+
+  const text = translated || item;
+  const labels = lang === "en"
+    ? { unavailable: "Signal unavailable.", back: "BACK TO NEWS TUNNEL", note: "Editorial signal captured automatically by GUIROPA RADIO World Wire and presented in the selected site language." }
+    : lang === "es"
+      ? { unavailable: "Señal no disponible.", back: "VOLVER AL NEWS TUNNEL", note: "Señal editorial capturada automáticamente por GUIROPA RADIO World Wire y presentada en el idioma seleccionado del sitio." }
+      : { unavailable: "Sinal indisponível.", back: "VOLTAR AO NEWS TUNNEL", note: "Sinal editorial capturado automaticamente pelo GUIROPA RADIO World Wire e apresentado no idioma selecionado do site." };
+
   if (!item) {
     return (
       <main style={{ minHeight: "70vh", background: "#efe1c7", color: "#18130f", padding: "8rem 1.2rem" }}>
         <div style={{ width: "min(900px,100%)", margin: "0 auto" }}>
           <div style={{ fontSize: ".6rem", fontWeight: 900, letterSpacing: ".16em", color: "#b83224" }}>GUIROPA RADIO · PASSPORT RADIO NETWORK</div>
-          <h1 style={{ fontFamily: "Georgia,serif", fontSize: "clamp(3rem,8vw,6rem)", fontWeight: 400, lineHeight: .9 }}>Sinal indisponível.</h1>
-          <Link to="/world-wire" style={{ color: "#18130f", fontWeight: 900, textDecoration: "none" }}>← VOLTAR AO NEWS TUNNEL</Link>
+          <h1 style={{ fontFamily: "Georgia,serif", fontSize: "clamp(3rem,8vw,6rem)", fontWeight: 400, lineHeight: .9 }}>{labels.unavailable}</h1>
+          <Link to="/world-wire" style={{ color: "#18130f", fontWeight: 900, textDecoration: "none" }}>← {labels.back}</Link>
         </div>
       </main>
     );
@@ -41,11 +60,11 @@ export default function NewsTunnelStoryPage() {
       `}</style>
       <div className="guiropa-story-shell">
         <div className="guiropa-story-kicker">GUIROPA RADIO · PASSPORT RADIO NETWORK · NEWS TUNNEL™</div>
-        <h1>{item.title}</h1>
-        <div className="guiropa-story-meta"><span>{item.region || "WORLD"}</span><span>{stamp(item.publishedAt || item.discoveredAt)}</span><span>WORLD WIRE · CONTINUOUS</span></div>
-        {item.excerpt ? <div className="guiropa-story-lead">{item.excerpt}</div> : null}
-        <div className="guiropa-story-note">Sinal editorial capturado automaticamente pelo GUIROPA RADIO World Wire. O túnel preserva o idioma recebido e atualiza o fluxo continuamente ao longo do dia.</div>
-        <Link className="guiropa-story-back" to="/world-wire">← VOLTAR AO NEWS TUNNEL</Link>
+        <h1>{text?.title || item.title}</h1>
+        <div className="guiropa-story-meta"><span>{item.region || "WORLD"}</span><span>{stamp(item.publishedAt || item.discoveredAt, lang)}</span><span>WORLD WIRE · CONTINUOUS</span></div>
+        {(text?.excerpt || item.excerpt) ? <div className="guiropa-story-lead">{text?.excerpt || item.excerpt}</div> : null}
+        <div className="guiropa-story-note">{labels.note}</div>
+        <Link className="guiropa-story-back" to="/world-wire">← {labels.back}</Link>
       </div>
     </main>
   );
