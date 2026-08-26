@@ -1,0 +1,17 @@
+import { Link } from "react-router-dom";
+
+const AMAZON = "https://amzn.to/4xnpFWZ";
+const SHOPEE = "https://s.shopee.com.br/3qMaqyNivG";
+
+export default function GuiropaCommercialInterstitial() {
+  return (
+    <section className="guiropa-commercial-interstitial" aria-label="Publicidade">
+      <style>{`
+        .guiropa-commercial-interstitial{display:grid;grid-template-columns:1fr 1fr 1fr;background:#16110e;border-top:4px solid #16110e;border-bottom:4px solid #16110e;font-family:Inter,Arial,Helvetica,sans-serif}.guiropa-commercial-interstitial a{--bg:#16110e;--fg:#fff5e2;--accent:#e7bd64;position:relative;overflow:hidden;display:grid;align-content:center;gap:7px;min-height:120px;padding:18px 20px;background:var(--bg);color:var(--fg)!important;text-decoration:none!important;border-right:2px solid #16110e}.guiropa-commercial-interstitial a:last-child{border-right:0}.guiropa-commercial-interstitial a[data-network="AMAZON"]{--bg:#ff9900;--fg:#17120e;--accent:#17120e}.guiropa-commercial-interstitial a[data-network="SHOPEE"]{--bg:#ee4d2d;--fg:#fff;--accent:#fff}.guiropa-commercial-interstitial a[data-network="GUIROPA"]{--bg:#b83224;--fg:#fff6e5;--accent:#eac675}.guiropa-commercial-interstitial a::after{content:"";position:absolute;inset:0;border:4px solid transparent;pointer-events:none;animation:guiropaInterstitialFlash 1.08s steps(1,end) infinite}.guiropa-commercial-interstitial small{font-size:8px;font-weight:1000;letter-spacing:.16em;text-transform:uppercase}.guiropa-commercial-interstitial small::before{content:"●";margin-right:7px;animation:guiropaInterstitialDot .7s steps(1,end) infinite}.guiropa-commercial-interstitial strong{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.5rem,2.6vw,2.8rem);font-weight:400;line-height:.92;letter-spacing:-.045em}.guiropa-commercial-interstitial span{font-size:9px;font-weight:1000;letter-spacing:.12em;text-transform:uppercase;animation:guiropaInterstitialCta .84s steps(1,end) infinite}@keyframes guiropaInterstitialFlash{0%,43%,100%{border-color:transparent}44%,72%{border-color:var(--accent);box-shadow:inset 0 0 24px rgba(255,255,255,.3)}}@keyframes guiropaInterstitialDot{0%,44%,100%{opacity:1}45%,72%{opacity:.08}}@keyframes guiropaInterstitialCta{0%,48%,100%{opacity:1}49%,75%{opacity:.24}}@media(max-width:700px){.guiropa-commercial-interstitial{grid-template-columns:1fr}.guiropa-commercial-interstitial a{min-height:92px;border-right:0;border-bottom:2px solid #16110e}.guiropa-commercial-interstitial a:last-child{border-bottom:0}}@media(prefers-reduced-motion:reduce){.guiropa-commercial-interstitial a::after,.guiropa-commercial-interstitial small::before,.guiropa-commercial-interstitial span{animation:none!important}}@media print{.guiropa-commercial-interstitial{display:none!important}}
+      `}</style>
+      <a href={AMAZON} target="_blank" rel="nofollow sponsored noopener noreferrer" data-network="AMAZON"><small>PUBLICIDADE · AMAZON</small><strong>Mais música, mais vinil, mais coisa pra comprar.</strong><span>VER AGORA →</span></a>
+      <Link to="/anuncie" data-network="GUIROPA"><small>PUBLICIDADE · GUIROPA</small><strong>Quer dominar este espaço?</strong><span>ANUNCIE →</span></Link>
+      <a href={SHOPEE} target="_blank" rel="nofollow sponsored noopener noreferrer" data-network="SHOPEE"><small>PUBLICIDADE · SHOPEE</small><strong>Oferta entrando pelo corredor.</strong><span>ABRIR →</span></a>
+    </section>
+  );
+}
