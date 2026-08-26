@@ -11,6 +11,9 @@ const LEDGER_FILE = path.join(DATA_DIR, "rss-world-ledger.json");
 const MAX_PUBLIC_ITEMS = 5000;
 const MAX_LEDGER_ITEMS = 25000;
 const REQUEST_TIMEOUT_MS = 15000;
+const TRANSLATION_TIMEOUT_MS = 12000;
+const TRANSLATION_BACKFILL_PER_RUN = 80;
+const TRANSLATION_CONCURRENCY = 4;
 
 const SOURCES = [
   { id: "npr-music", name: "NPR Music", region: "USA", url: "https://feeds.npr.org/1039/rss.xml" },
@@ -76,6 +79,9 @@ function publicItem(item) {
     region: item.region || "WORLD",
     title: item.title,
     excerpt: item.excerpt || "",
+    titlePt: item.titlePt || "",
+    excerptPt: item.excerptPt || "",
+    translationStatus: item.titlePt ? "pt-ready" : "pending",
     publishedAt: item.publishedAt || null,
     discoveredAt: item.discoveredAt || null,
     originalLanguage: item.originalLanguage || "auto",
@@ -83,14 +89,61 @@ function publicItem(item) {
 }
 
 async function readJson(file, fallback) { try { return JSON.parse(await fs.readFile(file, "utf8")); } catch { return fallback; } }
+
 async function fetchSource(source) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   try {
-    const response = await fetch(source.url, { headers: { "user-agent": "GUIROPA-Radio-RSS-World-Bridge/3.0 (+https://guiropa.world/)" }, signal: controller.signal });
+    const response = await fetch(source.url, { headers: { "user-agent": "GUIROPA-Radio-RSS-World-Bridge/4.0 (+https://guiropa.world/)" }, signal: controller.signal });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return parseFeed(await response.text(), source);
   } finally { clearTimeout(timer); }
+}
+
+async function translateTextToPt(text) {
+  const value = String(text || "").trim();
+  if (!value) return "";
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), TRANSLATION_TIMEOUT_MS);
+  try {
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=pt&dt=t&q=${encodeURIComponent(value)}`;
+    const response = await fetch(url, { headers: { "user-agent": "GUIROPA-Radio-Translation-Bridge/1.0" }, signal: controller.signal });
+    if (!response.ok) throw new Error(`translation HTTP ${response.status}`);
+    const payload = await response.json();
+    return (payload?.[0] || []).map((part) => part?.[0] || "").join("").trim() || value;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function translateItemToPt(item) {
+  if (item.titlePt) return item;
+  try {
+    const [titlePt, excerptPt] = await Promise.all([
+      translateTextToPt(item.title),
+      translateTextToPt(item.excerpt || ""),
+    ]);
+    return { ...item, titlePt: titlePt || item.title, excerptPt: excerptPt || item.excerpt || "" };
+  } catch (error) {
+    console.log(`[GUIROPA TRANSLATION] ${item.id} failed: ${String(error?.message || error)}`);
+    return item;
+  }
+}
+
+async function translateBackfill(items) {
+  const targets = items.filter((item) => !item.titlePt).slice(0, TRANSLATION_BACKFILL_PER_RUN);
+  if (!targets.length) return items;
+  const translatedById = new Map();
+  let cursor = 0;
+  async function worker() {
+    while (cursor < targets.length) {
+      const index = cursor++;
+      const translated = await translateItemToPt(targets[index]);
+      translatedById.set(translated.id, translated);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(TRANSLATION_CONCURRENCY, targets.length) }, () => worker()));
+  return items.map((item) => translatedById.get(item.id) || item);
 }
 
 await fs.mkdir(DATA_DIR, { recursive: true });
@@ -114,18 +167,23 @@ for (const source of SOURCES) {
 const combinedRaw = [...incoming, ...(feed.items || [])]
   .sort((a, b) => Date.parse(b.publishedAt || b.discoveredAt || 0) - Date.parse(a.publishedAt || a.discoveredAt || 0))
   .slice(0, MAX_PUBLIC_ITEMS);
-const combined = combinedRaw.map(publicItem);
+
+const translatedRaw = await translateBackfill(combinedRaw);
+const combined = translatedRaw.map(publicItem);
+const translatedCount = combined.filter((item) => item.translationStatus === "pt-ready").length;
 const output = {
   updatedAt: new Date().toISOString(),
   bridge: "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
   aiCalls: 0,
   itemCount: combined.length,
   newItems: incoming.length,
+  translatedPt: translatedCount,
+  translationPending: combined.length - translatedCount,
   connectedPoints: sourceStatus.filter((source) => source.ok && Number(source.seen || 0) > 0).length,
   sources: sourceStatus,
   items: combined,
 };
 await fs.writeFile(FEED_FILE, `${JSON.stringify(output, null, 2)}\n`);
 await fs.writeFile(LEDGER_FILE, `${JSON.stringify({ updatedAt: output.updatedAt, ids: [...known].slice(-MAX_LEDGER_ITEMS) }, null, 2)}\n`);
-console.log(`[GUIROPA RSS WORLD BRIDGE] ${incoming.length} new items · ${combined.length} public items · ${SOURCES.length} configured sources · 0 AI calls`);
+console.log(`[GUIROPA RSS WORLD BRIDGE] ${incoming.length} new items · ${combined.length} public items · ${translatedCount} PT-ready · ${SOURCES.length} configured sources · 0 AI calls`);
 for (const status of sourceStatus) console.log(JSON.stringify(status));

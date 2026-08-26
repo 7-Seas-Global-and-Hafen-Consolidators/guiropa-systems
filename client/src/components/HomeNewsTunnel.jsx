@@ -28,7 +28,9 @@ export default function HomeNewsTunnel() {
 
   useEffect(() => {
     let alive = true;
-    translateNewsItems(items, lang).then((result) => { if (alive) setTranslated(result); });
+    if (lang === "pt") { setTranslated({}); return () => { alive = false; }; }
+    const base = items.map((item) => ({ ...item, title: item.titlePt || item.title, excerpt: item.excerptPt || item.excerpt }));
+    translateNewsItems(base, lang).then((result) => { if (alive) setTranslated(result); });
     return () => { alive = false; };
   }, [items, lang]);
 
@@ -37,6 +39,10 @@ export default function HomeNewsTunnel() {
     : lang === "es"
       ? { count: "noticias en flujo", updated: "Actualizado", enter: "ENTRAR AL NEWS TUNNEL" }
       : { count: "matérias no fluxo", updated: "Atualizado", enter: "ENTRAR NO NEWS TUNNEL" };
+
+  const textFor = (item) => lang === "pt"
+    ? { title: item.titlePt || "Matéria sendo preparada em português." }
+    : (translated[item.id] || { title: item.titlePt || item.title });
 
   return (
     <section className="guiropa-home-news" aria-label="GUIROPA Radio News Tunnel">
@@ -50,7 +56,7 @@ export default function HomeNewsTunnel() {
           <div className="guiropa-home-news__meta"><div>{data.itemCount || items.length} {labels.count}</div><div>{labels.updated} {stamp(data.updatedAt, lang)}</div></div>
         </div>
         <div className="guiropa-home-news__grid">
-          {items.map((item) => { const text = translated[item.id] || item; return <Link className="guiropa-home-news__card" to={`/world-wire/${item.id}`} key={item.id}><div className="guiropa-home-news__brand">GUIROPA RADIO · PASSPORT RADIO NETWORK</div><h3>{text.title}</h3><div className="guiropa-home-news__foot"><span>{item.region || "WORLD"}</span><span>{stamp(item.publishedAt || item.discoveredAt, lang)}</span></div></Link>; })}
+          {items.map((item) => { const text = textFor(item); return <Link className="guiropa-home-news__card" to={`/world-wire/${item.id}`} key={item.id}><div className="guiropa-home-news__brand">GUIROPA RADIO · PASSPORT RADIO NETWORK</div><h3>{text.title}</h3><div className="guiropa-home-news__foot"><span>{item.region || "WORLD"}</span><span>{stamp(item.publishedAt || item.discoveredAt, lang)}</span></div></Link>; })}
         </div>
         <Link className="guiropa-home-news__cta" to="/world-wire">{labels.enter} →</Link>
       </div>
