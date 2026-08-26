@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-26T20:26:43.063Z",
+  "updatedAt": "2026-08-26T23:55:55.221Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
   "aiCalls": 0,
-  "itemCount": 588,
+  "itemCount": 596,
   "newItems": 8,
   "translatedPt": 0,
-  "translationPending": 588,
+  "translationPending": 596,
   "connectedPoints": 25,
   "sources": [
     {
@@ -48,13 +48,13 @@
       "region": "USA",
       "ok": true,
       "seen": 29,
-      "added": 0
+      "added": 2
     },
     {
       "region": "USA",
       "ok": true,
       "seen": 10,
-      "added": 1
+      "added": 0
     },
     {
       "region": "USA",
@@ -164,7 +164,7 @@
       "region": "Latin America / Brazil",
       "ok": true,
       "seen": 10,
-      "added": 1
+      "added": 0
     },
     {
       "region": "Latin America / Brazil",
@@ -191,6 +191,102 @@
     }
   ],
   "items": [
+    {
+      "id": "c7d7835ed2228d0dd8f3cbdf5e9d3e6dd997a1aa4538ba93221206c26115561c",
+      "region": "USA",
+      "title": "Nintendo Switch 2 Price Jumps to $500 Next Week — Buy Now to Save $50",
+      "excerpt": "Nintendo is set to raise the Switch 2 price on Tuesday, September 1st. Nintendo Switch 2 Price Jumps to $500 Next Week — Buy Now to Save $50 Eddie Fu",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T22:15:20.000Z",
+      "discoveredAt": "2026-08-26T23:55:29.033Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "46c6cbb8a48816fb6c958d81adcff9c3407ff7410126dc16ec3b0a80a0fbd63d",
+      "region": "USA",
+      "title": "Netflix’s Willy Wonka Reality Show Replaces Kids with Adults and Gene Wilder with AI",
+      "excerpt": "The nine-episode competition turns Wonka's chocolate factory into a reality-TV obstacle course with a \"life-changing prize.\" Netflix’s Willy Wonka Reality Show Replaces Kids with Adults and Gene Wilder with AI Alex Krinsky",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T21:58:11.000Z",
+      "discoveredAt": "2026-08-26T23:55:29.033Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "18331fd78a191d49665a03e676d5d8852edeeef181cfc3aaf572aed9bbddefe5",
+      "region": "USA",
+      "title": "Ravyn Lenae Postpones North American Tour Dates",
+      "excerpt": "The singer was set to perform throughout September and October",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T21:44:25.000Z",
+      "discoveredAt": "2026-08-26T23:55:28.653Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "6e662dee961834cb72207a5b461922484663637a57788373b21a208f9ba1a7b6",
+      "region": "USA",
+      "title": "Miss Chile Ignacia Fernández Delivers Crushing Death Metal Performance at Miss World Competition",
+      "excerpt": "The beauty pageant contestant performed her band Decessus' original song \"The Hollow Descent.\" Miss Chile Ignacia Fernández Delivers Crushing Death Metal Performance at Miss World Competition Spencer Kaufman",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T21:37:41.000Z",
+      "discoveredAt": "2026-08-26T23:55:29.034Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "9a6b9dd9fdf79734cb3e45ae2ff3a090de756e8bbe20cf1cfc1cb356f4039930",
+      "region": "USA",
+      "title": "Rockers Pay Tribute to Late Actor Tim Curry",
+      "excerpt": "Rockers are paying tribute to late actor Tim Curry on social media following his death at the age of 80. He died on Aug. 25. Continue reading&hellip;",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T21:37:13.000Z",
+      "discoveredAt": "2026-08-26T23:55:28.380Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "669279ef62368802c527d83b70f1518b7e7e74d498bbdacef7e057a0efa50fab",
+      "region": "USA",
+      "title": "Beyoncé Reveals Details of B’Day 20th Anniversary Deluxe Edition",
+      "excerpt": "The $149.98 four-LP set includes additional B-sides, a 60-page booklet, and two collectible art prints",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T21:20:57.000Z",
+      "discoveredAt": "2026-08-26T23:55:28.653Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "2b5987db30e9bde0695faae92bfcba8e006796c31dc9c8b8e5b57c0b9b27e15f",
+      "region": "USA",
+      "title": "Federal Judge Cites Dolly Parton While Striking Down Texas Drag Ban",
+      "excerpt": "The ruling also pointed to Elvis impersonators, cosplay, and swimming as examples of performances that could be swept up by the law's vague language. Federal Judge Cites Dolly Parton While Striking Down Texas Drag Ban Alex Krinsky",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T20:54:22.000Z",
+      "discoveredAt": "2026-08-26T23:55:29.034Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "29fba0c11811a4a9b01929ae80cbe74f310f6b73a49c9d0f20e2cddd6bcec39f",
+      "region": "USA",
+      "title": "Sleep Token Partner with Jackson and Charvel for Signature Guitar and Bass",
+      "excerpt": "The instruments are the first signature guitar and bass for IV and III, respectively. Sleep Token Partner with Jackson and Charvel for Signature Guitar and Bass Langdon Hickman",
+      "titlePt": "",
+      "excerptPt": "",
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-26T20:36:32.000Z",
+      "discoveredAt": "2026-08-26T23:55:29.034Z",
+      "originalLanguage": "auto"
+    },
     {
       "id": "65c18a7d40b02feb4c13eda6f7382c312cf4714ecead36b4d7b8ef97c1e1b9c7",
       "region": "USA",
