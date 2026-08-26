@@ -1,0 +1,17 @@
+{
+  "brand": "GUIROPA RADIO",
+  "commercialMode": "MAXIMUM",
+  "surfaces": [
+    "global-top-takeover",
+    "global-marquee",
+    "desktop-side-rails",
+    "floating-commercial-pulse",
+    "route-interstitial",
+    "pre-footer-revenue-deck",
+    "world-wire-inline-sponsored-cards",
+    "direct-advertising-route",
+    "adsense-loader"
+  ],
+  "editorialSeparation": true,
+  "audioIsolation": true
+}
