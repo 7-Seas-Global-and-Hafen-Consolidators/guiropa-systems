@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "scope": {
+    "start_year": 1950,
+    "end_year": 1989,
+    "daily_target": 1,
+    "daily_hard_stop": 2,
+    "monthly_target": 30,
+    "monthly_hard_stop": 45
+  },
+  "queue": [
+    {
+      "slug": "1950s-rock-and-roll-arrives",
+      "year": 1956,
+      "decade": "1950s",
+      "title": "Quando o rock'n'roll deixou de parecer uma moda passageira",
+      "angle": "Reconstruir o momento em que o rock'n'roll atravessou rádio, televisão e juventude e deixou de ser tratado apenas como novidade passageira.",
+      "sources": [
+        "https://www.nme.com/features/riffs-rucks-and-reviews-nmes-first-63-years-on-the-rock-n-roll-frontline-756830",
+        "https://collection.sciencemuseumgroup.org.uk/people/ap30603/melody-maker"
+      ]
+    },
+    {
+      "slug": "1967-rock-becomes-art",
+      "year": 1967,
+      "decade": "1960s",
+      "title": "1967: quando o rock começou a exigir outra forma de escuta",
+      "angle": "Psicodelia, estúdio, festivais e ambição artística alteraram a ideia do que um disco popular poderia ser.",
+      "sources": [
+        "https://www.nme.com/features/riffs-rucks-and-reviews-nmes-first-63-years-on-the-rock-n-roll-frontline-756830",
+        "https://collection.sciencemuseumgroup.org.uk/people/ap30603/melody-maker"
+      ]
+    },
+    {
+      "slug": "1973-progressive-on-the-newsstands",
+      "year": 1973,
+      "decade": "1970s",
+      "title": "Quando o progressive rock tomou as bancas",
+      "angle": "Álbuns longos, capas monumentais e crítica musical tratando rock como obra de grande ambição artística.",
+      "sources": [
+        "https://collection.sciencemuseumgroup.org.uk/people/ap30603/melody-maker",
+        "https://peteframearchive.com/index.php/about-the-archive/magazines/"
+      ]
+    },
+    {
+      "slug": "1977-punk-against-the-world",
+      "year": 1977,
+      "decade": "1970s",
+      "title": "1977: punk contra o mundo",
+      "angle": "A urgência punk como ruptura musical, estética e geracional dentro de uma imprensa que também estava mudando.",
+      "sources": [
+        "https://www.nme.com/features/riffs-rucks-and-reviews-nmes-first-63-years-on-the-rock-n-roll-frontline-756830",
+        "https://collection.sciencemuseumgroup.org.uk/people/ap30603/melody-maker"
+      ]
+    },
+    {
+      "slug": "1983-second-british-invasion",
+      "year": 1983,
+      "decade": "1980s",
+      "title": "1983: música, imagem e a segunda invasão britânica",
+      "angle": "New wave, synthpop, televisão musical e o momento em que imagem e som passaram a circular como uma única linguagem pop.",
+      "sources": [
+        "https://www.nme.com/features/riffs-rucks-and-reviews-nmes-first-63-years-on-the-rock-n-roll-frontline-756830",
+        "https://collection.sciencemuseumgroup.org.uk/people/ap30603/melody-maker"
+      ]
+    }
+  ]
+}
