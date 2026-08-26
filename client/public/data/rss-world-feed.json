@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-26T15:55:45.555Z",
+  "updatedAt": "2026-08-26T16:43:25.843Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
   "aiCalls": 0,
-  "itemCount": 553,
-  "newItems": 4,
-  "connectedPoints": 24,
+  "itemCount": 563,
+  "newItems": 10,
+  "connectedPoints": 25,
   "sources": [
     {
       "region": "USA",
@@ -16,7 +16,7 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 26,
-      "added": 1
+      "added": 0
     },
     {
       "region": "Europe / UK",
@@ -28,25 +28,25 @@
       "region": "USA",
       "ok": true,
       "seen": 35,
-      "added": 0
+      "added": 1
     },
     {
       "region": "USA",
       "ok": true,
       "seen": 35,
-      "added": 0
+      "added": 1
     },
     {
       "region": "Europe / UK",
       "ok": true,
       "seen": 10,
-      "added": 0
+      "added": 3
     },
     {
       "region": "USA",
       "ok": true,
       "seen": 29,
-      "added": 0
+      "added": 1
     },
     {
       "region": "USA",
@@ -139,7 +139,7 @@
       "region": "Europe / Belgium",
       "ok": true,
       "seen": 20,
-      "added": 1
+      "added": 2
     },
     {
       "region": "Europe / Switzerland",
@@ -171,8 +171,9 @@
     },
     {
       "region": "Global / UK",
-      "ok": false,
-      "error": "fetch failed"
+      "ok": true,
+      "seen": 10,
+      "added": 0
     },
     {
       "region": "Global",
@@ -188,6 +189,96 @@
     }
   ],
   "items": [
+    {
+      "id": "640f4d9685dad26f2a2371d479673e3e9df77c984df03bf9240880f363e4cc11",
+      "region": "USA",
+      "title": "The Beatles Unveil Early “Day Tripper” Recording Ahead of Rubber Soul Reissue: Stream",
+      "excerpt": "The track is one of 24 early session recordings included in the upcoming special edition of Rubber Soul. The Beatles Unveil Early “Day Tripper” Recording Ahead of Rubber Soul Reissue: Stream Eddie Fu",
+      "publishedAt": "2026-08-26T16:26:44.000Z",
+      "discoveredAt": "2026-08-26T16:43:06.956Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "8eba3aa7f8db59f94d9e7d1bd19e3d07459386779e0232d8996b3c76937efae0",
+      "region": "Europe / Belgium",
+      "title": "Queen contre Trident : la vengeance la plus célèbre de l’histoire du rock britannique",
+      "excerpt": "Trois minutes quarante de venin ouvrent l’album \"A Night at the Opera\", Freddie Mercury y règle ses comptes en...",
+      "publishedAt": "2026-08-26T16:15:00.000Z",
+      "discoveredAt": "2026-08-26T16:43:17.060Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "ca53cf66fd6cebe90e8a705e24766c425e91c1ba6a63f09165e0d1f550a6bfa8",
+      "region": "USA",
+      "title": "Acid Bath Bring Their Sludge to New York City with Support from Obituary: Photos + Setlists",
+      "excerpt": "The two acts electrified metal fans at Manhattan's Pier 17. Acid Bath Bring Their Sludge to New York City with Support from Obituary: Photos + Setlists Kevin RC Wilson",
+      "publishedAt": "2026-08-26T16:13:09.000Z",
+      "discoveredAt": "2026-08-26T16:43:06.957Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "addb4383a9f1fdffa86524bd341cbc6d9213792a981c7341e0b4282d2ab630c1",
+      "region": "Europe / UK",
+      "title": "Meta agrees to major $17billion settlement and changes to Facebook and Instagram after trial over teen addiction",
+      "excerpt": "Teen users will face daily time limits, overnight blocks and muted notifications during school hours The post Meta agrees to major $17billion settlement and changes to Facebook and Instagram after trial over teen addiction appeared first on NME .",
+      "publishedAt": "2026-08-26T16:10:33.000Z",
+      "discoveredAt": "2026-08-26T16:43:05.606Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "1e45afc33138c41e4f9a0c1976bffc234cbce6fd533613f4377acc1b5cbc1977",
+      "region": "USA",
+      "title": "Tim Curry, Rocky Horror Picture Show Star, Dies at 80",
+      "excerpt": "The actor also played Pennywise the Clown in Stephen King’s It",
+      "publishedAt": "2026-08-26T16:10:22.000Z",
+      "discoveredAt": "2026-08-26T16:43:05.730Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "69b66071eeff8259009380a295788b57fa1397bad852841d342591069ab886d4",
+      "region": "USA",
+      "title": "'Rocky Horror' Actor Tim Curry Dead at 80",
+      "excerpt": "The actor was best known for his role as the campy, cross-dressing Dr. Frank-N-Furter. Continue reading&hellip;",
+      "publishedAt": "2026-08-26T16:08:41.000Z",
+      "discoveredAt": "2026-08-26T16:43:05.180Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "e72917ac3edcecae439046e2ff21365f1af5dd1992e4879bfa8db58817d49e17",
+      "region": "USA",
+      "title": "'Rocky Horror' Actor Tim Curry Dead at 80",
+      "excerpt": "The actor was best known for his role as the campy, cross-dressing Dr. Frank-N-Furter. Continue reading&hellip;",
+      "publishedAt": "2026-08-26T16:08:41.000Z",
+      "discoveredAt": "2026-08-26T16:43:05.455Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "3c8c0fc03d883a92d7c8dee976e9921d4838b0098d47fdfe6b5997671fcce955",
+      "region": "Europe / UK",
+      "title": "Watch Charli XCX review her past Reading & Leeds performances: “It’s cringing me out”",
+      "excerpt": "She also said fans at Reading & Leeds 2026 can expect “a very different show than anything I’ve done before” The post Watch Charli XCX review her past Reading & Leeds performances: “It’s cringing me out” appeared first on NME .",
+      "publishedAt": "2026-08-26T15:58:19.000Z",
+      "discoveredAt": "2026-08-26T16:43:05.606Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "bc6dccf303a52d0b739d6770740ca4d01cf73b671b7f52759974e47b89746e6e",
+      "region": "Europe / UK",
+      "title": "Tim Curry, star of ‘The Rocky Horror Picture Show’, dies at the age of 80",
+      "excerpt": "He is also remembered for his roles in 'Home Alone 2: Lost In New York' and as Pennywise in the 1990 adaptation of Stephen King's 'It' The post Tim Curry, star of ‘The Rocky Horror Picture Show’, dies at the age of 80 appeared first on NME .",
+      "publishedAt": "2026-08-26T15:55:38.000Z",
+      "discoveredAt": "2026-08-26T16:43:05.606Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "6233f197611a9d16e4bdb6269f9c34b5d8ae0535b26a38abe5f9e706a0122dc9",
+      "region": "Europe / Belgium",
+      "title": "Des enfants reprennent Depeche Mode… et font craquer la toile !",
+      "excerpt": "Des élèves de quatrième année du Colegio Alicante del Valle, au Chili, font le buzz avec une reprise particulièrement...",
+      "publishedAt": "2026-08-26T15:55:22.000Z",
+      "discoveredAt": "2026-08-26T16:43:17.060Z",
+      "originalLanguage": "auto"
+    },
     {
       "id": "47f8124881c1a13b783dc46f3c7afeb46e6ff99dcb5640ca6386d7aa1157640b",
       "region": "Europe / UK",
