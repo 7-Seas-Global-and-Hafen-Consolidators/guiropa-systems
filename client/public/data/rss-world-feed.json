@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-08-26T14:00:05.556Z",
+  "updatedAt": "2026-08-26T14:19:20.075Z",
   "bridge": "GUIROPA RSS WORLD BRIDGE",
   "aiCalls": 0,
-  "itemCount": 529,
-  "newItems": 0,
+  "itemCount": 531,
+  "newItems": 2,
   "sources": [
     {
       "id": "npr-music",
@@ -19,7 +19,7 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 26,
-      "added": 0
+      "added": 1
     },
     {
       "id": "music-news",
@@ -75,7 +75,7 @@
       "region": "USA",
       "ok": true,
       "seen": 15,
-      "added": 0
+      "added": 1
     },
     {
       "id": "xs-noize",
@@ -213,8 +213,9 @@
       "id": "hits-perdidos",
       "name": "Hits Perdidos",
       "region": "Latin America / Brazil",
-      "ok": false,
-      "error": "HTTP 403"
+      "ok": true,
+      "seen": 10,
+      "added": 0
     },
     {
       "id": "blognroll",
@@ -227,9 +228,8 @@
       "id": "anr-factory",
       "name": "A&R Factory",
       "region": "Global / UK",
-      "ok": true,
-      "seen": 10,
-      "added": 0
+      "ok": false,
+      "error": "This operation was aborted"
     },
     {
       "id": "nagamag",
@@ -249,6 +249,30 @@
     }
   ],
   "items": [
+    {
+      "id": "8a6a8aab1d52022e6fcddd5e8fe25c49bf63ba25d29ade0a02b276787db3ed04",
+      "sourceId": "consequence",
+      "source": "Consequence",
+      "region": "USA",
+      "title": "Trump Administration Warns Kennedy Center Could Be Demolished If Renovations Are Blocked",
+      "excerpt": "Justice Department lawyers have said the venue could eventually be torn down, with an outdoor amphitheater raised as one possible replacement. Trump Administration Warns Kennedy Center Could Be Demolished If Renovations Are Blocked Karan Singh",
+      "url": "https://consequence.net/2026/08/trump-kennedy-center-demolition-renovation/",
+      "publishedAt": "2026-08-26T14:15:12.000Z",
+      "discoveredAt": "2026-08-26T14:18:40.948Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "836904d3bf5fbdeb2b6a98fbc36704eadedf4a9e227f5c4903068c7d22483956",
+      "sourceId": "guardian-music",
+      "source": "The Guardian · Music",
+      "region": "Europe / UK",
+      "title": "‘It was the hardcore equivalent of being a Deadhead’: consciousness-raising punk movement Krishnacore returns",
+      "excerpt": "First-wave punks rejected religion – but come the 90s, bands embracing eastern thought found legions of devotees. Ahead of reformations and reissues, they discuss the Bhagavad Gita, brawls and tulasi beads in the pit Whether wielded as shock tactic or part of a considered philosophical stance, mockery and distrust of religion have been baked into punk rock’s DNA from the get-go. The Damned, Crass, the Germs and the Dead Kennedys all proffered early potshots and takedowns, and if Bad Brains received a grudging pass for their Rastafari leanings, in general, songs kowtowing to gods or masters were about as likely to win you scene cred as praise for Reagan, cops or nuclear war. As the 80s ticked",
+      "url": "https://www.theguardian.com/music/2026/aug/26/it-was-the-hardcore-equivalent-of-being-a-deadhead-consciousness-raising-punk-movement-krishnacore-returns",
+      "publishedAt": "2026-08-26T14:00:16.000Z",
+      "discoveredAt": "2026-08-26T14:18:38.393Z",
+      "originalLanguage": "auto"
+    },
     {
       "id": "da4684b9143270b22e4582f26bedb02bde4aa0762dcb1768fab33bd90d147dac",
       "sourceId": "allmusic",
