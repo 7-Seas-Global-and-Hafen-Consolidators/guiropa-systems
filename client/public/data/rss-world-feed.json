@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026-08-26T15:24:36.140Z",
+  "updatedAt": "2026-08-26T15:55:45.555Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
   "aiCalls": 0,
-  "itemCount": 549,
-  "newItems": 18,
-  "connectedPoints": 25,
+  "itemCount": 553,
+  "newItems": 4,
+  "connectedPoints": 24,
   "sources": [
     {
       "region": "USA",
       "ok": true,
       "seen": 10,
-      "added": 2
+      "added": 0
     },
     {
       "region": "Europe / UK",
@@ -34,19 +34,19 @@
       "region": "USA",
       "ok": true,
       "seen": 35,
-      "added": 1
+      "added": 0
     },
     {
       "region": "Europe / UK",
       "ok": true,
       "seen": 10,
-      "added": 2
+      "added": 0
     },
     {
       "region": "USA",
       "ok": true,
       "seen": 29,
-      "added": 1
+      "added": 0
     },
     {
       "region": "USA",
@@ -58,7 +58,7 @@
       "region": "USA",
       "ok": true,
       "seen": 15,
-      "added": 7
+      "added": 2
     },
     {
       "region": "Europe / UK",
@@ -139,13 +139,13 @@
       "region": "Europe / Belgium",
       "ok": true,
       "seen": 20,
-      "added": 3
+      "added": 1
     },
     {
       "region": "Europe / Switzerland",
       "ok": true,
       "seen": 25,
-      "added": 1
+      "added": 0
     },
     {
       "region": "Latin America / Brazil",
@@ -156,7 +156,7 @@
     {
       "region": "Latin America / Brazil",
       "ok": false,
-      "error": "HTTP 429"
+      "error": "HTTP 404"
     },
     {
       "region": "Latin America / Brazil",
@@ -171,9 +171,8 @@
     },
     {
       "region": "Global / UK",
-      "ok": true,
-      "seen": 10,
-      "added": 0
+      "ok": false,
+      "error": "fetch failed"
     },
     {
       "region": "Global",
@@ -189,6 +188,33 @@
     }
   ],
   "items": [
+    {
+      "id": "47f8124881c1a13b783dc46f3c7afeb46e6ff99dcb5640ca6386d7aa1157640b",
+      "region": "Europe / UK",
+      "title": "Two women accuse former Fat White Family member Saul Adamczewski of physical and emotional abuse",
+      "excerpt": "Insecure Men singer has now been dropped by his record label and had tour dates cancelled after two women shared allegations about his behaviour Saul Adamczewski of Insecure Men and formerly of Fat White Family has been dropped by his record label and had tour dates cancelled after two women shared allegations of physical and emotional abuse against the musician. One woman said that the pair had a short relationship that resulted in a pregnancy, after which, she alleged, Adamczewski “made it his duty to make me suffer. He has been violent, pushed me, thrown glass bottles at me, showered me with beer […] insulted me, taken my passport from me, stolen my money and more, all while I had our bab",
+      "publishedAt": "2026-08-26T15:42:15.000Z",
+      "discoveredAt": "2026-08-26T15:55:17.788Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "41acdb867cbbecc8e161bd69a2af111e7ac5bdbde8f4b43b6954e121c155bf0a",
+      "region": "USA",
+      "title": "Becky G Recalls Industry “Eye Rolls” for Exploring Her Mexican Roots on Back-to-Back Albums",
+      "excerpt": "The singer looked to her Mexican heritage for Esquinas and Encuentros despite doubts about their marketability. Becky G Recalls Industry “Eye Rolls” for Exploring Her Mexican Roots on Back-to-Back Albums Pedro Camacho",
+      "publishedAt": "2026-08-26T15:41:49.000Z",
+      "discoveredAt": "2026-08-26T15:55:19.939Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "b21adc8bf5ecc7673762865c4797cbf37ff9a34512600e2ffd09f93daf3866e3",
+      "region": "USA",
+      "title": "Tim Curry Dead: Icon of Comedy and Patron Saint of Saturday-Night Dress-Up Was 80",
+      "excerpt": "The beloved actor also starred in Home Alone, Clue, Legend, and Stephen King's IT. Tim Curry Dead: Icon of Comedy and Patron Saint of Saturday-Night Dress-Up Was 80 Abby Jones",
+      "publishedAt": "2026-08-26T15:27:10.000Z",
+      "discoveredAt": "2026-08-26T15:55:19.939Z",
+      "originalLanguage": "auto"
+    },
     {
       "id": "6d43dba4eae091c59469340b49ed1812da60717fc608400bfe394b221608e028",
       "region": "USA",
@@ -1573,6 +1599,15 @@
       "excerpt": "Dublin Gig Guide / Mac Demarco \" data-image-caption=\" Dublin Gig Guide / Mac Demarco \" data-large-file=\"https://uploads.nialler9.com/wp-content/uploads/2026/08/25125515/Gig_Guide_Dublin_2025-7.webp\" title=\"The Nialler9 Dublin Gig Guide: Super Furry Animals, Mac De Marco, Amyl and the Sniffers, Loyle Carner, Deftones, Earl Sweatshirt and MIKE & more 8\">What gigs and club nights are on this week in Dublin?",
       "publishedAt": "2026-08-25T11:57:43.000Z",
       "discoveredAt": "2026-08-26T13:58:23.825Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "a54d74f486bee04771f4a1de35088bd005fbd78c05e822e322863d4bc3a2354d",
+      "region": "Europe / Belgium",
+      "title": "Des escrocs se font passer pour Nickelback : le groupe met ses fans en garde",
+      "excerpt": "Nickelback vient de dévoiler \"Leave Me Behind\", une ambitieuse power ballad extraite du prochain album, Everything Under...",
+      "publishedAt": "2026-08-25T11:36:37.000Z",
+      "discoveredAt": "2026-08-26T15:55:30.508Z",
       "originalLanguage": "auto"
     },
     {
