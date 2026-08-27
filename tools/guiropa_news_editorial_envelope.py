@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
 """GUIROPA local editorial — Passport-style Fact Pack + structural envelope.
 
-Fail closed. Local Ollama may publish only when:
-- source evidence is substantial;
-- output follows the bounded JSON schema;
-- every paragraph cites valid Fact Pack IDs;
-- numbers are present in source evidence;
-- paragraphs are not repetitive;
-- provenance metadata is stored with the public-ready item.
+Fail closed. The engine owns story identity; the model only writes bounded PT-BR
+copy and paragraph-level Fact Pack references. Bad legacy local stories are
+removed even when a new candidate cannot pass the editorial firewall.
 """
 from __future__ import annotations
 
@@ -54,9 +50,8 @@ def local_story_schema() -> dict:
                 "type": "array", "minItems": 1, "maxItems": 1,
                 "items": {
                     "type": "object", "additionalProperties": False,
-                    "required": ["id", "titlePt", "excerptPt", "bodyPt"],
+                    "required": ["titlePt", "excerptPt", "bodyPt"],
                     "properties": {
-                        "id": {"type": "string", "minLength": 1, "maxLength": 240},
                         "titlePt": {"type": "string", "minLength": TITLE_MIN_CHARS, "maxLength": TITLE_MAX_CHARS},
                         "excerptPt": {"type": "string", "minLength": DECK_MIN_CHARS, "maxLength": DECK_MAX_CHARS},
                         "bodyPt": {"type": "array", "minItems": 4, "maxItems": 4, "items": paragraph},
@@ -69,7 +64,7 @@ def local_story_schema() -> dict:
 
 def split_facts(text: str) -> list[str]:
     clean = re.sub(r"\s+", " ", str(text or "")).strip()
-    candidates = re.split(r"(?<=[.!?])\s+(?=[A-ZÀ-Ý0-9\"'“‘(])", clean)
+    candidates = re.split(r"(?<=[.!?;])\s+(?=[A-ZÀ-Ý0-9\"'“‘(])|(?<=:)\s+(?=[A-ZÀ-Ý0-9])", clean)
     facts: list[str] = []
     seen: set[str] = set()
     for sentence in candidates:
@@ -87,7 +82,11 @@ def split_facts(text: str) -> list[str]:
 
 
 def attach_fact_pack(packet: dict) -> dict:
-    facts = split_facts(str(packet.get("evidence") or ""))
+    source = " ".join([
+        str(packet.get("rssExcerpt") or ""),
+        str(packet.get("evidence") or ""),
+    ])
+    facts = split_facts(source)
     enriched = dict(packet)
     enriched["factPack"] = [{"id": f"F{i+1}", "fact": fact} for i, fact in enumerate(facts)]
     return enriched
@@ -101,16 +100,16 @@ Escreva UMA matéria curta e original em português brasileiro usando SOMENTE o 
 {correction_note}
 REGRAS ABSOLUTAS:
 - Não invente, complete, suponha ou contextualize fatos ausentes.
+- NÃO crie nem devolva campo id; a identidade da matéria é controlada pelo engine.
 - Não use citações diretas. Parafraseie apenas o que o Fact Pack sustenta.
 - Todo número, data, quantidade, duração ou ano usado deve existir literalmente no Fact Pack.
 - Preserve nomes próprios existentes; não crie nomes, cargos, lugares ou relações novas.
 - bodyPt tem EXATAMENTE 4 objetos. Cada objeto possui text e factRefs.
 - Cada parágrafo deve ter {PARAGRAPH_MIN_CHARS}-{PARAGRAPH_MAX_CHARS} caracteres e citar 1-3 IDs que realmente sustentam aquele parágrafo.
-- Não repita a mesma informação para preencher espaço. Se poucos fatos existirem, combine ângulos dos fatos disponíveis sem acrescentar nada.
+- Não repita a mesma informação para preencher espaço.
 - Título e deck em pt-BR natural. Sem markdown, sem emojis, sem comentários fora do JSON.
 - Responda apenas JSON compatível com o schema.
 
-ID DA MATÉRIA: {packet.get('id')}
 TÍTULO ORIGINAL: {packet.get('title')}
 FONTE: {packet.get('source')}
 FACT PACK:
@@ -145,7 +144,7 @@ def call_ollama_local(prompt: str) -> dict:
     return parsed
 
 
-def materialize_story(raw: dict) -> tuple[dict, list[list[str]]]:
+def materialize_story(raw: dict, sid: str) -> tuple[dict, list[list[str]]]:
     body = raw.get("bodyPt")
     if not isinstance(body, list) or len(body) != 4:
         raise ValueError("bodyPt must contain exactly four provenance paragraphs")
@@ -158,7 +157,12 @@ def materialize_story(raw: dict) -> tuple[dict, list[list[str]]]:
         fact_refs = [str(x) for x in (row.get("factRefs") or []) if str(x)]
         texts.append(text)
         refs.append(fact_refs)
-    return {**raw, "bodyPt": texts}, refs
+    return {
+        "id": sid,
+        "titlePt": str(raw.get("titlePt") or "").strip(),
+        "excerptPt": str(raw.get("excerptPt") or "").strip(),
+        "bodyPt": texts,
+    }, refs
 
 
 def numeric_tokens(text: str) -> set[str]:
@@ -201,8 +205,7 @@ def validate_grounding(story: dict, refs: list[list[str]], packet: dict) -> None
     if source_title and pt_title == source_title:
         raise ValueError("title was not rewritten to pt-BR")
 
-    quote_marks = ('“', '”', '"')
-    if any(mark in " ".join(paragraphs) for mark in quote_marks):
+    if any(mark in " ".join(paragraphs) for mark in ('“', '”', '"')):
         raise ValueError("direct quotations are disabled in local editorial")
 
 
@@ -226,6 +229,18 @@ def sanitize_legacy_local_ready(feed: dict) -> int:
     return cleared
 
 
+def refresh_feed_counters(feed: dict, cleared: int, stamp: str | None = None) -> None:
+    items = feed.get("items") or []
+    feed["translatedPt"] = sum(1 for item in items if item.get("titlePt"))
+    feed["translationPending"] = len(items) - feed["translatedPt"]
+    feed["publishedPt"] = sum(1 for item in items if core.is_ready(item))
+    feed["editorialPending"] = len(items) - feed["publishedPt"]
+    feed["editorialGroundingVersion"] = GROUNDING_VERSION
+    feed["editorialLegacyUnpublished"] = int(feed.get("editorialLegacyUnpublished") or 0) + cleared
+    if stamp:
+        feed["editorialUpdatedAt"] = stamp
+
+
 def choose_grounded_target(feed: dict) -> tuple[dict, dict] | tuple[None, None]:
     pending = [item for item in (feed.get("items") or []) if not core.is_ready(item)][:CANDIDATE_SCAN]
     ranked: list[tuple[int, dict, dict]] = []
@@ -244,13 +259,13 @@ def choose_grounded_target(feed: dict) -> tuple[dict, dict] | tuple[None, None]:
     return item, packet
 
 
-def generate_and_validate(packet: dict, allowed: set[str], correction: str = "") -> tuple[dict, list[list[str]]]:
+def generate_and_validate(packet: dict, sid: str, correction: str = "") -> tuple[dict, list[list[str]]]:
     raw = call_ollama_local(fact_pack_prompt(packet, correction))
     rows = raw.get("stories") or []
     if len(rows) != 1:
         raise ValueError("local provider returned wrong story count")
-    story, refs = materialize_story(rows[0])
-    core.validate_story(story, allowed)
+    story, refs = materialize_story(rows[0], sid)
+    core.validate_story(story, {sid})
     validate_grounding(story, refs, packet)
     return story, refs
 
@@ -262,30 +277,35 @@ def main() -> int:
         print(f"[GUIROPA FACT PACK] unpublished {cleared} legacy local story/stories")
 
     now = datetime.now(timezone.utc)
+    stamp = now.isoformat()
     day = now.date().isoformat()
     already_today = sum(1 for item in (feed.get("items") or []) if core.generated_today(item, day))
     if already_today >= core.DAILY_LIMIT:
+        refresh_feed_counters(feed, cleared, stamp)
         core.write_json(core.FEED, feed)
         return 0
 
     target, packet = choose_grounded_target(feed)
     if target is None or packet is None:
-        items = feed.get("items") or []
-        feed["publishedPt"] = sum(1 for item in items if core.is_ready(item))
-        feed["editorialPending"] = len(items) - feed["publishedPt"]
+        refresh_feed_counters(feed, cleared, stamp)
         core.write_json(core.FEED, feed)
         print("[GUIROPA FACT PACK] no publishable grounded candidate")
         return 0
 
     sid = str(target.get("id"))
-    allowed = {sid}
     try:
-        story, refs = generate_and_validate(packet, allowed)
-    except Exception as first_error:
-        print(f"[GUIROPA FACT PACK] one corrective retry id={sid}: {first_error}")
-        story, refs = generate_and_validate(packet, allowed, str(first_error)[:500])
+        try:
+            story, refs = generate_and_validate(packet, sid)
+        except Exception as first_error:
+            print(f"[GUIROPA FACT PACK] one corrective retry id={sid}: {first_error}")
+            story, refs = generate_and_validate(packet, sid, str(first_error)[:500])
+    except Exception as final_error:
+        refresh_feed_counters(feed, cleared, stamp)
+        feed["editorialLastBlockedReason"] = str(final_error)[:700]
+        core.write_json(core.FEED, feed)
+        print(f"[GUIROPA FACT PACK] publication blocked after retry id={sid}: {final_error}")
+        return 0
 
-    stamp = now.isoformat()
     evidence = str(packet.get("evidence") or "")
     facts_json = json.dumps(packet.get("factPack") or [], ensure_ascii=False, sort_keys=True)
     for item in feed.get("items") or []:
@@ -307,19 +327,13 @@ def main() -> int:
         })
         break
 
-    items = feed.get("items") or []
-    feed["translatedPt"] = sum(1 for item in items if item.get("titlePt"))
-    feed["translationPending"] = len(items) - feed["translatedPt"]
-    feed["publishedPt"] = sum(1 for item in items if core.is_ready(item))
-    feed["editorialPending"] = len(items) - feed["publishedPt"]
+    refresh_feed_counters(feed, cleared, stamp)
     feed["aiCalls"] = int(feed.get("aiCalls") or 0) + 1
-    feed["editorialUpdatedAt"] = stamp
     feed["editorialDailyLimit"] = core.DAILY_LIMIT
     feed["editorialBatchSize"] = core.BATCH_SIZE
     feed["editorialLocalBatchSize"] = 1
     feed["editorialPublishedToday"] = already_today + 1
-    feed["editorialGroundingVersion"] = GROUNDING_VERSION
-    feed["editorialLegacyUnpublished"] = int(feed.get("editorialLegacyUnpublished") or 0) + cleared
+    feed.pop("editorialLastBlockedReason", None)
     core.write_json(core.FEED, feed)
     print(
         f"[GUIROPA FACT PACK] published grounded story id={sid} facts={len(packet.get('factPack') or [])} "
@@ -330,7 +344,7 @@ def main() -> int:
 
 if __name__ == "__main__":
     print(
-        "[GUIROPA FACT PACK] Passport-style provenance active · one story · four factual paragraphs · "
-        f"{PARAGRAPH_MIN_CHARS}-{PARAGRAPH_MAX_CHARS} chars each"
+        "[GUIROPA FACT PACK] engine-owned identity + Passport provenance active · "
+        f"four factual paragraphs · {PARAGRAPH_MIN_CHARS}-{PARAGRAPH_MAX_CHARS} chars each"
     )
     raise SystemExit(main())
