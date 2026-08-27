@@ -1,0 +1,27 @@
+name: Validate GUIROPA Passport Editorial Bridge Consumer
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/rss-world-editorial.yml'
+      - 'tools/guiropa_editorial_bridge_apply.py'
+      - '.github/workflows/guiropa-editorial-bridge-validation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile bridge consumer
+        run: python -m py_compile tools/guiropa_editorial_bridge_apply.py
+      - name: Verify consumer contract
+        run: |
+          grep -q 'passport-radio/main/data/guiropa-editorial-bridge.json' tools/guiropa_editorial_bridge_apply.py
+          grep -q 'PUBLISH GUIROPA NEWS TUNNEL IN PORTUGUESE' .github/workflows/rss-world-editorial.yml
