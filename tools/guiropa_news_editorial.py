@@ -29,6 +29,7 @@ MAX_SOURCE_CHARS = 9000
 FETCH_BYTES = 220000
 API_TIMEOUT = 360
 MAX_OUTPUT_TOKENS = 9000
+LOCAL_MAX_OUTPUT_TOKENS = 2200
 UA = "Mozilla/5.0 (compatible; GUIROPA-News-Editorial/3.0; +https://guiropa.world/)"
 
 
@@ -211,7 +212,7 @@ def call_ollama_local(prompt: str) -> dict:
         "stream": False,
         "format": "json",
         "messages": [{"role": "user", "content": prompt}],
-        "options": {"temperature": 0.3, "num_predict": min(8192, MAX_OUTPUT_TOKENS), "num_ctx": 16384},
+        "options": {"temperature": 0.3, "num_predict": min(LOCAL_MAX_OUTPUT_TOKENS, MAX_OUTPUT_TOKENS), "num_ctx": 16384},
     }
     data = post_json(endpoint, payload, {"Content-Type": "application/json"}, timeout=420)
     text = str((data.get("message") or {}).get("content") or "")
