@@ -1,12 +1,13 @@
-name: GUIROPA News Tunnel Free Multiprovider Editorial
+name: GUIROPA News Tunnel Editorial — Passport Secret Bridge
 
 on:
   schedule:
-    - cron: "3,33 * * * *"
+    - cron: "12,42 * * * *"
   push:
     branches: [main]
     paths:
       - ".github/workflows/rss-world-editorial.yml"
+      - "tools/guiropa_editorial_bridge_apply.py"
   workflow_dispatch:
 
 permissions:
@@ -19,14 +20,7 @@ concurrency:
 jobs:
   editorial:
     runs-on: ubuntu-latest
-    timeout-minutes: 24
-    env:
-      GROQ_API_KEY: ${{ secrets.GROQ_FREE_API_KEY }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_FREE_API_KEY }}
-      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_FREE_API_KEY }}
-      GUIROPA_GROQ_MODEL: openai/gpt-oss-120b
-      GUIROPA_GEMINI_MODEL: gemini-2.5-flash-lite
-      GUIROPA_OPENROUTER_MODEL: openrouter/free
+    timeout-minutes: 16
 
     steps:
       - name: Checkout main
@@ -40,8 +34,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Build up to 12 complete Portuguese Full Stories
-        run: python tools/guiropa_news_editorial.py
+      - name: Apply Passport-generated GUIROPA Full Stories
+        run: python tools/guiropa_editorial_bridge_apply.py
 
       - name: Enforce truthful editorial health
         shell: bash
@@ -63,7 +57,7 @@ jobs:
         shell: bash
         run: |
           if git diff --quiet -- client/public/data/rss-world-feed.json; then
-            echo "No editorial changes. Nothing to publish."
+            echo "No new bridge stories. Nothing to publish."
             exit 0
           fi
 
