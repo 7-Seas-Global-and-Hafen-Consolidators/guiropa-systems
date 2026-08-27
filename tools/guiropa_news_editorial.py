@@ -3,8 +3,9 @@
 
 Zero-cost architecture derived from Passport Radio:
 - fail-closed Portuguese Full Story publication gates
-- Groq -> Gemini -> OpenRouter -> local Ollama cascade
-- up to 12 stories per run; local zero-key mode defaults to 4
+- Groq -> Gemini -> OpenRouter for keyed batch inference
+- local Ollama zero-key fallback processes one story per request
+- up to 12 stories per keyed run; conservative local proof-of-life target
 - 500 stories/day hard publication target
 """
 from __future__ import annotations
@@ -26,10 +27,13 @@ FEED = ROOT / "client/public/data/rss-world-feed.json"
 BATCH_SIZE = 12
 DAILY_LIMIT = 500
 MAX_SOURCE_CHARS = 9000
+LOCAL_SOURCE_CHARS = 3000
 FETCH_BYTES = 220000
 API_TIMEOUT = 360
 MAX_OUTPUT_TOKENS = 9000
-UA = "Mozilla/5.0 (compatible; GUIROPA-News-Editorial/3.0; +https://guiropa.world/)"
+LOCAL_OUTPUT_TOKENS = 1600
+LOCAL_TIMEOUT = 210
+UA = "Mozilla/5.0 (compatible; GUIROPA-News-Editorial/3.1; +https://guiropa.world/)"
 
 
 def read_json(path: Path, fallback):
@@ -82,15 +86,11 @@ def external_provider_available() -> bool:
     return any(os.environ.get(name, "").strip() for name in ("GROQ_API_KEY", "GEMINI_API_KEY", "OPENROUTER_API_KEY"))
 
 
-def select_targets(feed: dict, remaining_today: int) -> list[dict]:
-    limit = max(0, min(BATCH_SIZE, remaining_today))
-    if not external_provider_available():
-        local_batch = max(1, min(BATCH_SIZE, int(os.environ.get("GUIROPA_LOCAL_BATCH", "4"))))
-        limit = min(limit, local_batch)
-    return [item for item in (feed.get("items") or []) if not is_ready(item)][:limit]
+def pending_items(feed: dict) -> list[dict]:
+    return [item for item in (feed.get("items") or []) if not is_ready(item)]
 
 
-def source_packet(item: dict) -> dict:
+def source_packet(item: dict, *, local: bool = False) -> dict:
     source_text = ""
     try:
         source_text = fetch_source(str(item.get("url") or ""))
@@ -98,6 +98,8 @@ def source_packet(item: dict) -> dict:
         print(f"[GUIROPA EDITORIAL] source fetch failed {item.get('id')}: {type(exc).__name__}", file=sys.stderr)
     if len(source_text) < 500:
         source_text = str(item.get("excerpt") or "")
+    if local:
+        source_text = source_text[:LOCAL_SOURCE_CHARS]
     return {
         "id": item.get("id"),
         "source": item.get("source") or "Fonte editorial",
@@ -105,13 +107,18 @@ def source_packet(item: dict) -> dict:
         "region": item.get("region") or "WORLD",
         "publishedAt": item.get("publishedAt"),
         "title": item.get("title") or "",
-        "rssExcerpt": item.get("excerpt") or "",
+        "rssExcerpt": str(item.get("excerpt") or "")[:1200],
         "evidence": source_text,
     }
 
 
-def build_prompt(packets: list[dict]) -> str:
+def build_prompt(packets: list[dict], *, local: bool = False) -> str:
     evidence = json.dumps(packets, ensure_ascii=False)
+    length_rule = (
+        "- Produza exatamente 4 parágrafos, com 180 a 320 palavras no total. Cada parágrafo deve acrescentar informação factual."
+        if local
+        else "- Produza de 4 a 8 parágrafos por matéria, normalmente 300 a 650 palavras quando houver evidência suficiente."
+    )
     return f"""Você é o editor do GUIROPA RADIO · NEWS TUNNEL™.
 
 Transforme CADA sinal abaixo em UMA MATÉRIA EDITORIAL ORIGINAL, COMPLETA E EM PORTUGUÊS DO BRASIL.
@@ -127,7 +134,7 @@ REGRAS ABSOLUTAS:
 - Escreva como revista musical humana, clara e informativa, nunca como verbete SEO.
 - Sem emojis e sem markdown.
 - Título, deck e toda a matéria devem estar em português brasileiro natural e consistente.
-- Produza de 4 a 8 parágrafos por matéria, normalmente 300 a 650 palavras quando houver evidência suficiente.
+{length_rule}
 - O deck deve ter 1 ou 2 frases.
 - A saída deve conter somente IDs recebidos.
 - Responda exclusivamente com JSON puro e válido.
@@ -211,23 +218,18 @@ def call_ollama_local(prompt: str) -> dict:
         "stream": False,
         "format": "json",
         "messages": [{"role": "user", "content": prompt}],
-        "options": {"temperature": 0.3, "num_predict": min(8192, MAX_OUTPUT_TOKENS), "num_ctx": 16384},
+        "options": {"temperature": 0.25, "num_predict": LOCAL_OUTPUT_TOKENS, "num_ctx": 8192},
     }
-    data = post_json(endpoint, payload, {"Content-Type": "application/json"}, timeout=420)
+    data = post_json(endpoint, payload, {"Content-Type": "application/json"}, timeout=LOCAL_TIMEOUT)
     text = str((data.get("message") or {}).get("content") or "")
     if not text:
         raise RuntimeError("Ollama returned empty content")
     return parse_json_text(text)
 
 
-def call_zero_cost_multiprovider(prompt: str) -> tuple[dict, str]:
+def call_external_multiprovider(prompt: str) -> tuple[dict, str]:
     failures = []
-    for name, provider in (
-        ("groq-free", call_groq),
-        ("gemini-free", call_gemini),
-        ("openrouter-free", call_openrouter),
-        ("ollama-local-zero-key", call_ollama_local),
-    ):
+    for name, provider in (("groq-free", call_groq), ("gemini-free", call_gemini), ("openrouter-free", call_openrouter)):
         try:
             result = provider(prompt)
             print(f"ZERO_COST_PROVIDER_OK provider={name}", file=sys.stderr)
@@ -236,7 +238,7 @@ def call_zero_cost_multiprovider(prompt: str) -> tuple[dict, str]:
             detail = str(exc).replace("\n", " ")[-700:]
             failures.append(f"{name}: {detail}")
             print(f"ZERO_COST_PROVIDER_FAIL provider={name} detail={detail}", file=sys.stderr)
-    raise RuntimeError("all_zero_cost_providers_exhausted | " + " | ".join(failures))
+    raise RuntimeError("all_external_zero_cost_providers_exhausted | " + " | ".join(failures))
 
 
 def validate_story(story: dict, allowed_ids: set[str]) -> None:
@@ -258,6 +260,51 @@ def validate_story(story: dict, allowed_ids: set[str]) -> None:
         raise ValueError(f"unsafe editorial word count for {sid}: {words}")
 
 
+def generate_local(pending: list[dict], remaining: int) -> tuple[dict[str, dict], str]:
+    publish_target = max(1, min(4, int(os.environ.get("GUIROPA_LOCAL_BATCH", "1")), remaining))
+    candidate_limit = max(publish_target, min(6, int(os.environ.get("GUIROPA_LOCAL_CANDIDATES", "4"))))
+    valid: dict[str, dict] = {}
+    failures = []
+    for item in pending[:candidate_limit]:
+        sid = str(item.get("id") or "")
+        try:
+            packet = source_packet(item, local=True)
+            result = call_ollama_local(build_prompt([packet], local=True))
+            stories = result.get("stories")
+            if not isinstance(stories, list) or not stories:
+                raise RuntimeError("local response missing stories array")
+            story = stories[0]
+            validate_story(story, {sid})
+            valid[sid] = story
+            print(f"ZERO_COST_PROVIDER_OK provider=ollama-local-zero-key id={sid}", file=sys.stderr)
+            if len(valid) >= publish_target:
+                break
+        except Exception as exc:
+            detail = str(exc).replace("\n", " ")[-700:]
+            failures.append(f"{sid}:{detail}")
+            print(f"ZERO_COST_PROVIDER_FAIL provider=ollama-local-zero-key id={sid} detail={detail}", file=sys.stderr)
+    if not valid:
+        raise RuntimeError("local_zero_key_generated_zero_valid_stories | " + " | ".join(failures))
+    return valid, "ollama-local-zero-key"
+
+
+def generate_keyed(pending: list[dict], remaining: int) -> tuple[dict[str, dict], str]:
+    targets = pending[:max(0, min(BATCH_SIZE, remaining))]
+    packets = [source_packet(item) for item in targets]
+    result, provider = call_external_multiprovider(build_prompt(packets))
+    stories = result.get("stories")
+    if not isinstance(stories, list):
+        raise RuntimeError("provider response missing stories array")
+    allowed = {str(item.get("id")) for item in targets}
+    valid: dict[str, dict] = {}
+    for story in stories:
+        validate_story(story, allowed)
+        valid[str(story["id"])] = story
+    if not valid:
+        raise RuntimeError("EDITORIAL BLOCKED — provider returned zero valid Full Stories")
+    return valid, provider
+
+
 def main() -> int:
     feed = read_json(FEED, {"items": []})
     now = datetime.now(timezone.utc)
@@ -268,24 +315,19 @@ def main() -> int:
         print(f"[GUIROPA EDITORIAL] daily limit reached: {already_today}/{DAILY_LIMIT}")
         return 0
 
-    targets = select_targets(feed, remaining)
-    if not targets:
+    pending = pending_items(feed)
+    if not pending:
         print("[GUIROPA EDITORIAL] no pending stories")
         return 0
 
-    packets = [source_packet(item) for item in targets]
-    result, provider = call_zero_cost_multiprovider(build_prompt(packets))
-    stories = result.get("stories")
-    if not isinstance(stories, list):
-        raise RuntimeError("provider response missing stories array")
-
-    allowed = {str(item.get("id")) for item in targets}
-    valid: dict[str, dict] = {}
-    for story in stories:
-        validate_story(story, allowed)
-        valid[str(story["id"])] = story
-    if not valid:
-        raise RuntimeError("EDITORIAL BLOCKED — provider returned zero valid Full Stories")
+    if external_provider_available():
+        try:
+            valid, provider = generate_keyed(pending, remaining)
+        except Exception as exc:
+            print(f"[GUIROPA EDITORIAL] keyed cascade failed, entering local single-story fallback: {str(exc)[-700:]}", file=sys.stderr)
+            valid, provider = generate_local(pending, remaining)
+    else:
+        valid, provider = generate_local(pending, remaining)
 
     stamp = now.isoformat()
     enriched = []
@@ -294,18 +336,27 @@ def main() -> int:
         if not story:
             enriched.append(item)
             continue
-        enriched.append({**item, "titlePt": str(story["titlePt"]).strip(), "excerptPt": str(story["excerptPt"]).strip(), "bodyPt": [str(p).strip() for p in story["bodyPt"] if str(p).strip()], "translationStatus": "pt-ready", "editorialStatus": "ready", "editorialGeneratedAt": stamp, "editorialProvider": provider})
+        enriched.append({
+            **item,
+            "titlePt": str(story["titlePt"]).strip(),
+            "excerptPt": str(story["excerptPt"]).strip(),
+            "bodyPt": [str(p).strip() for p in story["bodyPt"] if str(p).strip()],
+            "translationStatus": "pt-ready",
+            "editorialStatus": "ready",
+            "editorialGeneratedAt": stamp,
+            "editorialProvider": provider,
+        })
 
     feed["items"] = enriched
     feed["translatedPt"] = sum(1 for item in enriched if item.get("titlePt"))
     feed["translationPending"] = len(enriched) - feed["translatedPt"]
     feed["publishedPt"] = sum(1 for item in enriched if is_ready(item))
     feed["editorialPending"] = len(enriched) - feed["publishedPt"]
-    feed["aiCalls"] = int(feed.get("aiCalls") or 0) + 1
+    feed["aiCalls"] = int(feed.get("aiCalls") or 0) + len(valid)
     feed["editorialUpdatedAt"] = stamp
     feed["editorialDailyLimit"] = DAILY_LIMIT
     feed["editorialBatchSize"] = BATCH_SIZE
-    feed["editorialLocalBatchSize"] = int(os.environ.get("GUIROPA_LOCAL_BATCH", "4"))
+    feed["editorialLocalBatchSize"] = int(os.environ.get("GUIROPA_LOCAL_BATCH", "1"))
     feed["editorialPublishedToday"] = already_today + len(valid)
     write_json(FEED, feed)
     print(f"[GUIROPA EDITORIAL] {len(valid)} Full Stories ready · {already_today + len(valid)}/{DAILY_LIMIT} today · {feed['publishedPt']} PT published · {feed['editorialPending']} pending · provider={provider}")
