@@ -143,6 +143,31 @@ PACOTE DE EVIDÊNCIAS:
 """
 
 
+def build_grounded_retry_prompt(packet: dict, reason: str) -> str:
+    evidence = json.dumps([packet], ensure_ascii=False)
+    return f"""Você é o editor do GUIROPA RADIO · NEWS TUNNEL™.
+
+A primeira tentativa foi bloqueada pelo controle editorial por este motivo: {reason}
+Refaça SOMENTE esta matéria a partir do MESMO pacote de evidências abaixo.
+
+REGRAS ABSOLUTAS DESTA ÚNICA NOVA TENTATIVA:
+- Use exclusivamente os fatos contidos na evidência; não invente nem complete lacunas.
+- Entregue entre 120 e 450 palavras no corpo, somente se a evidência sustentar esse volume.
+- bodyPt DEVE conter EXATAMENTE 4 strings não vazias, cada uma sendo um parágrafo editorial completo.
+- Não compacte os quatro parágrafos em uma única string.
+- Título, deck e corpo em português brasileiro natural.
+- Preserve nomes próprios e dados exatamente conforme a evidência.
+- Sem markdown, sem emojis e sem comentários fora do JSON.
+- Se não houver evidência suficiente para cumprir o mínimo sem inventar, mantenha-se fiel à evidência; o gate externo decidirá e bloqueará a publicação.
+
+FORMATO OBRIGATÓRIO:
+{{"stories":[{{"id":"{packet.get('id')}","titlePt":"título","excerptPt":"deck","bodyPt":["parágrafo 1","parágrafo 2","parágrafo 3","parágrafo 4"]}}]}}
+
+PACOTE DE EVIDÊNCIAS:
+{evidence}
+"""
+
+
 def parse_json_text(text: str) -> dict:
     value = str(text or "").strip()
     if value.startswith("```"):
@@ -320,6 +345,7 @@ def main() -> int:
         return 0
 
     packets = [source_packet(item) for item in targets]
+    packet_by_id = {str(packet.get("id")): packet for packet in packets}
     result, provider = call_zero_cost_multiprovider(build_prompt(packets))
     stories = result.get("stories")
     if not isinstance(stories, list):
@@ -329,7 +355,20 @@ def main() -> int:
     valid: dict[str, dict] = {}
     for story in stories:
         story = normalize_story_shape(story)
-        validate_story(story, allowed)
+        sid = str(story.get("id") or "")
+        try:
+            validate_story(story, allowed)
+        except ValueError as exc:
+            if provider != "ollama-local-zero-key" or sid not in packet_by_id:
+                raise
+            print(f"[GUIROPA EDITORIAL] local grounded retry for {sid}: {exc}", file=sys.stderr)
+            retry_result = call_ollama_local(build_grounded_retry_prompt(packet_by_id[sid], str(exc)))
+            retry_stories = retry_result.get("stories")
+            if not isinstance(retry_stories, list) or len(retry_stories) != 1:
+                raise RuntimeError(f"local grounded retry returned invalid stories array for {sid}") from exc
+            story = normalize_story_shape(retry_stories[0])
+            validate_story(story, {sid})
+            print(f"[GUIROPA EDITORIAL] local grounded retry passed for {sid}", file=sys.stderr)
         valid[str(story["id"])] = story
     if not valid:
         raise RuntimeError("EDITORIAL BLOCKED — provider returned zero valid Full Stories")
