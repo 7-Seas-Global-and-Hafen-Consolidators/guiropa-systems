@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """GUIROPA News Tunnel™ Full Story editorial engine.
 
-Lean transplant of the Passport Radio free multiprovider architecture:
+Zero-cost architecture derived from Passport Radio:
 - fail-closed Portuguese Full Story publication gates
-- Groq -> Gemini -> OpenRouter free-provider cascade
-- up to 12 stories per run
+- Groq -> Gemini -> OpenRouter -> local Ollama cascade
+- up to 12 stories per run; local zero-key mode defaults to 4
 - 500 stories/day hard publication target
-- one provider request per batch instead of one runner/install cycle per tiny batch
 """
 from __future__ import annotations
 
@@ -28,9 +27,9 @@ BATCH_SIZE = 12
 DAILY_LIMIT = 500
 MAX_SOURCE_CHARS = 9000
 FETCH_BYTES = 220000
-API_TIMEOUT = 240
+API_TIMEOUT = 360
 MAX_OUTPUT_TOKENS = 9000
-UA = "Mozilla/5.0 (compatible; GUIROPA-News-Editorial/2.0; +https://guiropa.world/)"
+UA = "Mozilla/5.0 (compatible; GUIROPA-News-Editorial/3.0; +https://guiropa.world/)"
 
 
 def read_json(path: Path, fallback):
@@ -79,8 +78,15 @@ def generated_today(item: dict, day: str) -> bool:
     return is_ready(item) and stamp[:10] == day
 
 
+def external_provider_available() -> bool:
+    return any(os.environ.get(name, "").strip() for name in ("GROQ_API_KEY", "GEMINI_API_KEY", "OPENROUTER_API_KEY"))
+
+
 def select_targets(feed: dict, remaining_today: int) -> list[dict]:
     limit = max(0, min(BATCH_SIZE, remaining_today))
+    if not external_provider_available():
+        local_batch = max(1, min(BATCH_SIZE, int(os.environ.get("GUIROPA_LOCAL_BATCH", "4"))))
+        limit = min(limit, local_batch)
     return [item for item in (feed.get("items") or []) if not is_ready(item)][:limit]
 
 
@@ -148,11 +154,11 @@ def parse_json_text(text: str) -> dict:
         return json.loads(match.group(0))
 
 
-def post_json(url: str, payload: dict, headers: dict) -> dict:
+def post_json(url: str, payload: dict, headers: dict, timeout: int = API_TIMEOUT) -> dict:
     data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
     request = urllib.request.Request(url, data=data, headers=headers, method="POST")
     try:
-        with urllib.request.urlopen(request, timeout=API_TIMEOUT) as response:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
             return json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")[-1200:]
@@ -166,18 +172,8 @@ def call_groq(prompt: str) -> dict:
     if not key:
         raise RuntimeError("GROQ_API_KEY unavailable")
     model = os.environ.get("GUIROPA_GROQ_MODEL", "openai/gpt-oss-120b").strip()
-    payload = {
-        "model": model,
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.35,
-        "max_completion_tokens": MAX_OUTPUT_TOKENS,
-        "response_format": {"type": "json_object"},
-    }
-    data = post_json(
-        "https://api.groq.com/openai/v1/chat/completions",
-        payload,
-        {"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
-    )
+    payload = {"model": model, "messages": [{"role": "user", "content": prompt}], "temperature": 0.35, "max_completion_tokens": MAX_OUTPUT_TOKENS, "response_format": {"type": "json_object"}}
+    data = post_json("https://api.groq.com/openai/v1/chat/completions", payload, {"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
     return parse_json_text(data["choices"][0]["message"]["content"])
 
 
@@ -187,14 +183,7 @@ def call_gemini(prompt: str) -> dict:
         raise RuntimeError("GEMINI_API_KEY unavailable")
     model = os.environ.get("GUIROPA_GEMINI_MODEL", "gemini-2.5-flash-lite").strip()
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{urllib.parse.quote(model, safe='')}:generateContent"
-    payload = {
-        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.35,
-            "maxOutputTokens": MAX_OUTPUT_TOKENS,
-            "responseMimeType": "application/json",
-        },
-    }
+    payload = {"contents": [{"role": "user", "parts": [{"text": prompt}]}], "generationConfig": {"temperature": 0.35, "maxOutputTokens": MAX_OUTPUT_TOKENS, "responseMimeType": "application/json"}}
     data = post_json(url, payload, {"x-goog-api-key": key, "Content-Type": "application/json"})
     parts = data["candidates"][0]["content"]["parts"]
     return parse_json_text("".join(str(part.get("text", "")) for part in parts))
@@ -207,41 +196,47 @@ def call_openrouter(prompt: str) -> dict:
     model = os.environ.get("GUIROPA_OPENROUTER_MODEL", "openrouter/free").strip()
     if model != "openrouter/free" and not model.endswith(":free"):
         raise RuntimeError("paid OpenRouter model rejected; use openrouter/free or :free")
-    payload = {
-        "model": model,
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.35,
-        "max_tokens": MAX_OUTPUT_TOKENS,
-    }
-    data = post_json(
-        "https://openrouter.ai/api/v1/chat/completions",
-        payload,
-        {
-            "Authorization": f"Bearer {key}",
-            "Content-Type": "application/json",
-            "HTTP-Referer": "https://guiropa.world/",
-            "X-Title": "GUIROPA News Tunnel Editorial Engine",
-        },
-    )
+    payload = {"model": model, "messages": [{"role": "user", "content": prompt}], "temperature": 0.35, "max_tokens": MAX_OUTPUT_TOKENS}
+    data = post_json("https://openrouter.ai/api/v1/chat/completions", payload, {"Authorization": f"Bearer {key}", "Content-Type": "application/json", "HTTP-Referer": "https://guiropa.world/", "X-Title": "GUIROPA News Tunnel Editorial Engine"})
     return parse_json_text(data["choices"][0]["message"]["content"])
 
 
-def call_free_multiprovider(prompt: str) -> tuple[dict, str]:
+def call_ollama_local(prompt: str) -> dict:
+    endpoint = os.environ.get("GUIROPA_OLLAMA_URL", "http://127.0.0.1:11434/api/chat").strip()
+    model = os.environ.get("GUIROPA_OLLAMA_MODEL", "qwen2.5:0.5b-instruct").strip()
+    if not endpoint.startswith("http://127.0.0.1:") and not endpoint.startswith("http://localhost:"):
+        raise RuntimeError("Ollama endpoint rejected: local loopback only")
+    payload = {
+        "model": model,
+        "stream": False,
+        "format": "json",
+        "messages": [{"role": "user", "content": prompt}],
+        "options": {"temperature": 0.3, "num_predict": min(8192, MAX_OUTPUT_TOKENS), "num_ctx": 16384},
+    }
+    data = post_json(endpoint, payload, {"Content-Type": "application/json"}, timeout=420)
+    text = str((data.get("message") or {}).get("content") or "")
+    if not text:
+        raise RuntimeError("Ollama returned empty content")
+    return parse_json_text(text)
+
+
+def call_zero_cost_multiprovider(prompt: str) -> tuple[dict, str]:
     failures = []
     for name, provider in (
         ("groq-free", call_groq),
         ("gemini-free", call_gemini),
         ("openrouter-free", call_openrouter),
+        ("ollama-local-zero-key", call_ollama_local),
     ):
         try:
             result = provider(prompt)
-            print(f"FREE_PROVIDER_OK provider={name}", file=sys.stderr)
+            print(f"ZERO_COST_PROVIDER_OK provider={name}", file=sys.stderr)
             return result, name
         except Exception as exc:
             detail = str(exc).replace("\n", " ")[-700:]
             failures.append(f"{name}: {detail}")
-            print(f"FREE_PROVIDER_FAIL provider={name} detail={detail}", file=sys.stderr)
-    raise RuntimeError("all_free_providers_exhausted | " + " | ".join(failures))
+            print(f"ZERO_COST_PROVIDER_FAIL provider={name} detail={detail}", file=sys.stderr)
+    raise RuntimeError("all_zero_cost_providers_exhausted | " + " | ".join(failures))
 
 
 def validate_story(story: dict, allowed_ids: set[str]) -> None:
@@ -279,7 +274,7 @@ def main() -> int:
         return 0
 
     packets = [source_packet(item) for item in targets]
-    result, provider = call_free_multiprovider(build_prompt(packets))
+    result, provider = call_zero_cost_multiprovider(build_prompt(packets))
     stories = result.get("stories")
     if not isinstance(stories, list):
         raise RuntimeError("provider response missing stories array")
@@ -289,7 +284,6 @@ def main() -> int:
     for story in stories:
         validate_story(story, allowed)
         valid[str(story["id"])] = story
-
     if not valid:
         raise RuntimeError("EDITORIAL BLOCKED — provider returned zero valid Full Stories")
 
@@ -300,16 +294,7 @@ def main() -> int:
         if not story:
             enriched.append(item)
             continue
-        enriched.append({
-            **item,
-            "titlePt": str(story["titlePt"]).strip(),
-            "excerptPt": str(story["excerptPt"]).strip(),
-            "bodyPt": [str(p).strip() for p in story["bodyPt"] if str(p).strip()],
-            "translationStatus": "pt-ready",
-            "editorialStatus": "ready",
-            "editorialGeneratedAt": stamp,
-            "editorialProvider": provider,
-        })
+        enriched.append({**item, "titlePt": str(story["titlePt"]).strip(), "excerptPt": str(story["excerptPt"]).strip(), "bodyPt": [str(p).strip() for p in story["bodyPt"] if str(p).strip()], "translationStatus": "pt-ready", "editorialStatus": "ready", "editorialGeneratedAt": stamp, "editorialProvider": provider})
 
     feed["items"] = enriched
     feed["translatedPt"] = sum(1 for item in enriched if item.get("titlePt"))
@@ -320,14 +305,10 @@ def main() -> int:
     feed["editorialUpdatedAt"] = stamp
     feed["editorialDailyLimit"] = DAILY_LIMIT
     feed["editorialBatchSize"] = BATCH_SIZE
+    feed["editorialLocalBatchSize"] = int(os.environ.get("GUIROPA_LOCAL_BATCH", "4"))
     feed["editorialPublishedToday"] = already_today + len(valid)
-
     write_json(FEED, feed)
-    print(
-        f"[GUIROPA EDITORIAL] {len(valid)} Full Stories ready · "
-        f"{already_today + len(valid)}/{DAILY_LIMIT} today · "
-        f"{feed['publishedPt']} PT published · {feed['editorialPending']} pending · provider={provider}"
-    )
+    print(f"[GUIROPA EDITORIAL] {len(valid)} Full Stories ready · {already_today + len(valid)}/{DAILY_LIMIT} today · {feed['publishedPt']} PT published · {feed['editorialPending']} pending · provider={provider}")
     return 0
 
 
