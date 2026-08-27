@@ -6,7 +6,9 @@ on:
       - "client/src/components/Layout.jsx"
       - "client/src/components/HomeLiveAgenda.jsx"
       - "client/src/components/ScheduleNewsFeed.jsx"
+      - "client/src/components/MrNomadEditorial.jsx"
       - "client/src/data/liveAgenda.js"
+      - "client/src/data/mrNomadEditorial.js"
       - "client/src/pages/HomePage.jsx"
       - "client/src/pages/ShowsPage.jsx"
       - "client/src/SchedulePage.jsx"
@@ -18,7 +20,9 @@ on:
       - "client/src/components/Layout.jsx"
       - "client/src/components/HomeLiveAgenda.jsx"
       - "client/src/components/ScheduleNewsFeed.jsx"
+      - "client/src/components/MrNomadEditorial.jsx"
       - "client/src/data/liveAgenda.js"
+      - "client/src/data/mrNomadEditorial.js"
       - "client/src/pages/HomePage.jsx"
       - "client/src/pages/ShowsPage.jsx"
       - "client/src/SchedulePage.jsx"
@@ -46,7 +50,7 @@ jobs:
       - name: Build GUIROPA
         run: npm run build
         working-directory: client
-      - name: Verify calm commercial layout, Programação RSS, agenda and protected tunnels
+      - name: Verify calm commercial layout, Programação RSS, Mr. Nomad, agenda and protected tunnels
         shell: bash
         run: |
           grep -q 'GuiropaCommercialFooterDeck' client/src/components/Layout.jsx
@@ -66,13 +70,15 @@ jobs:
           grep -q 'Duran Duran' client/src/data/liveAgenda.js
           grep -q 'Deep Purple' client/src/data/liveAgenda.js
           grep -q 'ScheduleNewsFeed' client/src/SchedulePage.jsx
+          grep -q 'MrNomadEditorial' client/src/SchedulePage.jsx
           grep -q 'data/rss-world-feed.json' client/src/components/ScheduleNewsFeed.jsx
           grep -q 'filter(isReady).slice(0, 5)' client/src/components/ScheduleNewsFeed.jsx
-          grep -q 'Chuck Berry ajudou a escrever a gramática do rock' client/src/SchedulePage.jsx
-          grep -q 'Beatles aceleraram a British Invasion' client/src/SchedulePage.jsx
-          grep -q 'Disco não foi só uma batida' client/src/SchedulePage.jsx
-          grep -q 'MTV mudou a forma de ouvir música' client/src/SchedulePage.jsx
-          grep -q 'Violator abriu 1990' client/src/SchedulePage.jsx
+          grep -q 'Buddy Holly & The Crickets' client/src/data/mrNomadEditorial.js
+          grep -q 'Damn Yankees' client/src/data/mrNomadEditorial.js
+          grep -q 'The Runaways → Joan Jett' client/src/data/mrNomadEditorial.js
+          grep -q 'Mr. Nomad' client/src/components/MrNomadEditorial.jsx
+          ! grep -q 'FONTE ·' client/src/components/MrNomadEditorial.jsx
+          ! grep -q 'nomad-source' client/src/components/MrNomadEditorial.jsx
           grep -q 'guiropa-logo-plaque--header' client/src/styles/header-logo-fix.css
           test -f client/src/pages/Guiropa70sTunnelPage.jsx
           test -f client/src/pages/Guiropa80sTunnelPage.jsx
