@@ -2,11 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
-import GuiropaCommercialLayer from "./GuiropaCommercialLayer.jsx";
-import GuiropaCommercialCascade from "./GuiropaCommercialCascade.jsx";
 import GuiropaCommercialFooterDeck from "./GuiropaCommercialFooterDeck.jsx";
-import GuiropaCommercialFloat from "./GuiropaCommercialFloat.jsx";
-import GuiropaCommercialInterstitial from "./GuiropaCommercialInterstitial.jsx";
 import HomeNewsTunnel from "./HomeNewsTunnel.jsx";
 
 export default function Layout() {
@@ -17,22 +13,10 @@ export default function Layout() {
     <>
       <ScrollToTop />
       <Header />
-
-      <div className="guiropa-commercial-top-zone">
-        <GuiropaCommercialLayer />
-      </div>
-
-      <div className="app-shell guiropa-radio-shell">
-        <Outlet />
-      </div>
-
+      <div className="app-shell guiropa-radio-shell"><Outlet /></div>
       {isHome ? <HomeNewsTunnel /> : null}
-
-      <GuiropaCommercialCascade />
-      <GuiropaCommercialInterstitial />
       <GuiropaCommercialFooterDeck />
       <Footer />
-      <GuiropaCommercialFloat />
     </>
   );
 }
