@@ -4,7 +4,7 @@
 Zero-cost architecture derived from Passport Radio:
 - fail-closed Portuguese Full Story publication gates
 - Groq -> Gemini -> OpenRouter -> local Ollama cascade
-- up to 12 stories per run; local zero-key mode defaults to 4
+- up to 12 stories per run; local zero-key mode defaults to 1
 - 500 stories/day hard publication target
 """
 from __future__ import annotations
@@ -86,7 +86,7 @@ def external_provider_available() -> bool:
 def select_targets(feed: dict, remaining_today: int) -> list[dict]:
     limit = max(0, min(BATCH_SIZE, remaining_today))
     if not external_provider_available():
-        local_batch = max(1, min(BATCH_SIZE, int(os.environ.get("GUIROPA_LOCAL_BATCH", "4"))))
+        local_batch = max(1, min(BATCH_SIZE, int(os.environ.get("GUIROPA_LOCAL_BATCH", "1"))))
         limit = min(limit, local_batch)
     return [item for item in (feed.get("items") or []) if not is_ready(item)][:limit]
 
@@ -306,7 +306,7 @@ def main() -> int:
     feed["editorialUpdatedAt"] = stamp
     feed["editorialDailyLimit"] = DAILY_LIMIT
     feed["editorialBatchSize"] = BATCH_SIZE
-    feed["editorialLocalBatchSize"] = int(os.environ.get("GUIROPA_LOCAL_BATCH", "4"))
+    feed["editorialLocalBatchSize"] = int(os.environ.get("GUIROPA_LOCAL_BATCH", "1"))
     feed["editorialPublishedToday"] = already_today + len(valid)
     write_json(FEED, feed)
     print(f"[GUIROPA EDITORIAL] {len(valid)} Full Stories ready · {already_today + len(valid)}/{DAILY_LIMIT} today · {feed['publishedPt']} PT published · {feed['editorialPending']} pending · provider={provider}")
