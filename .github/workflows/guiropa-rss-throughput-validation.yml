@@ -1,0 +1,48 @@
+name: GUIROPA RSS Throughput Validation
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/rss-world-editorial.yml"
+      - "tools/guiropa_news_editorial.py"
+      - "tools/guiropa_news_editorial_source_fallback.py"
+      - "client/public/data/rss-world-feed.json"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate Python editorial engines
+        run: |
+          python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_source_fallback.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('client/public/data/rss-world-feed.json').read_text('utf-8'))
+          assert isinstance(d.get('items'), list) and d['items']
+          for item in d['items']:
+              if item.get('editorialStatus') == 'ready':
+                  assert item.get('titlePt')
+                  assert item.get('excerptPt')
+                  assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
+          print('RSS editorial structure OK')
+          PY
+      - name: Build GUIROPA
+        working-directory: client
+        run: npm ci && npm run build
+      - name: Verify protected babies are still wired
+        run: |
+          grep -q 'path="70s"' client/src/App.jsx
+          grep -q 'path="1977"' client/src/App.jsx
+          grep -q 'path="1986"' client/src/App.jsx
+          grep -q 'GuiropaUnifiedRadioPage' client/src/App.jsx
+          test -f client/src/pages/GuiropaUnifiedRadioPage.jsx
+          echo 'Protected radio routes and unified receiver present'

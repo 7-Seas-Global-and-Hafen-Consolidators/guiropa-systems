@@ -2,13 +2,13 @@ name: GUIROPA News Tunnel Zero-Cost Multiprovider Editorial
 
 on:
   schedule:
-    - cron: "3,33 * * * *"
+    - cron: "3,18,33,48 * * * *"
   push:
     branches: [main]
     paths:
       - ".github/workflows/rss-world-editorial.yml"
       - "tools/guiropa_news_editorial.py"
-      - "tools/guiropa_news_editorial_envelope.py"
+      - "tools/guiropa_news_editorial_source_fallback.py"
   workflow_dispatch:
 
 permissions:
@@ -31,7 +31,9 @@ jobs:
       GUIROPA_OPENROUTER_MODEL: openrouter/free
       GUIROPA_OLLAMA_MODEL: qwen2.5:1.5b-instruct
       GUIROPA_OLLAMA_URL: http://127.0.0.1:11434/api/chat
-      GUIROPA_LOCAL_BATCH: "1"
+      GUIROPA_LOCAL_BATCH: "2"
+      GUIROPA_SOURCE_FALLBACK_BATCH: "100"
+      GUIROPA_EDITORIAL_DAILY_LIMIT: "500"
       GUIROPA_OLLAMA_CONTEXT: "8192"
       OLLAMA_HOST: 127.0.0.1:11434
       OLLAMA_CONTEXT_LENGTH: 8192
@@ -50,6 +52,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Promote already translated Portuguese signals immediately
+        run: python tools/guiropa_news_editorial_source_fallback.py
+
       - name: Prepare local zero-key inference fallback
         if: env.GROQ_API_KEY == '' && env.GEMINI_API_KEY == '' && env.OPENROUTER_API_KEY == ''
         shell: bash
@@ -64,10 +69,16 @@ jobs:
           if [ "$ready" -ne 1 ]; then cat /tmp/guiropa-ollama.log || true; exit 1; fi
           ollama pull "$GUIROPA_OLLAMA_MODEL"
           curl -fsS http://127.0.0.1:11434/api/tags >/dev/null
-          echo "GUIROPA local zero-key fallback ready: $GUIROPA_OLLAMA_MODEL · structural envelope enabled" >> "$GITHUB_STEP_SUMMARY"
+          echo "GUIROPA local zero-key fallback ready: $GUIROPA_OLLAMA_MODEL" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Build complete Portuguese Full Stories
-        run: python tools/guiropa_news_editorial_envelope.py
+      - name: Build new grounded Portuguese Full Stories through real multiprovider core
+        id: multiprovider
+        continue-on-error: true
+        run: python tools/guiropa_news_editorial.py
+
+      - name: Record multiprovider degradation without blocking safe PT publications
+        if: steps.multiprovider.outcome != 'success'
+        run: echo "Multiprovider generation degraded; already-translated source-grounded PT bulletins remain publishable." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Enforce truthful editorial health
         shell: bash
@@ -79,10 +90,15 @@ jobs:
           d=json.loads(p.read_text('utf-8'))
           items=d.get('items') or []
           ready=[x for x in items if x.get('editorialStatus') == 'ready']
-          unsafe=[x.get('id') for x in ready if not x.get('titlePt') or not x.get('excerptPt') or len(x.get('bodyPt') or []) < 4]
+          unsafe=[x.get('id') for x in ready if not x.get('titlePt') or not x.get('excerptPt') or not isinstance(x.get('bodyPt'), list) or len(x.get('bodyPt') or []) < 4]
           if unsafe:
               raise SystemExit(f'EDITORIAL BLOCKED — incomplete public stories: {unsafe[:10]}')
-          print(f"Editorial health OK: ready={len(ready)} pending={d.get('editorialPending',0)} today={d.get('editorialPublishedToday',0)}/{d.get('editorialDailyLimit',500)}")
+          published=sum(1 for x in ready if x.get('titlePt') and x.get('excerptPt') and len(x.get('bodyPt') or []) >= 4)
+          if int(d.get('publishedPt') or 0) != published:
+              d['publishedPt']=published
+              d['editorialPending']=max(0,len(items)-published)
+              p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n','utf-8')
+          print(f"Editorial health OK: ready={published} pending={d.get('editorialPending',0)} today={d.get('editorialPublishedToday',0)}/{d.get('editorialDailyLimit',500)}")
           PY
 
       - name: Commit only complete Portuguese editorial updates
