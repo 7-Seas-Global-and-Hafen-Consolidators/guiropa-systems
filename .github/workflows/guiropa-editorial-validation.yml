@@ -29,7 +29,7 @@ jobs:
           python-version: '3.12'
       - name: Compile editorial engine
         run: python -m py_compile tools/guiropa_news_editorial.py
-      - name: Validate lean Full Story operating contract
+      - name: Validate zero-cost Full Story operating contract
         shell: bash
         run: |
           python - <<'PY'
@@ -43,7 +43,9 @@ jobs:
           assert 'groq-free' in engine
           assert 'gemini-free' in engine
           assert 'openrouter-free' in engine
-          assert 'openrouter/free' in engine
+          assert 'ollama-local-zero-key' in engine
+          assert 'qwen2.5:0.5b-instruct' in engine
+          assert 'GUIROPA_LOCAL_BATCH' in engine
           assert 'EDITORIAL BLOCKED' in engine
           assert 'bodyPt' in engine
           assert 'cron: "3,33 * * * *"' in editorial
@@ -51,7 +53,10 @@ jobs:
           assert 'GROQ_FREE_API_KEY' in editorial
           assert 'GEMINI_FREE_API_KEY' in editorial
           assert 'OPENROUTER_FREE_API_KEY' in editorial
+          assert 'Prepare local zero-key inference fallback' in editorial
+          assert 'ollama pull' in editorial
+          assert 'GUIROPA_OLLAMA_MODEL' in editorial
           assert 'Install GitHub Copilot CLI' not in editorial
           assert 'COPILOT_PERSONAL_TOKEN' not in editorial
-          print('GUIROPA editorial architecture OK: 500/day · batch 12 · 30-minute cadence · free multiprovider · fail closed')
+          print('GUIROPA editorial architecture OK: 500/day · batch 12 · local batch 4 · 30-minute cadence · zero-cost multiprovider + Ollama · fail closed')
           PY

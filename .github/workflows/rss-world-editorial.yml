@@ -1,4 +1,4 @@
-name: GUIROPA News Tunnel Free Multiprovider Editorial
+name: GUIROPA News Tunnel Zero-Cost Multiprovider Editorial
 
 on:
   schedule:
@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/rss-world-editorial.yml"
+      - "tools/guiropa_news_editorial.py"
   workflow_dispatch:
 
 permissions:
@@ -19,7 +20,7 @@ concurrency:
 jobs:
   editorial:
     runs-on: ubuntu-latest
-    timeout-minutes: 24
+    timeout-minutes: 45
     env:
       GROQ_API_KEY: ${{ secrets.GROQ_FREE_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_FREE_API_KEY }}
@@ -27,6 +28,13 @@ jobs:
       GUIROPA_GROQ_MODEL: openai/gpt-oss-120b
       GUIROPA_GEMINI_MODEL: gemini-2.5-flash-lite
       GUIROPA_OPENROUTER_MODEL: openrouter/free
+      GUIROPA_OLLAMA_MODEL: qwen2.5:0.5b-instruct
+      GUIROPA_OLLAMA_URL: http://127.0.0.1:11434/api/chat
+      GUIROPA_LOCAL_BATCH: "4"
+      OLLAMA_HOST: 127.0.0.1:11434
+      OLLAMA_CONTEXT_LENGTH: 16384
+      OLLAMA_NUM_PARALLEL: 1
+      OLLAMA_MAX_LOADED_MODELS: 1
 
     steps:
       - name: Checkout main
@@ -40,7 +48,23 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Build up to 12 complete Portuguese Full Stories
+      - name: Prepare local zero-key inference fallback
+        if: env.GROQ_API_KEY == '' && env.GEMINI_API_KEY == '' && env.OPENROUTER_API_KEY == ''
+        shell: bash
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          nohup ollama serve > /tmp/guiropa-ollama.log 2>&1 &
+          ready=0
+          for i in $(seq 1 45); do
+            if curl -fsS http://127.0.0.1:11434/api/tags >/dev/null 2>&1; then ready=1; break; fi
+            sleep 1
+          done
+          if [ "$ready" -ne 1 ]; then cat /tmp/guiropa-ollama.log || true; exit 1; fi
+          ollama pull "$GUIROPA_OLLAMA_MODEL"
+          curl -fsS http://127.0.0.1:11434/api/tags >/dev/null
+          echo "GUIROPA local zero-key fallback ready: $GUIROPA_OLLAMA_MODEL" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Build complete Portuguese Full Stories
         run: python tools/guiropa_news_editorial.py
 
       - name: Enforce truthful editorial health
