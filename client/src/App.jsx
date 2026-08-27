@@ -7,6 +7,7 @@ import MarvinGayePage from "./pages/MarvinGayePage.jsx";
 import GuiropaUnifiedRadioPage from "./pages/GuiropaUnifiedRadioPage.jsx";
 import WorldWireContinuousPage from "./pages/WorldWireContinuousPage.jsx";
 import NewsTunnelStoryPage from "./pages/NewsTunnelStoryPage.jsx";
+import ShowsPage from "./pages/ShowsPage.jsx";
 
 import SchedulePage from "./SchedulePage.jsx";
 import StorePage from "./StorePage.jsx";
@@ -23,6 +24,8 @@ export default function App() {
 
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
+        <Route path="shows" element={<ShowsPage />} />
+        <Route path="agenda" element={<ShowsPage />} />
 
         <Route path="marvin-gaye" element={<MarvinGayePage />} />
         <Route path="world-wire" element={<WorldWireContinuousPage />} />

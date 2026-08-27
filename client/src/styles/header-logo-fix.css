@@ -1,33 +1,33 @@
 .guiropa-radio-header__logo {
-  height: 100%;
-  max-height: var(--header-h);
   display: flex;
   align-items: center;
   overflow: visible;
-}
-
-.guiropa-radio-header__logo .guiropa-logo--header {
-  width: auto;
-  height: 58px;
-  max-width: 146px;
-  object-fit: contain;
-  object-position: left center;
   flex: 0 0 auto;
 }
 
-.site-header.scrolled .guiropa-radio-header__logo .guiropa-logo--header {
-  height: 54px;
-  max-width: 136px;
+.guiropa-radio-header__logo .guiropa-logo-plaque--header {
+  width: 150px !important;
+  max-width: none !important;
+}
+
+.guiropa-radio-header__logo .guiropa-logo--header {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: center;
+}
+
+.site-header.scrolled .guiropa-radio-header__logo .guiropa-logo-plaque--header {
+  width: 142px !important;
 }
 
 @media (max-width: 760px) {
-  .guiropa-radio-header__logo .guiropa-logo--header {
-    height: 48px;
-    max-width: 118px;
+  .guiropa-radio-header__logo .guiropa-logo-plaque--header {
+    width: 118px !important;
   }
 
-  .site-header.scrolled .guiropa-radio-header__logo .guiropa-logo--header {
-    height: 44px;
-    max-width: 108px;
+  .site-header.scrolled .guiropa-radio-header__logo .guiropa-logo-plaque--header {
+    width: 112px !important;
   }
 }
