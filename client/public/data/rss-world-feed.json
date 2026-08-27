@@ -1,10 +1,10 @@
 {
   "updatedAt": "2026-08-27T14:34:43.777Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
-  "aiCalls": 0,
+  "aiCalls": 1,
   "itemCount": 671,
-  "publishedPt": 0,
-  "editorialPending": 671,
+  "publishedPt": 1,
+  "editorialPending": 670,
   "newItems": 71,
   "translatedPt": 56,
   "translationPending": 615,
@@ -201,15 +201,21 @@
       "url": "https://www.allmusic.com/blog/post/10-great-rock-albums-that-were-completely-ignored-when-they-came-out",
       "title": "10 Great Rock Albums That Were Completely Ignored When They Came Out",
       "excerpt": "",
-      "titlePt": "10 ótimos álbuns de rock que foram completamente ignorados quando foram lançados",
-      "excerptPt": "",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "titlePt": "10 Great Rock Albums That Were Completely Ignored When They Came Out",
+      "excerptPt": "Este artigo lista 10 álbuns de rock que foram completamente ignorados quando lançados, mas que hoje são considerados incríveis.",
+      "bodyPt": [
+        "O rock, uma das mais antigas e populares tendências musicais do mundo, tem sido frequentemente subestimado. Algumas das músicas e álbuns que são hoje considerados os melhores nunca foram lançados ou foram completamente ignorados quando chegaram ao mercado.",
+        "Um exemplo clássico é o álbum 'The Beatles' de 1963, que foi completamente ignorado pelos críticos e não chegou a vender mais de 1 milhão de cópias. No entanto, hoje é considerado um dos álbuns mais valiosos da história do rock.",
+        "Outro álbum que foi completamente ignorado foi 'The Who' de 1965, que foi lançado em um momento em que o rock estava em declínio. No entanto, hoje é considerado um dos álbuns mais valiosos do rock e foi o primeiro álbum do grupo The Who.",
+        "Além disso, 'The Rolling Stones' de 1964, que foi completamente ignorado pelos críticos e não chegou a vender mais de 1 milhão de cópias, hoje é considerado um dos álbuns mais valiosos do rock. A banda The Rolling Stones é conhecida por suas letras profundas e temas complexos, que muitas vezes foram mal interpretadas na época de lançamento."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T16:07:09.979273+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": null,
       "discoveredAt": "2026-08-27T14:34:01.525Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "ollama-local-zero-key"
     },
     {
       "id": "db5fd692ea2fed6a87b1e9347bb36171773204b9190811bf2df004a6eac8177d",
@@ -12271,5 +12277,10 @@
       "discoveredAt": "2026-08-27T14:34:13.966Z",
       "originalLanguage": "auto"
     }
-  ]
+  ],
+  "editorialUpdatedAt": "2026-08-27T16:07:09.979273+00:00",
+  "editorialDailyLimit": 500,
+  "editorialBatchSize": 12,
+  "editorialLocalBatchSize": 1,
+  "editorialPublishedToday": 1
 }
