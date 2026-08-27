@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Zero-cost factual fallback for GUIROPA News Tunnel.
 
-Builds complete Portuguese editorial envelopes only from fields already present
-in the RSS item. It never invents facts; when source detail is thin, it states
-that limitation and points readers to the linked original source.
+Turns already-translated Portuguese RSS signals into complete source-grounded
+bulletins. It never promotes untranslated copy and never invents facts.
 """
 from __future__ import annotations
 
@@ -17,7 +16,6 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 FEED = ROOT / "client/public/data/rss-world-feed.json"
-
 BATCH = max(1, int(os.getenv("GUIROPA_SOURCE_FALLBACK_BATCH", "100")))
 DAILY_LIMIT = max(1, int(os.getenv("GUIROPA_EDITORIAL_DAILY_LIMIT", "500")))
 
@@ -49,39 +47,42 @@ def source_name(item: dict[str, Any]) -> str:
     return first(item, "sourceName", "source", "publisher") or "a fonte original"
 
 
-def enough_title(title: str) -> bool:
-    return len(title) >= 8 and len(title.split()) >= 2
+def translated_pt_ready(item: dict[str, Any]) -> bool:
+    title_pt = clean(item.get("titlePt"))
+    excerpt_pt = clean(item.get("excerptPt"))
+    if item.get("translationStatus") != "pt-ready" or len(title_pt) < 8 or len(excerpt_pt) < 24:
+        return False
+    original_title = clean(item.get("title"))
+    original_excerpt = clean(item.get("excerpt"))
+    region = clean(item.get("region")).lower()
+    brazilian_source = "brazil" in region or "brasil" in region
+    if not brazilian_source and original_title and title_pt.casefold() == original_title.casefold():
+        return False
+    if not brazilian_source and original_excerpt and excerpt_pt.casefold() == original_excerpt.casefold():
+        return False
+    return True
 
 
 def build_story(item: dict[str, Any]) -> tuple[str, str, list[str]] | None:
-    title = first(item, "titlePt", "title")
-    if not enough_title(title):
+    if not translated_pt_ready(item):
         return None
 
-    excerpt = first(item, "excerptPt", "excerpt", "summaryPt", "summary", "descriptionPt", "description", "contentSnippet")
-    if not excerpt:
-        excerpt = f"A GUIROPA acompanha a atualização publicada por {source_name(item)}."
-
+    title = clean(item.get("titlePt"))
+    excerpt = clean(item.get("excerptPt"))
     region = first(item, "region", "country", "category") or "Mundo"
     source = source_name(item)
     published = first(item, "publishedAt", "pubDate", "discoveredAt", "date")
     url = first(item, "url", "link", "sourceUrl")
 
     p1 = sentence(excerpt)
-    p2 = f"A informação foi identificada no fluxo da GUIROPA a partir de {source}, na cobertura classificada como {region}."
+    p2 = f"A atualização foi identificada pelo News Tunnel da GUIROPA a partir de {source}, na cobertura classificada como {region}."
     if published:
         p2 += f" O registro de origem traz a marca temporal {published}."
+    p3 = "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte."
+    p4 = f"A pauta permanece conectada à fonte {source}. " + ("O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores." if url else "A GUIROPA continuará acompanhando atualizações verificáveis desta pauta pelo fluxo de fontes conectado.")
 
-    detail = first(item, "contentPt", "content", "details", "context", "fullText")
-    if detail and detail != excerpt:
-        p3 = sentence(detail[:1400])
-    else:
-        p3 = "Este registro preserva apenas informações efetivamente presentes na publicação de origem; a GUIROPA não acrescenta nomes, números, declarações ou circunstâncias que não tenham vindo do material coletado."
-
-    p4 = f"A matéria permanece conectada à fonte {source}. " + ("O link original está disponível neste registro para conferência e atualização direta." if url else "A GUIROPA continuará acompanhando novas atualizações verificáveis desta pauta pelo seu fluxo de fontes.")
-
-    body = [x for x in (p1, p2, p3, p4) if len(clean(x)) >= 20]
-    if len(body) < 4:
+    body = [p1, p2, p3, p4]
+    if any(len(clean(paragraph)) < 20 for paragraph in body):
         return None
     return title, excerpt, body
 
@@ -89,19 +90,19 @@ def build_story(item: dict[str, Any]) -> tuple[str, str, list[str]] | None:
 def main() -> int:
     data = json.loads(FEED.read_text("utf-8"))
     items = data.get("items") or []
-    today = datetime.now(timezone.utc).date().isoformat()
-    used_today = int(data.get("editorialPublishedToday") or 0)
-    if str(data.get("editorialPublishedDay") or "") != today:
-        used_today = 0
-
+    now = datetime.now(timezone.utc)
+    today = now.date().isoformat()
+    used_today = sum(1 for item in items if item.get("editorialStatus") == "ready" and str(item.get("editorialGeneratedAt") or "")[:10] == today)
     allowance = max(0, DAILY_LIMIT - used_today)
     limit = min(BATCH, allowance)
     published = 0
+    stamp = now.isoformat()
 
-    pending = [x for x in items if x.get("editorialStatus") != "ready"]
-    for item in pending:
+    for item in items:
         if published >= limit:
             break
+        if item.get("editorialStatus") == "ready":
+            continue
         built = build_story(item)
         if not built:
             continue
@@ -110,23 +111,22 @@ def main() -> int:
         item["excerptPt"] = excerpt
         item["bodyPt"] = body
         item["editorialStatus"] = "ready"
-        item["editorialProvider"] = "source-structured"
-        item["editorialModel"] = "zero-cost-factual-envelope-v1"
-        item["editorialUpdatedAt"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+        item["editorialGeneratedAt"] = stamp
+        item["editorialProvider"] = "source-structured-pt"
+        item["editorialModel"] = "zero-cost-factual-envelope-v2"
         published += 1
 
-    ready = [x for x in items if x.get("editorialStatus") == "ready" and x.get("titlePt") and len(x.get("bodyPt") or []) >= 4]
+    ready = [item for item in items if item.get("editorialStatus") == "ready" and item.get("titlePt") and item.get("excerptPt") and isinstance(item.get("bodyPt"), list) and len(item.get("bodyPt") or []) >= 4]
     data["publishedPt"] = len(ready)
     data["editorialPending"] = max(0, len(items) - len(ready))
-    data["editorialPublishedDay"] = today
     data["editorialPublishedToday"] = used_today + published
     data["editorialDailyLimit"] = DAILY_LIMIT
-    data["editorialUpdatedAt"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    data["editorialUpdatedAt"] = stamp
 
     if published:
         FEED.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", "utf-8")
 
-    print(f"GUIROPA source fallback: published={published} ready={len(ready)} pending={data['editorialPending']} today={data['editorialPublishedToday']}/{DAILY_LIMIT}")
+    print(f"GUIROPA PT source fallback: published={published} ready={len(ready)} pending={data['editorialPending']} today={data['editorialPublishedToday']}/{DAILY_LIMIT}")
     return 0
 
 
