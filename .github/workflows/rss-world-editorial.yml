@@ -28,7 +28,7 @@ jobs:
       GUIROPA_GROQ_MODEL: openai/gpt-oss-120b
       GUIROPA_GEMINI_MODEL: gemini-2.5-flash-lite
       GUIROPA_OPENROUTER_MODEL: openrouter/free
-      GUIROPA_OLLAMA_MODEL: qwen2.5:0.5b-instruct
+      GUIROPA_OLLAMA_MODEL: qwen2.5:1.5b-instruct
       GUIROPA_OLLAMA_URL: http://127.0.0.1:11434/api/chat
       GUIROPA_LOCAL_BATCH: "1"
       OLLAMA_HOST: 127.0.0.1:11434
