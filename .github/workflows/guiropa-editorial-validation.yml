@@ -56,7 +56,8 @@ jobs:
           assert 'Prepare local zero-key inference fallback' in editorial
           assert 'ollama pull' in editorial
           assert 'GUIROPA_OLLAMA_MODEL' in editorial
+          assert 'GUIROPA_LOCAL_BATCH: "1"' in editorial
           assert 'Install GitHub Copilot CLI' not in editorial
           assert 'COPILOT_PERSONAL_TOKEN' not in editorial
-          print('GUIROPA editorial architecture OK: 500/day · batch 12 · local batch 4 · 30-minute cadence · zero-cost multiprovider + Ollama · fail closed')
+          print('GUIROPA editorial architecture OK: 500/day · batch 12 · local zero-key batch 1 · 30-minute cadence · zero-cost multiprovider + Ollama · fail closed')
           PY
