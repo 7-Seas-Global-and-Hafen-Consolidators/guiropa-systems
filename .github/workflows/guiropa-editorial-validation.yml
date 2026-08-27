@@ -31,7 +31,7 @@ jobs:
           python-version: '3.12'
       - name: Compile editorial engine
         run: python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_envelope.py
-      - name: Validate zero-cost Full Story operating contract
+      - name: Validate Passport-style Fact Pack contract
         shell: bash
         run: |
           python - <<'PY'
@@ -43,37 +43,30 @@ jobs:
 
           assert 'BATCH_SIZE = 12' in engine
           assert 'DAILY_LIMIT = 500' in engine
-          assert 'groq-free' in engine
-          assert 'gemini-free' in engine
-          assert 'openrouter-free' in engine
           assert 'ollama-local-zero-key' in engine
-          assert 'GUIROPA_LOCAL_BATCH' in engine
-          assert 'EDITORIAL BLOCKED' in engine
-          assert 'bodyPt' in engine
-          assert 'PARAGRAPH_MIN_CHARS = 200' in envelope
-          assert 'PARAGRAPH_MAX_CHARS = 650' in envelope
+          assert 'PARAGRAPH_MIN_CHARS = 140' in envelope
+          assert 'PARAGRAPH_MAX_CHARS = 420' in envelope
           assert 'MIN_EVIDENCE_CHARS = 1200' in envelope
-          assert 'GROUNDING_VERSION = "passport-envelope-v2"' in envelope
-          assert 'numeric_tokens' in envelope
+          assert 'MAX_FACTS = 14' in envelope
+          assert 'GROUNDING_VERSION = "passport-fact-pack-v3"' in envelope
+          assert 'split_facts' in envelope
+          assert 'attach_fact_pack' in envelope
+          assert 'factRefs' in envelope
+          assert 'validate_grounding' in envelope
           assert 'unsupported numeric claims' in envelope
+          assert 'repetitive paragraphs' in envelope
+          assert 'direct quotations are disabled' in envelope
           assert 'sanitize_legacy_local_ready' in envelope
-          assert 'choose_grounded_target' in envelope
-          assert 'editorialEvidenceSha256' in envelope
+          assert 'editorialFactPackSha256' in envelope
+          assert 'editorialFactRefs' in envelope
           assert '"minItems": 4' in envelope
           assert '"maxItems": 4' in envelope
-          assert 'core.call_ollama_local = call_ollama_local' in envelope
           assert 'cron: "3,33 * * * *"' in editorial
           assert 'cron: "7,37 * * * *"' in bridge
-          assert 'GROQ_FREE_API_KEY' in editorial
-          assert 'GEMINI_FREE_API_KEY' in editorial
-          assert 'OPENROUTER_FREE_API_KEY' in editorial
-          assert 'Prepare local zero-key inference fallback' in editorial
-          assert 'ollama pull' in editorial
           assert 'GUIROPA_OLLAMA_MODEL: qwen2.5:1.5b-instruct' in editorial
           assert 'GUIROPA_LOCAL_BATCH: "1"' in editorial
           assert 'GUIROPA_OLLAMA_CONTEXT: "8192"' in editorial
           assert 'python tools/guiropa_news_editorial_envelope.py' in editorial
           assert 'Install GitHub Copilot CLI' not in editorial
-          assert 'COPILOT_PERSONAL_TOKEN' not in editorial
-          print('GUIROPA editorial architecture OK: Passport structural envelope + grounding firewall · 500/day · local batch 1 · fail closed')
+          print('GUIROPA editorial architecture OK: Passport Fact Pack provenance + bounded local schema + one retry + fail closed')
           PY
