@@ -30,9 +30,10 @@ jobs:
       GUIROPA_OPENROUTER_MODEL: openrouter/free
       GUIROPA_OLLAMA_MODEL: qwen2.5:0.5b-instruct
       GUIROPA_OLLAMA_URL: http://127.0.0.1:11434/api/chat
-      GUIROPA_LOCAL_BATCH: "4"
+      GUIROPA_LOCAL_BATCH: "1"
+      GUIROPA_LOCAL_CANDIDATES: "4"
       OLLAMA_HOST: 127.0.0.1:11434
-      OLLAMA_CONTEXT_LENGTH: 16384
+      OLLAMA_CONTEXT_LENGTH: 8192
       OLLAMA_NUM_PARALLEL: 1
       OLLAMA_MAX_LOADED_MODELS: 1
 
@@ -62,7 +63,7 @@ jobs:
           if [ "$ready" -ne 1 ]; then cat /tmp/guiropa-ollama.log || true; exit 1; fi
           ollama pull "$GUIROPA_OLLAMA_MODEL"
           curl -fsS http://127.0.0.1:11434/api/tags >/dev/null
-          echo "GUIROPA local zero-key fallback ready: $GUIROPA_OLLAMA_MODEL" >> "$GITHUB_STEP_SUMMARY"
+          echo "GUIROPA local zero-key fallback ready: $GUIROPA_OLLAMA_MODEL · one Full Story/request" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Build complete Portuguese Full Stories
         run: python tools/guiropa_news_editorial.py
