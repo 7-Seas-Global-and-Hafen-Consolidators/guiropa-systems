@@ -1,0 +1,57 @@
+name: GUIROPA Editorial Architecture Validation
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/rss-world-editorial.yml'
+      - '.github/workflows/rss-world-bridge.yml'
+      - '.github/workflows/guiropa-editorial-validation.yml'
+      - 'tools/guiropa_news_editorial.py'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rss-world-editorial.yml'
+      - '.github/workflows/rss-world-bridge.yml'
+      - '.github/workflows/guiropa-editorial-validation.yml'
+      - 'tools/guiropa_news_editorial.py'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile editorial engine
+        run: python -m py_compile tools/guiropa_news_editorial.py
+      - name: Validate lean Full Story operating contract
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          engine=Path('tools/guiropa_news_editorial.py').read_text('utf-8')
+          editorial=Path('.github/workflows/rss-world-editorial.yml').read_text('utf-8')
+          bridge=Path('.github/workflows/rss-world-bridge.yml').read_text('utf-8')
+
+          assert 'BATCH_SIZE = 12' in engine
+          assert 'DAILY_LIMIT = 500' in engine
+          assert 'groq-free' in engine
+          assert 'gemini-free' in engine
+          assert 'openrouter-free' in engine
+          assert 'openrouter/free' in engine
+          assert 'EDITORIAL BLOCKED' in engine
+          assert 'bodyPt' in engine
+          assert 'cron: "3,33 * * * *"' in editorial
+          assert 'cron: "7,37 * * * *"' in bridge
+          assert 'GROQ_FREE_API_KEY' in editorial
+          assert 'GEMINI_FREE_API_KEY' in editorial
+          assert 'OPENROUTER_FREE_API_KEY' in editorial
+          assert 'Install GitHub Copilot CLI' not in editorial
+          assert 'COPILOT_PERSONAL_TOKEN' not in editorial
+          print('GUIROPA editorial architecture OK: 500/day · batch 12 · 30-minute cadence · free multiprovider · fail closed')
+          PY
