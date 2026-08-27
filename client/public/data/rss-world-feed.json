@@ -1,13 +1,13 @@
 {
   "updatedAt": "2026-08-27T14:34:43.777Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
-  "aiCalls": 2,
+  "aiCalls": 3,
   "itemCount": 671,
   "publishedPt": 1,
   "editorialPending": 670,
   "newItems": 71,
-  "translatedPt": 56,
-  "translationPending": 615,
+  "translatedPt": 57,
+  "translationPending": 614,
   "connectedPoints": 25,
   "sources": [
     {
@@ -221,22 +221,13 @@
       "excerpt": "Gen. Randy George was removed from his position just days after ordering an investigation into Apache helicopters hovering at Kid Rock's home. Army Chief of Staff Was Fired by Pete Hegseth After Launching Kid Rock Probe: Report Spencer Kaufman",
       "titlePt": "General Randy George Falaçoado: Falação de Pete Hegseth",
       "excerptPt": "Gen. Randy George foi demitido do cargo de Comandante-Geral do Exército após ação investigativa de Pete Hegseth. O General, que havia solicitado a Hegseth para suspender a investigação, foi afastado de seu cargo em apenas quatro dias. A reportagem foi publicada pelo Consequence.",
-      "bodyPt": [
-        "Gen. Randy George foi demitido do cargo de Comandante-Geral do Exército após ação investigativa de Pete Hegseth. O General, que havia solicitado a Hegseth para suspender a investigação, foi afastado de seu cargo em apenas quatro dias. A reportagem foi publicada pelo Consequence.",
-        "A reportagem menciona que o General George foi demitido após ação investigativa de Pete Hegseth, que havia solicitado a George para suspender a investigação. O General George havia solicitado a Hegseth para suspender a investigação, mas Hegseth, após a demissão, afirmou que George era 'precisamente o tipo de líder que o Exército precisa agora'. Hegseth também mencionou que George era 'precisamente o tipo de líder que o Exército precisa agora'.",
-        "A reportagem também menciona que George, que havia se aposentado do Exército, não quis comentar sobre a situação, enquanto Hegseth afirmou que George era 'precisamente o tipo de líder que o Exército precisa agora'. Hegseth também mencionou que George era 'precisamente o tipo de líder que o Exército precisa agora'.",
-        "A reportagem também menciona que Hegseth afirmou que George era 'precisamente o tipo de líder que o Exército precisa agora'. Hegseth também mencionou que George era 'precisamente o tipo de líder que o Exército precisa agora'."
-      ],
-      "editorialStatus": "ready",
-      "editorialGeneratedAt": "2026-08-27T16:13:01.160589+00:00",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T14:27:46.000Z",
       "discoveredAt": "2026-08-27T14:34:01.695Z",
-      "originalLanguage": "auto",
-      "editorialProvider": "ollama-local-zero-key",
-      "editorialGroundingVersion": "passport-envelope-v2",
-      "editorialEvidenceChars": 5000,
-      "editorialEvidenceSha256": "d9bab041739520eec526ed203e554e39be8e058502b3a5f8ade1870c6196241d"
+      "originalLanguage": "auto"
     },
     {
       "id": "5b352c6b00f898b0f54145109cead1e95d8129ee6d480cbf35ad599091747853",
@@ -336,15 +327,43 @@
       "url": "https://loudwire.com/maynard-james-keenan-hip-replacement/",
       "title": "Maynard James Keenan Shares Message on Hip Replacement Surgery",
       "excerpt": "Maynard James Keenan shared a message on social media regarding his hip replacement surgery, which he just had done on Aug. 26. Continue reading&hellip;",
-      "titlePt": "",
-      "excerptPt": "",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
-      "translationStatus": "pending",
+      "titlePt": "Maynard James Keenan Comenta Sobre Cirurgia de Reimplantação de Pé",
+      "excerptPt": "O vocalista da banda Tool, Maynard James Keenan, compartilhou em suas redes sociais uma mensagem sobre a cirurgia de reimplantação de pé que realizou. A cirurgia foi realizada em 27 de agosto de 2026, após ele ter experimentado um problema no pé durante uma turnê com A Perfect Circle em Europa em ma",
+      "bodyPt": [
+        "Maynard James Keenan compartilhou em suas redes sociais uma mensagem sobre a cirurgia de reimplantação de pé que realizou. A cirurgia foi realizada em 27 de agosto de 2026, após ele ter experimentado um problema no pé durante uma turnê com A Perfect Circle em Europa em maio.",
+        "A cirurgia foi necessária porque ele experimentou um problema no pé durante uma turnê com A Perfect Circle em Europa em maio. Após a cirurgia, ele precisou se recuperar com um bastão.",
+        "Keenan queria que a cirurgia fosse realizada antes do início do seu tour em setembro para que ele pudesse se recuperar completamente e ter tempo suficiente para se preparar para o show.",
+        "Ele compartilhou sua mensagem com os fãs da banda, agradecendo por todos os que compraram ingressos para verem os shows. Ele também mencionou que muitos dos que compraram os ingressos provavelmente pagaram em dinheiro."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T16:31:03.354617+00:00",
+      "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T14:02:59.000Z",
       "discoveredAt": "2026-08-27T14:34:01.163Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "ollama-local-zero-key",
+      "editorialGroundingVersion": "passport-fact-pack-v3",
+      "editorialEvidenceChars": 9000,
+      "editorialEvidenceSha256": "275d7b26c29739c34850a94965a291dec632e9ba0786b4099c91d3e5d2a67337",
+      "editorialFactPackSha256": "246e2f869e594ba9f7bd434d1d0216930ed7ea8181cd8013b3f4a059be7ba06f",
+      "editorialFactRefs": [
+        [
+          "F1",
+          "F2"
+        ],
+        [
+          "F3",
+          "F4"
+        ],
+        [
+          "F5",
+          "F6"
+        ],
+        [
+          "F7",
+          "F8"
+        ]
+      ]
     },
     {
       "id": "ff11309b09509e6e4abfd7acd1527a28c2c02cc2729f1fbab8d49ad176f7c5de",
@@ -12281,11 +12300,11 @@
       "originalLanguage": "auto"
     }
   ],
-  "editorialUpdatedAt": "2026-08-27T16:13:01.160589+00:00",
+  "editorialUpdatedAt": "2026-08-27T16:31:03.354617+00:00",
   "editorialDailyLimit": 500,
   "editorialBatchSize": 12,
   "editorialLocalBatchSize": 1,
   "editorialPublishedToday": 1,
-  "editorialGroundingVersion": "passport-envelope-v2",
-  "editorialLegacyUnpublished": 1
+  "editorialGroundingVersion": "passport-fact-pack-v3",
+  "editorialLegacyUnpublished": 2
 }
