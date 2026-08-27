@@ -17,14 +17,18 @@ export default function Layout() {
     <>
       <ScrollToTop />
       <Header />
-      <GuiropaCommercialLayer />
-      <GuiropaCommercialCascade />
+
+      <div className="guiropa-commercial-top-zone">
+        <GuiropaCommercialLayer />
+      </div>
 
       <div className="app-shell guiropa-radio-shell">
         <Outlet />
       </div>
 
       {isHome ? <HomeNewsTunnel /> : null}
+
+      <GuiropaCommercialCascade />
       <GuiropaCommercialInterstitial />
       <GuiropaCommercialFooterDeck />
       <Footer />

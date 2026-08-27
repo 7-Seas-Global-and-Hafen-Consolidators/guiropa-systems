@@ -3,31 +3,31 @@
   max-height: var(--header-h);
   display: flex;
   align-items: center;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .guiropa-radio-header__logo .guiropa-logo--header {
   width: auto;
-  height: 48px;
-  max-width: 118px;
+  height: 58px;
+  max-width: 146px;
   object-fit: contain;
-  object-position: center;
+  object-position: left center;
   flex: 0 0 auto;
 }
 
 .site-header.scrolled .guiropa-radio-header__logo .guiropa-logo--header {
-  height: 44px;
-  max-width: 108px;
+  height: 54px;
+  max-width: 136px;
 }
 
 @media (max-width: 760px) {
   .guiropa-radio-header__logo .guiropa-logo--header {
-    height: 42px;
-    max-width: 102px;
+    height: 48px;
+    max-width: 118px;
   }
 
   .site-header.scrolled .guiropa-radio-header__logo .guiropa-logo--header {
-    height: 40px;
-    max-width: 96px;
+    height: 44px;
+    max-width: 108px;
   }
 }
