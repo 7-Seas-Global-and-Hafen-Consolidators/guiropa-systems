@@ -29,7 +29,7 @@ const SOURCES = [
   { id: "nialler9", name: "Nialler9", region: "Europe / Ireland", url: "https://feeds.feedburner.com/nialler9/rss" },
   { id: "aipate", name: "Aipate", region: "Africa / Kenya", url: "https://aipate.com/feed/" },
   { id: "the-music-au", name: "The Music", region: "Asia-Pacific / Australia", url: "https://themusic.com.au/feed" },
-  { id: "unite-asia", name: "Unite Asia", region: "Asia-Pacific", url: "https://uniteasia.org/feed/" },
+  { id: "unite-asia", name: "Unite Asia", region: "Asia-Pacific", url: "https://uniteasia.org/feed" },
   { id: "jrock-news", name: "JROCK NEWS", region: "Asia-Pacific / Japan", url: "https://jrocknews.com/feed" },
   { id: "score-magazine", name: "The Score Magazine", region: "Asia-Pacific / India", url: "https://highonscore.com/feed/" },
   { id: "jpost-music", name: "The Jerusalem Post · Music", region: "Middle East / Israel", url: "https://www.jpost.com/rss/rssfeedsmusic.aspx" },
@@ -76,11 +76,17 @@ function parseFeed(xml, source) {
 function publicItem(item) {
   return {
     id: item.id,
+    sourceId: item.sourceId || "",
+    source: item.source || "",
     region: item.region || "WORLD",
+    url: item.url || "",
     title: item.title,
     excerpt: item.excerpt || "",
     titlePt: item.titlePt || "",
     excerptPt: item.excerptPt || "",
+    bodyPt: Array.isArray(item.bodyPt) ? item.bodyPt : [],
+    editorialStatus: item.editorialStatus === "ready" && Array.isArray(item.bodyPt) && item.bodyPt.length >= 4 ? "ready" : "pending",
+    editorialGeneratedAt: item.editorialGeneratedAt || null,
     translationStatus: item.titlePt ? "pt-ready" : "pending",
     publishedAt: item.publishedAt || null,
     discoveredAt: item.discoveredAt || null,
@@ -94,7 +100,7 @@ async function fetchSource(source) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   try {
-    const response = await fetch(source.url, { headers: { "user-agent": "GUIROPA-Radio-RSS-World-Bridge/4.0 (+https://guiropa.world/)" }, signal: controller.signal });
+    const response = await fetch(source.url, { headers: { "user-agent": "GUIROPA-Radio-RSS-World-Bridge/4.1 (+https://guiropa.world/)" }, signal: controller.signal });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return parseFeed(await response.text(), source);
   } finally { clearTimeout(timer); }
@@ -157,7 +163,12 @@ for (const source of SOURCES) {
   try {
     const items = await fetchSource(source);
     let added = 0;
-    for (const item of items) { if (known.has(item.id)) continue; known.add(item.id); incoming.push(item); added += 1; }
+    for (const item of items) {
+      if (known.has(item.id)) continue;
+      known.add(item.id);
+      incoming.push(item);
+      added += 1;
+    }
     sourceStatus.push({ region: source.region, ok: true, seen: items.length, added });
   } catch (error) {
     sourceStatus.push({ region: source.region, ok: false, error: String(error?.message || error) });
@@ -171,11 +182,15 @@ const combinedRaw = [...incoming, ...(feed.items || [])]
 const translatedRaw = await translateBackfill(combinedRaw);
 const combined = translatedRaw.map(publicItem);
 const translatedCount = combined.filter((item) => item.translationStatus === "pt-ready").length;
+const publishedPt = combined.filter((item) => item.editorialStatus === "ready").length;
+
 const output = {
   updatedAt: new Date().toISOString(),
   bridge: "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
-  aiCalls: 0,
+  aiCalls: Number(feed.aiCalls || 0),
   itemCount: combined.length,
+  publishedPt,
+  editorialPending: combined.length - publishedPt,
   newItems: incoming.length,
   translatedPt: translatedCount,
   translationPending: combined.length - translatedCount,
@@ -183,7 +198,8 @@ const output = {
   sources: sourceStatus,
   items: combined,
 };
+
 await fs.writeFile(FEED_FILE, `${JSON.stringify(output, null, 2)}\n`);
 await fs.writeFile(LEDGER_FILE, `${JSON.stringify({ updatedAt: output.updatedAt, ids: [...known].slice(-MAX_LEDGER_ITEMS) }, null, 2)}\n`);
-console.log(`[GUIROPA RSS WORLD BRIDGE] ${incoming.length} new items · ${combined.length} public items · ${translatedCount} PT-ready · ${SOURCES.length} configured sources · 0 AI calls`);
+console.log(`[GUIROPA RSS WORLD BRIDGE] ${incoming.length} new items · ${combined.length} public items · ${translatedCount} PT-ready · ${SOURCES.length} configured sources`);
 for (const status of sourceStatus) console.log(JSON.stringify(status));
