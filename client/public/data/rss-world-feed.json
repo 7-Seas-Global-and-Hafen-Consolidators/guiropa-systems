@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-08-27T14:34:43.777Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
-  "aiCalls": 1,
+  "aiCalls": 2,
   "itemCount": 671,
   "publishedPt": 1,
   "editorialPending": 670,
@@ -203,19 +203,13 @@
       "excerpt": "",
       "titlePt": "10 Great Rock Albums That Were Completely Ignored When They Came Out",
       "excerptPt": "Este artigo lista 10 álbuns de rock que foram completamente ignorados quando lançados, mas que hoje são considerados incríveis.",
-      "bodyPt": [
-        "O rock, uma das mais antigas e populares tendências musicais do mundo, tem sido frequentemente subestimado. Algumas das músicas e álbuns que são hoje considerados os melhores nunca foram lançados ou foram completamente ignorados quando chegaram ao mercado.",
-        "Um exemplo clássico é o álbum 'The Beatles' de 1963, que foi completamente ignorado pelos críticos e não chegou a vender mais de 1 milhão de cópias. No entanto, hoje é considerado um dos álbuns mais valiosos da história do rock.",
-        "Outro álbum que foi completamente ignorado foi 'The Who' de 1965, que foi lançado em um momento em que o rock estava em declínio. No entanto, hoje é considerado um dos álbuns mais valiosos do rock e foi o primeiro álbum do grupo The Who.",
-        "Além disso, 'The Rolling Stones' de 1964, que foi completamente ignorado pelos críticos e não chegou a vender mais de 1 milhão de cópias, hoje é considerado um dos álbuns mais valiosos do rock. A banda The Rolling Stones é conhecida por suas letras profundas e temas complexos, que muitas vezes foram mal interpretadas na época de lançamento."
-      ],
-      "editorialStatus": "ready",
-      "editorialGeneratedAt": "2026-08-27T16:07:09.979273+00:00",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
       "translationStatus": "pt-ready",
       "publishedAt": null,
       "discoveredAt": "2026-08-27T14:34:01.525Z",
-      "originalLanguage": "auto",
-      "editorialProvider": "ollama-local-zero-key"
+      "originalLanguage": "auto"
     },
     {
       "id": "db5fd692ea2fed6a87b1e9347bb36171773204b9190811bf2df004a6eac8177d",
@@ -225,15 +219,24 @@
       "url": "https://consequence.net/2026/08/army-chief-of-staff-fired-after-launching-kid-rock-probe-report/",
       "title": "Army Chief of Staff Was Fired by Pete Hegseth After Launching Kid Rock Probe: Report",
       "excerpt": "Gen. Randy George was removed from his position just days after ordering an investigation into Apache helicopters hovering at Kid Rock's home. Army Chief of Staff Was Fired by Pete Hegseth After Launching Kid Rock Probe: Report Spencer Kaufman",
-      "titlePt": "Chefe do Estado-Maior do Exército foi demitido por Pete Hegseth após lançar investigação sobre Kid Rock: relatório",
-      "excerptPt": "O general Randy George foi afastado de seu cargo poucos dias depois de ordenar uma investigação sobre helicópteros Apache pairando na casa de Kid Rock. O Chefe do Estado-Maior do Exército foi demitido por Pete Hegseth após lançar a investigação Kid Rock: Relatório Spencer Kaufman",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "titlePt": "General Randy George Falaçoado: Falação de Pete Hegseth",
+      "excerptPt": "Gen. Randy George foi demitido do cargo de Comandante-Geral do Exército após ação investigativa de Pete Hegseth. O General, que havia solicitado a Hegseth para suspender a investigação, foi afastado de seu cargo em apenas quatro dias. A reportagem foi publicada pelo Consequence.",
+      "bodyPt": [
+        "Gen. Randy George foi demitido do cargo de Comandante-Geral do Exército após ação investigativa de Pete Hegseth. O General, que havia solicitado a Hegseth para suspender a investigação, foi afastado de seu cargo em apenas quatro dias. A reportagem foi publicada pelo Consequence.",
+        "A reportagem menciona que o General George foi demitido após ação investigativa de Pete Hegseth, que havia solicitado a George para suspender a investigação. O General George havia solicitado a Hegseth para suspender a investigação, mas Hegseth, após a demissão, afirmou que George era 'precisamente o tipo de líder que o Exército precisa agora'. Hegseth também mencionou que George era 'precisamente o tipo de líder que o Exército precisa agora'.",
+        "A reportagem também menciona que George, que havia se aposentado do Exército, não quis comentar sobre a situação, enquanto Hegseth afirmou que George era 'precisamente o tipo de líder que o Exército precisa agora'. Hegseth também mencionou que George era 'precisamente o tipo de líder que o Exército precisa agora'.",
+        "A reportagem também menciona que Hegseth afirmou que George era 'precisamente o tipo de líder que o Exército precisa agora'. Hegseth também mencionou que George era 'precisamente o tipo de líder que o Exército precisa agora'."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T16:13:01.160589+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T14:27:46.000Z",
       "discoveredAt": "2026-08-27T14:34:01.695Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "ollama-local-zero-key",
+      "editorialGroundingVersion": "passport-envelope-v2",
+      "editorialEvidenceChars": 5000,
+      "editorialEvidenceSha256": "d9bab041739520eec526ed203e554e39be8e058502b3a5f8ade1870c6196241d"
     },
     {
       "id": "5b352c6b00f898b0f54145109cead1e95d8129ee6d480cbf35ad599091747853",
@@ -12278,9 +12281,11 @@
       "originalLanguage": "auto"
     }
   ],
-  "editorialUpdatedAt": "2026-08-27T16:07:09.979273+00:00",
+  "editorialUpdatedAt": "2026-08-27T16:13:01.160589+00:00",
   "editorialDailyLimit": 500,
   "editorialBatchSize": 12,
   "editorialLocalBatchSize": 1,
-  "editorialPublishedToday": 1
+  "editorialPublishedToday": 1,
+  "editorialGroundingVersion": "passport-envelope-v2",
+  "editorialLegacyUnpublished": 1
 }
