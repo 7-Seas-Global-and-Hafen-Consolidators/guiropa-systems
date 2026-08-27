@@ -3,6 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_run:
+    workflows:
+      - "GUIROPA News Tunnel Zero-Cost Multiprovider Editorial"
+      - "GUIROPA RSS World Bridge"
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -16,10 +21,13 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout current main
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -45,6 +53,7 @@ jobs:
           path: client/dist
 
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     needs: build
     permissions:
@@ -57,5 +66,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-# GUIROPA deploy refresh: force rebuild after schedule engine update.
