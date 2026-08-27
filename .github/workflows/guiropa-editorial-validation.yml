@@ -8,6 +8,7 @@ on:
       - '.github/workflows/guiropa-editorial-validation.yml'
       - 'tools/guiropa_news_editorial.py'
       - 'tools/guiropa_news_editorial_envelope.py'
+      - 'tools/guiropa_news_editorial_source_fallback.py'
   push:
     branches: [main]
     paths:
@@ -16,6 +17,7 @@ on:
       - '.github/workflows/guiropa-editorial-validation.yml'
       - 'tools/guiropa_news_editorial.py'
       - 'tools/guiropa_news_editorial_envelope.py'
+      - 'tools/guiropa_news_editorial_source_fallback.py'
 
 permissions:
   contents: read
@@ -29,44 +31,48 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Compile editorial engine
-        run: python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_envelope.py
-      - name: Validate Passport-style Fact Pack contract
+      - name: Compile editorial engines
+        run: python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_envelope.py tools/guiropa_news_editorial_source_fallback.py
+      - name: Validate multiprovider throughput and fail-closed contract
         shell: bash
         run: |
           python - <<'PY'
           from pathlib import Path
           engine=Path('tools/guiropa_news_editorial.py').read_text('utf-8')
           envelope=Path('tools/guiropa_news_editorial_envelope.py').read_text('utf-8')
+          fallback=Path('tools/guiropa_news_editorial_source_fallback.py').read_text('utf-8')
           editorial=Path('.github/workflows/rss-world-editorial.yml').read_text('utf-8')
           bridge=Path('.github/workflows/rss-world-bridge.yml').read_text('utf-8')
 
           assert 'BATCH_SIZE = 12' in engine
           assert 'DAILY_LIMIT = 500' in engine
+          assert 'groq-free' in engine
+          assert 'gemini-free' in engine
+          assert 'openrouter-free' in engine
           assert 'ollama-local-zero-key' in engine
-          assert 'PARAGRAPH_MIN_CHARS = 140' in envelope
-          assert 'PARAGRAPH_MAX_CHARS = 420' in envelope
-          assert 'MIN_EVIDENCE_CHARS = 1200' in envelope
-          assert 'MAX_FACTS = 14' in envelope
+          assert 'validate_story' in engine
+          assert 'unsafe editorial word count' in engine
+
+          # Legacy grounded envelope remains available as a safety/reference engine.
           assert 'GROUNDING_VERSION = "passport-fact-pack-v3"' in envelope
-          assert 'split_facts' in envelope
-          assert 'attach_fact_pack' in envelope
-          assert 'factRefs' in envelope
           assert 'validate_grounding' in envelope
-          assert 'unsupported numeric claims' in envelope
-          assert 'repetitive paragraphs' in envelope
-          assert 'direct quotations are disabled' in envelope
-          assert 'sanitize_legacy_local_ready' in envelope
           assert 'editorialFactPackSha256' in envelope
-          assert 'editorialFactRefs' in envelope
-          assert '"minItems": 4' in envelope
-          assert '"maxItems": 4' in envelope
-          assert 'cron: "3,33 * * * *"' in editorial
+
+          # Deterministic fast lane may only promote already translated pt-BR signals.
+          assert 'translationStatus' in fallback
+          assert 'pt-ready' in fallback
+          assert 'source-structured-pt' in fallback
+          assert 'titlePt' in fallback and 'excerptPt' in fallback
+
+          assert 'cron: "3,18,33,48 * * * *"' in editorial
           assert 'cron: "7,37 * * * *"' in bridge
           assert 'GUIROPA_OLLAMA_MODEL: qwen2.5:1.5b-instruct' in editorial
-          assert 'GUIROPA_LOCAL_BATCH: "1"' in editorial
-          assert 'GUIROPA_OLLAMA_CONTEXT: "8192"' in editorial
-          assert 'python tools/guiropa_news_editorial_envelope.py' in editorial
+          assert 'GUIROPA_LOCAL_BATCH: "2"' in editorial
+          assert 'GUIROPA_SOURCE_FALLBACK_BATCH: "100"' in editorial
+          assert 'python tools/guiropa_news_editorial_source_fallback.py' in editorial
+          assert 'python tools/guiropa_news_editorial.py' in editorial
+          assert 'python tools/guiropa_news_editorial_envelope.py' not in editorial
+          assert 'EDITORIAL BLOCKED' in editorial
           assert 'Install GitHub Copilot CLI' not in editorial
-          print('GUIROPA editorial architecture OK: Passport Fact Pack provenance + bounded local schema + one retry + fail closed')
+          print('GUIROPA editorial architecture OK: PT fast lane + real multiprovider core + fail closed + 4 cycles/hour')
           PY
