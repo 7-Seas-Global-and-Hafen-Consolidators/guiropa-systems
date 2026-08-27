@@ -7,7 +7,10 @@ function isReady(item){return Boolean(item?.editorialStatus==="ready"&&item?.tit
 
 export default function HomeNewsTunnel(){
   const [data,setData]=useState({items:[],updatedAt:null,editorialUpdatedAt:null,publishedPt:0});
-  useEffect(()=>{fetch(`${assetUrl("data/rss-world-feed.json")}?t=${Date.now()}`,{cache:"no-store"}).then((r)=>r.ok?r.json():Promise.reject(new Error("feed unavailable"))).then(setData).catch(()=>setData({items:[],updatedAt:null,editorialUpdatedAt:null,publishedPt:0}));},[]);
+  useEffect(()=>{Promise.all([
+    fetch(`${assetUrl("data/rss-world-feed.json")}?t=${Date.now()}`,{cache:"no-store"}).then(r=>r.ok?r.json():({items:[]})).catch(()=>({items:[]})),
+    fetch(`${assetUrl("data/guiropa-editorial-features.json")}?t=${Date.now()}`,{cache:"no-store"}).then(r=>r.ok?r.json():({items:[]})).catch(()=>({items:[]}))
+  ]).then(([rss,editorial])=>setData({...rss,items:[...(editorial.items||[]),...(rss.items||[])],editorialUpdatedAt:editorial.updatedAt||rss.editorialUpdatedAt,publishedPt:Number(rss.publishedPt||0)+(editorial.items||[]).filter(isReady).length}));},[]);
   const readyItems=useMemo(()=>(data.items||[]).filter(isReady),[data.items]);
   const items=useMemo(()=>readyItems.slice(0,3),[readyItems]);
   return <section className="guiropa-home-news" aria-label="GUIROPA Radio News Tunnel em português">
@@ -16,7 +19,7 @@ export default function HomeNewsTunnel(){
     `}</style>
     <div className="guiropa-home-news__shell">
       <div className="guiropa-home-news__head"><div><div className="guiropa-home-news__eyebrow">GUIROPA RADIO · WORLD WIRE</div><h2>News Tunnel™</h2></div><div className="guiropa-home-news__meta"><div>{Number(data.publishedPt||readyItems.length)} matérias completas em português</div><div>Atualizado {stamp(data.editorialUpdatedAt||data.updatedAt)}</div></div></div>
-      {items.length?<div className="guiropa-home-news__grid">{items.map((item)=><Link className="guiropa-home-news__card" to={`/world-wire/${item.id}`} key={item.id}><div className="guiropa-home-news__brand">GUIROPA RADIO</div><h3>{item.titlePt}</h3><div className="guiropa-home-news__foot"><span>{item.region||"MUNDO"}</span><span>{stamp(item.publishedAt||item.discoveredAt)}</span></div></Link>)}</div>:<div className="guiropa-home-news__waiting">As próximas matérias só aparecem quando a versão completa em português estiver pronta.</div>}
+      {items.length?<div className="guiropa-home-news__grid">{items.map((item)=><Link className="guiropa-home-news__card" to={`/world-wire/${item.id}`} key={item.id}><div className="guiropa-home-news__brand">GUIROPA RADIO · EDITORIAL</div><h3>{item.titlePt}</h3><div className="guiropa-home-news__foot"><span>{item.region||"MUNDO"}</span><span>{stamp(item.publishedAt||item.discoveredAt)}</span></div></Link>)}</div>:<div className="guiropa-home-news__waiting">As próximas matérias só aparecem quando a versão completa em português estiver pronta.</div>}
       <Link className="guiropa-home-news__cta" to="/world-wire">ENTRAR NO NEWS TUNNEL →</Link>
     </div>
   </section>;
