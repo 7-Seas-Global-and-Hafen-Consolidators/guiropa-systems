@@ -9,7 +9,7 @@ import marvinPortrait from "../assets/marvin.gaye.webp";
 const ADVERTISING_ART = assetUrl("assets/guiropa-radio-anuncie-vintage-15-dias.png");
 
 const COPY={
-  pt:{marvinTitle:"MARVIN GAYE",marvinLead:"A voz que decidiu não ficar calada.",marvinAction:"LER A HISTÓRIA",ad:"PUBLICIDADE · GUIROPA RADIO",adAction:"ANUNCIE NA GUIROPA",support:"APOIE A GUIROPA",supportTitle:"R$ 1 já ajuda a manter essa porra no ar.",supportLead:"Você ouve, lê, entra nos túneis e usa a GUIROPA. Se puder, ajuda a manter tudo funcionando.",supportAction:"APOIAR AGORA →"},
+  pt:{marvinTitle:"MARVIN GAYE",marvinLead:"A voz que decidiu não ficar calada.",marvinAction:"LER A HISTÓRIA",ad:"PUBLICIDADE · GUIROPA RADIO",adAction:"ANUNCIE NA GUIROPA",support:"APOIE A GUIROPA",supportTitle:"R$ 1 já ajuda a manter a GUIROPA no ar.",supportLead:"Você ouve, lê, entra nos túneis e usa a GUIROPA. Se puder, ajuda a manter tudo funcionando.",supportAction:"APOIAR AGORA →"},
   en:{marvinTitle:"MARVIN GAYE",marvinLead:"The voice that chose not to stay quiet.",marvinAction:"READ THE STORY",ad:"ADVERTISING · GUIROPA RADIO",adAction:"ADVERTISE ON GUIROPA",support:"SUPPORT GUIROPA",supportTitle:"Even a small contribution helps keep GUIROPA on air.",supportLead:"If you listen, read and use the tunnels, you can help keep everything running.",supportAction:"SUPPORT NOW →"},
   es:{marvinTitle:"MARVIN GAYE",marvinLead:"La voz que decidió no quedarse callada.",marvinAction:"LEER LA HISTORIA",ad:"PUBLICIDAD · GUIROPA RADIO",adAction:"ANÚNCIATE EN GUIROPA",support:"APOYA A GUIROPA",supportTitle:"Incluso una pequeña contribución ayuda a mantener GUIROPA al aire.",supportLead:"Si escuchas, lees y usas los túneles, puedes ayudar a mantener todo funcionando.",supportAction:"APOYAR AHORA →"},
 };
