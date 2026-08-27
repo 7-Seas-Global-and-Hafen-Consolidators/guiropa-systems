@@ -3,6 +3,10 @@ name: GUIROPA News Tunnel Free Multiprovider Editorial
 on:
   schedule:
     - cron: "3,33 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/rss-world-editorial.yml"
   workflow_dispatch:
 
 permissions:
