@@ -1,16 +1,37 @@
 #!/usr/bin/env python3
+"""GUIROPA News Tunnel™ Full Story editorial engine.
+
+Lean transplant of the Passport Radio free multiprovider architecture:
+- fail-closed Portuguese Full Story publication gates
+- Groq -> Gemini -> OpenRouter free-provider cascade
+- up to 12 stories per run
+- 500 stories/day hard publication target
+- one provider request per batch instead of one runner/install cycle per tiny batch
+"""
 from __future__ import annotations
-import html, json, os, re, subprocess, sys, urllib.request
+
+import html
+import json
+import os
+import re
+import sys
+import urllib.error
+import urllib.parse
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 FEED = ROOT / "client/public/data/rss-world-feed.json"
-BATCH_SIZE = 4
-MAX_SOURCE_CHARS = 12000
-FETCH_BYTES = 280000
-UA = "Mozilla/5.0 (compatible; GUIROPA-News-Editorial/1.0; +https://guiropa.world/)"
+BATCH_SIZE = 12
+DAILY_LIMIT = 500
+MAX_SOURCE_CHARS = 9000
+FETCH_BYTES = 220000
+API_TIMEOUT = 240
+MAX_OUTPUT_TOKENS = 9000
+UA = "Mozilla/5.0 (compatible; GUIROPA-News-Editorial/2.0; +https://guiropa.world/)"
+
 
 def read_json(path: Path, fallback):
     try:
@@ -18,35 +39,50 @@ def read_json(path: Path, fallback):
     except Exception:
         return fallback
 
+
 def write_json(path: Path, value) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
 
 def strip_html(raw: str) -> str:
     raw = re.sub(r"(?is)<script.*?>.*?</script>", " ", raw)
     raw = re.sub(r"(?is)<style.*?>.*?</style>", " ", raw)
     raw = re.sub(r"(?is)<noscript.*?>.*?</noscript>", " ", raw)
     raw = re.sub(r"(?s)<[^>]+>", " ", raw)
-    raw = html.unescape(raw)
-    return re.sub(r"\s+", " ", raw).strip()
+    return re.sub(r"\s+", " ", html.unescape(raw)).strip()
+
 
 def fetch_source(url: str) -> str:
     if not url:
         return ""
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,application/xhtml+xml"})
-    with urllib.request.urlopen(req, timeout=20) as response:
+    with urllib.request.urlopen(req, timeout=18) as response:
         ctype = response.headers.get("Content-Type", "")
         if "text" not in ctype and "html" not in ctype:
             return ""
         raw = response.read(FETCH_BYTES).decode("utf-8", errors="ignore")
     return strip_html(raw)[:MAX_SOURCE_CHARS]
 
-def select_targets(feed: dict) -> list[dict]:
-    return [
-        item for item in (feed.get("items") or [])
-        if item.get("editorialStatus") != "ready"
-        or not item.get("titlePt")
-        or len(item.get("bodyPt") or []) < 4
-    ][:BATCH_SIZE]
+
+def is_ready(item: dict) -> bool:
+    return (
+        item.get("editorialStatus") == "ready"
+        and bool(str(item.get("titlePt") or "").strip())
+        and bool(str(item.get("excerptPt") or "").strip())
+        and isinstance(item.get("bodyPt"), list)
+        and len(item.get("bodyPt") or []) >= 4
+    )
+
+
+def generated_today(item: dict, day: str) -> bool:
+    stamp = str(item.get("editorialGeneratedAt") or "")
+    return is_ready(item) and stamp[:10] == day
+
+
+def select_targets(feed: dict, remaining_today: int) -> list[dict]:
+    limit = max(0, min(BATCH_SIZE, remaining_today))
+    return [item for item in (feed.get("items") or []) if not is_ready(item)][:limit]
+
 
 def source_packet(item: dict) -> dict:
     source_text = ""
@@ -67,6 +103,7 @@ def source_packet(item: dict) -> dict:
         "evidence": source_text,
     }
 
+
 def build_prompt(packets: list[dict]) -> str:
     evidence = json.dumps(packets, ensure_ascii=False)
     return f"""Você é o editor do GUIROPA RADIO · NEWS TUNNEL™.
@@ -74,58 +111,138 @@ def build_prompt(packets: list[dict]) -> str:
 Transforme CADA sinal abaixo em UMA MATÉRIA EDITORIAL ORIGINAL, COMPLETA E EM PORTUGUÊS DO BRASIL.
 
 REGRAS ABSOLUTAS:
-- Use apenas fatos sustentados pelo pacote de evidências de cada item.
-- Não invente datas, falas, números, causas, bastidores, reações ou contexto não sustentado.
-- NÃO traduza nem reproduza a matéria-fonte integralmente.
-- NÃO copie frases longas da fonte. Reescreva tudo com redação própria.
-- Preserve nomes próprios, nomes de discos, músicas, turnês, empresas e obras.
-- Se a evidência for curta, seja mais breve em vez de completar lacunas.
-- Escreva como revista musical humana, clara e informativa, não como verbete SEO.
-- Sem emojis. Sem markdown.
-- O título e TODA a matéria devem estar em português.
+- Use somente fatos sustentados pelo pacote de evidências de cada item.
+- Não invente datas, falas, números, causas, bastidores, reações ou contexto.
+- Compreenda qualquer idioma de origem e reescreva naturalmente em pt-BR; não faça tradução literal.
+- Não reproduza a matéria-fonte integralmente nem copie frases longas.
+- Preserve a grafia oficial de artistas, bandas, músicas, álbuns, festivais, gravadoras, locais e demais nomes próprios.
+- Priorize o corpo factual extraído da página; o resumo RSS é apenas fallback.
+- Se a evidência for curta, seja mais breve em vez de preencher lacunas.
+- Escreva como revista musical humana, clara e informativa, nunca como verbete SEO.
+- Sem emojis e sem markdown.
+- Título, deck e toda a matéria devem estar em português brasileiro natural e consistente.
 - Produza de 4 a 8 parágrafos por matéria, normalmente 300 a 650 palavras quando houver evidência suficiente.
-- O deck deve ter 1 ou 2 frases e funcionar como chamada editorial.
-- A saída deve conter exatamente os IDs recebidos.
+- O deck deve ter 1 ou 2 frases.
+- A saída deve conter somente IDs recebidos.
+- Responda exclusivamente com JSON puro e válido.
 
-SAÍDA OBRIGATÓRIA: JSON puro e válido:
-{{
-  "stories": [
-    {{
-      "id": "id original",
-      "titlePt": "título em português",
-      "excerptPt": "deck/resumo em português",
-      "bodyPt": ["parágrafo 1", "parágrafo 2", "parágrafo 3", "parágrafo 4"]
-    }}
-  ]
-}}
+FORMATO OBRIGATÓRIO:
+{{"stories":[{{"id":"id original","titlePt":"título","excerptPt":"deck","bodyPt":["parágrafo 1","parágrafo 2","parágrafo 3","parágrafo 4"]}}]}}
 
 PACOTE DE EVIDÊNCIAS:
 {evidence}
 """
 
-def call_copilot(prompt: str) -> dict:
-    token = (os.environ.get("COPILOT_GITHUB_TOKEN", "").strip()
-             or os.environ.get("GH_TOKEN", "").strip()
-             or os.environ.get("GITHUB_TOKEN", "").strip())
-    if not token:
-        raise RuntimeError("No GitHub/Copilot token available")
-    env = os.environ.copy()
-    env["COPILOT_GITHUB_TOKEN"] = token
-    env["GH_TOKEN"] = token
-    env["GITHUB_TOKEN"] = token
-    cmd = ["copilot", "-p", prompt, "-s", "--no-ask-user"]
-    model = os.environ.get("GUIROPA_EDITORIAL_MODEL", "").strip()
-    if model:
-        cmd.extend(["--model", model])
-    proc = subprocess.run(cmd, capture_output=True, text=True, env=env, timeout=300)
-    if proc.returncode != 0:
-        detail = (proc.stderr or proc.stdout or "Copilot failed").strip()
-        raise RuntimeError(detail[-1600:])
-    text = proc.stdout.strip()
-    match = re.search(r"\{.*\}", text, flags=re.S)
-    if not match:
-        raise RuntimeError("Copilot did not return a JSON object")
-    return json.loads(match.group(0))
+
+def parse_json_text(text: str) -> dict:
+    value = str(text or "").strip()
+    if value.startswith("```"):
+        value = re.sub(r"^```(?:json)?\s*", "", value, flags=re.I)
+        value = re.sub(r"\s*```$", "", value)
+    try:
+        return json.loads(value)
+    except Exception:
+        match = re.search(r"\{.*\}", value, flags=re.S)
+        if not match:
+            raise RuntimeError("provider did not return a JSON object")
+        return json.loads(match.group(0))
+
+
+def post_json(url: str, payload: dict, headers: dict) -> dict:
+    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    request = urllib.request.Request(url, data=data, headers=headers, method="POST")
+    try:
+        with urllib.request.urlopen(request, timeout=API_TIMEOUT) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")[-1200:]
+        raise RuntimeError(f"HTTP {exc.code}: {body}") from exc
+    except urllib.error.URLError as exc:
+        raise RuntimeError(f"network error: {exc.reason}") from exc
+
+
+def call_groq(prompt: str) -> dict:
+    key = os.environ.get("GROQ_API_KEY", "").strip()
+    if not key:
+        raise RuntimeError("GROQ_API_KEY unavailable")
+    model = os.environ.get("GUIROPA_GROQ_MODEL", "openai/gpt-oss-120b").strip()
+    payload = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.35,
+        "max_completion_tokens": MAX_OUTPUT_TOKENS,
+        "response_format": {"type": "json_object"},
+    }
+    data = post_json(
+        "https://api.groq.com/openai/v1/chat/completions",
+        payload,
+        {"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+    )
+    return parse_json_text(data["choices"][0]["message"]["content"])
+
+
+def call_gemini(prompt: str) -> dict:
+    key = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not key:
+        raise RuntimeError("GEMINI_API_KEY unavailable")
+    model = os.environ.get("GUIROPA_GEMINI_MODEL", "gemini-2.5-flash-lite").strip()
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{urllib.parse.quote(model, safe='')}:generateContent"
+    payload = {
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.35,
+            "maxOutputTokens": MAX_OUTPUT_TOKENS,
+            "responseMimeType": "application/json",
+        },
+    }
+    data = post_json(url, payload, {"x-goog-api-key": key, "Content-Type": "application/json"})
+    parts = data["candidates"][0]["content"]["parts"]
+    return parse_json_text("".join(str(part.get("text", "")) for part in parts))
+
+
+def call_openrouter(prompt: str) -> dict:
+    key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    if not key:
+        raise RuntimeError("OPENROUTER_API_KEY unavailable")
+    model = os.environ.get("GUIROPA_OPENROUTER_MODEL", "openrouter/free").strip()
+    if model != "openrouter/free" and not model.endswith(":free"):
+        raise RuntimeError("paid OpenRouter model rejected; use openrouter/free or :free")
+    payload = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.35,
+        "max_tokens": MAX_OUTPUT_TOKENS,
+    }
+    data = post_json(
+        "https://openrouter.ai/api/v1/chat/completions",
+        payload,
+        {
+            "Authorization": f"Bearer {key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://guiropa.world/",
+            "X-Title": "GUIROPA News Tunnel Editorial Engine",
+        },
+    )
+    return parse_json_text(data["choices"][0]["message"]["content"])
+
+
+def call_free_multiprovider(prompt: str) -> tuple[dict, str]:
+    failures = []
+    for name, provider in (
+        ("groq-free", call_groq),
+        ("gemini-free", call_gemini),
+        ("openrouter-free", call_openrouter),
+    ):
+        try:
+            result = provider(prompt)
+            print(f"FREE_PROVIDER_OK provider={name}", file=sys.stderr)
+            return result, name
+        except Exception as exc:
+            detail = str(exc).replace("\n", " ")[-700:]
+            failures.append(f"{name}: {detail}")
+            print(f"FREE_PROVIDER_FAIL provider={name} detail={detail}", file=sys.stderr)
+    raise RuntimeError("all_free_providers_exhausted | " + " | ".join(failures))
+
 
 def validate_story(story: dict, allowed_ids: set[str]) -> None:
     sid = str(story.get("id") or "")
@@ -136,35 +253,47 @@ def validate_story(story: dict, allowed_ids: set[str]) -> None:
     body = story.get("bodyPt")
     if not title or not excerpt:
         raise ValueError(f"missing Portuguese title/deck for {sid}")
-    if not isinstance(body, list) or len(body) < 4:
-        raise ValueError(f"bodyPt must have at least 4 paragraphs for {sid}")
-    words = sum(len(str(paragraph).split()) for paragraph in body)
+    if not isinstance(body, list) or len(body) < 4 or len(body) > 10:
+        raise ValueError(f"unsafe paragraph count for {sid}")
+    paragraphs = [str(p).strip() for p in body if str(p).strip()]
+    if len(paragraphs) < 4:
+        raise ValueError(f"empty paragraphs for {sid}")
+    words = sum(len(paragraph.split()) for paragraph in paragraphs)
     if words < 120 or words > 1100:
         raise ValueError(f"unsafe editorial word count for {sid}: {words}")
 
+
 def main() -> int:
     feed = read_json(FEED, {"items": []})
-    targets = select_targets(feed)
+    now = datetime.now(timezone.utc)
+    day = now.date().isoformat()
+    already_today = sum(1 for item in (feed.get("items") or []) if generated_today(item, day))
+    remaining = max(0, DAILY_LIMIT - already_today)
+    if remaining <= 0:
+        print(f"[GUIROPA EDITORIAL] daily limit reached: {already_today}/{DAILY_LIMIT}")
+        return 0
+
+    targets = select_targets(feed, remaining)
     if not targets:
         print("[GUIROPA EDITORIAL] no pending stories")
         return 0
 
     packets = [source_packet(item) for item in targets]
-    result = call_copilot(build_prompt(packets))
+    result, provider = call_free_multiprovider(build_prompt(packets))
     stories = result.get("stories")
     if not isinstance(stories, list):
-        raise RuntimeError("Copilot response missing stories array")
+        raise RuntimeError("provider response missing stories array")
 
     allowed = {str(item.get("id")) for item in targets}
-    valid = {}
+    valid: dict[str, dict] = {}
     for story in stories:
         validate_story(story, allowed)
         valid[str(story["id"])] = story
 
     if not valid:
-        raise RuntimeError("No valid stories returned")
+        raise RuntimeError("EDITORIAL BLOCKED — provider returned zero valid Full Stories")
 
-    now = datetime.now(timezone.utc).isoformat()
+    stamp = now.isoformat()
     enriched = []
     for item in feed.get("items") or []:
         story = valid.get(str(item.get("id")))
@@ -178,20 +307,29 @@ def main() -> int:
             "bodyPt": [str(p).strip() for p in story["bodyPt"] if str(p).strip()],
             "translationStatus": "pt-ready",
             "editorialStatus": "ready",
-            "editorialGeneratedAt": now,
+            "editorialGeneratedAt": stamp,
+            "editorialProvider": provider,
         })
 
     feed["items"] = enriched
     feed["translatedPt"] = sum(1 for item in enriched if item.get("titlePt"))
     feed["translationPending"] = len(enriched) - feed["translatedPt"]
-    feed["publishedPt"] = sum(1 for item in enriched if item.get("editorialStatus") == "ready" and len(item.get("bodyPt") or []) >= 4)
+    feed["publishedPt"] = sum(1 for item in enriched if is_ready(item))
     feed["editorialPending"] = len(enriched) - feed["publishedPt"]
     feed["aiCalls"] = int(feed.get("aiCalls") or 0) + 1
-    feed["editorialUpdatedAt"] = now
+    feed["editorialUpdatedAt"] = stamp
+    feed["editorialDailyLimit"] = DAILY_LIMIT
+    feed["editorialBatchSize"] = BATCH_SIZE
+    feed["editorialPublishedToday"] = already_today + len(valid)
 
     write_json(FEED, feed)
-    print(f"[GUIROPA EDITORIAL] {len(valid)} stories ready · {feed['publishedPt']} PT published · {feed['editorialPending']} pending · 1 AI call")
+    print(
+        f"[GUIROPA EDITORIAL] {len(valid)} Full Stories ready · "
+        f"{already_today + len(valid)}/{DAILY_LIMIT} today · "
+        f"{feed['publishedPt']} PT published · {feed['editorialPending']} pending · provider={provider}"
+    )
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
