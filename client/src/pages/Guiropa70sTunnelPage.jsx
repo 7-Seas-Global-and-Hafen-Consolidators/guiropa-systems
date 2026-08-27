@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const SIGNALS = [
-  { name: "Super 70s", note: "FULL DECADE SIGNAL", url: "https://listen.181fm.com/181-70s_128k.mp3" },
-  { name: "Super 70s", note: "BACKUP SIGNAL", url: "https://listen.181fm.com/181-70s_128k.mp3" },
+  { name: "Super 70s", note: "MP3 · PRIMARY", url: "https://listen.181fm.com/181-70s_128k.mp3" },
+  { name: "Super 70s", note: "AAC · FALLBACK", url: "https://listen.181fm.com/181-70s_64k.aac" },
 ];
 
 export default function Guiropa70sTunnelPage() {
@@ -16,22 +16,33 @@ export default function Guiropa70sTunnelPage() {
   useEffect(() => { if (audioRef.current) audioRef.current.volume = volume; }, [volume]);
   useEffect(() => () => { const a = audioRef.current; if (a) { a.pause(); a.src = ""; } }, []);
 
+  async function playSignal(index) {
+    const audio = audioRef.current;
+    if (!audio) return;
+    const signal = SIGNALS[index];
+    audio.pause();
+    audio.src = signal.url;
+    audio.load();
+    setSignalIndex(index);
+    setStatus("CONNECTING");
+    setPlaying(false);
+    try { await audio.play(); } catch { setStatus("ERROR"); setPlaying(false); }
+  }
+
   async function start() {
     const audio = audioRef.current;
     if (!audio) return;
     const signal = SIGNALS[signalIndex];
-    if (!audio.src || !audio.src.includes(signal.url)) { audio.src = signal.url; audio.load(); }
+    if (!audio.src || !audio.src.includes(signal.url)) {
+      audio.src = signal.url;
+      audio.load();
+    }
     setStatus("CONNECTING");
     try { await audio.play(); } catch { setStatus("ERROR"); setPlaying(false); }
   }
+
   function pause() { audioRef.current?.pause(); }
-  function retry() {
-    const next = (signalIndex + 1) % SIGNALS.length;
-    const audio = audioRef.current;
-    if (audio) { audio.pause(); audio.removeAttribute("src"); audio.load(); }
-    setSignalIndex(next); setPlaying(false); setStatus("READY");
-    window.setTimeout(start, 0);
-  }
+  function retry() { void playSignal((signalIndex + 1) % SIGNALS.length); }
 
   return (
     <main className="g70">
