@@ -4,6 +4,7 @@ import Footer from "./Footer.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import GuiropaCommercialFooterDeck from "./GuiropaCommercialFooterDeck.jsx";
 import HomeNewsTunnel from "./HomeNewsTunnel.jsx";
+import GlobalSupportStrip from "./GlobalSupportStrip.jsx";
 
 export default function Layout() {
   const location = useLocation();
@@ -15,6 +16,7 @@ export default function Layout() {
       <Header />
       <div className="app-shell guiropa-radio-shell"><Outlet /></div>
       {isHome ? <HomeNewsTunnel /> : null}
+      {!isHome ? <GlobalSupportStrip /> : null}
       <GuiropaCommercialFooterDeck />
       <Footer />
     </>
