@@ -12,6 +12,7 @@ const CHANNELS = [
 ];
 
 const PLAYER_ART = assetUrl("assets/guiropa-radio-player-artdeco.jpg");
+const HIDDEN_PATHS = new Set(["", "/", "/70s", "/1977", "/1986"]);
 
 export default function TunnelPersistentPlayer() {
   const location = useLocation();
@@ -97,7 +98,7 @@ export default function TunnelPersistentPlayer() {
     }
   }
 
-  if (normalizedPath === "/1986") return null;
+  if (HIDDEN_PATHS.has(normalizedPath)) return null;
 
   return (
     <>
