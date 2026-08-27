@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - ".github/workflows/rss-world-editorial.yml"
+      - ".github/workflows/deploy.yml"
+      - ".github/workflows/guiropa-rss-throughput-validation.yml"
       - "tools/guiropa_news_editorial.py"
       - "tools/guiropa_news_editorial_source_fallback.py"
       - "client/public/data/rss-world-feed.json"
@@ -20,7 +22,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Validate Python editorial engines
+      - name: Validate Python editorial engines and deploy handoff
         run: |
           python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_source_fallback.py
           python - <<'PY'
@@ -33,7 +35,13 @@ jobs:
                   assert item.get('titlePt')
                   assert item.get('excerptPt')
                   assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
-          print('RSS editorial structure OK')
+          deploy=Path('.github/workflows/deploy.yml').read_text('utf-8')
+          assert 'workflow_run:' in deploy
+          assert 'GUIROPA News Tunnel Zero-Cost Multiprovider Editorial' in deploy
+          assert 'GUIROPA RSS World Bridge' in deploy
+          assert "github.event.workflow_run.conclusion == 'success'" in deploy
+          assert 'ref: main' in deploy
+          print('RSS editorial structure + automatic Pages handoff OK')
           PY
       - name: Build GUIROPA
         working-directory: client
