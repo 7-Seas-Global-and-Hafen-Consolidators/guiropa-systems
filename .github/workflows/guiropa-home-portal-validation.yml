@@ -1,0 +1,80 @@
+name: GUIROPA Home Portal Validation
+
+on:
+  pull_request:
+    paths:
+      - "client/src/App.jsx"
+      - "client/src/pages/HomePage.jsx"
+      - "client/src/pages/ShowsPage.jsx"
+      - "client/src/components/Header.jsx"
+      - "client/src/components/GuiropaLogo.jsx"
+      - "client/src/components/Layout.jsx"
+      - "client/src/components/HomeLiveAgenda.jsx"
+      - "client/src/components/HomeNewsTunnel.jsx"
+      - "client/src/data/liveAgenda.js"
+      - "client/src/styles/header-logo-fix.css"
+      - ".github/workflows/guiropa-home-portal-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "client/src/App.jsx"
+      - "client/src/pages/HomePage.jsx"
+      - "client/src/pages/ShowsPage.jsx"
+      - "client/src/components/Header.jsx"
+      - "client/src/components/GuiropaLogo.jsx"
+      - "client/src/components/Layout.jsx"
+      - "client/src/components/HomeLiveAgenda.jsx"
+      - "client/src/components/HomeNewsTunnel.jsx"
+      - "client/src/data/liveAgenda.js"
+      - "client/src/styles/header-logo-fix.css"
+      - ".github/workflows/guiropa-home-portal-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: client/package-lock.json
+      - name: Install client dependencies
+        run: npm ci
+        working-directory: client
+      - name: Build GUIROPA
+        run: npm run build
+        working-directory: client
+      - name: Verify portal architecture and protected babies
+        shell: bash
+        run: |
+          grep -q 'path="shows"' client/src/App.jsx
+          grep -q 'path="1977"' client/src/App.jsx
+          grep -q 'path="70s"' client/src/App.jsx
+          grep -q 'path="1986"' client/src/App.jsx
+          grep -q 'initialSource="70s"' client/src/App.jsx
+          grep -q 'initialSource="80s-pop"' client/src/App.jsx
+          grep -q 'HomeLiveAgenda' client/src/pages/HomePage.jsx
+          grep -q 'R\$ 1 já ajuda' client/src/pages/HomePage.jsx
+          grep -q 'INSTAGRAM' client/src/components/Header.jsx
+          grep -q 'YOUTUBE' client/src/components/Header.jsx
+          grep -q 'FACEBOOK' client/src/components/Header.jsx
+          grep -q 'TIKTOK' client/src/components/Header.jsx
+          grep -q 'SPOTIFY' client/src/components/Header.jsx
+          grep -q 'to="/apoie"' client/src/components/Header.jsx
+          grep -q 'GuiropaCommercialFooterDeck' client/src/components/Layout.jsx
+          ! grep -q 'GuiropaCommercialLayer' client/src/components/Layout.jsx
+          ! grep -q 'GuiropaCommercialCascade' client/src/components/Layout.jsx
+          ! grep -q 'GuiropaCommercialInterstitial' client/src/components/Layout.jsx
+          ! grep -q 'GuiropaCommercialFloat' client/src/components/Layout.jsx
+          grep -q 'futureLiveEvents' client/src/data/liveAgenda.js
+          grep -q 'slice(0, 5)' client/src/components/HomeLiveAgenda.jsx
+          grep -q 'slice(0,3)' client/src/components/HomeNewsTunnel.jsx
+          test -f client/src/pages/Guiropa70sTunnelPage.jsx
+          test -f client/src/pages/Guiropa80sTunnelPage.jsx
+          grep -q '181-70s_128k.mp3' client/src/pages/GuiropaUnifiedRadioPage.jsx
