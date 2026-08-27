@@ -7,6 +7,13 @@ on:
       - "client/src/components/ExploreHub.jsx"
       - "client/src/App.jsx"
       - ".github/workflows/guiropa-70s-tunnel-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "client/src/pages/Guiropa70sTunnelPage.jsx"
+      - "client/src/components/ExploreHub.jsx"
+      - "client/src/App.jsx"
+      - ".github/workflows/guiropa-70s-tunnel-validation.yml"
   workflow_dispatch:
 
 permissions:
