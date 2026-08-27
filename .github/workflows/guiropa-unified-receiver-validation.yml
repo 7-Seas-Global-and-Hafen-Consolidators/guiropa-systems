@@ -1,0 +1,41 @@
+name: GUIROPA Unified Receiver Validation
+
+on:
+  pull_request:
+    paths:
+      - "client/src/pages/GuiropaUnifiedRadioPage.jsx"
+      - "client/src/App.jsx"
+      - "client/src/main.jsx"
+      - ".github/workflows/guiropa-unified-receiver-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: client/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+        working-directory: client
+      - name: Build GUIROPA
+        run: npm run build
+        working-directory: client
+      - name: Verify unified routes and preserved tunnel rollback
+        run: |
+          grep -q 'GuiropaUnifiedRadioPage' client/src/App.jsx
+          grep -q 'initialSource="70s"' client/src/App.jsx
+          grep -q 'initialSource="80s-pop"' client/src/App.jsx
+          grep -q '181-70s_128k.mp3' client/src/pages/GuiropaUnifiedRadioPage.jsx
+          grep -q '181-awesome80s_128k.mp3' client/src/pages/GuiropaUnifiedRadioPage.jsx
+          test -f client/src/pages/Guiropa70sTunnelPage.jsx
+          test -f client/src/pages/Guiropa80sTunnelPage.jsx
+          ! grep -q 'TunnelPersistentPlayer' client/src/main.jsx

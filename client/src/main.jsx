@@ -6,7 +6,6 @@ import App from "./App.jsx";
 import { LanguageProvider } from "./i18n/LanguageContext.jsx";
 import { RadioPlayerProvider } from "./audio/RadioPlayerContext.jsx";
 import "./audio/installAudioInterlock.js";
-import TunnelPersistentPlayer from "./components/TunnelPersistentPlayer.jsx";
 
 import "./styles/global.css";
 
@@ -23,7 +22,6 @@ createRoot(
       <LanguageProvider>
         <RadioPlayerProvider>
           <App />
-          <TunnelPersistentPlayer />
         </RadioPlayerProvider>
       </LanguageProvider>
     </BrowserRouter>

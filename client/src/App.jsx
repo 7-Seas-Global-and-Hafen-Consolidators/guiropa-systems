@@ -4,12 +4,10 @@ import Layout from "./components/Layout.jsx";
 
 import HomePage from "./pages/HomePage.jsx";
 import MarvinGayePage from "./pages/MarvinGayePage.jsx";
-import Guiropa70sTunnelPage from "./pages/Guiropa70sTunnelPage.jsx";
-import Guiropa80sTunnelPage from "./pages/Guiropa80sTunnelPage.jsx";
+import GuiropaUnifiedRadioPage from "./pages/GuiropaUnifiedRadioPage.jsx";
 import WorldWireContinuousPage from "./pages/WorldWireContinuousPage.jsx";
 import NewsTunnelStoryPage from "./pages/NewsTunnelStoryPage.jsx";
 
-import ListenPage from "./ListenPage.jsx";
 import SchedulePage from "./SchedulePage.jsx";
 import StorePage from "./StorePage.jsx";
 import ContactPage from "./ContactPage.jsx";
@@ -19,9 +17,9 @@ import SupportPage from "./SupportPage.jsx";
 export default function App() {
   return (
     <Routes>
-      <Route path="1977" element={<Guiropa70sTunnelPage />} />
-      <Route path="70s" element={<Guiropa70sTunnelPage />} />
-      <Route path="1986" element={<Guiropa80sTunnelPage />} />
+      <Route path="1977" element={<GuiropaUnifiedRadioPage initialSource="70s" />} />
+      <Route path="70s" element={<GuiropaUnifiedRadioPage initialSource="70s" />} />
+      <Route path="1986" element={<GuiropaUnifiedRadioPage initialSource="80s-pop" />} />
 
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
@@ -31,8 +29,8 @@ export default function App() {
         <Route path="world-wire/:id" element={<NewsTunnelStoryPage />} />
         <Route path="mundo" element={<WorldWireContinuousPage />} />
 
-        <Route path="ouvir" element={<ListenPage />} />
-        <Route path="listen" element={<ListenPage />} />
+        <Route path="ouvir" element={<GuiropaUnifiedRadioPage initialSource="guiropa" />} />
+        <Route path="listen" element={<GuiropaUnifiedRadioPage initialSource="guiropa" />} />
 
         <Route path="programacao" element={<SchedulePage />} />
         <Route path="schedule" element={<SchedulePage />} />
