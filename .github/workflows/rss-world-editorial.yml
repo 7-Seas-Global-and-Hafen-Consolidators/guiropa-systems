@@ -1,0 +1,56 @@
+name: GUIROPA News Tunnel Portuguese Editorial
+
+on:
+  schedule:
+    - cron: "3,23,43 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: guiropa-news-portuguese-editorial
+  cancel-in-progress: false
+
+jobs:
+  editorial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_PERSONAL_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+      GUIROPA_EDITORIAL_MODEL: ${{ vars.GUIROPA_EDITORIAL_MODEL }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install GitHub Copilot CLI
+        run: npm install -g @github/copilot@latest
+
+      - name: Build Portuguese GUIROPA stories
+        run: python tools/guiropa_news_editorial.py
+
+      - name: Commit only complete Portuguese editorial updates
+        shell: bash
+        run: |
+          if git diff --quiet -- client/public/data/rss-world-feed.json; then
+            echo "No editorial changes. Nothing to publish."
+            exit 0
+          fi
+
+          git config user.name "GUIROPA News Editorial"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add client/public/data/rss-world-feed.json
+          git commit -m "PUBLISH GUIROPA NEWS TUNNEL IN PORTUGUESE"
+          git pull --rebase origin main
+          git push origin HEAD:main
