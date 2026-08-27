@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 
 export default function ExploreHub() {
@@ -24,77 +25,92 @@ export default function ExploreHub() {
         </div>
 
         <div className="guiropa-decades-grid">
-          {t.decades.items.map((item) => (
-            <article
-              key={item.year}
-              className={`guiropa-decade guiropa-decade--${item.code}`}
-            >
-              <span className="guiropa-decade__number">
-                {item.year}
-              </span>
+          {t.decades.items.map((item) => {
+            const card = (
+              <article
+                className={`guiropa-decade guiropa-decade--${item.code}`}
+              >
+                <span className="guiropa-decade__number">
+                  {item.year}
+                </span>
 
-              <h3>
-                {item.title}
-              </h3>
+                <h3>
+                  {item.title}
+                </h3>
 
-              <p>
-                {item.description}
-              </p>
-            </article>
-          ))}
+                <p>
+                  {item.description}
+                </p>
+
+                {item.code === "70" && (
+                  <span className="guiropa-decade__tunnel-entry">
+                    ENTER 70s TUNNEL™ →
+                  </span>
+                )}
+              </article>
+            );
+
+            return item.code === "70" ? (
+              <Link
+                key={item.year}
+                to="/1977"
+                className="guiropa-decade-link"
+                aria-label="Entrar no GUIROPA 70s Tunnel"
+              >
+                {card}
+              </Link>
+            ) : (
+              <div key={item.year} className="guiropa-decade-link guiropa-decade-link--static">
+                {card}
+              </div>
+            );
+          })}
         </div>
       </div>
 
       <style>{`
         .guiropa-decades-static {
           min-height: 0 !important;
-
-          padding:
-            clamp(4.8rem, 8vw, 7rem)
-            0 !important;
+          padding: clamp(4.8rem, 8vw, 7rem) 0 !important;
         }
 
-        .guiropa-decades-static
-        .guiropa-section-heading {
-          opacity: 1 !important;
-          visibility: visible !important;
-          transform: none !important;
-        }
-
-        .guiropa-decades-static
-        .guiropa-decades-grid {
-          opacity: 1 !important;
-          visibility: visible !important;
-          transform: none !important;
-        }
-
-        .guiropa-decades-static
-        .guiropa-decade {
+        .guiropa-decades-static .guiropa-section-heading,
+        .guiropa-decades-static .guiropa-decades-grid,
+        .guiropa-decades-static .guiropa-decade {
           opacity: 1 !important;
           visibility: visible !important;
           transform: none;
         }
 
-        .guiropa-decades-static
-        .guiropa-decade:hover {
-          transform:
-            translateY(-4px);
+        .guiropa-decade-link {
+          color: inherit;
+          text-decoration: none;
+          display: block;
+        }
+
+        .guiropa-decade-link .guiropa-decade {
+          height: 100%;
+        }
+
+        .guiropa-decades-static .guiropa-decade:hover {
+          transform: translateY(-4px);
+        }
+
+        .guiropa-decade__tunnel-entry {
+          display: inline-block;
+          margin-top: 1rem;
+          color: #d57a24;
+          font-size: .58rem;
+          font-weight: 900;
+          letter-spacing: .13em;
         }
 
         @media (max-width: 900px) {
-          .guiropa-decades-static {
-            padding:
-              4.5rem
-              0 !important;
-          }
+          .guiropa-decades-static { padding: 4.5rem 0 !important; }
         }
 
         @media (max-width: 600px) {
-          .guiropa-decades-static {
-            padding:
-              3.8rem
-              0 !important;
-          }
+          .guiropa-decades-static { padding: 3.8rem 0 !important; }
         }
       `}</style>
     </section>

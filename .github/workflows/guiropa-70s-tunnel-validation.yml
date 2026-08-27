@@ -1,0 +1,41 @@
+name: GUIROPA 70s Tunnel Validation
+
+on:
+  pull_request:
+    paths:
+      - "client/src/pages/Guiropa70sTunnelPage.jsx"
+      - "client/src/components/ExploreHub.jsx"
+      - "client/src/App.jsx"
+      - ".github/workflows/guiropa-70s-tunnel-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "client/src/pages/Guiropa70sTunnelPage.jsx"
+      - "client/src/components/ExploreHub.jsx"
+      - "client/src/App.jsx"
+      - ".github/workflows/guiropa-70s-tunnel-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Build GUIROPA
+        run: npm run build
+      - name: Verify 70s route and isolation
+        run: |
+          grep -q 'Guiropa70sTunnelPage' client/src/App.jsx
+          grep -q 'path="1977"' client/src/App.jsx
+          grep -q 'ENTER 70s TUNNEL' client/src/components/ExploreHub.jsx
+          grep -q '1970—1979' client/src/pages/Guiropa70sTunnelPage.jsx
+          git diff origin/main...HEAD --name-only | grep -Ev '^(client/src/App.jsx|client/src/components/ExploreHub.jsx|client/src/pages/Guiropa70sTunnelPage.jsx|.github/workflows/guiropa-70s-tunnel-validation.yml)$' && exit 1 || true
