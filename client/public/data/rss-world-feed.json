@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-27T01:48:52.518Z",
+  "updatedAt": "2026-08-27T03:12:55.432Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
   "aiCalls": 0,
   "itemCount": 600,
   "publishedPt": 0,
   "editorialPending": 600,
-  "newItems": 4,
+  "newItems": 0,
   "translatedPt": 0,
   "translationPending": 600,
   "connectedPoints": 25,
@@ -44,7 +44,7 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 10,
-      "added": 4
+      "added": 0
     },
     {
       "region": "USA",
@@ -160,7 +160,7 @@
     {
       "region": "Latin America / Brazil",
       "ok": false,
-      "error": "HTTP 404"
+      "error": "HTTP 429"
     },
     {
       "region": "Latin America / Brazil",
