@@ -7,6 +7,7 @@ on:
       - '.github/workflows/rss-world-bridge.yml'
       - '.github/workflows/guiropa-editorial-validation.yml'
       - 'tools/guiropa_news_editorial.py'
+      - 'tools/guiropa_news_editorial_envelope.py'
   push:
     branches: [main]
     paths:
@@ -14,6 +15,7 @@ on:
       - '.github/workflows/rss-world-bridge.yml'
       - '.github/workflows/guiropa-editorial-validation.yml'
       - 'tools/guiropa_news_editorial.py'
+      - 'tools/guiropa_news_editorial_envelope.py'
 
 permissions:
   contents: read
@@ -28,13 +30,14 @@ jobs:
         with:
           python-version: '3.12'
       - name: Compile editorial engine
-        run: python -m py_compile tools/guiropa_news_editorial.py
+        run: python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_envelope.py
       - name: Validate zero-cost Full Story operating contract
         shell: bash
         run: |
           python - <<'PY'
           from pathlib import Path
           engine=Path('tools/guiropa_news_editorial.py').read_text('utf-8')
+          envelope=Path('tools/guiropa_news_editorial_envelope.py').read_text('utf-8')
           editorial=Path('.github/workflows/rss-world-editorial.yml').read_text('utf-8')
           bridge=Path('.github/workflows/rss-world-bridge.yml').read_text('utf-8')
 
@@ -44,10 +47,15 @@ jobs:
           assert 'gemini-free' in engine
           assert 'openrouter-free' in engine
           assert 'ollama-local-zero-key' in engine
-          assert 'qwen2.5:0.5b-instruct' in engine
           assert 'GUIROPA_LOCAL_BATCH' in engine
           assert 'EDITORIAL BLOCKED' in engine
           assert 'bodyPt' in engine
+          assert 'PARAGRAPH_MIN_CHARS = 200' in envelope
+          assert 'PARAGRAPH_MAX_CHARS = 650' in envelope
+          assert '"minItems": 4' in envelope
+          assert '"maxItems": 4' in envelope
+          assert 'local_story_schema()' in envelope
+          assert 'core.call_ollama_local = call_ollama_local' in envelope
           assert 'cron: "3,33 * * * *"' in editorial
           assert 'cron: "7,37 * * * *"' in bridge
           assert 'GROQ_FREE_API_KEY' in editorial
@@ -55,9 +63,11 @@ jobs:
           assert 'OPENROUTER_FREE_API_KEY' in editorial
           assert 'Prepare local zero-key inference fallback' in editorial
           assert 'ollama pull' in editorial
-          assert 'GUIROPA_OLLAMA_MODEL' in editorial
+          assert 'GUIROPA_OLLAMA_MODEL: qwen2.5:1.5b-instruct' in editorial
           assert 'GUIROPA_LOCAL_BATCH: "1"' in editorial
+          assert 'GUIROPA_OLLAMA_CONTEXT: "8192"' in editorial
+          assert 'python tools/guiropa_news_editorial_envelope.py' in editorial
           assert 'Install GitHub Copilot CLI' not in editorial
           assert 'COPILOT_PERSONAL_TOKEN' not in editorial
-          print('GUIROPA editorial architecture OK: 500/day · batch 12 · local zero-key batch 1 · 30-minute cadence · zero-cost multiprovider + Ollama · fail closed')
+          print('GUIROPA editorial architecture OK: Passport structural envelope · 500/day · batch 12 · local batch 1 · 30-minute cadence · zero-cost multiprovider + Ollama · fail closed')
           PY
