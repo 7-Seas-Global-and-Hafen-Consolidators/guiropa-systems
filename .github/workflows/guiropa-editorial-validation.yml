@@ -6,14 +6,18 @@ on:
       - '.github/workflows/rss-world-editorial.yml'
       - '.github/workflows/rss-world-bridge.yml'
       - '.github/workflows/guiropa-editorial-validation.yml'
+      - '.github/workflows/guiropa-editorial-bridge-validation.yml'
       - 'tools/guiropa_news_editorial.py'
+      - 'tools/guiropa_editorial_bridge_apply.py'
   push:
     branches: [main]
     paths:
       - '.github/workflows/rss-world-editorial.yml'
       - '.github/workflows/rss-world-bridge.yml'
       - '.github/workflows/guiropa-editorial-validation.yml'
+      - '.github/workflows/guiropa-editorial-bridge-validation.yml'
       - 'tools/guiropa_news_editorial.py'
+      - 'tools/guiropa_editorial_bridge_apply.py'
 
 permissions:
   contents: read
@@ -27,31 +31,36 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Compile editorial engine
-        run: python -m py_compile tools/guiropa_news_editorial.py
-      - name: Validate lean Full Story operating contract
+      - name: Compile editorial engines
+        run: |
+          python -m py_compile tools/guiropa_news_editorial.py
+          python -m py_compile tools/guiropa_editorial_bridge_apply.py
+      - name: Validate Full Story bridge operating contract
         shell: bash
         run: |
           python - <<'PY'
           from pathlib import Path
-          engine=Path('tools/guiropa_news_editorial.py').read_text('utf-8')
+          legacy=Path('tools/guiropa_news_editorial.py').read_text('utf-8')
+          consumer=Path('tools/guiropa_editorial_bridge_apply.py').read_text('utf-8')
           editorial=Path('.github/workflows/rss-world-editorial.yml').read_text('utf-8')
-          bridge=Path('.github/workflows/rss-world-bridge.yml').read_text('utf-8')
+          rss=Path('.github/workflows/rss-world-bridge.yml').read_text('utf-8')
 
-          assert 'BATCH_SIZE = 12' in engine
-          assert 'DAILY_LIMIT = 500' in engine
-          assert 'groq-free' in engine
-          assert 'gemini-free' in engine
-          assert 'openrouter-free' in engine
-          assert 'openrouter/free' in engine
-          assert 'EDITORIAL BLOCKED' in engine
-          assert 'bodyPt' in engine
-          assert 'cron: "3,33 * * * *"' in editorial
-          assert 'cron: "7,37 * * * *"' in bridge
-          assert 'GROQ_FREE_API_KEY' in editorial
-          assert 'GEMINI_FREE_API_KEY' in editorial
-          assert 'OPENROUTER_FREE_API_KEY' in editorial
-          assert 'Install GitHub Copilot CLI' not in editorial
+          assert 'BATCH_SIZE = 12' in legacy
+          assert 'DAILY_LIMIT = 500' in legacy
+          assert 'EDITORIAL BLOCKED' in legacy
+          assert 'bodyPt' in legacy
+          assert 'passport-radio/main/data/guiropa-editorial-bridge.json' in consumer
+          assert 'editorialStatus' in consumer
+          assert 'bodyPt' in consumer
+          assert 'editorialDailyLimit' in consumer
+          assert '500' in consumer
+          assert 'cron: "12,42 * * * *"' in editorial
+          assert 'cron: "7,37 * * * *"' in rss
+          assert 'Apply Passport-generated GUIROPA Full Stories' in editorial
+          assert 'GROQ_FREE_API_KEY' not in editorial
+          assert 'GEMINI_FREE_API_KEY' not in editorial
+          assert 'OPENROUTER_FREE_API_KEY' not in editorial
           assert 'COPILOT_PERSONAL_TOKEN' not in editorial
-          print('GUIROPA editorial architecture OK: 500/day · batch 12 · 30-minute cadence · free multiprovider · fail closed')
+          assert 'PUBLISH GUIROPA NEWS TUNNEL IN PORTUGUESE' in editorial
+          print('GUIROPA editorial architecture OK: Passport bridge · 500/day gate · batch 12 source · 30-minute cadence · fail closed')
           PY
