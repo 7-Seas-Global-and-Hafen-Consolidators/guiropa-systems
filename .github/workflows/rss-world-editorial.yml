@@ -1,8 +1,8 @@
-name: GUIROPA News Tunnel Portuguese Editorial
+name: GUIROPA News Tunnel Free Multiprovider Editorial
 
 on:
   schedule:
-    - cron: "3,23,43 * * * *"
+    - cron: "3,33 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,12 +15,14 @@ concurrency:
 jobs:
   editorial:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 24
     env:
-      COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_PERSONAL_TOKEN }}
-      GH_TOKEN: ${{ github.token }}
-      GITHUB_TOKEN: ${{ github.token }}
-      GUIROPA_EDITORIAL_MODEL: ${{ vars.GUIROPA_EDITORIAL_MODEL }}
+      GROQ_API_KEY: ${{ secrets.GROQ_FREE_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_FREE_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_FREE_API_KEY }}
+      GUIROPA_GROQ_MODEL: openai/gpt-oss-120b
+      GUIROPA_GEMINI_MODEL: gemini-2.5-flash-lite
+      GUIROPA_OPENROUTER_MODEL: openrouter/free
 
     steps:
       - name: Checkout main
@@ -34,11 +36,24 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install GitHub Copilot CLI
-        run: npm install -g @github/copilot@latest
-
-      - name: Build Portuguese GUIROPA stories
+      - name: Build up to 12 complete Portuguese Full Stories
         run: python tools/guiropa_news_editorial.py
+
+      - name: Enforce truthful editorial health
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('client/public/data/rss-world-feed.json')
+          d=json.loads(p.read_text('utf-8'))
+          items=d.get('items') or []
+          ready=[x for x in items if x.get('editorialStatus') == 'ready']
+          unsafe=[x.get('id') for x in ready if not x.get('titlePt') or not x.get('excerptPt') or len(x.get('bodyPt') or []) < 4]
+          if unsafe:
+              raise SystemExit(f'EDITORIAL BLOCKED — incomplete public stories: {unsafe[:10]}')
+          print(f"Editorial health OK: ready={len(ready)} pending={d.get('editorialPending',0)} today={d.get('editorialPublishedToday',0)}/{d.get('editorialDailyLimit',500)}")
+          PY
 
       - name: Commit only complete Portuguese editorial updates
         shell: bash
