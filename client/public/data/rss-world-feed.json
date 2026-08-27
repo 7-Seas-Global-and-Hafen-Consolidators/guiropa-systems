@@ -3,8 +3,8 @@
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
   "aiCalls": 3,
   "itemCount": 671,
-  "publishedPt": 1,
-  "editorialPending": 670,
+  "publishedPt": 55,
+  "editorialPending": 616,
   "newItems": 71,
   "translatedPt": 57,
   "translationPending": 614,
@@ -221,13 +221,20 @@
       "excerpt": "Gen. Randy George was removed from his position just days after ordering an investigation into Apache helicopters hovering at Kid Rock's home. Army Chief of Staff Was Fired by Pete Hegseth After Launching Kid Rock Probe: Report Spencer Kaufman",
       "titlePt": "General Randy George Falaçoado: Falação de Pete Hegseth",
       "excerptPt": "Gen. Randy George foi demitido do cargo de Comandante-Geral do Exército após ação investigativa de Pete Hegseth. O General, que havia solicitado a Hegseth para suspender a investigação, foi afastado de seu cargo em apenas quatro dias. A reportagem foi publicada pelo Consequence.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Gen. Randy George foi demitido do cargo de Comandante-Geral do Exército após ação investigativa de Pete Hegseth. O General, que havia solicitado a Hegseth para suspender a investigação, foi afastado de seu cargo em apenas quatro dias. A reportagem foi publicada pelo Consequence.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Consequence, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T14:27:46.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Consequence. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T14:27:46.000Z",
       "discoveredAt": "2026-08-27T14:34:01.695Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "5b352c6b00f898b0f54145109cead1e95d8129ee6d480cbf35ad599091747853",
@@ -239,13 +246,20 @@
       "excerpt": "The country star performed the cover during his tour stop at the Jones Beach Theater in Wantagh, New York. Chris Stapleton Pays Tribute to Dolly Parton with “I Will Always Love You” Cover: Watch Eddie Fu",
       "titlePt": "Chris Stapleton presta homenagem a Dolly Parton com capa de “I Will Always Love You”: Assistir",
       "excerptPt": "A estrela country cantou o cover durante sua turnê no Jones Beach Theatre em Wantagh, Nova York. Chris Stapleton presta homenagem a Dolly Parton com capa de “I Will Always Love You”: Assistir Eddie Fu",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "A estrela country cantou o cover durante sua turnê no Jones Beach Theatre em Wantagh, Nova York. Chris Stapleton presta homenagem a Dolly Parton com capa de “I Will Always Love You”: Assistir Eddie Fu.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Consequence, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T14:25:19.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Consequence. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T14:25:19.000Z",
       "discoveredAt": "2026-08-27T14:34:01.695Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "a099dc5eece2c4224702fa613761c4f45896699ef429ca04e72cf1125a334e86",
@@ -257,13 +271,20 @@
       "excerpt": "“The thing that always felt comforting was just knowing Dolly existed in country” The post Watch Orville Peck pay moving tribute to Dolly Parton with cover of ‘I Will Always Love You’ appeared first on NME .",
       "titlePt": "Assista Orville Peck prestar uma homenagem comovente a Dolly Parton com cover de ‘I Will Always Love You’",
       "excerptPt": "“O que sempre foi reconfortante foi saber que Dolly existia no country” O post Assistir Orville Peck prestando homenagem comovente a Dolly Parton com cover de ‘I Will Always Love You’ apareceu pela primeira vez na NME.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "“O que sempre foi reconfortante foi saber que Dolly existia no country” O post Assistir Orville Peck prestando homenagem comovente a Dolly Parton com cover de ‘I Will Always Love You’ apareceu pela primeira vez na NME.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NME, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T14:13:45.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NME. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T14:13:45.000Z",
       "discoveredAt": "2026-08-27T14:34:01.326Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "e161947205f62ce41a5686820758858cb3a46db3ffd10502dc244dda565af930",
@@ -275,13 +296,20 @@
       "excerpt": "L'attraction, dont nous vous avions déjà parlé, s'annonce comme un véritable voyage dans l'univers d'Ozzy Osbourne :...",
       "titlePt": "“Um morcego gigante vai comer a cabeça de um humano”: bem-vindo à casa mal-assombrada de Ozzy Osbourne",
       "excerptPt": "A atração, da qual já falamos, promete ser uma verdadeira viagem ao mundo de Ozzy Osbourne:...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "A atração, da qual já falamos, promete ser uma verdadeira viagem ao mundo de Ozzy Osbourne:.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de RTBF · Musique, na cobertura classificada como Europe / Belgium. O registro de origem traz a marca temporal 2026-08-27T14:10:38.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte RTBF · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T14:10:38.000Z",
       "discoveredAt": "2026-08-27T14:34:13.965Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "d1783914f3618ee30723d125f9e26a8f3aefdafcffc10f12af32c6ae14f6dbb9",
@@ -293,13 +321,20 @@
       "excerpt": "Henry Phillips (from the movie Punching the Clown) stars as Kurt Wagner in the 10-minute comedy short",
       "titlePt": "Lambchop estremece em uma entrevista desastrosa de rádio em novo curta-metragem",
       "excerptPt": "Henry Phillips (do filme Punching the Clown) estrela como Kurt Wagner no curta de comédia de 10 minutos",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Henry Phillips (do filme Punching the Clown) estrela como Kurt Wagner no curta de comédia de 10 minutos.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Pitchfork, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T14:05:13.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Pitchfork. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T14:05:13.000Z",
       "discoveredAt": "2026-08-27T14:34:01.384Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "6587f43146587f114c52555e8607ed190f9f18d19fdd4acfab9744f41c97d184",
@@ -311,13 +346,20 @@
       "excerpt": "You Seem Pretty Pink for a Baja Blast will be available at Taco Bell's Live Más Cafés and Rodrigo's Daisy Chain Fields festival on August 29th before rolling out nationwide on September 24th. Olivia Rodrigo Gets Her Own Baja Blast at Taco Bell Alex Young",
       "titlePt": "Olivia Rodrigo faz sua própria explosão de Baja no Taco Bell",
       "excerptPt": "You Seem Pretty Pink for a Baja Blast estará disponível no Taco Bell's Live Más Cafés e no festival Rodrigo's Daisy Chain Fields em 29 de agosto, antes de ser lançado em todo o país em 24 de setembro. Olivia Rodrigo faz sua própria explosão de Baja no Taco Bell Alex Young",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "You Seem Pretty Pink for a Baja Blast estará disponível no Taco Bell's Live Más Cafés e no festival Rodrigo's Daisy Chain Fields em 29 de agosto, antes de ser lançado em todo o país em 24 de setembro. Olivia Rodrigo faz sua própria explosão de Baja no Taco Bell Alex Young.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Consequence, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T14:03:14.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Consequence. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T14:03:14.000Z",
       "discoveredAt": "2026-08-27T14:34:01.695Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "5e581d9cfaa3191b947865f34e7bd124d956ef4e5351d39d2deccd335355c0bd",
@@ -375,13 +417,20 @@
       "excerpt": "It is always evident when a producer knows the club scene through and through, and it could not be clearer in RUNAWAY, the latest hyper hit from Nashville-based artist and producer obee. After discovering beat-making through GarageBand at college, the 29-year-old has shaped an electro-pop identity around punchy drums, heavy bass and dancefloor-centred writing that understands club-life as a speaker-pounding sanctuary. Built for rooms filled with sweat-soaked serotonin, when there is heat between the bodies writhing on the dancefloor and escapism tastes the sweetest, RUNAWAY becomes a complete detour from the mundane contours of reality. It is a sugar-rushed illusion that hypes you into a nat",
       "titlePt": "O escapismo eletro-pop atingiu seu pico de serotonina encharcado de suor com ‘RUNAWAY’ de obee",
       "excerptPt": "É sempre evidente quando um produtor conhece a cena club por completo, e isso não poderia ser mais claro em RUNAWAY, o mais recente hiper hit do artista e produtor de Nashville, obee. Depois de descobrir a criação de batidas através do GarageBand na faculdade, o jovem de 29 anos moldou uma identidade eletro-pop em torno de bateria enérgica, baixo pesado e escrita centrada na pista de dança que entende a vida do clube como um santuário de alto-falantes. Construído para salas cheias de serotonina encharcada de suor, quando há calor entre os corpos se contorcendo na pista de dança e o escapismo tem o sabor mais doce, RUNAWAY torna-se um desvio completo dos contornos mundanos da realidade. É uma ilusão açucarada que o transforma em um nat",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "É sempre evidente quando um produtor conhece a cena club por completo, e isso não poderia ser mais claro em RUNAWAY, o mais recente hiper hit do artista e produtor de Nashville, obee. Depois de descobrir a criação de batidas através do GarageBand na faculdade, o jovem de 29 anos moldou uma identidade eletro-pop em torno de bateria enérgica, baixo pesado e escrita centrada na pista de dança que entende a vida do clube como um santuário de alto-falantes. Construído para salas cheias de serotonina encharcada de suor, quando há calor entre os corpos se contorcendo na pista de dança e o escapismo tem o sabor mais doce, RUNAWAY torna-se um desvio completo dos contornos mundanos da realidade. É uma ilusão açucarada que o transforma em um nat.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de A&R Factory, na cobertura classificada como Global / UK. O registro de origem traz a marca temporal 2026-08-27T14:00:33.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte A&R Factory. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T14:00:33.000Z",
       "discoveredAt": "2026-08-27T14:34:26.123Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "1077807f3ca4094c4a64e3d9aa75d09e120458e481e23aec58be6c4fae936e52",
@@ -429,13 +478,20 @@
       "excerpt": "The series sees the rapper digging back into his catalog while in conversation with Rick Rubin The post ‘JAŸ-Z IN 8’ confirmed for MUBI release appeared first on NME .",
       "titlePt": "‘JAŸ-Z IN 8’ confirmado para lançamento no MUBI",
       "excerptPt": "A série mostra o rapper vasculhando seu catálogo enquanto conversa com Rick Rubin. O post ‘JAŸ-Z IN 8’ confirmado para lançamento no MUBI apareceu primeiro na NME.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "A série mostra o rapper vasculhando seu catálogo enquanto conversa com Rick Rubin. O post ‘JAŸ-Z IN 8’ confirmado para lançamento no MUBI apareceu primeiro na NME.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NME, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T13:37:28.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NME. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T13:37:28.000Z",
       "discoveredAt": "2026-08-27T14:34:01.326Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "40dbd1169bc9cb9408e4c2484b08516c060ba2810578c55dc0a06f0333ad510c",
@@ -447,13 +503,20 @@
       "excerpt": "It’s also coming to cassette for the very first time The post ‘Doom 2016’ soundtrack is getting 10th anniversary vinyl repress appeared first on NME .",
       "titlePt": "A trilha sonora de ‘Doom 2016’ está sendo reeditada em vinil no 10º aniversário",
       "excerptPt": "Também está chegando em fita cassete pela primeira vez. A trilha sonora pós-'Doom 2016' está recebendo reedição de vinil do 10º aniversário apareceu pela primeira vez na NME.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Também está chegando em fita cassete pela primeira vez. A trilha sonora pós-'Doom 2016' está recebendo reedição de vinil do 10º aniversário apareceu pela primeira vez na NME.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NME, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T13:29:48.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NME. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T13:29:48.000Z",
       "discoveredAt": "2026-08-27T14:34:01.327Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "9919989602b4bdbe85f83ce0d1a1cbc0c8e0981068a4530bb0adaafc3d8e3183",
@@ -465,13 +528,20 @@
       "excerpt": "Here are 25 rock and metal bands that have called off shows so far this year and the reason behind the cancellations. Continue reading&hellip;",
       "titlePt": "25 bandas de Big Rock + Metal que cancelaram shows em 2026",
       "excerptPt": "Aqui estão 25 bandas de rock e metal que cancelaram shows até agora neste ano e o motivo dos cancelamentos. Continuar lendo…",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Aqui estão 25 bandas de rock e metal que cancelaram shows até agora neste ano e o motivo dos cancelamentos. Continuar lendo….",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Loudwire, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T13:21:22.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Loudwire. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T13:21:22.000Z",
       "discoveredAt": "2026-08-27T14:34:01.163Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "0eec64172d72ec95aefb42aa9de7222328e9129c8104d5792080761791a5cac6",
@@ -501,13 +571,20 @@
       "excerpt": "Jack White has released an impressive seven LPs since 2012, including Frozen Charlotte and No Name in the last two years alone. Just over a third of tonight’s set was drawn from those recent releases. [...]",
       "titlePt": "REVISÃO AO VIVO: Jack White oferece uma masterclass de guitarra feroz no Eventim Apollo",
       "excerptPt": "Jack White lançou sete LPs impressionantes desde 2012, incluindo Frozen Charlotte e No Name apenas nos últimos dois anos. Pouco mais de um terço do set desta noite foi retirado desses lançamentos recentes. [...]",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Jack White lançou sete LPs impressionantes desde 2012, incluindo Frozen Charlotte e No Name apenas nos últimos dois anos. Pouco mais de um terço do set desta noite foi retirado desses lançamentos recentes. [...].",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de XS Noize, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T13:08:22.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte XS Noize. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T13:08:22.000Z",
       "discoveredAt": "2026-08-27T14:34:02.462Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "06c5d2bc698d7a71f1be2a8e07417a66e88527b8a458734315ff9c355dcd9e50",
@@ -519,13 +596,20 @@
       "excerpt": "Ron Wood explains why fans no longer have to wait so long for new music – and confirms there’s more to come. Continue reading&hellip;",
       "titlePt": "Como o produtor Andrew Watt enfrentou Keith Richards",
       "excerptPt": "Ron Wood explica por que os fãs não precisam mais esperar tanto por novas músicas – e confirma que há mais por vir. Continuar lendo…",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Ron Wood explica por que os fãs não precisam mais esperar tanto por novas músicas – e confirma que há mais por vir. Continuar lendo….",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Ultimate Classic Rock, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T12:49:19.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Ultimate Classic Rock. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T12:49:19.000Z",
       "discoveredAt": "2026-08-27T14:34:00.999Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "3ee56c1d9585659683d5ad53aef5560eaeab4434117de6a64d951e7097e8f148",
@@ -537,13 +621,20 @@
       "excerpt": "En coulisses, la rentrée musicale se prépare et s’annonce déjà pleine de belles surprises pour le public. Hélène...",
       "titlePt": "Quais são os álbuns em francês mais esperados para o ano letivo de 2026?",
       "excerptPt": "Nos bastidores, a temporada musical está sendo preparada e já promete ser repleta de surpresas maravilhosas para o público. Helena...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Nos bastidores, a temporada musical está sendo preparada e já promete ser repleta de surpresas maravilhosas para o público. Helena.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de RTBF · Musique, na cobertura classificada como Europe / Belgium. O registro de origem traz a marca temporal 2026-08-27T12:35:14.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte RTBF · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T12:35:14.000Z",
       "discoveredAt": "2026-08-27T14:34:13.965Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "e7aed7a92f10cb4bf49a1e07708c7c3c382d278cd6f5fcb0cfe5054e3d5d0849",
@@ -555,13 +646,20 @@
       "excerpt": "This year's edition is set to take place in MediaCity from October 6 to 9 The post Tom A Smith, Gans, The Slow Readers Club lead second wave of artists for Manchester’s Beyond The Music 2026 line-up appeared first on NME .",
       "titlePt": "Tom A Smith, Gans e The Slow Readers Club lideram a segunda leva de artistas da formação Beyond The Music 2026 de Manchester",
       "excerptPt": "A edição deste ano acontecerá no MediaCity de 6 a 9 de outubro. A postagem Tom A Smith, Gans e The Slow Readers Club lideram a segunda leva de artistas da formação Beyond The Music 2026 de Manchester apareceu pela primeira vez na NME.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "A edição deste ano acontecerá no MediaCity de 6 a 9 de outubro. A postagem Tom A Smith, Gans e The Slow Readers Club lideram a segunda leva de artistas da formação Beyond The Music 2026 de Manchester apareceu pela primeira vez na NME.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NME, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T12:29:25.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NME. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T12:29:25.000Z",
       "discoveredAt": "2026-08-27T14:34:01.327Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "762360343ff92415b3a3c8e90c4d688782a935011f2ba75baf4401facf0f8d5b",
@@ -627,13 +725,20 @@
       "excerpt": "Après sa mort à 80 ans, son équipe vient de dévoiler l'ampleur des projets qu'elle préparait encore : musique inédite,...",
       "titlePt": "Dolly Parton preparou o resultado: projetos planejados para “décadas”",
       "excerptPt": "Após sua morte, aos 80 anos, sua equipe acaba de revelar a escala dos projetos que ela ainda preparava: novas músicas,...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Após sua morte, aos 80 anos, sua equipe acaba de revelar a escala dos projetos que ela ainda preparava: novas músicas,.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de RTBF · Musique, na cobertura classificada como Europe / Belgium. O registro de origem traz a marca temporal 2026-08-27T12:16:57.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte RTBF · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T12:16:57.000Z",
       "discoveredAt": "2026-08-27T14:34:13.965Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "6e5903254dbef2a817638ac3aa62ac3b721b4a0d094c4f5458469cffe21df87a",
@@ -645,13 +750,20 @@
       "excerpt": "“It's less about stepping away from music and more about making sure whatever comes next isn't built on the same unsustainable pace” The post Maribou State announce hiatus “to reset physically and mentally” appeared first on NME .",
       "titlePt": "Estado de Maribou anuncia hiato “para reiniciar física e mentalmente”",
       "excerptPt": "“Trata-se menos de se afastar da música e mais de garantir que o que vem a seguir não seja construído no mesmo ritmo insustentável” The post Maribou State anuncia hiato “para reiniciar física e mentalmente” apareceu pela primeira vez na NME.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "“Trata-se menos de se afastar da música e mais de garantir que o que vem a seguir não seja construído no mesmo ritmo insustentável” The post Maribou State anuncia hiato “para reiniciar física e mentalmente” apareceu pela primeira vez na NME.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NME, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T12:08:06.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NME. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T12:08:06.000Z",
       "discoveredAt": "2026-08-27T14:34:01.327Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "6c4724b2370390021bd3f0e5d1fa83432f6f1fccc2abaa325a0ccae4b0d84e56",
@@ -663,13 +775,20 @@
       "excerpt": "You may have heard about the uptick in CD sales in 2026, so here's why the format may be making a comeback, according to a vinyl industry expert. Continue reading&hellip;",
       "titlePt": "Por que os CDs podem retornar, de acordo com um especialista da indústria do vinil",
       "excerptPt": "Você deve ter ouvido falar do aumento nas vendas de CDs em 2026, então eis por que o formato pode estar de volta, de acordo com um especialista da indústria do vinil. Continuar lendo…",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Você deve ter ouvido falar do aumento nas vendas de CDs em 2026, então eis por que o formato pode estar de volta, de acordo com um especialista da indústria do vinil. Continuar lendo….",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Loudwire, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T12:04:42.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Loudwire. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T12:04:42.000Z",
       "discoveredAt": "2026-08-27T14:34:01.163Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "7350934e3bcdf6989d0b5dcecb081eb2e32e2cfdf6d4e6ac4a23335da589dc3d",
@@ -681,13 +800,20 @@
       "excerpt": "Ahead of the release of her 13th solo album, the fantastically titled Chakzilla, we rank the best of a sublime catalogue of funk, slow jams and tears-on-the-dancefloor disco Chaka Khan had harsh words for the “assholes” at her then record company, Warner Bros, who she felt under-promoted 1992’s The Woman I Am, her first album in four years. Listening to Love You All My Lifetime’s cocktail of funk and contemporary R&B, you wonder if she didn’t have a point. There’s no obvious reason why it wasn’t huge hit. Continue reading...",
       "titlePt": "Não há ninguém melhor: as 20 melhores músicas de Chaka Khan – classificadas!",
       "excerptPt": "Antes do lançamento de seu 13º álbum solo, o fantasticamente intitulado Chakzilla, classificamos o melhor de um catálogo sublime de funk, slow jams e discoteca de lágrimas na pista de dança. Chaka Khan tinha palavras duras para os “idiotas” de sua então gravadora, Warner Bros, que ela sentiu subpromovida em 1992, The Woman I Am, seu primeiro álbum em quatro anos. Ouvindo o coquetel de funk e R&B contemporâneo de Love You All My Lifetime, você se pergunta se ela não tinha razão. Não há nenhuma razão óbvia para que não tenha sido um grande sucesso. Continuar lendo...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Antes do lançamento de seu 13º álbum solo, o fantasticamente intitulado Chakzilla, classificamos o melhor de um catálogo sublime de funk, slow jams e discoteca de lágrimas na pista de dança. Chaka Khan tinha palavras duras para os “idiotas” de sua então gravadora, Warner Bros, que ela sentiu subpromovida em 1992, The Woman I Am, seu primeiro álbum em quatro anos. Ouvindo o coquetel de funk e R&B contemporâneo de Love You All My Lifetime, você se pergunta se ela não tinha razão. Não há nenhuma razão óbvia para que não tenha sido um grande sucesso. Continuar lendo.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de The Guardian · Music, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T12:00:13.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte The Guardian · Music. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T12:00:13.000Z",
       "discoveredAt": "2026-08-27T14:34:00.215Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "e6f4bfee57b43e08dc440e5c3c6acd5519099fe24b5fd2b3a8a0d3f65f075403",
@@ -699,13 +825,20 @@
       "excerpt": "We felt like the lucky ones when the garagey indie-rock duo Lucky Me landed on our radar with What’s It Gonna Take, all shimmering angst, infectiously angular guitars and vocals that sound like they have travelled through the deepest annals of indie to reach the modern age of malaise. Founded in Los Angeles by Connor Rivaldo and Kyle Briskin, who arrived from Arkansas and Georgia, the band already carries the road-bent voltage of a live act built for sweaty rooms and bad decisions. If you hit indie clubs when The Killers turned the dancefloor into a frenzy, What’s It Gonna Take will shake the static through your soul. There is a silver-lit stomp to the single, the kind of guitar-led momentum",
       "titlePt": "‘What’s It Gonna Take’ de Lucky Me devolve ao rock indie de garagem seus dentes maquiavélicos",
       "excerptPt": "Nós nos sentimos como os sortudos quando a dupla de indie-rock de garagem Lucky Me pousou em nosso radar com What’s It Gonna Take, toda angústia cintilante, guitarras contagiantemente angulares e vocais que soam como se tivessem viajado pelos anais mais profundos do indie para alcançar a era moderna do mal-estar. Fundada em Los Angeles por Connor Rivaldo e Kyle Briskin, que chegaram do Arkansas e da Geórgia, a banda já carrega a voltagem de um show ao vivo construído para salas suadas e decisões erradas. Se você foi a clubes indie quando The Killers transformou a pista de dança em um frenesi, What’s It Gonna Take vai agitar a estática em sua alma. Há uma batida prateada no single, o tipo de impulso conduzido pela guitarra",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Nós nos sentimos como os sortudos quando a dupla de indie-rock de garagem Lucky Me pousou em nosso radar com What’s It Gonna Take, toda angústia cintilante, guitarras contagiantemente angulares e vocais que soam como se tivessem viajado pelos anais mais profundos do indie para alcançar a era moderna do mal-estar. Fundada em Los Angeles por Connor Rivaldo e Kyle Briskin, que chegaram do Arkansas e da Geórgia, a banda já carrega a voltagem de um show ao vivo construído para salas suadas e decisões erradas. Se você foi a clubes indie quando The Killers transformou a pista de dança em um frenesi, What’s It Gonna Take vai agitar a estática em sua alma. Há uma batida prateada no single, o tipo de impulso conduzido pela guitarra.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de A&R Factory, na cobertura classificada como Global / UK. O registro de origem traz a marca temporal 2026-08-27T12:00:01.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte A&R Factory. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T12:00:01.000Z",
       "discoveredAt": "2026-08-27T14:34:26.123Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "ceee61a67318073024ede666a7e544e61153ac1412406b044ebbd6c26e4f7fa3",
@@ -717,13 +850,20 @@
       "excerpt": "The moment reflected a similar appearance on the same show in 2011 The post Peter Kay gatecrashes BBC Weather report: “I’m covering Chester!” appeared first on NME .",
       "titlePt": "Peter Kay invade o relatório meteorológico da BBC: “Estou cobrindo Chester!”",
       "excerptPt": "O momento refletiu uma aparição semelhante no mesmo programa em 2011. A postagem de Peter Kay invade a reportagem meteorológica da BBC: “Estou cobrindo Chester!” apareceu primeiro em NME.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "O momento refletiu uma aparição semelhante no mesmo programa em 2011. A postagem de Peter Kay invade a reportagem meteorológica da BBC: “Estou cobrindo Chester!” apareceu primeiro em NME.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NME, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T11:59:42.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NME. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T11:59:42.000Z",
       "discoveredAt": "2026-08-27T14:34:01.327Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "fb932e28859f8031a53bd523013f203332bfffa1b4bd79d66d28710e4681956c",
@@ -753,13 +893,20 @@
       "excerpt": "Des clubs londoniens au succès populaire Au début des années 80, Spandau Ballet s’impose rapidement parmi les figures...",
       "titlePt": "Spandau Ballet “True”: uma declaração de amor, um manifesto musical, uma revolução",
       "excerptPt": "Clubes londrinos com sucesso popular No início dos anos 1980, o Spandau Ballet rapidamente se estabeleceu entre os...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Clubes londrinos com sucesso popular No início dos anos 1980, o Spandau Ballet rapidamente se estabeleceu entre os.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de RTBF · Musique, na cobertura classificada como Europe / Belgium. O registro de origem traz a marca temporal 2026-08-27T11:45:00.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte RTBF · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T11:45:00.000Z",
       "discoveredAt": "2026-08-27T14:34:13.965Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "0b166eccb77ae2be71aa512d8678919074be202ac92ac595befceceb274eade9",
@@ -771,13 +918,20 @@
       "excerpt": "“All I need is 33 minutes and 10 seconds. That’s it” The post Reading & Leeds 2026: Jamie T asks to join line-up “at last minute” appeared first on NME .",
       "titlePt": "Reading & Leeds 2026: Jamie T pede para entrar no line-up “no último minuto”",
       "excerptPt": "\"Tudo que preciso são 33 minutos e 10 segundos. É isso\" O post Reading & Leeds 2026: Jamie T pede para entrar no line-up “no último minuto” apareceu primeiro na NME.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "\"Tudo que preciso são 33 minutos e 10 segundos. É isso\" O post Reading & Leeds 2026: Jamie T pede para entrar no line-up “no último minuto” apareceu primeiro na NME.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NME, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T11:36:24.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NME. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T11:36:24.000Z",
       "discoveredAt": "2026-08-27T14:34:01.327Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "4d2d15a183ddeb611aa63e414d4f10765a3e01b33abf83c80499e212a72934e6",
@@ -789,13 +943,20 @@
       "excerpt": "When the guitarist had a problem with his stage equipment, he went the wrong way about telling his boss. Continue reading&hellip;",
       "titlePt": "Como Bruce Kulick aprendeu o que não dizer a Gene Simmons",
       "excerptPt": "Quando o guitarrista teve um problema com seu equipamento de palco, ele errou ao contar ao seu chefe. Continuar lendo…",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Quando o guitarrista teve um problema com seu equipamento de palco, ele errou ao contar ao seu chefe. Continuar lendo….",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Ultimate Classic Rock, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T11:28:17.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Ultimate Classic Rock. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T11:28:17.000Z",
       "discoveredAt": "2026-08-27T14:34:00.999Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "44d1cd8146fa467ad451dd6a88d97f64f5b382b028e67a4add1001e5fa87a04c",
@@ -825,13 +986,20 @@
       "excerpt": "INFO LE FIGARO - En résidence mondiale du 12 septembre au 17 octobre, la star québécoise traversera l’Atlantique cette nuit à bord de son jet privé. Les fans sont dans les starting-blocks.",
       "titlePt": "Celine Dion chega a Paris nesta sexta-feira: já começou a contagem regressiva para seus primeiros shows",
       "excerptPt": "INFO LE FIGARO - Em residência mundial de 12 de setembro a 17 de outubro, a estrela de Quebec cruzará o Atlântico esta noite a bordo de seu jato particular. Os fãs estão nos blocos iniciais.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "INFO LE FIGARO - Em residência mundial de 12 de setembro a 17 de outubro, a estrela de Quebec cruzará o Atlântico esta noite a bordo de seu jato particular. Os fãs estão nos blocos iniciais.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Le Figaro · Musique, na cobertura classificada como Europe / France. O registro de origem traz a marca temporal 2026-08-27T11:04:00.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Le Figaro · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T11:04:00.000Z",
       "discoveredAt": "2026-08-27T14:34:07.333Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "48b10d3fe1b01c9ee1a10da4a4bfeb16936a5acea1a697f11bb58d9c0fbc8792",
@@ -861,13 +1029,20 @@
       "excerpt": "(Reprise) The crossover star’s introspective sixth album is full of memories of his mother, who died in 2025, bringing his dextrous guitar to songs rooted in tradition and yearning On the face of it, 2025 was a landmark year for Billy Strings. His fifth album, Highway Prayers , won him his third Grammy. The first bluegrass album in more than 22 years to debut at the top of the US album sales chart, it confirmed him as the genre’s biggest crossover star in decades. He was feted by everyone from Bob Dylan to Post Malone to Willie Nelson, the latter describing him as “the John Coltrane of bluegrass”, a pretty impressive soubriquet in anyone’s book. As the New York Times noted , he was now capab",
       "titlePt": "Crítica de Billy Strings: So Much for Goodbyes – canções de luto surpreendentes e emocionantes tiram o blues do bluegrass",
       "excerptPt": "(Reprise) O introspectivo sexto álbum da estrela do crossover está cheio de memórias de sua mãe, que morreu em 2025, trazendo sua guitarra hábil para canções enraizadas na tradição e no desejo. Aparentemente, 2025 foi um ano marcante para Billy Strings. Seu quinto álbum, Highway Prayers, lhe rendeu seu terceiro Grammy. O primeiro álbum de bluegrass em mais de 22 anos a estrear no topo da parada de vendas de álbuns dos EUA, confirmou-o como a maior estrela de crossover do gênero em décadas. Ele foi festejado por todos, de Bob Dylan a Post Malone e Willie Nelson, este último descrevendo-o como “o John Coltrane do bluegrass”, um apelido bastante impressionante em qualquer livro. Como observou o New York Times, ele agora era capaz",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "(Reprise) O introspectivo sexto álbum da estrela do crossover está cheio de memórias de sua mãe, que morreu em 2025, trazendo sua guitarra hábil para canções enraizadas na tradição e no desejo. Aparentemente, 2025 foi um ano marcante para Billy Strings. Seu quinto álbum, Highway Prayers, lhe rendeu seu terceiro Grammy. O primeiro álbum de bluegrass em mais de 22 anos a estrear no topo da parada de vendas de álbuns dos EUA, confirmou-o como a maior estrela de crossover do gênero em décadas. Ele foi festejado por todos, de Bob Dylan a Post Malone e Willie Nelson, este último descrevendo-o como “o John Coltrane do bluegrass”, um apelido bastante impressionante em qualquer livro. Como observou o New York Times, ele agora era capaz.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de The Guardian · Music, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T11:00:12.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte The Guardian · Music. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T11:00:12.000Z",
       "discoveredAt": "2026-08-27T14:34:00.215Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "df33f802918ce118c1471fad8e7f7e8a83b375384252cb969d06bf1e37ebdb91",
@@ -879,13 +1054,20 @@
       "excerpt": "NPR critics remember some of their favorite Dolly performances — including a duet with Kermit the Frog and the twinkle in Dolly's eye singing with Linda Ronstadt and Emmylou Harris.",
       "titlePt": "Dolly Parton continha multidões. Estamos relembrando essas performances amadas",
       "excerptPt": "Os críticos da NPR se lembram de algumas de suas performances favoritas de Dolly - incluindo um dueto com Kermit the Frog e o brilho nos olhos de Dolly cantando com Linda Ronstadt e Emmylou Harris.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Os críticos da NPR se lembram de algumas de suas performances favoritas de Dolly - incluindo um dueto com Kermit the Frog e o brilho nos olhos de Dolly cantando com Linda Ronstadt e Emmylou Harris.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NPR Music, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T11:00:00.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NPR Music. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T11:00:00.000Z",
       "discoveredAt": "2026-08-27T14:34:00.162Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "1e999ccb8415862106abe998e6fa0fb88f42d9e0349c54f8558f69596b1ed2f2",
@@ -897,13 +1079,20 @@
       "excerpt": "Trent Reznor's 1994 classic album in focus. A live vinyl album playback and a discussion.",
       "titlePt": "The Downward Spiral do Nine Inch Nails é o evento de audição de álbuns de vinil de setembro no The Big Romance",
       "excerptPt": "Álbum clássico de Trent Reznor de 1994 em foco. Uma reprodução de álbum de vinil ao vivo e uma discussão.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Álbum clássico de Trent Reznor de 1994 em foco. Uma reprodução de álbum de vinil ao vivo e uma discussão.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Nialler9, na cobertura classificada como Europe / Ireland. O registro de origem traz a marca temporal 2026-08-27T10:58:37.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Nialler9. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T10:58:37.000Z",
       "discoveredAt": "2026-08-27T14:34:02.662Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "fd200c6d1359daf07d404a857daa74bd57fe9cc03127b61399e3a427aa787cd4",
@@ -915,13 +1104,20 @@
       "excerpt": "The Smirnoff Stage marks its third year at Stradbally with a female-heavy Saturday lineup, a new Residency winner…",
       "titlePt": "Smirnoff Sound Nation retorna ao Electric Picnic neste fim de semana, com uma programação de sábado voltada para mulheres e inclusão em primeiro plano",
       "excerptPt": "O Smirnoff Stage marca seu terceiro ano em Stradbally com uma programação de sábado repleta de mulheres, uma nova vencedora da Residência…",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "O Smirnoff Stage marca seu terceiro ano em Stradbally com uma programação de sábado repleta de mulheres, uma nova vencedora da Residência….",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Nialler9, na cobertura classificada como Europe / Ireland. O registro de origem traz a marca temporal 2026-08-27T10:53:39.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Nialler9. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T10:53:39.000Z",
       "discoveredAt": "2026-08-27T14:34:02.662Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "8585e5d20b0d658375f96a64ad3372c1ca66c9ac67c19b30db71211b53c30071",
@@ -933,13 +1129,20 @@
       "excerpt": "He also paid tribute to Dolly Parton, playing her hit ‘I Will Always Love You’ over the speakers The post Watch Harry Styles kick off landmark 30-night residency at New York’s Madison Square Garden appeared first on NME .",
       "titlePt": "Assista Harry Styles iniciar uma residência histórica de 30 noites no Madison Square Garden de Nova York",
       "excerptPt": "Ele também prestou homenagem a Dolly Parton, tocando seu hit ‘I Will Always Love You’ nos alto-falantes. A postagem Veja Harry Styles iniciar a residência histórica de 30 noites no Madison Square Garden de Nova York apareceu pela primeira vez na NME.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Ele também prestou homenagem a Dolly Parton, tocando seu hit ‘I Will Always Love You’ nos alto-falantes. A postagem Veja Harry Styles iniciar a residência histórica de 30 noites no Madison Square Garden de Nova York apareceu pela primeira vez na NME.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NME, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T10:43:32.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NME. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T10:43:32.000Z",
       "discoveredAt": "2026-08-27T14:34:01.327Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "084c81260a3d714f12d237be7c6e3398157570533855478191cbd482f9422397",
@@ -951,13 +1154,20 @@
       "excerpt": "“I Deliver” is an R&B/soul song by singer-songwriter Cardell. It’s not a new release but still worth giving a listen.",
       "titlePt": "Ouça “I Deliver” de Cardell",
       "excerptPt": "“I Deliver” é uma música R&B/soul do cantor e compositor Cardell. Não é um lançamento novo, mas ainda assim vale a pena ouvir.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "“I Deliver” é uma música R&B/soul do cantor e compositor Cardell. Não é um lançamento novo, mas ainda assim vale a pena ouvir.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Aipate, na cobertura classificada como Africa / Kenya. O registro de origem traz a marca temporal 2026-08-27T10:42:54.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Aipate. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T10:42:54.000Z",
       "discoveredAt": "2026-08-27T14:34:02.998Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "9c650454654098e1773e3e617f2198567435f051d42bef984371fce29b3d208a",
@@ -987,13 +1197,20 @@
       "excerpt": "The free Bogotá festival will also feature Apocalyptica, Bandalos Chinos, Los Bunkers, Algiers, Porter, and more. Colombia’s Rock al Parque Reveals 30th Anniversary Lineup Featuring Editors, Ministry, Mon Laferte Pedro Camacho",
       "titlePt": "Rock al Parque da Colômbia revela programação do 30º aniversário com editores, Ministério, Mon Laferte",
       "excerptPt": "O festival gratuito de Bogotá também contará com Apocalyptica, Bandalos Chinos, Los Bunkers, Algiers, Porter e muito mais. Rock al Parque da Colômbia revela line-up do 30º aniversário com os editores, Ministério, Mon Laferte Pedro Camacho",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "O festival gratuito de Bogotá também contará com Apocalyptica, Bandalos Chinos, Los Bunkers, Algiers, Porter e muito mais. Rock al Parque da Colômbia revela line-up do 30º aniversário com os editores, Ministério, Mon Laferte Pedro Camacho.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Consequence, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T10:04:19.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Consequence. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T10:04:19.000Z",
       "discoveredAt": "2026-08-27T14:34:01.696Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "c410165e5d930d986c2bab19beb0a8793247c4f577c4952e2f226a556f419ab3",
@@ -1005,13 +1222,20 @@
       "excerpt": "L’AMOUR OUF CHEZ LES ARTISTES (5/6) - Tombé amoureux de la femme de son meilleur ami, George Harrison, le guitariste lui a dédié Layla, sa composition la plus puissante. Une histoire qui l’entraînera dans des excès pendant quatre ans.",
       "titlePt": "Amor impossível, cartas inflamadas, ameaças e drogas: Eric Clapton e Pattie Boyd, a história de uma obra-prima para a eternidade",
       "excerptPt": "UAU AMOR ENTRE ARTISTAS (5/6) - Tendo se apaixonado pela esposa de seu melhor amigo, George Harrison, o guitarrista dedicou a ela Layla, sua composição mais poderosa. Uma história que o levará a excessos durante quatro anos.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "UAU AMOR ENTRE ARTISTAS (5/6) - Tendo se apaixonado pela esposa de seu melhor amigo, George Harrison, o guitarrista dedicou a ela Layla, sua composição mais poderosa. Uma história que o levará a excessos durante quatro anos.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Le Figaro · Musique, na cobertura classificada como Europe / France. O registro de origem traz a marca temporal 2026-08-27T10:00:16.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Le Figaro · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T10:00:16.000Z",
       "discoveredAt": "2026-08-27T14:34:07.333Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "47f2f27bbe3646e5fe81a15f822c7424ee7218fc5098e786cb90ba6433ad82e3",
@@ -1023,13 +1247,20 @@
       "excerpt": "Onze ans après leur tournée d’adieu, Geddy Lee et Alex Lifeson ressuscitent Rush, au nom de la mémoire de leur défunt batteur, de leur inextinguible amitié et du plaisir de jouer de la musique vraiment compliquée. Entretien privilégié avec les rois du prog rock canadien.",
       "titlePt": "Entrevista com Geddy Lee e Alex Lifeson | Com Rush, a amizade é mais forte que a morte",
       "excerptPt": "Onze anos depois da sua digressão de despedida, Geddy Lee e Alex Lifeson ressuscitam o Rush, em nome da memória do seu falecido baterista, da sua amizade inextinguível e do prazer de tocar música verdadeiramente complicada. Entrevista privilegiada com os reis do rock progressivo canadense.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Onze anos depois da sua digressão de despedida, Geddy Lee e Alex Lifeson ressuscitam o Rush, em nome da memória do seu falecido baterista, da sua amizade inextinguível e do prazer de tocar música verdadeiramente complicada. Entrevista privilegiada com os reis do rock progressivo canadense.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de La Presse · Musique, na cobertura classificada como Canada / Québec. O registro de origem traz a marca temporal 2026-08-27T10:00:00.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte La Presse · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T10:00:00.000Z",
       "discoveredAt": "2026-08-27T14:34:07.070Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "f6369d5f5753cc57910cc31ff496282c1f6956843d5040f8761dc62ec3f6c2b1",
@@ -1041,13 +1272,20 @@
       "excerpt": "Compositrice surdouée, Dolly Parton n’a cessé de célébrer ses origines rurales et ses combats, sans jamais accepter de se voir coller une « étiquette ». Elle est morte le 25 août 2026 à l’âge de 80 ans.",
       "titlePt": "Dolly Parton, ícone da América fraturada",
       "excerptPt": "Compositora talentosa, Dolly Parton nunca deixou de celebrar as suas origens rurais e as suas lutas, sem nunca aceitar receber um “rótulo”. Ela morreu em 25 de agosto de 2026, aos 80 anos.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Compositora talentosa, Dolly Parton nunca deixou de celebrar as suas origens rurais e as suas lutas, sem nunca aceitar receber um “rótulo”. Ela morreu em 25 de agosto de 2026, aos 80 anos.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de La Croix · Musique, na cobertura classificada como Europe / France. O registro de origem traz a marca temporal 2026-08-27T09:41:40.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte La Croix · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T09:41:40.000Z",
       "discoveredAt": "2026-08-27T14:34:07.923Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "c0f189cbc92bcf49f1aca89011725d03d093ca5abfb358ffa1307cc8ad180868",
@@ -1059,13 +1297,20 @@
       "excerpt": "King Crimson mastermind also shares how he thinks people should remember his late friend. Continue reading&hellip;",
       "titlePt": "Quando David Bowie disse a Robert Fripp para tocar como Ritchie Blackmore",
       "excerptPt": "O mentor do King Crimson também compartilha como ele acha que as pessoas deveriam se lembrar de seu falecido amigo. Continuar lendo…",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "O mentor do King Crimson também compartilha como ele acha que as pessoas deveriam se lembrar de seu falecido amigo. Continuar lendo….",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Ultimate Classic Rock, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T09:32:34.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Ultimate Classic Rock. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T09:32:34.000Z",
       "discoveredAt": "2026-08-27T14:34:00.999Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "91e1256b5373efd01edacc827fbbad2723420791809b058812b13488738d9391",
@@ -1077,13 +1322,20 @@
       "excerpt": "À l'origine, c'est John Lennon qui a signé l'ébauche de \"Day Tripper\" sous la forme d'une chanson folk. Un mois plus...",
       "titlePt": "Os Beatles em estúdio: ouvimos Lennon e McCartney rindo enquanto compunham “Day Tripper”",
       "excerptPt": "Originalmente, foi John Lennon quem escreveu o rascunho de \"Day Tripper\" na forma de uma canção folclórica. Mais um mês...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Originalmente, foi John Lennon quem escreveu o rascunho de \"Day Tripper\" na forma de uma canção folclórica. Mais um mês.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de RTBF · Musique, na cobertura classificada como Europe / Belgium. O registro de origem traz a marca temporal 2026-08-27T09:32:00.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte RTBF · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T09:32:00.000Z",
       "discoveredAt": "2026-08-27T14:34:13.966Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "383908fb38f59c3e71709450f4484db9042b7e6a04b4a1d5d94cea800031f6b1",
@@ -1095,13 +1347,20 @@
       "excerpt": "Perth artist EDIE released her Garden of Edie EP in June. Recently, she revealed the music video for “Burning”, which is one of the EP’s standout tracks. Stephanie Senior was enlisted to film the cinematic music video. The gothic-inspired visuals help augment the song’s moody aesthetic. “Burning” captures the realization that a (toxic) relationship has run […]",
       "titlePt": "EDIE lança recursos visuais cinematográficos para sua música “Burning”",
       "excerptPt": "A artista de Perth, EDIE, lançou seu EP Garden of Edie em junho. Recentemente, ela revelou o videoclipe de “Burning”, que é uma das faixas de destaque do EP. Stephanie Senior foi convocada para filmar o videoclipe cinematográfico. Os visuais de inspiração gótica ajudam a aumentar a estética temperamental da música. “Burning” capta a percepção de que um relacionamento (tóxico) se desenvolveu [...]",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "A artista de Perth, EDIE, lançou seu EP Garden of Edie em junho. Recentemente, ela revelou o videoclipe de “Burning”, que é uma das faixas de destaque do EP. Stephanie Senior foi convocada para filmar o videoclipe cinematográfico. Os visuais de inspiração gótica ajudam a aumentar a estética temperamental da música. “Burning” capta a percepção de que um relacionamento (tóxico) se desenvolveu [...].",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Aipate, na cobertura classificada como Africa / Kenya. O registro de origem traz a marca temporal 2026-08-27T09:25:28.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Aipate. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T09:25:28.000Z",
       "discoveredAt": "2026-08-27T14:34:02.998Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "2e3ed5ff7c589f3f274558cba7a3799c7c403a811d5f92a05f38acb7bedf5a6f",
@@ -1113,13 +1372,20 @@
       "excerpt": "Avant même d’enregistrer sous son propre nom, Steve Winwood avait déjà accumulé plusieurs carrières. Adolescent, il...",
       "titlePt": "Steve Winwood: de Jimi Hendrix a Eric Clapton, uma carreira construída através de colaborações",
       "excerptPt": "Antes mesmo de gravar com seu próprio nome, Steve Winwood já havia acumulado diversas carreiras. Quando adolescente, ele...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Antes mesmo de gravar com seu próprio nome, Steve Winwood já havia acumulado diversas carreiras. Quando adolescente, ele.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de RTBF · Musique, na cobertura classificada como Europe / Belgium. O registro de origem traz a marca temporal 2026-08-27T09:22:03.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte RTBF · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T09:22:03.000Z",
       "discoveredAt": "2026-08-27T14:34:13.966Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "eb7f62ee07d52c11ff17da4e5405218eeb43709234737d7794e4158bda2551e0",
@@ -1167,13 +1433,20 @@
       "excerpt": "Ahead of playing Rodrigo’s Daisy Chain Fields, artists explain why female-first festivals are due for a resurgence When I first saw the poster for Olivia Rodrigo ’s inaugural Daisy Chain Fields festival in June, I assumed it was AI. Chappell Roan, Doechii, Mitski, the Breeders, Bikini Kill and Garbage, all arranged in a neat line – and this was before I got to the words “special guests”. Karen O, Sarah McLachlan. And, to top it all off, Stevie Nicks? No. I saw the post confirmed on Rodrigo’s Instagram, and thought: how? Continue reading...",
       "titlePt": "‘Estamos em um ponto de crise’: Chappell Roan, Shirley Manson e Eli tocando no festival feminino de Olivia Rodrigo",
       "excerptPt": "Antes de tocar no Daisy Chain Fields de Rodrigo, os artistas explicam por que os primeiros festivais femininos estão prestes a ressurgir. Quando vi pela primeira vez o pôster do festival inaugural de Olivia Rodrigo, Daisy Chain Fields, em junho, presumi que fosse IA. Chappell Roan, Doechii, Mitski, the Breeders, Bikini Kill e Garbage, todos organizados em uma linha organizada – e isso foi antes de eu chegar às palavras “convidados especiais”. Karen O, Sarah McLachlan. E, ainda por cima, Stevie Nicks? Não, vi o post confirmado no Instagram do Rodrigo e pensei: como? Continuar lendo...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Antes de tocar no Daisy Chain Fields de Rodrigo, os artistas explicam por que os primeiros festivais femininos estão prestes a ressurgir. Quando vi pela primeira vez o pôster do festival inaugural de Olivia Rodrigo, Daisy Chain Fields, em junho, presumi que fosse IA. Chappell Roan, Doechii, Mitski, the Breeders, Bikini Kill e Garbage, todos organizados em uma linha organizada – e isso foi antes de eu chegar às palavras “convidados especiais”. Karen O, Sarah McLachlan. E, ainda por cima, Stevie Nicks? Não, vi o post confirmado no Instagram do Rodrigo e pensei: como? Continuar lendo.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de The Guardian · Music, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-27T09:00:10.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte The Guardian · Music. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T09:00:10.000Z",
       "discoveredAt": "2026-08-27T14:34:00.215Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "46ef60e7b0509029d3a23816ecd89727e4918f1c25a7383984f53c39e5f95a1a",
@@ -1185,13 +1458,20 @@
       "excerpt": "E.U. is an OG of go-go music, a heavily syncopated funk that features a slow and steady groove. Naturally, we celebrate 50 years of the native D.C. music with an office party.",
       "titlePt": "UE: Concerto Tiny Desk",
       "excerptPt": "UE. é um OG de go-go music, um funk fortemente sincopado que apresenta um groove lento e constante. Naturalmente, comemoramos 50 anos da música nativa de D.C. com uma festa no escritório.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "UE. é um OG de go-go music, um funk fortemente sincopado que apresenta um groove lento e constante. Naturalmente, comemoramos 50 anos da música nativa de D.C. com uma festa no escritório.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NPR Music, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T09:00:00.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NPR Music. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T09:00:00.000Z",
       "discoveredAt": "2026-08-27T14:34:00.162Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "50c8787d911b3c04854b78a56924b90de3520eb15f072e166f12638f33078162",
@@ -1257,13 +1537,20 @@
       "excerpt": "Can you hear a touch of classic Kiss in “Under the Gun,” taken from his self-titled album with Dan Reed? Continue reading&hellip;",
       "titlePt": "Assista Tommy Thayer do Kiss no vídeo de estreia da nova banda Shogun Mojo",
       "excerptPt": "Você consegue ouvir um toque do clássico Kiss em “Under the Gun”, tirado de seu álbum autointitulado com Dan Reed? Continuar lendo…",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Você consegue ouvir um toque do clássico Kiss em “Under the Gun”, tirado de seu álbum autointitulado com Dan Reed? Continuar lendo….",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Ultimate Classic Rock, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-27T08:10:23.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Ultimate Classic Rock. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T08:10:23.000Z",
       "discoveredAt": "2026-08-27T14:34:00.999Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "2c7aa55b71125a1077c7f38f59be9159ac78abf668bfb6b379c1ed8a67cd336e",
@@ -1275,13 +1562,20 @@
       "excerpt": "Nigerian newcomer Vizco remains on an upward trajectory. Every new song from him is getting really well received. Vizco’s most recent release is called “WUFL”. The song title is an acronym for ‘we up for life’. It’s simply an anthem for staying high-spirited and inspired no matter the situation. I love the production’s blend of […]",
       "titlePt": "Artista nigeriano Vizco apresenta “WUFL”: ouça",
       "excerptPt": "O recém-chegado nigeriano Vizco continua numa trajetória ascendente. Cada nova música dele está sendo muito bem recebida. O lançamento mais recente da Vizco se chama “WUFL”. O título da música é um acrônimo para ‘we up for life’. É simplesmente um hino para permanecer animado e inspirado, não importa a situação. Adoro a mistura de produção de [...]",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "O recém-chegado nigeriano Vizco continua numa trajetória ascendente. Cada nova música dele está sendo muito bem recebida. O lançamento mais recente da Vizco se chama “WUFL”. O título da música é um acrônimo para ‘we up for life’. É simplesmente um hino para permanecer animado e inspirado, não importa a situação. Adoro a mistura de produção de [...].",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Aipate, na cobertura classificada como Africa / Kenya. O registro de origem traz a marca temporal 2026-08-27T08:03:23.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Aipate. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T08:03:23.000Z",
       "discoveredAt": "2026-08-27T14:34:02.998Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "e6b5a589213edd071bc3c9e104d59a97c417edda5dac2de0915c21756e56e8c6",
@@ -1293,13 +1587,20 @@
       "excerpt": "Dans son atelier situé au cœur de Liège, Renzo construit des violons, des violoncelles, des guitares, des luths et bien...",
       "titlePt": "Luthier, a profissão mágica de Renzo",
       "excerptPt": "Em sua oficina localizada no coração de Liège, Renzo constrói violinos, violoncelos, violões, alaúdes e muito mais...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Em sua oficina localizada no coração de Liège, Renzo constrói violinos, violoncelos, violões, alaúdes e muito mais.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de RTBF · Musique, na cobertura classificada como Europe / Belgium. O registro de origem traz a marca temporal 2026-08-27T07:33:19.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte RTBF · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T07:33:19.000Z",
       "discoveredAt": "2026-08-27T14:34:13.966Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "c7a0046d11f017a95edbd521c9ca82552bd82792cb501d27110869a23b1cbc9c",
@@ -1329,13 +1630,20 @@
       "excerpt": "Patrick Sampson‘s “Teal” is a really stirring folk pop piece. The new song serves as the third single taken from the US singer-songwriter and guitarist’s upcoming album. Sampson created it alongside award-winning producer Robert Cutarella, a longtime friend of his. Interestingly, this marks the first time the two have written a song together. “Teal” is […]",
       "titlePt": "Ouça a nova música de Patrick Sampson, “Teal”",
       "excerptPt": "“Teal” de Patrick Sampson é uma peça folk pop realmente emocionante. A nova música serve como o terceiro single do próximo álbum do cantor, compositor e guitarrista norte-americano. Sampson o criou ao lado do premiado produtor Robert Cutarella, um amigo de longa data. Curiosamente, esta é a primeira vez que os dois escrevem uma música juntos. “Teal” é […]",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "“Teal” de Patrick Sampson é uma peça folk pop realmente emocionante. A nova música serve como o terceiro single do próximo álbum do cantor, compositor e guitarrista norte-americano. Sampson o criou ao lado do premiado produtor Robert Cutarella, um amigo de longa data. Curiosamente, esta é a primeira vez que os dois escrevem uma música juntos. “Teal” é […].",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de Aipate, na cobertura classificada como Africa / Kenya. O registro de origem traz a marca temporal 2026-08-27T07:01:48.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte Aipate. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T07:01:48.000Z",
       "discoveredAt": "2026-08-27T14:34:02.998Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "846361e01b9c63d7b1e7f3e9a25b380d6d3a4a0d3f8f3d9dec8de0a81f800ff7",
@@ -1383,13 +1691,20 @@
       "excerpt": "Avec Future Nostalgia, Dua Lipa a frappé extrêmement juste. Sorti en pleine pandémie, son deuxième album est arrivé au...",
       "titlePt": "Por que não deveríamos mais falar sobre fracassos na música",
       "excerptPt": "Com Future Nostalgia, Dua Lipa acertou em cheio. Lançado em plena pandemia, seu segundo álbum chegou em...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Com Future Nostalgia, Dua Lipa acertou em cheio. Lançado em plena pandemia, seu segundo álbum chegou em.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de RTBF · Musique, na cobertura classificada como Europe / Belgium. O registro de origem traz a marca temporal 2026-08-27T05:30:00.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte RTBF · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T05:30:00.000Z",
       "discoveredAt": "2026-08-27T14:34:13.966Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "a8b0c0991a624436fc934028e759c1ddc3ab59d8491220862f0ac8f4f68e5e87",
@@ -1437,13 +1752,20 @@
       "excerpt": "Here are hints, groups and answers for 'Connections' #1173 The post ‘Connections’ answers and hints for today, August 27 appeared first on NME .",
       "titlePt": "Respostas e dicas de ‘Conexões’ para hoje, 27 de agosto",
       "excerptPt": "Aqui estão dicas, grupos e respostas para 'Conexões' #1173 As respostas e dicas do post 'Conexões' para hoje, 27 de agosto, apareceram pela primeira vez na NME.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Aqui estão dicas, grupos e respostas para 'Conexões' #1173 As respostas e dicas do post 'Conexões' para hoje, 27 de agosto, apareceram pela primeira vez na NME.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de NME, na cobertura classificada como Europe / UK. O registro de origem traz a marca temporal 2026-08-26T23:00:27.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte NME. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-26T23:00:27.000Z",
       "discoveredAt": "2026-08-27T01:48:18.201Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "9e54b24f7941965a37531a25ef0156d8f06886a0e057dd0e258c0bf13555940d",
@@ -1491,13 +1813,20 @@
       "excerpt": "Nintendo is set to raise the Switch 2 price on Tuesday, September 1st. Nintendo Switch 2 Price Jumps to $500 Next Week — Buy Now to Save $50 Eddie Fu",
       "titlePt": "O preço do Nintendo Switch 2 sobe para US$ 500 na próxima semana – compre agora para economizar US$ 50",
       "excerptPt": "A Nintendo deve aumentar o preço do Switch 2 na terça-feira, 1º de setembro. O preço do Nintendo Switch 2 sobe para US$ 500 na próxima semana – Compre agora para economizar US$ 50 Eddie Fu",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "A Nintendo deve aumentar o preço do Switch 2 na terça-feira, 1º de setembro. O preço do Nintendo Switch 2 sobe para US$ 500 na próxima semana – Compre agora para economizar US$ 50 Eddie Fu.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de a fonte original, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-26T22:15:20.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte a fonte original. A GUIROPA continuará acompanhando atualizações verificáveis desta pauta pelo fluxo de fontes conectado."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-26T22:15:20.000Z",
       "discoveredAt": "2026-08-26T23:55:29.033Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "46c6cbb8a48816fb6c958d81adcff9c3407ff7410126dc16ec3b0a80a0fbd63d",
@@ -1509,13 +1838,20 @@
       "excerpt": "The nine-episode competition turns Wonka's chocolate factory into a reality-TV obstacle course with a \"life-changing prize.\" Netflix’s Willy Wonka Reality Show Replaces Kids with Adults and Gene Wilder with AI Alex Krinsky",
       "titlePt": "O reality show Willy Wonka da Netflix substitui crianças por adultos e Gene Wilder por IA",
       "excerptPt": "A competição de nove episódios transforma a fábrica de chocolate de Wonka em uma pista de obstáculos de reality shows com um “prêmio de mudança de vida”. O reality show Willy Wonka da Netflix substitui crianças por adultos e Gene Wilder pela IA Alex Krinsky",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "A competição de nove episódios transforma a fábrica de chocolate de Wonka em uma pista de obstáculos de reality shows com um “prêmio de mudança de vida”. O reality show Willy Wonka da Netflix substitui crianças por adultos e Gene Wilder pela IA Alex Krinsky.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de a fonte original, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-26T21:58:11.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte a fonte original. A GUIROPA continuará acompanhando atualizações verificáveis desta pauta pelo fluxo de fontes conectado."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-26T21:58:11.000Z",
       "discoveredAt": "2026-08-26T23:55:29.033Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "18331fd78a191d49665a03e676d5d8852edeeef181cfc3aaf572aed9bbddefe5",
@@ -1545,13 +1881,20 @@
       "excerpt": "The beauty pageant contestant performed her band Decessus' original song \"The Hollow Descent.\" Miss Chile Ignacia Fernández Delivers Crushing Death Metal Performance at Miss World Competition Spencer Kaufman",
       "titlePt": "Miss Chile Ignacia Fernández apresenta performance esmagadora de death metal na competição Miss Mundo",
       "excerptPt": "A concorrente do concurso de beleza cantou a música original de sua banda Decessus, “The Hollow Descent”. Miss Chile Ignacia Fernández apresenta performance esmagadora de death metal na competição Miss Mundo Spencer Kaufman",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "A concorrente do concurso de beleza cantou a música original de sua banda Decessus, “The Hollow Descent”. Miss Chile Ignacia Fernández apresenta performance esmagadora de death metal na competição Miss Mundo Spencer Kaufman.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de a fonte original, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-26T21:37:41.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte a fonte original. A GUIROPA continuará acompanhando atualizações verificáveis desta pauta pelo fluxo de fontes conectado."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-26T21:37:41.000Z",
       "discoveredAt": "2026-08-26T23:55:29.034Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "9a6b9dd9fdf79734cb3e45ae2ff3a090de756e8bbe20cf1cfc1cb356f4039930",
@@ -1563,13 +1906,20 @@
       "excerpt": "Rockers are paying tribute to late actor Tim Curry on social media following his death at the age of 80. He died on Aug. 25. Continue reading&hellip;",
       "titlePt": "Rockers prestam homenagem ao falecido ator Tim Curry",
       "excerptPt": "Os roqueiros estão prestando homenagem ao falecido ator Tim Curry nas redes sociais após sua morte aos 80 anos. Ele morreu em 25 de agosto.",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Os roqueiros estão prestando homenagem ao falecido ator Tim Curry nas redes sociais após sua morte aos 80 anos. Ele morreu em 25 de agosto.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de a fonte original, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-26T21:37:13.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte a fonte original. A GUIROPA continuará acompanhando atualizações verificáveis desta pauta pelo fluxo de fontes conectado."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-26T21:37:13.000Z",
       "discoveredAt": "2026-08-26T23:55:28.380Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "669279ef62368802c527d83b70f1518b7e7e74d498bbdacef7e057a0efa50fab",
@@ -1581,13 +1931,20 @@
       "excerpt": "The $149.98 four-LP set includes additional B-sides, a 60-page booklet, and two collectible art prints",
       "titlePt": "Beyoncé revela detalhes da edição Deluxe do 20º aniversário do B’Day",
       "excerptPt": "O conjunto de quatro LPs de US$ 149,98 inclui lados B adicionais, um livreto de 60 páginas e duas impressões de arte colecionáveis",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "O conjunto de quatro LPs de US$ 149,98 inclui lados B adicionais, um livreto de 60 páginas e duas impressões de arte colecionáveis.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de a fonte original, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-26T21:20:57.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte a fonte original. A GUIROPA continuará acompanhando atualizações verificáveis desta pauta pelo fluxo de fontes conectado."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-26T21:20:57.000Z",
       "discoveredAt": "2026-08-26T23:55:28.653Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "2b5987db30e9bde0695faae92bfcba8e006796c31dc9c8b8e5b57c0b9b27e15f",
@@ -1599,13 +1956,20 @@
       "excerpt": "The ruling also pointed to Elvis impersonators, cosplay, and swimming as examples of performances that could be swept up by the law's vague language. Federal Judge Cites Dolly Parton While Striking Down Texas Drag Ban Alex Krinsky",
       "titlePt": "Juiz federal cita Dolly Parton ao derrubar proibição de drag no Texas",
       "excerptPt": "A decisão também apontou imitadores de Elvis, cosplay e natação como exemplos de performances que poderiam ser eliminadas pela linguagem vaga da lei. Juiz federal cita Dolly Parton ao derrubar a proibição de drag do Texas, Alex Krinsky",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "A decisão também apontou imitadores de Elvis, cosplay e natação como exemplos de performances que poderiam ser eliminadas pela linguagem vaga da lei. Juiz federal cita Dolly Parton ao derrubar a proibição de drag do Texas, Alex Krinsky.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de a fonte original, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-26T20:54:22.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte a fonte original. A GUIROPA continuará acompanhando atualizações verificáveis desta pauta pelo fluxo de fontes conectado."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-26T20:54:22.000Z",
       "discoveredAt": "2026-08-26T23:55:29.034Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "29fba0c11811a4a9b01929ae80cbe74f310f6b73a49c9d0f20e2cddd6bcec39f",
@@ -1617,13 +1981,20 @@
       "excerpt": "The instruments are the first signature guitar and bass for IV and III, respectively. Sleep Token Partner with Jackson and Charvel for Signature Guitar and Bass Langdon Hickman",
       "titlePt": "Sleep Token faz parceria com Jackson e Charvel para guitarra e baixo exclusivos",
       "excerptPt": "Os instrumentos são a primeira guitarra e baixo exclusivos do IV e III, respectivamente. Sleep Token faz parceria com Jackson e Charvel para guitarra e baixo exclusivos Langdon Hickman",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Os instrumentos são a primeira guitarra e baixo exclusivos do IV e III, respectivamente. Sleep Token faz parceria com Jackson e Charvel para guitarra e baixo exclusivos Langdon Hickman.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de a fonte original, na cobertura classificada como USA. O registro de origem traz a marca temporal 2026-08-26T20:36:32.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte a fonte original. A GUIROPA continuará acompanhando atualizações verificáveis desta pauta pelo fluxo de fontes conectado."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-26T20:36:32.000Z",
       "discoveredAt": "2026-08-26T23:55:29.034Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "65c18a7d40b02feb4c13eda6f7382c312cf4714ecead36b4d7b8ef97c1e1b9c7",
@@ -1653,13 +2024,20 @@
       "excerpt": "Coup de coeur pour Coup Dur donc, trio découvert sur scène au festival LaSemo à Enghien. Nous nous sommes retrouvés...",
       "titlePt": "Geração 21: Golpe Duro",
       "excerptPt": "Apaixonámo-nos por Coup Dur, um trio descoberto no palco do festival LaSemo em Enghien. Nós nos encontramos...",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
+      "bodyPt": [
+        "Apaixonámo-nos por Coup Dur, um trio descoberto no palco do festival LaSemo em Enghien. Nós nos encontramos.",
+        "A atualização foi identificada pelo News Tunnel da GUIROPA a partir de RTBF · Musique, na cobertura classificada como Europe / Belgium. O registro de origem traz a marca temporal 2026-08-26T20:05:28.000Z.",
+        "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte.",
+        "A pauta permanece conectada à fonte RTBF · Musique. O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-27T21:54:10.220396+00:00",
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-26T20:05:28.000Z",
       "discoveredAt": "2026-08-27T14:34:13.966Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "source-structured-pt",
+      "editorialModel": "zero-cost-factual-envelope-v2"
     },
     {
       "id": "6aa7a5b9d62ee2a29ff023e1e806a4627c9d076f82b014a0973d3244a223f220",
@@ -12300,11 +12678,11 @@
       "originalLanguage": "auto"
     }
   ],
-  "editorialUpdatedAt": "2026-08-27T16:31:03.354617+00:00",
+  "editorialUpdatedAt": "2026-08-27T21:54:10.220396+00:00",
   "editorialDailyLimit": 500,
   "editorialBatchSize": 12,
   "editorialLocalBatchSize": 1,
-  "editorialPublishedToday": 1,
+  "editorialPublishedToday": 55,
   "editorialGroundingVersion": "passport-fact-pack-v3",
   "editorialLegacyUnpublished": 2
 }
