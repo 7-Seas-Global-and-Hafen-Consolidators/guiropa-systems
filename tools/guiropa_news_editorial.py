@@ -129,6 +129,8 @@ REGRAS ABSOLUTAS:
 - Sem emojis e sem markdown.
 - Título, deck e toda a matéria devem estar em português brasileiro natural e consistente.
 - Produza de 4 a 8 parágrafos por matéria, normalmente 300 a 650 palavras quando houver evidência suficiente.
+- bodyPt DEVE ser um array JSON com NO MÍNIMO 4 strings não vazias; nunca compacte a matéria em 1, 2 ou 3 strings.
+- Mesmo quando a matéria for breve, distribua o texto factual já escrito em pelo menos 4 parágrafos sem acrescentar fatos.
 - O deck deve ter 1 ou 2 frases.
 - A saída deve conter somente IDs recebidos.
 - Responda exclusivamente com JSON puro e válido.
@@ -240,6 +242,49 @@ def call_zero_cost_multiprovider(prompt: str) -> tuple[dict, str]:
     raise RuntimeError("all_zero_cost_providers_exhausted | " + " | ".join(failures))
 
 
+def normalize_story_shape(story: dict) -> dict:
+    """Repair paragraph boundaries only; never add, remove, or rewrite factual text."""
+    body = story.get("bodyPt")
+    if isinstance(body, str):
+        paragraphs = [body.strip()] if body.strip() else []
+    elif isinstance(body, list):
+        paragraphs = [str(p).strip() for p in body if str(p).strip()]
+    else:
+        return story
+
+    if len(paragraphs) >= 4:
+        return {**story, "bodyPt": paragraphs}
+
+    sentences = [part.strip() for part in re.split(r"(?<=[.!?])\s+", " ".join(paragraphs)) if part.strip()]
+    if len(sentences) < 4:
+        return {**story, "bodyPt": paragraphs}
+
+    groups: list[list[str]] = [[] for _ in range(4)]
+    total_words = sum(len(sentence.split()) for sentence in sentences)
+    target_words = max(1, total_words / 4)
+    group_index = 0
+    group_words = 0
+    for sentence_index, sentence in enumerate(sentences):
+        remaining_sentences = len(sentences) - sentence_index
+        remaining_groups = 4 - group_index
+        if (
+            group_index < 3
+            and groups[group_index]
+            and group_words >= target_words
+            and remaining_sentences >= remaining_groups
+        ):
+            group_index += 1
+            group_words = 0
+        groups[group_index].append(sentence)
+        group_words += len(sentence.split())
+
+    repaired = [" ".join(group).strip() for group in groups if group]
+    if len(repaired) == 4:
+        print(f"[GUIROPA EDITORIAL] normalized paragraph boundaries for {story.get('id')}", file=sys.stderr)
+        return {**story, "bodyPt": repaired}
+    return {**story, "bodyPt": paragraphs}
+
+
 def validate_story(story: dict, allowed_ids: set[str]) -> None:
     sid = str(story.get("id") or "")
     if sid not in allowed_ids:
@@ -283,6 +328,7 @@ def main() -> int:
     allowed = {str(item.get("id")) for item in targets}
     valid: dict[str, dict] = {}
     for story in stories:
+        story = normalize_story_shape(story)
         validate_story(story, allowed)
         valid[str(story["id"])] = story
     if not valid:
