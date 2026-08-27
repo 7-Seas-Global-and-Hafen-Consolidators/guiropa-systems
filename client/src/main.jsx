@@ -8,6 +8,7 @@ import { RadioPlayerProvider } from "./audio/RadioPlayerContext.jsx";
 import "./audio/installAudioInterlock.js";
 
 import "./styles/global.css";
+import "./styles/header-logo-fix.css";
 
 const routerBasename =
   import.meta.env.BASE_URL.replace(/\/$/, "");
