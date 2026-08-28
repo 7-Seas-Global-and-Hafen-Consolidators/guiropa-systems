@@ -12,28 +12,27 @@ const ready = (raw.items || []).filter(
     typeof item?.excerptPt === "string" &&
     item.excerptPt.trim() &&
     Array.isArray(item?.bodyPt) &&
-    item.bodyPt.length >= 4,
+    item.bodyPt.filter((p) => String(p || "").trim()).length >= 4,
 );
 
 const items = ready.map((item) => ({
-  id: item.id,
-  region: item.region || "MUNDO",
-  titlePt: item.titlePt,
-  excerptPt: item.excerptPt,
-  bodyPt: item.bodyPt,
+  id: String(item.id || "").trim(),
+  region: String(item.region || "MUNDO").trim() || "MUNDO",
+  titlePt: item.titlePt.trim(),
+  excerptPt: item.excerptPt.trim(),
+  bodyPt: item.bodyPt.map((p) => String(p || "").trim()).filter(Boolean),
   editorialStatus: "ready",
+  translationStatus: "pt-ready",
   publishedAt: item.publishedAt || null,
   discoveredAt: item.discoveredAt || null,
 }));
 
 const publicFeed = {
   updatedAt: raw.updatedAt || null,
-  editorialUpdatedAt: raw.editorialUpdatedAt || null,
-  bridge: "GUIROPA RADIO · WORLD WIRE",
+  brand: "GUIROPA RADIO",
   itemCount: items.length,
   publishedPt: items.length,
   editorialPending: 0,
-  connectedPoints: Number(raw.connectedPoints || 0),
   items,
 };
 
