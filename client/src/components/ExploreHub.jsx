@@ -37,7 +37,7 @@ export default function ExploreHub() {
                   <p>{item.description}</p>
                   <span className="guiropa-decade__archive-entry">ABRIR ARQUIVO · ARTISTAS + HISTÓRIAS →</span>
                   {item.code === "70" && (
-                    <span className="guiropa-decade__tunnel-note">70s TUNNEL™ PRESERVADO DENTRO DO ARQUIVO</span>
+                    <span className="guiropa-decade__tunnel-note">ENTER 70s TUNNEL™ · PRESERVADO DENTRO DO ARQUIVO</span>
                   )}
                 </article>
               </Link>
