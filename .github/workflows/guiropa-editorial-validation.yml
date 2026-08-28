@@ -5,19 +5,25 @@ on:
     paths:
       - '.github/workflows/rss-world-editorial.yml'
       - '.github/workflows/rss-world-bridge.yml'
+      - '.github/workflows/rss-world-ptbr-guard.yml'
       - '.github/workflows/guiropa-editorial-validation.yml'
+      - 'client/scripts/publish-rss-vault.mjs'
       - 'tools/guiropa_news_editorial.py'
       - 'tools/guiropa_news_editorial_envelope.py'
       - 'tools/guiropa_news_editorial_source_fallback.py'
+      - 'tools/guiropa_ptbr_postpublish_guard.py'
   push:
     branches: [main]
     paths:
       - '.github/workflows/rss-world-editorial.yml'
       - '.github/workflows/rss-world-bridge.yml'
+      - '.github/workflows/rss-world-ptbr-guard.yml'
       - '.github/workflows/guiropa-editorial-validation.yml'
+      - 'client/scripts/publish-rss-vault.mjs'
       - 'tools/guiropa_news_editorial.py'
       - 'tools/guiropa_news_editorial_envelope.py'
       - 'tools/guiropa_news_editorial_source_fallback.py'
+      - 'tools/guiropa_ptbr_postpublish_guard.py'
 
 permissions:
   contents: read
@@ -32,8 +38,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Compile editorial engines
-        run: python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_envelope.py tools/guiropa_news_editorial_source_fallback.py
-      - name: Validate multiprovider throughput and fail-closed contract
+        run: python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_envelope.py tools/guiropa_news_editorial_source_fallback.py tools/guiropa_ptbr_postpublish_guard.py
+      - name: Validate ephemeral-vault editorial contract
         shell: bash
         run: |
           python - <<'PY'
@@ -43,13 +49,14 @@ jobs:
           fallback=Path('tools/guiropa_news_editorial_source_fallback.py').read_text('utf-8')
           editorial=Path('.github/workflows/rss-world-editorial.yml').read_text('utf-8')
           bridge=Path('.github/workflows/rss-world-bridge.yml').read_text('utf-8')
+          guard=Path('.github/workflows/rss-world-ptbr-guard.yml').read_text('utf-8')
+          vault=Path('client/scripts/publish-rss-vault.mjs').read_text('utf-8')
 
           assert 'BATCH_SIZE = 12' in engine
           assert 'DAILY_LIMIT = 500' in engine
           assert 'groq-free' in engine
           assert 'gemini-free' in engine
           assert 'openrouter-free' in engine
-          assert 'ollama-local-zero-key' in engine
           assert 'validate_story' in engine
           assert 'unsafe editorial word count' in engine
 
@@ -62,15 +69,23 @@ jobs:
           assert 'source-structured-pt' in fallback
           assert 'titlePt' in fallback and 'excerptPt' in fallback
 
-          assert 'cron: "3,18,33,48 * * * *"' in editorial
           assert 'cron: "7,37 * * * *"' in bridge
-          assert 'GUIROPA_OLLAMA_MODEL: qwen2.5:3b-instruct' in editorial
-          assert 'GUIROPA_LOCAL_BATCH: "2"' in editorial
-          assert 'GUIROPA_SOURCE_FALLBACK_BATCH: "100"' in editorial
-          assert 'python tools/guiropa_news_editorial_source_fallback.py' in editorial
-          assert 'python tools/guiropa_news_editorial.py' in editorial
-          assert 'python tools/guiropa_news_editorial_envelope.py' not in editorial
-          assert 'EDITORIAL BLOCKED' in editorial
-          assert 'Install GitHub Copilot CLI' not in editorial
-          print('GUIROPA editorial architecture OK: PT fast lane + real multiprovider core + 3B local fallback + fail closed + 4 cycles/hour')
+          assert 'RUNNER_TEMP' in bridge
+          assert 'guiropa-rss-vault' in bridge
+          assert 'python tools/guiropa_news_editorial_source_fallback.py' in bridge
+          assert 'python tools/guiropa_news_editorial.py' in bridge
+          assert 'python tools/guiropa_ptbr_postpublish_guard.py' in bridge
+          assert 'node client/scripts/publish-rss-vault.mjs' in bridge
+          assert 'Destroy ephemeral RAW vault' in bridge
+          assert 'workflow_run:' not in bridge
+
+          assert 'schedule:' not in editorial
+          assert 'workflow_dispatch:' in editorial
+          assert 'contents: read' in editorial
+
+          assert 'publish-rss-vault.mjs' in guard
+          assert 'sourceId' in vault and 'originalLanguage' in vault
+          assert 'published-only' in vault
+          assert 'Install GitHub Copilot CLI' not in bridge
+          print('GUIROPA editorial architecture OK: RSS RAW ephemeral + PT-BR fail-closed + sanitized public ledger')
           PY
