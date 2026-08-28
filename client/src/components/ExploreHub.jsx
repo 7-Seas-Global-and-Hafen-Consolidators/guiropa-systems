@@ -36,6 +36,9 @@ export default function ExploreHub() {
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
                   <span className="guiropa-decade__archive-entry">LER A HISTÓRIA →</span>
+                  {item.code === "70" && (
+                    <span className="guiropa-decade__tunnel-note">ENTER 70s TUNNEL™ DENTRO DO ARQUIVO</span>
+                  )}
                 </article>
               </Link>
             ))}
@@ -43,7 +46,7 @@ export default function ExploreHub() {
         </div>
 
         <style>{`
-          .guiropa-decades-static{min-height:0!important;padding:clamp(4.8rem,8vw,7rem) 0!important}.guiropa-decades-static .guiropa-section-heading,.guiropa-decades-static .guiropa-decades-grid,.guiropa-decades-static .guiropa-decade{opacity:1!important;visibility:visible!important;transform:none}.guiropa-decade-link{color:inherit;text-decoration:none;display:block}.guiropa-decade-link .guiropa-decade{height:100%}.guiropa-decades-static .guiropa-decade:hover{transform:translateY(-4px)}.guiropa-decade__archive-entry{display:inline-block;margin-top:1rem;color:currentColor;font-size:.58rem;font-weight:900;letter-spacing:.13em;text-decoration:underline;text-underline-offset:4px}@media(max-width:900px){.guiropa-decades-static{padding:4.5rem 0!important}}@media(max-width:600px){.guiropa-decades-static{padding:3.8rem 0!important}}
+          .guiropa-decades-static{min-height:0!important;padding:clamp(4.8rem,8vw,7rem) 0!important}.guiropa-decades-static .guiropa-section-heading,.guiropa-decades-static .guiropa-decades-grid,.guiropa-decades-static .guiropa-decade{opacity:1!important;visibility:visible!important;transform:none}.guiropa-decade-link{color:inherit;text-decoration:none;display:block}.guiropa-decade-link .guiropa-decade{height:100%}.guiropa-decades-static .guiropa-decade:hover{transform:translateY(-4px)}.guiropa-decade__archive-entry{display:inline-block;margin-top:1rem;color:currentColor;font-size:.58rem;font-weight:900;letter-spacing:.13em;text-decoration:underline;text-underline-offset:4px}.guiropa-decade__tunnel-note{display:block;margin-top:.55rem;color:#d57a24;font-size:.5rem;font-weight:900;letter-spacing:.1em}@media(max-width:900px){.guiropa-decades-static{padding:4.5rem 0!important}}@media(max-width:600px){.guiropa-decades-static{padding:3.8rem 0!important}}
         `}</style>
       </section>
 
