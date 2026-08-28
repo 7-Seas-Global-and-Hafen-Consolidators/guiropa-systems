@@ -3,11 +3,11 @@
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
   "aiCalls": 5,
   "itemCount": 711,
-  "publishedPt": 59,
-  "editorialPending": 652,
+  "publishedPt": 57,
+  "editorialPending": 654,
   "newItems": 40,
-  "translatedPt": 61,
-  "translationPending": 650,
+  "translatedPt": 59,
+  "translationPending": 652,
   "connectedPoints": 20,
   "sources": [
     {
@@ -247,21 +247,16 @@
       "url": "https://consequence.net/2026/08/buddy-review-casper-kelly-too-many-cooks/",
       "title": "The Creator of Too Many Cooks Explores the Horror of Children’s Television with Buddy: Review",
       "excerpt": "The demented new movie from director Casper Kelly stars Keegan-Michael Key and Cristin Milioti. The Creator of Too Many Cooks Explores the Horror of Children’s Television with Buddy: Review Liz Shannon Miller",
-      "titlePt": "O Criador de Too Many Cooks Explora o Horror de TV Infantil com Buddy",
-      "excerptPt": "O novo filme de direção de Casper Kelly, Buddy, estrelado por Keegan-Michael Key e Cristin Milioti, é uma comédia-horror que explora o lado sombrio da televisão infantil. O filme, baseado na série viral Too Many Cooks, apresenta uma humanizada versão de um unicórnio de cor de laranja que ensina filhos sobre amizade e limpeza, mas que também pode ser perigosa se eles desafiam.",
-      "bodyPt": [
-        "O diretor Casper Kelly, conhecido por seu curta viral Too Many Cooks, lançou seu primeiro longa-metragem, Buddy, que explora o lado sombrio da televisão infantil. Keegan-Michael Key interpreta o unicórnio de cor de laranja chamado Buddy, que ensina filhos sobre amizade e limpeza.",
-        "O filme, que estrela Keegan-Michael Key e Cristin Milioti, é uma mistura de comédia e terror, com uma visão detalhada da vida de Buddy dentro de seu mundo. O diretor Casper Kelly mantém o espectador imerso no mundo de Buddy desde o início, permitindo que múltiplas temporadas da série sejam exploradas.",
-        "Embora o tom seja inicialmente alegre e feliz, Buddy se torna cada vez mais sombrio e perturbador conforme crianças desafiam Buddy e novos personagens aparecem, sem lembrança de onde vieram. A produção é aclamada por seu design de produção, direção de câmera e manipulação de pôneis.",
-        "Delaney Quinn interpreta Freddy, um personagem-chave que evolui para o protagonista do filme. Cristin Milioti, conhecida por seu trabalho em episódios de Black Mirror, também desempenha um papel crucial que se beneficia da sua experiência com universos pocket."
-      ],
-      "editorialStatus": "ready",
-      "editorialGeneratedAt": "2026-08-28T05:59:05.379003+00:00",
-      "translationStatus": "pt-ready",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
       "publishedAt": "2026-08-27T21:28:20.000Z",
       "discoveredAt": "2026-08-27T23:56:06.427Z",
       "originalLanguage": "auto",
-      "editorialProvider": "ollama-local-zero-key"
+      "editorialQualityReset": "english_residual:\\bpocket\\b,unnatural_ptbr:\\buma humanizada vers[aã]o\\b"
     },
     {
       "id": "eb1f291719d2ba0721757866e991b7b6c060015b0666efa3ae6959bb9492b606",
@@ -271,21 +266,16 @@
       "url": "https://consequence.net/2026/08/gta-6-extended-look-netflix-breakdown-details/",
       "title": "Here’s Everything We Learned from the Grand Theft Auto VI Extended Look",
       "excerpt": "The preview arrives less than three months before the hotly anticipated game's release on November 19th. Here’s Everything We Learned from the Grand Theft Auto VI Extended Look Eddie Fu",
-      "titlePt": "A Grande Aula de GTA VI: Aqui Estamos Tudo o Que Sabemos",
-      "excerptPt": "A preview chega menos de três meses antes da data de lançamento do GTA VI em 19 de novembro. Aqui está tudo o que sabemos da nova aula.",
-      "bodyPt": [
-        "O preview chega menos de três meses antes do lançamento do GTA VI, que acontecerá em 19 de novembro. O vídeo de 26 minutos mostra jogadores Jason Duval e Lucia Caminos interagindo com personagens como drogaditas de nível de rua e ex-bancos roubados, além de interações cotidianas.",
-        "O preview também oferece uma visão de algumas atividades que os jogadores podem realizar quando não estão em missões, incluindo mergulho, natação, jet-ski, canoagem, corrida de carros e até mesmo visitar um cabaré.",
-        "Além disso, o preview revela que há uma nova mecânica de jogo, onde uma ação de pet para um cachorro pode ter consequências mais profundas na relação entre Jason e Lucia. A direção de câmera e o combate estão melhorados em comparação com as versões anteriores.",
-        "O preview também mostra que há uma mecânica de luta de mão a mão e uma mecânica de escape rápida em caso de derrota. Além disso, há uma mecânica de trabalho para um único personagem, o que significa que os jogadores terão que decidir qual personagem deve assumir uma determinada função."
-      ],
-      "editorialStatus": "ready",
-      "editorialGeneratedAt": "2026-08-28T05:59:05.379003+00:00",
-      "translationStatus": "pt-ready",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
       "publishedAt": "2026-08-27T20:47:29.000Z",
       "discoveredAt": "2026-08-27T23:56:06.427Z",
       "originalLanguage": "auto",
-      "editorialProvider": "ollama-local-zero-key"
+      "editorialQualityReset": "english_residual:\\bpreview\\b,unnatural_ptbr:\\baqui estamos tudo\\b"
     },
     {
       "id": "bd04f71caec3a5b5f139dee8e4ac790e2d0dbbe96db2eaca0616ad14327c2189",
