@@ -8,7 +8,13 @@ on:
       - ".github/workflows/guiropa-rss-throughput-validation.yml"
       - "tools/guiropa_news_editorial.py"
       - "tools/guiropa_news_editorial_source_fallback.py"
+      - "tools/guiropa_ptbr_postpublish_guard.py"
+      - "client/package.json"
+      - "client/scripts/sanitize-rss-public.mjs"
       - "client/public/data/rss-world-feed.json"
+      - "client/src/components/ScheduleNewsFeed.jsx"
+      - "client/src/components/DecadeNewsFeed.jsx"
+      - "client/src/pages/DecadeArtistsPage.jsx"
   workflow_dispatch:
 
 jobs:
@@ -24,7 +30,7 @@ jobs:
           node-version: '20'
       - name: Validate Python editorial engines and deploy handoff
         run: |
-          python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_source_fallback.py
+          python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_source_fallback.py tools/guiropa_ptbr_postpublish_guard.py
           python - <<'PY'
           import json
           from pathlib import Path
@@ -43,9 +49,31 @@ jobs:
           assert 'ref: main' in deploy
           print('RSS editorial structure + automatic Pages handoff OK')
           PY
-      - name: Build GUIROPA
+      - name: Build GUIROPA and sanitize public RSS
         working-directory: client
         run: npm ci && npm run build
+      - name: Verify public RSS contains only complete Portuguese editorial payloads
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          public=json.loads(Path('client/dist/data/rss-world-feed.json').read_text('utf-8'))
+          forbidden={'source','sourceId','url','title','excerpt','originalLanguage','editorialProvider','editorialModel'}
+          assert 'sources' not in public
+          assert isinstance(public.get('items'), list)
+          for item in public['items']:
+              leaked=forbidden.intersection(item)
+              assert not leaked, f'public RSS provenance leak: {sorted(leaked)}'
+              assert item.get('editorialStatus') == 'ready'
+              assert item.get('titlePt') and item.get('excerptPt')
+              assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
+          assert int(public.get('publishedPt') or 0) == len(public['items'])
+          print(f"Public RSS sanitized: {len(public['items'])} complete PT-BR stories, no origin metadata")
+          PY
+          ! grep -q 'item\.source' client/src/components/ScheduleNewsFeed.jsx
+          grep -q 'GUIROPA RADIO · EDITORIAL' client/src/components/ScheduleNewsFeed.jsx
+          grep -q 'DecadeNewsFeed' client/src/pages/DecadeArtistsPage.jsx
+          grep -q 'if (!selected.length) return null' client/src/components/DecadeNewsFeed.jsx
       - name: Verify protected babies are still wired
         run: |
           grep -q 'path="70s"' client/src/App.jsx
