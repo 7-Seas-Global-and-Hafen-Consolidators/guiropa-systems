@@ -28,7 +28,7 @@ MOJIBAKE = ("�", "Ã©", "Ã£", "Ã§", "Ã³", "â€™", "â€œ", "â€
 # Known false accept observed on 2026-08-28. This repair is grounded only in
 # the source facts already present in the RSS packet; it removes residual
 # English and an inaccurate genre description without adding new claims.
-SANTANA_ID = "0c583f4776146e3b1bc6e674e8f36297b16713a292e956496b30c23cc59c995f"
+SANTANA_ID = "f1c6bdcd8900a71d789a3f8e7b128023ce3b17cd341c07c26341ee559b31065b"
 SANTANA_REPAIR = {
     "titlePt": "Carlos Santana relaciona ressentimentos ao câncer em fala controversa no Red Rocks",
     "excerptPt": "Durante um show no Red Rocks, Carlos Santana afirmou que guardar ressentimentos estaria ligado ao câncer. A declaração provocou críticas por atribuir a uma questão emocional uma relação causal que não é sustentada pela medicina.",
