@@ -32,6 +32,8 @@ UNNATURAL_PTBR = (
     r"\ba[cç][aã]o de pet\b",
     r"\buma humanizada vers[aã]o\b",
     r"\bensina filhos\b",
+    r"\bfalaçoado\b",
+    r"\bfalação de\b",
 )
 TYPOGRAPHY_PTBR = (
     (r"\s+[,.!?;:]", "space_before_punctuation"),
@@ -40,6 +42,26 @@ TYPOGRAPHY_PTBR = (
     (r"\s{3,}", "excessive_whitespace"),
 )
 MOJIBAKE = ("�", "Ã©", "Ã£", "Ã§", "Ã³", "â€™", "â€œ", "â€")
+
+SOURCE_MARKERS = (
+    "NPR Music", "The Guardian", "Music-News.com", "Ultimate Classic Rock", "Loudwire", "NME",
+    "Pitchfork", "AllMusic", "Consequence", "XS Noize", "Nialler9", "Aipate", "The Music",
+    "Unite Asia", "JROCK NEWS", "The Score Magazine", "The Jerusalem Post", "La Presse",
+    "Le Figaro", "La Croix", "Aficia", "Amarok Magazine", "RTBF", "RTS", "DoSol",
+    "Rock On Board", "Hits Perdidos", "Blog n' Roll", "A&R Factory", "Nagamag",
+    "Where the Music Meets",
+)
+SOURCE_DISCLOSURE = (
+    r"\breportagem\s+(?:foi\s+)?publicada\s+(?:pelo|pela|por)\b",
+    r"\bpublicado\s+(?:pelo|pela|por)\b",
+    r"\bidentificad[ao]\s+.*?\ba\s+partir\s+de\b",
+    r"\bregistro\s+de\s+origem\b",
+    r"\ba\s+pauta\s+permanece\s+conectada\s+à\s+fonte\b",
+    r"\blink\s+original\b",
+    r"\bfonte\s+(?:original|consultada|externa)\b",
+    r"\bsegundo\s+a\s+fonte\b",
+    r"\bde\s+acordo\s+com\s+a\s+fonte\b",
+)
 
 # Known false accept observed on 2026-08-28. This repair is grounded only in
 # the source facts already present in the RSS packet; it removes residual
@@ -91,6 +113,19 @@ def violations(item: dict) -> list[str]:
         if re.search(pattern, lowered, flags=re.I):
             reasons.append(f"unnatural_ptbr:{pattern}")
             break
+    for pattern in SOURCE_DISCLOSURE:
+        if re.search(pattern, lowered, flags=re.I):
+            reasons.append(f"source_disclosure:{pattern}")
+            break
+    own_source = normalize(item.get("source") or "")
+    if own_source and own_source in normalize(text):
+        reasons.append("source_disclosure:own_source_name")
+    else:
+        normalized_text = normalize(text)
+        for marker in SOURCE_MARKERS:
+            if normalize(marker) in normalized_text:
+                reasons.append(f"source_disclosure:known_source:{marker}")
+                break
     for pattern, label in TYPOGRAPHY_PTBR:
         if re.search(pattern, text):
             reasons.append(f"typography:{label}")

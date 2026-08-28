@@ -41,29 +41,37 @@ jobs:
           bridge=Path('.github/workflows/rss-world-bridge.yml').read_text('utf-8')
           editorial=Path('.github/workflows/rss-world-editorial.yml').read_text('utf-8')
           guard=Path('.github/workflows/rss-world-ptbr-guard.yml').read_text('utf-8')
+          ptguard=Path('tools/guiropa_ptbr_postpublish_guard.py').read_text('utf-8')
           deploy=Path('.github/workflows/deploy.yml').read_text('utf-8')
+          vault=Path('client/scripts/publish-rss-vault.mjs').read_text('utf-8')
+          sanitizer=Path('client/scripts/sanitize-rss-public.mjs').read_text('utf-8')
           assert 'RUNNER_TEMP' in bridge and 'guiropa-rss-vault' in bridge
           assert 'Destroy ephemeral RAW vault' in bridge
           assert 'publish-rss-vault.mjs' in bridge
           assert 'workflow_run:' not in bridge
           assert 'schedule:' not in editorial
           assert 'publish-rss-vault.mjs' in guard
+          assert 'SOURCE_DISCLOSURE' in ptguard and 'SOURCE_MARKERS' in ptguard
+          assert 'CONTENT_LEAK_PATTERNS' in vault and 'SOURCE_MARKERS' in vault
+          assert 'CONTENT_LEAK_PATTERNS' in sanitizer and 'SOURCE_MARKERS' in sanitizer
           assert 'workflow_run:' in deploy
           assert 'GUIROPA RSS World Bridge' in deploy
           assert "github.event.workflow_run.conclusion == 'success'" in deploy
           assert 'ref: main' in deploy
-          print('Ephemeral RSS vault architecture + automatic Pages handoff OK')
+          print('Ephemeral RSS vault architecture + content seal + automatic Pages handoff OK')
           PY
       - name: Simulate vault seal on repository payload
         run: node client/scripts/publish-rss-vault.mjs
-      - name: Verify repository payload contains no RAW provenance after seal
+      - name: Verify repository payload contains no RAW provenance or source disclosure after seal
         run: |
           python - <<'PY'
-          import json
+          import json,re
           from pathlib import Path
           public=json.loads(Path('client/public/data/rss-world-feed.json').read_text('utf-8'))
           ledger=json.loads(Path('client/public/data/rss-world-ledger.json').read_text('utf-8'))
           forbidden={'source','sourceId','url','title','excerpt','originalLanguage','editorialProvider','editorialModel','editorialGeneratedAt','editorialQualityReset'}
+          markers=['NPR Music','The Guardian','Music-News.com','Ultimate Classic Rock','Loudwire','NME','Pitchfork','AllMusic','Consequence','XS Noize','Nialler9','Aipate','The Music','Unite Asia','JROCK NEWS','The Score Magazine','The Jerusalem Post','La Presse','Le Figaro','La Croix','Aficia','Amarok Magazine','RTBF','RTS','DoSol','Rock On Board','Hits Perdidos',"Blog n' Roll",'A&R Factory','Nagamag','Where the Music Meets']
+          leak_patterns=[r'\breportagem\s+(?:foi\s+)?publicada\s+(?:pelo|pela|por)\b',r'\bregistro\s+de\s+origem\b',r'\blink\s+original\b',r'\bfonte\s+(?:original|consultada|externa)\b',r'\ba\s+pauta\s+permanece\s+conectada\s+à\s+fonte\b']
           assert 'sources' not in public and 'bridge' not in public
           assert isinstance(public.get('items'), list)
           for item in public['items']:
@@ -72,27 +80,39 @@ jobs:
               assert item.get('editorialStatus') == 'ready'
               assert item.get('titlePt') and item.get('excerptPt')
               assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
+              text=' '.join([item.get('titlePt',''),item.get('excerptPt',''),*(item.get('bodyPt') or [])])
+              lowered=text.casefold()
+              assert not any(marker.casefold() in lowered for marker in markers), f'source marker leaked in {item.get("id")}'
+              assert not any(re.search(pattern,text,re.I) for pattern in leak_patterns), f'source disclosure leaked in {item.get("id")}'
+              assert not re.search(r'\bfalaçoado\b|\bfalação\s+de\b',text,re.I), f'broken PT leaked in {item.get("id")}'
           assert set(ledger.get('ids') or []) == {item['id'] for item in public['items']}
           assert int(public.get('publishedPt') or 0) == len(public['items'])
-          print(f"Repository RSS sealed: {len(public['items'])} complete PT-BR stories, published-only ledger")
+          print(f"Repository RSS content-sealed: {len(public['items'])} complete PT-BR stories, no source disclosure")
           PY
       - name: Build GUIROPA and sanitize public RSS
         working-directory: client
         run: npm ci && npm run build
-      - name: Verify deployed RSS remains provenance-free
+      - name: Verify deployed RSS remains provenance and source-disclosure free
         run: |
           python - <<'PY'
-          import json
+          import json,re
           from pathlib import Path
           public=json.loads(Path('client/dist/data/rss-world-feed.json').read_text('utf-8'))
           forbidden={'source','sourceId','url','title','excerpt','originalLanguage','editorialProvider','editorialModel','editorialGeneratedAt','editorialQualityReset'}
+          markers=['NPR Music','The Guardian','Music-News.com','Ultimate Classic Rock','Loudwire','NME','Pitchfork','AllMusic','Consequence','XS Noize','Nialler9','Aipate','The Music','Unite Asia','JROCK NEWS','The Score Magazine','The Jerusalem Post','La Presse','Le Figaro','La Croix','Aficia','Amarok Magazine','RTBF','RTS','DoSol','Rock On Board','Hits Perdidos',"Blog n' Roll",'A&R Factory','Nagamag','Where the Music Meets']
+          leak_patterns=[r'\breportagem\s+(?:foi\s+)?publicada\s+(?:pelo|pela|por)\b',r'\bregistro\s+de\s+origem\b',r'\blink\s+original\b',r'\bfonte\s+(?:original|consultada|externa)\b',r'\ba\s+pauta\s+permanece\s+conectada\s+à\s+fonte\b']
           assert 'sources' not in public and 'bridge' not in public
           for item in public.get('items') or []:
               assert not forbidden.intersection(item)
               assert item.get('editorialStatus') == 'ready'
               assert item.get('titlePt') and item.get('excerptPt')
               assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
-          print(f"Deployed RSS sealed: {len(public.get('items') or [])} PT-BR stories")
+              text=' '.join([item.get('titlePt',''),item.get('excerptPt',''),*(item.get('bodyPt') or [])])
+              lowered=text.casefold()
+              assert not any(marker.casefold() in lowered for marker in markers), f'deploy source marker leaked in {item.get("id")}'
+              assert not any(re.search(pattern,text,re.I) for pattern in leak_patterns), f'deploy source disclosure leaked in {item.get("id")}'
+              assert not re.search(r'\bfalaçoado\b|\bfalação\s+de\b',text,re.I), f'deploy broken PT leaked in {item.get("id")}'
+          print(f"Deployed RSS content-sealed: {len(public.get('items') or [])} PT-BR stories")
           PY
           ! grep -q 'item\.source' client/src/components/ScheduleNewsFeed.jsx
           grep -q 'GUIROPA RADIO · EDITORIAL' client/src/components/ScheduleNewsFeed.jsx
