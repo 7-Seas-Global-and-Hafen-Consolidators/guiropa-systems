@@ -6,7 +6,9 @@ on:
       - "client/src/App.jsx"
       - "client/src/pages/HomePage.jsx"
       - "client/src/pages/ShowsPage.jsx"
+      - "client/src/pages/NotFoundPage.jsx"
       - "client/src/components/Header.jsx"
+      - "client/src/components/ExploreHub.jsx"
       - "client/src/components/GuiropaLogo.jsx"
       - "client/src/components/Layout.jsx"
       - "client/src/components/HomeLiveAgenda.jsx"
@@ -20,7 +22,9 @@ on:
       - "client/src/App.jsx"
       - "client/src/pages/HomePage.jsx"
       - "client/src/pages/ShowsPage.jsx"
+      - "client/src/pages/NotFoundPage.jsx"
       - "client/src/components/Header.jsx"
+      - "client/src/components/ExploreHub.jsx"
       - "client/src/components/GuiropaLogo.jsx"
       - "client/src/components/Layout.jsx"
       - "client/src/components/HomeLiveAgenda.jsx"
@@ -60,13 +64,14 @@ jobs:
           grep -q 'initialSource="70s"' client/src/App.jsx
           grep -q 'initialSource="80s-pop"' client/src/App.jsx
           grep -q 'HomeLiveAgenda' client/src/pages/HomePage.jsx
+          ! grep -q 'HomeLiveAgenda' client/src/components/ExploreHub.jsx
           grep -q 'R\$ 1 já ajuda' client/src/pages/HomePage.jsx
-          grep -q 'INSTAGRAM' client/src/components/Header.jsx
-          grep -q 'YOUTUBE' client/src/components/Header.jsx
-          grep -q 'FACEBOOK' client/src/components/Header.jsx
-          grep -q 'TIKTOK' client/src/components/Header.jsx
-          grep -q 'SPOTIFY' client/src/components/Header.jsx
+          grep -q 'https://www.instagram.com/guiropasystemss/' client/src/components/Header.jsx
+          grep -q 'https://open.spotify.com/playlist/5qJ9iLyWFxGs9zVCSAOMLD' client/src/components/Header.jsx
           grep -q 'to="/apoie"' client/src/components/Header.jsx
+          grep -q 'path="\*"' client/src/App.jsx
+          grep -q 'NotFoundPage' client/src/App.jsx
+          test -f client/src/pages/NotFoundPage.jsx
           grep -q 'GuiropaCommercialFooterDeck' client/src/components/Layout.jsx
           ! grep -q 'GuiropaCommercialLayer' client/src/components/Layout.jsx
           ! grep -q 'GuiropaCommercialCascade' client/src/components/Layout.jsx
