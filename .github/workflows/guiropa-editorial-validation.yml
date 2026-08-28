@@ -53,12 +53,10 @@ jobs:
           assert 'validate_story' in engine
           assert 'unsafe editorial word count' in engine
 
-          # Legacy grounded envelope remains available as a safety/reference engine.
           assert 'GROUNDING_VERSION = "passport-fact-pack-v3"' in envelope
           assert 'validate_grounding' in envelope
           assert 'editorialFactPackSha256' in envelope
 
-          # Deterministic fast lane may only promote already translated pt-BR signals.
           assert 'translationStatus' in fallback
           assert 'pt-ready' in fallback
           assert 'source-structured-pt' in fallback
@@ -66,7 +64,7 @@ jobs:
 
           assert 'cron: "3,18,33,48 * * * *"' in editorial
           assert 'cron: "7,37 * * * *"' in bridge
-          assert 'GUIROPA_OLLAMA_MODEL: qwen2.5:1.5b-instruct' in editorial
+          assert 'GUIROPA_OLLAMA_MODEL: qwen2.5:3b-instruct' in editorial
           assert 'GUIROPA_LOCAL_BATCH: "2"' in editorial
           assert 'GUIROPA_SOURCE_FALLBACK_BATCH: "100"' in editorial
           assert 'python tools/guiropa_news_editorial_source_fallback.py' in editorial
@@ -74,5 +72,5 @@ jobs:
           assert 'python tools/guiropa_news_editorial_envelope.py' not in editorial
           assert 'EDITORIAL BLOCKED' in editorial
           assert 'Install GitHub Copilot CLI' not in editorial
-          print('GUIROPA editorial architecture OK: PT fast lane + real multiprovider core + fail closed + 4 cycles/hour')
+          print('GUIROPA editorial architecture OK: PT fast lane + real multiprovider core + 3B local fallback + fail closed + 4 cycles/hour')
           PY
