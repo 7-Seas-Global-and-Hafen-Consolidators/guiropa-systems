@@ -22,6 +22,16 @@ STRONG_ENGLISH = (
     r"\bthe band\b",
     r"\bwas released\b",
     r"\bhas announced\b",
+    r"\bpreview\b",
+    r"\bpocket\b",
+)
+UNNATURAL_PTBR = (
+    r"\baqui estamos tudo\b",
+    r"\bdrogaditas?\b",
+    r"\bex-bancos roubados\b",
+    r"\ba[cç][aã]o de pet\b",
+    r"\buma humanizada vers[aã]o\b",
+    r"\bensina filhos\b",
 )
 MOJIBAKE = ("�", "Ã©", "Ã£", "Ã§", "Ã³", "â€™", "â€œ", "â€")
 
@@ -70,6 +80,10 @@ def violations(item: dict) -> list[str]:
     for pattern in STRONG_ENGLISH:
         if re.search(pattern, lowered, flags=re.I):
             reasons.append(f"english_residual:{pattern}")
+            break
+    for pattern in UNNATURAL_PTBR:
+        if re.search(pattern, lowered, flags=re.I):
+            reasons.append(f"unnatural_ptbr:{pattern}")
             break
     if any(token in text for token in MOJIBAKE):
         reasons.append("mojibake")
