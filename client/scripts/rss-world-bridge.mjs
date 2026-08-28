@@ -11,9 +11,14 @@ const LEDGER_FILE = path.join(DATA_DIR, "rss-world-ledger.json");
 const MAX_PUBLIC_ITEMS = 5000;
 const MAX_LEDGER_ITEMS = 25000;
 const REQUEST_TIMEOUT_MS = 15000;
-const TRANSLATION_TIMEOUT_MS = 12000;
-const TRANSLATION_BACKFILL_PER_RUN = 80;
-const TRANSLATION_CONCURRENCY = 4;
+const TRANSLATION_TIMEOUT_MS = 15000;
+const TRANSLATION_BACKFILL_PER_RUN = 40;
+const TRANSLATION_CONCURRENCY = 1;
+const TRANSLATION_MAX_ATTEMPTS = 4;
+const TRANSLATION_BASE_DELAY_MS = 1200;
+const TRANSLATION_ITEM_DELAY_MS = 700;
+
+const googleMusicRss = (query) => `https://news.google.com/rss/search?q=${encodeURIComponent(query)}&hl=en-US&gl=US&ceid=US:en`;
 
 const SOURCES = [
   { id: "npr-music", name: "NPR Music", region: "USA", url: "https://feeds.npr.org/1039/rss.xml" },
@@ -32,7 +37,14 @@ const SOURCES = [
   { id: "unite-asia", name: "Unite Asia", region: "Asia-Pacific", url: "https://uniteasia.org/feed" },
   { id: "jrock-news", name: "JROCK NEWS", region: "Asia-Pacific / Japan", url: "https://jrocknews.com/feed" },
   { id: "score-magazine", name: "The Score Magazine", region: "Asia-Pacific / India", url: "https://highonscore.com/feed/" },
-  { id: "jpost-music", name: "The Jerusalem Post · Music", region: "Middle East / Israel", url: "https://www.jpost.com/rss/rssfeedsmusic.aspx" },
+  { id: "jpost-music", name: "The Jerusalem Post · Music", region: "Middle East / Israel", url: "https://www.jpost.com/rss/rssmusic" },
+  { id: "scenenoise", name: "SceneNoise", region: "Middle East / MENA", url: "https://feeds.soundcloud.com/users/soundcloud:users:41278234/sounds.rss" },
+  { id: "afghanistan-music-wire", name: "Afghanistan Music Wire", region: "Asia / Afghanistan", url: googleMusicRss('Afghanistan music OR Afghan musician OR Afghan singer') },
+  { id: "syria-music-wire", name: "Syria Music Wire", region: "Middle East / Syria", url: googleMusicRss('Syria music OR Syrian musician OR Syrian singer') },
+  { id: "palestine-music-wire", name: "Palestine Music Wire", region: "Middle East / Palestine", url: googleMusicRss('Palestine music OR Palestinian musician OR Palestinian singer') },
+  { id: "lebanon-music-wire", name: "Lebanon Music Wire", region: "Middle East / Lebanon", url: googleMusicRss('Lebanon music OR Lebanese musician OR Lebanese singer') },
+  { id: "iraq-music-wire", name: "Iraq Music Wire", region: "Middle East / Iraq", url: googleMusicRss('Iraq music OR Iraqi musician OR Iraqi singer') },
+  { id: "iran-music-wire", name: "Iran Music Wire", region: "Middle East / Iran", url: googleMusicRss('Iran music OR Iranian musician OR Iranian singer') },
   { id: "lapresse-music", name: "La Presse · Musique", region: "Canada / Québec", url: "https://www.lapresse.ca/arts/musique/rss" },
   { id: "lefigaro-music", name: "Le Figaro · Musique", region: "Europe / France", url: "https://www.lefigaro.fr/rss/figaro_musique.xml" },
   { id: "lacroix-music", name: "La Croix · Musique", region: "Europe / France", url: "https://www.la-croix.com/feeds/rss/Culture/Musique.xml" },
@@ -55,6 +67,7 @@ function decodeEntities(value = "") {
 function stripHtml(value = "") { return decodeEntities(value).replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim(); }
 function tag(block, name) { const match = block.match(new RegExp(`<${name}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${name}>`, "i")); return match ? decodeEntities(match[1]).trim() : ""; }
 function atomLink(block) { const alternate = block.match(/<link[^>]+rel=["']alternate["'][^>]+href=["']([^"']+)["']/i); if (alternate) return decodeEntities(alternate[1]); const any = block.match(/<link[^>]+href=["']([^"']+)["']/i); return any ? decodeEntities(any[1]) : ""; }
+function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
 
 function parseFeed(xml, source) {
   const rssItems = [...xml.matchAll(/<item(?:\s[^>]*)?>([\s\S]*?)<\/item>/gi)].map((m) => m[1]);
@@ -100,7 +113,7 @@ async function fetchSource(source) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
   try {
-    const response = await fetch(source.url, { headers: { "user-agent": "GUIROPA-Radio-RSS-World-Bridge/4.1 (+https://guiropa.world/)" }, signal: controller.signal });
+    const response = await fetch(source.url, { headers: { "user-agent": "GUIROPA-Radio-RSS-World-Bridge/4.2 (+https://guiropa.world/)" }, signal: controller.signal });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return parseFeed(await response.text(), source);
   } finally { clearTimeout(timer); }
@@ -109,29 +122,48 @@ async function fetchSource(source) {
 async function translateTextToPt(text) {
   const value = String(text || "").trim();
   if (!value) return "";
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), TRANSLATION_TIMEOUT_MS);
-  try {
-    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=pt&dt=t&q=${encodeURIComponent(value)}`;
-    const response = await fetch(url, { headers: { "user-agent": "GUIROPA-Radio-Translation-Bridge/1.0" }, signal: controller.signal });
-    if (!response.ok) throw new Error(`translation HTTP ${response.status}`);
-    const payload = await response.json();
-    return (payload?.[0] || []).map((part) => part?.[0] || "").join("").trim() || value;
-  } finally {
-    clearTimeout(timer);
+  let lastError = null;
+  for (let attempt = 1; attempt <= TRANSLATION_MAX_ATTEMPTS; attempt += 1) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), TRANSLATION_TIMEOUT_MS);
+    try {
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=pt-BR&dt=t&q=${encodeURIComponent(value)}`;
+      const response = await fetch(url, {
+        headers: {
+          "user-agent": "GUIROPA-Radio-Translation-Bridge/1.1",
+          "accept-language": "pt-BR,pt;q=0.9,en;q=0.5",
+        },
+        signal: controller.signal,
+      });
+      if (!response.ok) {
+        const error = new Error(`translation HTTP ${response.status}`);
+        error.status = response.status;
+        throw error;
+      }
+      const payload = await response.json();
+      return (payload?.[0] || []).map((part) => part?.[0] || "").join("").trim() || value;
+    } catch (error) {
+      lastError = error;
+      const retryable = Number(error?.status || 0) === 429 || Number(error?.status || 0) >= 500 || error?.name === "AbortError";
+      if (!retryable || attempt === TRANSLATION_MAX_ATTEMPTS) break;
+      await sleep(TRANSLATION_BASE_DELAY_MS * (2 ** (attempt - 1)));
+    } finally {
+      clearTimeout(timer);
+    }
   }
+  throw lastError || new Error("translation failed");
 }
 
 async function translateItemToPt(item) {
   if (item.titlePt) return item;
   try {
-    const [titlePt, excerptPt] = await Promise.all([
-      translateTextToPt(item.title),
-      translateTextToPt(item.excerpt || ""),
-    ]);
+    const titlePt = await translateTextToPt(item.title);
+    await sleep(250);
+    const excerptPt = await translateTextToPt(item.excerpt || "");
+    await sleep(TRANSLATION_ITEM_DELAY_MS);
     return { ...item, titlePt: titlePt || item.title, excerptPt: excerptPt || item.excerpt || "" };
   } catch (error) {
-    console.log(`[GUIROPA TRANSLATION] ${item.id} failed: ${String(error?.message || error)}`);
+    console.log(`[GUIROPA TRANSLATION] ${item.id} failed after retries: ${String(error?.message || error)}`);
     return item;
   }
 }
