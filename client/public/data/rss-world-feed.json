@@ -1,13 +1,13 @@
 {
   "updatedAt": "2026-08-27T23:56:31.630Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
-  "aiCalls": 3,
+  "aiCalls": 4,
   "itemCount": 711,
-  "publishedPt": 55,
-  "editorialPending": 656,
+  "publishedPt": 57,
+  "editorialPending": 654,
   "newItems": 40,
-  "translatedPt": 57,
-  "translationPending": 654,
+  "translatedPt": 59,
+  "translationPending": 652,
   "connectedPoints": 20,
   "sources": [
     {
@@ -199,15 +199,21 @@
       "url": "https://consequence.net/2026/08/carlos-santana-on-cancer/",
       "title": "Carlos Santana Thinks He Knows Why People Get Cancer",
       "excerpt": "Some fans were not happy with the guitarist's statements on the disease. Carlos Santana Thinks He Knows Why People Get Cancer Travis Bland",
-      "titlePt": "",
-      "excerptPt": "",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
-      "translationStatus": "pending",
+      "titlePt": "Carlos Santana Alega Que Grievances Causam Câncer",
+      "excerptPt": "O guitarrista Carlos Santana fez um comentário controverso sobre câncer em seu show no Red Rocks, alegando que as reclamações causam câncer.",
+      "bodyPt": [
+        "O virtuoso guitarrista Carlos Santana, durante seu show no Red Rocks em 24 de agosto, fez um comentário controverso sobre câncer. Em um momento de descontração durante seu show, Santana disse aos fãs: 'Se você quer garantir que nunca tenha câncer na sua vida, é importante lembrar isso: grievances causam câncer... Portanto, é importante que você deixe isso para trás e perdoe. Deixe isso para trás, e você será limpo. Eu te prometo, você será limpo.'",
+        "Alguns fãs não estavam satisfeitos com a declaração do músico sobre o assunto. A declaração de Santana gerou críticas devido à sua forma de expressar a ideia, que alguns interpretaram como um tipo de culpa colateral.",
+        "Santana continuou com uma anedota duvidosa, alegando que 'um especialista em câncer nunca encontrou alguém com câncer que não tivesse reclamações', uma afirmação que foi criticada por muitos fãs.",
+        "O músico, Carlos Santana, é um dos músicos mais conhecidos da música clássica, mas parece ter ultrapassado o seu campo de expertise ao fazer essa declaração sobre câncer, uma doença que ele provavelmente não conhecia tão bem."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-28T02:10:13.766826+00:00",
+      "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T23:35:37.000Z",
       "discoveredAt": "2026-08-27T23:56:06.427Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "ollama-local-zero-key"
     },
     {
       "id": "77531743192fb4e87a24590156566af8bba0df617e46a7a7df8d8d30d4f873fa",
@@ -217,15 +223,21 @@
       "url": "https://www.nme.com/features/gaming-features/gta6-netflix-jason-lucia-plot-reveals-soundtrack-3965148?utm_source=rss&utm_medium=rss&utm_campaign=gta6-netflix-jason-lucia-plot-reveals-soundtrack",
       "title": "Loading Leonida: what we learned from the ‘Grand Theft Auto 6’ Extended Look on Netflix",
       "excerpt": "The 26-minute special features nothing but in-game footage – and quite a few surprises The post Loading Leonida: what we learned from the ‘Grand Theft Auto 6’ Extended Look on Netflix appeared first on NME .",
-      "titlePt": "",
-      "excerptPt": "",
-      "bodyPt": [],
-      "editorialStatus": "pending",
-      "editorialGeneratedAt": null,
-      "translationStatus": "pending",
+      "titlePt": "Leonida Revela Dicas Importantes para 'Grand Theft Auto 6'",
+      "excerptPt": "O especial de 26 minutos sobre 'Grand Theft Auto 6' revelou várias surpresas e detalhes sobre o jogo.",
+      "bodyPt": [
+        "O especial de 26 minutos sobre 'Grand Theft Auto 6' lançado pela Netflix trouxe muitas novidades para os fãs do jogo. O especial foi apresentado antes do lançamento geral do jogo, que está marcado para 19 de novembro.",
+        "O jogo apresenta dois protagonistas: Jason Duval, um ex-militar que traficava drogas, e Lucia Caminos, que acabou de sair da prisão. Os jogadores podem escolher entre jogar como um casal ou alternar entre os dois personagens.",
+        "O especial mostrou detalhes interessantes sobre a vida cotidiana dos personagens, incluindo uma cena de um bar chamado Effluvia e um anúncio de fast-food com 30.000 calorias.",
+        "O jogo também apresenta uma série de músicas clássicas de rock, incluindo 'Pop Bottles' de Birdman e Lil Wayne, 'Pound Town' de Sexyy Red e Tay Keith, e 'Let Your Love Flow' do The Bellamy Brothers."
+      ],
+      "editorialStatus": "ready",
+      "editorialGeneratedAt": "2026-08-28T02:10:13.766826+00:00",
+      "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T21:44:28.000Z",
       "discoveredAt": "2026-08-27T23:56:05.977Z",
-      "originalLanguage": "auto"
+      "originalLanguage": "auto",
+      "editorialProvider": "ollama-local-zero-key"
     },
     {
       "id": "2714724fdc51482013cf99ddec3664449467f9341c41f058f2fa3bfc2a4d41fe",
@@ -13264,5 +13276,10 @@
       "discoveredAt": "2026-08-27T14:34:13.966Z",
       "originalLanguage": "auto"
     }
-  ]
+  ],
+  "editorialUpdatedAt": "2026-08-28T02:10:13.766826+00:00",
+  "editorialDailyLimit": 500,
+  "editorialBatchSize": 12,
+  "editorialLocalBatchSize": 2,
+  "editorialPublishedToday": 2
 }
