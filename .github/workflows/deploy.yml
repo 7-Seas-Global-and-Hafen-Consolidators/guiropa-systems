@@ -7,6 +7,7 @@ on:
     workflows:
       - "GUIROPA News Tunnel Zero-Cost Multiprovider Editorial"
       - "GUIROPA RSS World Bridge"
+      - "GUIROPA News Tunnel pt-BR Post-Publish Guard"
     types: [completed]
   workflow_dispatch:
 
