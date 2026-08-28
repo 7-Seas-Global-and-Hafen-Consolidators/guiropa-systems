@@ -16,7 +16,7 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 import SchedulePage from "./SchedulePage.jsx";
 import StorePage from "./StorePage.jsx";
 import ContactPage from "./ContactPage.jsx";
-import AdvertisePage from "./AdvertisePage.jsx";
+import AdvertisePassportPowerPage from "./AdvertisePassportPowerPage.jsx";
 import SupportPage from "./SupportPage.jsx";
 
 export default function App() {
@@ -51,8 +51,8 @@ export default function App() {
         <Route path="contato" element={<ContactPage />} />
         <Route path="contact" element={<ContactPage />} />
 
-        <Route path="anuncie" element={<AdvertisePage />} />
-        <Route path="advertise" element={<AdvertisePage />} />
+        <Route path="anuncie" element={<AdvertisePassportPowerPage />} />
+        <Route path="advertise" element={<AdvertisePassportPowerPage />} />
 
         <Route path="apoie" element={<SupportPage />} />
         <Route path="support" element={<SupportPage />} />
