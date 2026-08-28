@@ -3,11 +3,11 @@ import { useLanguage } from "../i18n/LanguageContext.jsx";
 import HomeLiveAgenda from "./HomeLiveAgenda.jsx";
 
 const ARCHIVE_ROUTE = {
-  "50": "/decada/1950s",
-  "60": "/decada/1960s",
-  "70": "/decada/1970s",
-  "80": "/decada/1980s",
-  "90": "/decada/1990",
+  "50": "/decada/1950s/artistas",
+  "60": "/decada/1960s/artistas",
+  "70": "/decada/1970s/artistas",
+  "80": "/decada/1980s/artistas",
+  "90": "/decada/1990/artistas",
 };
 
 export default function ExploreHub() {
@@ -29,15 +29,15 @@ export default function ExploreHub() {
                 key={item.year}
                 to={ARCHIVE_ROUTE[item.code] || "/programacao"}
                 className="guiropa-decade-link"
-                aria-label={`Abrir arquivo editorial ${item.year}`}
+                aria-label={`Abrir arquivo completo ${item.year}`}
               >
                 <article className={`guiropa-decade guiropa-decade--${item.code}`}>
                   <span className="guiropa-decade__number">{item.year}</span>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                  <span className="guiropa-decade__archive-entry">LER A HISTÓRIA →</span>
+                  <span className="guiropa-decade__archive-entry">ABRIR ARQUIVO · ARTISTAS + HISTÓRIAS →</span>
                   {item.code === "70" && (
-                    <span className="guiropa-decade__tunnel-note">ENTER 70s TUNNEL™ DENTRO DO ARQUIVO</span>
+                    <span className="guiropa-decade__tunnel-note">ENTER 70s TUNNEL™ · PRESERVADO DENTRO DO ARQUIVO</span>
                   )}
                 </article>
               </Link>
