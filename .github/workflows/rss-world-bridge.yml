@@ -117,16 +117,31 @@ jobs:
           rm -rf "${GUIROPA_RSS_VAULT:-${RUNNER_TEMP}/guiropa-rss-vault}"
           echo "Ephemeral RAW RSS destroyed."
 
-      - name: Commit only sanitized public payload
+      - name: Publish sanitized payload atomically on latest main
         shell: bash
         run: |
           if git diff --quiet -- client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json; then
             echo "No sanitized RSS changes. Nothing to publish."
             exit 0
           fi
+
+          SAFE="${RUNNER_TEMP}/guiropa-rss-publish"
+          mkdir -p "$SAFE"
+          cp client/public/data/rss-world-feed.json "$SAFE/rss-world-feed.json"
+          cp client/public/data/rss-world-ledger.json "$SAFE/rss-world-ledger.json"
+
+          git fetch origin main
+          git reset --hard origin/main
+          cp "$SAFE/rss-world-feed.json" client/public/data/rss-world-feed.json
+          cp "$SAFE/rss-world-ledger.json" client/public/data/rss-world-ledger.json
+
+          if git diff --quiet -- client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json; then
+            echo "Latest main already contains this sealed payload."
+            exit 0
+          fi
+
           git config user.name "GUIROPA RSS Vault"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json
           git commit -m "PUBLISH GUIROPA RSS FROM EPHEMERAL VAULT"
-          git pull --rebase origin main
           git push origin HEAD:main
