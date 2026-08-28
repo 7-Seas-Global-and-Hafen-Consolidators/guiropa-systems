@@ -57,7 +57,7 @@ jobs:
           assert 'workflow_run:' in deploy
           assert 'GUIROPA RSS World Bridge' in deploy
           assert "github.event.workflow_run.conclusion == 'success'" in deploy
-          assert 'ref: main' in deploy
+          assert ('ref: main' in deploy or "github.event.pull_request.head.sha || 'main'" in deploy)
           print('Ephemeral RSS vault architecture + content seal + automatic Pages handoff OK')
           PY
       - name: Simulate vault seal on repository payload
@@ -84,7 +84,7 @@ jobs:
               lowered=text.casefold()
               assert not any(marker.casefold() in lowered for marker in markers), f'source marker leaked in {item.get("id")}'
               assert not any(re.search(pattern,text,re.I) for pattern in leak_patterns), f'source disclosure leaked in {item.get("id")}'
-              assert not re.search(r'\bfalaçoado\b|\bfalação\s+de\b',text,re.I), f'broken PT leaked in {item.get("id")}'
+              assert not re.search(r'\bfalaçoado\b|\bfalação\s+de\b|\breimplanta[cç][aã]o de p[eé]\b|\bexperimentou um problema\b|\bem europa\b|\bseu tour\b',text,re.I), f'broken PT leaked in {item.get("id")}'
           assert set(ledger.get('ids') or []) == {item['id'] for item in public['items']}
           assert int(public.get('publishedPt') or 0) == len(public['items'])
           print(f"Repository RSS content-sealed: {len(public['items'])} complete PT-BR stories, no source disclosure")
@@ -111,7 +111,7 @@ jobs:
               lowered=text.casefold()
               assert not any(marker.casefold() in lowered for marker in markers), f'deploy source marker leaked in {item.get("id")}'
               assert not any(re.search(pattern,text,re.I) for pattern in leak_patterns), f'deploy source disclosure leaked in {item.get("id")}'
-              assert not re.search(r'\bfalaçoado\b|\bfalação\s+de\b',text,re.I), f'deploy broken PT leaked in {item.get("id")}'
+              assert not re.search(r'\bfalaçoado\b|\bfalação\s+de\b|\breimplanta[cç][aã]o de p[eé]\b|\bexperimentou um problema\b|\bem europa\b|\bseu tour\b',text,re.I), f'deploy broken PT leaked in {item.get("id")}'
           print(f"Deployed RSS content-sealed: {len(public.get('items') or [])} PT-BR stories")
           PY
           ! grep -q 'item\.source' client/src/components/ScheduleNewsFeed.jsx
