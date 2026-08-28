@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "7,37 * * * *"
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "GUIROPA News Tunnel Zero-Cost Multiprovider Editorial"
+    types:
+      - completed
   push:
     branches:
       - main
@@ -20,6 +25,7 @@ concurrency:
 
 jobs:
   ingest:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
