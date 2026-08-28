@@ -1,0 +1,53 @@
+name: GUIROPA News Tunnel pt-BR Post-Publish Guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/rss-world-ptbr-guard.yml"
+      - "tools/guiropa_ptbr_postpublish_guard.py"
+  workflow_run:
+    workflows: ["GUIROPA News Tunnel Zero-Cost Multiprovider Editorial"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: guiropa-news-ptbr-postpublish-guard
+  cancel-in-progress: false
+
+jobs:
+  guard:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 20
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Audit published pt-BR stories
+        run: python tools/guiropa_ptbr_postpublish_guard.py
+
+      - name: Commit quality repair when needed
+        shell: bash
+        run: |
+          if git diff --quiet -- client/public/data/rss-world-feed.json; then
+            echo "No pt-BR repair required."
+            exit 0
+          fi
+          git config user.name "GUIROPA News Quality Guard"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add client/public/data/rss-world-feed.json
+          git commit -m "REPAIR GUIROPA NEWS TUNNEL PT-BR QUALITY"
+          git pull --rebase origin main
+          git push origin HEAD:main
