@@ -1,26 +1,26 @@
 {
-  "updatedAt": "2026-08-27T23:56:31.630Z",
+  "updatedAt": "2026-08-28T08:03:52.891Z",
   "bridge": "GUIROPA RADIO · PASSPORT RADIO NETWORK · RSS WORLD BRIDGE",
   "aiCalls": 5,
-  "itemCount": 711,
+  "itemCount": 737,
   "publishedPt": 57,
-  "editorialPending": 654,
-  "newItems": 40,
+  "editorialPending": 680,
+  "newItems": 26,
   "translatedPt": 59,
-  "translationPending": 652,
-  "connectedPoints": 20,
+  "translationPending": 678,
+  "connectedPoints": 25,
   "sources": [
     {
       "region": "USA",
       "ok": true,
       "seen": 10,
-      "added": 2
+      "added": 1
     },
     {
       "region": "Europe / UK",
       "ok": true,
       "seen": 30,
-      "added": 1
+      "added": 5
     },
     {
       "region": "Europe / UK",
@@ -32,7 +32,7 @@
       "region": "USA",
       "ok": true,
       "seen": 35,
-      "added": 2
+      "added": 0
     },
     {
       "region": "USA",
@@ -44,13 +44,13 @@
       "region": "Europe / UK",
       "ok": true,
       "seen": 10,
-      "added": 10
+      "added": 4
     },
     {
       "region": "USA",
       "ok": true,
       "seen": 29,
-      "added": 1
+      "added": 2
     },
     {
       "region": "USA",
@@ -62,7 +62,7 @@
       "region": "USA",
       "ok": true,
       "seen": 15,
-      "added": 15
+      "added": 5
     },
     {
       "region": "Europe / UK",
@@ -74,7 +74,7 @@
       "region": "Europe / Ireland",
       "ok": true,
       "seen": 20,
-      "added": 3
+      "added": 0
     },
     {
       "region": "Africa / Kenya",
@@ -95,7 +95,7 @@
     {
       "region": "Asia-Pacific / Japan",
       "ok": true,
-      "seen": 0,
+      "seen": 20,
       "added": 0
     },
     {
@@ -125,7 +125,7 @@
       "region": "Europe / France",
       "ok": true,
       "seen": 50,
-      "added": 0
+      "added": 1
     },
     {
       "region": "Europe / France",
@@ -149,7 +149,7 @@
       "region": "Europe / Switzerland",
       "ok": true,
       "seen": 25,
-      "added": 1
+      "added": 0
     },
     {
       "region": "Latin America / Brazil",
@@ -165,32 +165,466 @@
     {
       "region": "Latin America / Brazil",
       "ok": true,
-      "seen": 0,
+      "seen": 10,
       "added": 0
     },
     {
       "region": "Latin America / Brazil",
       "ok": false,
-      "error": "fetch failed"
+      "error": "HTTP 404"
     },
     {
       "region": "Global / UK",
-      "ok": false,
-      "error": "fetch failed"
-    },
-    {
-      "region": "Global",
-      "ok": false,
-      "error": "fetch failed"
+      "ok": true,
+      "seen": 10,
+      "added": 3
     },
     {
       "region": "Global",
       "ok": true,
-      "seen": 0,
+      "seen": 10,
+      "added": 0
+    },
+    {
+      "region": "Global",
+      "ok": true,
+      "seen": 9,
       "added": 0
     }
   ],
   "items": [
+    {
+      "id": "2015329020bc1637b1b86ad0fa3fd79cd515fc541267948190f8c1b504f98545",
+      "sourceId": "nme",
+      "source": "NME",
+      "region": "Europe / UK",
+      "url": "https://www.nme.com/reviews/mike-d-thank-you-album-review-beastie-boys-3964949?utm_source=rss&utm_medium=rss&utm_campaign=mike-d-thank-you-album-review-beastie-boys",
+      "title": "Mike D – ‘Thank You’ review: Beastie Boys’ icon’s solo debut is a return to be grateful for",
+      "excerpt": "The rap legend – with a little help from his kids – returns to the spotlight with the infectious energy of an upstart with nothing to lose The post Mike D – ‘Thank You’ review: Beastie Boys’ icon’s solo debut is a return to be grateful for appeared first on NME .",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T08:00:07.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.136Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "ed2da0b583f9ab24434fd37beec44cebdecc91dc15eae86020867fc53bd7a13c",
+      "sourceId": "anr-factory",
+      "source": "A&R Factory",
+      "region": "Global / UK",
+      "url": "https://www.anrfactory.com/club-ready-afro-pop-sensuality-gets-its-uk-rnb-firebrand-in-vonjais-mystique/",
+      "title": "Club-ready Afro-pop sensuality gets its UK RnB firebrand in Von’Jai’s ‘Mystique’",
+      "excerpt": "Von’Jai’s latest single, Mystique, is the ultimate femme-fatale RnB Afro-pop reckoning with a bassline plotting for your submission and surrender. The London-based artist is fully in command of the solo spotlight she stepped into with her debut single, No Angel, in 2024 after moving away from harmonising under stained glass in church and wowing X-Factor judges as part of a girl group. Mystique carries a club-lit heat that reaches beyond surface seduction. Mixed and mastered at Redroom Studios by Klaudia Keziah and Kyle Hollow, the single uses Jake Davis and PMD’s beat-and-vocal production to frame Von’Jai’s voice into siren-warm, self-possessed resonance that’s impossible to flatten into any",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T08:00:01.000Z",
+      "discoveredAt": "2026-08-28T08:03:44.903Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "70b380a889ae49c1a2a7cd6e49cf3448e6f2ffc2805c34fd89718096e05a5351",
+      "sourceId": "rtbf-music",
+      "source": "RTBF · Musique",
+      "region": "Europe / Belgium",
+      "url": "https://www.rtbf.be/article/deces-de-dolly-parton-de-nouvelles-informations-autour-de-son-deces-11775268",
+      "title": "Décès de Dolly Parton : de nouvelles informations autour de son décès",
+      "excerpt": "\"Après avoir courageusement affronté le cancer lors d'une brève bataille, Dolly a quitté ce monde au centre de prise en...",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T07:36:43.000Z",
+      "discoveredAt": "2026-08-28T08:03:36.798Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "b7aeb55eb10dec68df057cb43508c289ee803fcee46b6d23ea376650f1c5e825",
+      "sourceId": "nme",
+      "source": "NME",
+      "region": "Europe / UK",
+      "url": "https://www.nme.com/news/tv/every-song-on-the-adults-season-two-soundtrack-3965272?utm_source=rss&utm_medium=rss&utm_campaign=every-song-on-the-adults-season-two-soundtrack",
+      "title": "Every song on the ‘Adults’ season two soundtrack",
+      "excerpt": "The Disney+ show includes music from Green Day, The Wanted and Black Country, New Road The post Every song on the ‘Adults’ season two soundtrack appeared first on NME .",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T07:31:57.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.136Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "77b174ce6f522d66990ce951fe7409cc9f661876efd883be8ff2d1e6e164295f",
+      "sourceId": "guardian-music",
+      "source": "The Guardian · Music",
+      "region": "Europe / UK",
+      "url": "https://www.theguardian.com/music/2026/aug/28/klara-lewis-opening-review",
+      "title": "Klara Lewis: Opening review – enigmatic, ecstatic sound sculptures from a Swedish slowburn master",
+      "excerpt": "(Editions Mego) Lewis mines beauty and intimacy from her minimalist blend of samples and rich instrumentation, sounding as profound whether they last 11 minutes or 38 seconds The first thing you hear on Opening, the new record from Swedish musician Klara Lewis, is a grainy fog of ambient noise: the sound of waves, a roadside or perhaps just the creaks and echoes of the room she’s recording in. The whining reversed strings that soon emerge from the murk create a wistful atmosphere, but then things take a turn: the loop clips and distorts with strobe-like intensity; after several minutes, it cuts off mid-bar, as though it’s been unplugged. This deconstructed, shape-shifting approach is typical",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T07:30:51.000Z",
+      "discoveredAt": "2026-08-28T08:03:27.256Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "37dac5950f3dae636812249fcf77449f9d966fe3381adcbd8157729c1e321f13",
+      "sourceId": "rtbf-music",
+      "source": "RTBF · Musique",
+      "region": "Europe / Belgium",
+      "url": "https://www.rtbf.be/article/dolly-parton-taylor-swift-jack-white-paul-mccartney-mick-jagger-harry-styles-eminem-et-beaucoup-d-autres-lui-rendent-hommage-11775374",
+      "title": "Dolly Parton : Taylor Swift, Jack White, Paul McCartney, Mick Jagger, Harry Styles, Eminem et beaucoup d'autres lui rendent hommage",
+      "excerpt": "La diversité de ces réactions raconte à elle seule la place singulière occupée par Dolly Parton. En 2023, son album...",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T07:26:13.000Z",
+      "discoveredAt": "2026-08-28T08:03:36.798Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "3b927ac4722855703031fb22c053e3e1181dae1a3e7e5855f244889b373ceead",
+      "sourceId": "rtbf-music",
+      "source": "RTBF · Musique",
+      "region": "Europe / Belgium",
+      "url": "https://www.rtbf.be/article/u2-reprend-shane-macgowan-le-groupe-revisite-un-morceau-des-pogues-pour-un-grand-album-hommage-11776498",
+      "title": "U2 reprend Shane MacGowan : le groupe revisite un morceau des Pogues pour un grand album hommage",
+      "excerpt": "Cette reprise figurera sur 20th Century Paddy – The Songs of Shane MacGowan, un imposant album hommage attendu le 13...",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T07:13:02.000Z",
+      "discoveredAt": "2026-08-28T08:03:36.798Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "e9a8c2fc9cfb8b3659a49d95df3c23ba5eb0488d2cef66a142a4b1450c5262ba",
+      "sourceId": "guardian-music",
+      "source": "The Guardian · Music",
+      "region": "Europe / UK",
+      "url": "https://www.theguardian.com/film/2026/aug/28/tormented-jazz-legend-bill-evans-grant-gee",
+      "title": "‘It’s the story of what happens when the music stops’: bringing tormented jazz legend Bill Evans to life",
+      "excerpt": "Having directed documentaries about David Bowie, Radiohead and Joy Division, Grant Gee takes on a biopic of the turbulent and tragic American pianist In 1997, Grant Gee directed the video for Radiohead’s single No Surprises , a four-minute film that featured Thom Yorke miming the song inside a water-filled diver’s helmet, apparently almost drowning in the process. In the three decades since that promo, Gee has made a host of diverse feature-length films about artists: Radiohead, David Bowie, Joy Division, the Turkish Nobel laureate Orhan Pamuk , the émigré German novelist WG Sebald . They are often impressionistic, dreamlike explorations of art, memory, place and the strange pressures put up",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T07:00:51.000Z",
+      "discoveredAt": "2026-08-28T08:03:27.256Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "0af764cb6f066d1b1b28d399317aa8a106c2b4741720d0b6f2fb6bed163d697e",
+      "sourceId": "nme",
+      "source": "NME",
+      "region": "Europe / UK",
+      "url": "https://www.nme.com/news/music/supergrass-to-pull-out-the-hits-and-deep-cuts-on-2027-uk-tour-3965263?utm_source=rss&utm_medium=rss&utm_campaign=supergrass-to-pull-out-the-hits-and-deep-cuts-on-2027-uk-tour",
+      "title": "Supergrass to “pull out the hits and deep cuts” on 2027 UK tour",
+      "excerpt": "It marks their first UK headline shows since their 2025 'I Should Coco' anniversary tour The post Supergrass to “pull out the hits and deep cuts” on 2027 UK tour appeared first on NME .",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T07:00:34.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.136Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "694ae2fae6c41bc7e06c25b3bce5ea92be0c736d65f68e8ce991839e42e782d5",
+      "sourceId": "nme",
+      "source": "NME",
+      "region": "Europe / UK",
+      "url": "https://www.nme.com/features/music-interviews/soundtrack-of-my-life-damien-lewis-3965103?utm_source=rss&utm_medium=rss&utm_campaign=soundtrack-of-my-life-damien-lewis",
+      "title": "Soundtrack Of My Life: Damien Lewis",
+      "excerpt": "Much-loved British actor and rock ‘n’ roll revivalist The post Soundtrack Of My Life: Damien Lewis appeared first on NME .",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T07:00:04.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.136Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "4754b09ccd91a15fcd5f3bb74298cf6116e1e078ab9fa8e09c48ac3017c6d24e",
+      "sourceId": "rtbf-music",
+      "source": "RTBF · Musique",
+      "region": "Europe / Belgium",
+      "url": "https://www.rtbf.be/article/24-personnes-pour-ecrire-une-chanson-pourquoi-la-liste-des-credits-musicaux-est-parfois-a-rallonge-11775577",
+      "title": "24 personnes pour écrire une chanson : pourquoi la liste des crédits musicaux est parfois à rallonge ?",
+      "excerpt": "En mars dernier, le géant du streaming Spotify a facilité l’accès aux crédits des chansons. En quelques clics, on peut...",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T06:00:00.000Z",
+      "discoveredAt": "2026-08-28T08:03:36.798Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "98097954015e03f04b916123e3baba4c941dc1529dda7a1b361bdf67ec52d0a2",
+      "sourceId": "lefigaro-music",
+      "source": "Le Figaro · Musique",
+      "region": "Europe / France",
+      "url": "https://www.lefigaro.fr/musique/concerts-hommages-croisieres-musicales-karaokes-geants-les-fans-se-ruent-sur-les-spectacles-paralleles-avant-le-premier-show-de-celine-dion-20260828",
+      "title": "Concerts hommages, croisières musicales, karaokés géants : les fans se ruent sur les spectacles parallèles avant le premier show de Céline Dion",
+      "excerpt": "ENQUÊTE - La résidence mondiale de la chanteuse québécoise à Paris suscite un record d’événements dans toute la France. Une « dionmania » qui va durer jusqu’à fin 2027.",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T05:45:00.000Z",
+      "discoveredAt": "2026-08-28T08:03:31.908Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "38e3b43c5e135d3578805727641e0f0d10131a8dfa36bd71414ddc2e7ac3726e",
+      "sourceId": "pitchfork",
+      "source": "Pitchfork",
+      "region": "USA",
+      "url": "https://pitchfork.com/story/az-chike-and-tyler-the-creator-reenact-napoleon-dynamite-sinners-in-new-video/",
+      "title": "AZ Chike and Tyler, the Creator Reenact Napoleon Dynamite, Sinners in New Video",
+      "excerpt": "“Look Like My Mama,” a collaborative single from Chike’s forthcoming album, gets a cinematic clip",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T04:14:42.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.400Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "951bbd12c7d248426dd75546fc784508952970b44552013709af961978482f1b",
+      "sourceId": "pitchfork",
+      "source": "Pitchfork",
+      "region": "USA",
+      "url": "https://pitchfork.com/story/frost-children-remix-underscores-the-peace/",
+      "title": "Frost Children Remix Underscores’ “The Peace”",
+      "excerpt": "The reworked U track arrives alongside a new song, “Unlimited Love”",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T04:05:32.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.400Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "963f3112947730232b1d06bc6da6a4a9efb55c316f136c96bb89de5e9479cd35",
+      "sourceId": "consequence",
+      "source": "Consequence",
+      "region": "USA",
+      "url": "https://consequence.net/2026/08/alabama-shakes-new-album-i-must-be-dreaming-stream/",
+      "title": "Alabama Shakes Release First New Album in 11 Years: Stream",
+      "excerpt": "The band's third album was recorded with producer Shawn Everett in Nashville’s Sound Emporium Studios and Blackbird Studio. Alabama Shakes Release First New Album in 11 Years: Stream Kiana Fitzgerald",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T04:03:57.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.692Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "f8048de67623aa2453a112898232ee7c957d5a35622de5efe72fd88d6c47dfda",
+      "sourceId": "consequence",
+      "source": "Consequence",
+      "region": "USA",
+      "url": "https://consequence.net/2026/08/prince-estate-releases-timeless/",
+      "title": "Prince Estate Releases Album, Timeless, on 10th Anniversary of Death: Stream",
+      "excerpt": "The album contains rare or never released tracks recorded from 1977 to 2016. Prince Estate Releases Album, Timeless, on 10th Anniversary of Death: Stream Travis Bland",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T04:02:55.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.692Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "336d4bb6eee5a15bacbc8adb5df9b86cc4a56b83d4ae91d5138c7007fad98030",
+      "sourceId": "consequence",
+      "source": "Consequence",
+      "region": "USA",
+      "url": "https://consequence.net/2026/08/interpol-this-mirror-weighs-a-ton-new-album-stream/",
+      "title": "Interpol Unveil New Album This Mirror Weighs a Ton: Stream",
+      "excerpt": "The New York band's first new album in four years was produced by Andrew Wyatt. Interpol Unveil New Album This Mirror Weighs a Ton: Stream Paolo Ragusa",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T04:02:33.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.692Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "ea65b5528c90b6f614c0782312103e957235f7c1a6ed27a77be874b89ab1831b",
+      "sourceId": "consequence",
+      "source": "Consequence",
+      "region": "USA",
+      "url": "https://consequence.net/2026/08/erykah-badu-the-alchemist-before-the-world-blows-album-stream/",
+      "title": "Erykah Badu and The Alchemist Reveal New Album Before the World Blows: Stream",
+      "excerpt": "The 16-track project features Thundercat, Earl Sweatshirt, Steve Lacy, Kamasi Washington, and Westside Gunn. Erykah Badu and The Alchemist Reveal New Album Before the World Blows: Stream Eddie Fu",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T04:01:16.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.693Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "5c8ac670c9f6c1b3724e525708dafdd678f313c39a1616b9b3ddeb3a793938c9",
+      "sourceId": "npr-music",
+      "source": "NPR Music",
+      "region": "USA",
+      "url": "https://www.npr.org/2026/08/28/nx-s1-5945135/saul-williams-opens-a-portal-between-politics-and-possibility",
+      "title": "Saul Williams opens a portal between politics and possibility",
+      "excerpt": "The unflinching multidisciplinary artist has long welcomed new challenges. With the release of a new album and a new book, he embraces the role his career has been building toward: investigative poet.",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T04:01:00.000Z",
+      "discoveredAt": "2026-08-28T08:03:27.185Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "12976c403e0fc49a8b0addd1ba2733469f1012db3c0df00aa11d711be9504ca4",
+      "sourceId": "guardian-music",
+      "source": "The Guardian · Music",
+      "region": "Europe / UK",
+      "url": "https://www.theguardian.com/music/2026/aug/28/erykah-badu-before-the-world-blows-interview",
+      "title": "‘I’m an ever-changing vessel’: Erykah Badu on defying definition, life as a birth and death doula and her first album in 11 years",
+      "excerpt": "Why do the Texan innovator’s records take so long to make? ‘It’s important to gather the data,’ she says: the death, dating and dopamine behind her exquisite comeback alongside the Alchemist Erykah Badu needs the lights down low . The singer, producer, actor and registered doula shuffles into a private room at London’s Soho hotel and quietly asks for some changes to the atmosphere: lights dimmed, soft seat. A green juice would be great. As it turns out, Badu was out last night with Dave Chappelle, sitting with the comedian at a grand piano and playing songs into the wee hours. She looks mischievous when she thinks about the impromptu party, but declines to go into detail about what, exactly,",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T04:00:49.000Z",
+      "discoveredAt": "2026-08-28T08:03:27.255Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "699f271ddda4fdcbac01b5c9562d61a4a31f13e1356de1cb3bbcb8e0ee1cdb86",
+      "sourceId": "consequence",
+      "source": "Consequence",
+      "region": "USA",
+      "url": "https://consequence.net/2026/08/dahi-how-to-pray-video-kendrick-lamar-amber-mark/",
+      "title": "Dahi Releases “How to Pray” Featuring Kendrick Lamar and Amber Mark: Stream",
+      "excerpt": "The West Coast native's debut solo album Black Boy (Alternative) is out now, with appearances from Lamar, Childish Gambino, Vince Staples, Ravyn Lenae, and more. Dahi Releases “How to Pray” Featuring Kendrick Lamar and Amber Mark: Stream Karan Singh",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T04:00:49.000Z",
+      "discoveredAt": "2026-08-28T08:03:28.693Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "2e604bc03f5f46cc119db2e935f6944e360c245207e27f6090b265c24e139f3e",
+      "sourceId": "guardian-music",
+      "source": "The Guardian · Music",
+      "region": "Europe / UK",
+      "url": "https://www.theguardian.com/culture/2026/aug/28/lorde-little-simz-star-at-world-first-festival-run-on-clean-power",
+      "title": "‘No precedent’: Lorde and Little Simz to star at world-first festival run on clean power",
+      "excerpt": "A zero-emission compact hydrogen power plant will drive the main stage at Clifton Down in Bristol When Lorde, Little Simz and Wet Leg stride on to stages in Bristol this weekend, they will not only be entertaining tens of thousands of festivalgoers but taking part in what is being billed as a world-first clean power project. The two stages at Forwards festival on Clifton Down are being driven almost entirely by green power – a combination of hydrogen and mobile batteries charged with sustainable energy. Continue reading...",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T04:00:48.000Z",
+      "discoveredAt": "2026-08-28T08:03:27.256Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "c39cab2597686bfc79af6b4418520f4f3de6643867c43b2ba367054a15afcca0",
+      "sourceId": "guardian-music",
+      "source": "The Guardian · Music",
+      "region": "Europe / UK",
+      "url": "https://www.theguardian.com/music/2026/aug/28/dolly-parton-sister-stella-tribute-act-of-kindness-cancer-drugs",
+      "title": "Dolly Parton’s sister reveals singer offered to test experimental cancer drugs before she died",
+      "excerpt": "‘My sister was always thinking of others,’ Parton’s younger sister Stella wrote in a Facebook tribute Dolly Parton’s younger sister Stella Parton has shared a moving tribute to the late country music singer on Thursday, revealing that Dolly offered to receive experimental cancer drugs “in the hope of helping others in the future” – an act of kindness and generosity that extended until the end of her life. “My sister was one of the most generous, thoughtful and kind people I’ve ever known,” Stella wrote in a tribute shared on Facebook on Thursday. “What the world saw is exactly who she was.” Continue reading...",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T02:48:26.000Z",
+      "discoveredAt": "2026-08-28T08:03:27.255Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "aa8147351f8b5b8ef097519892cb3a12030a1d24191989eb7cb2fb7127ac4d52",
+      "sourceId": "lacroix-music",
+      "source": "La Croix · Musique",
+      "region": "Europe / France",
+      "url": "https://www.la-croix.com/a-vif/la-chansonnette-20260827",
+      "title": "La chansonnette",
+      "excerpt": "Alain Rémond revient sur cette chansonnette qui nous trotte parfois dans la tête, sans vraiment savoir pourquoi. Une petite parenthèse de douceur face à la dureté du monde.",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-28T02:00:14.000Z",
+      "discoveredAt": "2026-08-28T08:03:32.339Z",
+      "originalLanguage": "auto"
+    },
     {
       "id": "f1c6bdcd8900a71d789a3f8e7b128023ce3b17cd341c07c26341ee559b31065b",
       "sourceId": "consequence",
@@ -212,8 +646,7 @@
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T23:35:37.000Z",
       "discoveredAt": "2026-08-27T23:56:06.427Z",
-      "originalLanguage": "auto",
-      "editorialProvider": "guiropa-ptbr-quality-repair"
+      "originalLanguage": "auto"
     },
     {
       "id": "77531743192fb4e87a24590156566af8bba0df617e46a7a7df8d8d30d4f873fa",
@@ -236,8 +669,7 @@
       "translationStatus": "pt-ready",
       "publishedAt": "2026-08-27T21:44:28.000Z",
       "discoveredAt": "2026-08-27T23:56:05.977Z",
-      "originalLanguage": "auto",
-      "editorialProvider": "ollama-local-zero-key"
+      "originalLanguage": "auto"
     },
     {
       "id": "2714724fdc51482013cf99ddec3664449467f9341c41f058f2fa3bfc2a4d41fe",
@@ -255,8 +687,7 @@
       "translationStatus": "pending",
       "publishedAt": "2026-08-27T21:28:20.000Z",
       "discoveredAt": "2026-08-27T23:56:06.427Z",
-      "originalLanguage": "auto",
-      "editorialQualityReset": "english_residual:\\bpocket\\b,unnatural_ptbr:\\buma humanizada vers[aã]o\\b"
+      "originalLanguage": "auto"
     },
     {
       "id": "eb1f291719d2ba0721757866e991b7b6c060015b0666efa3ae6959bb9492b606",
@@ -274,8 +705,7 @@
       "translationStatus": "pending",
       "publishedAt": "2026-08-27T20:47:29.000Z",
       "discoveredAt": "2026-08-27T23:56:06.427Z",
-      "originalLanguage": "auto",
-      "editorialQualityReset": "english_residual:\\bpreview\\b,unnatural_ptbr:\\baqui estamos tudo\\b"
+      "originalLanguage": "auto"
     },
     {
       "id": "bd04f71caec3a5b5f139dee8e4ac790e2d0dbbe96db2eaca0616ad14327c2189",
@@ -293,6 +723,24 @@
       "translationStatus": "pending",
       "publishedAt": "2026-08-27T20:41:39.000Z",
       "discoveredAt": "2026-08-27T23:56:05.977Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "a334467f764f8cde8a5dbcddee5074991f7b740e99c57cdf61497e5102a75391",
+      "sourceId": "anr-factory",
+      "source": "A&R Factory",
+      "region": "Global / UK",
+      "url": "https://www.anrfactory.com/grieve-humanitys-lost-promise-through-baldy-crawlers-folk-sermon-release-hatred/",
+      "title": "Grieve humanity’s lost promise through Baldy Crawlers’ folk-sermon release, ‘Hatred?’",
+      "excerpt": "From Claremont, California, Baldy Crawlers create folk sermons your soul has been silently screaming for. Led by luthier, producer and Berklee College of Music graduate Martin Maudal, whose handmade guitars gave the project its first spark, the collective turned their latest single, Hatred? into a solemn, humanity-starved release built from lived-in musicianship and social conscience. Through Hatred?, Baldy Crawlers summon an atmosphere that instantly makes your eyes feel raw with emotion. All the arcane touches in the production amplify the evocative weight in the lyrical narrative, which has a beguiling way of recontextualising the fragments of memory, anxiety and perception lingering on t",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-27T20:00:41.000Z",
+      "discoveredAt": "2026-08-28T08:03:44.903Z",
       "originalLanguage": "auto"
     },
     {
@@ -599,6 +1047,24 @@
       "translationStatus": "pending",
       "publishedAt": "2026-08-27T17:11:53.000Z",
       "discoveredAt": "2026-08-27T23:56:03.939Z",
+      "originalLanguage": "auto"
+    },
+    {
+      "id": "5f382addb027a19061139dce6797470b3b0fdf6fed9b6f7d1ba27cae4acec644",
+      "sourceId": "anr-factory",
+      "source": "A&R Factory",
+      "region": "Global / UK",
+      "url": "https://www.anrfactory.com/paper-jones-brought-chameleonic-vocal-magnetism-to-sticky-sweet-math-rock-metamorphism-on-way-she-goes/",
+      "title": "Paper Jones brought chameleonic vocal magnetism to sticky-sweet math-rock metamorphism on ‘Way She Goes’",
+      "excerpt": "Way She Goes by Paper Jones is the ultimate math-rock metamorphism; finally, those mind-twisting time signatures can leave your rhythmic wiring in a frenzy without making you solemnly bow to technical ability and forgo the expectation of sticky-sweet spikes of serotonin. The UK alt-rock band have broken fast onto the scene, reaching Kendal Calling 2026 in only their fifth live show while building towards a debut EP due at the end of summer. In Way She Goes, the vocals are the sharpest weapon of vitality. The melodies feel like a breath of fresh air as they soar through an arrangement that proves art rock and math rock always had capacity for accessibility with its dashes of 90s melodic-rock ",
+      "titlePt": "",
+      "excerptPt": "",
+      "bodyPt": [],
+      "editorialStatus": "pending",
+      "editorialGeneratedAt": null,
+      "translationStatus": "pending",
+      "publishedAt": "2026-08-27T17:00:28.000Z",
+      "discoveredAt": "2026-08-28T08:03:44.903Z",
       "originalLanguage": "auto"
     },
     {
@@ -13278,10 +13744,5 @@
       "discoveredAt": "2026-08-27T14:34:13.966Z",
       "originalLanguage": "auto"
     }
-  ],
-  "editorialUpdatedAt": "2026-08-28T05:59:05.379003+00:00",
-  "editorialDailyLimit": 500,
-  "editorialBatchSize": 12,
-  "editorialLocalBatchSize": 2,
-  "editorialPublishedToday": 4
+  ]
 }
