@@ -3,7 +3,9 @@ name: GUIROPA RSS Throughput Validation
 on:
   pull_request:
     paths:
+      - ".github/workflows/rss-world-bridge.yml"
       - ".github/workflows/rss-world-editorial.yml"
+      - ".github/workflows/rss-world-ptbr-guard.yml"
       - ".github/workflows/deploy.yml"
       - ".github/workflows/guiropa-rss-throughput-validation.yml"
       - "tools/guiropa_news_editorial.py"
@@ -11,7 +13,10 @@ on:
       - "tools/guiropa_ptbr_postpublish_guard.py"
       - "client/package.json"
       - "client/scripts/sanitize-rss-public.mjs"
+      - "client/scripts/publish-rss-vault.mjs"
+      - "client/scripts/rss-world-bridge.mjs"
       - "client/public/data/rss-world-feed.json"
+      - "client/public/data/rss-world-ledger.json"
       - "client/src/components/ScheduleNewsFeed.jsx"
       - "client/src/components/DecadeNewsFeed.jsx"
       - "client/src/pages/DecadeArtistsPage.jsx"
@@ -28,38 +33,38 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Validate Python editorial engines and deploy handoff
+      - name: Validate vault architecture and deploy handoff
         run: |
           python -m py_compile tools/guiropa_news_editorial.py tools/guiropa_news_editorial_source_fallback.py tools/guiropa_ptbr_postpublish_guard.py
           python - <<'PY'
-          import json
           from pathlib import Path
-          d=json.loads(Path('client/public/data/rss-world-feed.json').read_text('utf-8'))
-          assert isinstance(d.get('items'), list) and d['items']
-          for item in d['items']:
-              if item.get('editorialStatus') == 'ready':
-                  assert item.get('titlePt')
-                  assert item.get('excerptPt')
-                  assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
+          bridge=Path('.github/workflows/rss-world-bridge.yml').read_text('utf-8')
+          editorial=Path('.github/workflows/rss-world-editorial.yml').read_text('utf-8')
+          guard=Path('.github/workflows/rss-world-ptbr-guard.yml').read_text('utf-8')
           deploy=Path('.github/workflows/deploy.yml').read_text('utf-8')
+          assert 'RUNNER_TEMP' in bridge and 'guiropa-rss-vault' in bridge
+          assert 'Destroy ephemeral RAW vault' in bridge
+          assert 'publish-rss-vault.mjs' in bridge
+          assert 'workflow_run:' not in bridge
+          assert 'schedule:' not in editorial
+          assert 'publish-rss-vault.mjs' in guard
           assert 'workflow_run:' in deploy
-          assert 'GUIROPA News Tunnel Zero-Cost Multiprovider Editorial' in deploy
           assert 'GUIROPA RSS World Bridge' in deploy
           assert "github.event.workflow_run.conclusion == 'success'" in deploy
           assert 'ref: main' in deploy
-          print('RSS editorial structure + automatic Pages handoff OK')
+          print('Ephemeral RSS vault architecture + automatic Pages handoff OK')
           PY
-      - name: Build GUIROPA and sanitize public RSS
-        working-directory: client
-        run: npm ci && npm run build
-      - name: Verify public RSS contains only complete Portuguese editorial payloads
+      - name: Simulate vault seal on repository payload
+        run: node client/scripts/publish-rss-vault.mjs
+      - name: Verify repository payload contains no RAW provenance after seal
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          public=json.loads(Path('client/dist/data/rss-world-feed.json').read_text('utf-8'))
-          forbidden={'source','sourceId','url','title','excerpt','originalLanguage','editorialProvider','editorialModel'}
-          assert 'sources' not in public
+          public=json.loads(Path('client/public/data/rss-world-feed.json').read_text('utf-8'))
+          ledger=json.loads(Path('client/public/data/rss-world-ledger.json').read_text('utf-8'))
+          forbidden={'source','sourceId','url','title','excerpt','originalLanguage','editorialProvider','editorialModel','editorialGeneratedAt','editorialQualityReset'}
+          assert 'sources' not in public and 'bridge' not in public
           assert isinstance(public.get('items'), list)
           for item in public['items']:
               leaked=forbidden.intersection(item)
@@ -67,8 +72,27 @@ jobs:
               assert item.get('editorialStatus') == 'ready'
               assert item.get('titlePt') and item.get('excerptPt')
               assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
+          assert set(ledger.get('ids') or []) == {item['id'] for item in public['items']}
           assert int(public.get('publishedPt') or 0) == len(public['items'])
-          print(f"Public RSS sanitized: {len(public['items'])} complete PT-BR stories, no origin metadata")
+          print(f"Repository RSS sealed: {len(public['items'])} complete PT-BR stories, published-only ledger")
+          PY
+      - name: Build GUIROPA and sanitize public RSS
+        working-directory: client
+        run: npm ci && npm run build
+      - name: Verify deployed RSS remains provenance-free
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          public=json.loads(Path('client/dist/data/rss-world-feed.json').read_text('utf-8'))
+          forbidden={'source','sourceId','url','title','excerpt','originalLanguage','editorialProvider','editorialModel','editorialGeneratedAt','editorialQualityReset'}
+          assert 'sources' not in public and 'bridge' not in public
+          for item in public.get('items') or []:
+              assert not forbidden.intersection(item)
+              assert item.get('editorialStatus') == 'ready'
+              assert item.get('titlePt') and item.get('excerptPt')
+              assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
+          print(f"Deployed RSS sealed: {len(public.get('items') or [])} PT-BR stories")
           PY
           ! grep -q 'item\.source' client/src/components/ScheduleNewsFeed.jsx
           grep -q 'GUIROPA RADIO · EDITORIAL' client/src/components/ScheduleNewsFeed.jsx
