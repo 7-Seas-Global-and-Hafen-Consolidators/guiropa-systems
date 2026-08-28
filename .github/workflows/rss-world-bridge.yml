@@ -120,11 +120,6 @@ jobs:
       - name: Publish sanitized payload atomically on latest main
         shell: bash
         run: |
-          if git diff --quiet -- client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json; then
-            echo "No sanitized RSS changes. Nothing to publish."
-            exit 0
-          fi
-
           SAFE="${RUNNER_TEMP}/guiropa-rss-publish"
           mkdir -p "$SAFE"
           cp client/public/data/rss-world-feed.json "$SAFE/rss-world-feed.json"
@@ -132,16 +127,31 @@ jobs:
 
           git fetch origin main
           git reset --hard origin/main
-          cp "$SAFE/rss-world-feed.json" client/public/data/rss-world-feed.json
-          cp "$SAFE/rss-world-ledger.json" client/public/data/rss-world-ledger.json
 
-          if git diff --quiet -- client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json; then
-            echo "Latest main already contains this sealed payload."
+          python - "$SAFE/rss-world-feed.json" "$SAFE/rss-world-ledger.json" <<'PY'
+          import json,sys
+          from pathlib import Path
+          incoming_feed=json.loads(Path(sys.argv[1]).read_text('utf-8'))
+          incoming_ledger=json.loads(Path(sys.argv[2]).read_text('utf-8'))
+          current_feed=json.loads(Path('client/public/data/rss-world-feed.json').read_text('utf-8'))
+          current_ledger=json.loads(Path('client/public/data/rss-world-ledger.json').read_text('utf-8'))
+          def semantic_feed(d):
+              return {k:v for k,v in d.items() if k != 'updatedAt'}
+          def semantic_ledger(d):
+              return {k:v for k,v in d.items() if k != 'updatedAt'}
+          same = semantic_feed(incoming_feed) == semantic_feed(current_feed) and semantic_ledger(incoming_ledger) == semantic_ledger(current_ledger)
+          Path(sys.argv[1] + '.semantic').write_text('same' if same else 'changed', encoding='utf-8')
+          print('RSS semantic payload unchanged' if same else 'RSS semantic payload changed')
+          PY
+
+          if [ "$(cat "$SAFE/rss-world-feed.json.semantic")" = "same" ]; then
+            echo "No new publishable RSS content. Timestamp-only churn suppressed."
             exit 0
           fi
 
-          git config user.name "GUIROPA RSS Vault"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json
-          git commit -m "PUBLISH GUIROPA RSS FROM EPHEMERAL VAULT"
-          git push origin HEAD:main
+          cp "$SAFE/rss-world-feed.json" client/public/data/rss-world-feed.json
+          cp "$SAFE/rss-world-ledger.json" client/public/data/rss-world-ledger.json
+
+          echo "Publishable RSS content changed, but main requires pull-request publication."
+          echo "Direct push intentionally blocked to respect repository rules."
+          exit 1
