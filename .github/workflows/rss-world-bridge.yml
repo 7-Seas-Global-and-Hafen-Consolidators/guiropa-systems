@@ -4,17 +4,16 @@ on:
   schedule:
     - cron: "7,37 * * * *"
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - "GUIROPA News Tunnel Zero-Cost Multiprovider Editorial"
-    types:
-      - completed
   push:
     branches:
       - main
     paths:
       - ".github/workflows/rss-world-bridge.yml"
       - "client/scripts/rss-world-bridge.mjs"
+      - "client/scripts/publish-rss-vault.mjs"
+      - "tools/guiropa_news_editorial.py"
+      - "tools/guiropa_news_editorial_source_fallback.py"
+      - "tools/guiropa_ptbr_postpublish_guard.py"
 
 permissions:
   contents: write
@@ -25,9 +24,18 @@ concurrency:
 
 jobs:
   ingest:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 45
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_FREE_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_FREE_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_FREE_API_KEY }}
+      GUIROPA_GROQ_MODEL: openai/gpt-oss-120b
+      GUIROPA_GEMINI_MODEL: gemini-2.5-flash-lite
+      GUIROPA_OPENROUTER_MODEL: openrouter/free
+      GUIROPA_LOCAL_BATCH: "2"
+      GUIROPA_SOURCE_FALLBACK_BATCH: "100"
+      GUIROPA_EDITORIAL_DAILY_LIMIT: "500"
 
     steps:
       - name: Checkout main
@@ -41,20 +49,84 @@ jobs:
         with:
           node-version: 22
 
-      - name: Collect RSS world signals
-        working-directory: client
-        run: node scripts/rss-world-bridge.mjs
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-      - name: Commit only when the bridge changed
+      - name: Create ephemeral RSS vault
+        shell: bash
+        run: |
+          VAULT="${RUNNER_TEMP}/guiropa-rss-vault"
+          mkdir -p "$VAULT/public/data"
+          cp client/public/data/rss-world-feed.json "$VAULT/public/data/rss-world-feed.json"
+          cp client/public/data/rss-world-ledger.json "$VAULT/public/data/rss-world-ledger.json"
+          echo "GUIROPA_RSS_VAULT=$VAULT" >> "$GITHUB_ENV"
+          echo "RAW RSS will exist only inside $VAULT during this job."
+
+      - name: Collect RSS world signals inside ephemeral vault
+        shell: bash
+        run: |
+          cd "$GUIROPA_RSS_VAULT"
+          node "$GITHUB_WORKSPACE/client/scripts/rss-world-bridge.mjs"
+          cp public/data/rss-world-feed.json "$GITHUB_WORKSPACE/client/public/data/rss-world-feed.json"
+          echo "Raw ingest moved into runner checkout for in-job editorial processing only."
+
+      - name: Promote grounded Portuguese signals
+        run: python tools/guiropa_news_editorial_source_fallback.py
+
+      - name: Build additional Portuguese full stories
+        id: multiprovider
+        continue-on-error: true
+        run: python tools/guiropa_news_editorial.py
+
+      - name: Record provider degradation without exposing RAW
+        if: steps.multiprovider.outcome != 'success'
+        run: echo "Multiprovider degraded; grounded PT-BR fallback remains active." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Audit pt-BR before publication
+        run: python tools/guiropa_ptbr_postpublish_guard.py
+
+      - name: Seal public feed and published-only ledger
+        run: node client/scripts/publish-rss-vault.mjs
+
+      - name: Prove RAW provenance is absent before commit
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('client/public/data/rss-world-feed.json').read_text('utf-8'))
+          forbidden={'source','sourceId','url','title','excerpt','originalLanguage','editorialProvider','editorialModel','editorialGeneratedAt','editorialQualityReset'}
+          assert 'sources' not in d and 'bridge' not in d
+          for item in d.get('items') or []:
+              leaked=forbidden.intersection(item)
+              assert not leaked, f'RAW provenance leak: {item.get("id")} {sorted(leaked)}'
+              assert item.get('editorialStatus') == 'ready'
+              assert item.get('titlePt') and item.get('excerptPt')
+              assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
+          ledger=json.loads(Path('client/public/data/rss-world-ledger.json').read_text('utf-8'))
+          assert set(ledger.get('ids') or []) == {x['id'] for x in d.get('items') or []}
+          print(f"Ephemeral vault sealed: {len(d.get('items') or [])} published PT-BR items")
+          PY
+
+      - name: Destroy ephemeral RAW vault
+        if: always()
+        shell: bash
+        run: |
+          rm -rf "${GUIROPA_RSS_VAULT:-${RUNNER_TEMP}/guiropa-rss-vault}"
+          echo "Ephemeral RAW RSS destroyed."
+
+      - name: Commit only sanitized public payload
+        shell: bash
         run: |
           if git diff --quiet -- client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json; then
-            echo "No RSS changes. Nothing to publish."
+            echo "No sanitized RSS changes. Nothing to publish."
             exit 0
           fi
-
-          git config user.name "guiropa-radio-bot"
-          git config user.email "actions@users.noreply.github.com"
+          git config user.name "GUIROPA RSS Vault"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json
-          git commit -m "UPDATE GUIROPA RSS WORLD BRIDGE"
+          git commit -m "PUBLISH GUIROPA RSS FROM EPHEMERAL VAULT"
           git pull --rebase origin main
           git push origin HEAD:main
