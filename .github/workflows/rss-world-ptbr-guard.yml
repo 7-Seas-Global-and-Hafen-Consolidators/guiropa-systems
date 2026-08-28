@@ -6,9 +6,8 @@ on:
     paths:
       - ".github/workflows/rss-world-ptbr-guard.yml"
       - "tools/guiropa_ptbr_postpublish_guard.py"
-  workflow_run:
-    workflows: ["GUIROPA News Tunnel Zero-Cost Multiprovider Editorial"]
-    types: [completed]
+      - "client/scripts/publish-rss-vault.mjs"
+      - "client/public/data/rss-world-feed.json"
   workflow_dispatch:
 
 permissions:
@@ -20,7 +19,6 @@ concurrency:
 
 jobs:
   guard:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -35,19 +33,46 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: Audit published pt-BR stories
         run: python tools/guiropa_ptbr_postpublish_guard.py
 
-      - name: Commit quality repair when needed
+      - name: Seal public RSS and discard provenance
+        run: node client/scripts/publish-rss-vault.mjs
+
+      - name: Verify source repository feed is sanitized
         shell: bash
         run: |
-          if git diff --quiet -- client/public/data/rss-world-feed.json; then
-            echo "No pt-BR repair required."
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('client/public/data/rss-world-feed.json')
+          d=json.loads(p.read_text('utf-8'))
+          forbidden={'source','sourceId','url','title','excerpt','originalLanguage','editorialProvider','editorialModel','editorialGeneratedAt','editorialQualityReset'}
+          assert set(d).isdisjoint({'sources','bridge'}), f'RAW top-level metadata leaked: {set(d) & {"sources","bridge"}}'
+          for item in d.get('items') or []:
+              leaked=forbidden.intersection(item)
+              assert not leaked, f'RAW provenance leaked in {item.get("id")}: {sorted(leaked)}'
+              assert item.get('editorialStatus') == 'ready'
+              assert item.get('titlePt') and item.get('excerptPt')
+              assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
+          print(f"GUIROPA vault sealed: {len(d.get('items') or [])} public PT-BR stories")
+          PY
+
+      - name: Commit sealed public payload when needed
+        shell: bash
+        run: |
+          if git diff --quiet -- client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json; then
+            echo "RSS vault already sealed."
             exit 0
           fi
-          git config user.name "GUIROPA News Quality Guard"
+          git config user.name "GUIROPA RSS Vault"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add client/public/data/rss-world-feed.json
-          git commit -m "REPAIR GUIROPA NEWS TUNNEL PT-BR QUALITY"
+          git add client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json
+          git commit -m "SEAL GUIROPA RSS PUBLIC VAULT"
           git pull --rebase origin main
           git push origin HEAD:main
