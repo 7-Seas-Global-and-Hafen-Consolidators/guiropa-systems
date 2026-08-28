@@ -18,6 +18,7 @@ function isReady(item) {
   return Boolean(
     item?.editorialStatus === "ready" &&
       item?.titlePt &&
+      item?.excerptPt &&
       Array.isArray(item?.bodyPt) &&
       item.bodyPt.length >= 4,
   );
@@ -68,8 +69,8 @@ export default function ScheduleNewsFeed() {
             <span className="schedule-wire__eye">WORLD WIRE · RSS AO VIVO</span>
             <h2>O mundo da música chega aqui.</h2>
             <p>
-              O RSS da GUIROPA agora desembarca diretamente na Programação: notícias
-              coletadas no mundo, publicadas em português e ligadas à matéria completa.
+              O RSS da GUIROPA desembarca diretamente na Programação: notícias
+              coletadas no mundo, editadas em português e ligadas à matéria completa.
             </p>
           </div>
           <div className="schedule-wire__meta">
@@ -87,7 +88,7 @@ export default function ScheduleNewsFeed() {
                 key={item.id}
               >
                 <span className="schedule-wire__source">
-                  {item.source || "GUIROPA WORLD WIRE"}
+                  GUIROPA RADIO · EDITORIAL
                 </span>
                 <strong>{item.titlePt}</strong>
                 <span className="schedule-wire__foot">
@@ -101,7 +102,7 @@ export default function ScheduleNewsFeed() {
           <div className="schedule-wire__empty" role="status">
             {failed
               ? "O sinal RSS não respondeu nesta tentativa. A Programação continua disponível e o feed será tentado novamente no próximo acesso."
-              : "Carregando as matérias publicadas pelo World Wire…"}
+              : "Carregando as matérias editoriais em português…"}
           </div>
         )}
 
