@@ -33,6 +33,12 @@ UNNATURAL_PTBR = (
     r"\buma humanizada vers[aã]o\b",
     r"\bensina filhos\b",
 )
+TYPOGRAPHY_PTBR = (
+    (r"\s+[,.!?;:]", "space_before_punctuation"),
+    (r"[!?]{3,}", "excessive_terminal_punctuation"),
+    (r"(?<!\.)\.{4,}(?!\.)", "excessive_periods"),
+    (r"\s{3,}", "excessive_whitespace"),
+)
 MOJIBAKE = ("�", "Ã©", "Ã£", "Ã§", "Ã³", "â€™", "â€œ", "â€")
 
 # Known false accept observed on 2026-08-28. This repair is grounded only in
@@ -84,6 +90,10 @@ def violations(item: dict) -> list[str]:
     for pattern in UNNATURAL_PTBR:
         if re.search(pattern, lowered, flags=re.I):
             reasons.append(f"unnatural_ptbr:{pattern}")
+            break
+    for pattern, label in TYPOGRAPHY_PTBR:
+        if re.search(pattern, text):
+            reasons.append(f"typography:{label}")
             break
     if any(token in text for token in MOJIBAKE):
         reasons.append("mojibake")
