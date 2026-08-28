@@ -36,7 +36,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
+
+      - name: Preserve current sealed baseline
+        shell: bash
+        run: |
+          BASELINE="${RUNNER_TEMP}/guiropa-rss-baseline"
+          mkdir -p "$BASELINE"
+          cp client/public/data/rss-world-feed.json "$BASELINE/rss-world-feed.json"
+          cp client/public/data/rss-world-ledger.json "$BASELINE/rss-world-ledger.json"
+          echo "GUIROPA_RSS_BASELINE=$BASELINE" >> "$GITHUB_ENV"
 
       - name: Audit published pt-BR stories
         run: python tools/guiropa_ptbr_postpublish_guard.py
@@ -63,16 +72,34 @@ jobs:
           print(f"GUIROPA vault sealed: {len(d.get('items') or [])} public PT-BR stories")
           PY
 
-      - name: Commit sealed public payload when needed
+      - name: Suppress timestamp-only seal churn
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          baseline=Path(os.environ['GUIROPA_RSS_BASELINE'])
+          current_feed=json.loads(Path('client/public/data/rss-world-feed.json').read_text('utf-8'))
+          current_ledger=json.loads(Path('client/public/data/rss-world-ledger.json').read_text('utf-8'))
+          old_feed=json.loads((baseline/'rss-world-feed.json').read_text('utf-8'))
+          old_ledger=json.loads((baseline/'rss-world-ledger.json').read_text('utf-8'))
+          strip_time=lambda d:{k:v for k,v in d.items() if k!='updatedAt'}
+          same=strip_time(current_feed)==strip_time(old_feed) and strip_time(current_ledger)==strip_time(old_ledger)
+          if same:
+              Path('client/public/data/rss-world-feed.json').write_text((baseline/'rss-world-feed.json').read_text('utf-8'),'utf-8')
+              Path('client/public/data/rss-world-ledger.json').write_text((baseline/'rss-world-ledger.json').read_text('utf-8'),'utf-8')
+              print('No semantic RSS change; original timestamps restored.')
+          else:
+              print('Semantic RSS repair detected.')
+          PY
+
+      - name: Verify no direct protected-main mutation is required
         shell: bash
         run: |
           if git diff --quiet -- client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json; then
-            echo "RSS vault already sealed."
+            echo "RSS vault already sealed; no protected-main write required."
             exit 0
           fi
-          git config user.name "GUIROPA RSS Vault"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json
-          git commit -m "SEAL GUIROPA RSS PUBLIC VAULT"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          echo "A semantic RSS repair exists and must be published through a pull request under current repository rules."
+          git diff -- client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json
+          exit 1
