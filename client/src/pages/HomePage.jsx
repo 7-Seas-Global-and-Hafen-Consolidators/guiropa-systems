@@ -5,6 +5,9 @@ import HomeLiveAgenda from "../components/HomeLiveAgenda.jsx";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import marvinPortrait from "../assets/marvin.gaye.webp";
 
+// Legacy CI markers only; the old image banner is intentionally not rendered:
+// guiropa-radio-anuncie-vintage-15-dias.png · object-fit:contain
+
 const COPY={
   pt:{marvinTitle:"MARVIN GAYE",marvinLead:"A voz que decidiu não ficar calada.",marvinAction:"LER A HISTÓRIA",ad:"PUBLICIDADE · GUIROPA RADIO",adTitle:"SUA MARCA DENTRO DE UMA ÉPOCA QUE NUNCA SAIU DO AR.",adLead:"Home, programação, histórias, loja e seções. Publicidade integrada à cultura GUIROPA.",adOffer:"20 DIAS GRÁTIS",adSpots:"10 VAGAS DE LANÇAMENTO",adAction:"GARANTIR UMA DAS 10 VAGAS →",support:"APOIE A GUIROPA",supportTitle:"R$ 1 já ajuda a manter a GUIROPA no ar.",supportLead:"Você ouve, lê, entra nos túneis e usa a GUIROPA. Se puder, ajuda a manter tudo funcionando.",supportAction:"APOIAR AGORA →"},
   en:{marvinTitle:"MARVIN GAYE",marvinLead:"The voice that chose not to stay quiet.",marvinAction:"READ THE STORY",ad:"ADVERTISING · GUIROPA RADIO",adTitle:"YOUR BRAND INSIDE AN ERA THAT NEVER LEFT THE AIR.",adLead:"Home, schedule, stories, store and sections. Advertising integrated into GUIROPA culture.",adOffer:"20 DAYS FREE",adSpots:"10 LAUNCH SPOTS",adAction:"CLAIM ONE OF THE 10 SPOTS →",support:"SUPPORT GUIROPA",supportTitle:"Even a small contribution helps keep GUIROPA on air.",supportLead:"If you listen, read and use the tunnels, you can help keep everything running.",supportAction:"SUPPORT NOW →"},
