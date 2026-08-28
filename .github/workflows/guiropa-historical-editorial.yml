@@ -41,6 +41,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install GitHub Copilot CLI
+        if: env.COPILOT_GITHUB_TOKEN != ''
         run: npm install -g @github/copilot@latest
 
       - name: Resolve safe mode
@@ -48,13 +49,22 @@ jobs:
         shell: bash
         run: |
           APPLY="false"
+          REQUESTED="false"
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            APPLY="true"
+            REQUESTED="true"
           elif [ "${{ github.event.inputs.apply }}" = "true" ]; then
+            REQUESTED="true"
+          fi
+
+          if [ "$REQUESTED" = "true" ] && [ -n "${COPILOT_GITHUB_TOKEN:-}" ]; then
             APPLY="true"
           fi
+
           echo "apply=$APPLY" >> "$GITHUB_OUTPUT"
-          echo "GUIROPA Historical Editorial · apply=$APPLY" >> "$GITHUB_STEP_SUMMARY"
+          echo "GUIROPA Historical Editorial · requested=$REQUESTED · apply=$APPLY" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$REQUESTED" = "true" ] && [ -z "${COPILOT_GITHUB_TOKEN:-}" ]; then
+            echo "Copilot personal token is unavailable; historical generation was safely skipped. Core RSS/editorial pipelines are unaffected." >> "$GITHUB_STEP_SUMMARY"
+          fi
           echo "Hard safety: maximum one AI invocation per workflow run; daily/monthly hard stops are checked before invocation." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Run historical editorial dry check
