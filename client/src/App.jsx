@@ -11,6 +11,7 @@ import ShowsPage from "./pages/ShowsPage.jsx";
 import DecadeArchivePage from "./pages/DecadeArchivePage.jsx";
 import DecadeArtistsPage from "./pages/DecadeArtistsPage.jsx";
 import ArtistEditorialPage from "./pages/ArtistEditorialPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 import SchedulePage from "./SchedulePage.jsx";
 import StorePage from "./StorePage.jsx";
@@ -55,6 +56,8 @@ export default function App() {
 
         <Route path="apoie" element={<SupportPage />} />
         <Route path="support" element={<SupportPage />} />
+
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
