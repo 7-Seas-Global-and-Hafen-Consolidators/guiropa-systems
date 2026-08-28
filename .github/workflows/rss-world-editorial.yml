@@ -1,117 +1,42 @@
 name: GUIROPA News Tunnel Zero-Cost Multiprovider Editorial
 
 on:
-  schedule:
-    - cron: "3,18,33,48 * * * *"
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/rss-world-editorial.yml"
-      - "tools/guiropa_news_editorial.py"
-      - "tools/guiropa_news_editorial_source_fallback.py"
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-concurrency:
-  group: guiropa-news-portuguese-editorial
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  editorial:
+  compatibility-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
-    env:
-      GROQ_API_KEY: ${{ secrets.GROQ_FREE_API_KEY }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_FREE_API_KEY }}
-      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_FREE_API_KEY }}
-      GUIROPA_GROQ_MODEL: openai/gpt-oss-120b
-      GUIROPA_GEMINI_MODEL: gemini-2.5-flash-lite
-      GUIROPA_OPENROUTER_MODEL: openrouter/free
-      GUIROPA_OLLAMA_MODEL: qwen2.5:3b-instruct
-      GUIROPA_OLLAMA_URL: http://127.0.0.1:11434/api/chat
-      GUIROPA_LOCAL_BATCH: "2"
-      GUIROPA_SOURCE_FALLBACK_BATCH: "100"
-      GUIROPA_EDITORIAL_DAILY_LIMIT: "500"
-      GUIROPA_OLLAMA_CONTEXT: "8192"
-      OLLAMA_HOST: 127.0.0.1:11434
-      OLLAMA_CONTEXT_LENGTH: 8192
-      OLLAMA_NUM_PARALLEL: 1
-      OLLAMA_MAX_LOADED_MODELS: 1
-
+    timeout-minutes: 10
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
-      - name: Promote already translated Portuguese signals immediately
-        run: python tools/guiropa_news_editorial_source_fallback.py
-
-      - name: Prepare local zero-key inference fallback
-        if: env.GROQ_API_KEY == '' && env.GEMINI_API_KEY == '' && env.OPENROUTER_API_KEY == ''
-        shell: bash
-        run: |
-          curl -fsSL https://ollama.com/install.sh | sh
-          nohup ollama serve > /tmp/guiropa-ollama.log 2>&1 &
-          ready=0
-          for i in $(seq 1 45); do
-            if curl -fsS http://127.0.0.1:11434/api/tags >/dev/null 2>&1; then ready=1; break; fi
-            sleep 1
-          done
-          if [ "$ready" -ne 1 ]; then cat /tmp/guiropa-ollama.log || true; exit 1; fi
-          ollama pull "$GUIROPA_OLLAMA_MODEL"
-          curl -fsS http://127.0.0.1:11434/api/tags >/dev/null
-          echo "GUIROPA local zero-key fallback ready: $GUIROPA_OLLAMA_MODEL" >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Build new grounded Portuguese Full Stories through real multiprovider core
-        id: multiprovider
-        continue-on-error: true
-        run: python tools/guiropa_news_editorial.py
-
-      - name: Record multiprovider degradation without blocking safe PT publications
-        if: steps.multiprovider.outcome != 'success'
-        run: echo "Multiprovider generation degraded; already-translated source-grounded PT bulletins remain publishable." >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Enforce truthful editorial health
+      - name: Verify public feed is sealed and Portuguese
         shell: bash
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          p=Path('client/public/data/rss-world-feed.json')
-          d=json.loads(p.read_text('utf-8'))
-          items=d.get('items') or []
-          ready=[x for x in items if x.get('editorialStatus') == 'ready']
-          unsafe=[x.get('id') for x in ready if not x.get('titlePt') or not x.get('excerptPt') or not isinstance(x.get('bodyPt'), list) or len(x.get('bodyPt') or []) < 4]
-          if unsafe:
-              raise SystemExit(f'EDITORIAL BLOCKED — incomplete public stories: {unsafe[:10]}')
-          published=sum(1 for x in ready if x.get('titlePt') and x.get('excerptPt') and len(x.get('bodyPt') or []) >= 4)
-          if int(d.get('publishedPt') or 0) != published:
-              d['publishedPt']=published
-              d['editorialPending']=max(0,len(items)-published)
-              p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n','utf-8')
-          print(f"Editorial health OK: ready={published} pending={d.get('editorialPending',0)} today={d.get('editorialPublishedToday',0)}/{d.get('editorialDailyLimit',500)}")
+          d=json.loads(Path('client/public/data/rss-world-feed.json').read_text('utf-8'))
+          forbidden={'source','sourceId','url','title','excerpt','originalLanguage','editorialProvider','editorialModel','editorialGeneratedAt','editorialQualityReset'}
+          assert 'sources' not in d and 'bridge' not in d
+          for item in d.get('items') or []:
+              assert not forbidden.intersection(item)
+              assert item.get('editorialStatus') == 'ready'
+              assert item.get('titlePt') and item.get('excerptPt')
+              assert isinstance(item.get('bodyPt'), list) and len(item['bodyPt']) >= 4
+          print(f"Compatibility audit OK: {len(d.get('items') or [])} sealed PT-BR stories")
           PY
 
-      - name: Commit only complete Portuguese editorial updates
-        shell: bash
-        run: |
-          if git diff --quiet -- client/public/data/rss-world-feed.json; then
-            echo "No editorial changes. Nothing to publish."
-            exit 0
-          fi
-
-          git config user.name "GUIROPA News Editorial"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add client/public/data/rss-world-feed.json
-          git commit -m "PUBLISH GUIROPA NEWS TUNNEL IN PORTUGUESE"
-          git pull --rebase origin main
-          git push origin HEAD:main
+      - name: Explain automatic editorial ownership
+        run: echo "Automatic ingest + PT-BR editorial now runs inside GUIROPA RSS World Bridge ephemeral vault."
