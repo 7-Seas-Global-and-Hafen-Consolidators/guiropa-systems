@@ -41,6 +41,7 @@ jobs:
           bridge=Path('.github/workflows/rss-world-bridge.yml').read_text('utf-8')
           editorial=Path('.github/workflows/rss-world-editorial.yml').read_text('utf-8')
           guard=Path('.github/workflows/rss-world-ptbr-guard.yml').read_text('utf-8')
+          ptguard=Path('tools/guiropa_ptbr_postpublish_guard.py').read_text('utf-8')
           deploy=Path('.github/workflows/deploy.yml').read_text('utf-8')
           vault=Path('client/scripts/publish-rss-vault.mjs').read_text('utf-8')
           sanitizer=Path('client/scripts/sanitize-rss-public.mjs').read_text('utf-8')
@@ -50,7 +51,7 @@ jobs:
           assert 'workflow_run:' not in bridge
           assert 'schedule:' not in editorial
           assert 'publish-rss-vault.mjs' in guard
-          assert 'SOURCE_DISCLOSURE' in guard and 'SOURCE_MARKERS' in guard
+          assert 'SOURCE_DISCLOSURE' in ptguard and 'SOURCE_MARKERS' in ptguard
           assert 'CONTENT_LEAK_PATTERNS' in vault and 'SOURCE_MARKERS' in vault
           assert 'CONTENT_LEAK_PATTERNS' in sanitizer and 'SOURCE_MARKERS' in sanitizer
           assert 'workflow_run:' in deploy
