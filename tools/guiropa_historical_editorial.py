@@ -156,13 +156,12 @@ PACOTE DE FONTES PARA APURAÇÃO:
 
 
 def call_copilot(prompt: str) -> dict:
-    token = (
-        os.environ.get("COPILOT_GITHUB_TOKEN", "").strip()
-        or os.environ.get("GH_TOKEN", "").strip()
-        or os.environ.get("GITHUB_TOKEN", "").strip()
-    )
+    # GitHub Actions' automatic GITHUB_TOKEN does not authenticate Copilot CLI.
+    # Historical generation must use the dedicated personal Copilot token only;
+    # the workflow safely skips generation when that secret is unavailable.
+    token = os.environ.get("COPILOT_GITHUB_TOKEN", "").strip()
     if not token:
-        raise RuntimeError("No GitHub/Copilot token available")
+        raise RuntimeError("Dedicated Copilot token unavailable")
 
     env = os.environ.copy()
     env["COPILOT_GITHUB_TOKEN"] = token
