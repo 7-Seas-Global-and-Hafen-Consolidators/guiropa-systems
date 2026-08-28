@@ -22,15 +22,15 @@ export default function HomePage(){
       .guiropa-home-portal{background:#f4ead7;color:#211a15}
       .guiropa-home-portal__shell{width:min(1180px,calc(100% - 40px));margin:0 auto}
       .guiropa-home-portal__ad{position:relative;overflow:hidden;background:#b83224;color:#fff;border-block:1px solid #8f241b;scroll-margin-top:calc(var(--header-h) + 16px)}
-      .guiropa-home-portal__ad:after{content:"ANUNCIE";position:absolute;right:-1.5vw;bottom:-1.2vw;color:rgba(255,255,255,.035);font-size:clamp(5rem,13vw,11rem);font-weight:900;line-height:.8;letter-spacing:-.075em;pointer-events:none}
-      .guiropa-home-portal__ad-grid{position:relative;z-index:1;min-height:430px;padding:calc(var(--header-h) + 1.6rem) 0 3.4rem;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(330px,.7fr);gap:clamp(2.2rem,4vw,3.8rem);align-items:center}
-      .guiropa-home-portal__ad-eyebrow{display:block;color:#ffe3cf;font-size:.64rem;font-weight:900;letter-spacing:.2em}
-      .guiropa-home-portal__ad h2{max-width:13ch;margin:.85rem 0 0;font-size:clamp(2.9rem,4.7vw,4.8rem);font-weight:900;line-height:.9;letter-spacing:-.055em;text-wrap:balance}
-      .guiropa-home-portal__ad p{max-width:640px;margin:1.35rem 0 0;color:#ffe9df;font-size:clamp(.95rem,1.25vw,1.08rem);line-height:1.55}
-      .guiropa-home-portal__ad-offer{padding:8px 0 8px 34px;border-left:1px solid rgba(255,255,255,.38)}
-      .guiropa-home-portal__ad-offer strong{display:block;max-width:8ch;font-size:clamp(3.2rem,4.7vw,4.9rem);line-height:.88;letter-spacing:-.055em}
-      .guiropa-home-portal__ad-spots{display:block;margin-top:18px;font-size:.72rem;font-weight:900;letter-spacing:.13em}
-      .guiropa-home-portal__ad .guiropa-home-portal__button{margin-top:26px;min-width:260px;min-height:54px;padding:0 24px;background:#17120e;color:#fff;border-color:#17120e;font-size:.66rem}
+      .guiropa-home-portal__ad:after{content:"ANUNCIE";position:absolute;right:-.8vw;bottom:-.8vw;color:rgba(255,255,255,.022);font-size:clamp(4.5rem,9vw,8.5rem);font-weight:900;line-height:.82;letter-spacing:-.065em;pointer-events:none}
+      .guiropa-home-portal__ad-grid{position:relative;z-index:1;min-height:360px;padding:calc(var(--header-h) + 1rem) 0 2.6rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.72fr);gap:clamp(2rem,3.3vw,3rem);align-items:center}
+      .guiropa-home-portal__ad-eyebrow{display:block;color:#ffe3cf;font-size:.62rem;font-weight:900;letter-spacing:.19em}
+      .guiropa-home-portal__ad h2{max-width:14ch;margin:.72rem 0 0;font-size:clamp(2.45rem,3.8vw,3.85rem);font-weight:900;line-height:.92;letter-spacing:-.048em;text-wrap:balance}
+      .guiropa-home-portal__ad p{max-width:600px;margin:1.05rem 0 0;color:#ffe9df;font-size:clamp(.9rem,1.05vw,1rem);line-height:1.5}
+      .guiropa-home-portal__ad-offer{padding:6px 0 6px 30px;border-left:1px solid rgba(255,255,255,.35)}
+      .guiropa-home-portal__ad-offer strong{display:block;max-width:8ch;font-size:clamp(2.7rem,4vw,4.1rem);line-height:.9;letter-spacing:-.05em}
+      .guiropa-home-portal__ad-spots{display:block;margin-top:14px;font-size:.68rem;font-weight:900;letter-spacing:.12em}
+      .guiropa-home-portal__ad .guiropa-home-portal__button{margin-top:20px;min-width:250px;min-height:50px;padding:0 22px;background:#17120e;color:#fff;border-color:#17120e;font-size:.63rem}
       .guiropa-home-portal__button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border:1px solid #211a15;background:#211a15;color:#fff4df;text-decoration:none;font-size:.62rem;font-weight:900;letter-spacing:.1em}
       .guiropa-home-portal__button:hover{background:#fff;color:#211a15}
       .guiropa-home-feature{padding:clamp(3.5rem,6vw,5rem) 0;background:#f7eedf}
@@ -45,8 +45,8 @@ export default function HomePage(){
       .guiropa-home-support h2{max-width:800px;margin:.8rem 0 0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,5vw,4.8rem);font-weight:400;line-height:.95;letter-spacing:-.05em}
       .guiropa-home-support p{max-width:720px;color:#aa9984;line-height:1.7}
       .guiropa-home-support a{display:inline-flex;min-height:48px;align-items:center;padding:0 18px;background:#b83224;color:#fff5e7;text-decoration:none;font-size:.62rem;font-weight:900;letter-spacing:.11em;white-space:nowrap}
-      @media(max-width:980px){.guiropa-home-portal__ad-grid{grid-template-columns:minmax(0,1fr) minmax(280px,.62fr);gap:2.4rem}.guiropa-home-portal__ad h2{font-size:clamp(2.8rem,5.9vw,4.25rem)}.guiropa-home-portal__ad-offer strong{font-size:clamp(3rem,5.5vw,4.4rem)}}
-      @media(max-width:760px){.guiropa-home-portal__shell{width:min(100% - 24px,650px)}.guiropa-home-portal__ad-grid,.guiropa-home-feature__grid,.guiropa-home-support__grid{grid-template-columns:1fr}.guiropa-home-portal__ad-grid{min-height:auto;padding:calc(var(--header-h) + 1.5rem) 0 3rem;gap:1.8rem}.guiropa-home-portal__ad-offer{padding:24px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.4)}.guiropa-home-portal__ad h2{max-width:12ch;font-size:clamp(2.45rem,11.5vw,4rem);line-height:.91}.guiropa-home-portal__ad-offer strong{font-size:clamp(2.8rem,12vw,4.2rem)}.guiropa-home-portal__ad .guiropa-home-portal__button{width:100%;min-width:0}.guiropa-home-portal__ad:after{font-size:clamp(4rem,22vw,7rem);bottom:-.4rem;right:-.8rem}.guiropa-home-feature img{max-height:320px}.guiropa-home-support a{justify-self:start}}
+      @media(max-width:980px){.guiropa-home-portal__ad-grid{grid-template-columns:minmax(0,1fr) minmax(270px,.62fr);gap:2rem}.guiropa-home-portal__ad h2{font-size:clamp(2.4rem,4.9vw,3.55rem)}.guiropa-home-portal__ad-offer strong{font-size:clamp(2.65rem,4.8vw,3.8rem)}}
+      @media(max-width:760px){.guiropa-home-portal__shell{width:min(100% - 24px,650px)}.guiropa-home-portal__ad-grid,.guiropa-home-feature__grid,.guiropa-home-support__grid{grid-template-columns:1fr}.guiropa-home-portal__ad-grid{min-height:auto;padding:calc(var(--header-h) + 1rem) 0 2.4rem;gap:1.5rem}.guiropa-home-portal__ad-offer{padding:20px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.35)}.guiropa-home-portal__ad h2{max-width:13ch;font-size:clamp(2.15rem,9.8vw,3.45rem);line-height:.93}.guiropa-home-portal__ad-offer strong{font-size:clamp(2.5rem,10.5vw,3.7rem)}.guiropa-home-portal__ad .guiropa-home-portal__button{width:100%;min-width:0}.guiropa-home-portal__ad:after{font-size:clamp(3.5rem,18vw,5.8rem);bottom:-.3rem;right:-.4rem}.guiropa-home-feature img{max-height:320px}.guiropa-home-support a{justify-self:start}}
     `}</style>
     <Hero />
     <ExploreHub />
