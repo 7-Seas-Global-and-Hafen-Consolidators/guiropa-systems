@@ -69,7 +69,7 @@ jobs:
           assert 'source-structured-pt' in fallback
           assert 'titlePt' in fallback and 'excerptPt' in fallback
 
-          assert 'cron: "7,37 * * * *"' in bridge
+          assert 'cron: "17,47 * * * *"' in bridge
           assert 'RUNNER_TEMP' in bridge
           assert 'guiropa-rss-vault' in bridge
           assert 'python tools/guiropa_news_editorial_source_fallback.py' in bridge
