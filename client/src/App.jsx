@@ -24,6 +24,8 @@ export default function App() {
     <Routes>
       <Route path="1977" element={<GuiropaUnifiedRadioPage initialSource="70s" />} />
       <Route path="70s" element={<GuiropaUnifiedRadioPage initialSource="70s" />} />
+      <Route path="disco" element={<GuiropaUnifiedRadioPage initialSource="disco-ca" />} />
+      <Route path="disco-canada" element={<GuiropaUnifiedRadioPage initialSource="disco-ca" />} />
       <Route path="1986" element={<GuiropaUnifiedRadioPage initialSource="80s-pop" />} />
 
       <Route element={<Layout />}>
