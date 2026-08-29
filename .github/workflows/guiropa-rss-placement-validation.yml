@@ -1,0 +1,46 @@
+name: GUIROPA RSS Placement Validation
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/rss-world-bridge.yml"
+      - ".github/workflows/guiropa-rss-placement-validation.yml"
+      - "client/src/App.jsx"
+      - "client/src/pages/DecadeArchiveWithNewsPage.jsx"
+      - "client/src/components/DecadeNewsFeed.jsx"
+      - "client/src/components/ScheduleNewsFeed.jsx"
+      - "client/src/pages/WorldWireContinuousPage.jsx"
+      - "client/src/pages/NewsTunnelStoryPage.jsx"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: client/package-lock.json
+      - name: Verify RSS routes and protected publication
+        shell: bash
+        run: |
+          grep -q 'DecadeArchiveWithNewsPage' client/src/App.jsx
+          grep -q 'DecadeNewsFeed' client/src/pages/DecadeArchiveWithNewsPage.jsx
+          grep -q 'ScheduleNewsFeed' client/src/SchedulePage.jsx
+          grep -q 'rss-world-feed.json' client/src/components/ScheduleNewsFeed.jsx
+          grep -q 'rss-world-feed.json' client/src/components/DecadeNewsFeed.jsx
+          grep -q 'rss-world-feed.json' client/src/pages/WorldWireContinuousPage.jsx
+          grep -q 'rss-world-feed.json' client/src/pages/NewsTunnelStoryPage.jsx
+          grep -q 'pull-requests: write' .github/workflows/rss-world-bridge.yml
+          grep -q 'automation/guiropa-rss-refresh' .github/workflows/rss-world-bridge.yml
+          grep -q 'gh pr create' .github/workflows/rss-world-bridge.yml
+          ! grep -q 'git push origin main' .github/workflows/rss-world-bridge.yml
+      - name: Build GUIROPA
+        working-directory: client
+        run: npm ci && npm run build

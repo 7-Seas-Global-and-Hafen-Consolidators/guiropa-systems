@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: guiropa-rss-world-bridge
@@ -117,10 +118,13 @@ jobs:
           rm -rf "${GUIROPA_RSS_VAULT:-${RUNNER_TEMP}/guiropa-rss-vault}"
           echo "Ephemeral RAW RSS destroyed."
 
-      - name: Publish sanitized payload atomically on latest main
+      - name: Publish sanitized payload through protected-main PR
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           SAFE="${RUNNER_TEMP}/guiropa-rss-publish"
+          BRANCH="automation/guiropa-rss-refresh"
           mkdir -p "$SAFE"
           cp client/public/data/rss-world-feed.json "$SAFE/rss-world-feed.json"
           cp client/public/data/rss-world-ledger.json "$SAFE/rss-world-ledger.json"
@@ -152,6 +156,19 @@ jobs:
           cp "$SAFE/rss-world-feed.json" client/public/data/rss-world-feed.json
           cp "$SAFE/rss-world-ledger.json" client/public/data/rss-world-ledger.json
 
-          echo "Publishable RSS content changed, but main requires pull-request publication."
-          echo "Direct push intentionally blocked to respect repository rules."
-          exit 1
+          git config user.name "GUIROPA RSS Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add client/public/data/rss-world-feed.json client/public/data/rss-world-ledger.json
+          git commit -m "chore(rss): publish sanitized GUIROPA world feed"
+          git push --force origin "HEAD:$BRANCH"
+
+          PR_URL="$(gh pr list --state open --base main --head "$BRANCH" --json url --jq '.[0].url // empty')"
+          if [ -z "$PR_URL" ]; then
+            PR_URL="$(gh pr create --base main --head "$BRANCH" --title "GUIROPA RSS: publish sanitized world feed" --body "Automated sanitized RSS publication from the ephemeral GUIROPA World Bridge. Public payload contains only complete PT-BR editorial stories and the published-only ledger. RAW provenance stays outside the repository.")"
+            echo "Opened protected-main RSS PR: $PR_URL"
+          else
+            echo "Updated existing protected-main RSS PR: $PR_URL"
+          fi
+
+          echo "RSS semantic update staged safely through PR; main was not pushed directly."

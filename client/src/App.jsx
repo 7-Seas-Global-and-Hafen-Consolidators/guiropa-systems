@@ -8,7 +8,7 @@ import GuiropaUnifiedRadioPage from "./pages/GuiropaUnifiedRadioPage.jsx";
 import WorldWireContinuousPage from "./pages/WorldWireContinuousPage.jsx";
 import NewsTunnelStoryPage from "./pages/NewsTunnelStoryPage.jsx";
 import ShowsPage from "./pages/ShowsPage.jsx";
-import DecadeArchivePage from "./pages/DecadeArchivePage.jsx";
+import DecadeArchiveWithNewsPage from "./pages/DecadeArchiveWithNewsPage.jsx";
 import DecadeArtistsPage from "./pages/DecadeArtistsPage.jsx";
 import ArtistEditorialPage from "./pages/ArtistEditorialPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
@@ -32,7 +32,7 @@ export default function App() {
         <Route index element={<HomePage />} />
         <Route path="shows" element={<ShowsPage />} />
         <Route path="agenda" element={<ShowsPage />} />
-        <Route path="decada/:decade" element={<DecadeArchivePage />} />
+        <Route path="decada/:decade" element={<DecadeArchiveWithNewsPage />} />
         <Route path="decada/:decade/artistas" element={<DecadeArtistsPage />} />
         <Route path="decada/:decade/artistas/:slug" element={<ArtistEditorialPage />} />
 
