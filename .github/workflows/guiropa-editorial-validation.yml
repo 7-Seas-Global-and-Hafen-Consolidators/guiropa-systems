@@ -67,7 +67,12 @@ jobs:
           assert 'translationStatus' in fallback
           assert 'pt-ready' in fallback
           assert 'source-structured-pt' in fallback
+          assert 'zero-cost-factual-envelope-v3' in fallback
           assert 'titlePt' in fallback and 'excerptPt' in fallback
+          assert 'source.casefold() in public_seed' in fallback
+          assert 'a partir de {source}' not in fallback
+          assert 'A pauta permanece conectada' not in fallback
+          assert 'link original' not in fallback.lower()
 
           assert 'cron: "17,47 * * * *"' in bridge
           assert 'RUNNER_TEMP' in bridge
