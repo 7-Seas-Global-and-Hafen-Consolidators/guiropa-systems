@@ -44,7 +44,7 @@ def sentence(text: str) -> str:
 
 
 def source_name(item: dict[str, Any]) -> str:
-    return first(item, "sourceName", "source", "publisher") or "a fonte original"
+    return first(item, "sourceName", "source", "publisher")
 
 
 def translated_pt_ready(item: dict[str, Any]) -> bool:
@@ -71,15 +71,27 @@ def build_story(item: dict[str, Any]) -> tuple[str, str, list[str]] | None:
     excerpt = clean(item.get("excerptPt"))
     region = first(item, "region", "country", "category") or "Mundo"
     source = source_name(item)
-    published = first(item, "publishedAt", "pubDate", "discoveredAt", "date")
-    url = first(item, "url", "link", "sourceUrl")
+
+    # Mr. Nomad / GUIROPA public editorial must never expose the research outlet.
+    # If the translated signal itself carries the outlet name, leave it pending
+    # instead of publishing a story that the post-publish guard will reject.
+    public_seed = f"{title} {excerpt}".casefold()
+    if source and source.casefold() in public_seed:
+        return None
 
     p1 = sentence(excerpt)
-    p2 = f"A atualização foi identificada pelo News Tunnel da GUIROPA a partir de {source}, na cobertura classificada como {region}."
-    if published:
-        p2 += f" O registro de origem traz a marca temporal {published}."
-    p3 = "Este boletim usa somente o título, o resumo e os metadados já traduzidos e presentes no sinal coletado. Nenhum nome, número, declaração, causa ou circunstância adicional foi criado para preencher lacunas da fonte."
-    p4 = f"A pauta permanece conectada à fonte {source}. " + ("O link original acompanha o registro para consulta direta e para eventuais atualizações posteriores." if url else "A GUIROPA continuará acompanhando atualizações verificáveis desta pauta pelo fluxo de fontes conectado.")
+    p2 = (
+        f"O registro chegou ao News Tunnel da GUIROPA classificado em {region}. "
+        "A edição preserva somente as informações já disponíveis no sinal em português."
+    )
+    p3 = (
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas "
+        "ou circunstâncias que não estejam presentes no material coletado."
+    )
+    p4 = (
+        "O acompanhamento permanece aberto para novas informações verificáveis. "
+        "Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+    )
 
     body = [p1, p2, p3, p4]
     if any(len(clean(paragraph)) < 20 for paragraph in body):
@@ -113,7 +125,7 @@ def main() -> int:
         item["editorialStatus"] = "ready"
         item["editorialGeneratedAt"] = stamp
         item["editorialProvider"] = "source-structured-pt"
-        item["editorialModel"] = "zero-cost-factual-envelope-v2"
+        item["editorialModel"] = "zero-cost-factual-envelope-v3"
         published += 1
 
     ready = [item for item in items if item.get("editorialStatus") == "ready" and item.get("titlePt") and item.get("excerptPt") and isinstance(item.get("bodyPt"), list) and len(item.get("bodyPt") or []) >= 4]
