@@ -163,12 +163,25 @@ jobs:
           git commit -m "chore(rss): publish sanitized GUIROPA world feed"
           git push --force origin "HEAD:$BRANCH"
 
-          PR_URL="$(gh pr list --state open --base main --head "$BRANCH" --json url --jq '.[0].url // empty')"
+          PR_URL="$(gh pr list --state open --base main --head "$BRANCH" --json url --jq '.[0].url // empty' 2>/dev/null || true)"
           if [ -z "$PR_URL" ]; then
-            PR_URL="$(gh pr create --base main --head "$BRANCH" --title "GUIROPA RSS: publish sanitized world feed" --body "Automated sanitized RSS publication from the ephemeral GUIROPA World Bridge. Public payload contains only complete PT-BR editorial stories and the published-only ledger. RAW provenance stays outside the repository.")"
-            echo "Opened protected-main RSS PR: $PR_URL"
+            set +e
+            PR_URL="$(gh pr create --base main --head "$BRANCH" --title "GUIROPA RSS: publish sanitized world feed" --body "Automated sanitized RSS publication from the ephemeral GUIROPA World Bridge. Public payload contains only complete PT-BR editorial stories and the published-only ledger. RAW provenance stays outside the repository." 2>"$SAFE/pr-create.err")"
+            PR_STATUS=$?
+            set -e
+            if [ "$PR_STATUS" -eq 0 ] && [ -n "$PR_URL" ]; then
+              echo "Opened protected-main RSS PR: $PR_URL"
+            else
+              echo "RSS refresh branch pushed successfully; repository policy blocks GitHub Actions PR creation."
+              echo "Branch ready for manual PR: $BRANCH"
+              {
+                echo "### RSS publication staged"
+                echo "Branch \`$BRANCH\` contains the sanitized payload."
+                echo "Repository policy prevented the Actions token from opening the pull request automatically; the ingest itself succeeded."
+              } >> "$GITHUB_STEP_SUMMARY"
+            fi
           else
             echo "Updated existing protected-main RSS PR: $PR_URL"
           fi
 
-          echo "RSS semantic update staged safely through PR; main was not pushed directly."
+          echo "RSS semantic update staged safely; main was not pushed directly."
