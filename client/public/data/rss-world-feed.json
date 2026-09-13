@@ -1,10 +1,490 @@
 {
-  "updatedAt": "2026-08-30T20:40:04.728Z",
+  "updatedAt": "2026-09-13T06:49:37.604Z",
   "brand": "GUIROPA RADIO",
-  "itemCount": 22,
-  "publishedPt": 22,
+  "itemCount": 52,
+  "publishedPt": 52,
   "editorialPending": 0,
   "items": [
+    {
+      "id": "fcbb2b89817e3d3f05a7482e3f35fabf6d110c09274911030625dc49b6a3b6e8",
+      "region": "Europe / France",
+      "titlePt": "“Quero cantar para você, cantar para mim, cantar sobre a vida”: Céline Dion um retorno triunfante",
+      "excerptPt": "Céline Dion, que deu seu primeiro show em Paris no sábado, 12 de setembro, voltou ao público com grande emoção. Na voz e na forma, a diva de Quebec liberou muita energia e muito fervor.",
+      "bodyPt": [
+        "Céline Dion, que deu seu primeiro show em Paris no sábado, 12 de setembro, voltou ao público com grande emoção. Na voz e na forma, a diva de Quebec liberou muita energia e muito fervor.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-13T06:40:44.000Z",
+      "discoveredAt": "2026-09-13T06:47:58.360Z"
+    },
+    {
+      "id": "9e7bd92a8ae5e1db327d2de7a1f29739831a1334aa41047aebd3f1096b0a6a17",
+      "region": "Europe / France",
+      "titlePt": "Para seu retorno aos palcos, uma Céline Dion em altura humana em Paris",
+      "excerptPt": "CRÍTICA – A cantora conseguiu sua aposta com um show cheio de humanidade.",
+      "bodyPt": [
+        "CRÍTICA – A cantora conseguiu sua aposta com um show cheio de humanidade.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-13T06:08:47.000Z",
+      "discoveredAt": "2026-09-13T06:47:57.723Z"
+    },
+    {
+      "id": "21022805cb0f10e0b38a26eff79564adf079c2976618c8996db513a724fd7dc4",
+      "region": "Europe / Belgium",
+      "titlePt": "Lançamento do TIFF, Damso suspende carreira solo e Bolloré na mira: as 5 novidades culturais da semana",
+      "excerptPt": "Começou um dos mais importantes festivais considerados uma grande montra do cinema mundial e norte-americano...",
+      "bodyPt": [
+        "Começou um dos mais importantes festivais considerados uma grande montra do cinema mundial e norte-americano.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-13T06:00:00.000Z",
+      "discoveredAt": "2026-09-13T06:48:04.555Z"
+    },
+    {
+      "id": "99d6241bd70bdb792ff9a7b6e6d6752cf51eb148450ca98898498e35ef8195ba",
+      "region": "Europe / Belgium",
+      "titlePt": "“Physical Graffiti”: o que está por trás dessa capa do Led Zeppelin?",
+      "excerptPt": "Por que um álbum duplo? Porque Jimmy Page, Robert Plant, John Paul Jones e John Bonham acumularam o suficiente...",
+      "bodyPt": [
+        "Por que um álbum duplo? Porque Jimmy Page, Robert Plant, John Paul Jones e John Bonham acumularam o suficiente.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-13T05:53:59.000Z",
+      "discoveredAt": "2026-09-13T06:48:04.555Z"
+    },
+    {
+      "id": "7ac265c0884d8daef698b8c91ea00fd32b11e6ade693611b107ba9558fa53e93",
+      "region": "Asia / Afghanistan",
+      "titlePt": "Dawood Sarkhosh diz que se recuperou do câncer - khaama.com",
+      "excerptPt": "Dawood Sarkhosh diz que se recuperou do câncer khaama.com",
+      "bodyPt": [
+        "Dawood Sarkhosh diz que se recuperou do câncer khaama.com.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Asia / Afghanistan. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-13T05:43:01.000Z",
+      "discoveredAt": "2026-09-13T06:47:52.561Z"
+    },
+    {
+      "id": "3c8e75bb06b0d7f6aeb8783b5756e4b167a4851f3616484a135664d2ec2d8c42",
+      "region": "Europe / UK",
+      "titlePt": "Crítica de Céline Dion – o primeiro show ao vivo da cantora em anos marca um retorno triunfante e emocionante",
+      "excerptPt": "Plenitude Arena, Paris Dion enxugou as lágrimas e cantou as notas, apresentando uma atuação surpreendente apesar de seu diagnóstico de síndrome da pessoa rígida. Em 2022, quando Céline Dion compartilhou que havia sido diagnosticada com um distúrbio neurológico raro e incurável chamado síndrome da pessoa rígida (SPS), não havia garantia de que o homem de 58 anos faria uma turnê novamente. Sua condição, que resultou em espasmos musculares tão fortes que a deixaram com costelas quebradas, impossibilitou sua atuação, e em um documentário de 2024, I Am: Céline Dion, os fãs viram como a doença havia contraído sua voz antes aparentemente infalível. Apesar de tudo, porém, Dion estava decidida a voltar um dia ao palco. \"EU",
+      "bodyPt": [
+        "Plenitude Arena, Paris Dion enxugou as lágrimas e cantou as notas, apresentando uma atuação surpreendente apesar de seu diagnóstico de síndrome da pessoa rígida. Em 2022, quando Céline Dion compartilhou que havia sido diagnosticada com um distúrbio neurológico raro e incurável chamado síndrome da pessoa rígida (SPS), não havia garantia de que o homem de 58 anos faria uma turnê novamente. Sua condição, que resultou em espasmos musculares tão fortes que a deixaram com costelas quebradas, impossibilitou sua atuação, e em um documentário de 2024, I Am: Céline Dion, os fãs viram como a doença havia contraído sua voz antes aparentemente infalível. Apesar de tudo, porém, Dion estava decidida a voltar um dia ao palco. \"EU.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-13T01:47:04.000Z",
+      "discoveredAt": "2026-09-13T06:47:46.650Z"
+    },
+    {
+      "id": "e360cf6e5a6c48320d7d43911c5f7d1b9a06c4792e9e889cf1847ed504c204de",
+      "region": "Europe / Switzerland",
+      "titlePt": "Celine Dion renasce no palco perto de Paris após seis anos de ausência",
+      "excerptPt": "\"On ne change pas\", \"All by Myself\", \"Pour que tu m'aimes encore\"... Impressionada com o retorno aos palcos após seis anos de ausência, Céline Dion apresentou uma série de sucessos na noite de sábado para iniciar sua série de shows perto de Paris, um renascimento após anos marcados pela doença.",
+      "bodyPt": [
+        "\"On ne change pas\", \"All by Myself\", \"Pour que tu m'aimes encore\"... Impressionada com o retorno aos palcos após seis anos de ausência, Céline Dion apresentou uma série de sucessos na noite de sábado para iniciar sua série de shows perto de Paris, um renascimento após anos marcados pela doença.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Switzerland. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-13T00:26:41.000Z",
+      "discoveredAt": "2026-09-13T06:48:05.287Z"
+    },
+    {
+      "id": "ebcbf5a971e4bc147f7b1c03414d51a3301e3d4d97408dde54b409daf5cb4178",
+      "region": "USA",
+      "titlePt": "Céline Dion retorna triunfante aos palcos em Paris para o primeiro show em seis anos: Setlist + Vídeos",
+      "excerptPt": "O primeiro show de Dion desde que foi diagnosticado com síndrome da pessoa rígida em 2022 aconteceu na La Défense Arena, em Paris, no sábado. Céline Dion retorna triunfante aos palcos de Paris para o primeiro show em seis anos: Setlist + Vídeos Paolo Ragusa",
+      "bodyPt": [
+        "O primeiro show de Dion desde que foi diagnosticado com síndrome da pessoa rígida em 2022 aconteceu na La Défense Arena, em Paris, no sábado. Céline Dion retorna triunfante aos palcos de Paris para o primeiro show em seis anos: Setlist + Vídeos Paolo Ragusa.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T23:59:20.000Z",
+      "discoveredAt": "2026-09-13T06:47:48.916Z"
+    },
+    {
+      "id": "dabd729c6478cbdbf9f3683833902976637cae06770ad68223c119f24fd9ee7f",
+      "region": "USA",
+      "titlePt": "Celine Dion retorna aos palcos após lutar contra doença rara",
+      "excerptPt": "A cantora canadense abriu sua residência de 16 shows em Paris, na Plenitude Arena. A série inteira está esgotada.",
+      "bodyPt": [
+        "A cantora canadense abriu sua residência de 16 shows em Paris, na Plenitude Arena. A série inteira está esgotada.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T23:54:06.000Z",
+      "discoveredAt": "2026-09-13T06:47:46.570Z"
+    },
+    {
+      "id": "1646436751268ab984dada4e8f759995f700ef24d4144777c7259e9bcf8248f9",
+      "region": "Global / UK",
+      "titlePt": "O Shazam está contando aos artistas mais do que eles pensam: o guia definitivo para transformar pesquisas em estratégia",
+      "excerptPt": "Alguém está em um bar, no meio de uma conversa, quando uma música interrompe tudo o que está acontecendo ao seu redor. O telefone deles aparece. Shazam abre. Em segundos, um artista do qual nunca tinham ouvido falar adquiriu um dos dados de público mais interessantes à sua disposição. Os números do streaming informam aos músicos o que as pessoas tocaram. Shazam diz a eles que alguém ouviu uma música em algum lugar selvagem e se importou o suficiente para descobrir quem a fez. Essa distinção merece atenção. O Shazam passou mais de duas décadas reduzindo uma das frustrações mais antigas do fandom de música a um botão. Foi lançado no Reino Unido em agosto de 2002 quando a identificação de uma música misteriosa envolvia a discagem para 2580",
+      "bodyPt": [
+        "Alguém está em um bar, no meio de uma conversa, quando uma música interrompe tudo o que está acontecendo ao seu redor. O telefone deles aparece. Shazam abre. Em segundos, um artista do qual nunca tinham ouvido falar adquiriu um dos dados de público mais interessantes à sua disposição. Os números do streaming informam aos músicos o que as pessoas tocaram. Shazam diz a eles que alguém ouviu uma música em algum lugar selvagem e se importou o suficiente para descobrir quem a fez. Essa distinção merece atenção. O Shazam passou mais de duas décadas reduzindo uma das frustrações mais antigas do fandom de música a um botão. Foi lançado no Reino Unido em agosto de 2002 quando a identificação de uma música misteriosa envolvia a discagem para 2580.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T21:30:30.000Z",
+      "discoveredAt": "2026-09-13T06:48:17.225Z"
+    },
+    {
+      "id": "80d7939e196461915dd9cecf4aadb1c0b5cf6622d94dc7227aca33d162d6aa80",
+      "region": "Middle East / Palestine",
+      "titlePt": "Pink revida em meio à reação por criticar os comentários pró-palestinos de Macklemore no show - Fox News",
+      "excerptPt": "Pink revida em meio à reação por criticar os comentários pró-palestinos de Macklemore no show Fox News",
+      "bodyPt": [
+        "Pink revida em meio à reação por criticar os comentários pró-palestinos de Macklemore no show Fox News.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Middle East / Palestine. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T20:03:13.000Z",
+      "discoveredAt": "2026-09-13T06:47:55.304Z"
+    },
+    {
+      "id": "d6283a74b26151a1e02c7391ed96abd2146eb362b8759ea29a9b87d4f7893686",
+      "region": "Europe / UK",
+      "titlePt": "Tove Lo: ‘O boato que mais ouço é que estou grávida ou em reabilitação. Eu quero que ambos não sejam verdade '",
+      "excerptPt": "A cantora e compositora sueca de electro-pop sobre a fuga para Las Vegas, verificando os armários em busca de assassinos e seu truque de festa assustador. Qual foi sua interação mais memorável com um fã? O que me vem à mente é um fã em Austin que conheci em uma de minhas primeiras turnês por lá. Ele correu até mim e disse: “ASSINE MEU BRAÇO!” Assinei o braço dele e quando ele voltou ao show na noite seguinte ele o tatuou – havia plástico por cima. Lembro-me de dizer: “Eu teria feito um trabalho melhor se soubesse que você iria tatuá-lo”. Depois tiramos uma foto nossa, comigo apontando para a tatuagem. Continuar lendo...",
+      "bodyPt": [
+        "A cantora e compositora sueca de electro-pop sobre a fuga para Las Vegas, verificando os armários em busca de assassinos e seu truque de festa assustador. Qual foi sua interação mais memorável com um fã? O que me vem à mente é um fã em Austin que conheci em uma de minhas primeiras turnês por lá. Ele correu até mim e disse: “ASSINE MEU BRAÇO!” Assinei o braço dele e quando ele voltou ao show na noite seguinte ele o tatuou – havia plástico por cima. Lembro-me de dizer: “Eu teria feito um trabalho melhor se soubesse que você iria tatuá-lo”. Depois tiramos uma foto nossa, comigo apontando para a tatuagem. Continuar lendo.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T20:00:45.000Z",
+      "discoveredAt": "2026-09-13T06:47:46.650Z"
+    },
+    {
+      "id": "0f37f5092db2fe8179fae38177c27a09365f0d52f6c213b84918b71876294d7c",
+      "region": "Asia / Afghanistan",
+      "titlePt": "Dawood Sarkhosh diz que se recuperou do câncer - KabulNow",
+      "excerptPt": "Dawood Sarkhosh diz que se recuperou do câncer KabulNow",
+      "bodyPt": [
+        "Dawood Sarkhosh diz que se recuperou do câncer KabulNow.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Asia / Afghanistan. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T18:16:55.000Z",
+      "discoveredAt": "2026-09-13T06:47:52.561Z"
+    },
+    {
+      "id": "a6c5e72ec8f594ee7738414eb99a579daeeee39adee53d44490398cdbe7f57c1",
+      "region": "USA",
+      "titlePt": "Brandon Flowers e seu filho fazem cover de “Don’t Look Back in Anger” do Oasis: assista",
+      "excerptPt": "O vocalista do Killers foi acompanhado por seu filho Henry na guitarra. Brandon Flowers e seu filho fazem cover de “Don’t Look Back in Anger” do Oasis: assista Travis Bland",
+      "bodyPt": [
+        "O vocalista do Killers foi acompanhado por seu filho Henry na guitarra. Brandon Flowers e seu filho fazem cover de “Don’t Look Back in Anger” do Oasis: assista Travis Bland.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T17:14:14.000Z",
+      "discoveredAt": "2026-09-13T06:47:48.916Z"
+    },
+    {
+      "id": "3f54d3352f850ff82abe014664bcba1d5bc3a40d558e7aece9680dfd5c94bc9f",
+      "region": "Canada / Québec",
+      "titlePt": "Escuta Seletiva | Sugestões dos nossos jornalistas",
+      "excerptPt": "Cem mil faixas são carregadas em plataformas de audição todos os dias. Nossos jornalistas chamam sua atenção para as músicas e álbuns que os emocionam.",
+      "bodyPt": [
+        "Cem mil faixas são carregadas em plataformas de audição todos os dias. Nossos jornalistas chamam sua atenção para as músicas e álbuns que os emocionam.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T17:00:00.000Z",
+      "discoveredAt": "2026-09-13T06:47:57.421Z"
+    },
+    {
+      "id": "231edb212b5b47384bfcd460a1dddae2bbd5c5946f6a6a98ca64ffefa927cb95",
+      "region": "USA",
+      "titlePt": "Mastodon reflete sobre “Wildly Adventurous” Blood Mountain no 20º aniversário do álbum",
+      "excerptPt": "Troy Sanders e Brann Dailor relembram o terceiro álbum do Mastodon, Blood Mountain. Mastodon reflete sobre “Wildly Adventurous” Blood Mountain no 20º aniversário do álbum Spencer Kaufman",
+      "bodyPt": [
+        "Troy Sanders e Brann Dailor relembram o terceiro álbum do Mastodon, Blood Mountain. Mastodon reflete sobre “Wildly Adventurous” Blood Mountain no 20º aniversário do álbum Spencer Kaufman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T16:53:25.000Z",
+      "discoveredAt": "2026-09-13T06:47:48.916Z"
+    },
+    {
+      "id": "311599c8ee05586fc78e544d6bb24176636b4dc5644c89893a0507c671240725",
+      "region": "Europe / France",
+      "titlePt": "Concertos de Celine Dion em Paris: mil milhões de euros para a economia francesa?",
+      "excerptPt": "A contribuição dos concertos de Céline Dion em Paris para o PIB francês poderá ascender a mil milhões de euros a partir de 2026 ou durante dois anos, segundo Natixis. Durante estes espetáculos com uma pegada de carbono muito elevada, cada visitante deverá gastar em média 1.500€.",
+      "bodyPt": [
+        "A contribuição dos concertos de Céline Dion em Paris para o PIB francês poderá ascender a mil milhões de euros a partir de 2026 ou durante dois anos, segundo Natixis. Durante estes espetáculos com uma pegada de carbono muito elevada, cada visitante deverá gastar em média 1.500€.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T16:38:50.000Z",
+      "discoveredAt": "2026-09-13T06:47:58.360Z"
+    },
+    {
+      "id": "ed2f988d9b3288e864a40b46ce78cf67c357d5f4afe4437928f7d8bde5c12309",
+      "region": "USA",
+      "titlePt": "O momento Blackmore do Deep Purple mostra que sua era Spinal Tap acabou",
+      "excerptPt": "Ian Gillan diz que foi bom provar ao mundo que não sobrou nenhuma rixa do passado. Continuar lendo…",
+      "bodyPt": [
+        "Ian Gillan diz que foi bom provar ao mundo que não sobrou nenhuma rixa do passado. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T16:35:44.000Z",
+      "discoveredAt": "2026-09-13T06:47:47.559Z"
+    },
+    {
+      "id": "bb767dbb123cbdbc90b141e09d7a69ba2d5c33a52c5a55fca3aa7de1a998759d",
+      "region": "USA",
+      "titlePt": "A catraca dos vencedores do Grammy ganha uma honra ainda maior: artista em destaque de cinco caras",
+      "excerptPt": "A banda de hardcore de Baltimore perguntou ao restaurante “Quando vamos comprar um hambúrguer vegetariano?” A catraca dos vencedores do Grammy ganha uma honra ainda maior: cinco caras em destaque, o artista Travis Bland",
+      "bodyPt": [
+        "A banda de hardcore de Baltimore perguntou ao restaurante “Quando vamos comprar um hambúrguer vegetariano?” A catraca dos vencedores do Grammy ganha uma honra ainda maior: cinco caras em destaque, o artista Travis Bland.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T16:22:16.000Z",
+      "discoveredAt": "2026-09-13T06:47:48.916Z"
+    },
+    {
+      "id": "3baf56f0ac1caff4e4bd237349ab94e1b847f42f43ed296fcd6f11a5f57cfceb",
+      "region": "USA",
+      "titlePt": "10 álbuns de rock famosos lançados em 12 de setembro",
+      "excerptPt": "De picos de carreira e retornos artísticos aclamados a erros ambiciosos, 12 de setembro é um dia agitado para aniversários de álbuns. Continuar lendo…",
+      "bodyPt": [
+        "De picos de carreira e retornos artísticos aclamados a erros ambiciosos, 12 de setembro é um dia agitado para aniversários de álbuns. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T16:05:05.000Z",
+      "discoveredAt": "2026-09-13T06:47:47.559Z"
+    },
+    {
+      "id": "5ac465dfe07a84db9e0c5a4f7f92cff377e529d29b806da95058b77e2d1f4075",
+      "region": "Canada / Québec",
+      "titlePt": "Em apresentação na Place Bell | A selva brinca de alegria",
+      "excerptPt": "Os ritmos soul, funk e disco do trio britânico Jungle vêm iluminando a mente de seus admiradores desde 2013. Isso é ainda mais verdadeiro no novo álbum, Sunshine. Conversamos com o membro fundador Tom McFarland antes do show de sua banda no domingo na Place Bell.",
+      "bodyPt": [
+        "Os ritmos soul, funk e disco do trio britânico Jungle vêm iluminando a mente de seus admiradores desde 2013. Isso é ainda mais verdadeiro no novo álbum, Sunshine. Conversamos com o membro fundador Tom McFarland antes do show de sua banda no domingo na Place Bell.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T16:00:00.000Z",
+      "discoveredAt": "2026-09-13T06:47:57.422Z"
+    },
+    {
+      "id": "9ca77e7ac05eed55f40138a8c4228234bf176ebb7ca2e58d2624da62adc9e0b9",
+      "region": "USA",
+      "titlePt": "Por que a Ásia não contratou Roy Wood da ELO como vocalista",
+      "excerptPt": "Carl Palmer lembra como o supergrupo esteve perto de ser liderado pelo líder Wizzard. Continuar lendo…",
+      "bodyPt": [
+        "Carl Palmer lembra como o supergrupo esteve perto de ser liderado pelo líder Wizzard. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T15:29:14.000Z",
+      "discoveredAt": "2026-09-13T06:47:47.559Z"
+    },
+    {
+      "id": "2ad890ff3ccb21a85646bdfaef6dcb11a5202796b528bbf7613838fed9625494",
+      "region": "USA",
+      "titlePt": "Bon Iver canta sobre Meatloaf Dippers em um jingle para restaurante em Minnesota",
+      "excerptPt": "Com apenas uma escuta, você cantará a música de Justin Vernon sobre palitos de bolo de carne fritos o dia todo. Bon Iver canta sobre Meatloaf Dippers em um jingle para o restaurante Travis Bland de Minnesota",
+      "bodyPt": [
+        "Com apenas uma escuta, você cantará a música de Justin Vernon sobre palitos de bolo de carne fritos o dia todo. Bon Iver canta sobre Meatloaf Dippers em um jingle para o restaurante Travis Bland de Minnesota.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T14:52:50.000Z",
+      "discoveredAt": "2026-09-13T06:47:48.916Z"
+    },
+    {
+      "id": "1498ca24a50d71f438967dc5b4fcc701b0d2a2a8281afb40a175b6321af8eef2",
+      "region": "Europe / Belgium",
+      "titlePt": "Celine Dion retorna aos palcos, encerrando seis anos de espera dos fãs",
+      "excerptPt": "A contagem regressiva acabou para os fãs de Celine Dion. A cantora com mais de 260 milhões de álbuns vendidos...",
+      "bodyPt": [
+        "A contagem regressiva acabou para os fãs de Celine Dion. A cantora com mais de 260 milhões de álbuns vendidos.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T14:47:18.000Z",
+      "discoveredAt": "2026-09-13T06:48:04.555Z"
+    },
+    {
+      "id": "7106e0523a4d906832921bacc3c577701e6c5a41babead2ffbe9f5b8a0d016c6",
+      "region": "Europe / Belgium",
+      "titlePt": "Axel Bauer: o jeans rasgado que quase lhe custou a carreira",
+      "excerptPt": "Um detalhe de roupa pode realmente mudar sua carreira? A questão pode parecer trivial. Porém, Axel...",
+      "bodyPt": [
+        "Um detalhe de roupa pode realmente mudar sua carreira? A questão pode parecer trivial. Porém, Axel.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T14:16:00.000Z",
+      "discoveredAt": "2026-09-13T06:48:04.555Z"
+    },
+    {
+      "id": "e04bdd5bcc662a403f2027c1c649637368efaa43435576d8de1ec6b6248afd5f",
+      "region": "Europe / UK",
+      "titlePt": "‘Eu poderia transar todas as noites da semana!’: ícone punk Legs McNeil sobre bebida, bebidas e namoro Sinéad O’Connor",
+      "excerptPt": "Ao lançar um livro que conta tudo, o fundador da revista Punk e que se autodenomina 'fodido' fala sobre os excessos dos anos 1970, as raízes americanas do punk e por que os Beatles são 'estúpidos'. Legs McNeil lembra vividamente a reação que obteve das bandas originais do CBGB em 1975, quando ouviram o nome da revista que ele co-fundou: Punk, a primeira publicação dedicada ao formato. “Absolutamente ninguém queria ser chamado de punk naquela época”, disse ele. \"Nem mesmo os Ramones... Johnny Ramone exigiu que riscássemos todas as referências ao punk em um artigo sobre eles.\" Avançamos alguns anos e “de repente todo mundo queria ser chamado de punk!” McNeil disse. “Os Ramones começaram a correr por aí contando",
+      "bodyPt": [
+        "Ao lançar um livro que conta tudo, o fundador da revista Punk e que se autodenomina 'fodido' fala sobre os excessos dos anos 1970, as raízes americanas do punk e por que os Beatles são 'estúpidos'. Legs McNeil lembra vividamente a reação que obteve das bandas originais do CBGB em 1975, quando ouviram o nome da revista que ele co-fundou: Punk, a primeira publicação dedicada ao formato. “Absolutamente ninguém queria ser chamado de punk naquela época”, disse ele. \"Nem mesmo os Ramones... Johnny Ramone exigiu que riscássemos todas as referências ao punk em um artigo sobre eles.\" Avançamos alguns anos e “de repente todo mundo queria ser chamado de punk!” McNeil disse. “Os Ramones começaram a correr por aí contando.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T14:00:35.000Z",
+      "discoveredAt": "2026-09-13T06:47:46.650Z"
+    },
+    {
+      "id": "50ed0aabf9c331d276b636167c72d20f97ba6fd005faf7fef0b883d4f3dde348",
+      "region": "Global / UK",
+      "titlePt": "Jack Rush visualizou o amor como uma falha de identidade obscura com seu lançamento indie excentricamente acessível, ‘Stranger in My Mind’",
+      "excerptPt": "Nos cantos mais peculiares do synth-pop está a viagem desordenada pela dissonância desencadeada pelo romance do último single de Jack Rush, Stranger in My Mind. O artista radicado na Suíça colocou em órbita um sonho febril de indie rock através de uma produção cosmicamente polvilhada e enraizada nos anos 80, carregando um arsenal de acessibilidade enquanto mantém a faixa deliciosamente torta. Jack Rush carrega o magnetismo independente de David Byrne através da ostentação, da alienação e das melodias polifônicas que visualizam a deriva do lirismo. Há uma sensação contaminada de lucidez na liberação, como se você estivesse preso na atração psicodélica de um desapego alimentado pela luxúria de sua própria psique, em vez de apenas ser",
+      "bodyPt": [
+        "Nos cantos mais peculiares do synth-pop está a viagem desordenada pela dissonância desencadeada pelo romance do último single de Jack Rush, Stranger in My Mind. O artista radicado na Suíça colocou em órbita um sonho febril de indie rock através de uma produção cosmicamente polvilhada e enraizada nos anos 80, carregando um arsenal de acessibilidade enquanto mantém a faixa deliciosamente torta. Jack Rush carrega o magnetismo independente de David Byrne através da ostentação, da alienação e das melodias polifônicas que visualizam a deriva do lirismo. Há uma sensação contaminada de lucidez na liberação, como se você estivesse preso na atração psicodélica de um desapego alimentado pela luxúria de sua própria psique, em vez de apenas ser.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T14:00:04.000Z",
+      "discoveredAt": "2026-09-13T06:48:17.225Z"
+    },
+    {
+      "id": "2165b7085c51d3a730e9714aecf61e1906b3878c18a1f027ec75a682ded0db22",
+      "region": "Europe / France",
+      "titlePt": "“É o melhor presente de toda a minha vida”: Paris em crise com o início dos shows de Celine Dion",
+      "excerptPt": "HISTÓRIA – Este sábado, às 20h, o astro lança sua primeira série de 16 shows na Arena Plenitude. Um evento global que transforma Paris numa DionCity e que deverá arrecadar mais de mil milhões de euros.",
+      "bodyPt": [
+        "HISTÓRIA – Este sábado, às 20h, o astro lança sua primeira série de 16 shows na Arena Plenitude. Um evento global que transforma Paris numa DionCity e que deverá arrecadar mais de mil milhões de euros.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T13:49:19.000Z",
+      "discoveredAt": "2026-09-13T06:47:57.723Z"
+    },
+    {
+      "id": "2ab6e6a972756094546c5d4b3146552a07b2d6f9889357862e32b57e08528df0",
+      "region": "USA",
+      "titlePt": "Beach Damage força festival Ocean Way com Olivia Dean, The Killers e Jack White a ser cancelado",
+      "excerptPt": "Os reembolsos estão sendo emitidos e os planos para um Festival Ocean Way em 2027 estão em andamento, disseram autoridades municipais. Beach Damage força festival Ocean Way com Olivia Dean, The Killers e Jack White a serem cancelados Travis Bland",
+      "bodyPt": [
+        "Os reembolsos estão sendo emitidos e os planos para um Festival Ocean Way em 2027 estão em andamento, disseram autoridades municipais. Beach Damage força festival Ocean Way com Olivia Dean, The Killers e Jack White a serem cancelados Travis Bland.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T13:47:51.000Z",
+      "discoveredAt": "2026-09-13T06:47:48.916Z"
+    },
+    {
+      "id": "b1a3b9cc3093b4414f68d375c5b0d3e3cc2dbc1a67b5e73871dda6f6584ded14",
+      "region": "USA",
+      "titlePt": "Drake revela que medo de perder é um “filme não tão curto”",
+      "excerptPt": "O projeto é “dirigido e trilhado pela família” e tem lançamento previsto para 15 de setembro. Drake revela que medo de perder é um “filme não tão curto” Alex Young",
+      "bodyPt": [
+        "O projeto é “dirigido e trilhado pela família” e tem lançamento previsto para 15 de setembro. Drake revela que medo de perder é um “filme não tão curto” Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-12T12:41:27.000Z",
+      "discoveredAt": "2026-09-13T06:47:48.916Z"
+    },
     {
       "id": "4fb03d462f0ea677c8c2136a7fd53e9c273b038a8c2e24eba9a0a1f15750b332",
       "region": "Global / UK",
