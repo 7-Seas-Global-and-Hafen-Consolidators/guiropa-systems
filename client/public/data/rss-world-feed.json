@@ -1,10 +1,490 @@
 {
-  "updatedAt": "2026-08-30T20:40:04.728Z",
+  "updatedAt": "2026-09-19T18:04:56.342Z",
   "brand": "GUIROPA RADIO",
-  "itemCount": 22,
-  "publishedPt": 22,
+  "itemCount": 52,
+  "publishedPt": 52,
   "editorialPending": 0,
   "items": [
+    {
+      "id": "183c03ea326c513352a88f22fd68b7adef69a751170a8e00062aeb9cf9186cf4",
+      "region": "Europe / Belgium",
+      "titlePt": "Jacques de Pierpont: o Botanique inaugura o “Fonds Pompon”, 3.500 arquivos da cena alternativa belga",
+      "excerptPt": "3500 peças para contar a história das margens da música belga Vinis, CDs, cassetes, fanzines, livros, estudos universitários...",
+      "bodyPt": [
+        "3500 peças para contar a história das margens da música belga Vinis, CDs, cassetes, fanzines, livros, estudos universitários.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T16:49:01.000Z",
+      "discoveredAt": "2026-09-19T18:03:43.308Z"
+    },
+    {
+      "id": "2c8665cad35567716a2b73d702e78230082171bb10ccc1f3c876d9a4d89f7089",
+      "region": "USA",
+      "titlePt": "Orville Peck diz que ficou com um jogador do Oakland Raiders",
+      "excerptPt": "O cantor country mascarado diz que o jogador misterioso ficou “muito emocionado” por ter o encontro referenciado em seu novo álbum, Mule. Orville Peck diz que ficou com Alex Krinsky, jogador do Oakland Raiders",
+      "bodyPt": [
+        "O cantor country mascarado diz que o jogador misterioso ficou “muito emocionado” por ter o encontro referenciado em seu novo álbum, Mule. Orville Peck diz que ficou com Alex Krinsky, jogador do Oakland Raiders.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T16:44:12.000Z",
+      "discoveredAt": "2026-09-19T18:03:29.016Z"
+    },
+    {
+      "id": "4ca1d5bc3204cc5c02f68994684ca5c47708d18adb29dc52dfcadf8898496f64",
+      "region": "Middle East / Palestine",
+      "titlePt": "Ed Sheeran e Macklemore: como uma turnê gerou polêmica - BBC",
+      "excerptPt": "Ed Sheeran e Macklemore: como uma turnê gerou polêmica BBC",
+      "bodyPt": [
+        "Ed Sheeran e Macklemore: como uma turnê gerou polêmica BBC.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Middle East / Palestine. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T16:27:40.000Z",
+      "discoveredAt": "2026-09-19T18:03:34.230Z"
+    },
+    {
+      "id": "fb8aff9c2835424f3c1a5a3a0f866341a3c61c71c8d1deb8100adaf53b657a68",
+      "region": "Canada / Québec",
+      "titlePt": "Escuta Seletiva | Sugestões dos nossos jornalistas",
+      "excerptPt": "Cem mil faixas são carregadas em plataformas de audição todos os dias. Nossos jornalistas chamam sua atenção para as músicas e álbuns que os emocionam.",
+      "bodyPt": [
+        "Cem mil faixas são carregadas em plataformas de audição todos os dias. Nossos jornalistas chamam sua atenção para as músicas e álbuns que os emocionam.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T16:00:00.000Z",
+      "discoveredAt": "2026-09-19T18:03:36.101Z"
+    },
+    {
+      "id": "b5099e243785f39194ebf196540798123541202a46228454d0334cf1245b2f92",
+      "region": "Global / UK",
+      "titlePt": "Joel Baker fez Americana se sentir em casa novamente com ‘Searching (for your song)’",
+      "excerptPt": "O trovador rural Joel Baker derrama a sublimidade de seu entorno em sua discografia americana com o tipo de reverência pelo gênero que faz com que suas obras humildemente eufônicas se sintam instantaneamente em casa. De uma pequena cidade no sul de Iowa vem seu último single, Searching (for your song), um lançamento americano de orientação folk que carrega a pureza vocal de Neil Young por meio de um arranjo rico e baseado no violão. A faixa confronta você com o cálculo de ver suas falhas internas refletidas nos olhos de outra pessoa e, como resultado, sentir-se menos homem. Contra uma melodia otimista, a ressonância lírica torna-se ainda mais poderosa, quase conflituosa através da justaposição",
+      "bodyPt": [
+        "O trovador rural Joel Baker derrama a sublimidade de seu entorno em sua discografia americana com o tipo de reverência pelo gênero que faz com que suas obras humildemente eufônicas se sintam instantaneamente em casa. De uma pequena cidade no sul de Iowa vem seu último single, Searching (for your song), um lançamento americano de orientação folk que carrega a pureza vocal de Neil Young por meio de um arranjo rico e baseado no violão. A faixa confronta você com o cálculo de ver suas falhas internas refletidas nos olhos de outra pessoa e, como resultado, sentir-se menos homem. Contra uma melodia otimista, a ressonância lírica torna-se ainda mais poderosa, quase conflituosa através da justaposição.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T16:00:00.000Z",
+      "discoveredAt": "2026-09-19T18:03:56.418Z"
+    },
+    {
+      "id": "854ba7c27a4b4505e2a8d79d2d2a41073c7847929979ac265924e8cc932415db",
+      "region": "Europe / Belgium",
+      "titlePt": "The Smiths: a guerra da realeza que separou definitivamente o grupo",
+      "excerptPt": "The Smiths, dois artistas e dois funcionários, Morrissey nas letras e Johnny Marr na música. Mas atrás deles...",
+      "bodyPt": [
+        "The Smiths, dois artistas e dois funcionários, Morrissey nas letras e Johnny Marr na música. Mas atrás deles.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T15:16:00.000Z",
+      "discoveredAt": "2026-09-19T18:03:43.308Z"
+    },
+    {
+      "id": "a3008eb74f8853ea7edffed43b7982b08629badc2c7463384adb3d7ef9a99a75",
+      "region": "Europe / Switzerland",
+      "titlePt": "O que recompensam os Prêmios Suíços de Música concedidos neste sábado à noite em Lausanne?",
+      "excerptPt": "Este sábado, o Departamento Federal de Cultura (OFC) distribui quase meio milhão de francos a oito músicos e grupos suíços e a três instituições que trabalham pela música suíça. Mas o que representam esses prêmios e o que trazem para a carreira dos vencedores?",
+      "bodyPt": [
+        "Este sábado, o Departamento Federal de Cultura (OFC) distribui quase meio milhão de francos a oito músicos e grupos suíços e a três instituições que trabalham pela música suíça. Mas o que representam esses prêmios e o que trazem para a carreira dos vencedores?.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Switzerland. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T15:11:55.000Z",
+      "discoveredAt": "2026-09-19T18:03:44.461Z"
+    },
+    {
+      "id": "e361611ff2d4cf2c50934195ea683122db5e0e12424340eb98d8c45f93bff939",
+      "region": "Europe / Belgium",
+      "titlePt": "Você sempre acreditou que...Woodstock 69 foi um festival de paz e amor",
+      "excerptPt": "Agosto de 1969: o caos por trás da lenda de Woodstock. A imagem de uma geração. Exceto que se você estivesse lá, você...",
+      "bodyPt": [
+        "Agosto de 1969: o caos por trás da lenda de Woodstock. A imagem de uma geração. Exceto que se você estivesse lá, você.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T13:53:00.000Z",
+      "discoveredAt": "2026-09-19T18:03:43.308Z"
+    },
+    {
+      "id": "7044e77c9a81f66dc9f542b68c2036e1cc394134192ec4201599139d63b8d7c8",
+      "region": "USA",
+      "titlePt": "Carrot Top hospitalizado após tentativa de suicídio",
+      "excerptPt": "O ator/comediante esteve em Las Vegas realizando sua residência noturna. Carrot Top hospitalizado após tentativa de suicídio de Alex Young",
+      "bodyPt": [
+        "O ator/comediante esteve em Las Vegas realizando sua residência noturna. Carrot Top hospitalizado após tentativa de suicídio de Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T13:23:40.000Z",
+      "discoveredAt": "2026-09-19T18:03:29.016Z"
+    },
+    {
+      "id": "a8544649d5f476c270dda5ae7595e6da591d00e07bc34567392f6d38708f20b4",
+      "region": "Europe / UK",
+      "titlePt": "REVISÃO AO VIVO: Primal Scream comemora ‘XTRMNTR’ AQUI na Outernet",
+      "excerptPt": "Artistas excepcionais são frequentemente definidos por terem um álbum clássico. Primal Scream sem dúvida foi mais longe, com Screamadelica e XTRMNTR sendo registros marcantes em seu catálogo. Mais de um quarto de século depois, [...]",
+      "bodyPt": [
+        "Artistas excepcionais são frequentemente definidos por terem um álbum clássico. Primal Scream sem dúvida foi mais longe, com Screamadelica e XTRMNTR sendo registros marcantes em seu catálogo. Mais de um quarto de século depois, [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T12:48:40.000Z",
+      "discoveredAt": "2026-09-19T18:03:29.671Z"
+    },
+    {
+      "id": "00b97a450228eff2addd0988f63c97de245475b9b26a620feeb82b0f77b6f411",
+      "region": "Europe / Belgium",
+      "titlePt": "The Slits: o grupo que transformou um clássico da Motown em um OVNI pós-punk",
+      "excerptPt": "Mudando a Inglaterra: o nascimento do pós-punk No final dos anos 1970, a fúria bruta da primeira onda...",
+      "bodyPt": [
+        "Mudando a Inglaterra: o nascimento do pós-punk No final dos anos 1970, a fúria bruta da primeira onda.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T12:35:00.000Z",
+      "discoveredAt": "2026-09-19T18:03:43.309Z"
+    },
+    {
+      "id": "f7b488e9835499e550415ba64b06162116a074b211ba6accae3e0fe1e25d2fb8",
+      "region": "Europe / UK",
+      "titlePt": "REVISÃO DO ÁLBUM: Beck – Ride Lonesome",
+      "excerptPt": "Os fãs esperaram muito pelo décimo quinto álbum de estúdio de Beck Hansen, Ride Lonesome. Ele marca a maior lacuna entre os álbuns de estúdio na carreira de Beck, após a mistura de gêneros Hyperspace de 2019. Ride Lonesome continua alguns dos [...]",
+      "bodyPt": [
+        "Os fãs esperaram muito pelo décimo quinto álbum de estúdio de Beck Hansen, Ride Lonesome. Ele marca a maior lacuna entre os álbuns de estúdio na carreira de Beck, após a mistura de gêneros Hyperspace de 2019. Ride Lonesome continua alguns dos [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T12:16:23.000Z",
+      "discoveredAt": "2026-09-19T18:03:29.671Z"
+    },
+    {
+      "id": "0cf02b2db7f1bbb6c8c6f55278d8c0ff271d7346afda35ed8868f8bde321233e",
+      "region": "Europe / UK",
+      "titlePt": "Assista Angus Young do AC/DC contratar o bebê de um fã",
+      "excerptPt": "O guitarrista participou de um pop-up 'PWR/UP', depois que um \"evento climático severo\" forçou a banda a cancelar seu show em Toronto.",
+      "bodyPt": [
+        "O guitarrista participou de um pop-up 'PWR/UP', depois que um \"evento climático severo\" forçou a banda a cancelar seu show em Toronto.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T12:05:00.000Z",
+      "discoveredAt": "2026-09-19T18:03:28.358Z"
+    },
+    {
+      "id": "c73699146fd16d32f6ddc83e919cb5121ce9238e95e87119b50e5e520c9029fa",
+      "region": "Europe / Belgium",
+      "titlePt": "Muitos convocaram, poucos escolheram: quando o Hellfest estabelece um rito de espera digital",
+      "excerptPt": "Um artigo de Stéphane Amato, Professor de Ciências da Informação e Comunicação, Universidade de...",
+      "bodyPt": [
+        "Um artigo de Stéphane Amato, Professor de Ciências da Informação e Comunicação, Universidade de.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T12:00:42.000Z",
+      "discoveredAt": "2026-09-19T18:03:43.309Z"
+    },
+    {
+      "id": "0caad339d1ed341c1e6696960b5cb906bf4fc864dbe67ad9fc9bbc01a7aeb892",
+      "region": "Global / UK",
+      "titlePt": "Barras de tiro rápido surgem em meio à atmosfera dark trap na faixa do segundo ano de Arden B, ‘Back in the Day’",
+      "excerptPt": "Se você gosta de acompanhar artistas de rap em ascensão, aproveite rapidamente o hype de Arden B; há combustível de foguete por trás de sua ascensão. O artista independente de Rap e R&B, empresário e executivo de tecnologia começou a trabalhar com seu single de estreia, WORK, e agora, com seu segundo single, Back in the Day, transmitido pelas ondas do rádio, ele está se tornando uma força de rap inconfundível. Olhando para o passado em suas letras enquanto abraça totalmente a produção moderna em torno de barras rápidas, batidas boom-bap e estética dark trap, Arden B se sente totalmente preso em seu próprio caminho. Ele é levado pela vontade em sua própria convicção enquanto se torna lírico com o tipo de confiança que só o verdadeiro talento pode manter sem som.",
+      "bodyPt": [
+        "Se você gosta de acompanhar artistas de rap em ascensão, aproveite rapidamente o hype de Arden B; há combustível de foguete por trás de sua ascensão. O artista independente de Rap e R&B, empresário e executivo de tecnologia começou a trabalhar com seu single de estreia, WORK, e agora, com seu segundo single, Back in the Day, transmitido pelas ondas do rádio, ele está se tornando uma força de rap inconfundível. Olhando para o passado em suas letras enquanto abraça totalmente a produção moderna em torno de barras rápidas, batidas boom-bap e estética dark trap, Arden B se sente totalmente preso em seu próprio caminho. Ele é levado pela vontade em sua própria convicção enquanto se torna lírico com o tipo de confiança que só o verdadeiro talento pode manter sem som.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T12:00:19.000Z",
+      "discoveredAt": "2026-09-19T18:03:56.418Z"
+    },
+    {
+      "id": "d45ea267403a793781877ea0351c231fbacca9b66ba35f7ad4d2f33e0006a888",
+      "region": "Middle East / Palestine",
+      "titlePt": "Ed Sheeran continua turnê pelos EUA em meio à controvérsia palestina - dw.com",
+      "excerptPt": "Ed Sheeran continua turnê pelos EUA em meio à controvérsia palestina dw.com",
+      "bodyPt": [
+        "Ed Sheeran continua turnê pelos EUA em meio à controvérsia palestina dw.com.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Middle East / Palestine. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T11:47:20.000Z",
+      "discoveredAt": "2026-09-19T18:03:34.230Z"
+    },
+    {
+      "id": "e22121fdc76f9350191f5c6090f7c9170952bc4bed5ca6b080c46c47d285153e",
+      "region": "USA",
+      "titlePt": "Onde 'Kiss Destroys Anaheim '76' está classificado entre seus álbuns ao vivo",
+      "excerptPt": "O show de 1976, muitas vezes contrabandeado, captura a banda no meio da transformação. Continuar lendo…",
+      "bodyPt": [
+        "O show de 1976, muitas vezes contrabandeado, captura a banda no meio da transformação. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T11:45:52.000Z",
+      "discoveredAt": "2026-09-19T18:03:27.969Z"
+    },
+    {
+      "id": "48622f7f9f90c77ae8e752575d0f4eace6502ac15b789695e191317310720a9b",
+      "region": "Europe / Switzerland",
+      "titlePt": "Nathalie Froehlich e Hook irritados com os tempos na criação ‘Borderline’ no Label Suisse",
+      "excerptPt": "O Label Suisse arrancou sexta-feira à noite em Lausanne, nomeadamente com a primeira criação produzida pelo festival no palco da Place des Pionnières. Chamada de 'Borderline', imaginada pela rapper Nathalie Froehlich e pelo designer de som Hook, a própria produção eletro atacou o patriarcado, o capitalismo ou o racismo de uma forma crua e dançante.",
+      "bodyPt": [
+        "O Label Suisse arrancou sexta-feira à noite em Lausanne, nomeadamente com a primeira criação produzida pelo festival no palco da Place des Pionnières. Chamada de 'Borderline', imaginada pela rapper Nathalie Froehlich e pelo designer de som Hook, a própria produção eletro atacou o patriarcado, o capitalismo ou o racismo de uma forma crua e dançante.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Switzerland. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T11:11:13.000Z",
+      "discoveredAt": "2026-09-19T18:03:44.461Z"
+    },
+    {
+      "id": "592ec725a794824a490a0ed3e604e0c092a3da5e14458e0da0a5ca49be0cce0a",
+      "region": "Canada / Québec",
+      "titlePt": "Em uma viagem organizada com Sara Dufour",
+      "excerptPt": "Ao chamar seu quarto álbum de Dolbeau-Mistassini, Sara Dufour faz uma declaração de amor à sua cidade natal. Na verdade, ela sente isso tão profundamente que, para marcar o lançamento, convidou a mídia a fazer uma incursão em seu mundo. Siga o guia.",
+      "bodyPt": [
+        "Ao chamar seu quarto álbum de Dolbeau-Mistassini, Sara Dufour faz uma declaração de amor à sua cidade natal. Na verdade, ela sente isso tão profundamente que, para marcar o lançamento, convidou a mídia a fazer uma incursão em seu mundo. Siga o guia.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T10:00:00.000Z",
+      "discoveredAt": "2026-09-19T18:03:36.101Z"
+    },
+    {
+      "id": "fd4923c90fe0a87572418def64e1086d28c0d0c46e591475539d35f6c8eda55b",
+      "region": "Middle East / MENA",
+      "titlePt": "Selecione 405: mixado por DJOJO",
+      "excerptPt": "Esta semana no Select, o baterista egípcio que virou DJ DJOJO se junta a nós com um set vibrante e carregado de groove explorando a música africana dos anos 70 e 80, com forte foco na África Ocidental. Baseando-se em sua experiência como baterista, DJOJO explora sua obsessão por polirritmias, tecendo uma jornada comovente e de movimento para frente. A mixagem começa com o alegre ‘Aboki’ de Ekambi Brillant, introduzindo uma pulsação viva que flui para o clássico cult synth-boogie de ‘Things Fall Apart’ de Steve Monite. A energia permanece presa enquanto o contagiante “We Can Move” do Free Youth aumenta a temperatura, conduzindo o set em direção às texturas afro-funk quentes de “Tondoho Mba” de Eko Roosevelt.",
+      "bodyPt": [
+        "Esta semana no Select, o baterista egípcio que virou DJ DJOJO se junta a nós com um set vibrante e carregado de groove explorando a música africana dos anos 70 e 80, com forte foco na África Ocidental. Baseando-se em sua experiência como baterista, DJOJO explora sua obsessão por polirritmias, tecendo uma jornada comovente e de movimento para frente. A mixagem começa com o alegre ‘Aboki’ de Ekambi Brillant, introduzindo uma pulsação viva que flui para o clássico cult synth-boogie de ‘Things Fall Apart’ de Steve Monite. A energia permanece presa enquanto o contagiante “We Can Move” do Free Youth aumenta a temperatura, conduzindo o set em direção às texturas afro-funk quentes de “Tondoho Mba” de Eko Roosevelt.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Middle East / MENA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T09:27:14.000Z",
+      "discoveredAt": "2026-09-19T18:03:32.639Z"
+    },
+    {
+      "id": "f245f4e5bd1511a16b4dab1a6f9a257c72f5637d2ff8daed9644526171de4b91",
+      "region": "Europe / Belgium",
+      "titlePt": "20 anos do álbum \"Continuum\" de John Mayer",
+      "excerptPt": "Para alcançar esta mudança artística radical, Mayer não se limitou a reproduzir grelhas de blues...",
+      "bodyPt": [
+        "Para alcançar esta mudança artística radical, Mayer não se limitou a reproduzir grelhas de blues.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T07:30:01.000Z",
+      "discoveredAt": "2026-09-19T18:03:43.309Z"
+    },
+    {
+      "id": "a4d68c8198ec51135adbb83aff99ca9fb9f4e46f18a9fe23971db50c89686198",
+      "region": "Middle East / Lebanon",
+      "titlePt": "Celine Dion aprende sobre Fairuz no Viral Paris Encounter - aljadeed",
+      "excerptPt": "Celine Dion aprende sobre Fairuz no Viral Paris Encounter aljadeed",
+      "bodyPt": [
+        "Celine Dion aprende sobre Fairuz no Viral Paris Encounter aljadeed.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Middle East / Lebanon. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T07:25:20.000Z",
+      "discoveredAt": "2026-09-19T18:03:34.820Z"
+    },
+    {
+      "id": "48c4edb3c581e9a55c27385450d31c92f018debc6924d7920ec92bc486a7aad9",
+      "region": "Europe / Switzerland",
+      "titlePt": "Chopin era homossexual? O que as cartas do compositor dizem sobre sua vida privada... e sua obra",
+      "excerptPt": "Frédéric Chopin amava os homens? E quão importante é saber disso hoje? Para o jornalista cultural Moritz Weber, a homossexualidade do compositor polaco é indiscutível e fornece novas chaves para a interpretação da sua obra.",
+      "bodyPt": [
+        "Frédéric Chopin amava os homens? E quão importante é saber disso hoje? Para o jornalista cultural Moritz Weber, a homossexualidade do compositor polaco é indiscutível e fornece novas chaves para a interpretação da sua obra.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Switzerland. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T06:54:11.000Z",
+      "discoveredAt": "2026-09-19T18:03:44.461Z"
+    },
+    {
+      "id": "12ccc0558c3cc51a627c9b79ab832058361fa767db580c2083eb686fbe763ac4",
+      "region": "Middle East / Syria",
+      "titlePt": "Estrela da música anti-Assad retorna triunfante à Síria - Tawasul News Network",
+      "excerptPt": "Estrela da música anti-Assad retorna triunfante à Síria Tawasul News Network",
+      "bodyPt": [
+        "Estrela da música anti-Assad retorna triunfante à Síria Tawasul News Network.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Middle East / Syria. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T06:19:52.000Z",
+      "discoveredAt": "2026-09-19T18:03:33.644Z"
+    },
+    {
+      "id": "2ebaaca2b64391b295daae345ce035e1e7275be2d762abd895a5ada35a978687",
+      "region": "Europe / Belgium",
+      "titlePt": "The Cure, punk, Stephen King: a grande atualização da cultura pop do verão",
+      "excerptPt": "Em primeiro lugar, no lado do rock, todos os verões, a Bélgica confirma o seu estatuto de coração pulsante do rock europeu, transformando...",
+      "bodyPt": [
+        "Em primeiro lugar, no lado do rock, todos os verões, a Bélgica confirma o seu estatuto de coração pulsante do rock europeu, transformando.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T05:30:00.000Z",
+      "discoveredAt": "2026-09-19T18:03:43.309Z"
+    },
+    {
+      "id": "af713a4f28d89f83aa19b43b05a9b13c43ae3dc3c56b0595162b2dec92c21fef",
+      "region": "Europe / Belgium",
+      "titlePt": "O talento oculto de Thibault, o DJ de Liège que surpreende BJ Scott em “Les Remarquables”",
+      "excerptPt": "BJ Scott continua sua busca por artistas com deficiência para criar seu grupo inclusivo! No segundo...",
+      "bodyPt": [
+        "BJ Scott continua sua busca por artistas com deficiência para criar seu grupo inclusivo! No segundo.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T05:00:00.000Z",
+      "discoveredAt": "2026-09-19T18:03:43.309Z"
+    },
+    {
+      "id": "f5d10b43313e96fce2830b9a3b86408a7e40a98fedcb83a114822f3b9d8a21f9",
+      "region": "Europe / Belgium",
+      "titlePt": "As 5 novidades do rock da semana: Rammstein no tribunal, despedida de Catherine Ringer e Metallica amplia ainda mais sua turnê",
+      "excerptPt": "Rammstein: “Alemanha” no tribunal e México em breve no cinema O motivo “Alemanha” agora é encontrado...",
+      "bodyPt": [
+        "Rammstein: “Alemanha” no tribunal e México em breve no cinema O motivo “Alemanha” agora é encontrado.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T03:46:00.000Z",
+      "discoveredAt": "2026-09-19T18:03:43.309Z"
+    },
+    {
+      "id": "9c872cbf9a5d63e002be17fcaff5692ce2feb74d61163f3027c88ae7d90b4df5",
+      "region": "USA",
+      "titlePt": "Saída do Festival das Forças de 'Emergência' da Saúde do baixista Papa Roach",
+      "excerptPt": "Papa Roach desistiu da apresentação no festival Louder Than Life. A banda estava marcada para tocar no sábado no festival em Louisville. Continuar lendo…",
+      "bodyPt": [
+        "Papa Roach desistiu da apresentação no festival Louder Than Life. A banda estava marcada para tocar no sábado no festival em Louisville. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T02:03:35.000Z",
+      "discoveredAt": "2026-09-19T18:03:28.219Z"
+    },
+    {
+      "id": "bf01e4031c0370a8ecae13995e5f08f550f926de46a45cc48669b3a00133c811",
+      "region": "USA",
+      "titlePt": "O novo álbum de Carly Rae Jepsen, do dia quente e arejado à noite agitada na pista de dança",
+      "excerptPt": "Carly Rae Jepsen lança música pop aclamada pela crítica há mais de uma década. E sexta-feira ela lança seu oitavo álbum, chamado Day and Night.",
+      "bodyPt": [
+        "Carly Rae Jepsen lança música pop aclamada pela crítica há mais de uma década. E sexta-feira ela lança seu oitavo álbum, chamado Day and Night.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-19T00:03:14.000Z",
+      "discoveredAt": "2026-09-19T18:03:26.778Z"
+    },
+    {
+      "id": "2925918bd2e0890a28141ad2c05a0e1d5aee85f1e9d9e151c7214d49191defd0",
+      "region": "USA",
+      "titlePt": "Canção pesada da semana: F**ked Up traz hardcore progressivo para “Good Goat Saw a Leaf”",
+      "excerptPt": "Fucked Up sinaliza o fim de seu gigantesco megaprojeto Grass Can Move Stones de 5 horas com um corte caleidoscópico. Canção pesada da semana: F**ked Up traz hardcore progressivo para “Good Goat Saw a Leaf” Langdon Hickman",
+      "bodyPt": [
+        "Fucked Up sinaliza o fim de seu gigantesco megaprojeto Grass Can Move Stones de 5 horas com um corte caleidoscópico. Canção pesada da semana: F**ked Up traz hardcore progressivo para “Good Goat Saw a Leaf” Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-18T23:17:22.000Z",
+      "discoveredAt": "2026-09-19T18:03:29.016Z"
+    },
     {
       "id": "4fb03d462f0ea677c8c2136a7fd53e9c273b038a8c2e24eba9a0a1f15750b332",
       "region": "Global / UK",
