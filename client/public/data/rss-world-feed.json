@@ -1,10 +1,522 @@
 {
-  "updatedAt": "2026-08-30T20:40:04.728Z",
+  "updatedAt": "2026-09-26T14:46:56.610Z",
   "brand": "GUIROPA RADIO",
-  "itemCount": 22,
-  "publishedPt": 22,
+  "itemCount": 54,
+  "publishedPt": 54,
   "editorialPending": 0,
   "items": [
+    {
+      "id": "96d71a56442fbd871efa8a03aa3cbde56226f96f7013db6819c33f5326afc9d2",
+      "region": "Africa / Kenya",
+      "titlePt": "Shaun Farrugia nos galvaniza com seu último single, “All For Nothing”",
+      "excerptPt": "Em 16 de outubro, o cantor e compositor londrino nascido em Malta, Shaun Farrugia, lançará um novo EP, Heading Home. Já está disponível um novo single que nos aproxima desse lançamento. A música se chama “All For Nothing” e mistura elementos de pop, rock, folk-pop e EDM. Apresentando melodias do tamanho de um estádio, “All For Nothing” é verdadeiramente galvanizante [...]",
+      "bodyPt": [
+        "Em 16 de outubro, o cantor e compositor londrino nascido em Malta, Shaun Farrugia, lançará um novo EP, Heading Home. Já está disponível um novo single que nos aproxima desse lançamento. A música se chama “All For Nothing” e mistura elementos de pop, rock, folk-pop e EDM. Apresentando melodias do tamanho de um estádio, “All For Nothing” é verdadeiramente galvanizante [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T14:43:10.000Z",
+      "discoveredAt": "2026-09-26T14:45:03.464Z"
+    },
+    {
+      "id": "ccbcd36e8a7da1188be001d5774a800c106cf9e83cdc0daa42f8afd7b993c172",
+      "region": "Africa / Kenya",
+      "titlePt": "Avery Cochrane está de olho em seu álbum de estreia e lança o single principal, “Toy Gun”",
+      "excerptPt": "O primeiro single do álbum de estreia de Avery Cochrane está aqui. “Toy Gun” chega junto com o anúncio da emocionante primeira turnê do recém-chegado pop, a Weapons of Iridescence Tour. Com “Toy Gun”, Avery oferece uma faixa brilhante influenciada pelo synthpop. A música é otimista e reflexiva. Sobre isso, Cochrane conta: “Eu escrevi essa música sobre […]",
+      "bodyPt": [
+        "O primeiro single do álbum de estreia de Avery Cochrane está aqui. “Toy Gun” chega junto com o anúncio da emocionante primeira turnê do recém-chegado pop, a Weapons of Iridescence Tour. Com “Toy Gun”, Avery oferece uma faixa brilhante influenciada pelo synthpop. A música é otimista e reflexiva. Sobre isso, Cochrane conta: “Eu escrevi essa música sobre […].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T14:04:52.000Z",
+      "discoveredAt": "2026-09-26T14:45:03.464Z"
+    },
+    {
+      "id": "a1fcb795c13b1823e614e62bf06fe9b34f8a72ff434505b153ecea91e9fd1468",
+      "region": "Africa / Kenya",
+      "titlePt": "Sensação ganense Black Sherif lança EP Sun Sherif",
+      "excerptPt": "Black Sherif é um dos artistas mais impactantes que surgiram na África na década de 2020 até agora. Os dois álbuns do rapper e cantor ganense, The Villain I Never Was (2022) e IRON BOY (2025), ajudaram a trazer para o mainstream sua marca de música de perfuração chamada “Asakaa”. Recentemente, ele lançou um novo EP. […]",
+      "bodyPt": [
+        "Black Sherif é um dos artistas mais impactantes que surgiram na África na década de 2020 até agora. Os dois álbuns do rapper e cantor ganense, The Villain I Never Was (2022) e IRON BOY (2025), ajudaram a trazer para o mainstream sua marca de música de perfuração chamada “Asakaa”. Recentemente, ele lançou um novo EP. […].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T13:16:08.000Z",
+      "discoveredAt": "2026-09-26T14:45:03.464Z"
+    },
+    {
+      "id": "a9959e1db97eba64216c1742dc2dd90cbf8b9cc02302d5554e136467de6a5756",
+      "region": "Canada / Québec",
+      "titlePt": "Lançamentos do álbum Mirador | A Odisseia de Jean-Michel Blais",
+      "excerptPt": "Jean-Michel Blais chega onde não esperávamos com seu novo álbum Mirador. Entre um coral e ritmos latino-americanos, o pianista e compositor oferece uma viagem surpreendente, exuberante e cheia de luz.",
+      "bodyPt": [
+        "Jean-Michel Blais chega onde não esperávamos com seu novo álbum Mirador. Entre um coral e ritmos latino-americanos, o pianista e compositor oferece uma viagem surpreendente, exuberante e cheia de luz.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T13:00:00.000Z",
+      "discoveredAt": "2026-09-26T14:45:11.561Z"
+    },
+    {
+      "id": "69d78d337c2c307f4ec87be62c3a17f9ac97d5525b4439fbf050623db9cd1049",
+      "region": "Europe / Belgium",
+      "titlePt": "“Back To The Beginning”: reveladas as imagens finais de Ozzy Osbourne no palco",
+      "excerptPt": "O vídeo imediatamente mergulha de volta neste dia especial: Ozzy, sentado em seu trono negro, encontra o público...",
+      "bodyPt": [
+        "O vídeo imediatamente mergulha de volta neste dia especial: Ozzy, sentado em seu trono negro, encontra o público.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T12:49:00.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "976e4c5e88683f4e25a3e874e78f28409caa4c31d7312ca2df9bd2bfca0e4b29",
+      "region": "USA",
+      "titlePt": "O baterista de longa data de Paul McCartney acabou de se juntar ao Pearl Jam?",
+      "excerptPt": "Uma aparição surpresa em um show sugere que o Pearl Jam pode ter encontrado seu novo baterista. Continuar lendo…",
+      "bodyPt": [
+        "Uma aparição surpresa em um show sugere que o Pearl Jam pode ter encontrado seu novo baterista. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T12:47:54.000Z",
+      "discoveredAt": "2026-09-26T14:45:00.858Z"
+    },
+    {
+      "id": "86b25487f1352881b31b6b75c22d537cd939aa441d9a93d7e71066bb3ffb3359",
+      "region": "Europe / Switzerland",
+      "titlePt": "O fotógrafo Maurice Jaccard captura a energia bruta do festival Label Suisse em Lausanne",
+      "excerptPt": "Com abordagem de fotógrafo de rua, Maurice Jaccard, de Lausanne, capturou alguns momentos suspensos da 12ª edição do festival Label Suisse, que aconteceu em Lausanne de 18 a 20 de setembro. Seu relato fotográfico destaca tanto os artistas quanto o público.",
+      "bodyPt": [
+        "Com abordagem de fotógrafo de rua, Maurice Jaccard, de Lausanne, capturou alguns momentos suspensos da 12ª edição do festival Label Suisse, que aconteceu em Lausanne de 18 a 20 de setembro. Seu relato fotográfico destaca tanto os artistas quanto o público.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Switzerland. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T12:29:30.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.868Z"
+    },
+    {
+      "id": "d4c5fbc3e7102567160a42b45ec53b6a4818c0bf94a1b55220b01d02c66ef1c6",
+      "region": "Europe / UK",
+      "titlePt": "I Know You're Hurting, de Raye, me incentivou a enfrentar uma vida inteira de depressão",
+      "excerptPt": "Sempre ignorei meu estado mental angustiado ou tentei deixá-lo de lado, e a TCC não funcionou para mim – então uma música pareceu articular minha dor. Seis meses atrás, eu estava passando por John Lewis na M40 com minha esposa e enteada, I Know You’re Hurting, de Raye, tocando no aparelho de som, quando percebi que estava chorando. Foi a terceira vez que ouvi a música, mas foi a primeira vez que realmente a ouvi. Era como se a letra falasse diretamente comigo: “Eu posso ver você no limite… Você dá quando tem pouco para dar”. A música já havia me emocionado antes, mas apenas por causa da melodia, do arranjo ou da orquestração. Trabalho com música desde que era",
+      "bodyPt": [
+        "Sempre ignorei meu estado mental angustiado ou tentei deixá-lo de lado, e a TCC não funcionou para mim – então uma música pareceu articular minha dor. Seis meses atrás, eu estava passando por John Lewis na M40 com minha esposa e enteada, I Know You’re Hurting, de Raye, tocando no aparelho de som, quando percebi que estava chorando. Foi a terceira vez que ouvi a música, mas foi a primeira vez que realmente a ouvi. Era como se a letra falasse diretamente comigo: “Eu posso ver você no limite… Você dá quando tem pouco para dar”. A música já havia me emocionado antes, mas apenas por causa da melodia, do arranjo ou da orquestração. Trabalho com música desde que era.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T11:00:35.000Z",
+      "discoveredAt": "2026-09-26T14:45:00.121Z"
+    },
+    {
+      "id": "0063b25884943929d192f27c34323d2baf0a4bd2f71c59180592b829fbe44e2b",
+      "region": "Europe / Belgium",
+      "titlePt": "Dica Top: nesta semana, conheça os grandes retornos do U2 e da Taylor Swift!",
+      "excerptPt": "A artista feminina mais vendida na história da música pode incomodar muita gente, mas ela também...",
+      "bodyPt": [
+        "A artista feminina mais vendida na história da música pode incomodar muita gente, mas ela também.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T10:00:53.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "2ae3bfd1dfdef9b6b40f121b50fe02fc27861d8ecfd9fd677036ec99ad6b49e0",
+      "region": "Europe / Belgium",
+      "titlePt": "Brand X: os 50 anos do álbum \"Unorthodox Behaviour'\"",
+      "excerptPt": "O grupo ficou famoso graças à presença do baterista Phil Collins, então também integrante do...",
+      "bodyPt": [
+        "O grupo ficou famoso graças à presença do baterista Phil Collins, então também integrante do.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T07:30:00.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "30bae5c55b5d0f2511ca168d14125d64c908babf7cdcbfcfc0d9dafcf6ac1128",
+      "region": "Europe / Belgium",
+      "titlePt": "Bruce Springsteen: primeiro videoclipe rejeitado de “Dancing in the Dark” ressurge 42 anos depois",
+      "excerptPt": "O documento vem do acervo pessoal de Al Teller, ex-presidente da Columbia Records. Este é um...",
+      "bodyPt": [
+        "O documento vem do acervo pessoal de Al Teller, ex-presidente da Columbia Records. Este é um.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T06:16:00.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "512a4b5bd2925a900a0cf63ef019afba9a4d0e734bebb338a23723ffc64a9062",
+      "region": "Europe / Belgium",
+      "titlePt": "Loïc Nottet faz seu grande retorno com o título “Libre”, exclusivamente no palco do Grand Rendez-vous",
+      "excerptPt": "Entre os momentos mais esperados desta edição de 2026 do Grand Rendez-vous da Federação Valónia-Bruxelas, estão...",
+      "bodyPt": [
+        "Entre os momentos mais esperados desta edição de 2026 do Grand Rendez-vous da Federação Valónia-Bruxelas, estão.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T06:10:14.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "972860b0121ab052ebf222f93518fdee28e95ba61afb805d94d783978ba748c1",
+      "region": "Europe / Belgium",
+      "titlePt": "Typh Barrow começa a chorar durante um ensaio de The Remarkables",
+      "excerptPt": "Typh Barrow fica literalmente impressionado com “Transparent”, título escrito e composto por Jessie BSK. A cantora...",
+      "bodyPt": [
+        "Typh Barrow fica literalmente impressionado com “Transparent”, título escrito e composto por Jessie BSK. A cantora.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T06:00:00.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "2f2def1cc49f8cec4bdc8bd366fde32d1a904561c968f1bdd4e7145eea646abc",
+      "region": "Europe / Belgium",
+      "titlePt": "Grand Rendez-vous da Federação Valônia-Bruxelas: o que não perder nesta 19ª edição do evento",
+      "excerptPt": "Impossível dedicar uma edição à 7ª arte sem homenagear a música que acompanha os maiores filmes. O...",
+      "bodyPt": [
+        "Impossível dedicar uma edição à 7ª arte sem homenagear a música que acompanha os maiores filmes. O.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T06:00:00.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "b77b1cfa70dd97aba1c33e5f0d6f876353b3838d61e05e556eaf26e9a9ebfceb",
+      "region": "Europe / Belgium",
+      "titlePt": "Canções fantasmas: quando a música só vive no palco",
+      "excerptPt": "Entre a mística da música ao vivo, a recusa da lógica industrial e a procura de uma experiência efémera, estas “canções...",
+      "bodyPt": [
+        "Entre a mística da música ao vivo, a recusa da lógica industrial e a procura de uma experiência efémera, estas “canções.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T05:30:00.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "88e36a5414cc1ad69e888efe42cc1206de9ae0ee0e5a878b6fe955c58c791a2f",
+      "region": "USA",
+      "titlePt": "O baterista Abe Laboriel Jr. se junta ao Pearl Jam no Ohana Festival",
+      "excerptPt": "Laboriel fez sua estreia com o Pearl Jam durante um show surpresa na noite de sexta-feira. O baterista Abe Laboriel Jr. se junta ao Pearl Jam no Ohana Festival Spencer Kaufman",
+      "bodyPt": [
+        "Laboriel fez sua estreia com o Pearl Jam durante um show surpresa na noite de sexta-feira. O baterista Abe Laboriel Jr. se junta ao Pearl Jam no Ohana Festival Spencer Kaufman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T04:58:14.000Z",
+      "discoveredAt": "2026-09-26T14:45:01.489Z"
+    },
+    {
+      "id": "d8c9699284b2db7d8c35d5b6cb1a098e24cf3333f890af21b3983661167df422",
+      "region": "USA",
+      "titlePt": "Hans Zimmer define datas da turnê norte-americana de 2027",
+      "excerptPt": "A turnê de arena \"Hans Zimmer Live - The Next Level\" fará paradas em 30 cidades. Hans Zimmer define datas da turnê norte-americana de 2027 Eddie Fu",
+      "bodyPt": [
+        "A turnê de arena \"Hans Zimmer Live - The Next Level\" fará paradas em 30 cidades. Hans Zimmer define datas da turnê norte-americana de 2027 Eddie Fu.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T04:07:10.000Z",
+      "discoveredAt": "2026-09-26T14:45:01.489Z"
+    },
+    {
+      "id": "24ff7332c36b7713af6e62bdee51e65729c69430d93dd701bb662b512224932a",
+      "region": "USA",
+      "titlePt": "Metallica anuncia datas da turnê norte-americana de 2027",
+      "excerptPt": "O enorme passeio de 12 datas conta com suporte de Limp Bizkit e Avatar. Metallica anuncia datas da turnê norte-americana de 2027 Alex Young",
+      "bodyPt": [
+        "O enorme passeio de 12 datas conta com suporte de Limp Bizkit e Avatar. Metallica anuncia datas da turnê norte-americana de 2027 Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T03:58:26.000Z",
+      "discoveredAt": "2026-09-26T14:45:01.489Z"
+    },
+    {
+      "id": "6adc803d1a8e7f7a81ba2eb6c6771c05987a392baec30b90b71d30d9f629c5bd",
+      "region": "Europe / Belgium",
+      "titlePt": "As 5 notícias de rock da semana: U2 anuncia seu grande retorno, Oasis expande seu Live’27 e a potência de “Animals” do Pink Floyd se torna uma sala de concertos",
+      "excerptPt": "U2: um novo álbum para seu 50º aniversário, com a última voz gravada de Dolly Parton U2 será lançado no dia 13 de novembro...",
+      "bodyPt": [
+        "U2: um novo álbum para seu 50º aniversário, com a última voz gravada de Dolly Parton U2 será lançado no dia 13 de novembro.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T03:58:00.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "a46b92ca88ad7a4087f368359004c85e30a3743ba24490400b1942af9c9d6755",
+      "region": "USA",
+      "titlePt": "Olivia Rodrigo dá início à “Unraveled Tour”: veja setlist de 26 músicas + vídeo",
+      "excerptPt": "Rodrigo lançou sua nova turnê com um set inspirado na temporada com músicas de SOUR, GUTS e seu último álbum. Olivia Rodrigo dá início à “Unraveled Tour”: veja setlist de 26 músicas + vídeo Paolo Ragusa",
+      "bodyPt": [
+        "Rodrigo lançou sua nova turnê com um set inspirado na temporada com músicas de SOUR, GUTS e seu último álbum. Olivia Rodrigo dá início à “Unraveled Tour”: veja setlist de 26 músicas + vídeo Paolo Ragusa.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T02:36:23.000Z",
+      "discoveredAt": "2026-09-26T14:45:01.489Z"
+    },
+    {
+      "id": "15ec7c63ef885fcde46698e37b362e3fd3c18f53d9cd4bea73098bdb09ccbd76",
+      "region": "Africa / Kenya",
+      "titlePt": "Ouça “Tastebud” da Banda Our Bodies",
+      "excerptPt": "Mesmo os ouvintes casuais que normalmente não acompanham o rock acharão “Tastebud”, da banda norte-americana Our Bodies, bastante atraente. A música é otimista e vem totalmente repleta de energia visceral. Com um refrão hino, “Tastebud” aborda o medo de apostar tudo no que queremos. A banda envolve essa mensagem poderosa em um clima romântico [...]",
+      "bodyPt": [
+        "Mesmo os ouvintes casuais que normalmente não acompanham o rock acharão “Tastebud”, da banda norte-americana Our Bodies, bastante atraente. A música é otimista e vem totalmente repleta de energia visceral. Com um refrão hino, “Tastebud” aborda o medo de apostar tudo no que queremos. A banda envolve essa mensagem poderosa em um clima romântico [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-26T02:31:58.000Z",
+      "discoveredAt": "2026-09-26T14:45:03.464Z"
+    },
+    {
+      "id": "c9d7943998f5a38dc7a212d846cc93cb14f88000e4a00bea52197eea09ad27ef",
+      "region": "Africa / Kenya",
+      "titlePt": "Yael Danon está de volta: assista aos visuais de “Evil Eye” e “YAPIYAPI”",
+      "excerptPt": "A artista panamenha Yael Danon, de 20 anos, lançou seu primeiro single do ano, “Evil Eye”, em junho. “YAPIYAPI” foi lançado cerca de um mês depois. Essas duas músicas reacenderam meu interesse pelo artista. Yael me impressionou pela primeira vez com seu álbum de estreia de 2023, Diary Girl - ela tinha apenas 17 anos na época. “Mau-olhado” e […]",
+      "bodyPt": [
+        "A artista panamenha Yael Danon, de 20 anos, lançou seu primeiro single do ano, “Evil Eye”, em junho. “YAPIYAPI” foi lançado cerca de um mês depois. Essas duas músicas reacenderam meu interesse pelo artista. Yael me impressionou pela primeira vez com seu álbum de estreia de 2023, Diary Girl - ela tinha apenas 17 anos na época. “Mau-olhado” e […].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T22:20:11.000Z",
+      "discoveredAt": "2026-09-26T14:45:03.464Z"
+    },
+    {
+      "id": "791e9f8bf2fd6338359b1943946b4536741c6b732a24b47c234da24f94361aa5",
+      "region": "Canada / Québec",
+      "titlePt": "Lista de prêmios em Quebec | Jean-François Pauzé e Ella Langley mantêm o rumo",
+      "excerptPt": "Quais são as músicas mais populares em Quebec esta semana? Aqui estão os gráficos Adisq e Spotify.",
+      "bodyPt": [
+        "Quais são as músicas mais populares em Quebec esta semana? Aqui estão os gráficos Adisq e Spotify.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T22:00:00.000Z",
+      "discoveredAt": "2026-09-26T14:45:11.561Z"
+    },
+    {
+      "id": "0d442dca3cec6930881f2d2c7db8ca6737fd9b4247063726d422c2091f586d86",
+      "region": "Africa / Kenya",
+      "titlePt": "Matroda lança EP “Hard To Explan” – Ouça",
+      "excerptPt": "O DJ e produtor croata Matroda lançou hoje seu EP Hard To Explan. O projeto encapsula seu estilo tech-house com baixo pesado. A faixa de abertura “I Need Your Lovin'” apresenta acordes quentes de piano e percussão envolvente. No geral, o EP é bastante cativante. Em julho, Matroda se uniu ao produtor San Pacho (juntos eles são [...]",
+      "bodyPt": [
+        "O DJ e produtor croata Matroda lançou hoje seu EP Hard To Explan. O projeto encapsula seu estilo tech-house com baixo pesado. A faixa de abertura “I Need Your Lovin'” apresenta acordes quentes de piano e percussão envolvente. No geral, o EP é bastante cativante. Em julho, Matroda se uniu ao produtor San Pacho (juntos eles são [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T21:23:38.000Z",
+      "discoveredAt": "2026-09-26T14:45:03.464Z"
+    },
+    {
+      "id": "518efbd45162ee4ee9e0332b6431a3804d4949b400ae509dfea6794bd49b3256",
+      "region": "USA",
+      "titlePt": "Show do AC/DC adiado porque tempestade causa estragos nos shows da Costa Leste",
+      "excerptPt": "O show da banda em Nova York é apenas um dos muitos eventos que foram afetados. Continuar lendo…",
+      "bodyPt": [
+        "O show da banda em Nova York é apenas um dos muitos eventos que foram afetados. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T21:23:10.000Z",
+      "discoveredAt": "2026-09-26T14:45:00.859Z"
+    },
+    {
+      "id": "6f0fa8a72f3afbe03cdd625e68d570a4e6936f5a6fd3b271ac8b76660bdf9448",
+      "region": "Europe / UK",
+      "titlePt": "U2 retorna ao Mount Temple para um show de 50 anos que olha para frente e para trás",
+      "excerptPt": "Um dia antes do show, recebi um e-mail do relações públicas do U2 que dizia simplesmente: “Mark, me ligue”. Quando liguei para ela, ela me disse que a banda tocaria no Mount Temple no dia seguinte e [...]",
+      "bodyPt": [
+        "Um dia antes do show, recebi um e-mail do relações públicas do U2 que dizia simplesmente: “Mark, me ligue”. Quando liguei para ela, ela me disse que a banda tocaria no Mount Temple no dia seguinte e [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T21:09:42.000Z",
+      "discoveredAt": "2026-09-26T14:45:02.044Z"
+    },
+    {
+      "id": "3e4f1689887b4662331efc7f9fa940bcd2d82f9b4a0b07c24d3ab59a56de5d89",
+      "region": "USA",
+      "titlePt": "Margaret Qualley e Sabrina Carpenter juntam-se a Tom Holland na cinebiografia de Fred Astaire",
+      "excerptPt": "Carpenter estrelará como Ginger Rogers, enquanto Qualley interpretará Adele Astaire. Margaret Qualley e Sabrina Carpenter juntam-se a Tom Holland na cinebiografia de Fred Astaire, Eddie Fu",
+      "bodyPt": [
+        "Carpenter estrelará como Ginger Rogers, enquanto Qualley interpretará Adele Astaire. Margaret Qualley e Sabrina Carpenter juntam-se a Tom Holland na cinebiografia de Fred Astaire, Eddie Fu.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T21:05:19.000Z",
+      "discoveredAt": "2026-09-26T14:45:01.489Z"
+    },
+    {
+      "id": "f6714cdbe1c4a213b9ba128f35c9eb8208c51ae330683a69499ec808077d4f46",
+      "region": "Europe / Belgium",
+      "titlePt": "Anouk revela seu primeiro single “Ta Peau” e cria evento no palco do Grand Rendez-vous",
+      "excerptPt": "Revelado aos 14 anos no The Voice Kids Bélgica, e notado alguns anos depois durante Star...",
+      "bodyPt": [
+        "Revelado aos 14 anos no The Voice Kids Bélgica, e notado alguns anos depois durante Star.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T20:58:35.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "9de3bda86808933b3559287627b11c54f9c47b571ab8ab1927e93e127a3b8e81",
+      "region": "Africa / Kenya",
+      "titlePt": "Assista aos visuais impressionantes de Soleil para o novo single “Rubbish”",
+      "excerptPt": "Após seu single “Heart Strings”, a cantora e compositora Soleil, de Miami, está de volta com outro. Chamada de “Rubbish”, a nova música R&B/soul é infundida com elementos do funk e pop. Sobre “Rubbish”, Soleil diz: “A música é sobre acordar para as mentiras que nos convencemos a acreditar; o que começa como uma história de amor incondicional e lealdade […]",
+      "bodyPt": [
+        "Após seu single “Heart Strings”, a cantora e compositora Soleil, de Miami, está de volta com outro. Chamada de “Rubbish”, a nova música R&B/soul é infundida com elementos do funk e pop. Sobre “Rubbish”, Soleil diz: “A música é sobre acordar para as mentiras que nos convencemos a acreditar; o que começa como uma história de amor incondicional e lealdade […].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T20:57:16.000Z",
+      "discoveredAt": "2026-09-26T14:45:03.464Z"
+    },
+    {
+      "id": "f877346d6852a924bf04e4e111cca1142889831118de8d1fc6bf9c23a23f9aa4",
+      "region": "Europe / Belgium",
+      "titlePt": "Mentissa apresenta uma performance vibrante e comprometida no palco do Grand Rendez-vous da Federação Valônia-Bruxelas",
+      "excerptPt": "Entre as atuações mais notáveis ​​desta 19ª edição do Grand Rendez-vous da Federação Valônia-Bruxelas,...",
+      "bodyPt": [
+        "Entre as atuações mais notáveis ​​desta 19ª edição do Grand Rendez-vous da Federação Valônia-Bruxelas,.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T20:54:07.000Z",
+      "discoveredAt": "2026-09-26T14:45:16.151Z"
+    },
+    {
+      "id": "259712205653f2388e4eed2e501bcff75ff864e83237740edb522eee1b8ae1da",
+      "region": "USA",
+      "titlePt": "Canção pesada da semana: Crypta traz a majestade do Death Metal com “A Portrait of Decay”",
+      "excerptPt": "Crypta exerce um death metal majestoso e suntuoso em sua faixa matadora \"A Portrait of Decay\". Canção pesada da semana: Crypta traz a majestade do Death Metal com “A Portrait of Decay” Langdon Hickman",
+      "bodyPt": [
+        "Crypta exerce um death metal majestoso e suntuoso em sua faixa matadora \"A Portrait of Decay\". Canção pesada da semana: Crypta traz a majestade do Death Metal com “A Portrait of Decay” Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T20:48:57.000Z",
+      "discoveredAt": "2026-09-26T14:45:01.489Z"
+    },
+    {
+      "id": "794732aac98012e07d445443f0b00d4cf25ac470075bde0c06d60c2f0c7ef3d8",
+      "region": "USA",
+      "titlePt": "Chad Smith, do Red Hot Chili Peppers, toca “Fairies Wear Boots” do Black Sabbath: Assista",
+      "excerptPt": "O baterista toca a música clássica do metal e comenta sua abordagem simples e inovadora. Chad Smith, do Red Hot Chili Peppers, toca “Fairies Wear Boots” do Black Sabbath: assista Langdon Hickman",
+      "bodyPt": [
+        "O baterista toca a música clássica do metal e comenta sua abordagem simples e inovadora. Chad Smith, do Red Hot Chili Peppers, toca “Fairies Wear Boots” do Black Sabbath: assista Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-09-25T20:43:32.000Z",
+      "discoveredAt": "2026-09-26T14:45:01.489Z"
+    },
     {
       "id": "4fb03d462f0ea677c8c2136a7fd53e9c273b038a8c2e24eba9a0a1f15750b332",
       "region": "Global / UK",
