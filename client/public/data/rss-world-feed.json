@@ -1,10 +1,538 @@
 {
-  "updatedAt": "2026-08-30T20:40:04.728Z",
+  "updatedAt": "2026-10-10T20:07:48.836Z",
   "brand": "GUIROPA RADIO",
-  "itemCount": 22,
-  "publishedPt": 22,
+  "itemCount": 55,
+  "publishedPt": 55,
   "editorialPending": 0,
   "items": [
+    {
+      "id": "61ee611c0dfaae8e9b0577b3cdf05323a0824d84137dc4a2eb596b9821a30ef7",
+      "region": "Global / UK",
+      "titlePt": "Todo o sal do absurdo na porta envia os fantasmas da juventude para uma sepultura aquosa em um sonho de arte suja e febre do rock",
+      "excerptPt": "No espaço liminar entre a adolescência e a idade adulta, encontramos All Absurd, os antagonistas do rock indie alternativo de Adelaide, projetando seu EP de estreia, Hurdles, no abismo existencial. O single de destaque, Salt at the Door, é um golpe de mestre pós-rock metafisicamente exuberante que irá puxar você para o mundo deles e deixá-lo fisgado. Transformando a distorção e a amplificação evocativa em uma forma de arte suja, o quinteto emprega solos de sax jazzísticos, arquitetura art rock e o ritmo melódico do rock dos anos 2000, com os vocais atuando como uma âncora constante em meio à natureza precariamente progressiva do arranjo. O single rasteja camaleonicamente através de inúmeras manifestações, cada uma segurando um espelho fraturado",
+      "bodyPt": [
+        "No espaço liminar entre a adolescência e a idade adulta, encontramos All Absurd, os antagonistas do rock indie alternativo de Adelaide, projetando seu EP de estreia, Hurdles, no abismo existencial. O single de destaque, Salt at the Door, é um golpe de mestre pós-rock metafisicamente exuberante que irá puxar você para o mundo deles e deixá-lo fisgado. Transformando a distorção e a amplificação evocativa em uma forma de arte suja, o quinteto emprega solos de sax jazzísticos, arquitetura art rock e o ritmo melódico do rock dos anos 2000, com os vocais atuando como uma âncora constante em meio à natureza precariamente progressiva do arranjo. O single rasteja camaleonicamente através de inúmeras manifestações, cada uma segurando um espelho fraturado.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T20:00:03.000Z",
+      "discoveredAt": "2026-10-10T20:05:59.093Z"
+    },
+    {
+      "id": "c598af7ca5a4467cb73b16f26f0eab34fa53c35895da4947d6143feb282875c0",
+      "region": "USA",
+      "titlePt": "O retorno de Barry Manilow em Las Vegas foi prejudicado por bronquite",
+      "excerptPt": "O cantor de 83 anos foi forçado a interromper seu show em Las Vegas na noite de sexta-feira após apenas duas músicas e posteriormente cancelou sua apresentação agendada para sábado à noite. O retorno de Barry Manilow em Las Vegas descarrilou por bronquite Alex Young",
+      "bodyPt": [
+        "O cantor de 83 anos foi forçado a interromper seu show em Las Vegas na noite de sexta-feira após apenas duas músicas e posteriormente cancelou sua apresentação agendada para sábado à noite. O retorno de Barry Manilow em Las Vegas descarrilou por bronquite Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T19:14:24.000Z",
+      "discoveredAt": "2026-10-10T20:05:27.843Z"
+    },
+    {
+      "id": "0a69ed0e077f46845bcec8193b068c9338e1cee409a28c6ab4ea1071bcd2270b",
+      "region": "USA",
+      "titlePt": "Danny Trejo diz que “não é pró-ICE” em meio à reação negativa do filme Daily Wire",
+      "excerptPt": "A estrela de Machete diz que assumiu o papel de um veterano latino positivo e insiste que seu envolvimento não deve ser interpretado como apoio ao ICE. Danny Trejo diz que “não é pró-ICE” em meio à reação negativa do filme Daily Wire de Alex Krinsky",
+      "bodyPt": [
+        "A estrela de Machete diz que assumiu o papel de um veterano latino positivo e insiste que seu envolvimento não deve ser interpretado como apoio ao ICE. Danny Trejo diz que “não é pró-ICE” em meio à reação negativa do filme Daily Wire de Alex Krinsky.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T17:34:25.000Z",
+      "discoveredAt": "2026-10-10T20:05:27.843Z"
+    },
+    {
+      "id": "08f1947133afef0ed078a88301fbeac27f59f2d0c3eec749e50270ca51b95f46",
+      "region": "Europe / Belgium",
+      "titlePt": "Poucos dias antes do show dos Remarquables, BJ se apaixona!",
+      "excerptPt": "A pressão está no máximo para BJ que não se dá o direito de errar! Se o sonho dele é destacar o...",
+      "bodyPt": [
+        "A pressão está no máximo para BJ que não se dá o direito de errar! Se o sonho dele é destacar o.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T17:00:50.000Z",
+      "discoveredAt": "2026-10-10T20:05:45.166Z"
+    },
+    {
+      "id": "a05202f21a2383eb75d3ee76a69d6cccdb3f80d57a3b0aa77b99cd5086ce4a4d",
+      "region": "Canada / Québec",
+      "titlePt": "Em Paris com o trio Sherbrooke 2120",
+      "excerptPt": "Três amigos de Sherbrooke desde o ensino médio formam o grupo 2120, que moraram por um tempo em Montreal antes de se estabelecerem em Paris... Uma aposta que acabou dando certo! Encontrámo-nos com eles na esplanada de um bar onde o trio costuma frequentar, a poucos passos da Place de la République.",
+      "bodyPt": [
+        "Três amigos de Sherbrooke desde o ensino médio formam o grupo 2120, que moraram por um tempo em Montreal antes de se estabelecerem em Paris... Uma aposta que acabou dando certo! Encontrámo-nos com eles na esplanada de um bar onde o trio costuma frequentar, a poucos passos da Place de la République.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T17:00:00.000Z",
+      "discoveredAt": "2026-10-10T20:05:38.998Z"
+    },
+    {
+      "id": "74d02772a061e1a8afc952bc54c6638f8f7c58dafe8d411f9b32f128a0376d59",
+      "region": "USA",
+      "titlePt": "Sex Pistols repreende cara por se infiltrar no Mosh Pit só para mulheres",
+      "excerptPt": "Frank Carter perdeu a calma com o ofensor frequentador do show: \"Pergunte a qualquer um deles se eles se sentem seguros em cada mosh pit!\" Sex Pistols repreende cara por se infiltrar em Mosh Pit Alex Young, só para mulheres",
+      "bodyPt": [
+        "Frank Carter perdeu a calma com o ofensor frequentador do show: \"Pergunte a qualquer um deles se eles se sentem seguros em cada mosh pit!\" Sex Pistols repreende cara por se infiltrar em Mosh Pit Alex Young, só para mulheres.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T16:40:19.000Z",
+      "discoveredAt": "2026-10-10T20:05:27.843Z"
+    },
+    {
+      "id": "390c8f6d8c264513dbb43172559defec2ebf6844a097b5e23e17094ef85df4d8",
+      "region": "USA",
+      "titlePt": "Programas de Geordie Greep cancelados após alegações de má conduta sexual",
+      "excerptPt": "A cantora, que negou as acusações, cancelou apresentações em Boise, Salt Lake City, Boulder e Denver",
+      "bodyPt": [
+        "A cantora, que negou as acusações, cancelou apresentações em Boise, Salt Lake City, Boulder e Denver.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T16:10:30.000Z",
+      "discoveredAt": "2026-10-10T20:05:27.479Z"
+    },
+    {
+      "id": "386528032a7cdcbf30524be29a3f3333b3d83d7391cb3ada87f4f149b96e1281",
+      "region": "USA",
+      "titlePt": "Modest Mouse entrega boas vibrações e votos de aniversário no telhado de Nova York no Pier 17: fotos + setlist",
+      "excerptPt": "A banda está chegando ao fim de sua turnê de divulgação do novo álbum An Eraser and a Maze. Modest Mouse entrega boas vibrações e votos de aniversário no telhado de Nova York no Pier 17: fotos + setlist Ben Kaye",
+      "bodyPt": [
+        "A banda está chegando ao fim de sua turnê de divulgação do novo álbum An Eraser and a Maze. Modest Mouse entrega boas vibrações e votos de aniversário no telhado de Nova York no Pier 17: fotos + setlist Ben Kaye.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T16:04:59.000Z",
+      "discoveredAt": "2026-10-10T20:05:27.843Z"
+    },
+    {
+      "id": "3f0c9b3e727e291336953dd48589cabb3723a6811f11bb91f9903b26a6b4e68e",
+      "region": "Europe / Belgium",
+      "titlePt": "Billy Joel: a traição familiar que quase lhe custou a fortuna",
+      "excerptPt": "Uma confiança familiar No auge da carreira, Billy Joel ganha muito dinheiro, mas tem pouco interesse em sua...",
+      "bodyPt": [
+        "Uma confiança familiar No auge da carreira, Billy Joel ganha muito dinheiro, mas tem pouco interesse em sua.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T15:46:00.000Z",
+      "discoveredAt": "2026-10-10T20:05:45.166Z"
+    },
+    {
+      "id": "e50389bbb48e809ae01a3cfeba8724d588f53daad52112f0eaef1c36db256bea",
+      "region": "Europe / Belgium",
+      "titlePt": "Como um cantor de metal consegue gritar sem se machucar?",
+      "excerptPt": "Na cena metal, entre as guitarras saturadas e os ritmos frenéticos, a voz parece levada ao limite...",
+      "bodyPt": [
+        "Na cena metal, entre as guitarras saturadas e os ritmos frenéticos, a voz parece levada ao limite.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T15:00:36.000Z",
+      "discoveredAt": "2026-10-10T20:05:45.166Z"
+    },
+    {
+      "id": "4fc9bc828130d43e8b426799898c9bd3bf417bdc450ddc2410a9bc72e0bde784",
+      "region": "Canada / Québec",
+      "titlePt": "Nickelback anuncia turnê mundial em 2027",
+      "excerptPt": "O grupo canadense de rock Nickelback anunciou uma grande turnê mundial em 2027 em sua página do Instagram.",
+      "bodyPt": [
+        "O grupo canadense de rock Nickelback anunciou uma grande turnê mundial em 2027 em sua página do Instagram.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T14:59:34.000Z",
+      "discoveredAt": "2026-10-10T20:05:38.998Z"
+    },
+    {
+      "id": "cbceb3c22d14aa856374b4c172ddaa535dff4fe55deacb5e450ca8cc4d48e5c0",
+      "region": "USA",
+      "titlePt": "Tom Morello: Por que nem todas as bandas de rock precisam ser políticas",
+      "excerptPt": "O campeão de bandas pesadas do Rock Hall está orgulhoso de sua contribuição para tornar a cena maior do que nunca. Continuar lendo…",
+      "bodyPt": [
+        "O campeão de bandas pesadas do Rock Hall está orgulhoso de sua contribuição para tornar a cena maior do que nunca. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T14:23:19.000Z",
+      "discoveredAt": "2026-10-10T20:05:26.783Z"
+    },
+    {
+      "id": "d68de03263db20e8ec765d5cb4b69be4a7b6a8e17f224439b108d2daed9b14b6",
+      "region": "USA",
+      "titlePt": "Motorista de ônibus das Indigo Girls morreu em acidente",
+      "excerptPt": "Nenhum outro membro da banda ou equipe estava a bordo no momento do acidente. Motorista de ônibus das Indigo Girls morto no acidente Alex Young",
+      "bodyPt": [
+        "Nenhum outro membro da banda ou equipe estava a bordo no momento do acidente. Motorista de ônibus das Indigo Girls morto no acidente Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T13:57:43.000Z",
+      "discoveredAt": "2026-10-10T20:05:27.843Z"
+    },
+    {
+      "id": "045a5ec6fc8d32bed8ae999a24021e46d8fc5a4aa7322b0beb6e1d06f343e070",
+      "region": "USA",
+      "titlePt": "Sammy Hagar faz o primeiro de três shows de aniversário: set list, vídeo",
+      "excerptPt": "O baixista do Van Halen, Michael Anthony, não participou este ano. Aqui está o porquê. Continuar lendo…",
+      "bodyPt": [
+        "O baixista do Van Halen, Michael Anthony, não participou este ano. Aqui está o porquê. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T13:52:21.000Z",
+      "discoveredAt": "2026-10-10T20:05:26.783Z"
+    },
+    {
+      "id": "ea58f48f0fe2560101218439fb91034300bfa4c21a1ae0c981b2748d522d1732",
+      "region": "Europe / Belgium",
+      "titlePt": "Por que o vocalista do Echo & the Bunnymen se recusou a gravar “The Killing Moon”, a maior música do grupo?",
+      "excerptPt": "Em Liverpool, no final dos anos 70, o vocalista Ian McCulloch, o guitarrista Will Sergeant, o baixista Les Pattinson e...",
+      "bodyPt": [
+        "Em Liverpool, no final dos anos 70, o vocalista Ian McCulloch, o guitarrista Will Sergeant, o baixista Les Pattinson e.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T13:29:00.000Z",
+      "discoveredAt": "2026-10-10T20:05:45.166Z"
+    },
+    {
+      "id": "05bfd12fb3ad942003b38ea099a08a37acb14bf6fa31e5e724dc250304347fc8",
+      "region": "Europe / Switzerland",
+      "titlePt": "Em Lausanne, o D! Clube comemora três décadas de noites ousadas e festivas",
+      "excerptPt": "Em Lausanne, o D! O Clube comemora trinta anos de existência neste mês de outubro. Uma rara longevidade no mundo da noite, encarnada por Thierry Wegmüller, apaixonado capitão ao leme do navio durante 23 anos e que soube fazer D! Club, uma instituição que resistiu ao passar do tempo ao ritmo de gerações.",
+      "bodyPt": [
+        "Em Lausanne, o D! O Clube comemora trinta anos de existência neste mês de outubro. Uma rara longevidade no mundo da noite, encarnada por Thierry Wegmüller, apaixonado capitão ao leme do navio durante 23 anos e que soube fazer D! Club, uma instituição que resistiu ao passar do tempo ao ritmo de gerações.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Switzerland. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T13:16:24.000Z",
+      "discoveredAt": "2026-10-10T20:05:46.382Z"
+    },
+    {
+      "id": "9d87e42023a675ca7b7685035e55ca05f562e7eee78f89ea5b42dcc70d0204aa",
+      "region": "USA",
+      "titlePt": "Lou Gramm diz que 'será preciso um milagre' para trazer o rock de verdade de volta",
+      "excerptPt": "Vocalista estrangeiro descarta a música atual como comercial e pop, e diz que as rádios não tocariam os sucessos de sua banda hoje. Continuar lendo…",
+      "bodyPt": [
+        "Vocalista estrangeiro descarta a música atual como comercial e pop, e diz que as rádios não tocariam os sucessos de sua banda hoje. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T13:06:03.000Z",
+      "discoveredAt": "2026-10-10T20:05:26.784Z"
+    },
+    {
+      "id": "e67678ca385faa7024f3de58992ee01ccc2fd4be846e94e005645fb3efab1b62",
+      "region": "Europe / France",
+      "titlePt": "“A música era uma catarse”: o clarinetista Pascal Moraguès fecha meio século de história na Orquestra de Paris",
+      "excerptPt": "HISTÓRIA - Ingressado em 1981, aos 18 anos, como clarinetista principal, o músico participou de seu último concerto, no dia 15 de outubro, na Filarmônica de Paris. A oportunidade de relembrar uma carreira que ultrapassou todos os grandes bastões.",
+      "bodyPt": [
+        "HISTÓRIA - Ingressado em 1981, aos 18 anos, como clarinetista principal, o músico participou de seu último concerto, no dia 15 de outubro, na Filarmônica de Paris. A oportunidade de relembrar uma carreira que ultrapassou todos os grandes bastões.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T13:00:00.000Z",
+      "discoveredAt": "2026-10-10T20:05:39.371Z"
+    },
+    {
+      "id": "33c9a558c06b3663202ab984c1a1470d8d04cd17f9c214ed13cabb3ba1931a4c",
+      "region": "USA",
+      "titlePt": "BEAT lança turnê de outono: set list, vídeo",
+      "excerptPt": "Terry Bozzio fez sua estreia oficial com a banda. Continuar lendo…",
+      "bodyPt": [
+        "Terry Bozzio fez sua estreia oficial com a banda. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T12:39:36.000Z",
+      "discoveredAt": "2026-10-10T20:05:26.784Z"
+    },
+    {
+      "id": "d9990bf37be5dda60a21e1cc329b4e6ad330e37490d2ce7a7867ef3aad3f814a",
+      "region": "Middle East / MENA",
+      "titlePt": "Selecione 407: mixado por Foutchy",
+      "excerptPt": "Esta semana, o DJ Foutchy, do Cairo, entra em destaque no Select com um set house moldado por disco, funk e groove. Tendo começado a discotecar na Holanda, desde então deixou a sua marca na cena electrónica egípcia, actuando em grandes festas e partilhando alinhamentos com artistas internacionais, incluindo D. Stone. Para seu set Select, Foutchy traça um aumento constante na energia, passando de grooves mid-tempo para cortes mais house. O mix apresenta ‘Noise Keeper’ de Chloe Caillet e D. Stone, ‘Everybody High’ de Caleb Jackson e ‘Basement Trash’ de Luke Alessi e Demi Riquisimo, entre outros.",
+      "bodyPt": [
+        "Esta semana, o DJ Foutchy, do Cairo, entra em destaque no Select com um set house moldado por disco, funk e groove. Tendo começado a discotecar na Holanda, desde então deixou a sua marca na cena electrónica egípcia, actuando em grandes festas e partilhando alinhamentos com artistas internacionais, incluindo D. Stone. Para seu set Select, Foutchy traça um aumento constante na energia, passando de grooves mid-tempo para cortes mais house. O mix apresenta ‘Noise Keeper’ de Chloe Caillet e D. Stone, ‘Everybody High’ de Caleb Jackson e ‘Basement Trash’ de Luke Alessi e Demi Riquisimo, entre outros.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Middle East / MENA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T12:26:25.000Z",
+      "discoveredAt": "2026-10-10T20:05:33.808Z"
+    },
+    {
+      "id": "5e4f98b157b2b8a59dd7a41144cc168718053537e49ef4ca35dbe2a5bc79e670",
+      "region": "Global / UK",
+      "titlePt": "Dovetail atravessa aterro independente com um EP autointitulado para mentes introspectivas em busca de uma nova interseção temperamental",
+      "excerptPt": "Por meio de vocais artisticamente expressivos, Dovetail se tornou uma das novas entidades indie mais comoventes a surgir em 2025. O projeto San Francisco Bay Area da cantora e compositora Kate Lewis e do premiado compositor e produtor J. Christopher Thomas chegou com um EP de estreia autointitulado que traz instrumentação temperamental de trip-hop, tensão pós-punk e leveza shoegaze em algo íntimo o suficiente para respirar. e Kate Bush através das oitavas flutuantes que brilham contra sua arquitetura instrumental mais sombria. A voz de Lewis carrega uma estranha elasticidade, passando da intimidade pensativa para a elevação teatral.",
+      "bodyPt": [
+        "Por meio de vocais artisticamente expressivos, Dovetail se tornou uma das novas entidades indie mais comoventes a surgir em 2025. O projeto San Francisco Bay Area da cantora e compositora Kate Lewis e do premiado compositor e produtor J. Christopher Thomas chegou com um EP de estreia autointitulado que traz instrumentação temperamental de trip-hop, tensão pós-punk e leveza shoegaze em algo íntimo o suficiente para respirar. e Kate Bush através das oitavas flutuantes que brilham contra sua arquitetura instrumental mais sombria. A voz de Lewis carrega uma estranha elasticidade, passando da intimidade pensativa para a elevação teatral.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T12:00:23.000Z",
+      "discoveredAt": "2026-10-10T20:05:59.093Z"
+    },
+    {
+      "id": "42ed07f4c8846128ca68d199ec68307bca9c5b91728e760aeb9eb089a89c069a",
+      "region": "USA",
+      "titlePt": "Mitos de infância que aceitamos como fatos absolutos (e talvez ainda aceitemos)",
+      "excerptPt": "Desejando às 11h11, levantando os pés sobre os trilhos da ferrovia e temendo Bloody Mary: os mitos e rituais de infância pelos quais juramos. Continuar lendo…",
+      "bodyPt": [
+        "Desejando às 11h11, levantando os pés sobre os trilhos da ferrovia e temendo Bloody Mary: os mitos e rituais de infância pelos quais juramos. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T11:09:12.000Z",
+      "discoveredAt": "2026-10-10T20:05:26.784Z"
+    },
+    {
+      "id": "0b8530e76d1daaae6558fe1ad032b122188a34a1a29c2638876d925684debf70",
+      "region": "Canada / Québec",
+      "titlePt": "O X do Y por Thierry Larose | “Baixei um pouco a guarda”",
+      "excerptPt": "Thierry Larose decidiu falar mais com o coração em Le X du Y. Um terceiro álbum onde continua a desenvolver seu ambicioso pop com refrões unificadores, e que dá vontade de exclamar com ele: “Viva a música de Quebec! »",
+      "bodyPt": [
+        "Thierry Larose decidiu falar mais com o coração em Le X du Y. Um terceiro álbum onde continua a desenvolver seu ambicioso pop com refrões unificadores, e que dá vontade de exclamar com ele: “Viva a música de Quebec! ».",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T11:00:00.000Z",
+      "discoveredAt": "2026-10-10T20:05:38.998Z"
+    },
+    {
+      "id": "405891f23b3d32892f99a637527f7b2f5d1715974ce4a55c80aefa7939cbe74d",
+      "region": "Europe / UK",
+      "titlePt": "REVISÃO DO ÁLBUM: ‘1977’ de Ash ainda soa explosivo 30 anos depois”",
+      "excerptPt": "Quando Ash, adolescente de Downpatrick, explodiu no cenário de meados dos anos 90 em 1977, eles não apenas se juntaram à festa Britpop, eles invadiram a porta dos fundos com amplificadores ajustados para dez, cidra barata e fuzz pesado em [...]",
+      "bodyPt": [
+        "Quando Ash, adolescente de Downpatrick, explodiu no cenário de meados dos anos 90 em 1977, eles não apenas se juntaram à festa Britpop, eles invadiram a porta dos fundos com amplificadores ajustados para dez, cidra barata e fuzz pesado em [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T10:23:17.000Z",
+      "discoveredAt": "2026-10-10T20:05:28.139Z"
+    },
+    {
+      "id": "0423796199553fad7f5311c66f2af3a3a0c7a202e7b9747853b92420d9fa1dbe",
+      "region": "Canada / Québec",
+      "titlePt": "França Castel em Technicolor | France Castel não está pronta para sair desta festa que é a vida",
+      "excerptPt": "France Castel não gosta de homenagens, pois elas lhe lembram que essa grande festa que é a vida um dia acabará. Mas continuará de bom grado a assistir ao que em breve lhe será entregue no Théâtre Gilles-Vigneault, para assinalar os seus 60 anos de carreira. Entrevista com uma mulher que está longe de terminar.",
+      "bodyPt": [
+        "France Castel não gosta de homenagens, pois elas lhe lembram que essa grande festa que é a vida um dia acabará. Mas continuará de bom grado a assistir ao que em breve lhe será entregue no Théâtre Gilles-Vigneault, para assinalar os seus 60 anos de carreira. Entrevista com uma mulher que está longe de terminar.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T10:00:00.000Z",
+      "discoveredAt": "2026-10-10T20:05:38.998Z"
+    },
+    {
+      "id": "938168e37b636881f1a00daff2fa5ae69be226007719782a50ce2d0d45c539a3",
+      "region": "Europe / Belgium",
+      "titlePt": "“Damos pistas o tempo todo, mas eles nunca as identificam”: Tate McRae está decepcionada com seus fãs",
+      "excerptPt": "Não Taylor Swift! Hoje em dia, uma aparição na rádio, outra no Star Ac' e um single não são suficientes...",
+      "bodyPt": [
+        "Não Taylor Swift! Hoje em dia, uma aparição na rádio, outra no Star Ac' e um single não são suficientes.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T08:30:00.000Z",
+      "discoveredAt": "2026-10-10T20:05:45.166Z"
+    },
+    {
+      "id": "632e31421885d6f679233d3e642a3f4dbe41e658b3097925ec6c1478578aa6b1",
+      "region": "Europe / UK",
+      "titlePt": "The Chemical Brothers, Ellie Goulding e Adéla lideram a última onda de escalação para o Open’er 2027",
+      "excerptPt": "Tom Rowlands e Ed Simons retornarão 25 anos depois de serem a atração principal da edição inaugural do festival",
+      "bodyPt": [
+        "Tom Rowlands e Ed Simons retornarão 25 anos depois de serem a atração principal da edição inaugural do festival.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T08:29:16.000Z",
+      "discoveredAt": "2026-10-10T20:05:27.075Z"
+    },
+    {
+      "id": "fad179a934338a1050ca538fe3f1e9e57c7b303440d9bd991ad23dedfe48645b",
+      "region": "Africa / Kenya",
+      "titlePt": "Albert Kass apresenta uma balada vulnerável sobre “Fallin’ Off”: assista ao videoclipe",
+      "excerptPt": "Escrever com o coração permite que os artistas fiquem profundamente vulneráveis. Esse é o caso de Albert Kass, o cantor e compositor de Los Angeles cuja música sempre toca o coração dos ouvintes, fazendo com que eles se identifiquem. Após seu álbum de 2023, Young Old Man, Albert fez uma pausa. Os singles de retorno oferecem detalhes sobre o que está acontecendo. O […]",
+      "bodyPt": [
+        "Escrever com o coração permite que os artistas fiquem profundamente vulneráveis. Esse é o caso de Albert Kass, o cantor e compositor de Los Angeles cuja música sempre toca o coração dos ouvintes, fazendo com que eles se identifiquem. Após seu álbum de 2023, Young Old Man, Albert fez uma pausa. Os singles de retorno oferecem detalhes sobre o que está acontecendo. O […].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T08:08:11.000Z",
+      "discoveredAt": "2026-10-10T20:05:28.531Z"
+    },
+    {
+      "id": "13b42e69b1ba3d1aa804700adda4d08f226be955b3d0c255d7dbd16741392d9d",
+      "region": "Europe / Belgium",
+      "titlePt": "Como a experiência Jimi Hendrix foi de Londres a Monterey com um desvio por Mouscron",
+      "excerptPt": "Ouvindo o riff de “Purple Haze”, temos a impressão de um guitarrista caindo do céu, e essa é mesmo a imagem que fica...",
+      "bodyPt": [
+        "Ouvindo o riff de “Purple Haze”, temos a impressão de um guitarrista caindo do céu, e essa é mesmo a imagem que fica.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T08:04:00.000Z",
+      "discoveredAt": "2026-10-10T20:05:45.166Z"
+    },
+    {
+      "id": "08e627b035365b4b7462d98d22a65994c7d445c922ae174c5234aab9d28f4948",
+      "region": "Africa / Kenya",
+      "titlePt": "InDuna revela “cores favoritas” em novo single",
+      "excerptPt": "InDuna é um artista que você deveria conhecer. Nascido e criado na África do Sul e atualmente radicado na Nova Zelândia, a marca de afropop do cantor é profundamente influenciada pelas suas raízes Mzansi. “Favourite Colors” é o lançamento mais recente da InDuna. A música mistura ritmos afro-house com melodias emocionantes. Adoro as harmonias vocais, pois [...]",
+      "bodyPt": [
+        "InDuna é um artista que você deveria conhecer. Nascido e criado na África do Sul e atualmente radicado na Nova Zelândia, a marca de afropop do cantor é profundamente influenciada pelas suas raízes Mzansi. “Favourite Colors” é o lançamento mais recente da InDuna. A música mistura ritmos afro-house com melodias emocionantes. Adoro as harmonias vocais, pois [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T07:27:11.000Z",
+      "discoveredAt": "2026-10-10T20:05:28.531Z"
+    },
+    {
+      "id": "bb12879ad62d5452b69e3da5e84751720fa34e24ab1920c48233439ac7db9cec",
+      "region": "Europe / Belgium",
+      "titlePt": "O segurança do Berghain explica como escolhe os clientes",
+      "excerptPt": "Berghain é um clube de antologia na Alemanha onde o techno ressoa para o deleite de...",
+      "bodyPt": [
+        "Berghain é um clube de antologia na Alemanha onde o techno ressoa para o deleite de.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T06:00:00.000Z",
+      "discoveredAt": "2026-10-10T20:05:45.166Z"
+    },
+    {
+      "id": "2e7ea9fd40d4dfa429ab29b65f0739f80926be242a6e12d9e66bcf47cbd80af0",
+      "region": "Europe / Belgium",
+      "titlePt": "As 5 notícias do rock da semana: Queen esclarece a situação, Aerosmith retorna com um exército de estrelas e Indochine vira página",
+      "excerptPt": "Brian May teve que esclarecer comentários erroneamente interpretados como um anúncio do fim das turnês do Queen; Aerosmith...",
+      "bodyPt": [
+        "Brian May teve que esclarecer comentários erroneamente interpretados como um anúncio do fim das turnês do Queen; Aerosmith.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T05:43:39.000Z",
+      "discoveredAt": "2026-10-10T20:05:45.166Z"
+    },
+    {
+      "id": "c37a425bc0fbfbd512b9f19eec202202bddb27e01c7b5eeacfb9670056fda351",
+      "region": "Europe / Belgium",
+      "titlePt": "A eterna primavera das lendas: quando a safra volta com força total!",
+      "excerptPt": "Aos 81 anos, Rod Stewart (foto) anunciou oficialmente o lançamento de sua última grande turnê mundial,...",
+      "bodyPt": [
+        "Aos 81 anos, Rod Stewart (foto) anunciou oficialmente o lançamento de sua última grande turnê mundial,.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-10T05:30:00.000Z",
+      "discoveredAt": "2026-10-10T20:05:45.166Z"
+    },
     {
       "id": "4fb03d462f0ea677c8c2136a7fd53e9c273b038a8c2e24eba9a0a1f15750b332",
       "region": "Global / UK",
