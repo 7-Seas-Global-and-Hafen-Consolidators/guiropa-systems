@@ -1,10 +1,506 @@
 {
-  "updatedAt": "2026-08-30T20:40:04.728Z",
+  "updatedAt": "2026-10-17T18:54:48.231Z",
   "brand": "GUIROPA RADIO",
-  "itemCount": 22,
-  "publishedPt": 22,
+  "itemCount": 53,
+  "publishedPt": 53,
   "editorialPending": 0,
   "items": [
+    {
+      "id": "1a79904dee4aab4012455d327b748fca856b83dd0cd0ea745424bd1f112d9920",
+      "region": "Africa / Kenya",
+      "titlePt": "Transmita o novo álbum de Skeete e assista aos visuais impressionantes de “Virgo”",
+      "excerptPt": "Se você gosta de músicas com aquele sabor afro-swing, o artista de Nottingham, Skeete, recentemente entregou uma porção completa na forma de seu último projeto, VIRGO. O álbum de 10 músicas chegou junto com o visual da faixa-título. Em si, “Virgo” é uma faixa suave e sensual que mistura dancehall e afrobeats com melodias com influências de R&B. A música é uma […]",
+      "bodyPt": [
+        "Se você gosta de músicas com aquele sabor afro-swing, o artista de Nottingham, Skeete, recentemente entregou uma porção completa na forma de seu último projeto, VIRGO. O álbum de 10 músicas chegou junto com o visual da faixa-título. Em si, “Virgo” é uma faixa suave e sensual que mistura dancehall e afrobeats com melodias com influências de R&B. A música é uma […].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T17:35:40.000Z",
+      "discoveredAt": "2026-10-17T18:52:02.220Z"
+    },
+    {
+      "id": "2d8af4e2b3b3838ccf794e9c20025893fcc5d2c223922a71ac18a88607cbfdee",
+      "region": "Africa / Kenya",
+      "titlePt": "Lotsy não obteve obediência ao cantar outro hino eufórico",
+      "excerptPt": "O novo artista Lotsy lançou um novo single, “No Obedience”, na outra semana. A música contagiante e de alta octanagem apresenta uma mistura suave de indie pop e punk rock. Ele encapsula o estilo barulhento e eufórico de Lotsy. “'No Obedience' é uma declaração definidora para Lotsy e para quem eu sou”, ela compartilha. O artista continua: “Trata-se de questionar o […]",
+      "bodyPt": [
+        "O novo artista Lotsy lançou um novo single, “No Obedience”, na outra semana. A música contagiante e de alta octanagem apresenta uma mistura suave de indie pop e punk rock. Ele encapsula o estilo barulhento e eufórico de Lotsy. “'No Obedience' é uma declaração definidora para Lotsy e para quem eu sou”, ela compartilha. O artista continua: “Trata-se de questionar o […].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T17:12:22.000Z",
+      "discoveredAt": "2026-10-17T18:52:02.220Z"
+    },
+    {
+      "id": "1c866326263d08e30a0a905ce3b7b4458b0fb19988dc4028d6515d29f54f7b45",
+      "region": "USA",
+      "titlePt": "Os “100 cavalos” de Geese estão aterrorizando MLB The Show 26 Players",
+      "excerptPt": "A banda de indie rock do Brooklyn é grande fã do Mets, mas seu último cruzamento com o beisebol não foi tão tranquilo quanto planejado. Os “100 cavalos” de Geese estão aterrorizando MLB The Show 26 jogadores Alex Krinsky",
+      "bodyPt": [
+        "A banda de indie rock do Brooklyn é grande fã do Mets, mas seu último cruzamento com o beisebol não foi tão tranquilo quanto planejado. Os “100 cavalos” de Geese estão aterrorizando MLB The Show 26 jogadores Alex Krinsky.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T15:49:21.000Z",
+      "discoveredAt": "2026-10-17T18:52:00.181Z"
+    },
+    {
+      "id": "9a6164605bb5633d6b368c84eefeef0cdb61b09acbbf2ba259ac56e0f359bc5e",
+      "region": "USA",
+      "titlePt": "Eminem defende Kid Rock Collab: “Só escolhi fazer música com meu velho amigo”",
+      "excerptPt": "Eminem mantém sua decisão de aparecer no novo álbum de música cristã do Kid Rock, Halfway 2 Jesus. Eminem defende a colaboração Kid Rock: “Apenas escolhendo fazer música com meu velho amigo” Alex Young",
+      "bodyPt": [
+        "Eminem mantém sua decisão de aparecer no novo álbum de música cristã do Kid Rock, Halfway 2 Jesus. Eminem defende a colaboração Kid Rock: “Apenas escolhendo fazer música com meu velho amigo” Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T15:34:06.000Z",
+      "discoveredAt": "2026-10-17T18:52:00.181Z"
+    },
+    {
+      "id": "583f797520d3e6afdb879179ef2f1f71c1c6e54bbff8457d3e5bf3bc0e183165",
+      "region": "USA",
+      "titlePt": "Harry Styles estreia nova música escrita para Liam Payne no segundo aniversário de sua morte",
+      "excerptPt": "Styles apresentou “What Is Enough” com uma comovente homenagem a Payne antes de apresentar a música no Madison Square Garden. Harry Styles estreia nova música escrita para Liam Payne no segundo aniversário de sua morte Alex Krinsky",
+      "bodyPt": [
+        "Styles apresentou “What Is Enough” com uma comovente homenagem a Payne antes de apresentar a música no Madison Square Garden. Harry Styles estreia nova música escrita para Liam Payne no segundo aniversário de sua morte Alex Krinsky.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T15:04:21.000Z",
+      "discoveredAt": "2026-10-17T18:52:00.181Z"
+    },
+    {
+      "id": "e0d3718d80214c5b5b6e2225cd8c71340a029f5ea0906af551d6733ae80a9013",
+      "region": "USA",
+      "titlePt": "Oito músicas dos Beatles que Paul McCartney não gostou",
+      "excerptPt": "Nada mal para um catálogo de mais de 200 músicas. Continuar lendo…",
+      "bodyPt": [
+        "Nada mal para um catálogo de mais de 200 músicas. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T14:34:39.000Z",
+      "discoveredAt": "2026-10-17T18:51:59.149Z"
+    },
+    {
+      "id": "186f28a440457614ad5d4815085a4c9d8926d6c5247ed90beac9c2c774cfcc45",
+      "region": "USA",
+      "titlePt": "10 anos depois: algum dia veremos outra viagem ao deserto?",
+      "excerptPt": "Olhamos para trás, para o festival épico - e imaginamos quem poderia jogar Desert Trip 2. Continue lendo…",
+      "bodyPt": [
+        "Olhamos para trás, para o festival épico - e imaginamos quem poderia jogar Desert Trip 2. Continue lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T14:34:33.000Z",
+      "discoveredAt": "2026-10-17T18:51:59.149Z"
+    },
+    {
+      "id": "91bb2c24b9177770ce786bd50f526ca23c8a506d52123ccc20dfce8e83d99efe",
+      "region": "USA",
+      "titlePt": "Miley Cyrus presta homenagem a Dolly Parton no show de retorno do Hollywood Bowl",
+      "excerptPt": "O show do Hollywood Bowl marcou o show público completo de Cyrus em quatro anos. Miley Cyrus presta homenagem a Dolly Parton no show de retorno do Hollywood Bowl, Alex Young",
+      "bodyPt": [
+        "O show do Hollywood Bowl marcou o show público completo de Cyrus em quatro anos. Miley Cyrus presta homenagem a Dolly Parton no show de retorno do Hollywood Bowl, Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T14:25:58.000Z",
+      "discoveredAt": "2026-10-17T18:52:00.181Z"
+    },
+    {
+      "id": "7b1f63358338aaebaea81e159ea728faa6f97d3070acd2a33fdd368a7d47bfb2",
+      "region": "USA",
+      "titlePt": "Rockers que perdemos em 2026",
+      "excerptPt": "Bob Weir, do Grateful Dead, e Brad Arnold, do 3 Doors Down, lideram nossa lista de mortes de estrelas do rock até agora em 2026. Continue lendo…",
+      "bodyPt": [
+        "Bob Weir, do Grateful Dead, e Brad Arnold, do 3 Doors Down, lideram nossa lista de mortes de estrelas do rock até agora em 2026. Continue lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T14:20:02.000Z",
+      "discoveredAt": "2026-10-17T18:51:59.421Z"
+    },
+    {
+      "id": "a693c0494f77bebc72908aba0448a20957723ebc0dd9fe30573ac7d4f68aedf2",
+      "region": "Europe / Belgium",
+      "titlePt": "Rosanna deve seu primeiro nome à namorada do tecladista de Toto, uma atriz que você conhece bem",
+      "excerptPt": "Com as costas contra a parede no Sunset Boulevard Tudo começou bem para Totó. Em 1978, o primeiro álbum do grupo...",
+      "bodyPt": [
+        "Com as costas contra a parede no Sunset Boulevard Tudo começou bem para Totó. Em 1978, o primeiro álbum do grupo.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T14:04:00.000Z",
+      "discoveredAt": "2026-10-17T18:52:25.222Z"
+    },
+    {
+      "id": "9c8373e47b22ee9574c949baba0fab242fb53d7599f930a89e62919d8bf3f954",
+      "region": "USA",
+      "titlePt": "Kid Rock lança álbum de música cristã com colaboração de Eminem “Heal My Faith”",
+      "excerptPt": "Eminem diz sobre a faixa: \"Não se trata de escolher um lado, apenas escolher fazer música com meu velho amigo. Rezando por todos nós.\" Kid Rock lança álbum de música cristã com colaboração de Eminem “Heal My Faith” Alex Young",
+      "bodyPt": [
+        "Eminem diz sobre a faixa: \"Não se trata de escolher um lado, apenas escolher fazer música com meu velho amigo. Rezando por todos nós.\" Kid Rock lança álbum de música cristã com colaboração de Eminem “Heal My Faith” Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T13:28:30.000Z",
+      "discoveredAt": "2026-10-17T18:52:00.181Z"
+    },
+    {
+      "id": "39316de20eee8e4128740213879fc8a3435fce199456ec4a78e049a27dbe8fa7",
+      "region": "Canada / Québec",
+      "titlePt": "A festinateca | A Festa das Festas de La Bronze",
+      "excerptPt": "Fetinathèque: esta é a palavra que La Bronze inventou para dar o título ao seu quarto álbum. Uma obra eclética e fragmentada, em que abraça muitas emoções, de diversas formas.",
+      "bodyPt": [
+        "Fetinathèque: esta é a palavra que La Bronze inventou para dar o título ao seu quarto álbum. Uma obra eclética e fragmentada, em que abraça muitas emoções, de diversas formas.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T13:00:00.000Z",
+      "discoveredAt": "2026-10-17T18:52:18.627Z"
+    },
+    {
+      "id": "e766dc97a87b705b76f1c2d9aacea4752ebee1931c57886ace341e9f5a9b78c7",
+      "region": "Europe / Switzerland",
+      "titlePt": "Retorno de sucesso aos palcos de Céline Dion, que encerra sua primeira série de shows parisienses no sábado",
+      "excerptPt": "Seus maiores sucessos, casa cheia todas as noites e muita emoção: Celine Dion encerra a primeira parte de sua série de shows parisienses na noite de sábado, marcando um retorno de sucesso, quase sem problemas e com máxima exposição midiática.",
+      "bodyPt": [
+        "Seus maiores sucessos, casa cheia todas as noites e muita emoção: Celine Dion encerra a primeira parte de sua série de shows parisienses na noite de sábado, marcando um retorno de sucesso, quase sem problemas e com máxima exposição midiática.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Switzerland. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T12:57:37.000Z",
+      "discoveredAt": "2026-10-17T18:52:27.559Z"
+    },
+    {
+      "id": "82c6b54b49a9f52d626ba8f1e49e355118af60ae3070fbdeef99a65ec2ce8a29",
+      "region": "Europe / Belgium",
+      "titlePt": "Por que dizemos “um amigo meu”? A fórmula inglesa que o pop e o rock usam em todos os lugares",
+      "excerptPt": "Quando um clássico do soul vira uma aula de inglês Lançado em 1966, \"This Old Heart of Mine\" se tornou um dos grandes...",
+      "bodyPt": [
+        "Quando um clássico do soul vira uma aula de inglês Lançado em 1966, \"This Old Heart of Mine\" se tornou um dos grandes.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T12:20:00.000Z",
+      "discoveredAt": "2026-10-17T18:52:25.222Z"
+    },
+    {
+      "id": "08c27b41ea949aebcc1d4b256e2a8c187adf1536be8ef9c96b7d2a6d2afc9266",
+      "region": "Global / UK",
+      "titlePt": "Super Love’s Vibes é uma sessão indietrônica cosmicamente urbana com os fantasmas psicodélicos do underground de Nova York",
+      "excerptPt": "As vibrações estão ON no próximo LP, Sounds of Séance, do Super Love, a força incontável da fusão desinibida trazendo credibilidade à dinâmica casal-dupla. O single de destaque, Vibes, transmite o inimitável toque underground metropolitano de Nova York, suavizado por instalações de reverberação exuberante no estilo ELO que permitem que as linhas do sintetizador subam em órbita enquanto ritmos polifônicos obscenos mantêm o lançamento alucinante baseado no estilo indietrônico. O timbre vocal de Constance Watkins é a combinação perfeita para a produção, que traz elementos de psicodelia, jazz e hip-pop indie new wave. Na verdade, a dupla pode ter cunhado esse último subgênero; mesmo que um artista fosse ousado o suficiente para precedê-los, Super Love teve",
+      "bodyPt": [
+        "As vibrações estão ON no próximo LP, Sounds of Séance, do Super Love, a força incontável da fusão desinibida trazendo credibilidade à dinâmica casal-dupla. O single de destaque, Vibes, transmite o inimitável toque underground metropolitano de Nova York, suavizado por instalações de reverberação exuberante no estilo ELO que permitem que as linhas do sintetizador subam em órbita enquanto ritmos polifônicos obscenos mantêm o lançamento alucinante baseado no estilo indietrônico. O timbre vocal de Constance Watkins é a combinação perfeita para a produção, que traz elementos de psicodelia, jazz e hip-pop indie new wave. Na verdade, a dupla pode ter cunhado esse último subgênero; mesmo que um artista fosse ousado o suficiente para precedê-los, Super Love teve.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T12:00:21.000Z",
+      "discoveredAt": "2026-10-17T18:52:43.084Z"
+    },
+    {
+      "id": "ab3bcf7aa298f2005d8a27002438417454c350faf63e7877125467834e216cb6",
+      "region": "Europe / Belgium",
+      "titlePt": "Mentissa surpreende no Cirque Royal ao convidar Helena e Alice no Telhado",
+      "excerptPt": "Magnífica surpresa para os fãs de Mentissa nesta quinta-feira, 15 de outubro, que vieram vê-la em massa durante seu show no Cirque...",
+      "bodyPt": [
+        "Magnífica surpresa para os fãs de Mentissa nesta quinta-feira, 15 de outubro, que vieram vê-la em massa durante seu show no Cirque.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T11:54:50.000Z",
+      "discoveredAt": "2026-10-17T18:52:25.222Z"
+    },
+    {
+      "id": "813ba93e98a886abbc4483b9590b461f6a8658b8961a09159830fe0d0d06e931",
+      "region": "Europe / Belgium",
+      "titlePt": "Os “primeiros tempos” para artistas e movimentos de rock, vintage ou cultura pop em livros sérios",
+      "excerptPt": "O rock realmente começou em 1951 com a gravação de Rocket 88 por Ike Turner e seus músicos no Sun...",
+      "bodyPt": [
+        "O rock realmente começou em 1951 com a gravação de Rocket 88 por Ike Turner e seus músicos no Sun.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T10:30:09.000Z",
+      "discoveredAt": "2026-10-17T18:52:25.222Z"
+    },
+    {
+      "id": "5f43db2860e28f332016e512cabce8c58283b8b24824ee4ebdce87fc5f930185",
+      "region": "Europe / France",
+      "titlePt": "\"Roma\", de Jules Massenet, ou o sacrifício da vestal",
+      "excerptPt": "Última ópera de Jules Massenet criada em vida, Roma sem dúvida não tem as seduções de Werther ou Manon. Mas a obra, revivida por cantores e músicos convictos, contém páginas austeras e augustas que o curioso amante da música terá o prazer de descobrir no sábado, 17 de outubro de 2026, na France Musique, depois na plataforma da Radio France.",
+      "bodyPt": [
+        "Última ópera de Jules Massenet criada em vida, Roma sem dúvida não tem as seduções de Werther ou Manon. Mas a obra, revivida por cantores e músicos convictos, contém páginas austeras e augustas que o curioso amante da música terá o prazer de descobrir no sábado, 17 de outubro de 2026, na France Musique, depois na plataforma da Radio France.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T10:12:55.000Z",
+      "discoveredAt": "2026-10-17T18:52:19.906Z"
+    },
+    {
+      "id": "b22bb74f141d56e200aadfa8ca493cf07833dfb705bab9e32e5c75e89044036f",
+      "region": "Europe / Belgium",
+      "titlePt": "Tip Top: Charlotte Cardin retorna com novo álbum, Manon Lisa revisita Diam’s & Rosalia oferece dueto com o melhor grupo de rock da atualidade",
+      "excerptPt": "A jovem artista de Montreal continua a sua ascensão desde o sucesso de \"Confetti\", o sucesso que a revelou...",
+      "bodyPt": [
+        "A jovem artista de Montreal continua a sua ascensão desde o sucesso de \"Confetti\", o sucesso que a revelou.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T10:00:31.000Z",
+      "discoveredAt": "2026-10-17T18:52:25.222Z"
+    },
+    {
+      "id": "24c195c76107516bc3d3a9226434eadac1d4b542f2b623b2a3007e537c2b8133",
+      "region": "Canada / Québec",
+      "titlePt": "Entrevista com Angèle | Para dançar? Nós realmente precisamos disso!",
+      "excerptPt": "A superestrela pop Angèle acaba de lançar Instinct, seu terceiro álbum. Conversamos sobre criação, algoritmos e desabafo com a afável cantora belga, que ainda ama Montreal.",
+      "bodyPt": [
+        "A superestrela pop Angèle acaba de lançar Instinct, seu terceiro álbum. Conversamos sobre criação, algoritmos e desabafo com a afável cantora belga, que ainda ama Montreal.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T10:00:00.000Z",
+      "discoveredAt": "2026-10-17T18:52:18.627Z"
+    },
+    {
+      "id": "7b7370bdf2ace666108d89ed6116d39abde64a5c5cbc689199c490b2dd06b896",
+      "region": "Africa / Kenya",
+      "titlePt": "Produtor de música dance Topic apresenta hino eufórico, “Follow You Down”",
+      "excerptPt": "A superestrela da dance music alemã Topic só faz hinos. E isso é especialmente verdade com sua mais nova oferta, “Follow You Down”. A faixa house melódica é caracterizada por uma produção vibrante, letras eufóricas e melodias do tamanho de um estádio. Os vocais se misturam suavemente com a faixa instrumental para dar à música um toque texturizado. “Follow You Down” é perfeito para [...]",
+      "bodyPt": [
+        "A superestrela da dance music alemã Topic só faz hinos. E isso é especialmente verdade com sua mais nova oferta, “Follow You Down”. A faixa house melódica é caracterizada por uma produção vibrante, letras eufóricas e melodias do tamanho de um estádio. Os vocais se misturam suavemente com a faixa instrumental para dar à música um toque texturizado. “Follow You Down” é perfeito para [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T09:23:30.000Z",
+      "discoveredAt": "2026-10-17T18:52:02.220Z"
+    },
+    {
+      "id": "d273b03874b1f0621aec148a979e02a5b66f2ad7a0b0a09600bc53ce94604dbb",
+      "region": "Africa / Kenya",
+      "titlePt": "“I Don’t Get High Anymore” de Obed Padilla vai deixar você obcecado",
+      "excerptPt": "Sinto que Obed Padilla se superou em sua nova música, “I Don’t Get High Anymore”, uma versão que soa ultrajante, considerando a recente série de singles quentes do artista mexicano. O single é inebriante, para dizer o mínimo. Ao longo do último ano, Obed nos manteve sob controle com seu indie caloroso e contagiante [...]",
+      "bodyPt": [
+        "Sinto que Obed Padilla se superou em sua nova música, “I Don’t Get High Anymore”, uma versão que soa ultrajante, considerando a recente série de singles quentes do artista mexicano. O single é inebriante, para dizer o mínimo. Ao longo do último ano, Obed nos manteve sob controle com seu indie caloroso e contagiante [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T08:54:29.000Z",
+      "discoveredAt": "2026-10-17T18:52:02.220Z"
+    },
+    {
+      "id": "34f8de72274809f63231112a1922ffc9269c60b8f366e8d9b28f00dbdc7812e9",
+      "region": "Europe / UK",
+      "titlePt": "Kings Of Leon anuncia show na Dublin 3Arena para junho de 2027",
+      "excerptPt": "Kings Of Leon retornará à Irlanda em 2027 para um show principal na 3Arena de Dublin em 22 de junho. A data segue o anúncio do próximo décimo álbum de estúdio da banda, O My Beloved, que [...]",
+      "bodyPt": [
+        "Kings Of Leon retornará à Irlanda em 2027 para um show principal na 3Arena de Dublin em 22 de junho. A data segue o anúncio do próximo décimo álbum de estúdio da banda, O My Beloved, que [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T08:45:06.000Z",
+      "discoveredAt": "2026-10-17T18:52:00.755Z"
+    },
+    {
+      "id": "a867972480dc889f13f11bf59c479933fa72cfbc2e35385ee99138b72df6c104",
+      "region": "Europe / Belgium",
+      "titlePt": "Emily Armstrong fala sobre suas dúvidas antes de ingressar no Linkin Park: “Ninguém jamais conseguirá substituir Chester”",
+      "excerptPt": "É no âmbito do documentário Unshatter, que relembra o improvável e comovente regresso do grupo, que ela...",
+      "bodyPt": [
+        "É no âmbito do documentário Unshatter, que relembra o improvável e comovente regresso do grupo, que ela.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T08:04:00.000Z",
+      "discoveredAt": "2026-10-17T18:52:25.222Z"
+    },
+    {
+      "id": "216769e9d76af77b5235ee539b9da41d98194418acc858e51ea558ac21b6d41a",
+      "region": "Africa / Kenya",
+      "titlePt": "Retorno passivo da nova banda com novo single inspirador, “Tightrope”",
+      "excerptPt": "“Tightrope” dos novatos Passive é uma daquelas músicas que são tão inspiradoras liricamente quanto cativantes musicalmente. Passive é uma nova banda de rock alternativo que estreou em junho. “Tightrope” é o terceiro single da banda. Adoro as melodias quentes e contagiantes. Passivos estão nos lembrando de nos esforçarmos para dar tudo o que [...]",
+      "bodyPt": [
+        "“Tightrope” dos novatos Passive é uma daquelas músicas que são tão inspiradoras liricamente quanto cativantes musicalmente. Passive é uma nova banda de rock alternativo que estreou em junho. “Tightrope” é o terceiro single da banda. Adoro as melodias quentes e contagiantes. Passivos estão nos lembrando de nos esforçarmos para dar tudo o que [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T08:01:45.000Z",
+      "discoveredAt": "2026-10-17T18:52:02.220Z"
+    },
+    {
+      "id": "3c634dc5c6146652dff0e2fa31511567064de41fcf620b6dd4b70eb14c37de58",
+      "region": "Europe / Belgium",
+      "titlePt": "Angèle: um lugar, uma rainha e seus 7.000 convidados para celebrar o álbum “Instinct”, uma retrospectiva do evento",
+      "excerptPt": "18h30, a área ao redor da Grand-Place de Bruxelas está lotada, duas enormes filas se formam gradualmente antes...",
+      "bodyPt": [
+        "18h30, a área ao redor da Grand-Place de Bruxelas está lotada, duas enormes filas se formam gradualmente antes.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T07:56:45.000Z",
+      "discoveredAt": "2026-10-17T18:52:25.222Z"
+    },
+    {
+      "id": "8a6cad8b52f260aacd934639c73745ae8361af8724f5d9073a88a3d62dd38e63",
+      "region": "Europe / Belgium",
+      "titlePt": "Angèle reúne milhares de fãs no coração de Bruxelas para o concerto gratuito de lançamento do seu álbum “Instinct”",
+      "excerptPt": "Bem antes da abertura das portas, que aconteceu por volta das 19h, duas longas filas se formaram pelo público curioso para...",
+      "bodyPt": [
+        "Bem antes da abertura das portas, que aconteceu por volta das 19h, duas longas filas se formaram pelo público curioso para.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T06:14:03.000Z",
+      "discoveredAt": "2026-10-17T18:52:25.222Z"
+    },
+    {
+      "id": "f94802cf0dd76b3442da35cd6aacf4c76dd4fc4e869a3c416690fe35ddb2179a",
+      "region": "Europe / UK",
+      "titlePt": "The Guide #265: Suas gravadoras favoritas, da Motown à Flying Nun",
+      "excerptPt": "No boletim informativo desta semana: As gravadoras sempre levam a música para novos lugares interessantes. Aqui está uma celebração do seu poder pelos leitores e compositores musicais do Guardian. • Não recebe o Guia na sua caixa de entrada? Inscreva-se aqui Na semana passada, pedimos aos assinantes do Guide que nos contassem sobre suas gravadoras favoritas e a resposta foi entusiástica. Claramente, mesmo nesta era de serviços de streaming que agrupam álbuns, singles, EPs e mixtapes num único “feed”, a atração de uma editora – e o seu papel na identificação, nutrição e desenvolvimento de talentos musicais – permanece. Então, esta semana, uma celebração da gravadora: junto com os favoritos de alguns leitores, pedimos aos escritores musicais que compartilhassem suas ideias.",
+      "bodyPt": [
+        "No boletim informativo desta semana: As gravadoras sempre levam a música para novos lugares interessantes. Aqui está uma celebração do seu poder pelos leitores e compositores musicais do Guardian. • Não recebe o Guia na sua caixa de entrada? Inscreva-se aqui Na semana passada, pedimos aos assinantes do Guide que nos contassem sobre suas gravadoras favoritas e a resposta foi entusiástica. Claramente, mesmo nesta era de serviços de streaming que agrupam álbuns, singles, EPs e mixtapes num único “feed”, a atração de uma editora – e o seu papel na identificação, nutrição e desenvolvimento de talentos musicais – permanece. Então, esta semana, uma celebração da gravadora: junto com os favoritos de alguns leitores, pedimos aos escritores musicais que compartilhassem suas ideias.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T06:00:23.000Z",
+      "discoveredAt": "2026-10-17T18:51:58.463Z"
+    },
+    {
+      "id": "06d95971c1186fcca5296355eb4a75b623f7ef1c93e77abe7bc873f21668eb0b",
+      "region": "USA",
+      "titlePt": "Apple Watch Ultra 3 cai para nível recorde de US$ 649",
+      "excerptPt": "O acordo marca um desconto colossal de $ 150 no smartwatch. Apple Watch Ultra 3 cai para valor recorde de US$ 649 Eddie Fu",
+      "bodyPt": [
+        "O acordo marca um desconto colossal de $ 150 no smartwatch. Apple Watch Ultra 3 cai para valor recorde de US$ 649 Eddie Fu.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T04:00:08.000Z",
+      "discoveredAt": "2026-10-17T18:52:00.181Z"
+    },
+    {
+      "id": "19725b56643b260723739b0bb608eaae0adb9d511182d3c77c52b74ae46497ff",
+      "region": "Europe / Belgium",
+      "titlePt": "A melhor notícia do rock da semana: U2 volta em turnê, Roger Waters ataca o Metallica e os Beach Boys se reencontram",
+      "excerptPt": "Entre tantos anúncios, polêmicas e reencontros, mantivemos o essencial: U2 formaliza seu retorno ao...",
+      "bodyPt": [
+        "Entre tantos anúncios, polêmicas e reencontros, mantivemos o essencial: U2 formaliza seu retorno ao.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-17T03:36:43.000Z",
+      "discoveredAt": "2026-10-17T18:52:25.222Z"
+    },
+    {
+      "id": "34bc7341c62298597c73422f2e616a35c0db33e7dcd752c0a77aab23a5b2794d",
+      "region": "USA",
+      "titlePt": "Metallica compartilha vídeo profissional de apresentações de tirar o fôlego no Las Vegas Sphere: Assistir",
+      "excerptPt": "Os vídeos \"The Call of Ktulu\" e \"...And Justice for All\" do Metallica destacam a magia teatral de seu show no Sphere. Metallica compartilha vídeo profissional de apresentações de tirar o fôlego no Las Vegas Sphere: assista Langdon Hickman",
+      "bodyPt": [
+        "Os vídeos \"The Call of Ktulu\" e \"...And Justice for All\" do Metallica destacam a magia teatral de seu show no Sphere. Metallica compartilha vídeo profissional de apresentações de tirar o fôlego no Las Vegas Sphere: assista Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-16T22:25:16.000Z",
+      "discoveredAt": "2026-10-17T18:52:00.181Z"
+    },
     {
       "id": "4fb03d462f0ea677c8c2136a7fd53e9c273b038a8c2e24eba9a0a1f15750b332",
       "region": "Global / UK",
