@@ -1,10 +1,538 @@
 {
-  "updatedAt": "2026-08-30T20:40:04.728Z",
+  "updatedAt": "2026-10-24T14:37:06.426Z",
   "brand": "GUIROPA RADIO",
-  "itemCount": 22,
-  "publishedPt": 22,
+  "itemCount": 55,
+  "publishedPt": 55,
   "editorialPending": 0,
   "items": [
+    {
+      "id": "da944ffdfa29fe3ed540a8b9a191d1ab19e9af0b53cb88f7a866a6e293f1e16f",
+      "region": "USA",
+      "titlePt": "Líderes de torcida do Dallas Cowboys processam My Chemical Romance",
+      "excerptPt": "A banda se apresentou com dançarinos imitando as roupas das Cheerleaders do Dallas Cowboys. Líderes de torcida do Dallas Cowboys processam meu romance químico Alex Young",
+      "bodyPt": [
+        "A banda se apresentou com dançarinos imitando as roupas das Cheerleaders do Dallas Cowboys. Líderes de torcida do Dallas Cowboys processam meu romance químico Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T14:05:37.000Z",
+      "discoveredAt": "2026-10-24T14:35:22.309Z"
+    },
+    {
+      "id": "506ce125686814cdbf15f12ec0175e11f1d3547678fbf14d3721e8014e135016",
+      "region": "Europe / Belgium",
+      "titlePt": "Taxi Girl: como “Cherchez le Boy” impulsionou a onda de frio francesa para as paradas",
+      "excerptPt": "Do liceu parisiense ao underground A história começa em Paris, nos bancos do liceu Honoré-de-Balzac. Em volta...",
+      "bodyPt": [
+        "Do liceu parisiense ao underground A história começa em Paris, nos bancos do liceu Honoré-de-Balzac. Em volta.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T13:29:00.000Z",
+      "discoveredAt": "2026-10-24T14:35:36.924Z"
+    },
+    {
+      "id": "df568a07e67789cfa537c3d09f3fa5cb5e9df2b08d5dfbbfd44be90dca38034e",
+      "region": "USA",
+      "titlePt": "Vote na capa do álbum mais assustadora do Rock: restam apenas os quatro finalistas",
+      "excerptPt": "Iron Maiden enfrenta Black Sabbath, Dio e Ozzy Osbourne Continue lendo…",
+      "bodyPt": [
+        "Iron Maiden enfrenta Black Sabbath, Dio e Ozzy Osbourne Continue lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T13:04:33.000Z",
+      "discoveredAt": "2026-10-24T14:35:21.686Z"
+    },
+    {
+      "id": "45e7133ada1b4a7294c855ed7af2a5edc2488b8b867ff7755d18afac4b6bd89f",
+      "region": "Canada / Québec",
+      "titlePt": "Entrevista | Um refúgio de paz chamado Loreena McKennitt",
+      "excerptPt": "Por ocasião da sua visita ao Quebec para comemorar o 30º aniversário do seu álbum The Mask and Mirror, conversamos com a grande dama da música durante uma entrevista sobre o seu compromisso cívico.",
+      "bodyPt": [
+        "Por ocasião da sua visita ao Quebec para comemorar o 30º aniversário do seu álbum The Mask and Mirror, conversamos com a grande dama da música durante uma entrevista sobre o seu compromisso cívico.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T13:00:00.000Z",
+      "discoveredAt": "2026-10-24T14:35:30.115Z"
+    },
+    {
+      "id": "5b7d397c3e9261acc690d8aea4438de5529f649a1be97c7629b327e2145111b1",
+      "region": "Europe / France",
+      "titlePt": "Comédia musical: porque ir ver “Vamos cantar à chuva” no Lido",
+      "excerptPt": "Uma trupe virtuosa, levada pela música rodopiante, toca, canta e dança um grande clássico da comédia musical. No Lido, em Paris, Cantar na Chuva exala alegria pela vida até 10 de janeiro de 2027.",
+      "bodyPt": [
+        "Uma trupe virtuosa, levada pela música rodopiante, toca, canta e dança um grande clássico da comédia musical. No Lido, em Paris, Cantar na Chuva exala alegria pela vida até 10 de janeiro de 2027.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T12:58:07.000Z",
+      "discoveredAt": "2026-10-24T14:35:31.228Z"
+    },
+    {
+      "id": "d60d3e1f2ee8bcc0dda64ad6fca6addbd334812199d96e5ff6e40d52a771c57c",
+      "region": "USA",
+      "titlePt": "20 artistas de rock que nunca tocaram 'SNL'... mas ainda poderiam",
+      "excerptPt": "Ainda não é tarde para esses artistas aparecerem no icônico programa de televisão. Continuar lendo…",
+      "bodyPt": [
+        "Ainda não é tarde para esses artistas aparecerem no icônico programa de televisão. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T12:36:34.000Z",
+      "discoveredAt": "2026-10-24T14:35:21.686Z"
+    },
+    {
+      "id": "a6d8330aca327b21eb1b6852c4b4c8a16a561606756f2710afc19ec7042100cb",
+      "region": "Europe / Belgium",
+      "titlePt": "Nirvana ultrapassa AC/DC: “Nevermind” à frente de “Back in Black” no ranking mundial de álbuns mais vendidos",
+      "excerptPt": "Mais de 35 anos após seu lançamento, Nevermind continua quebrando recordes. O segundo álbum do Nirvana, lançado em...",
+      "bodyPt": [
+        "Mais de 35 anos após seu lançamento, Nevermind continua quebrando recordes. O segundo álbum do Nirvana, lançado em.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T12:28:00.000Z",
+      "discoveredAt": "2026-10-24T14:35:36.925Z"
+    },
+    {
+      "id": "573c9139a2f60c768f77b8724c2b532484313e5232194a6b0412c288aa79da5e",
+      "region": "Europe / UK",
+      "titlePt": "Sam Fender diz que “não está satisfeito” com os preços da turnê pelos estádios de 2027 e eles estão “sendo alterados”",
+      "excerptPt": "Ele também criticou seções divididas em grandes shows: \"É besteira e não vai acontecer nesta turnê\"",
+      "bodyPt": [
+        "Ele também criticou seções divididas em grandes shows: \"É besteira e não vai acontecer nesta turnê\".",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T11:16:40.000Z",
+      "discoveredAt": "2026-10-24T14:35:21.866Z"
+    },
+    {
+      "id": "24ace21c2764384e3611555d33e2db5879b37ca2d20d245d3d2440b7add29563",
+      "region": "Africa / Kenya",
+      "titlePt": "Novas músicas: Jane’s Party apresenta álbum “Avalanche”",
+      "excerptPt": "Os roqueiros de Toronto Jane’s Party acabaram de lançar outro lançamento completo impressionante. O novo álbum é intitulado Avalanche e inclui singles lançados anteriormente como “Over You“. Este álbum mostra a banda refletindo sobre sua juventude. “Scream and Shout” é uma música que captura essa energia divertida e despreocupada. O hino nostálgico é infundido com notas de [...]",
+      "bodyPt": [
+        "Os roqueiros de Toronto Jane’s Party acabaram de lançar outro lançamento completo impressionante. O novo álbum é intitulado Avalanche e inclui singles lançados anteriormente como “Over You“. Este álbum mostra a banda refletindo sobre sua juventude. “Scream and Shout” é uma música que captura essa energia divertida e despreocupada. O hino nostálgico é infundido com notas de [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T11:13:15.000Z",
+      "discoveredAt": "2026-10-24T14:35:23.418Z"
+    },
+    {
+      "id": "c7d17ba98718456cdea132bd54c07f3d5923e1a0866d49368eeae2872b6b09b5",
+      "region": "Africa / Kenya",
+      "titlePt": "Transmita o EP “Picking Up the Pieces” de Taming Sari",
+      "excerptPt": "A banda canadense Taming Sari lançou um novo EP, Picking Up the Pieces, no dia 11 de setembro. O projeto chegou com “Man on the Mountain” como faixa foco. Foi precedida por singles como “Ghost of A Good Time” – essa música em particular me apresentou ao estilo de roupa. A marca de rock de Taming Sari é corajosa [...]",
+      "bodyPt": [
+        "A banda canadense Taming Sari lançou um novo EP, Picking Up the Pieces, no dia 11 de setembro. O projeto chegou com “Man on the Mountain” como faixa foco. Foi precedida por singles como “Ghost of A Good Time” – essa música em particular me apresentou ao estilo de roupa. A marca de rock de Taming Sari é corajosa [...].",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Africa / Kenya. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T10:37:32.000Z",
+      "discoveredAt": "2026-10-24T14:35:23.418Z"
+    },
+    {
+      "id": "461b2144ee8cea7abb948e96aeb0f7e6d53030db12a1b96d74a04edf8e7cca9d",
+      "region": "Europe / Belgium",
+      "titlePt": "Tip Top: Angèle assume o comando do Tip Top e U2 anuncia álbum e turnê mundial!",
+      "excerptPt": "“Carnaval de la luz”, décimo terceiro álbum dos quatro irlandeses, será lançado no dia 13 de novembro! No processo, Bono...",
+      "bodyPt": [
+        "“Carnaval de la luz”, décimo terceiro álbum dos quatro irlandeses, será lançado no dia 13 de novembro! No processo, Bono.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T10:00:00.000Z",
+      "discoveredAt": "2026-10-24T14:35:36.925Z"
+    },
+    {
+      "id": "3b98bbd6d5a990aae3e9f3a3307e4020479323a273d8066397f8c57b5d0c868d",
+      "region": "Europe / Belgium",
+      "titlePt": "Descubra “Flower in a Hurricane” de Justice, bem como nossos outros lançamentos da semana no Tipik",
+      "excerptPt": "Conheça e ouça também os demais lançamentos que fazem parte da playlist Tipik da rádio.",
+      "bodyPt": [
+        "Conheça e ouça também os demais lançamentos que fazem parte da playlist Tipik da rádio.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T09:37:22.000Z",
+      "discoveredAt": "2026-10-24T14:35:36.925Z"
+    },
+    {
+      "id": "d8089e42a72705be91f75c9032f2aa798b9116c6831c0c8e68c3ef5709ceffba",
+      "region": "Europe / UK",
+      "titlePt": "Assista Noel Gallagher falar sobre a reunião do Oasis e o “compromisso” de trabalhar com Liam em ‘Chicken Shop Date’",
+      "excerptPt": "“Você só precisa esperar poder fazer tudo o que está tentando fazer tão bem quanto antes”, disse Gallagher, que também discutiu ser uma estrela do rock “discreta”, sua amizade com Paul McCartney e muito mais.",
+      "bodyPt": [
+        "“Você só precisa esperar poder fazer tudo o que está tentando fazer tão bem quanto antes”, disse Gallagher, que também discutiu ser uma estrela do rock “discreta”, sua amizade com Paul McCartney e muito mais.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T08:11:32.000Z",
+      "discoveredAt": "2026-10-24T14:35:21.866Z"
+    },
+    {
+      "id": "f6657feb573acc99631e944f9841bb8cb677e16a064d21ccc1b067564dba39a4",
+      "region": "Europe / Belgium",
+      "titlePt": "As 5 notícias do rock da semana: Robert Plant fala, Black Sabbath revela seus últimos segredos e Nirvana ultrapassa AC/DC",
+      "excerptPt": "Robert Plant relembra o drama que mudou seu relacionamento com o Led Zeppelin; novas revelações cercam o...",
+      "bodyPt": [
+        "Robert Plant relembra o drama que mudou seu relacionamento com o Led Zeppelin; novas revelações cercam o.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T05:47:26.000Z",
+      "discoveredAt": "2026-10-24T14:35:36.925Z"
+    },
+    {
+      "id": "9ebe64c2a112735076b605f9d6f3473252d4f4e62959b8034bed350c5b5cf9a0",
+      "region": "Europe / Belgium",
+      "titlePt": "Os Fantasmas do Estúdio: esses álbuns gravados mas nunca lançados, ou muito mais tarde!",
+      "excerptPt": "O caso mais famoso da história do rock continua sendo SMiLE dos Beach Boys (1967). Após o sucesso crítico de Pet...",
+      "bodyPt": [
+        "O caso mais famoso da história do rock continua sendo SMiLE dos Beach Boys (1967). Após o sucesso crítico de Pet.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T05:30:00.000Z",
+      "discoveredAt": "2026-10-24T14:35:36.925Z"
+    },
+    {
+      "id": "2353951e19dee4e22e397d4022ad498bee5b49adf179c3bd4309ab5c9c365b5e",
+      "region": "Europe / Belgium",
+      "titlePt": "Corpsepaint, couro, logotipos ilegíveis: Classic 21 Metal decifra a estética do metal em um show especial",
+      "excerptPt": "Durante uma hora, eles irão reconstituir a história da pintura de cadáveres, couro, mascotes, logotipos impossíveis de ler e...",
+      "bodyPt": [
+        "Durante uma hora, eles irão reconstituir a história da pintura de cadáveres, couro, mascotes, logotipos impossíveis de ler e.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-24T03:59:00.000Z",
+      "discoveredAt": "2026-10-24T14:35:36.925Z"
+    },
+    {
+      "id": "1b758a60baf0e1a901ebc857424988b19f2db2edcc414bc1f4769a08e547fd76",
+      "region": "USA",
+      "titlePt": "Músicas de Adela, Karol G e Dominic Fike fazem sucesso nas paradas da Billboard",
+      "excerptPt": "Taylor Swift ainda tem a música número 1 do país, mas há várias músicas atrás dela que merecem sua atenção.",
+      "bodyPt": [
+        "Taylor Swift ainda tem a música número 1 do país, mas há várias músicas atrás dela que merecem sua atenção.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T21:36:42.000Z",
+      "discoveredAt": "2026-10-24T14:35:20.355Z"
+    },
+    {
+      "id": "a63472b3d4b818ac183a30c1812dc8f1ef1459490becf9ff555f3f9262d5996f",
+      "region": "Europe / Belgium",
+      "titlePt": "“Tenho ansiedade com tudo”: dos medos à paternidade, que faz Ben Mazué seguir em frente",
+      "excerptPt": "Ben Mazué explica bem: as suas canções nascem muitas vezes da introspecção. Mas contar a história da sua própria vida não é...",
+      "bodyPt": [
+        "Ben Mazué explica bem: as suas canções nascem muitas vezes da introspecção. Mas contar a história da sua própria vida não é.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T20:43:30.000Z",
+      "discoveredAt": "2026-10-24T14:35:36.925Z"
+    },
+    {
+      "id": "80dae9520629c1abee4bd34230b9bee612281813130c4fa9fc812d4969536110",
+      "region": "USA",
+      "titlePt": "Tinashe Anuncia Turnê 2027: “The Show Must Go On”",
+      "excerptPt": "A corrida norte-americana vem em apoio ao seu último álbum, Popstar, e fará paradas em Nashville, Atlanta, Los Angeles e muito mais. Tinashe anuncia turnê de 2027: “The Show Must Go On” Eddie Fu",
+      "bodyPt": [
+        "A corrida norte-americana vem em apoio ao seu último álbum, Popstar, e fará paradas em Nashville, Atlanta, Los Angeles e muito mais. Tinashe anuncia turnê de 2027: “The Show Must Go On” Eddie Fu.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T20:26:35.000Z",
+      "discoveredAt": "2026-10-24T14:35:22.309Z"
+    },
+    {
+      "id": "ebfe293287744ed2b3378b5ca623e4ce8ab027cf71e2ee58ea0126b0b42e87c8",
+      "region": "USA",
+      "titlePt": "Imagens inéditas de Scott Weiland cantando “Vaseline” chegam com o lançamento do álbum ao vivo: Assistir",
+      "excerptPt": "Imagens inéditas de uma performance ao vivo da turnê Happy in Galoshes em 2009 foram lançadas em apoio a Scott Weiland: Live. Imagens inéditas de Scott Weiland cantando “Vaseline” chegam com o lançamento do álbum ao vivo: Assista Langdon Hickman",
+      "bodyPt": [
+        "Imagens inéditas de uma performance ao vivo da turnê Happy in Galoshes em 2009 foram lançadas em apoio a Scott Weiland: Live. Imagens inéditas de Scott Weiland cantando “Vaseline” chegam com o lançamento do álbum ao vivo: Assista Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T20:03:09.000Z",
+      "discoveredAt": "2026-10-24T14:35:22.309Z"
+    },
+    {
+      "id": "479c0afcc58ba69ff298eb784541de00aa44699492297d4d912b0680b6c4d37d",
+      "region": "USA",
+      "titlePt": "As 14 maiores turnês de rock + metal anunciadas para 2027 até agora",
+      "excerptPt": "Aqui estão as maiores turnês de rock e metal anunciadas para 2027 até agora, incluindo Metallica, Iron Maiden, Slipknot e muito mais. Continuar lendo…",
+      "bodyPt": [
+        "Aqui estão as maiores turnês de rock e metal anunciadas para 2027 até agora, incluindo Metallica, Iron Maiden, Slipknot e muito mais. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T19:08:30.000Z",
+      "discoveredAt": "2026-10-24T14:35:21.778Z"
+    },
+    {
+      "id": "cdebee110c4930f476be9900d9f5912b88f333459dbde3f289275dc77b9ef3a0",
+      "region": "USA",
+      "titlePt": "System of a Down adiciona segundo e terceiro shows do Rose Bowl de 2027",
+      "excerptPt": "Devido à grande procura. System of a Down adiciona segundo e terceiro 2027 Rose Bowl mostra Spencer Kaufman",
+      "bodyPt": [
+        "Devido à grande procura. System of a Down adiciona segundo e terceiro 2027 Rose Bowl mostra Spencer Kaufman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T18:45:35.000Z",
+      "discoveredAt": "2026-10-24T14:35:22.309Z"
+    },
+    {
+      "id": "660eaa55d733e3167608f0d2fe15bc45293793b7b44aa26153561564340a9edb",
+      "region": "USA",
+      "titlePt": "Como o Aerosmith se tornou uma ‘família’ do Guns N’ Roses",
+      "excerptPt": "Slash relembra a longa história entre os dois grupos em uma nova entrevista ao UCR. Continuar lendo…",
+      "bodyPt": [
+        "Slash relembra a longa história entre os dois grupos em uma nova entrevista ao UCR. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T18:23:52.000Z",
+      "discoveredAt": "2026-10-24T14:35:21.686Z"
+    },
+    {
+      "id": "5ed6fb3bacdb1aa1e1600da8880f225f11db357de8e880e61ab863d170066714",
+      "region": "USA",
+      "titlePt": "As 30 melhores canções de beijo dos anos 70",
+      "excerptPt": "Estas são as músicas que ajudaram o grupo a passar de desconhecidos a headliners de arena. Continuar lendo…",
+      "bodyPt": [
+        "Estas são as músicas que ajudaram o grupo a passar de desconhecidos a headliners de arena. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T18:14:50.000Z",
+      "discoveredAt": "2026-10-24T14:35:21.686Z"
+    },
+    {
+      "id": "9798e4ec2f74bd9af7223617674fd85a5ef66ff87719e283618fa8c46048460c",
+      "region": "USA",
+      "titlePt": "Canção Pesada da Semana: Tony Iommi entrega Mournful Thunder com “Over the Violent Sun”",
+      "excerptPt": "“Over the Violent Sun”, de Tony Iommi, executa a grandiosidade gótica e a selvageria condenatória do Sabbath dos últimos dias. Canção Pesada da Semana: Tony Iommi entrega Mournful Thunder com “Over the Violent Sun” Langdon Hickman",
+      "bodyPt": [
+        "“Over the Violent Sun”, de Tony Iommi, executa a grandiosidade gótica e a selvageria condenatória do Sabbath dos últimos dias. Canção Pesada da Semana: Tony Iommi entrega Mournful Thunder com “Over the Violent Sun” Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T18:09:14.000Z",
+      "discoveredAt": "2026-10-24T14:35:22.309Z"
+    },
+    {
+      "id": "dd843680f0d20f01f9f1bba4ecae2b995ad4a821ab3e700dbedfe8b51f3bdc90",
+      "region": "USA",
+      "titlePt": "Slayyyter cancela datas restantes da turnê no Reino Unido e na Europa",
+      "excerptPt": "Laringite e rupturas nas cordas vocais estão obrigando o cantor “a tomar medicação e repouso vocal completo por pelo menos duas semanas”",
+      "bodyPt": [
+        "Laringite e rupturas nas cordas vocais estão obrigando o cantor “a tomar medicação e repouso vocal completo por pelo menos duas semanas”.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T17:50:01.000Z",
+      "discoveredAt": "2026-10-24T14:35:22.099Z"
+    },
+    {
+      "id": "afabb3c1238a90d069f21442ae9c1521ee5a822ce04746e0d29efa25b68e1b58",
+      "region": "USA",
+      "titlePt": "Noel Gallagher fala sobre veganos, Macca e roupas íntimas no encontro da Chicken Shop",
+      "excerptPt": "\"Você sabe o que não é um pássaro que voa alto? Uma galinha.\"",
+      "bodyPt": [
+        "\"Você sabe o que não é um pássaro que voa alto? Uma galinha.\".",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T17:35:39.000Z",
+      "discoveredAt": "2026-10-24T14:35:22.099Z"
+    },
+    {
+      "id": "5288366256d7f998532ac492fca6ad484ec70e7343e63ff71775d36d9e4c1c92",
+      "region": "USA",
+      "titlePt": "Lendas do Black Sabbath e do Iron Maiden aparecerão na convenção de terror “Texas Frightmare” de 2027",
+      "excerptPt": "Bill Ward, Geezer Butler, Bruce Dickinson e Nicko McBrain estarão presentes. Lendas do Black Sabbath e do Iron Maiden aparecerão na convenção de terror “Texas Frightmare” de 2027 Langdon Hickman",
+      "bodyPt": [
+        "Bill Ward, Geezer Butler, Bruce Dickinson e Nicko McBrain estarão presentes. Lendas do Black Sabbath e do Iron Maiden aparecerão na convenção de terror “Texas Frightmare” de 2027 Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T17:33:57.000Z",
+      "discoveredAt": "2026-10-24T14:35:22.309Z"
+    },
+    {
+      "id": "a868489bda6d53df47d476ad99dd83c9fc58d046a3238251961b5ae6d21b7360",
+      "region": "USA",
+      "titlePt": "Dolly Parton aparece postumamente na capa de ‘Jolene’ de Bad Wolves",
+      "excerptPt": "Bad Wolves, com a aprovação do espólio de Dolly Parton, lançaram agora uma versão de seu cover de ‘Jolene’ com os vocais da falecida cantora incluídos. Continuar lendo…",
+      "bodyPt": [
+        "Bad Wolves, com a aprovação do espólio de Dolly Parton, lançaram agora uma versão de seu cover de ‘Jolene’ com os vocais da falecida cantora incluídos. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T17:32:50.000Z",
+      "discoveredAt": "2026-10-24T14:35:21.778Z"
+    },
+    {
+      "id": "27d5e40ff5c00b123a77a5a77ac899e33250a10ff70ec5561b7f1de38386bf40",
+      "region": "USA",
+      "titlePt": "Stewart Copeland relembra 'partidas de gritos' em meio a reunião policial",
+      "excerptPt": "Ele relembra a decisão que ajudou a manter a turnê funcionando. Continuar lendo…",
+      "bodyPt": [
+        "Ele relembra a decisão que ajudou a manter a turnê funcionando. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T17:31:49.000Z",
+      "discoveredAt": "2026-10-24T14:35:21.686Z"
+    },
+    {
+      "id": "85e98abd9b2f9078fe6b0f7101052106c7c01cf89f9b4349cbc53ce690f7c55e",
+      "region": "USA",
+      "titlePt": "Convidados de Noel Gallagher no Chicken Shop Data: Assistir",
+      "excerptPt": "Um Noel Gallagher muito educado senta-se com Amelia Dimoldenberg para discutir a turnê de reencontro do Oasis, seu amado Manchester City e muito mais. Convidados de Noel Gallagher no encontro do Chicken Shop: Assistir Paolo Ragusa",
+      "bodyPt": [
+        "Um Noel Gallagher muito educado senta-se com Amelia Dimoldenberg para discutir a turnê de reencontro do Oasis, seu amado Manchester City e muito mais. Convidados de Noel Gallagher no encontro do Chicken Shop: Assistir Paolo Ragusa.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T17:29:57.000Z",
+      "discoveredAt": "2026-10-24T14:35:22.309Z"
+    },
+    {
+      "id": "7e5a9cc82dbab34f98017d7005c3b519457dd0ea9e4f7be98f84cb0d2224164c",
+      "region": "Europe / Belgium",
+      "titlePt": "“Queria sumir”: Soprano revela ter chegado perto do pior",
+      "excerptPt": "No seu livro “Obrigada pelo não”, Elisa Tovati recolhe testemunhos de diversas personalidades, incluindo Jamel Debbouze...",
+      "bodyPt": [
+        "No seu livro “Obrigada pelo não”, Elisa Tovati recolhe testemunhos de diversas personalidades, incluindo Jamel Debbouze.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T17:28:25.000Z",
+      "discoveredAt": "2026-10-24T14:35:36.925Z"
+    },
+    {
+      "id": "90c700916bd1511b4afb0524484f4ea0570970a124bc018b34a674d2fec2c3b3",
+      "region": "USA",
+      "titlePt": "Transmissão nesta semana: um jantar selvagem e sexy, caos canadense e Tom Skerritt lembrados",
+      "excerptPt": "Aqui estão os melhores filmes e programas de TV para transmitir no fim de semana de 23 de outubro. Transmissão nesta semana: Um jantar selvagem e sexy, Canadian Chaos e Tom Skerritt se lembraram de Liz Shannon Miller",
+      "bodyPt": [
+        "Aqui estão os melhores filmes e programas de TV para transmitir no fim de semana de 23 de outubro. Transmissão nesta semana: Um jantar selvagem e sexy, Canadian Chaos e Tom Skerritt se lembraram de Liz Shannon Miller.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-23T17:00:52.000Z",
+      "discoveredAt": "2026-10-24T14:35:22.309Z"
+    },
     {
       "id": "4fb03d462f0ea677c8c2136a7fd53e9c273b038a8c2e24eba9a0a1f15750b332",
       "region": "Global / UK",
