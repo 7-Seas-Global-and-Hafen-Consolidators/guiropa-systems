@@ -1,10 +1,506 @@
 {
-  "updatedAt": "2026-08-30T20:40:04.728Z",
+  "updatedAt": "2026-10-31T08:57:34.797Z",
   "brand": "GUIROPA RADIO",
-  "itemCount": 22,
-  "publishedPt": 22,
+  "itemCount": 53,
+  "publishedPt": 53,
   "editorialPending": 0,
   "items": [
+    {
+      "id": "54da40740461e0c9174c49e6e510b54686ba42fa82e452ed495adb5a9a500cd3",
+      "region": "Europe / Belgium",
+      "titlePt": "Quiz: você conhece bem esses sucessos essenciais das playlists de Halloween?",
+      "excerptPt": "O Halloween está se aproximando rapidamente e se você já preparou sua fantasia, talvez não tenha...",
+      "bodyPt": [
+        "O Halloween está se aproximando rapidamente e se você já preparou sua fantasia, talvez não tenha.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-31T08:00:00.000Z",
+      "discoveredAt": "2026-10-31T08:55:29.638Z"
+    },
+    {
+      "id": "6e423a3e3fa7f5f965fe5a2f9a55418951a277b1b705f3f2eca615bfd7ed202b",
+      "region": "Europe / Belgium",
+      "titlePt": "Halloween: que música te faz arrepiar? Os anfitriões do VivaCité revelam sua playlist para você",
+      "excerptPt": "No lado 8/9, surgem dois clássicos do terror. Livia Dushkoff optou por “O Exorcista” e...",
+      "bodyPt": [
+        "No lado 8/9, surgem dois clássicos do terror. Livia Dushkoff optou por “O Exorcista” e.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-31T07:00:00.000Z",
+      "discoveredAt": "2026-10-31T08:55:29.639Z"
+    },
+    {
+      "id": "6cb3770252f54283c48a8c35fe7fcfae91618a7b4139e04eb33c4078753ae32e",
+      "region": "Europe / France",
+      "titlePt": "“Manon Lescaut” no Théâtre des Champs-Élysées: por que a heroína continua a nos fascinar?",
+      "excerptPt": "Imaginada pelo Abade Prévost em 1731, a figura sedutora, terna mas inconstante de Manon Lescaut, cuja versão operística foi apresentada no Théâtre des Champs-Élysées, em Paris, de 2 a 15 de novembro, obteve então notável sucesso nos palcos e nas telas. Por que seu caso de amor com o Chevalier Des Grieux inspirou tanto?",
+      "bodyPt": [
+        "Imaginada pelo Abade Prévost em 1731, a figura sedutora, terna mas inconstante de Manon Lescaut, cuja versão operística foi apresentada no Théâtre des Champs-Élysées, em Paris, de 2 a 15 de novembro, obteve então notável sucesso nos palcos e nas telas. Por que seu caso de amor com o Chevalier Des Grieux inspirou tanto?.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-31T06:30:21.000Z",
+      "discoveredAt": "2026-10-31T08:55:26.131Z"
+    },
+    {
+      "id": "70bd2f7f018a073830c2808b6eb34445f444d6e1c9ce7a9d4b133bb8f1dbd4cf",
+      "region": "Europe / Belgium",
+      "titlePt": "Com U2, Fontaines DC e muitos outros… o rock irlandês está indo muito bem!",
+      "excerptPt": "Mas como é que uma pequena ilha no Atlântico Norte conseguiu deixar uma marca tão profunda na história mundial...",
+      "bodyPt": [
+        "Mas como é que uma pequena ilha no Atlântico Norte conseguiu deixar uma marca tão profunda na história mundial.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-31T06:16:00.000Z",
+      "discoveredAt": "2026-10-31T08:55:29.639Z"
+    },
+    {
+      "id": "1bf6c9d203f37b4c9eefdc77e0757832a433fc933601d0f9f5af30894d5a88bb",
+      "region": "Europe / Belgium",
+      "titlePt": "As 5 notícias do rock da semana: Aerosmith retorna, U2 anuncia sua turnê e Graspop revela seus headliners",
+      "excerptPt": "Aerosmith retorna aos palcos após mais de três anos de ausência É um dos eventos de rock da semana: Aerosmith...",
+      "bodyPt": [
+        "Aerosmith retorna aos palcos após mais de três anos de ausência É um dos eventos de rock da semana: Aerosmith.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-31T04:48:00.000Z",
+      "discoveredAt": "2026-10-31T08:55:29.639Z"
+    },
+    {
+      "id": "f355586381d38115b2ef233a112b427351df3e21dcf9a3dc6d78367a308edb29",
+      "region": "USA",
+      "titlePt": "Bradford Cox lança nova música Atlas Sound “Octoberland”: Steam",
+      "excerptPt": "Marcando a primeira música nova do projeto em 15 anos. Bradford Cox lança nova música Atlas Sound “Octoberland”: Steam Alex Young",
+      "bodyPt": [
+        "Marcando a primeira música nova do projeto em 15 anos. Bradford Cox lança nova música Atlas Sound “Octoberland”: Steam Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T21:17:56.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.437Z"
+    },
+    {
+      "id": "0db7cde3a2f4e62d839a799b749930823bace195cdfad8da16a11c651c405843",
+      "region": "USA",
+      "titlePt": "Triumph cancela etapa de outono da turnê do 50º aniversário “devido a circunstâncias médicas repentinas e inesperadas”",
+      "excerptPt": "A veterana banda de rock canadense estava preparada para embarcar na segunda etapa de sua primeira turnê em 30 anos. Triunfo cancela etapa de outono da turnê do 50º aniversário “Devido a circunstâncias médicas repentinas e inesperadas” Spencer Kaufman",
+      "bodyPt": [
+        "A veterana banda de rock canadense estava preparada para embarcar na segunda etapa de sua primeira turnê em 30 anos. Triunfo cancela etapa de outono da turnê do 50º aniversário “Devido a circunstâncias médicas repentinas e inesperadas” Spencer Kaufman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T21:12:19.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.437Z"
+    },
+    {
+      "id": "307a48e554f6e3c2d4df722cf71bfddd835f0fb2e015ff462e35ae1c41130ee8",
+      "region": "USA",
+      "titlePt": "Ouça a primeira música do Atlas Sound em 15 anos",
+      "excerptPt": "“Octoberland” também chega com videoclipe",
+      "bodyPt": [
+        "“Octoberland” também chega com videoclipe.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T21:03:48.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.381Z"
+    },
+    {
+      "id": "3eb36a415be788e27cc0f4504442e4ce5b943cde40b238076eedc62728be1810",
+      "region": "USA",
+      "titlePt": "Triumph cancela as próximas datas da turnê de 2026",
+      "excerptPt": "A segunda etapa dos shows de reunião do 50º aniversário da banda canadense estava marcada para começar em novembro. Continuar lendo…",
+      "bodyPt": [
+        "A segunda etapa dos shows de reunião do 50º aniversário da banda canadense estava marcada para começar em novembro. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T20:45:55.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.189Z"
+    },
+    {
+      "id": "3cbfda29b754de01dabd90a7558c256ab356775da159e81a79d605e93dd50d07",
+      "region": "USA",
+      "titlePt": "Triumph cancela próximas datas da turnê de 2026",
+      "excerptPt": "A segunda etapa dos shows de reunião do 50º aniversário da banda canadense estava marcada para começar em novembro. Continuar lendo…",
+      "bodyPt": [
+        "A segunda etapa dos shows de reunião do 50º aniversário da banda canadense estava marcada para começar em novembro. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T20:45:55.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.285Z"
+    },
+    {
+      "id": "2b6f4d6e5921c2280efc32865977b2a4acd48a6b4c12b42bea44fbf7f57a1008",
+      "region": "Canada / Québec",
+      "titlePt": "Passeio à meia-noite, meu amor | Charlotte Cardin adiciona um quarto encontro no Bell Center",
+      "excerptPt": "Depois de já ter anunciado um show adicional no Videotron Centre em Quebec, Charlotte Cardin responde ao entusiasmo dos fãs de Montreal adicionando uma nova data no Bell Centre.",
+      "bodyPt": [
+        "Depois de já ter anunciado um show adicional no Videotron Centre em Quebec, Charlotte Cardin responde ao entusiasmo dos fãs de Montreal adicionando uma nova data no Bell Centre.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T20:02:59.000Z",
+      "discoveredAt": "2026-10-31T08:55:25.821Z"
+    },
+    {
+      "id": "2353951e19dee4e22e397d4022ad498bee5b49adf179c3bd4309ab5c9c365b5e",
+      "region": "Europe / Belgium",
+      "titlePt": "Corpsepaint, couro, logotipos ilegíveis: Classic 21 Metal decifra a estética do metal em um show especial",
+      "excerptPt": "Durante uma hora, eles irão reconstituir a história da pintura de cadáveres, couro, mascotes, logotipos impossíveis de ler e...",
+      "bodyPt": [
+        "Durante uma hora, eles irão reconstituir a história da pintura de cadáveres, couro, mascotes, logotipos impossíveis de ler e.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T20:01:00.000Z",
+      "discoveredAt": "2026-10-31T08:55:29.639Z"
+    },
+    {
+      "id": "f3ce608f4af968897ab11bcaaf8e830c51559c013733ccd43763466ca79a4263",
+      "region": "USA",
+      "titlePt": "Jerry Cantrell, do Alice in Chains, publica foto de novo corte de cabelo",
+      "excerptPt": "O líder do Alice in Chains voltou a ostentar um visual bem cortado, semelhante à era ‘The Devil Put Dinosaurs Here’. Continuar lendo…",
+      "bodyPt": [
+        "O líder do Alice in Chains voltou a ostentar um visual bem cortado, semelhante à era ‘The Devil Put Dinosaurs Here’. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T19:59:56.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.285Z"
+    },
+    {
+      "id": "2aa98ef7aba4ff14e96f59d8ab73eba18716f094685c57c51e219689c3bd1eb9",
+      "region": "USA",
+      "titlePt": "As 31 capas de álbuns de metal mais assustadoras de todos os tempos",
+      "excerptPt": "Dê uma olhada em algumas das capas de álbuns mais assustadoras e assustadoras do metal. Continuar lendo…",
+      "bodyPt": [
+        "Dê uma olhada em algumas das capas de álbuns mais assustadoras e assustadoras do metal. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T19:20:18.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.285Z"
+    },
+    {
+      "id": "184deac9456a45fa09ca26ed08779eae37c330160aa8b65f87cfc7514fe840de",
+      "region": "USA",
+      "titlePt": "Ministry lança Hate to Go (Take Out or Delivery), seu 17º e último álbum: Stream",
+      "excerptPt": "O último álbum de estúdio da lendária banda industrial é outro esforço politicamente carregado. Ministry lança Hate to Go (Take Out or Delivery), seu 17º e último álbum: Stream Langdon Hickman",
+      "bodyPt": [
+        "O último álbum de estúdio da lendária banda industrial é outro esforço politicamente carregado. Ministry lança Hate to Go (Take Out or Delivery), seu 17º e último álbum: Stream Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T19:07:45.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.437Z"
+    },
+    {
+      "id": "97271833039d8558a893c0f334afe8af79afdb371a67c55fa78b64f720c9c7ec",
+      "region": "USA",
+      "titlePt": "Canção Pesada da Semana: Ministry Go Out with a Bang em “Crickets”",
+      "excerptPt": "Ministry revisita seu som clássico em “Crickets” de seu último álbum, Hate to Go. Canção Pesada da Semana: Ministry Go Out with a Bang em “Crickets” Langdon Hickman",
+      "bodyPt": [
+        "Ministry revisita seu som clássico em “Crickets” de seu último álbum, Hate to Go. Canção Pesada da Semana: Ministry Go Out with a Bang em “Crickets” Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T18:59:49.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.437Z"
+    },
+    {
+      "id": "1847be598c4ff41d15dd8e47e725dedf7f3e3d5115c881e4ae33f8cbbec191d3",
+      "region": "USA",
+      "titlePt": "Os fones de ouvido QuietComfort da Bose têm desconto de US $ 160 por tempo limitado",
+      "excerptPt": "Isso representa um desconto de 45% em relação ao preço normal. Os fones de ouvido QuietComfort da Bose têm desconto de US $ 160 por tempo limitado Scoop Harrison",
+      "bodyPt": [
+        "Isso representa um desconto de 45% em relação ao preço normal. Os fones de ouvido QuietComfort da Bose têm desconto de US $ 160 por tempo limitado Scoop Harrison.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T18:44:48.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.437Z"
+    },
+    {
+      "id": "1bc7e58f0ac9bb77d65be1f2f3261e56129b14e37a94280cc5a07fc7f2c94ad1",
+      "region": "USA",
+      "titlePt": "Zack de la Rocha: A catraca é uma “ponte” para Bad Brains, Minor Threat e The Clash",
+      "excerptPt": "Os vocalistas do Rage Against the Machine opinam sobre o impacto de Turnstile. Zack de la Rocha: A catraca é uma “ponte” para Bad Brains, Minor Threat e The Clash Spencer Kaufman",
+      "bodyPt": [
+        "Os vocalistas do Rage Against the Machine opinam sobre o impacto de Turnstile. Zack de la Rocha: A catraca é uma “ponte” para Bad Brains, Minor Threat e The Clash Spencer Kaufman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T18:29:46.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.437Z"
+    },
+    {
+      "id": "92f10d4008a52bab5a5676d7f6ca6f7ed4b8c3f24fb13dea8663441386f4e453",
+      "region": "USA",
+      "titlePt": "O que os fãs acham que o novo curta-metragem do My Chemical Romance realmente significa",
+      "excerptPt": "Como tudo na banda, os fãs do My Chemical Romance têm teorias sobre o que realmente está acontecendo no novo curta de animação. Continuar lendo…",
+      "bodyPt": [
+        "Como tudo na banda, os fãs do My Chemical Romance têm teorias sobre o que realmente está acontecendo no novo curta de animação. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T18:22:28.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.286Z"
+    },
+    {
+      "id": "e77f182ceb99ac513e42740f6fec3240530f59ecf0a9edd378b6ff5fa461a9e2",
+      "region": "USA",
+      "titlePt": "Esses são realmente os dois últimos shows do Aerosmith?",
+      "excerptPt": "Servindo como MC, o comediante Bill Burr declarou que este fim de semana marcaria os “dois últimos shows da história do Aerosmith”. Continuar lendo…",
+      "bodyPt": [
+        "Servindo como MC, o comediante Bill Burr declarou que este fim de semana marcaria os “dois últimos shows da história do Aerosmith”. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T18:02:22.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.286Z"
+    },
+    {
+      "id": "01c450ffa02ed31847fe7a6693a38bd415d11411aa57120806078aee35a2194a",
+      "region": "USA",
+      "titlePt": "Steve Hackett reflete sobre a indução do Genesis no Rock Hall",
+      "excerptPt": "O ex-guitarrista das lendas do rock progressivo conta à UCR como causou “um pouco de agitação” naquela noite. Continuar lendo…",
+      "bodyPt": [
+        "O ex-guitarrista das lendas do rock progressivo conta à UCR como causou “um pouco de agitação” naquela noite. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T17:55:37.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.189Z"
+    },
+    {
+      "id": "7d40ebfccf9c93d12dc356879b3f24241d65e67f8a5f5bf17915a106a83cbae9",
+      "region": "USA",
+      "titlePt": "O que (+ quem) gostaríamos de ver no próximo show do Aerosmith & Friends",
+      "excerptPt": "Ainda há muitos talentos que não tocaram na noite de abertura dos shows do ‘Aerosmith + Friends’. Continuar lendo…",
+      "bodyPt": [
+        "Ainda há muitos talentos que não tocaram na noite de abertura dos shows do ‘Aerosmith + Friends’. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T17:50:19.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.286Z"
+    },
+    {
+      "id": "5d583056f12547e7c225e2ec94f321e16079310fcc16a656933408f6601b5de3",
+      "region": "USA",
+      "titlePt": "Queens of the Stone Age lança novo álbum Perfecth: Stream",
+      "excerptPt": "Josh Homme e companhia estão de volta com um novo esforço de nove músicas. Queens of the Stone Age lança novo álbum Perfecth: Stream Langdon Hickman",
+      "bodyPt": [
+        "Josh Homme e companhia estão de volta com um novo esforço de nove músicas. Queens of the Stone Age lança novo álbum Perfecth: Stream Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T17:44:32.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.437Z"
+    },
+    {
+      "id": "e20102113c8f28b35b71600cf85ed8cecc9f3bd82a5b1b000124f35d36a814bf",
+      "region": "USA",
+      "titlePt": "Florence and the Machine anunciam álbum ao vivo da turnê Everybody Scream",
+      "excerptPt": "O esforço de 22 faixas será lançado na próxima semana",
+      "bodyPt": [
+        "O esforço de 22 faixas será lançado na próxima semana.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T17:38:31.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.381Z"
+    },
+    {
+      "id": "44d7686f1ff8ce31e8d2efbecef73fb871e7c87e5e8b8e02f07e5fc948791230",
+      "region": "USA",
+      "titlePt": "Festival Sand in My Boots de Morgan Wallen retornará em 2027",
+      "excerptPt": "O evento de três dias acontecerá em Gulf Shores, Alabama, de 21 a 23 de maio de 2027. Festival Sand in My Boots de Morgan Wallen retornará em 2027 Alex Young",
+      "bodyPt": [
+        "O evento de três dias acontecerá em Gulf Shores, Alabama, de 21 a 23 de maio de 2027. Festival Sand in My Boots de Morgan Wallen retornará em 2027 Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T17:30:34.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.437Z"
+    },
+    {
+      "id": "6e19fb3ec88d94fc6438cd511112dff4e23ac391fd8d0d21584c4a696ce15031",
+      "region": "Asia / Afghanistan",
+      "titlePt": "No Afeganistão, músicos desafiam a proibição da música para manter vivas as tradições - New York Daily News",
+      "excerptPt": "No Afeganistão, músicos desafiam a proibição da música para manter vivas as tradições New York Daily News",
+      "bodyPt": [
+        "No Afeganistão, músicos desafiam a proibição da música para manter vivas as tradições New York Daily News.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Asia / Afghanistan. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T17:29:11.000Z",
+      "discoveredAt": "2026-10-31T08:55:22.775Z"
+    },
+    {
+      "id": "f517c6580c26b2237e174f8ba4a489ffdd1ec23d2b583e4eb0c9454cc1c049f4",
+      "region": "USA",
+      "titlePt": "Florence + the Machine anunciam álbum ao vivo de Everybody Scream",
+      "excerptPt": "A coleção de 22 faixas captura interpretações ao vivo da turnê “Everybody Scream Tour” de Florence + the Machine de 2026. Florence + the Machine anuncia álbum ao vivo de Everybody Scream, Paolo Ragusa",
+      "bodyPt": [
+        "A coleção de 22 faixas captura interpretações ao vivo da turnê “Everybody Scream Tour” de Florence + the Machine de 2026. Florence + the Machine anuncia álbum ao vivo de Everybody Scream, Paolo Ragusa.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T17:16:22.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.437Z"
+    },
+    {
+      "id": "7728d56d63f07121cf87e9f7fbbdad4ad1fb2d897cbab905d015f61e332adfa7",
+      "region": "Europe / Belgium",
+      "titlePt": "“Beat It”: como Michael Jackson imaginou um riff que se tornou lendário",
+      "excerptPt": "Dois guitarristas lendários na mesma música With Thriller, Michael Jackson e o produtor Quincy Jones se unem...",
+      "bodyPt": [
+        "Dois guitarristas lendários na mesma música With Thriller, Michael Jackson e o produtor Quincy Jones se unem.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T17:15:00.000Z",
+      "discoveredAt": "2026-10-31T08:55:29.639Z"
+    },
+    {
+      "id": "d5d767c7f388d0065904eebfccdbf536da60ada643372a9e80e6688b86837fc2",
+      "region": "USA",
+      "titlePt": "Transmissão nesta semana: Dexter retorna, criptografia explicada e luto por Patrick Stewart com risos",
+      "excerptPt": "Aqui estão os melhores filmes e programas de TV para transmitir no fim de semana de 30 de outubro. Transmissão nesta semana: Dexter retorna, criptografia explicada e luto por Patrick Stewart com risos Liz Shannon Miller",
+      "bodyPt": [
+        "Aqui estão os melhores filmes e programas de TV para transmitir no fim de semana de 30 de outubro. Transmissão nesta semana: Dexter retorna, criptografia explicada e luto por Patrick Stewart com risos Liz Shannon Miller.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T17:00:27.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.437Z"
+    },
+    {
+      "id": "2dc088029134523391375ba6add714744628af2095273471f981e94fd404e8dc",
+      "region": "Europe / UK",
+      "titlePt": "DIIV compartilha o single ‘Dare Me’ e anuncia a enorme turnê mundial de 2027",
+      "excerptPt": "A banda trará seu novo álbum produzido por A. G. Cook, ‘ZIRP!’ para o Reino Unido e Irlanda em junho próximo.",
+      "bodyPt": [
+        "A banda trará seu novo álbum produzido por A. G. Cook, ‘ZIRP!’ para o Reino Unido e Irlanda em junho próximo.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T16:39:29.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.306Z"
+    },
+    {
+      "id": "b5350587e2f2691f5643ab159f024840f4441a5f3aa4464c4921bcda2c3abdd6",
+      "region": "Europe / Ireland",
+      "titlePt": "O projeto CLO-DRIVER de Chlöe Fitzgerald estreia com a ricamente desenhada 'House in the Country'",
+      "excerptPt": "A violinista e arranjadora Chlöe Fitzgerald, nascida em Galway e radicada em Dublin, lança-se a solo com uma estreia turbulenta no clássico moderno.",
+      "bodyPt": [
+        "A violinista e arranjadora Chlöe Fitzgerald, nascida em Galway e radicada em Dublin, lança-se a solo com uma estreia turbulenta no clássico moderno.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Ireland. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-10-30T16:09:41.000Z",
+      "discoveredAt": "2026-10-31T08:55:19.698Z"
+    },
     {
       "id": "4fb03d462f0ea677c8c2136a7fd53e9c273b038a8c2e24eba9a0a1f15750b332",
       "region": "Global / UK",
