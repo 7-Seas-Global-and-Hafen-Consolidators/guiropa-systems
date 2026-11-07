@@ -1,10 +1,474 @@
 {
-  "updatedAt": "2026-08-30T20:40:04.728Z",
+  "updatedAt": "2026-11-07T16:41:09.806Z",
   "brand": "GUIROPA RADIO",
-  "itemCount": 22,
-  "publishedPt": 22,
+  "itemCount": 51,
+  "publishedPt": 51,
   "editorialPending": 0,
   "items": [
+    {
+      "id": "d441b3b4bbcd13e7c8282b9f119d8fd99659d6a2a73b90229122db44cd5a92c9",
+      "region": "USA",
+      "titlePt": "55 anos atrás: classificando todas as músicas do 'Led Zeppelin IV'",
+      "excerptPt": "Cada faixa deste LP revolucionário foi especial – mas qual foi a melhor? Continuar lendo…",
+      "bodyPt": [
+        "Cada faixa deste LP revolucionário foi especial – mas qual foi a melhor? Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T16:23:25.000Z",
+      "discoveredAt": "2026-11-07T16:38:24.118Z"
+    },
+    {
+      "id": "89145964a5a11c55fab532f5ab43d18cb0e1a453502da547fade07f9267e7fe6",
+      "region": "USA",
+      "titlePt": "Como Anika Nilles lida com as demandas físicas do Rush",
+      "excerptPt": "Tocar em uma das maiores bandas de rock progressivo exige um compromisso sério. Continuar lendo…",
+      "bodyPt": [
+        "Tocar em uma das maiores bandas de rock progressivo exige um compromisso sério. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T16:17:40.000Z",
+      "discoveredAt": "2026-11-07T16:38:24.118Z"
+    },
+    {
+      "id": "6508aa659a66a46ef4185b03fc9ae9b88c183b1b2fdb748357e36111af15649b",
+      "region": "USA",
+      "titlePt": "Álbuns do Poison classificados do pior para o melhor",
+      "excerptPt": "O bom, o ruim e o feio de uma das bandas definitivas do glam metal. Continuar lendo…",
+      "bodyPt": [
+        "O bom, o ruim e o feio de uma das bandas definitivas do glam metal. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T16:10:40.000Z",
+      "discoveredAt": "2026-11-07T16:38:24.227Z"
+    },
+    {
+      "id": "a02ad7c3cf653b32e8ce920403aee0ad13d5f42eb694e44ba17008fbe6dd2576",
+      "region": "Canada / Québec",
+      "titlePt": "Favorito de língua francesa | O presente inestimável de Richard Desjardins",
+      "excerptPt": "Richard Desjardins ofereceu o primeiro de dois shows na sexta-feira no Club Soda para o 40º aniversário do Coup de cœur francófono. Um presente inestimável, por vezes desajeitado, mas carregado de emoção, onde as palavras do poeta abitibiano foram entoadas com entusiasmo por um público que não conseguia acreditar na sua sorte. Uma noite inesquecível a vários níveis... incluindo um corte de energia que a interrompeu durante cerca de quinze minutos.",
+      "bodyPt": [
+        "Richard Desjardins ofereceu o primeiro de dois shows na sexta-feira no Club Soda para o 40º aniversário do Coup de cœur francófono. Um presente inestimável, por vezes desajeitado, mas carregado de emoção, onde as palavras do poeta abitibiano foram entoadas com entusiasmo por um público que não conseguia acreditar na sua sorte. Uma noite inesquecível a vários níveis... incluindo um corte de energia que a interrompeu durante cerca de quinze minutos.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T16:01:04.000Z",
+      "discoveredAt": "2026-11-07T16:38:33.010Z"
+    },
+    {
+      "id": "66fdd50347c0f250d00af55f708fd3b6dc1f7196c63523addc05f04aee5a32c2",
+      "region": "USA",
+      "titlePt": "Namorada de Vince Neil supostamente presa por agredir cantor",
+      "excerptPt": "Depois de responder a uma chamada de perturbação doméstica, a polícia prendeu a namorada de longa data da estrela do Motley Crue. Continuar lendo…",
+      "bodyPt": [
+        "Depois de responder a uma chamada de perturbação doméstica, a polícia prendeu a namorada de longa data da estrela do Motley Crue. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T14:33:05.000Z",
+      "discoveredAt": "2026-11-07T16:38:24.118Z"
+    },
+    {
+      "id": "1e2afe8b33025ee46e477e807378b0957868ecab1e1992dbeb06300728b59d01",
+      "region": "USA",
+      "titlePt": "Arde Bogotá vai a Los Angeles para fazer seu álbum mais espanhol até agora",
+      "excerptPt": "Recém-saídos do lançamento de Manufacturas del Club de la Gente Sola, os roqueiros espanhóis refletem sobre seu sucesso em casa e a emoção de levar sua música para os EUA. Arde Bogotá em Indo a Los Angeles para fazer seu álbum mais espanhol até agora Pedro Camacho",
+      "bodyPt": [
+        "Recém-saídos do lançamento de Manufacturas del Club de la Gente Sola, os roqueiros espanhóis refletem sobre seu sucesso em casa e a emoção de levar sua música para os EUA. Arde Bogotá em Indo a Los Angeles para fazer seu álbum mais espanhol até agora Pedro Camacho.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T14:13:39.000Z",
+      "discoveredAt": "2026-11-07T16:38:24.758Z"
+    },
+    {
+      "id": "10285152a36c080b18090c86c3a35198730752751b3ce4fb837f18eab5b077bc",
+      "region": "Europe / Switzerland",
+      "titlePt": "Dez anos após sua morte, a obra negra atemporal de Leonard Cohen",
+      "excerptPt": "Morto aos 82 anos em 7 de novembro de 2016, o cantor canadense Leonard Cohen havia publicado no mês anterior 'You Want it Darker', décimo quarto álbum de estúdio que se tornou uma prova de um repertório de quase cinquenta anos. Seus tons, tão sérios quanto graciosos, continuam a tocar.",
+      "bodyPt": [
+        "Morto aos 82 anos em 7 de novembro de 2016, o cantor canadense Leonard Cohen havia publicado no mês anterior 'You Want it Darker', décimo quarto álbum de estúdio que se tornou uma prova de um repertório de quase cinquenta anos. Seus tons, tão sérios quanto graciosos, continuam a tocar.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Switzerland. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T14:03:55.000Z",
+      "discoveredAt": "2026-11-07T16:38:41.339Z"
+    },
+    {
+      "id": "93911a871d20f25df218288cef4187e4b7970986d51815032b8468acc154c1af",
+      "region": "Canada / Québec",
+      "titlePt": "Origem e Sol, de Valois Fauteux | Harmônio e menina",
+      "excerptPt": "Monique Fauteux e Louis Valois, ex-Harmonium tão lendários quanto gentis e gentis, lideraram com sua filha Julie um ambicioso projeto de quatro álbuns, os dois primeiros dos quais acabam de ser lançados. Porque entre os Valois Fauteux a música é um assunto de família.",
+      "bodyPt": [
+        "Monique Fauteux e Louis Valois, ex-Harmonium tão lendários quanto gentis e gentis, lideraram com sua filha Julie um ambicioso projeto de quatro álbuns, os dois primeiros dos quais acabam de ser lançados. Porque entre os Valois Fauteux a música é um assunto de família.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T14:00:00.000Z",
+      "discoveredAt": "2026-11-07T16:38:33.010Z"
+    },
+    {
+      "id": "c5753954c9a67440bbff97f6dcc0c601f513643efe07db56fac7279ffb931b53",
+      "region": "Europe / Belgium",
+      "titlePt": "Convidada para a Casa Branca, Grace Slick, do Jefferson Airplane, planejou colocar LSD no chá de Richard Nixon",
+      "excerptPt": "Uma escola onde você aprende a servir chá Nada, nos primórdios de Grace Slick, sugere a futura figura do...",
+      "bodyPt": [
+        "Uma escola onde você aprende a servir chá Nada, nos primórdios de Grace Slick, sugere a futura figura do.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T13:29:00.000Z",
+      "discoveredAt": "2026-11-07T16:38:40.163Z"
+    },
+    {
+      "id": "6ec5c6d909a437033910b638b1a4f1e3d2c75996a33e2573fdd0d90d2276562f",
+      "region": "Canada / Québec",
+      "titlePt": "Jeff Fisher | O compositor por trás da música mais estranha de Leonard Cohen",
+      "excerptPt": "Em 1988, Leonard Cohen mais uma vez se tornou o homem certo para o trabalho graças a I'm Your Man, o álbum de sua reinvenção com sintetizadores. O tecladista de Montreal, Jeff Fisher, está entre aqueles que o ajudaram a colocar sua Torre da Canção em ordem.",
+      "bodyPt": [
+        "Em 1988, Leonard Cohen mais uma vez se tornou o homem certo para o trabalho graças a I'm Your Man, o álbum de sua reinvenção com sintetizadores. O tecladista de Montreal, Jeff Fisher, está entre aqueles que o ajudaram a colocar sua Torre da Canção em ordem.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T13:00:00.000Z",
+      "discoveredAt": "2026-11-07T16:38:33.010Z"
+    },
+    {
+      "id": "66e2167366d386386eb18d079f5f7c7cefc47498336ee7afb7eed3631e1b9969",
+      "region": "Europe / Belgium",
+      "titlePt": "ÆL, 19 anos: uma voz belga comprometida",
+      "excerptPt": "Uma artista que afirma e denuncia Foi em torno do seu título “Angry Racist” que ÆL abriu a entrevista. UM...",
+      "bodyPt": [
+        "Uma artista que afirma e denuncia Foi em torno do seu título “Angry Racist” que ÆL abriu a entrevista. UM.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T12:59:00.000Z",
+      "discoveredAt": "2026-11-07T16:38:40.163Z"
+    },
+    {
+      "id": "7a072f919c99f219ae8e02c7710f57a3c904f543c0b82fc0d52c2d3c65242c19",
+      "region": "Europe / France",
+      "titlePt": "Com receita de US$ 1,3 bilhão, turnê de The Weeknd se torna a mais lucrativa para um artista masculino",
+      "excerptPt": "176 datas, 30 países, 9 milhões de ingressos vendidos… Em quatro anos, o cantor canadense viajou pelo mundo com seu show After Hours Til Dawn. Ele rouba um recorde anteriormente detido por Elton John.",
+      "bodyPt": [
+        "176 datas, 30 países, 9 milhões de ingressos vendidos… Em quatro anos, o cantor canadense viajou pelo mundo com seu show After Hours Til Dawn. Ele rouba um recorde anteriormente detido por Elton John.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T12:42:24.000Z",
+      "discoveredAt": "2026-11-07T16:38:33.425Z"
+    },
+    {
+      "id": "068123de333d61fd4f7b61f5beebe52605e37f53e7dcba23d61ada4df81881d1",
+      "region": "USA",
+      "titlePt": "A mudança transatlântica: bandas britânicas aproveitam uma nova onda de country alternativo",
+      "excerptPt": "Várias bandas em ascensão no Reino Unido estão recorrendo à cultura norte-americana para criar um gênero de música country alternativa britânica.",
+      "bodyPt": [
+        "Várias bandas em ascensão no Reino Unido estão recorrendo à cultura norte-americana para criar um gênero de música country alternativa britânica.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T12:40:56.000Z",
+      "discoveredAt": "2026-11-07T16:38:23.423Z"
+    },
+    {
+      "id": "cf881885a7f4e194c81d851813c7c57d55f499a038673989bf231446f0b4838c",
+      "region": "Europe / UK",
+      "titlePt": "Amy Winehouse me inspirou a largar um emprego devastador",
+      "excerptPt": "Eu estava dirigindo para o trabalho me sentindo infeliz quando a reabilitação começou – e percebi que há mais na vida do que um salário fixo em um emprego que você despreza. Às 6h da manhã de uma manhã sombria de outubro de 2006, eu estava dirigindo pela North Circular, em Londres, para um trabalho que odiava. Geralmente eu mantinha o rádio baixo, um murmúrio de fundo para me manter concentrado na estrada. Mas naquela manhã aumentei o volume permitindo que a linha de baixo flutuante de Rehab, de Amy Winehouse, reverberasse em meu Ford Ka. Enquanto a voz rica de Amy transmitia a profundidade de seu desespero, olhei com olhos turvos para a estrada vazia à frente e me perguntei como havia tomado o caminho tão errado. Foi um momento desorientador para mim. Dois anos depois da faculdade, aceitei um emprego no final da L",
+      "bodyPt": [
+        "Eu estava dirigindo para o trabalho me sentindo infeliz quando a reabilitação começou – e percebi que há mais na vida do que um salário fixo em um emprego que você despreza. Às 6h da manhã de uma manhã sombria de outubro de 2006, eu estava dirigindo pela North Circular, em Londres, para um trabalho que odiava. Geralmente eu mantinha o rádio baixo, um murmúrio de fundo para me manter concentrado na estrada. Mas naquela manhã aumentei o volume permitindo que a linha de baixo flutuante de Rehab, de Amy Winehouse, reverberasse em meu Ford Ka. Enquanto a voz rica de Amy transmitia a profundidade de seu desespero, olhei com olhos turvos para a estrada vazia à frente e me perguntei como havia tomado o caminho tão errado. Foi um momento desorientador para mim. Dois anos depois da faculdade, aceitei um emprego no final da L.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T12:00:11.000Z",
+      "discoveredAt": "2026-11-07T16:38:23.476Z"
+    },
+    {
+      "id": "4a374a3cd86e7eaf7edfd8c6f6de375cd574a9081a702af7ac3646e32a3e4671",
+      "region": "Canada / Québec",
+      "titlePt": "Entre o melhor e o pior | Há uma rachadura em tudo, até na obra de Leonard Cohen",
+      "excerptPt": "Dez anos após sua morte, em 7 de novembro de 2016, a observação permanece a mesma: ninguém cantou o amor e o ódio tão bem quanto Leonard Cohen. Três de seus maiores fãs, o escritor Lula Carballo, o animador Guillaume Hubermont e o compositor Benoit Pinette (Tire le coyote), concordaram em explorar a proverbial lacuna na obra do poeta de Montreal, aquela que deixa passar a luz.",
+      "bodyPt": [
+        "Dez anos após sua morte, em 7 de novembro de 2016, a observação permanece a mesma: ninguém cantou o amor e o ódio tão bem quanto Leonard Cohen. Três de seus maiores fãs, o escritor Lula Carballo, o animador Guillaume Hubermont e o compositor Benoit Pinette (Tire le coyote), concordaram em explorar a proverbial lacuna na obra do poeta de Montreal, aquela que deixa passar a luz.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T12:00:00.000Z",
+      "discoveredAt": "2026-11-07T16:38:33.010Z"
+    },
+    {
+      "id": "048c7cf67121ea7542e2dd550a91a785bcf226b9df56b7867ac55db5df0d9cff",
+      "region": "Europe / Belgium",
+      "titlePt": "Phil Collins revisita \"Face Value\" com Steven Wilson em entrevista em vídeo",
+      "excerptPt": "Phil Collins postou uma entrevista dedicada a Face Value, gravada em Londres com Steven Wilson durante um...",
+      "bodyPt": [
+        "Phil Collins postou uma entrevista dedicada a Face Value, gravada em Londres com Steven Wilson durante um.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T11:16:00.000Z",
+      "discoveredAt": "2026-11-07T16:38:40.164Z"
+    },
+    {
+      "id": "2e80e50237aff72b59a3079965c0b60d296ae2ebb3a4f25828462094cf5e9a6c",
+      "region": "Europe / Belgium",
+      "titlePt": "Dica Top: 11/07 Grande retorno de Christine & The Queens e novo videoclipe de TeddyBear!",
+      "excerptPt": "A revelação belga de 2026, TeddyBear, volta a brindar-nos após o lançamento do seu primeiro álbum, “Le plus...",
+      "bodyPt": [
+        "A revelação belga de 2026, TeddyBear, volta a brindar-nos após o lançamento do seu primeiro álbum, “Le plus.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T11:00:00.000Z",
+      "discoveredAt": "2026-11-07T16:38:40.164Z"
+    },
+    {
+      "id": "f757c133cf2afd1df19ed83d0cd19323e05a3e603b25a81ea394691778a09d0d",
+      "region": "Europe / Belgium",
+      "titlePt": "Tipik Live de Angèle: um piano, uma voz, uma unidade e a magia acontece",
+      "excerptPt": "Já faz muito tempo que Angèle não ofereceu um momento de grupo tão pequeno aos seus fãs. Depois do máximo...",
+      "bodyPt": [
+        "Já faz muito tempo que Angèle não ofereceu um momento de grupo tão pequeno aos seus fãs. Depois do máximo.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T10:40:39.000Z",
+      "discoveredAt": "2026-11-07T16:38:40.164Z"
+    },
+    {
+      "id": "c846316d6bf755c4d7b15f467d9c7462e8c221b7b2437eb8587b7bf41a848d12",
+      "region": "Middle East / Syria",
+      "titlePt": "Cantora síria Assala relata roubo de joias em Detroit em meio a relatos de roubo de US$ 6 milhões - Khaleej Times",
+      "excerptPt": "Cantora síria Assala relata roubo de joias em Detroit em meio a relatos de roubo de US$ 6 milhões Khaleej Times",
+      "bodyPt": [
+        "Cantora síria Assala relata roubo de joias em Detroit em meio a relatos de roubo de US$ 6 milhões Khaleej Times.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Middle East / Syria. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T09:25:20.000Z",
+      "discoveredAt": "2026-11-07T16:38:30.588Z"
+    },
+    {
+      "id": "64f6041aca33f8336cedb2b1260df27caf2fdfed619480dc2a5d6b9216c818a9",
+      "region": "Europe / Belgium",
+      "titlePt": "Axel Bauer: fãs, inimigos e fingimentos, o que a fama revela sobre os outros",
+      "excerptPt": "Quando os outros já não olham para você da mesma forma, Axel Bauer resume a notoriedade com um simples paradoxo: um...",
+      "bodyPt": [
+        "Quando os outros já não olham para você da mesma forma, Axel Bauer resume a notoriedade com um simples paradoxo: um.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T08:32:00.000Z",
+      "discoveredAt": "2026-11-07T16:38:40.164Z"
+    },
+    {
+      "id": "e04c1d3a43af7b428c150fa8e2a221c21c428758269f9a04ff039a40e21f379c",
+      "region": "Europe / Belgium",
+      "titlePt": "Quando lendas da música incendiaram máquinas de pinball",
+      "excerptPt": "Pinball e rock 'n' roll nasceram para se dar bem. Da era de ouro dos fliperamas e dos bartenders até...",
+      "bodyPt": [
+        "Pinball e rock 'n' roll nasceram para se dar bem. Da era de ouro dos fliperamas e dos bartenders até.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T06:49:57.000Z",
+      "discoveredAt": "2026-11-07T16:38:40.164Z"
+    },
+    {
+      "id": "b59b7e0d0766221c3f02e513e8aa188b4ca82b9a62d82474962b768cccc18c3f",
+      "region": "Europe / Belgium",
+      "titlePt": "As 5 notícias do rock da semana: Deep Purple em hiato, roqueiros reagem às provas e Pink Floyd abre seus arquivos",
+      "excerptPt": "Deep Purple: toda a turnê europeia adiada após a hospitalização de Ian Gillan Ian Gillan esperava...",
+      "bodyPt": [
+        "Deep Purple: toda a turnê europeia adiada após a hospitalização de Ian Gillan Ian Gillan esperava.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T05:10:00.000Z",
+      "discoveredAt": "2026-11-07T16:38:40.164Z"
+    },
+    {
+      "id": "28d6a06b8bf395cd224ad70630af08a33d6b6c35db25d0def177bbecc2e5d23e",
+      "region": "USA",
+      "titlePt": "Robert Pattinson surge como candidato para interpretar James Bond",
+      "excerptPt": "Nicholas Hoult também foi revelado como um candidato até então desconhecido. Robert Pattinson surge como candidato para interpretar James Bond Alex Young",
+      "bodyPt": [
+        "Nicholas Hoult também foi revelado como um candidato até então desconhecido. Robert Pattinson surge como candidato para interpretar James Bond Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T03:08:42.000Z",
+      "discoveredAt": "2026-11-07T16:38:24.758Z"
+    },
+    {
+      "id": "461f6d89280031a1a42b317ac4b68df70097cd2c865a6ce22bda393dab7e4bd3",
+      "region": "USA",
+      "titlePt": "A jovem Miko dá um beijo de despedida em sua “Late Checkout Tour” com um final repleto de estrelas no Brooklyn: crítica + tracklist",
+      "excerptPt": "Convidados surpresa, orgulho porto-riquenho e momentos emocionantes definiram uma noite com ingressos esgotados que mostrou a evolução da cantora como artista ao vivo. A jovem Miko dá um beijo de despedida em sua “Late Checkout Tour” com um final repleto de estrelas no Brooklyn: crítica + tracklist Camilla Marchese",
+      "bodyPt": [
+        "Convidados surpresa, orgulho porto-riquenho e momentos emocionantes definiram uma noite com ingressos esgotados que mostrou a evolução da cantora como artista ao vivo. A jovem Miko dá um beijo de despedida em sua “Late Checkout Tour” com um final repleto de estrelas no Brooklyn: crítica + tracklist Camilla Marchese.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T02:06:35.000Z",
+      "discoveredAt": "2026-11-07T16:38:24.758Z"
+    },
+    {
+      "id": "a8b8063f3180bfdbf06aaebc0dfc05ea92e6cf3f8c2bc97b8dc0bd357d37c791",
+      "region": "Europe / UK",
+      "titlePt": "A Eurovisão está a caminho da Ásia: eis o que esperar",
+      "excerptPt": "A primeira incursão na Ásia para o concurso de música verá 11 países disputando o troféu, mas será que terá a mesma sensação que o seu antecessor europeu? O concurso da canção Eurovisão está a ser trazido para a Ásia, com 11 países a competir numa única final em Banguecoque, no dia 14 de Novembro, naquela que os organizadores pretendem ser a primeira de muitas edições regionais. Então, quais países estarão gritando com todo o coração? Ainda haverá votação tática? Será que as gloriosas tradições do acampamento do concurso sobreviverão à viagem até à Ásia? Aqui está tudo que você precisa saber. Continuar lendo...",
+      "bodyPt": [
+        "A primeira incursão na Ásia para o concurso de música verá 11 países disputando o troféu, mas será que terá a mesma sensação que o seu antecessor europeu? O concurso da canção Eurovisão está a ser trazido para a Ásia, com 11 países a competir numa única final em Banguecoque, no dia 14 de Novembro, naquela que os organizadores pretendem ser a primeira de muitas edições regionais. Então, quais países estarão gritando com todo o coração? Ainda haverá votação tática? Será que as gloriosas tradições do acampamento do concurso sobreviverão à viagem até à Ásia? Aqui está tudo que você precisa saber. Continuar lendo.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-07T00:05:55.000Z",
+      "discoveredAt": "2026-11-07T16:38:23.476Z"
+    },
+    {
+      "id": "d5d3b7cdd8dafc384b7a1b98be99c2cdd3353f36b141f593da246464bb1d44e1",
+      "region": "USA",
+      "titlePt": "Fiona Apple lança nova capa de “Revolution” da Mãe Terra: Steam",
+      "excerptPt": "Para comemorar os resultados das provas intermediárias de terça-feira. Fiona Apple lança nova capa de “Revolution” da Mother Earth: Steam Alex Young",
+      "bodyPt": [
+        "Para comemorar os resultados das provas intermediárias de terça-feira. Fiona Apple lança nova capa de “Revolution” da Mother Earth: Steam Alex Young.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-06T21:35:12.000Z",
+      "discoveredAt": "2026-11-07T16:38:24.758Z"
+    },
+    {
+      "id": "b3f934b9528b79c7ff604c0cc6e04154bebe227b9eff2640fb630edca823d9f4",
+      "region": "USA",
+      "titlePt": "Como Bon Jovi se espalhou pelo mundo com 'Slippery When Wet'",
+      "excerptPt": "O fotógrafo Mark Weiss compartilha suas memórias com a UCR ao comemorar o 40º aniversário do álbum com uma nova exposição e revista. Continuar lendo…",
+      "bodyPt": [
+        "O fotógrafo Mark Weiss compartilha suas memórias com a UCR ao comemorar o 40º aniversário do álbum com uma nova exposição e revista. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-06T20:48:50.000Z",
+      "discoveredAt": "2026-11-07T16:38:24.118Z"
+    },
+    {
+      "id": "c0ae8978a63a8e481d83ea885bc695b726307789fdcc30f6fe3668385b6e0a4f",
+      "region": "USA",
+      "titlePt": "The Rush Song que Anika Nilles deseja adicionar ao setlist",
+      "excerptPt": "Seria uma grande pontuação para os fãs se ela conseguisse convencê-los a colocá-lo. Continue lendo…",
+      "bodyPt": [
+        "Seria uma grande pontuação para os fãs se ela conseguisse convencê-los a colocá-lo. Continue lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-06T20:30:25.000Z",
+      "discoveredAt": "2026-11-07T16:38:24.227Z"
+    },
+    {
+      "id": "6da11e65e9f99cd23aae2a94f05aeccc36fe07cce5d19a80be3e9d5804a179a9",
+      "region": "Europe / Belgium",
+      "titlePt": "“Não apenas nomear as coisas, temos que mudá-las”: Pomme abre as portas para seu novo álbum “La Forteresse”, entre contos e posicionamentos fantásticos",
+      "excerptPt": "Para seu novo álbum, Pomme se inspirou em um universo medieval e fantástico. A fortaleza (nome do álbum) em...",
+      "bodyPt": [
+        "Para seu novo álbum, Pomme se inspirou em um universo medieval e fantástico. A fortaleza (nome do álbum) em.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-06T19:57:16.000Z",
+      "discoveredAt": "2026-11-07T16:38:40.164Z"
+    },
     {
       "id": "4fb03d462f0ea677c8c2136a7fd53e9c273b038a8c2e24eba9a0a1f15750b332",
       "region": "Global / UK",
