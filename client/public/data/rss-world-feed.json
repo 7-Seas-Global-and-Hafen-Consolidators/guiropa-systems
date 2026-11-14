@@ -1,10 +1,490 @@
 {
-  "updatedAt": "2026-08-30T20:40:04.728Z",
+  "updatedAt": "2026-11-14T13:50:44.465Z",
   "brand": "GUIROPA RADIO",
-  "itemCount": 22,
-  "publishedPt": 22,
+  "itemCount": 52,
+  "publishedPt": 52,
   "editorialPending": 0,
   "items": [
+    {
+      "id": "fae4e9621a0f999946ede38ea3aa3f06e2ae593f0ca011fe4da4efca9f9c7f6c",
+      "region": "Global / UK",
+      "titlePt": "Os marcos mais confusos da idade adulta através da inquietação do gênero do LP de estreia indie pop de Gianna Branca, Coming of Age",
+      "excerptPt": "Gianna Branca provou que não há prazo para atingir a maioridade com seu LP de estreia, Coming of Age. Alguns dos marcos mais confusos da vida chegam anos depois da adolescência, quando a promessa de ter tudo planejado começa a se assemelhar a uma elaborada piada. Ao longo de onze faixas de sua autoria, o compositor nascido na Filadélfia e radicado em Nova York traça as consequências emocionais de crescer em uma vida que se recusa a seguir contornos limpos. Seu som característico é decididamente seu, mesmo que a produção permaneça estilisticamente em constante mudança. O sotaque pop sulista esbarra na estética indie do ano 2000 e no pop contemporâneo, com os instrumentais levando os ouvintes em ondas de eufonia emotiva. G da Branca",
+      "bodyPt": [
+        "Gianna Branca provou que não há prazo para atingir a maioridade com seu LP de estreia, Coming of Age. Alguns dos marcos mais confusos da vida chegam anos depois da adolescência, quando a promessa de ter tudo planejado começa a se assemelhar a uma elaborada piada. Ao longo de onze faixas de sua autoria, o compositor nascido na Filadélfia e radicado em Nova York traça as consequências emocionais de crescer em uma vida que se recusa a seguir contornos limpos. Seu som característico é decididamente seu, mesmo que a produção permaneça estilisticamente em constante mudança. O sotaque pop sulista esbarra na estética indie do ano 2000 e no pop contemporâneo, com os instrumentais levando os ouvintes em ondas de eufonia emotiva. G da Branca.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T13:00:08.000Z",
+      "discoveredAt": "2026-11-14T13:49:28.863Z"
+    },
+    {
+      "id": "ad6954704634117456e3e700fe272e00e72c0b8d60d3a16c79d6a382f1300436",
+      "region": "Europe / France",
+      "titlePt": "Jasmine Roy, a mulher que sussurrava nos ouvidos dos cantores",
+      "excerptPt": "RETRATO - Ela é sem dúvida a segunda quebequense mais famosa da França e também canta. Artista e treinadora, Jasmine Roy se tornou uma das principais figuras da comédia musical",
+      "bodyPt": [
+        "RETRATO - Ela é sem dúvida a segunda quebequense mais famosa da França e também canta. Artista e treinadora, Jasmine Roy se tornou uma das principais figuras da comédia musical.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T13:00:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:11.858Z"
+    },
+    {
+      "id": "a5d218c81ef643fe8644b4feb9fdc3a9faba5e09db56b9b861adebe2929c8979",
+      "region": "Europe / Belgium",
+      "titlePt": "Axel Bauer conta o dia em que tocou secretamente em uma gravação de Pogues",
+      "excerptPt": "A Gretsch, os Pogues… e um serviço estranho de prestar Na época, Axel Bauer morava em Londres e frequentava...",
+      "bodyPt": [
+        "A Gretsch, os Pogues… e um serviço estranho de prestar Na época, Axel Bauer morava em Londres e frequentava.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T12:46:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:16.261Z"
+    },
+    {
+      "id": "67d678aec8a26f9b3e9375022848ae496b39bfd293e57be8c4fd5fa0163a49ec",
+      "region": "Global / UK",
+      "titlePt": "A libertação espiritual oscila através da eletrosoul psicodélica do single de Malsi, ‘Noor’",
+      "excerptPt": "O último single de Malsi, ‘Noor’ abre com vocalizações que tomam conta de você como uma onda de catarse restauradora, sua eufonia exuberante e hinária dando a impressão de que alguém abriu as janelas da alma. O artista electrosoul de herança bangladeshiana transformou aquele primeiro sopro de transcendência numa colisão requintada de R&B alternativo e electrónica experimental, onde a renovação espiritual adquire um ritmo deliciosamente carnal. A percussão flexionada pela tabla desenha círculos hipnóticos em torno de motivos eletrônicos pulsantes, enquanto as texturas da cítara aprofundam a sensualidade psicodélica. No entanto, o instrumento mais impressionante é a voz do próprio Malsi. Bengali e inglês se entrelaçam através de uma camada vocal incrivelmente rica",
+      "bodyPt": [
+        "O último single de Malsi, ‘Noor’ abre com vocalizações que tomam conta de você como uma onda de catarse restauradora, sua eufonia exuberante e hinária dando a impressão de que alguém abriu as janelas da alma. O artista electrosoul de herança bangladeshiana transformou aquele primeiro sopro de transcendência numa colisão requintada de R&B alternativo e electrónica experimental, onde a renovação espiritual adquire um ritmo deliciosamente carnal. A percussão flexionada pela tabla desenha círculos hipnóticos em torno de motivos eletrônicos pulsantes, enquanto as texturas da cítara aprofundam a sensualidade psicodélica. No entanto, o instrumento mais impressionante é a voz do próprio Malsi. Bengali e inglês se entrelaçam através de uma camada vocal incrivelmente rica.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T11:00:49.000Z",
+      "discoveredAt": "2026-11-14T13:49:28.863Z"
+    },
+    {
+      "id": "36dc26753f9f636300969f23883791a355e387a4109861097f8c7976e79536f7",
+      "region": "Europe / Belgium",
+      "titlePt": "Dica Top: Conheça o novo single em francês de Loïc Nottet!",
+      "excerptPt": "Loïc Nottet continua o desenvolvimento do seu universo musical com “Crash”, uma nova faixa pop que enriquece esta...",
+      "bodyPt": [
+        "Loïc Nottet continua o desenvolvimento do seu universo musical com “Crash”, uma nova faixa pop que enriquece esta.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T11:00:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:16.261Z"
+    },
+    {
+      "id": "9058ce5c39c1ce9770c33c3170ae499f1c1bd690e806594afdb2cfd1ad117f09",
+      "region": "Europe / Belgium",
+      "titlePt": "Iron Maiden: Nicko McBrain fala sobre seu uso de heroína antes de entrar no grupo",
+      "excerptPt": "Antes das turnês mundiais com o Iron Maiden, Nicko McBrain já fazia carreira em clubes e...",
+      "bodyPt": [
+        "Antes das turnês mundiais com o Iron Maiden, Nicko McBrain já fazia carreira em clubes e.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T10:16:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:16.261Z"
+    },
+    {
+      "id": "fbe934b116b916ca985a7865356a624d15e0a010877aa8d0b343356ee6a9a133",
+      "region": "USA",
+      "titlePt": "Homens em uma missão: o U2 está de volta, novamente. Eles são legais desta vez?",
+      "excerptPt": "Carnaval De Luz, 16º álbum da banda de rock irlandesa que está sempre em missão, explora terrenos familiares com bom humor e senso de urgência, e consegue enfrentar o momento.",
+      "bodyPt": [
+        "Carnaval De Luz, 16º álbum da banda de rock irlandesa que está sempre em missão, explora terrenos familiares com bom humor e senso de urgência, e consegue enfrentar o momento.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T10:00:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:03.313Z"
+    },
+    {
+      "id": "0cd41e84fa000b162c410305d009c1dbd6e4be6cb1b2a7e78b37234632f584cb",
+      "region": "Middle East / Lebanon",
+      "titlePt": "Marcel Khalife, meio século cantando por um Líbano que ainda não nasceu - L'Orient Today",
+      "excerptPt": "Marcel Khalife, meio século cantando por um Líbano que ainda não nasceu L'Orient Today",
+      "bodyPt": [
+        "Marcel Khalife, meio século cantando por um Líbano que ainda não nasceu L'Orient Today.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Middle East / Lebanon. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T09:57:19.000Z",
+      "discoveredAt": "2026-11-14T13:49:10.125Z"
+    },
+    {
+      "id": "9646d22288d64054b5f756e20d7678093080861e8d900fbbcb8a0e78a4669c11",
+      "region": "Europe / France",
+      "titlePt": "Canções de amor, K-pop e soft power: a Ásia vive sua primeira Eurovisão",
+      "excerptPt": "Bangkok acolhe a primeira edição asiática da Eurovisão no sábado, 14 de novembro. Depois de várias tentativas sem sucesso, é uma nova tentativa de importar o conceito para a Ásia, apesar da ausência das três maiores potências continentais.",
+      "bodyPt": [
+        "Bangkok acolhe a primeira edição asiática da Eurovisão no sábado, 14 de novembro. Depois de várias tentativas sem sucesso, é uma nova tentativa de importar o conceito para a Ásia, apesar da ausência das três maiores potências continentais.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / France. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T08:22:07.000Z",
+      "discoveredAt": "2026-11-14T13:49:12.222Z"
+    },
+    {
+      "id": "c5c14b927446f39a7a8caa1691be4570e6efe2e828eb920f5f9bc56b2e22b8b3",
+      "region": "Europe / Belgium",
+      "titlePt": "O Apocalipse em decibéis: quando o rock canta sobre o fim do mundo",
+      "excerptPt": "Desde as suas origens, o rock foi alimentado pelas tensões do seu tempo. Quando a Guerra Fria começou...",
+      "bodyPt": [
+        "Desde as suas origens, o rock foi alimentado pelas tensões do seu tempo. Quando a Guerra Fria começou.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T08:10:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:16.261Z"
+    },
+    {
+      "id": "eefe8684ac6e99c6539b38b258871947f8e9348b1fbe5f46c54cf7efc37495c0",
+      "region": "Europe / Belgium",
+      "titlePt": "Despedidas, pausas e retornos: esses roqueiros que viram a página das turnês",
+      "excerptPt": "Jimmy Page não quer mais viver ao ritmo das malas e dos aviões. Brincar sempre o atrai, mas os constrangimentos...",
+      "bodyPt": [
+        "Jimmy Page não quer mais viver ao ritmo das malas e dos aviões. Brincar sempre o atrai, mas os constrangimentos.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T06:58:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:16.261Z"
+    },
+    {
+      "id": "8fb3fc07539fd56e5f1a375da0963597cc355a7440e400516c4ce5fd53041b05",
+      "region": "Europe / Belgium",
+      "titlePt": "As 5 novidades do rock da semana: U2 lança seu novo álbum, Paul McCartney se torna bilionário e os roqueiros fazem as malas",
+      "excerptPt": "Despedidas, pausas e retornos: do Sepultura ao Duran Duran, o caminho fica mais difícil Os anúncios se acumulam...",
+      "bodyPt": [
+        "Despedidas, pausas e retornos: do Sepultura ao Duran Duran, o caminho fica mais difícil Os anúncios se acumulam.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T06:46:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:16.261Z"
+    },
+    {
+      "id": "8ad0c015096401ed75a709e245e38d3c952e89af9feac80762d1bdfb99839a94",
+      "region": "Europe / Belgium",
+      "titlePt": "Hoshi relembra seu encontro com Gaëtan Roussel: “Aprendi a amar minha voz graças a ele”",
+      "excerptPt": "Se Hoshi se tornou conhecida como artista solo, ela também teve a oportunidade de colaborar com vários artistas ao longo de...",
+      "bodyPt": [
+        "Se Hoshi se tornou conhecida como artista solo, ela também teve a oportunidade de colaborar com vários artistas ao longo de.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T06:43:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:16.261Z"
+    },
+    {
+      "id": "88bb1ab2f0192d3cd19a4c3d3c9557e74ff8af3d73c025b0b3aaa4f79cc629d8",
+      "region": "Europe / Belgium",
+      "titlePt": "Metal e religiões: entre blasfêmia, fé e busca espiritual no Classic 21 Metal",
+      "excerptPt": "O metal é realmente anti-religioso? Mesmo antes do Black Sabbath, o rock já brincava com o diabo, ritos e...",
+      "bodyPt": [
+        "O metal é realmente anti-religioso? Mesmo antes do Black Sabbath, o rock já brincava com o diabo, ritos e.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Belgium. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T04:34:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:16.261Z"
+    },
+    {
+      "id": "7fecfa20cd7dac9710dc8fd1f9c1b680a5a38bf0866dcab6931cdbea7dd8b8d0",
+      "region": "Middle East / Iran",
+      "titlePt": "The Voice of Iran: Googoosh e Pink Martini anunciam novo álbum colaborativo, Pishkesh - LAmag",
+      "excerptPt": "The Voice of Iran: Googoosh e Pink Martini anunciam novo álbum colaborativo, Pishkesh LAmag",
+      "bodyPt": [
+        "The Voice of Iran: Googoosh e Pink Martini anunciam novo álbum colaborativo, Pishkesh LAmag.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Middle East / Iran. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T01:47:16.000Z",
+      "discoveredAt": "2026-11-14T13:49:11.414Z"
+    },
+    {
+      "id": "e1c7b3944e17a6d3603d4ae63933c6b053a31233c08eca20893108de01144bb0",
+      "region": "USA",
+      "titlePt": "O baterista Deen Castronovo se afasta da jornada",
+      "excerptPt": "O baterista está saindo da turnê da banda para “se concentrar em questões de saúde pessoal”. O baterista Deen Castronovo se afasta do Journey Spencer Kaufman",
+      "bodyPt": [
+        "O baterista está saindo da turnê da banda para “se concentrar em questões de saúde pessoal”. O baterista Deen Castronovo se afasta do Journey Spencer Kaufman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-14T00:25:37.000Z",
+      "discoveredAt": "2026-11-14T13:49:04.435Z"
+    },
+    {
+      "id": "8775cead09023d5a723ddb02b3caf7a894416ad4c49789aff381747b71ee8df9",
+      "region": "Europe / Switzerland",
+      "titlePt": "O alemão Mats Thiersch ganha o prêmio de regência no 80º Concurso de Genebra",
+      "excerptPt": "A final de regência do 80º Concurso de Genebra foi vencida por Mats Thiersch na noite de sexta-feira. O suíço Gabriel Pernet recebeu o terceiro prêmio.",
+      "bodyPt": [
+        "A final de regência do 80º Concurso de Genebra foi vencida por Mats Thiersch na noite de sexta-feira. O suíço Gabriel Pernet recebeu o terceiro prêmio.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Europe / Switzerland. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T22:21:33.000Z",
+      "discoveredAt": "2026-11-14T13:49:17.117Z"
+    },
+    {
+      "id": "8a8a7016fdac871a379b5f58fe6d6de289d8d61451a14f3a8f05c23e32b60e3c",
+      "region": "USA",
+      "titlePt": "Os passes Coachella 2027 estão esgotados",
+      "excerptPt": "Os passes estão esgotados, mas uma lista de espera de ingressos está disponível para ambos os fins de semana. Os passes Coachella 2027 estão esgotados Paolo Ragusa",
+      "bodyPt": [
+        "Os passes estão esgotados, mas uma lista de espera de ingressos está disponível para ambos os fins de semana. Os passes Coachella 2027 estão esgotados Paolo Ragusa.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T21:14:49.000Z",
+      "discoveredAt": "2026-11-14T13:49:04.436Z"
+    },
+    {
+      "id": "57785dff135f2afb7197f31bce935d5f18d9e761b64fd100c2f33ba4d2d5eac1",
+      "region": "USA",
+      "titlePt": "Al Jourgensen abre sobre o último álbum + turnê do Ministry",
+      "excerptPt": "Al Jourgensen fala sobre o último álbum de estúdio do Ministry, se preparando para as datas finais da turnê e o que vem por aí para ele. Continuar lendo…",
+      "bodyPt": [
+        "Al Jourgensen fala sobre o último álbum de estúdio do Ministry, se preparando para as datas finais da turnê e o que vem por aí para ele. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T20:32:23.000Z",
+      "discoveredAt": "2026-11-14T13:49:04.041Z"
+    },
+    {
+      "id": "67a0655078321f379853d4e0820f5854b8458064de8e1367c7b9eda6f98807db",
+      "region": "USA",
+      "titlePt": "acampamento açoitar roer riacho",
+      "excerptPt": "Turnstile, Don Toliver, Syd, Gena e mais artistas estarão disponíveis para assistir",
+      "bodyPt": [
+        "Turnstile, Don Toliver, Syd, Gena e mais artistas estarão disponíveis para assistir.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T19:58:27.000Z",
+      "discoveredAt": "2026-11-14T13:49:04.256Z"
+    },
+    {
+      "id": "f4a9cb454a75d3811f2c020711d80f4477a9a3e2d4c0b1254621df56101418cf",
+      "region": "Global / UK",
+      "titlePt": "Kaylee Federmann conjurou um caleidoscópio de vermes Alt-Pop com seu LP de estreia, Color Theory",
+      "excerptPt": "O LP de estreia de Kaylee Federmann, Color Theory, é um álbum conceitual caleidoscópico que dá a cada emoção sua própria tonalidade e a cada tonalidade um verme de ouvido infeccioso. A cantora e compositora de Nashville envolveu cada single em uma aura codificada por cores, deixando a força magnética de sua performance percorrer três décadas de nostalgia do pop alternativo com entusiasmo quase indecente. Até as narrações com tons melancólicos chegam com um sorriso e uma piscadela, e as mudanças ecléticas na estética mantêm o ouvido preparado para outra dose de retro serotonina. As cores ajudam a dar sentido a essas mudanças estilísticas, unindo os capítulos emocionais do álbum em um espectro deliberadamente exuberante. Em ‘Mesmo que você não queira (vermelho)’",
+      "bodyPt": [
+        "O LP de estreia de Kaylee Federmann, Color Theory, é um álbum conceitual caleidoscópico que dá a cada emoção sua própria tonalidade e a cada tonalidade um verme de ouvido infeccioso. A cantora e compositora de Nashville envolveu cada single em uma aura codificada por cores, deixando a força magnética de sua performance percorrer três décadas de nostalgia do pop alternativo com entusiasmo quase indecente. Até as narrações com tons melancólicos chegam com um sorriso e uma piscadela, e as mudanças ecléticas na estética mantêm o ouvido preparado para outra dose de retro serotonina. As cores ajudam a dar sentido a essas mudanças estilísticas, unindo os capítulos emocionais do álbum em um espectro deliberadamente exuberante. Em ‘Mesmo que você não queira (vermelho)’.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T19:00:57.000Z",
+      "discoveredAt": "2026-11-14T13:49:28.863Z"
+    },
+    {
+      "id": "64ba1080f6809ecc3cd8cbd943803d6fd8829f0228664fd66e4cacebc178ad40",
+      "region": "USA",
+      "titlePt": "Mike McCready, do Pearl Jam, revela a faixa título do Rock Opera Farewell to Seasons: Stream",
+      "excerptPt": "A música é a faixa-título da história em quadrinhos e seu próximo álbum de 11 faixas, que será lançado em 1º de dezembro. Mike McCready do Pearl Jam revela a faixa título da ópera rock Farewell to Seasons: Stream Langdon Hickman",
+      "bodyPt": [
+        "A música é a faixa-título da história em quadrinhos e seu próximo álbum de 11 faixas, que será lançado em 1º de dezembro. Mike McCready do Pearl Jam revela a faixa título da ópera rock Farewell to Seasons: Stream Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T18:47:35.000Z",
+      "discoveredAt": "2026-11-14T13:49:04.436Z"
+    },
+    {
+      "id": "66b595202620219af0b0db9e8ce2ceb16657ed45e149665316284589c449e933",
+      "region": "USA",
+      "titlePt": "Canção Pesada da Semana: Gatta Morta Fuse Alt Rock dos anos 90 com Sludgy Heavy Metal em “Music for Furbies”",
+      "excerptPt": "Gatta Morta oferece um exemplo clássico de metal alternativo, fundindo o som do rock alternativo/colegial dos anos 90 com o Black Sabbath em \"Music for Furbies\". Canção Pesada da Semana: Gatta Morta Fuse Alt Rock dos anos 90 com Sludgy Heavy Metal em “Music for Furbies” Langdon Hickman",
+      "bodyPt": [
+        "Gatta Morta oferece um exemplo clássico de metal alternativo, fundindo o som do rock alternativo/colegial dos anos 90 com o Black Sabbath em \"Music for Furbies\". Canção Pesada da Semana: Gatta Morta Fuse Alt Rock dos anos 90 com Sludgy Heavy Metal em “Music for Furbies” Langdon Hickman.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T18:15:27.000Z",
+      "discoveredAt": "2026-11-14T13:49:04.436Z"
+    },
+    {
+      "id": "a5906bf3ad86353d42a0ae6bb38d53fb567d9e678b3381a2471650f02c2a7050",
+      "region": "USA",
+      "titlePt": "Urso Panda remixa “Stupid Bitches” de Grace Ives",
+      "excerptPt": "Noah Lennox dá ao destaque de Girlfriend uma revisão quase total",
+      "bodyPt": [
+        "Noah Lennox dá ao destaque de Girlfriend uma revisão quase total.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T18:14:46.000Z",
+      "discoveredAt": "2026-11-14T13:49:04.256Z"
+    },
+    {
+      "id": "c6ed3a5f0f8fe1e4c2c91855cee71ab8af5bfea6bc0edc800255ea1a3a4b10db",
+      "region": "USA",
+      "titlePt": "Caça aos fantasmas da 'prisão paranormal' de Guilt Trip",
+      "excerptPt": "O grupo de hardcore metálico britânico Guilt Trip entra na 'Prisão Paranormal' em uma caça aos fantasmas. Continuar lendo…",
+      "bodyPt": [
+        "O grupo de hardcore metálico britânico Guilt Trip entra na 'Prisão Paranormal' em uma caça aos fantasmas. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T18:00:36.000Z",
+      "discoveredAt": "2026-11-14T13:49:04.041Z"
+    },
+    {
+      "id": "2303f711b2c10e3d02cab98a7619b51fc1dfda901d5ebd5a8f701de79a171015",
+      "region": "USA",
+      "titlePt": "Transmissão nesta semana: Rose Byrne está fazendo o dever de casa de Nathan Fielder",
+      "excerptPt": "Aqui estão os melhores filmes e programas de TV para transmitir no fim de semana de 13 de novembro. Transmissão nesta semana: Rose Byrne está fazendo o dever de casa de Nathan Fielder, Liz Shannon Miller",
+      "bodyPt": [
+        "Aqui estão os melhores filmes e programas de TV para transmitir no fim de semana de 13 de novembro. Transmissão nesta semana: Rose Byrne está fazendo o dever de casa de Nathan Fielder, Liz Shannon Miller.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T18:00:23.000Z",
+      "discoveredAt": "2026-11-14T13:49:04.436Z"
+    },
+    {
+      "id": "267b2198f4fdd2f9fa3159a8c2fa16e32808ca53409cfb44e24b58216d3f6b3d",
+      "region": "Global / UK",
+      "titlePt": "New-Wave Synths Strobe Through the Emotional Growing Pains do último single de Ollie Hunt, ‘ON THE RUN’",
+      "excerptPt": "O último single de Ollie Hunt, ‘ON THE RUN’, lança o club pop contemporâneo em uma sala cheia de máquinas de fumaça e luzes estroboscópicas, onde sintetizadores new wave brilham em atmosferas exuberantes de reverberação e uma batida cinética carrega a arrogância de alguém determinado a superar sua própria incerteza. O timbre vocal aveludado do cantor e compositor de Melbourne transmite um calor R&B lascivo através da produção, transformando a introspecção inquieta em algo projetado para a alegria pós-anoitecer. Por trás dessa produção eufórica está um cerne de incerteza: quanto do seu presente você está disposto a abandonar pelo futuro que você imagina? Aos 20 anos, Hunt já sente a pressão das ambições que podem eventualmente",
+      "bodyPt": [
+        "O último single de Ollie Hunt, ‘ON THE RUN’, lança o club pop contemporâneo em uma sala cheia de máquinas de fumaça e luzes estroboscópicas, onde sintetizadores new wave brilham em atmosferas exuberantes de reverberação e uma batida cinética carrega a arrogância de alguém determinado a superar sua própria incerteza. O timbre vocal aveludado do cantor e compositor de Melbourne transmite um calor R&B lascivo através da produção, transformando a introspecção inquieta em algo projetado para a alegria pós-anoitecer. Por trás dessa produção eufórica está um cerne de incerteza: quanto do seu presente você está disposto a abandonar pelo futuro que você imagina? Aos 20 anos, Hunt já sente a pressão das ambições que podem eventualmente.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Global / UK. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T18:00:09.000Z",
+      "discoveredAt": "2026-11-14T13:49:28.863Z"
+    },
+    {
+      "id": "a5db8fb8e94c1b9ef88a06c60c5537fdaa7d94be919a40c1811d9ca86207ea1b",
+      "region": "Canada / Québec",
+      "titlePt": "Lançamentos musicais de sexta-feira | Do Fine Food Market ao TeddyBear… Que álbuns você deve ouvir esta semana?",
+      "excerptPt": "Cem mil faixas são carregadas em plataformas de audição todos os dias. Nossos jornalistas chamam sua atenção para os álbuns que os emocionam atualmente.",
+      "bodyPt": [
+        "Cem mil faixas são carregadas em plataformas de audição todos os dias. Nossos jornalistas chamam sua atenção para os álbuns que os emocionam atualmente.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em Canada / Québec. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T18:00:00.000Z",
+      "discoveredAt": "2026-11-14T13:49:11.562Z"
+    },
+    {
+      "id": "bd13135a750f6685a1682a217df9874a4445807de6500169f1a8e19c71cca1e5",
+      "region": "USA",
+      "titlePt": "IDK convoca Eminem para a nova música “WELCOME” produzida por J Dilla: Stream",
+      "excerptPt": "A nova faixa celebra a nova parceria do IDK com a Shady Records e a Interscope Records. IDK convoca Eminem para a nova música “WELCOME” produzida por J Dilla: Stream Eddie Fu",
+      "bodyPt": [
+        "A nova faixa celebra a nova parceria do IDK com a Shady Records e a Interscope Records. IDK convoca Eminem para a nova música “WELCOME” produzida por J Dilla: Stream Eddie Fu.",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T17:31:27.000Z",
+      "discoveredAt": "2026-11-14T13:49:04.436Z"
+    },
+    {
+      "id": "0242eb6cb3f468b29026ee95496309c1062805b0cc22d388428ee1c45031bf68",
+      "region": "USA",
+      "titlePt": "Journey substituiu silenciosamente Deen Castronovo na turnê final da fronteira",
+      "excerptPt": "Eles não chamaram um técnico de bateria para assumir desta vez. Continuar lendo…",
+      "bodyPt": [
+        "Eles não chamaram um técnico de bateria para assumir desta vez. Continuar lendo….",
+        "O registro chegou ao News Tunnel da GUIROPA classificado em USA. A edição preserva somente as informações já disponíveis no sinal em português.",
+        "A matéria foi estruturada sem acrescentar nomes, números, declarações, causas ou circunstâncias que não estejam presentes no material coletado.",
+        "O acompanhamento permanece aberto para novas informações verificáveis. Quando houver atualização consistente, a GUIROPA poderá incorporar os novos dados em uma edição posterior."
+      ],
+      "editorialStatus": "ready",
+      "translationStatus": "pt-ready",
+      "publishedAt": "2026-11-13T17:18:18.000Z",
+      "discoveredAt": "2026-11-14T13:49:03.951Z"
+    },
     {
       "id": "4fb03d462f0ea677c8c2136a7fd53e9c273b038a8c2e24eba9a0a1f15750b332",
       "region": "Global / UK",
